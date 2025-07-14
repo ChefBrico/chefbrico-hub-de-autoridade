@@ -1,1 +1,66 @@
+/* --- Variáveis de Cor e Fonte (O Painel de Controle do Design) --- */
+:root {
+    --cor-primaria: #E85A4F; /* Terracota/Laranja Queimado para botões e ações */
+    --cor-secundaria: #5E8C61; /* Verde-Sálvia para selos e detalhes */
+    --cor-texto: #333333;      /* Cinza Escuro para máxima legibilidade */
+    --cor-fundo: #F9F6F1;     /* Creme/Off-white para uma sensação de aconchego */
+    --fonte-titulos: 'Lora', serif;
+    --fonte-corpo: 'Lato', sans-serif;
+}
 
+/* --- Reset Básico e Configurações Globais --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-corpo);
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+    line-height: 1.6;
+}
+
+/* --- Importação das Fontes do Google --- */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@400;700&display=swap');
+
+/* --- Estrutura do Layout --- */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header, footer {
+    padding: 20px;
+    text-align: center;
+}
+
+/* --- Tipografia (A Voz da Marca) --- */
+h1, h2, h3 {
+    font-family: var(--fonte-titulos);
+    color: var(--cor-primaria);
+    margin-bottom: 15px;
+}
+
+h1 { font-size: 2.5em; }
+h2 { font-size: 2em; }
+p { margin-bottom: 20px; }
+a { color: var(--cor-secundaria); text-decoration: none; }
+
+/* --- Componentes (Os Móveis) --- */
+.cta-button {
+    display: inline-block;
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #d73a2f; /* Um tom ligeiramente mais escuro do terracota */
+}
