@@ -1,10 +1,78 @@
-/* --- Variáveis de Cor e Fonte (O Painel de Controle do Design) --- */
+/* --- Variáveis de Cor e Fonte (O Painel de Controle do Design) - v2.0 --- */
 :root {
-    --cor-primaria: #E85A4F;
-    --cor-secundaria: #5E8C61;
-    --cor-texto: #333333;
-    --cor-fundo: #F9F6F1;
+    /* Cores base da ChefBrico - Sua Diretriz */
+    --cor-primaria-acao: #f2811d;  /* Laranja vibrante para botões e CTAs */
+    --cor-titulos: #73022c;        /* Magenta/vinho profundo para títulos H1, H2 */
+    --cor-texto: #01403a;          /* Verde escuro/petróleo para o corpo do texto */
+    --cor-acento: #bfb084;         /* Dourado/bege para detalhes e bordas */
+    --cor-fundo: #FDFBF7;          /* Um creme/off-white para fundo e respiro */
+
+    /* Tipografia Aprovada */
     --fonte-titulos: 'Lora', serif;
     --fonte-corpo: 'Lato', sans-serif;
 }
-/* (O restante do código CSS que forneci anteriormente entra aqui) */
+
+/* --- Reset Básico e Configurações Globais --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-corpo);
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+    line-height: 1.7; /* Aumentado ligeiramente para melhor legibilidade */
+}
+
+/* --- Importação das Fontes do Google --- */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@400;700&display=swap');
+
+/* --- Estrutura do Layout --- */
+.container {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 25px;
+}
+
+header, footer {
+    padding: 25px;
+    text-align: center;
+}
+
+footer {
+    margin-top: 50px;
+    background-color: var(--cor-texto);
+    color: var(--cor-fundo);
+}
+
+/* --- Tipografia (A Voz da Marca) --- */
+h1, h2, h3 {
+    font-family: var(--fonte-titulos);
+    color: var(--cor-titulos);
+    margin-bottom: 20px;
+}
+
+h1 { font-size: 2.8em; line-height: 1.2; }
+h2 { font-size: 2.2em; border-bottom: 2px solid var(--cor-acento); padding-bottom: 10px; }
+p { margin-bottom: 20px; }
+a { color: var(--cor-primaria-acao); font-weight: bold; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* --- Componentes (Os Móveis) --- */
+.cta-button {
+    display: inline-block;
+    background-color: var(--cor-primaria-acao);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: transform 0.2s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+    text-decoration: none;
+}
