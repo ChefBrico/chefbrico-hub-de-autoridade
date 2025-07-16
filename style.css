@@ -1,10 +1,9 @@
 /* --- Variáveis de Cor e Fonte (Painel de Controle do Design) v3.0 --- */
 :root {
-    --cor-primaria: #01403a;       /* Verde escuro/petróleo */
-    --cor-secundaria: #bfb084;      /* Dourado/bege para acentos */
-    --cor-acao: #f2811d;           /* Laranja vibrante para botões */
-    --cor-titulos: #73022c;         /* Magenta/vinho profundo */
-    --cor-texto: #333333;           /* Cinza escuro para legibilidade */
+    --cor-primaria: #01403a;       /* Verde escuro/petróleo para textos e elementos */
+    --cor-secundaria: #bfb084;      /* Dourado/bege para acentos e bordas */
+    --cor-acao: #f2811d;           /* Laranja vibrante para botões e CTAs */
+    --cor-titulos: #73022c;         /* Magenta/vinho profundo para títulos principais */
     --cor-fundo: #FFFFFF;           /* Fundo branco para um look limpo de revista */
     --fonte-titulos: 'Lora', serif;
     --fonte-corpo: 'Lato', sans-serif;
@@ -14,33 +13,33 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
     font-family: var(--fonte-corpo);
-    color: var(--cor-texto);
+    color: var(--cor-primaria);
     background-color: var(--cor-fundo);
     line-height: 1.7;
 }
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@700&display=swap');
 
 /* --- Estrutura e Cabeçalho Profissional --- */
-.container { max-width: 980px; margin: 0 auto; padding: 20px; }
-header { border-bottom: 1px solid #eee; padding: 15px 0; }
+.container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+header { border-bottom: 1px solid #f0f0f0; padding: 20px 0; }
 .header-flex { display: flex; justify-content: space-between; align-items: center; }
-header .logo { font-size: 2em; font-family: var(--fonte-titulos); color: var(--cor-primaria); text-decoration: none; }
-header nav a { margin-left: 25px; text-decoration: none; color: var(--cor-texto); font-weight: bold; }
-header nav a.cta-button { background-color: var(--cor-acao); color: white; padding: 10px 20px; border-radius: 50px; transition: background-color 0.3s ease; }
-header nav a.cta-button:hover { background-color: #d95f02; }
+header .logo { font-size: 2em; font-family: var(--fonte-titulos); color: var(--cor-primaria); text-decoration: none; font-weight: bold; }
+header nav a { margin-left: 30px; text-decoration: none; color: var(--cor-texto); font-weight: bold; font-size: 1.1em; }
+header nav a.cta-button { background-color: var(--cor-acao); color: white; padding: 12px 24px; border-radius: 50px; transition: all 0.3s ease; }
+header nav a.cta-button:hover { background-color: var(--cor-titulos); transform: translateY(-2px); }
 
 /* --- Tipografia de Revista --- */
-main { padding: 40px 0; }
-h1 { font-family: var(--fonte-titulos); color: var(--cor-titulos); font-size: 3.5em; text-align: center; line-height: 1.1; margin-bottom: 20px; }
-h2 { font-family: var(--fonte-titulos); color: var(--cor-primaria); font-size: 2.5em; border-bottom: 3px solid var(--cor-secundaria); padding-bottom: 15px; margin-top: 40px; margin-bottom: 30px; }
+main { padding: 50px 0; }
+h1 { font-family: var(--fonte-titulos); color: var(--cor-titulos); font-size: 3.8em; text-align: center; line-height: 1.1; margin-bottom: 20px; }
+h2 { font-family: var(--fonte-titulos); color: var(--cor-primaria); font-size: 2.8em; border-bottom: 3px solid var(--cor-secundaria); padding-bottom: 15px; margin-top: 50px; margin-bottom: 30px; }
 p { margin-bottom: 20px; font-size: 1.1em; }
 
 /* --- Cards de Artigos (A Capa da Magazine) --- */
-.post-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-.card { border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; text-decoration: none; color: var(--cor-texto); display: block; transition: box-shadow 0.3s ease, transform 0.3s ease; }
-.card:hover { box-shadow: 0 8px 25px rgba(0,0,0,0.1); transform: translateY(-5px); }
-.card-image { width: 100%; height: 200px; object-fit: cover; }
-.card-content { padding: 20px; }
+.post-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+.card { border-radius: 8px; overflow: hidden; text-decoration: none; color: var(--cor-texto); display: block; transition: all 0.3s ease; background-color: #f9f9f9; }
+.card:hover { box-shadow: 0 10px 30px rgba(0,0,0,0.1); transform: translateY(-5px); }
+.card-image { width: 100%; height: 220px; object-fit: cover; }
+.card-content { padding: 25px; }
 .card-category { font-size: 0.8em; font-weight: bold; color: var(--cor-acao); text-transform: uppercase; margin-bottom: 10px; }
-.card h3 { font-size: 1.4em; color: var(--cor-titulos); margin-bottom: 10px; line-height: 1.3; }
-.card p { font-size: 1em; }
+.card h3 { font-size: 1.5em; color: var(--cor-titulos); margin-bottom: 10px; line-height: 1.3; }
+.card p { font-size: 1em; color: #666; }
