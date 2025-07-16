@@ -51,6 +51,7 @@
           "priceCurrency": "BRL",
           "url": "URL_DO_PRODUTO_DETOX_NA_TRAY"
         }
+        // PARA ADICIONAR MAIS PRODUTOS, BASTA COPIAR E COLAR UM BLOCO '{...},' e alterar os dados
       ]
     }
     </script>
@@ -58,9 +59,15 @@
 <body>
 
     <header class="container">
-        <nav>
-            <p><strong>Menu:</strong> | <a href="index.html">INÍCIO</a> | <a href="nossa-filosofia.html">NOSSA FILOSOFIA</a> | <a href="receitas.html">RECEITAS</a> | <a href="catalogo.html">CARDÁPIO</a> | <a href="#">DICAS & TÉCNICAS</a> | <a href="https://www.chefbrico.com" target="_blank" rel="noopener noreferrer">**LOJA (COMPRE AGORA)**</a> |</p>
-        </nav>
+        <div class="header-flex">
+            <a href="index.html" class="logo">ChefBrico</a>
+            <nav>
+                <a href="nossa-filosofia.html">Nossa Filosofia</a>
+                <a href="receitas.html">Receitas</a>
+                <a href="catalogo.html">Cardápio</a>
+                <a href="https://www.chefbrico.com" target="_blank" rel="noopener noreferrer" class="cta-button">Ir para a Loja</a>
+            </nav>
+        </div>
     </header>
 
     <main>
@@ -68,7 +75,7 @@
             <h1>Nosso Cardápio Completo</h1>
             <p>Explore todas as nossas criações artesanais. Refeições práticas, saudáveis e cheias de sabor, prontas para transformar sua rotina.</p>
 
-            <h2>Risotos</h2>
+            <h2 style="margin-top: 40px;">Risotos</h2>
             <p>(Aqui, no futuro, listaremos os produtos da categoria Risotos com links para a loja).</p>
             
             <h2>Sopas Funcionais</h2>
@@ -79,7 +86,7 @@
         </section>
     </main>
 
-    <footer style="padding: 20px; text-align: center; margin-top: 40px; background-color: var(--cor-texto); color: var(--cor-fundo);">
+    <footer style="padding: 30px; text-align: center; margin-top: 50px; background-color: var(--cor-texto); color: var(--cor-fundo);">
         <p>&copy; 2025 ChefBrico - Todos os direitos reservados.</p>
     </footer>
 
