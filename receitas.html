@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receitas Práticas e Artesanais | ChefBrico</title>
+    <meta name="description" content="Explore nossas receitas de risotos, sopas funcionais, refeições completas e mais. O sabor da comida de verdade, para sua rotina.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
         <div class="container header-flex">
             <a href="index.html" class="logo">ChefBrico</a>
             <nav>
@@ -10,43 +19,53 @@
             </nav>
         </div>
     </header>
-<body>
-
-    <header class="container">
-        <p><strong>[Logo da ChefBrico]</strong></p>
-        <nav>
-            <p><strong>Menu:</strong> | <a href="index.html">INÍCIO</a> | <a href="nossa-filosofia.html">NOSSA FILOSOFIA</a> | <a href="receitas.html">RECEITAS</a> | <a href="#">DICAS & TÉCNICAS</a> | <a href="#">ESTILO DE VIDA VEG</a> | <a href="https://www.chefbrico.com" target="_blank" rel="noopener noreferrer">**LOJA (COMPRE AGORA)**</a> |</p>
-        </nav>
-    </header>
 
     <main>
         <section class="container">
             <h1>Receitas Artesanais para uma Vida Prática</h1>
             <p>Bem-vindo à biblioteca de sabores da ChefBrico. Aqui você encontrará inspiração para transformar nossas misturas em pratos incríveis. Cada receita é um convite para celebrar a comida de verdade, sem complicação.</p>
 
-            <h2>Explore por Tipo de Prato</h2>
-            <ul>
-                <li><a href="guia-arrozes-cremosos.html">Arrozes do Mundo (Risotos, Paellas e mais)</a></li>
-                <li><a href="miojo-do-bem.html">Sopas Funcionais (Detox, Low Carb, Proteicas)</a></li>
-                <li><a href="#">Cozidos e Refeições Completas</a></li>
-            </ul>
+            <div class="post-grid" style="margin-top: 40px;">
+                <a href="guia-arrozes-cremosos.html" class="card">
+                    <img src="URL_IMAGEM_DESTAQUE_RISOTOS" alt="Prato de risoto gourmet" class="card-image">
+                    <div class="card-content">
+                        <span class="card-category">Cluster</span>
+                        <h3>O Mundo dos Arrozes Cremosos</h3>
+                        <p>Explore a cultura dos risotos, paellas e outros pratos que celebram o sabor e a união à mesa.</p>
+                    </div>
+                </a>
 
-            <h2>Inspire-se pela Ocasião</h2>
-            <ul>
-                <li><a href="panela-unica.html">Almoço e Jantar Rápido para a Semana</a></li>
-                <li><a href="#">Recebendo Amigos em Casa</a></li>
-                <li><a href="#">Refeições Afetivas em Família</a></li>
-            </ul>
+                <a href="miojo-do-bem.html" class="card">
+                    <img src="URL_IMAGEM_DESTAQUE_SOPAS" alt="Tigela de sopa funcional e nutritiva" class="card-image">
+                    <div class="card-content">
+                        <span class="card-category">Cluster</span>
+                        <h3>Superalimentos Práticos</h3>
+                        <p>Descubra como nossas sopas funcionais podem revolucionar sua dieta com saúde e praticidade.</p>
+                    </div>
+                </a>
 
-            <h2>Navegue por Estilo de Dieta</h2>
-            <ul>
-                <li><a href="guia-flexitariano.html">Receitas 100% Veganas & Flexitarianas</a></li>
-                <li><a href="#">Opções Sem Glúten</a></li>
-            </ul>
+                <a href="dicas-e-tecnicas.html" class="card">
+                    <img src="URL_IMAGEM_DESTAQUE_DICAS" alt="Cozinha organizada com utensílios" class="card-image">
+                    <div class="card-content">
+                        <span class="card-category">Cluster</span>
+                        <h3>A Inteligência na Cozinha</h3>
+                        <p>Aprenda técnicas e "hacks" para uma rotina mais simples, com menos louça e mais tempo para você.</p>
+                    </div>
+                </a>
+                
+                <a href="guia-flexitariano.html" class="card">
+                    <img src="URL_IMAGEM_DESTAQUE_VEG" alt="Mesa com variedade de vegetais frescos" class="card-image">
+                    <div class="card-content">
+                        <span class="card-category">Cluster</span>
+                        <h3>O Estilo de Vida "VEG"</h3>
+                        <p>Um espaço para educar e acolher o público vegano, vegetariano e flexitariano, quebrando mitos.</p>
+                    </div>
+                </a>
+            </div>
         </section>
     </main>
 
-    <footer style="padding: 20px; text-align: center; margin-top: 40px; background-color: #333; color: white;">
+    <footer style="padding: 30px; text-align: center; margin-top: 50px; background-color: var(--cor-texto); color: var(--cor-fundo);">
         <p>&copy; 2025 ChefBrico - Todos os direitos reservados.</p>
     </footer>
 
