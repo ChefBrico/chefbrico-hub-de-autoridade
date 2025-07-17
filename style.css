@@ -1,76 +1,65 @@
-/* --- Variáveis de Cor e Fonte (Painel de Controle do Design) v3.0 --- */
+/* --- CHEFBRICO STYLE V4.0 - MOBILE FIRST --- */
 :root {
-    --cor-primaria: #01403a;       /* Verde escuro/petróleo para textos e elementos */
-    --cor-secundaria: #bfb084;      /* Dourado/bege para acentos e bordas */
-    --cor-acao: #f2811d;           /* Laranja vibrante para botões e CTAs */
-    --cor-titulos: #73022c;         /* Magenta/vinho profundo para títulos principais */
-    --cor-fundo: #FFFFFF;           /* Fundo branco para um look limpo de revista */
+    --cor-primaria: #01403a;
+    --cor-secundaria: #bfb084;
+    --cor-acao: #f2811d;
+    --cor-titulos: #73022c;
+    --cor-texto: #333333;
+    --cor-fundo: #FFFFFF;
     --fonte-titulos: 'Lora', serif;
     --fonte-corpo: 'Lato', sans-serif;
 }
 
-/* --- Reset Básico e Configurações Globais --- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body {
-    font-family: var(--fonte-corpo);
-    color: var(--cor-primaria);
-    background-color: var(--cor-fundo);
-    line-height: 1.7;
-}
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@700&display=swap');
 
-/* --- Estrutura e Cabeçalho Profissional --- */
-.container { max-width: 1100px; margin: 0 auto; padding: 20px; }
-header { border-bottom: 1px solid #f0f0f0; padding: 20px 0; }
-.header-flex { display: flex; justify-content: space-between; align-items: center; }
-header .logo { font-size: 2em; font-family: var(--fonte-titulos); color: var(--cor-primaria); text-decoration: none; font-weight: bold; }
-header nav a { margin-left: 30px; text-decoration: none; color: var(--cor-texto); font-weight: bold; font-size: 1.1em; }
-header nav a.cta-button { background-color: var(--cor-acao); color: white; padding: 12px 24px; border-radius: 50px; transition: all 0.3s ease; }
-header nav a.cta-button:hover { background-color: var(--cor-titulos); transform: translateY(-2px); }
+body {
+    font-family: var(--fonte-corpo);
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+    line-height: 1.8;
+    font-size: 16px;
+}
 
-/* --- Tipografia de Revista --- */
-main { padding: 50px 0; }
-h1 { font-family: var(--fonte-titulos); color: var(--cor-titulos); font-size: 3.8em; text-align: center; line-height: 1.1; margin-bottom: 20px; }
-h2 { font-family: var(--fonte-titulos); color: var(--cor-primaria); font-size: 2.8em; border-bottom: 3px solid var(--cor-secundaria); padding-bottom: 15px; margin-top: 50px; margin-bottom: 30px; }
+.container { max-width: 90%; margin: 0 auto; }
+
+/* --- Cabeçalho Responsivo --- */
+header { padding: 20px 0; border-bottom: 1px solid #f0f0f0; }
+.header-flex { display: flex; flex-direction: column; align-items: center; gap: 20px; }
+header .logo { font-size: 2.2em; font-family: var(--fonte-titulos); color: var(--cor-primaria); text-decoration: none; font-weight: bold; }
+header nav { display: flex; flex-direction: column; align-items: center; gap: 15px; width: 100%; }
+header nav a { text-decoration: none; color: var(--cor-texto); font-weight: bold; font-size: 1.1em; }
+header nav a.cta-button { background-color: var(--cor-acao); color: white; padding: 12px 24px; border-radius: 50px; width: 100%; text-align: center; }
+
+/* --- Tipografia Responsiva --- */
+main { padding: 20px 0; }
+h1 { font-family: var(--fonte-titulos); color: var(--cor-titulos); font-size: 2.5em; text-align: center; line-height: 1.2; margin-bottom: 20px; }
+h2 { font-family: var(--fonte-titulos); color: var(--cor-primaria); font-size: 2em; border-bottom: 2px solid var(--cor-secundaria); padding-bottom: 10px; margin-top: 40px; margin-bottom: 20px; }
 p { margin-bottom: 20px; font-size: 1.1em; }
 
-/* --- Cards de Artigos (A Capa da Magazine) --- */
-.post-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
-.card { border-radius: 8px; overflow: hidden; text-decoration: none; color: var(--cor-texto); display: block; transition: all 0.3s ease; background-color: #f9f9f9; }
-.card:hover { box-shadow: 0 10px 30px rgba(0,0,0,0.1); transform: translateY(-5px); }
+/* --- Cards de Artigos --- */
+.post-grid { display: grid; grid-template-columns: 1fr; gap: 30px; }
+.card { border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; text-decoration: none; color: var(--cor-texto); display: block; }
 .card-image { width: 100%; height: 220px; object-fit: cover; }
-.card-content { padding: 25px; }
-.card-category { font-size: 0.8em; font-weight: bold; color: var(--cor-acao); text-transform: uppercase; margin-bottom: 10px; }
-.card h3 { font-size: 1.5em; color: var(--cor-titulos); margin-bottom: 10px; line-height: 1.3; }
-.card p { font-size: 1em; color: #666; }
-/* --- Estilos de Rodapé Profissional v3.1 --- */
-footer {
-    background-color: var(--cor-fundo); /* Mantém o fundo claro da página */
-    color: var(--cor-texto); /* Usa a cor de texto principal (verde escuro) */
-    padding: 40px 0;
-    margin-top: 60px;
-    border-top: 2px solid #f0f0f0; /* Adiciona uma linha de separação sutil */
-}
-.footer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
-    text-align: left;
-}
-.footer-grid h4 {
-    font-family: var(--fonte-titulos);
-    font-size: 1.2em;
-    margin-bottom: 15px;
-    color: var(--cor-titulos); /* Usa a cor de título (magenta/vinho) */
-}
-.footer-grid a {
-    color: var(--cor-texto); /* Usa a cor de texto principal */
-    text-decoration: none;
-    display: block;
-    margin-bottom: 8px;
-    font-weight: normal;
-}
-.footer-grid a:hover {
-    color: var(--cor-acao); /* Usa a cor de ação (laranja) no hover para destaque */
-    text-decoration: none;
+.card-content { padding: 20px; }
+.card-category { font-size: 0.8em; font-weight: bold; color: var(--cor-acao); text-transform: uppercase; }
+.card h3 { font-size: 1.5em; color: var(--cor-titulos); margin: 10px 0; }
+
+/* --- Estrutura de Artigo e Mídia --- */
+.article-hero-image { width: 100%; height: auto; max-height: 400px; object-fit: cover; border-radius: 8px; margin-bottom: 30px; }
+.post-content { margin-top: 40px; }
+
+/* --- Rodapé --- */
+footer { text-align: center; padding: 40px 20px; margin-top: 40px; background-color: var(--cor-texto); color: #ccc; }
+footer a { color: white; }
+
+/* --- Estilos para Telas Maiores (Desktop) --- */
+@media (min-width: 768px) {
+    h1 { font-size: 4em; }
+    h2 { font-size: 2.8em; }
+    .header-flex { flex-direction: row; justify-content: space-between; }
+    header nav { flex-direction: row; width: auto; }
+    header nav a { margin-left: 30px; }
+    header nav a.cta-button { width: auto; }
+    .post-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
 }
