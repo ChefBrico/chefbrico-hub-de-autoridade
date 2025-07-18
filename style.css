@@ -1,4 +1,4 @@
-/* CHEFBRICO STYLE v4.4 - REPARO FINAL DE LAYOUT DE ARTIGO E MOBILE */
+/* CHEFBRICO STYLE v5.0 - REFINED HERO IMAGE & LAYOUT */
 :root {
     --cor-primaria: #01403a; --cor-secundaria: #bfb084; --cor-acao: #f2811d;
     --cor-titulos: #73022c; --cor-texto: #333333; --cor-fundo: #FFFFFF;
@@ -6,13 +6,7 @@
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@700&display=swap');
-body {
-    font-family: var(--fonte-corpo);
-    color: var(--cor-texto);
-    background-color: var(--cor-fundo);
-    line-height: 1.8;
-    font-size: 16px;
-}
+body { font-family: var(--fonte-corpo); color: var(--cor-texto); background-color: var(--cor-fundo); line-height: 1.8; font-size: 16px; }
 .container { max-width: 980px; margin: 0 auto; padding: 20px; }
 
 /* --- Cabeçalho Profissional --- */
@@ -30,19 +24,16 @@ h1 { font-family: var(--fonte-titulos); color: var(--cor-titulos); font-size: 2.
 h2 { font-family: var(--fonte-titulos); color: var(--cor-primaria); font-size: 2.2em; border-bottom: 2px solid var(--cor-secundaria); padding-bottom: 10px; margin-top: 40px; margin-bottom: 20px; }
 p { margin-bottom: 20px; font-size: 1.1em; }
 
-/* --- Estrutura de Artigo e Mídia CORRIGIDA --- */
+/* --- Estrutura de Artigo e Mídia v5.0 (REFINADO) --- */
 .article-hero-image {
     display: block;
-    width: 100%;
+    width: 100%; /* Garante que a imagem seja responsiva dentro do seu container */
+    max-width: 720px; /* Define um tamanho máximo, para não ficar gigante no desktop */
     height: auto;
-    max-height: 500px;
-    object-fit: cover; /* Mude para 'contain' se preferir que a imagem inteira apareça sem cortes */
+    margin: 0 auto 40px auto; /* Centraliza a imagem e adiciona espaço abaixo */
     border-radius: 8px;
-    margin-bottom: 40px; /* Cria o espaço entre a imagem e o título abaixo */
 }
-.post-content {
-    margin-top: 0; /* Reseta qualquer margem superior para que o conteúdo flua após o H1 */
-}
+.post-content { margin-top: 30px; max-width: 720px; margin-left: auto; margin-right: auto; }
 
 /* --- Cards de Artigos --- */
 .post-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
