@@ -1,4 +1,4 @@
-/* CHEFBRICO STYLE v5.0 - REFINED HERO IMAGE & LAYOUT */
+/* CHEFBRICO STYLE v5.2 - MAGAZINE GRID LAYOUT */
 :root {
     --cor-primaria: #01403a; --cor-secundaria: #bfb084; --cor-acao: #f2811d;
     --cor-titulos: #73022c; --cor-texto: #333333; --cor-fundo: #FFFFFF;
@@ -7,9 +7,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@700&display=swap');
 body { font-family: var(--fonte-corpo); color: var(--cor-texto); background-color: var(--cor-fundo); line-height: 1.8; font-size: 16px; }
-.container { max-width: 980px; margin: 0 auto; padding: 20px; }
-
-/* --- Cabeçalho Profissional --- */
+.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
 header { padding: 20px 0; border-bottom: 1px solid #f0f0f0; }
 .header-flex { display: flex; justify-content: space-between; align-items: center; }
 header .logo { font-size: 2em; font-family: var(--fonte-titulos); color: var(--cor-primaria); text-decoration: none; font-weight: bold; }
@@ -17,42 +15,18 @@ header nav { display: flex; align-items: center; gap: 20px; }
 header nav a { text-decoration: none; color: var(--cor-texto); font-weight: bold; font-size: 1.1em; }
 header nav a.cta-button { background-color: var(--cor-acao); color: white; padding: 12px 24px; border-radius: 50px; transition: all 0.3s ease; }
 header nav a.cta-button:hover { background-color: var(--cor-titulos); transform: translateY(-2px); }
-
-/* --- Tipografia de Revista --- */
 main { padding: 40px 0; }
-h1 { font-family: var(--fonte-titulos); color: var(--cor-titulos); font-size: 2.8em; text-align: center; line-height: 1.2; margin-bottom: 30px; }
-h2 { font-family: var(--fonte-titulos); color: var(--cor-primaria); font-size: 2.2em; border-bottom: 2px solid var(--cor-secundaria); padding-bottom: 10px; margin-top: 40px; margin-bottom: 20px; }
+h1 { font-family: var(--fonte-titulos); color: var(--cor-titulos); font-size: 3.5em; text-align: center; line-height: 1.1; margin-bottom: 20px; }
+h2 { font-family: var(--fonte-titulos); color: var(--cor-primaria); font-size: 2.8em; border-bottom: 3px solid var(--cor-secundaria); padding-bottom: 15px; margin-top: 50px; margin-bottom: 30px; }
 p { margin-bottom: 20px; font-size: 1.1em; }
 
-/* --- Estrutura de Artigo e Mídia v5.0 (REFINADO) --- */
-.article-hero-image {
-    display: block;
-    width: 100%; /* Garante que a imagem seja responsiva dentro do seu container */
-    max-width: 720px; /* Define um tamanho máximo, para não ficar gigante no desktop */
-    height: auto;
-    margin: 0 auto 40px auto; /* Centraliza a imagem e adiciona espaço abaixo */
-    border-radius: 8px;
-}
-.post-content { margin-top: 30px; max-width: 720px; margin-left: auto; margin-right: auto; }
-
-/* ... (todo o código do v5.0 permanece o mesmo até a seção de cards) ... */
-
-/* --- Cards de Artigos (Com Layout de Carrossel) --- */
+/* --- Cards de Artigos (Com Layout de Grade) --- */
 .post-grid {
-    display: flex; /* Transforma a grade em uma linha flexível */
-    overflow-x: auto; /* Habilita a rolagem horizontal */
-    gap: 20px;
-    padding: 10px 0 20px 0; /* Espaço para a barra de rolagem não cortar o card */
-    -webkit-overflow-scrolling: touch; /* Melhora a experiência de rolagem em iOS */
-    scrollbar-width: thin; /* Estiliza a barra de rolagem em navegadores compatíveis */
-    scrollbar-color: var(--cor-secundaria) #f0f0f0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
 }
-.post-grid::-webkit-scrollbar { height: 8px; }
-.post-grid::-webkit-scrollbar-thumb { background-color: var(--cor-secundaria); border-radius: 4px; }
-
 .card {
-    flex: 0 0 80%; /* Cada card ocupa 80% da largura da tela no mobile */
-    max-width: 320px; /* Define um tamanho máximo para cada card no desktop */
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     overflow: hidden;
@@ -61,29 +35,58 @@ p { margin-bottom: 20px; font-size: 1.1em; }
     display: flex;
     flex-direction: column;
     background-color: #f9f9f9;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
-.card:hover { box-shadow: 0 10px 30px rgba(0,0,0,0.1); transform: translateY(-5px); }
+.card:hover { box-shadow: 0 8px 25px rgba(0,0,0,0.1); transform: translateY(-5px); }
 .card-image { width: 100%; height: 200px; object-fit: cover; }
-.card-content { padding: 25px; flex-grow: 1; }
+.card-content { padding: 20px; flex-grow: 1; }
 .card-category { font-size: 0.8em; font-weight: bold; color: var(--cor-acao); text-transform: uppercase; }
-.card h3 { font-size: 1.5em; color: var(--cor-titulos); margin: 10px 0; }
+.card h3 { font-size: 1.4em; color: var(--cor-titulos); margin: 10px 0; }
+.card p { font-size: 1em; color: #666; }
 
-/* ... (o restante do código do v5.0, como o rodapé e o @media, permanece o mesmo) ... */
-
-/* --- Rodapé Minimalista --- */
-footer { text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 2px solid #f0f0f0; }
-.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: left; }
-.footer-grid h4 { font-family: var(--fonte-titulos); font-size: 1.2em; margin-bottom: 15px; color: var(--cor-titulos); }
-.footer-grid a { color: var(--cor-texto); text-decoration: none; display: block; margin-bottom: 8px; font-weight: normal; }
-.footer-grid a:hover { color: var(--cor-acao); }
-.footer-credit { text-align: center; margin-top: 40px; border-top: 1px solid #e0e0e0; padding-top: 20px; font-size: 0.9em; }
+/* --- Rodapé Minimalista Completo --- */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 60px;
+    border-top: 2px solid #f0f0f0;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    text-align: left;
+    margin-bottom: 40px;
+}
+.footer-grid h4 {
+    font-family: var(--fonte-titulos);
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: var(--cor-titulos);
+}
+.footer-grid a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+    font-weight: normal;
+}
+.footer-grid a:hover {
+    color: var(--cor-acao);
+}
+.footer-credit {
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 20px;
+    font-size: 0.9em;
+}
 
 /* --- Design Responsivo (Mobile First) --- */
 @media (max-width: 768px) {
     .header-flex { flex-direction: column; gap: 20px; }
     header nav { flex-direction: column; align-items: center; gap: 15px; width: 100%; }
     header nav a.cta-button { width: 100%; text-align: center; }
-    h1 { font-size: 2.2em; }
-    h2 { font-size: 1.8em; }
+    h1 { font-size: 2.5em; }
+    h2 { font-size: 2.0em; }
     .footer-grid { text-align: center; }
 }
