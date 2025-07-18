@@ -45,53 +45,24 @@ h2 { font-family: var(--fonte-titulos); color: var(--cor-primaria); font-size: 2
 .card-category { font-size: 0.75em; font-weight: bold; color: var(--cor-acao); text-transform: uppercase; }
 .card h3 { font-size: 1.25em; color: var(--cor-titulos); margin: 5px 0; }
 
-/* --- Rodapé Minimalista Completo --- */
-footer {
-    text-align: center;
-    padding: 40px 20px;
-    margin-top: 60px;
-    border-top: 2px solid #f0f0f0;
-}
-.footer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
-    text-align: left;
-    margin-bottom: 40px;
-}
-.footer-grid h4 {
-    font-family: var(--fonte-titulos);
-    font-size: 1.2em;
-    margin-bottom: 15px;
-    color: var(--cor-titulos);
-}
-.footer-grid a {
-    color: var(--cor-texto);
-    text-decoration: none;
-    display: block;
-    margin-bottom: 8px;
-    font-weight: normal;
-}
-.footer-grid a:hover {
-    color: var(--cor-acao);
-}
-.footer-credit {
-    text-align: center;
-    border-top: 1px solid #e0e0e0;
-    padding-top: 20px;
-    font-size: 0.9em;
-}
+/* --- Rodapé --- */
+/* (O código do rodapé que já aprovamos entra aqui, sem alterações) */
+footer { text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 2px solid #f0f0f0; }
+.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: left; margin-bottom: 40px; }
+.footer-grid h4 { font-family: var(--fonte-titulos); font-size: 1.2em; margin-bottom: 15px; color: var(--cor-titulos); }
+.footer-grid a { color: var(--cor-texto); text-decoration: none; display: block; margin-bottom: 8px; font-weight: normal; }
+.footer-grid a:hover { color: var(--cor-acao); }
+.footer-credit { text-align: center; border-top: 1px solid #e0e0e0; padding-top: 20px; font-size: 0.9em; }
 
-/* --- Design Responsivo (Mobile First) --- */
-@media (max-width: 768px) {
+/* --- Design Responsivo --- */
+@media (min-width: 768px) {
+    .card { flex: 0 0 300px; }
+    .header-flex { flex-direction: row; }
+    header nav { flex-direction: row; width: auto; }
+}
+@media (max-width: 767px) {
     .header-flex { flex-direction: column; gap: 20px; }
     header nav { flex-direction: column; align-items: center; gap: 15px; width: 100%; }
     header nav a.cta-button { width: 100%; text-align: center; }
     h1 { font-size: 2.5em; }
-    h2 { font-size: 2.0em; }
-    .footer-grid { text-align: center; }
-}
-
-@media (min-width: 769px) {
-    .card { flex: 0 0 300px; } /* Tamanho fixo dos cards no desktop */
 }
