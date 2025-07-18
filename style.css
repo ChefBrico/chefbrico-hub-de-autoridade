@@ -7,7 +7,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@700&display=swap');
 body { font-family: var(--fonte-corpo); color: var(--cor-texto); background-color: var(--cor-fundo); line-height: 1.8; font-size: 16px; }
-.container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+.container { max-width: 980px; margin: 0 auto; padding: 20px; }
 header { padding: 20px 0; border-bottom: 1px solid #f0f0f0; }
 .header-flex { display: flex; justify-content: space-between; align-items: center; }
 header .logo { font-size: 2em; font-family: var(--fonte-titulos); color: var(--cor-primaria); text-decoration: none; font-weight: bold; }
@@ -16,34 +16,30 @@ header nav a { text-decoration: none; color: var(--cor-texto); font-weight: bold
 header nav a.cta-button { background-color: var(--cor-acao); color: white; padding: 12px 24px; border-radius: 50px; transition: all 0.3s ease; }
 header nav a.cta-button:hover { background-color: var(--cor-titulos); transform: translateY(-2px); }
 main { padding: 40px 0; }
-h1 { font-family: var(--fonte-titulos); color: var(--cor-titulos); font-size: 3.5em; text-align: center; line-height: 1.1; margin-bottom: 20px; }
-h2 { font-family: var(--fonte-titulos); color: var(--cor-primaria); font-size: 2.8em; border-bottom: 3px solid var(--cor-secundaria); padding-bottom: 15px; margin-top: 50px; margin-bottom: 30px; }
+h1 { font-family: var(--fonte-titulos); color: var(--cor-titulos); font-size: 2.8em; text-align: center; line-height: 1.2; margin-bottom: 30px; }
+h2 { font-family: var(--fonte-titulos); color: var(--cor-primaria); font-size: 2.2em; border-bottom: 2px solid var(--cor-secundaria); padding-bottom: 10px; margin-top: 40px; margin-bottom: 20px; }
 p { margin-bottom: 20px; font-size: 1.1em; }
-
-/* --- Cards de Artigos (Com correção para "buracos") --- */
 .post-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
 .card { border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; text-decoration: none; color: var(--cor-texto); display: flex; flex-direction: column; background-color: #f9f9f9; }
 .card:hover { box-shadow: 0 10px 30px rgba(0,0,0,0.1); transform: translateY(-5px); }
 .card-image { width: 100%; height: 220px; object-fit: cover; }
 .card-content { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
-.card-category { font-size: 0.8em; font-weight: bold; color: var(--cor-acao); text-transform: uppercase; margin-bottom: 10px; }
-.card h3 { font-size: 1.5em; color: var(--cor-titulos); margin-bottom: 10px; line-height: 1.3; }
+.card-category { font-size: 0.8em; font-weight: bold; color: var(--cor-acao); text-transform: uppercase; }
+.card h3 { font-size: 1.5em; color: var(--cor-titulos); margin: 10px 0; }
 .card p { font-size: 1em; color: #666; flex-grow: 1; }
-
-/* --- Rodapé --- */
+.article-hero-image { width: 100%; height: auto; max-height: 500px; object-fit: contain; border-radius: 8px; margin-bottom: 40px; display: block; }
+.post-content { margin-top: 30px; }
 footer { text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 2px solid #f0f0f0; }
 .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: left; }
 .footer-grid h4 { font-family: var(--fonte-titulos); font-size: 1.2em; margin-bottom: 15px; color: var(--cor-titulos); }
 .footer-grid a { color: var(--cor-texto); text-decoration: none; display: block; margin-bottom: 8px; font-weight: normal; }
 .footer-grid a:hover { color: var(--cor-acao); }
 .footer-credit { text-align: center; margin-top: 40px; border-top: 1px solid #e0e0e0; padding-top: 20px; font-size: 0.9em; }
-
-/* --- Design Responsivo (Mobile First) --- */
 @media (max-width: 768px) {
     .header-flex { flex-direction: column; gap: 20px; }
     header nav { flex-direction: column; align-items: center; gap: 15px; width: 100%; }
     header nav a.cta-button { width: 100%; text-align: center; }
     h1 { font-size: 2.5em; }
     h2 { font-size: 2.0em; }
-    .footer-grid { text-align: center; } /* Centraliza o texto do rodapé no mobile */
+    .footer-grid { text-align: center; }
 }
