@@ -18,7 +18,7 @@ header nav a.cta-button { background-color: var(--cor-acao); color: white; paddi
 footer { text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 2px solid #f0f0f0; }
 .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: left; }
 .footer-grid h4 { font-family: var(--fonte-titulos); font-size: 1.2em; margin-bottom: 15px; color: var(--cor-titulos); }
-.footer-grid a { color: var(--cor-texto); text-decoration: none; display: block; margin-bottom: 10px; font-weight: normal; } /* Aumentado margin-bottom */
+.footer-grid a { color: var(--cor-texto); text-decoration: none; display: block; margin-bottom: 10px; font-weight: normal; }
 .footer-grid a:hover { color: var(--cor-acao); }
 .footer-credit { margin-top: 40px; border-top: 1px solid #e0e0e0; padding-top: 20px; font-size: 0.9em; }
 
