@@ -1,4 +1,4 @@
-/* CHEFBRICO STYLE v7.0 - FINAL BON APPÉTIT LAYOUT */
+/* CHEFBRICO STYLE v7.2 - FINAL QA FIXES */
 :root {
     --cor-primaria: #01403a; --cor-secundaria: #bfb084; --cor-acao: #f2811d;
     --cor-titulos: #73022c; --cor-texto: #333333; --cor-fundo: #FFFFFF;
@@ -7,41 +7,45 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@700&display=swap');
 body { font-family: var(--fonte-corpo); color: var(--cor-texto); background-color: var(--cor-fundo); line-height: 1.8; }
-.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
 
 /* --- Cabeçalho e Rodapé Mestres --- */
 header { padding: 20px 0; border-bottom: 1px solid #f0f0f0; }
 .header-flex { display: flex; justify-content: space-between; align-items: center; }
 header .logo { font-size: 2em; font-family: var(--fonte-titulos); color: var(--cor-primaria); text-decoration: none; font-weight: bold; }
-header nav { display: flex; align-items: center; gap: 20px; }
-header nav a { text-decoration: none; color: var(--cor-texto); font-weight: bold; font-size: 1.1em; }
+header nav a { margin-left: 25px; text-decoration: none; color: var(--cor-texto); font-weight: bold; }
 header nav a.cta-button { background-color: var(--cor-acao); color: white; padding: 12px 24px; border-radius: 50px; }
 footer { text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 2px solid #f0f0f0; }
 .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: left; }
+.footer-grid h4 { font-family: var(--fonte-titulos); font-size: 1.2em; margin-bottom: 15px; color: var(--cor-titulos); }
+.footer-grid a { color: var(--cor-texto); text-decoration: none; display: block; margin-bottom: 10px; font-weight: normal; } /* Aumentado margin-bottom */
+.footer-grid a:hover { color: var(--cor-acao); }
 .footer-credit { margin-top: 40px; border-top: 1px solid #e0e0e0; padding-top: 20px; font-size: 0.9em; }
 
+/* --- Layout de Conteúdo e Mídia --- */
 main { padding: 40px 0; }
 h1 { font-family: var(--fonte-titulos); color: var(--cor-titulos); font-size: 3em; text-align: center; line-height: 1.2; }
 h2 { font-family: var(--fonte-titulos); color: var(--cor-primaria); font-size: 2.2em; margin-top: 40px; margin-bottom: 20px; }
+.article-hero-image { display: block; max-width: 800px; width: 100%; height: auto; margin: 40px auto; border-radius: 8px; }
+.post-content { max-width: 720px; margin: 0 auto; }
 
-/* --- Carrossel Horizontal de Artigos (Bon Appétit Style) --- */
-.post-carousel { display: flex; overflow-x: auto; gap: 20px; padding: 10px 0 20px 0; scrollbar-width: none; }
-.post-carousel::-webkit-scrollbar { display: none; }
-.card { flex: 0 0 80%; max-width: 320px; text-decoration: none; color: var(--cor-texto); }
-.card-image { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px; background-color: #f0f0f0; }
-.card-category { font-size: 0.8em; font-weight: bold; color: var(--cor-acao); }
-.card h3 { font-size: 1.4em; color: var(--cor-titulos); margin: 5px 0; }
-.card p { font-size: 1em; color: #666; }
+/* --- Cards de Revista --- */
+.post-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.card { display: flex; flex-direction: column; background-color: #f9f9f9; border-radius: 8px; overflow: hidden; text-decoration: none; color: var(--cor-texto); }
+.card-image { width: 100%; height: 200px; object-fit: cover; }
+.card-content { padding: 20px; flex-grow: 1; }
+.card-category { font-size: 0.8em; font-weight: bold; color: var(--cor-acao); text-transform: uppercase; }
+.card h3 { font-size: 1.4em; color: var(--cor-titulos); margin: 10px 0; }
 
-/* --- Mobile First --- */
+/* --- Design Responsivo (Mobile First) --- */
 @media (max-width: 768px) {
     .header-flex { flex-direction: column; gap: 20px; }
     header nav { flex-direction: column; align-items: center; gap: 15px; width: 100%; }
     header nav a.cta-button { width: 100%; text-align: center; }
     h1 { font-size: 2.5em; }
-    .footer-grid { text-align: center; }
-    .card { flex: 0 0 75%; }
-}
-@media (min-width: 769px) {
-    .post-carousel { padding-left: 20px; padding-right: 20px; } /* Adiciona respiro nas laterais no desktop */
+    .footer-grid {
+        grid-template-columns: 1fr; /* Força todas as colunas a empilhar */
+        text-align: center; 
+        gap: 30px; /* Espaço entre as seções empilhadas */
+    }
 }
