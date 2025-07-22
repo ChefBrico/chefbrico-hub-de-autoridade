@@ -8,15 +8,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@700&display=swap');
 body { font-family: var(--fonte-corpo); color: var(--cor-texto); background-color: var(--cor-fundo); line-height: 1.8; }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* --- Cabeçalho e Rodapé Mestres --- */
 header { padding: 20px 0; border-bottom: 1px solid #f0f0f0; }
 .header-flex { display: flex; justify-content: space-between; align-items: center; }
 header .logo { font-size: 2em; font-family: var(--fonte-titulos); color: var(--cor-primaria); text-decoration: none; font-weight: bold; }
 header nav { display: flex; align-items: center; gap: 20px; }
 header nav a { text-decoration: none; color: var(--cor-texto); font-weight: bold; font-size: 1.1em; }
 header nav a.cta-button { background-color: var(--cor-acao); color: white; padding: 12px 24px; border-radius: 50px; }
+footer { text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 2px solid #f0f0f0; }
+.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: left; }
+.footer-credit { margin-top: 40px; border-top: 1px solid #e0e0e0; padding-top: 20px; font-size: 0.9em; }
+
+/* --- Layout de Conteúdo e Mídia --- */
 main { padding: 40px 0; }
-h1 { font-family: var(--fonte-titulos); color: var(--cor-titulos); font-size: 3.5em; text-align: center; }
-h2 { font-family: var(--fonte-titulos); color: var(--cor-primaria); font-size: 2.2em; margin-top: 50px; margin-bottom: 20px; }
+h1 { font-family: var(--fonte-titulos); color: var(--cor-titulos); font-size: 3em; text-align: center; line-height: 1.2; }
+h2 { font-family: var(--fonte-titulos); color: var(--cor-primaria); font-size: 2.2em; margin-top: 40px; margin-bottom: 20px; }
 
 /* --- Carrossel Horizontal (Bon Appétit Style) --- */
 .post-carousel {
@@ -28,17 +35,16 @@ h2 { font-family: var(--fonte-titulos); color: var(--cor-primaria); font-size: 2
     scrollbar-width: none; /* Firefox */
 }
 .post-carousel::-webkit-scrollbar { display: none; /* Chrome/Safari */ }
-
 .card {
     flex: 0 0 80%; /* No mobile, cada card ocupa 80% da tela */
-    max-width: 320px; /* Tamanho máximo de cada card no desktop */
+    max-width: 320px; /* Tamanho máximo de cada card */
     text-decoration: none; color: var(--cor-texto);
     background-color: var(--cor-fundo);
 }
 .card-image {
     width: 100%;
     height: 180px;
-    object-fit: cover; /* Usa 'cover' para preencher o espaço, 'contain' para mostrar tudo */
+    object-fit: cover; /* Mude para 'contain' se quiser que a imagem toda apareça */
     border-radius: 8px;
     margin-bottom: 15px;
     border: 1px solid #eee;
@@ -46,10 +52,6 @@ h2 { font-family: var(--fonte-titulos); color: var(--cor-primaria); font-size: 2
 .card-content { padding: 0 5px; }
 .card-category { font-size: 0.75em; font-weight: bold; color: var(--cor-acao); text-transform: uppercase; }
 .card h3 { font-size: 1.25em; color: var(--cor-titulos); margin: 5px 0; }
-.card p { font-size: 1em; color: #666; }
-
-/* --- Rodapé --- */
-/* (código do rodapé permanece o mesmo) */
 
 /* --- Design Responsivo --- */
 @media (max-width: 768px) {
