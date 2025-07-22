@@ -19,6 +19,13 @@ h1 { font-family: var(--fonte-titulos); color: var(--cor-titulos); font-size: 3e
 h2 { font-family: var(--fonte-titulos); color: var(--cor-primaria); font-size: 2.2em; margin-top: 50px; margin-bottom: 20px; }
 .post-carousel { display: flex; overflow-x: auto; gap: 20px; padding: 10px 0 20px 0; scrollbar-width: none; }
 .post-carousel::-webkit-scrollbar { display: none; }
+/* --- Cards de Revista (Layout de Grade) --- */
+.post-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    justify-items: center; /* Centraliza os cards na grade */
+}
 .card { flex: 0 0 80%; max-width: 320px; text-decoration: none; color: var(--cor-texto); display: flex; flex-direction: column; }
 .card-image {
     width: 100%;
