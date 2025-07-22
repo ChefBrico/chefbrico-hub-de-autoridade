@@ -35,7 +35,6 @@ h2 { font-family: var(--fonte-titulos); color: var(--cor-primaria); font-size: 2
     scrollbar-width: none; /* Firefox */
 }
 .post-carousel::-webkit-scrollbar { display: none; /* Chrome/Safari */ }
-
 .card {
     flex: 0 0 80%; /* No mobile, cada card ocupa 80% da tela */
     max-width: 320px; /* Tamanho máximo de cada card */
@@ -45,7 +44,7 @@ h2 { font-family: var(--fonte-titulos); color: var(--cor-primaria); font-size: 2
 .card-image {
     width: 100%;
     height: 180px;
-    object-fit: cover;
+    object-fit: cover; /* Garante que a imagem preencha o espaço do card */
     border-radius: 8px;
     margin-bottom: 15px;
     border: 1px solid #eee;
