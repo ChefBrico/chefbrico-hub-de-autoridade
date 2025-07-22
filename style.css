@@ -20,7 +20,13 @@ h2 { font-family: var(--fonte-titulos); color: var(--cor-primaria); font-size: 2
 .post-carousel { display: flex; overflow-x: auto; gap: 20px; padding: 10px 0 20px 0; scrollbar-width: none; }
 .post-carousel::-webkit-scrollbar { display: none; }
 .card { flex: 0 0 80%; max-width: 320px; text-decoration: none; color: var(--cor-texto); display: flex; flex-direction: column; }
-.card-image { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px; background-color: #f0f0f0; }
+.card-image {
+    width: 100%;
+    height: 220px;
+    object-fit: contain; /* ALTERADO: Garante que a imagem inteira apareça, sem cortes */
+    background-color: #fdfdfd; /* Adiciona um fundo suave para imagens verticais */
+    border-bottom: 1px solid #eee; /* Adiciona uma separação sutil */
+}
 .card-content { display: flex; flex-direction: column; flex-grow: 1; padding: 0 5px; }
 .card-category { font-size: 0.8em; font-weight: bold; color: var(--cor-acao); }
 .card h3 { font-size: 1.4em; color: var(--cor-titulos); margin: 5px 0; }
