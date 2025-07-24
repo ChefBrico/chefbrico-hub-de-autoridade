@@ -1,4 +1,4 @@
-/* CHEFBRICO STYLE v12.0 - FINAL & VERIFIED BLUEPRINT */
+/* CHEFBRICO STYLE v10.0 - FINAL POLISH & LAYOUT FIX */
 :root {
     --cor-primaria: #01403a; --cor-secundaria: #bfb084; --cor-acao: #f2811d;
     --cor-titulos: #73022c; --cor-texto: #333333; --cor-fundo: #FFFFFF;
@@ -15,18 +15,33 @@ header nav { display: flex; align-items: center; gap: 20px; }
 header nav a { text-decoration: none; color: var(--cor-texto); font-weight: bold; font-size: 1.1em; }
 header nav a.cta-button { background-color: var(--cor-acao); color: white; padding: 12px 24px; border-radius: 50px; }
 main { padding: 40px 0; }
-h1 { font-family: var(--fonte-titulos); color: var(--cor-titulos); font-size: 3em; text-align: center; line-height: 1.2; }
-h2 { font-family: var(--fonte-titulos); color: var(--cor-primaria); font-size: 2.2em; margin-top: 40px; margin-bottom: 20px; }
-.article-hero-image { display: block; max-width: 800px; width: 100%; height: auto; margin: 40px auto; border-radius: 8px; }
-.post-content { max-width: 720px; margin: 0 auto; }
-.post-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-.card { display: flex; flex-direction: column; background-color: #f9f9f9; border-radius: 8px; overflow: hidden; text-decoration: none; color: var(--cor-texto); }
-.card-image { width: 100%; height: 200px; object-fit: contain; background-color: #f8f8f8; padding: 10px; }
-.card-content { padding: 20px; flex-grow: 1; }
-.card-category { font-size: 0.8em; font-weight: bold; color: var(--cor-acao); text-transform: uppercase; }
-.card h3 { font-size: 1.4em; color: var(--cor-titulos); margin: 10px 0; }
+h1 { font-family: var(--fonte-titulos); color: var(--cor-titulos); font-size: 3em; text-align: center; }
+h2 { font-family: var(--fonte-titulos); color: var(--cor-primaria); font-size: 2.2em; margin-top: 50px; margin-bottom: 20px; }
+.post-carousel { display: flex; overflow-x: auto; gap: 20px; padding: 10px 0 20px 0; scrollbar-width: none; }
+.post-carousel::-webkit-scrollbar { display: none; }
+/* --- Cards de Revista (Layout de Grade) --- */
+.post-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    justify-items: center; /* Centraliza os cards na grade */
+}
+.card { flex: 0 0 80%; max-width: 320px; text-decoration: none; color: var(--cor-texto); display: flex; flex-direction: column; }
+.card-image {
+    width: 100%;
+    height: 220px; /* Define uma altura fixa para todas as imagens dos cards */
+    object-fit: cover; /* Faz a imagem preencher o espaço, cortando o excesso de forma elegante */
+    border-bottom: 1px solid #eee; /* Adiciona uma separação sutil */
+}
+}
+.card-content { display: flex; flex-direction: column; flex-grow: 1; padding: 0 5px; }
+.card-category { font-size: 0.8em; font-weight: bold; color: var(--cor-acao); }
+.card h3 { font-size: 1.4em; color: var(--cor-titulos); margin: 5px 0; }
+.card p { flex-grow: 1; }
 footer { text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 2px solid #f0f0f0; }
 .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: left; }
+.footer-grid h4 { font-size: 1.2em; margin-bottom: 15px; color: var(--cor-titulos); }
+.footer-grid a { color: var(--cor-texto); text-decoration: none; display: block; margin-bottom: 12px; } /* AUMENTADO ESPAÇAMENTO */
 .footer-credit { margin-top: 40px; border-top: 1px solid #e0e0e0; padding-top: 20px; font-size: 0.9em; }
 @media (max-width: 768px) {
     .header-flex { flex-direction: column; gap: 20px; }
@@ -35,3 +50,12 @@ footer { text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 2
     h1 { font-size: 2.5em; }
     .footer-grid { grid-template-columns: 1fr; text-align: center; gap: 40px; }
 }
+@media (min-width: 769px) { .card { flex: 0 0 320px; } }
+/* --- Ajuste Fino para Grade de 4 Colunas em Desktops --- */
+@media (min-width: 1200px) {
+    .post-grid {
+        grid-template-columns: repeat(4, 1fr); /* Força 4 colunas em telas largas */
+    }
+}
+
+
