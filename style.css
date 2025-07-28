@@ -35,7 +35,6 @@ h2 { font-family: var(--fonte-titulos); color: var(--cor-primaria); font-size: 2
     padding: 10px; /* Um respiro interno generoso para a imagem */
     border-bottom: 1px solid #eee; /* Uma separação sutil e elegante */
 }
-}
 .card-content { display: flex; flex-direction: column; flex-grow: 1; padding: 0 5px; }
 .card-category { font-size: 0.8em; font-weight: bold; color: var(--cor-acao); }
 .card h3 { font-size: 1.4em; color: var(--cor-titulos); margin: 5px 0; }
