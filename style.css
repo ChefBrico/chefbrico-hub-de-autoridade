@@ -59,4 +59,40 @@ footer { text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 2
     }
 }
 
+/* Estilos para a nova faixa superior com slogan */
+.top-slogan-bar {
+    background-color: #bfb084; /* Cor dourada conforme solicitado */
+    color: #ffffff; /* Cor do texto branco para contraste */
+    padding: 8px 0; /* Altura da faixa (ajuste conforme necessário) */
+    text-align: center;
+    font-family: Arial, sans-serif; /* Fonte para o slogan */
+    font-size: 14px; /* Tamanho da fonte (ajuste para mobile/PC) */
+    font-weight: bold; /* Deixa o texto em negrito */
+    overflow: hidden; /* Garante que o conteúdo não vaze */
+}
+
+.top-slogan-bar .container {
+    display: flex; /* Para alinhar o texto e o botão */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    flex-wrap: wrap; /* Permite que o conteúdo quebre linha em telas pequenas */
+}
+
+.top-slogan-bar p {
+    margin: 0; /* Remove margem padrão do parágrafo */
+    padding: 0 10px; /* Espaçamento interno */
+    white-space: nowrap; /* Tenta manter o slogan em uma linha, mas flex-wrap vai ajudar no mobile */
+}
+
+/* Media query para mobile first (opcional, se precisar de ajustes específicos) */
+@media (max-width: 768px) {
+    .top-slogan-bar {
+        font-size: 12px; /* Reduz a fonte em telas menores */
+        padding: 6px 0;
+    }
+    .top-slogan-bar p {
+        white-space: normal; /* Permite que o slogan quebre linha no mobile */
+    }
+}
+
 
