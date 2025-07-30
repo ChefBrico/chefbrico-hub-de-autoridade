@@ -43,8 +43,8 @@
         "@type": "FoodEstablishment",
         "name": "ChefBrico",
         "url": "https://www.chefbrico.com",
-        "logo": "/imagens/flamula-chefbrico.png", /* CONFIRME ESTA URL DO SEU LOGO FINAL */
-        "image": "/imagens/maria-conceicao-chefbrico.jpg", /* CONFIRME ESTA URL DE IMAGEM REPRESENTATIVA */
+        "logo": "https://www.receita.chefbrico.com/imagens/flamula-chefbrico.png", /* URL ABSOLUTA DO SEU LOGO */
+        "image": "https://www.receita.chefbrico.com/imagens/banner-maria-conceicao-solita-avaliacao.png", /* URL ABSOLUTA DA IMAGEM REPRESENTATIVA */
         "telephone": "+5561996659888", 
         "email": "familiabricolage@chefbrico.com",
         "contactPoint": {
@@ -56,15 +56,15 @@
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "rua 5, chacara 122, lote 17, loja 2", 
-          "addressLocality": "Vicente Pires, Brasília", 
+          "addressLocality": "Vicente Pires", 
           "addressRegion": "DF",
           "postalCode": "72006-060", 
           "addressCountry": "BR"
         },
         "geo": {
           "@type": "GeoCoordinates",
-          "latitude": -15.78976440, 
-          "longitude": -48.01595120
+          "latitude": -15.78975, 
+          "longitude": -48.01597 
         },
         "priceRange": "$$",
         "servesCuisine": "Comida saudável, Comida prática, Comida artesanal, Risotos, Sopas",
@@ -92,7 +92,7 @@
           "https://br.pinterest.com/chefbrico/",
           "https://g.co/kgs/DW1yHmH" 
         ],
-        "hasMap": "hasMap": "https://www.google.com/maps/d/u/1/embed?mid=10FgLnADSGKwtKCGldwXZDiqrAt_qqJY&ehbc=2E312F", /* COLOQUE A URL SRC DO IFRAME DO MAPA GERADO, Ex: https://www.google.com/maps/d/u/1/embed?mid=... */
+        "hasMap": "https://www.google.com/maps/d/u/1/embed?mid=1OFgLnADSGkwtKCgLdwXZDiqrAt_qgJY&ehbc=2E312F", /* COLOQUE A URL SRC DO IFRAME DO SEU MAPA REAL */
         "potentialAction": {
           "@type": "OrderAction",
           "target": {
@@ -141,8 +141,8 @@
         
         <div class="map-container">
             <iframe 
-                src="https://www.google.com/maps/d/u/1/embed?mid=1OFgLnADSGkwtKCgLdwXZDiqrAt_qgJY&ehbc=2E312F" /* ESTA É A URL CORRETA DO SEU MAPA */
-                width="100%" /* Alterado para 100% para responsividade */
+                src="https://www.google.com/maps/d/u/1/embed?mid=1OFgLnADSGkwtKCgLdwXZDiqrAt_qgJY&ehbc=2E312F" /* COLOQUE A URL SRC DO IFRAME DO SEU MAPA REAL */
+                width="100%" 
                 height="480" 
                 style="border:0;" 
                 allowfullscreen="" 
@@ -150,13 +150,6 @@
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
-        ```
-* **Importante:** A URL `https://www.google.com/maps/d/u/1/embed?mid=1OFgLnADSGkwtKCgLdwXZDiqrAt_qgJY&ehbc=2E312F` agora está confirmada como a correta para o seu caso específico.
-        ```
-
-Além disso, certifique-se de que no Schema.org `FoodEstablishment` (no `<head>`), a propriedade `"hasMap"` também use essa **MESMA URL CORRETA** (apenas a URL dentro do `src`, sem o `<iframe>` completo).
-
-Aguardarei o código completo do `<iframe>` que você obtiver do Google My Maps para te guiar na inserção final. Isso é crucial para que o mapa apareça e a página seja totalmente funcional e otimizada para a **WAR GEOlocalização**.
         <div class="post-content">
             <h2>Nossa Presença em Brasília: Uma "Mãozinha na Rotina" Perto de Você</h2>
             <p>A ChefBrico se orgulha de ser uma marca nascida em Brasília! Estamos em <strong>Vicente Pires</strong>, e nossa linha de sabores 'mãozinha na rotina' pode ser encontrada nos melhores empórios e parceiros no Distrito Federal e em feiras semanais.</p>
@@ -164,76 +157,98 @@ Aguardarei o código completo do `<iframe>` que você obtiver do Google My Maps 
             <h3>Empórios e Pontos de Venda Parceiros:</h3>
             <ul class="partner-list">
                 <li>
-                    <strong>Empório Rural do Colorado:</strong> DF-150 - Sobradinho, Brasília - DF. Horário: Sex 16h-20h, Sáb 7h-13h, Dom 7h-12h.
-                    <p><em>Encontre nossos produtos frescos e especiais para sua casa no Empório Rural.</em></p>
+                    <strong>Empório Rural do Colorado:</strong> DF-150 - Sobradinho, Brasília - DF.<br>
+                    <small>Horário: Sex 16h-20h, Sáb 7h-13h, Dom 7h-12h.</small><br>
+                    <p class="description"><em>Encontre nossos produtos frescos e especiais para sua casa no Empório Rural.</em></p>
                 </li>
                 <li>
-                    <strong>NOSSO Empório & Mercearia:</strong> Edifício Águas de Manaíra - R. 24 Norte, 04 - Águas Claras, Brasília - DF, 71916-750. Horário: Seg-Sáb 7h-21h, Dom 8h-18h.
-                    <p><em>Seu ponto de encontro para praticidade e sabor em Águas Claras.</em></p>
+                    <strong>NOSSO Empório & Mercearia:</strong> Edifício Águas de Manaíra - R. 24 Norte, 04 - Águas Claras, Brasília - DF, 71916-750.<br>
+                    <small>Horário: Seg-Sáb 7h-21h, Dom 8h-18h.</small><br>
+                    <p class="description"><em>Seu ponto de encontro para praticidade e sabor em Águas Claras.</em></p>
                 </li>
                 <li>
-                    <strong>Quitandas da Vó Maria:</strong> SHIN área especial 03 loja 02 - Polo Verde, Brasília - DF, 71503-700. Horário: Seg-Sáb 9h-17h30, Dom 9h-13h.
-                    <p><em>Um toque de tradição e a ChefBrico para sua rotina.</em></p>
+                    <strong>Quitandas da Vó Maria:</strong> SHIN área especial 03 loja 02 - Polo Verde, Brasília - DF, 71503-700.<br>
+                    <small>Horário: Seg-Sáb 9h-17h30, Dom 9h-13h.</small><br>
+                    <p class="description"><em>Um toque de tradição e a ChefBrico para sua rotina.</em></p>
                 </li>
                 <li>
-                    <strong>Mercearia Colaborativa:</strong> Asa Norte CLN 412 BL E LOJA 4, 6, 10 - Brasília, DF, 70867-550. Horário: Seg-Sáb 8h-20h.
-                    <p><em>Um espaço único com a curadoria ChefBrico.</em></p>
+                    <strong>Mercearia Colaborativa:</strong> Asa Norte CLN 412 BL E LOJA 4, 6, 10 - Brasília, DF, 70867-550.<br>
+                    <small>Horário: Seg-Sáb 8h-20h.</small><br>
+                    <p class="description"><em>Um espaço único com a curadoria ChefBrico.</em></p>
                 </li>
                 <li>
-                    <strong>Instituto Florestta - Taguatinga:</strong> QS 05 Praça AC 1 Lote 04 - Taguatinga, Brasília - DF, 71955-120. Horário: Seg-Sex 9h-17h30, Sáb 8h-13h.
-                    <p><em>Sua dose de sabor e bem-estar em Taguatinga.</em></p>
+                    <strong>Instituto Florestta - Taguatinga:</strong> QS 05 Praça AC 1 Lote 04 - Taguatinga, Brasília - DF, 71955-120.<br>
+                    <small>Horário: Seg-Sex 9h-17h30, Sáb 8h-13h.</small><br>
+                    <p class="description"><em>Sua dose de sabor e bem-estar em Taguatinga.</em></p>
                 </li>
                 <li>
-                    <strong>A Casa do Manjericão:</strong> Asa Norte CLN 215 BL B Loja 9 - Asa Norte, Brasília - DF, 70874-520. Horário: Seg-Sáb 10h-20h, Dom 13h30-14h.
-                    <p><em>Um oásis de sabores naturais na Asa Norte.</em></p>
+                    <strong>A Casa do Manjericão:</strong> Asa Norte CLN 215 BL B Loja 9 - Asa Norte, Brasília - DF, 70874-520.<br>
+                    <small>Horário: Seg-Sáb 10h-20h, Dom 13h30-14h.</small><br>
+                    <p class="description"><em>Um oásis de sabores naturais na Asa Norte.</em></p>
                 </li>
                 <li>
-                    <strong>Ravioli e Cia - Asa Norte:</strong> CLN 214, bloco D, lojas 05 e 07 - Asa Norte, Brasília - DF, 70873-540. Horário: Seg-Sáb 9h-20h, Dom 9h-15h.
-                    <p><em>Descubra a ChefBrico junto aos clássicos da culinária italiana.</em></p>
+                    <strong>Ravioli e Cia - Asa Norte:</strong> CLN 214, bloco D, lojas 05 e 07 - Asa Norte, Brasília - DF, 70873-540.<br>
+                    <small>Horário: Seg-Sáb 9h-20h, Dom 9h-15h.</small><br>
+                    <p class="description"><em>Descubra a ChefBrico junto aos clássicos da culinária italiana.</em></p>
                 </li>
                 <li>
-                    <strong>Ravioli e Cia - Sudoeste:</strong> CLSW 302, Bloco B, loja 24, St. Sudoeste, Brasília - DF, 70673-612. Horário: Seg-Sáb 9h-20h, Dom 9h-15h.
-                    <p><em>Praticidade e sabor ChefBrico no coração do Sudoeste.</em></p>
+                    <strong>Ravioli e Cia - Sudoeste:</strong> CLSW 302, Bloco B, loja 24, St. Sudoeste, Brasília - DF, 70673-612.<br>
+                    <small>Horário: Seg-Sáb 9h-20h, Dom 9h-15h.</small><br>
+                    <p class="description"><em>Praticidade e sabor ChefBrico no coração do Sudoeste.</em></p>
                 </li>
                 <li>
-                    <strong>Mercado Malunga - Asa Norte:</strong> Asa Norte Comércio Local Norte 315 BL E loja 04 - Asa Norte, Brasília - DF, 70774-550. Horário: Seg-Sáb 7h-20h.
-                    <p><em>Seus produtos ChefBrico no tradicional Mercado Malunga da Asa Norte.</em></p>
+                    <strong>Mercado Malunga - Asa Norte:</strong> Asa Norte Comércio Local Norte 315 BL E loja 04 - Asa Norte, Brasília - DF, 70774-550.<br>
+                    <small>Horário: Seg-Sáb 7h-20h.</small><br>
+                    <p class="description"><em>Seus produtos ChefBrico no tradicional Mercado Malunga da Asa Norte.</em></p>
                 </li>
                 <li>
-                    <strong>Mercado Malunga - Asa Sul:</strong> Asa Sul Q SHC/Sul CL 105 bloco De SN - Asa Sul, Brasília - DF, 70344-540. Horário: Seg-Sáb 7h-20h.
-                    <p><em>Encontre a ChefBrico na sua feira preferida da Asa Sul.</em></p>
+                    <strong>Mercado Malunga - Asa Sul:</strong> Asa Sul Q SHC/Sul CL 105 bloco De SN - Asa Sul, Brasília - DF, 70344-540.<br>
+                    <small>Horário: Seg-Sáb 7h-20h.</small><br>
+                    <p class="description"><em>Encontre a ChefBrico na sua feira preferida da Asa Sul.</em></p>
                 </li>
                 <li>
-                    <strong>Mercado Malunga - Sudoeste:</strong> Q SHCSW CL 104, BLOCO A, LOJA 19 - Cruzeiro / Sudoeste / Octogonal, Brasília - DF, 70670-503. Horário: Seg-Sáb 7h-20h.
-                    <p><em>A qualidade ChefBrico agora no Mercado Malunga do Sudoeste.</em></p>
+                    <strong>Mercado Malunga - Sudoeste:</strong> Q SHCSW CL 104, BLOCO A, LOJA 19 - Cruzeiro / Sudoeste / Octogonal, Brasília - DF, 70670-503.<br>
+                    <small>Horário: Seg-Sáb 7h-20h.</small><br>
+                    <p class="description"><em>A qualidade ChefBrico agora no Mercado Malunga do Sudoeste.</em></p>
                 </li>
                 <li>
-                    <strong>Mercado Malunga - Lago Sul:</strong> Shop Gilberto Salomão SHIS quadra 05 Bloco F CC Sobreloja, 09 - Lago Sul, Brasília - DF, 71615-560. Horário: Seg-Sáb 7h-20h, Dom 9h-17h.
-                    <p><em>Conveniência e sabor ChefBrico para a região do Lago Sul.</em></p>
+                    <strong>Mercado Malunga - Lago Sul:</strong> Shop Gilberto Salomão SHIS quadra 05 Bloco F CC Sobreloja, 09 - Lago Sul, Brasília - DF, 71615-560.<br>
+                    <small>Horário: Seg-Sáb 7h-20h, Dom 9h-17h.</small><br>
+                    <p class="description"><em>Conveniência e sabor ChefBrico para a região do Lago Sul.</em></p>
                 </li>
             </ul>
 
             <h3>Feiras Semanais Onde Você Encontra a ChefBrico:</h3>
             <ul class="fair-list">
                 <li>
-                    <strong>Feira da Praça 13:</strong> St. de Habitações Individuais Sul QI 13 - Lago Sul, Brasília - DF. Horário: Sábados 8h-14h.
-                    <p><em>Visite nossa barraca para produtos frescos e degustação!</em></p>
+                    <strong>Feira da Praça 13:</strong> St. de Habitações Individuais Sul QI 13 - Lago Sul, Brasília - DF.<br>
+                    <small>Horário: Sábados 8h-14h.</small><br>
+                    <p class="description"><em>Visite nossa barraca para produtos frescos e degustação!</em></p>
                 </li>
                 <li>
-                    <strong>Feirinha Rural com apoio da Emater na Fundação Hemocentro de Brasília:</strong> BL 3 - SMHN conjunto A - Asa Norte, Brasília - DF, 70710-908. Horário: Quartas 9h-15h.
-                    <p><em>Encontre a ChefBrico e apoie a agricultura familiar.</em></p>
+                    <strong>Feirinha Rural com apoio da Emater na Fundação Hemocentro de Brasília:</strong> BL 3 - SMHN conjunto A - Asa Norte, Brasília - DF, 70710-908.<br>
+                    <small>Horário: Quartas 9h-15h.</small><br>
+                    <p class="description"><em>Encontre a ChefBrico e apoie a agricultura familiar.</em></p>
                 </li>
             </ul>
 
-            <p>Para o endereço exato de cada parceiro e feira, consulte o mapa acima ou entre em contato conosco!</p>
+            <p style="margin-top: 30px;">Para o endereço exato de cada parceiro e feira, consulte o mapa acima ou entre em contato conosco!</p>
             
-            <h2 style="margin-top: 40px;">Nossas Avaliações no Google</h2>
-            <p>A ChefBrico se orgulha da satisfação de seus clientes! Veja o que eles dizem sobre nossos produtos e serviços:</p>
-            <div style="text-align: center; margin-top: 10px;">
-                <span style="color: #FFC107; font-size: 24px;">★★★★★</span><br>
-                <a href="https://g.page/r/CWIKRViCYBCDEAI/review" target="_blank" rel="noopener noreferrer" class="cta-button" style="background-color: #4285F4; margin-top: 10px;">Ver e Deixar uma Avaliação no Google</a>
+            <div class="gbp-review-section-personal">
+                <div class="chef-image-container">
+                    <img src="/imagens/banner-maria-conceicao-solita-avaliacao.png" alt="Chef Maria Conceição, Empreendedora ChefBrico, pedindo sua avaliação" class="chef-image-review">
+                </div>
+                <div class="review-text-content">
+                    <h2 style="margin-top: 0; font-size: 1.8em;">Conte sua Experiência!</h2>
+                    <p style="font-size: 1.1em; line-height: 1.6;">Olá, sou a Maria Conceição, a Chef por trás da ChefBrico!<br>
+                    Cada receita é feita com muito carinho e a paixão pela comida de verdade. Seu feedback é essencial para continuarmos transformando a rotina na cozinha.</p>
+                    <div style="text-align: center; margin-top: 15px;">
+                        <span style="color: #FFC107; font-size: 2.5em;">★★★★★</span><br>
+                        <a href="https://g.page/r/CWIKRViCYBCDEAI/review" target="_blank" rel="noopener noreferrer" class="cta-button" style="background-color: #4285F4;">Deixe Sua Avaliação no Google!</a>
+                    </div>
+                    <p style="font-size: 0.9em; margin-top: 15px;">Sua opinião nos ajuda a crescer e a oferecer sempre o melhor!</p>
+                </div>
             </div>
-
             <h2>A Solução para a Rotina: A Despensa Inteligente</h2>
             <p>Cansado da correria e do desperdício de vegetais frescos que estragam na geladeira? A "Despensa Inteligente" é a nossa estratégia para você. Com as misturas práticas da ChefBrico, você tem sempre à mão uma refeição gourmet, 100% natural e com validade longa, sendo uma opção muito boa para almoços e jantares, eliminando o estresse do "o que fazer para o jantar?".</p>
 
