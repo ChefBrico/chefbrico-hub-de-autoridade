@@ -162,3 +162,49 @@ footer { text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 2
 .cta-button:hover {
     background-color: #e08a0b;
 }
+
+/* Otimização da Legibilidade para Listas de Parceiros e Feiras */
+.partner-list li,
+.fair-list li {
+    margin-bottom: 25px; /* Adiciona espaçamento entre os itens da lista */
+    line-height: 1.6; /* Aumenta o espaçamento entre linhas dentro do item */
+    padding-bottom: 15px; /* Espaçamento interno na parte inferior de cada item */
+    border-bottom: 1px dashed #e0e0e0; /* Linha tracejada sutil para separar itens */
+}
+
+.partner-list li:last-child,
+.fair-list li:last-child {
+    border-bottom: none; /* Remove a borda do último item para não ter linha extra */
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.partner-list li strong,
+.fair-list li strong {
+    font-size: 1.1em; /* Destaca o nome do parceiro/feira */
+    color: var(--cor-primaria); /* Cor da marca */
+}
+
+.partner-list li small,
+.fair-list li small {
+    display: block; /* Garante que o horário fique em uma nova linha */
+    margin-top: 5px; /* Espaçamento entre o endereço e o horário */
+    color: var(--cor-texto);
+    font-size: 0.95em;
+}
+
+.partner-list li p.description,
+.fair-list li p.description {
+    font-size: 0.9em;
+    margin-top: 8px; /* Espaçamento para a descrição */
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Otimização para telas menores */
+@media (max-width: 768px) {
+    .partner-list li,
+    .fair-list li {
+        font-size: 0.95em; /* Ajusta o tamanho da fonte para mobile */
+    }
+}
