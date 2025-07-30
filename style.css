@@ -211,76 +211,8 @@ footer {
         text-align: center;
         gap: 40px;
     }
-}
 
-@media (min-width: 769px) {
-    .card {
-        flex: 0 0 320px;
-    }
-}
-
-/* --- Ajuste Fino para Grade de 4 Colunas em Desktops --- */
-@media (min-width: 1200px) {
-    .post-grid {
-        grid-template-columns: repeat(4, 1fr); /* Força 4 colunas em telas largas */
-    }
-}
-
-/* Estilos para a nova faixa superior com slogan */
-.top-slogan-bar {
-    background-color: var(--cor-secundaria); /* Cor dourada conforme solicitado */
-    color: #ffffff; /* Cor do texto branco para contraste */
-    padding: 8px 0; /* Altura da faixa (ajuste conforme necessário) */
-    text-align: center;
-    font-family: Arial, sans-serif; /* Fonte para o slogan */
-    font-size: 14px; /* Tamanho da fonte (ajuste para mobile/PC) */
-    font-weight: bold; /* Deixa o texto em negrito */
-    overflow: hidden; /* Garante que o conteúdo não vaze */
-}
-
-.top-slogan-bar .container {
-    display: flex; /* Para alinhar o texto e o botão */
-    justify-content: center; /* Centraliza o conteúdo horizontalmente */
-    align-items: center; /* Centraliza o conteúdo verticalmente */
-    flex-wrap: wrap; /* Permite que o conteúdo quebre linha em telas pequenas */
-}
-
-.top-slogan-bar p {
-    margin: 0; /* Remove margem padrão do parágrafo */
-    padding: 0 10px; /* Espaçamento interno */
-    white-space: nowrap; /* Tenta manter o slogan em uma linha, mas flex-wrap vai ajudar no mobile */
-}
-
-/* Media query para telas menores (mobile first) */
-@media (max-width: 768px) {
-    .header-flex {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    header nav {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        width: 100%;
-    }
-
-    header nav a.cta-button {
-        width: 100%;
-        text-align: center;
-    }
-
-    h1 {
-        font-size: 2.5em;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 40px;
-    }
-
-    /* Novo ajuste para o padding do container em mobile */
+    /* Ajuste para o padding do container em mobile */
     .container {
         padding: 0 15px; /* Reduz o padding lateral para telas menores */
     }
@@ -302,7 +234,6 @@ footer {
 
     /* AUMENTAR O CÍRCULO DA CHEF MARIA CONCEIÇÃO EM MOBILE */
     .gbp-review-section-personal .chef-image-container {
-        /* Tamanho base 200px + 50% = 300px */
         width: 300px;
         height: 300px;
         margin-bottom: 25px; /* Ajusta espaçamento para o texto abaixo */
@@ -312,35 +243,142 @@ footer {
         padding: 0 5px; /* Ajusta o padding do texto dentro da seção de reviews */
     }
 }
-/* Media query para telas maiores (PC) */
+
 @media (min-width: 769px) {
-    .gbp-review-section-personal {
-        flex-direction: row; /* Alinha imagem e texto lado a lado no PC */
-        text-align: left; /* Alinha o texto à esquerda no PC */
-        justify-content: center; /* Centraliza o bloco inteiro */
-        align-items: flex-start; /* Alinha o conteúdo ao topo quando lado a lado */
-    }
-
-    .gbp-review-section-personal .chef-image-container {
-        margin-right: 30px; /* Espaçamento entre imagem e texto no PC */
-        margin-bottom: 0; /* Remove margem inferior do mobile */
-    }
-
-    .gbp-review-section-personal h2 {
-        margin-top: 0; /* Remove margem superior extra no PC */
+    .card {
+        flex: 0 0 320px;
     }
 }
 
-/* Estilos para os botões CTA (para garantir consistência visual) */
+/* --- Ajuste Fino para Grade de 4 Colunas em Desktops --- */
+@media (min-width: 1200px) {
+    .post-grid {
+        grid-template-columns: repeat(4, 1fr); /* Força 4 colunas em telas largas */
+    }
+}
+
+/* Estilos para a nova faixa superior com slogan */
+.top-slogan-bar {
+    background-color: var(--cor-secundaria);
+    color: #ffffff;
+    padding: 8px 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.top-slogan-bar .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.top-slogan-bar p {
+    margin: 0;
+    padding: 0 10px;
+    white-space: nowrap;
+}
+
+/* Estilos para a seção de Avaliações com a Chef (OTIMIZADA PARA DESTAQUE) */
+.gbp-review-section-personal {
+    display: flex;
+    flex-direction: column; /* Padrão em mobile: imagem e texto empilhados */
+    align-items: center; /* Centraliza itens na coluna */
+    text-align: center; /* Centraliza texto */
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 30px 20px;
+    margin-top: 50px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden; /* Garante que a imagem não vaze em certas configurações */
+}
+
+.gbp-review-section-personal .chef-image-container {
+    /* Tamanho base 200px + 50% = 300px (já ajustado para mobile acima na media query) */
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border: 5px solid var(--cor-secundaria);
+    flex-shrink: 0;
+}
+
+.gbp-review-section-personal .chef-image-review {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.gbp-review-section-personal .review-text-content {
+    flex-grow: 1;
+    padding: 0 15px;
+    max-width: 100%;
+}
+
+/* Media query para telas maiores (PC) - Imagem à direita, 1/3 da área vertical */
+@media (min-width: 769px) {
+    .gbp-review-section-personal {
+        flex-direction: row; /* Alinha imagem e texto lado a lado no PC */
+        justify-content: center; /* Centraliza o bloco inteiro */
+        align-items: flex-start; /* Alinha o conteúdo ao topo quando lado a lado */
+        text-align: left; /* Alinha o texto à esquerda */
+        padding-right: 0;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .gbp-review-section-personal .review-text-content {
+        flex-basis: 66.66%; /* Texto ocupa 2/3 do espaço */
+        max-width: 66.66%;
+        padding-right: 30px;
+        z-index: 1;
+    }
+
+    .gbp-review-section-personal .chef-image-container {
+        order: 2; /* Move a imagem para a direita visualmente */
+        flex-basis: 33.33%; /* Imagem ocupa 1/3 do espaço horizontal */
+        display: flex; /* Para centralizar a imagem dentro do seu terço */
+        justify-content: center;
+        align-items: center;
+
+        /* Aumento em 50% do tamanho base (200px + 50% = 300px) para PC */
+        width: clamp(200px, 33vw, 300px); /* Tamanho adaptável para a imagem circular */
+        height: clamp(200px, 33vw, 300px); /* Altura igual à largura para círculo */
+        margin-left: -50px; /* Puxa a imagem um pouco para a esquerda, sobrepondo o fundo do texto */
+        z-index: 2; /* Garante que a imagem fique por cima do texto se sobrepor */
+        border-width: 6px; /* Borda ainda mais visível */
+    }
+
+    .gbp-review-section-personal .chef-image-review {
+        /* Mantém object-fit: cover; */
+    }
+}
+
+/* Estilo para o botão de Avaliação específico do GBP (cor e padding) */
+.gbp-specific-button {
+    background-color: #4285F4 !important; /* Cor azul do Google */
+    margin-top: 10px; /* Espaçamento entre estrelas e botão */
+    padding: 15px 30px; /* Tamanho do botão */
+    font-size: 1.1em;
+}
+
+/* Remover o estilo inline do HTML para o cta-button */
 .cta-button {
-    display: inline-block;
-    padding: 10px 20px;
     background-color: var(--cor-acao); /* Cor padrão do seu botão CTA */
     color: white;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s ease;
+    display: inline-block; /* Garante que o padding e margem funcionem */
+    padding: 10px 20px; /* Padding padrão */
+    margin-top: 15px; /* Margem superior padrão */
 }
 
 .cta-button:hover {
