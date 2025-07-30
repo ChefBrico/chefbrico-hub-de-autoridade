@@ -141,8 +141,8 @@
         
         <div class="map-container">
             <iframe 
-                src="https://www.google.com/maps/d/u/1/embed?mid=1OFgLnADSGkwtKCgLdwXZDiqrAt_qgJY&ehbc=2E312F" width="640" height="480" /* COLOQUE A URL SRC DO IFRAME DO SEU MAPA REAL (embed?mid=...) */
-                width="100%" 
+                src="https://www.google.com/maps/d/u/1/embed?mid=1OFgLnADSGkwtKCgLdwXZDiqrAt_qgJY&ehbc=2E312F" /* ESTA É A URL CORRETA DO SEU MAPA */
+                width="100%" /* Alterado para 100% para responsividade */
                 height="480" 
                 style="border:0;" 
                 allowfullscreen="" 
@@ -150,6 +150,8 @@
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
+        ```
+* **Importante:** A URL `https://www.google.com/maps/d/u/1/embed?mid=1OFgLnADSGkwtKCgLdwXZDiqrAt_qgJY&ehbc=2E312F` agora está confirmada como a correta para o seu caso específico.
         ```
 
 Além disso, certifique-se de que no Schema.org `FoodEstablishment` (no `<head>`), a propriedade `"hasMap"` também use essa **MESMA URL CORRETA** (apenas a URL dentro do `src`, sem o `<iframe>` completo).
