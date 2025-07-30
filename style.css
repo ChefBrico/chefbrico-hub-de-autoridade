@@ -95,4 +95,70 @@ footer { text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 2
     }
 }
 
+/* Estilos para a seção de Avaliações com a Chef */
+.gbp-review-section-personal {
+    display: flex; /* Para alinhar imagem e texto lado a lado */
+    flex-direction: column; /* Padrão em mobile, empilha os itens */
+    align-items: center; /* Centraliza verticalmente no mobile */
+    text-align: center; /* Centraliza o texto no mobile */
+    background-color: #f9f9f9; /* Fundo suave para destaque */
+    border-radius: 8px; /* Cantos arredondados */
+    padding: 30px 20px; /* Espaçamento interno */
+    margin-top: 50px; /* Margem superior para separar de outras seções */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suave */
+}
 
+.gbp-review-section-personal .chef-image-container {
+    width: 150px; /* Tamanho da área da imagem */
+    height: 150px;
+    border-radius: 50%; /* Torna a imagem circular */
+    overflow: hidden; /* Corta a imagem para caber no círculo */
+    margin-bottom: 20px; /* Espaçamento entre imagem e texto */
+    border: 4px solid #bfb084; /* Borda dourada em volta da imagem */
+    flex-shrink: 0; /* Impede que a imagem encolha */
+}
+
+.gbp-review-section-personal .chef-image-review {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem preencha o círculo sem distorcer */
+    display: block; /* Remove espaço extra abaixo da imagem */
+}
+
+.gbp-review-section-personal .review-text-content {
+    flex-grow: 1; /* Permite que o texto ocupe o espaço restante */
+    padding: 0 15px; /* Espaçamento lateral do texto */
+}
+
+/* Media query para telas maiores (PC) */
+@media (min-width: 769px) {
+    .gbp-review-section-personal {
+        flex-direction: row; /* Alinha imagem e texto lado a lado no PC */
+        text-align: left; /* Alinha o texto à esquerda no PC */
+        justify-content: center; /* Centraliza o bloco inteiro */
+        align-items: flex-start; /* Alinha o conteúdo ao topo quando lado a lado */
+    }
+    .gbp-review-section-personal .chef-image-container {
+        margin-right: 30px; /* Espaçamento entre imagem e texto no PC */
+        margin-bottom: 0; /* Remove margem inferior do mobile */
+    }
+    .gbp-review-section-personal h2 {
+        margin-top: 0; /* Remove margem superior extra no PC */
+    }
+}
+
+/* Estilos para os botões CTA (para garantir consistência visual) */
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fe9a12; /* Cor padrão do seu botão CTA */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e08a0b;
+}
