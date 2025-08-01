@@ -1,4 +1,4 @@
-/* CHEFBRICO STYLE v11.0 - CORREÇÃO CRÍTICA & OTIMIZAÇÃO VISUAL DEFINITIVA */
+/* CHEFBRICO STYLE v12.0 - RECONSTRUÇÃO COMPLETA E OTIMIZAÇÃO DE PROJETO CLIENTE ZERO */
 :root {
     --cor-primaria: #01403a;
     --cor-secundaria: #bfb084;
@@ -32,6 +32,32 @@ body {
     padding: 0;
 }
 
+.top-slogan-bar {
+    background-color: var(--cor-secundaria);
+    color: #ffffff;
+    padding: 8px 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    overflow: hidden;
+    position: relative;
+    z-index: 100;
+}
+
+.top-slogan-bar .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.top-slogan-bar p {
+    margin: 0;
+    padding: 0 10px;
+    white-space: nowrap;
+}
+
 header {
     padding: 20px 0;
     border-bottom: 1px solid #f0f0f0;
@@ -41,20 +67,25 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 header .logo {
-    font-size: 2em;
-    font-family: var(--fonte-titulos);
-    color: var(--cor-primaria);
     text-decoration: none;
     font-weight: bold;
+    flex-shrink: 0;
+}
+
+header .logo img {
+    max-height: 100px;
 }
 
 header nav {
     display: flex;
     align-items: center;
     gap: 20px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 header nav a {
@@ -69,6 +100,7 @@ header nav a.cta-button {
     color: white;
     padding: 12px 24px;
     border-radius: 50px;
+    text-align: center;
 }
 
 main {
@@ -96,6 +128,7 @@ h2 {
     gap: 20px;
     padding: 10px 0 20px 0;
     scrollbar-width: none;
+    scroll-behavior: smooth;
 }
 
 .post-carousel::-webkit-scrollbar {
@@ -184,11 +217,11 @@ footer {
     font-size: 0.9em;
 }
 
-/* NOVO: ESTRUTURA E ESTILOS PARA SEÇÕES DE HERO (CAPA DAS PÁGINAS) */
+/* CORREÇÃO CRÍTICA PARA O HERO E IMAGENS DE FUNDO */
 .hero-section {
     position: relative;
     width: 100%;
-    min-height: 450px; /* Garante que a imagem não fique achatada */
+    min-height: 450px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -215,7 +248,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Escurece mais para o texto ser legível */
+    background: rgba(0, 0, 0, 0.5);
     z-index: 2;
 }
 
@@ -242,7 +275,7 @@ footer {
     color: white;
     margin: 10px 0 0 0;
     line-height: 1.2;
-    font-weight: normal; /* Subtítulo mais leve */
+    font-weight: normal;
 }
 
 .hero-content p {
@@ -251,7 +284,6 @@ footer {
     margin-top: 15px;
 }
 
-/* Otimização para páginas de Artigos */
 .article-hero-image {
     width: 100%;
     height: auto;
@@ -277,7 +309,6 @@ footer {
     margin-bottom: 15px;
 }
 
-/* CORREÇÃO E OTIMIZAÇÃO DA SEÇÃO DE REVIEWS */
 .gbp-review-section-personal {
     display: flex;
     flex-direction: column;
@@ -287,7 +318,7 @@ footer {
     border-radius: 8px;
     margin-top: 50px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    padding: 30px 25px; /* Padding interno consistente */
+    padding: 30px 25px;
     position: relative;
     overflow: hidden;
 }
@@ -368,6 +399,77 @@ footer {
 
 .map-container iframe {
     border-radius: 8px;
+}
+
+.faq-section {
+    margin-bottom: 40px;
+}
+
+.faq-section h2 {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.faq-item-accordion {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.accordion-header {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: var(--fonte-corpo);
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 18px 20px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
+
+.accordion-header h3 {
+    margin: 0;
+    font-size: 1.1em;
+    color: var(--cor-primaria);
+    flex-grow: 1;
+}
+
+.accordion-header .icon {
+    font-size: 1.2em;
+    transition: transform 0.2s ease;
+    color: var(--cor-acao);
+}
+
+.accordion-header.active {
+    background-color: #f0f0f0;
+}
+
+.accordion-header.active .icon {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    padding: 0 20px;
+    background-color: #fdfdfd;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+.accordion-content p {
+    padding-bottom: 15px;
+    margin-top: 10px;
+    line-height: 1.7;
+    color: var(--cor-texto);
 }
 
 @media (max-width: 768px) {
