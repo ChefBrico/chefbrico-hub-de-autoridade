@@ -213,7 +213,7 @@ footer {
         gap: 40px;
     }
     
-    /* Ajuste para a faixa dourada em mobile (padding lateral deve ser o mesmo do body) */
+    /* Ajuste para a faixa dourada em mobile */
     .top-slogan-bar {
         font-size: 12px;
         padding: 6px 0;
@@ -634,4 +634,3 @@ footer {
     padding: 15px 30px;
     font-size: 1.1em;
 }
-]
