@@ -262,10 +262,10 @@ footer {
 /* REESTRUTURAÇÃO COMPLETA DA SEÇÃO DE REVIEWS */
 .gbp-review-section-personal {
     display: grid;
-    grid-template-columns: 2fr 1fr; /* 2/3 para o texto, 1/3 para a imagem */
-    gap: 30px; /* Espaçamento entre os blocos */
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
     align-items: center;
-    text-align: left; /* Alinha o texto à esquerda */
+    text-align: left;
     background-color: #f9f9f9;
     border-radius: 8px;
     margin-top: 50px;
@@ -279,22 +279,23 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    order: 1; /* Posição na grade */
+    order: 1;
 }
 
 .gbp-review-section-personal .chef-image-container {
     display: flex;
-    justify-content: flex-end; /* Alinha a imagem para a direita */
-    order: 2; /* Posição na grade */
+    justify-content: flex-end;
+    order: 2;
     width: 100%;
     height: 100%;
+    align-items: center; /* Alinha verticalmente a imagem no desktop */
 }
 
 .gbp-review-section-personal .chef-image-review {
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    object-fit: cover;
+    object-fit: contain; /* Ajuste para não cortar a imagem dentro do círculo */
     border: 5px solid var(--cor-secundaria);
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
@@ -302,7 +303,7 @@ footer {
 .gbp-review-action-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Alinha as estrelas e botão à esquerda */
+    align-items: flex-start;
     margin-top: 15px;
 }
 
@@ -460,19 +461,20 @@ footer {
         font-size: 0.95em;
     }
     .gbp-review-section-personal {
-        grid-template-columns: 1fr; /* Coluna única em mobile */
-        text-align: center; /* Centraliza todo o texto */
+        grid-template-columns: 1fr;
+        text-align: center;
         gap: 20px;
         padding: 30px 25px;
     }
     .gbp-review-section-personal .review-text-content {
-        order: 1; /* Texto no topo */
+        order: 1;
+        padding-right: 0;
     }
     .gbp-review-section-personal .chef-image-container {
-        display: none; /* Esconde a imagem em mobile para simplificar o layout */
+        display: none;
     }
     .gbp-review-action-wrapper {
-        order: 2; /* Ações no meio */
+        order: 2;
         align-items: center;
     }
     main .cta-button {
