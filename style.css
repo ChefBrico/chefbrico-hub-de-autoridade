@@ -1,4 +1,4 @@
-/* CHEFBRICO STYLE v17.0 - SOLUÇÃO FINAL PARA LAYOUT MINIMALISTA E IMAGENS INTEGRIDAS */
+/* CHEFBRICO STYLE v18.0 - SOLUÇÃO FINAL DE DESIGN PARA PERSUASÃO HUMANA */
 :root {
     --cor-primaria: #01403a;
     --cor-secundaria: #bfb084;
@@ -234,8 +234,8 @@ footer {
     max-width: 100%;
     height: auto;
     display: block;
-    /* Mantenha a integridade da imagem, sem cortes */
-    object-fit: contain; 
+    object-fit: contain;
+    width: 100%;
 }
 
 
@@ -261,49 +261,49 @@ footer {
 
 /* REESTRUTURAÇÃO COMPLETA DA SEÇÃO DE REVIEWS */
 .gbp-review-section-personal {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* 2/3 para o texto, 1/3 para a imagem */
+    gap: 30px; /* Espaçamento entre os blocos */
     align-items: center;
-    text-align: center;
+    text-align: left; /* Alinha o texto à esquerda */
     background-color: #f9f9f9;
     border-radius: 8px;
     margin-top: 50px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    padding: 30px 25px;
+    padding: 30px;
     position: relative;
     overflow: hidden;
-    gap: 20px;
 }
 
 .gbp-review-section-personal .review-text-content {
-    flex-grow: 1;
-    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    order: 1; /* Posição na grade */
 }
 
 .gbp-review-section-personal .chef-image-container {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 5px solid var(--cor-secundaria);
-    flex-shrink: 0;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: flex-end; /* Alinha a imagem para a direita */
+    order: 2; /* Posição na grade */
+    width: 100%;
+    height: 100%;
 }
 
 .gbp-review-section-personal .chef-image-review {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--cor-secundaria);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .gbp-review-action-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding-top: 15px;
-    border-top: 1px dashed #e0e0e0;
+    align-items: flex-start; /* Alinha as estrelas e botão à esquerda */
+    margin-top: 15px;
 }
 
 .gbp-review-action-wrapper span {
@@ -460,27 +460,20 @@ footer {
         font-size: 0.95em;
     }
     .gbp-review-section-personal {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 30px 25px;
+        grid-template-columns: 1fr; /* Coluna única em mobile */
+        text-align: center; /* Centraliza todo o texto */
         gap: 20px;
-    }
-    .gbp-review-section-personal .chef-image-container {
-        width: 150px;
-        height: 150px;
-        margin-bottom: 0;
+        padding: 30px 25px;
     }
     .gbp-review-section-personal .review-text-content {
-        padding: 0 10px;
-        order: 1;
-    }
-    .gbp-review-action-wrapper {
-        order: 3;
-        align-items: center;
+        order: 1; /* Texto no topo */
     }
     .gbp-review-section-personal .chef-image-container {
-        order: 2;
+        display: none; /* Esconde a imagem em mobile para simplificar o layout */
+    }
+    .gbp-review-action-wrapper {
+        order: 2; /* Ações no meio */
+        align-items: center;
     }
     main .cta-button {
         margin-top: 25px !important;
@@ -491,45 +484,8 @@ footer {
     .card {
         flex: 0 0 320px;
     }
-    .gbp-review-section-personal {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        text-align: left;
-        padding: 50px 30px;
-        gap: 30px;
-    }
-    .gbp-review-section-personal .review-text-content {
-        flex-basis: 60%;
-        max-width: 60%;
-        padding: 0;
-        order: 1;
-    }
-    .gbp-review-section-personal .chef-image-container {
-        order: 2;
-        flex-basis: 30%;
-        width: 250px;
-        height: 250px;
-        margin: 0;
-        z-index: 2;
-        border-width: 6px;
-    }
-    .gbp-review-action-wrapper {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding-top: 15px;
-        margin-top: 0;
-        gap: 10px;
-    }
-    .gbp-review-action-wrapper p {
-        text-align: center;
-        margin: 0;
-    }
-    .gbp-review-action-wrapper a {
-        margin: 0;
-    }
 }
+
 @media (min-width: 1200px) {
     .post-grid {
         grid-template-columns: repeat(4, 1fr);
