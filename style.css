@@ -213,7 +213,7 @@ footer {
         gap: 40px;
     }
     
-    /* Ajuste para a faixa dourada em mobile (padding lateral deve ser o mesmo do body) */
+    /* Ajuste para a faixa dourada em mobile */
     .top-slogan-bar {
         font-size: 12px;
         padding: 6px 0;
@@ -338,7 +338,7 @@ footer {
     flex-direction: column; /* Empilha estrelas e botão */
     align-items: center; /* Centraliza horizontalmente */
     width: 100%;
-    margin-top: 25px; /* Espaçamento do texto acima */
+    margin-top: 25px;
     padding-top: 15px;
     border-top: 1px dashed #e0e0e0;
 }
@@ -379,7 +379,7 @@ footer {
         /* Mantém object-fit: cover; */
     }
 
-    .gbp-review-section-personal .gbp-review-action-wrapper {
+    .gbp-review-action-wrapper {
         position: absolute;
         bottom: 20px;
         left: 0;
@@ -463,4 +463,173 @@ footer {
     .fair-list li {
         font-size: 0.95em;
     }
+}
+/* Estilos para o Acordeão de FAQs */
+.faq-section {
+    margin-bottom: 40px;
+}
+
+.faq-section h2 {
+    text-align: left; /* Alinha o título da categoria à esquerda */
+    margin-bottom: 20px;
+    font-size: 2em; /* Destaca o título da categoria */
+}
+
+.faq-item-accordion {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    overflow: hidden; /* Garante que o conteúdo oculto não vaze */
+}
+
+.accordion-header {
+    background-color: var(--cor-fundo); /* Fundo branco ou suave */
+    color: var(--cor-texto);
+    font-family: var(--fonte-corpo);
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 18px 20px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
+
+.accordion-header h3 {
+    margin: 0; /* Remove margem padrão do h3 */
+    font-size: 1.1em; /* Tamanho da fonte do título da pergunta */
+    color: var(--cor-primaria); /* Cor do título da pergunta */
+    flex-grow: 1; /* Permite que o título ocupe o espaço */
+}
+
+.accordion-header .icon {
+    font-size: 1.2em;
+    transition: transform 0.2s ease;
+    color: var(--cor-acao); /* Cor do ícone */
+}
+
+.accordion-header.active {
+    background-color: #f0f0f0; /* Fundo mais escuro quando ativo */
+}
+
+.accordion-header.active .icon {
+    transform: rotate(180deg); /* Gira o ícone quando expandido */
+}
+
+.accordion-content {
+    padding: 0 20px;
+    background-color: #fdfdfd; /* Fundo suave para a resposta */
+    max-height: 0; /* Inicia oculto */
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Transição suave */
+}
+
+.accordion-content p {
+    padding-bottom: 15px; /* Espaçamento da resposta */
+    margin-top: 10px; /* Espaçamento entre texto e limite superior */
+    line-height: 1.7;
+    color: var(--cor-texto);
+}
+
+/* Media query para mobile */
+@media (max-width: 768px) {
+    .accordion-header {
+        font-size: 1em;
+        padding: 15px;
+    }
+    .accordion-header h3 {
+        font-size: 1em;
+    }
+    .accordion-content p {
+        font-size: 0.95em;
+    }
+}
+.cta-section-article {
+    text-align: center;
+    margin-top: 60px; /* Espaçamento da seção */
+    padding: 30px;
+    background-color: #f0f0f0; /* Fundo suave para destacar */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.cta-section-article .cta-text {
+    font-size: 1.2em;
+    font-family: var(--fonte-titulos);
+    color: var(--cor-titulos);
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+.cta-section-article .cta-button {
+    padding: 15px 30px;
+    font-size: 1.1em;
+}
+/* Estilos para páginas de Artigos/Receitas */
+.article-hero-image {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.post-content {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.post-content h1, .post-content h2 {
+    text-align: left;
+    color: var(--cor-titulos);
+    font-family: var(--fonte-titulos);
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.post-content ul, .post-content ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.post-content li {
+    margin-bottom: 10px;
+}
+
+.chef-quote {
+    background-color: #fff8e1; /* Fundo suave para destacar a citação */
+    border-left: 5px solid var(--cor-secundaria); /* Borda dourada à esquerda */
+    padding: 15px 20px;
+    margin: 30px 0;
+    font-style: italic;
+    color: var(--cor-titulos);
+}
+
+/* Estilo para a seção de CTA no final do artigo */
+.cta-section-article {
+    text-align: center;
+    margin-top: 60px;
+    padding: 30px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.cta-section-article .cta-text {
+    font-size: 1.2em;
+    font-family: var(--fonte-titulos);
+    color: var(--cor-titulos);
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.cta-section-article .cta-button {
+    padding: 15px 30px;
+    font-size: 1.1em;
 }
