@@ -1,4 +1,4 @@
-/* CHEFBRICO STYLE v10.0 - FINAL POLISH & LAYOUT FIX */
+/* CHEFBRICO STYLE v10.1 - CORREÇÃO CRÍTICA DO LAYOUT E HERO */
 :root {
     --cor-primaria: #01403a;
     --cor-secundaria: #bfb084;
@@ -23,13 +23,13 @@ body {
     color: var(--cor-texto);
     background-color: var(--cor-fundo);
     line-height: 1.8;
-    padding: 0 25px; /* Padding lateral geral para o corpo em TODAS as telas */
+    padding: 0 25px;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0; /* Remove padding duplicado, o padding do body já cuida disso */
+    padding: 0;
 }
 
 header {
@@ -107,7 +107,7 @@ h2 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 40px;
-    justify-items: center; /* Centraliza os cards na grade */
+    justify-items: center;
 }
 
 .card {
@@ -121,11 +121,11 @@ h2 {
 
 .card-image {
     width: 100%;
-    height: 220px; /* Padroniza a altura da moldura */
-    object-fit: contain; /* Garante que a imagem inteira apareça, sem cortes */
-    background-color: #f9f9f9; /* Fundo suave e consistente */
-    padding: 10px; /* Um respiro interno generoso para a imagem */
-    border-bottom: 1px solid #eee; /* Uma separação sutil e elegante */
+    height: 220px;
+    object-fit: cover; /* Corrigido para cobrir o espaço */
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
 }
 
 .card-content {
@@ -185,122 +185,135 @@ footer {
     font-size: 0.9em;
 }
 
-@media (max-width: 768px) {
-    .header-flex {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    header nav {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        width: 100%;
-    }
-
-    header nav a.cta-button {
-        width: 100%;
-        text-align: center;
-    }
-
-    h1 {
-        font-size: 2.5em;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 40px;
-    }
-    
-    /* Ajuste para a faixa dourada em mobile */
-    .top-slogan-bar {
-        font-size: 12px;
-        padding: 6px 0;
-        padding-left: 25px;
-        padding-right: 25px;
-    }
-    .top-slogan-bar p {
-        white-space: normal;
-    }
-
-    /* Ajuste de fonte para as listas de parceiros em mobile */
-    .partner-list li,
-    .fair-list li {
-        font-size: 0.95em;
-    }
-
-    /* AUMENTAR O CÍRCULO DA CHEF MARIA CONCEIÇÃO EM MOBILE */
-    .gbp-review-section-personal .chef-image-container {
-        width: 300px;
-        height: 300px;
-        margin-bottom: 25px; /* Ajusta espaçamento para o texto abaixo */
-    }
-
-    .gbp-review-section-personal .review-text-content {
-        padding: 0 10px; /* Ajusta o padding do texto dentro da seção de reviews */
-    }
-
-    /* Ajuste de espaçamento para o botão do WhatsApp em mobile */
-    main .cta-button {
-        margin-top: 25px !important;
-    }
-    
-    /* --- Ajustes para o novo layout de reviews em mobile --- */
-    .gbp-review-section-personal {
-        padding: 30px 25px; /* Novo padding lateral para mobile */
-    }
-}
-
-@media (min-width: 769px) {
-    .card {
-        flex: 0 0 320px;
-    }
-    
-    .gbp-review-section-personal {
-        padding: 50px 30px; /* Padding para PC */
-    }
-}
-
-/* --- Ajuste Fino para Grade de 4 Colunas em Desktops --- */
-@media (min-width: 1200px) {
-    .post-grid {
-        grid-template-columns: repeat(4, 1fr); /* Força 4 colunas em telas largas */
-    }
-}
-
-/* Estilos para a nova faixa superior com slogan */
-.top-slogan-bar {
-    background-color: var(--cor-secundaria);
-    color: #ffffff;
-    padding: 8px 0;
-    text-align: center;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    font-weight: bold;
+/* CORREÇÃO CRÍTICA PARA O HERO E IMAGENS DE FUNDO */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 450px;
     overflow: hidden;
-}
-
-.top-slogan-bar .container {
+    border-radius: 8px;
+    margin-bottom: 40px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
 }
 
-.top-slogan-bar p {
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    padding: 0 20px;
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    color: white;
+    font-family: var(--fonte-titulos);
+    font-size: 3.5em;
     margin: 0;
-    padding: 0 10px;
-    white-space: nowrap;
+    line-height: 1.2;
 }
 
+.hero-content p {
+    font-size: 1.5em;
+    font-weight: 300;
+    margin-top: 15px;
+}
 
-/* Estilos para a seção de Avaliações com a Chef (OTIMIZADA PARA DESTAQUE) */
+/* Estilos para o artigo (receitas, blog) */
+.article-hero-image {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: block;
+}
+
+.post-content {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.post-content h1, .post-content h2 {
+    text-align: left;
+    color: var(--cor-titulos);
+    font-family: var(--fonte-titulos);
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.post-content ul, .post-content ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.post-content li {
+    margin-bottom: 10px;
+}
+
+.chef-quote {
+    background-color: #fff8e1;
+    border-left: 5px solid var(--cor-secundaria);
+    padding: 15px 20px;
+    margin: 30px 0;
+    font-style: italic;
+    color: var(--cor-titulos);
+}
+
+.cta-section-article {
+    text-align: center;
+    margin-top: 60px;
+    padding: 30px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.cta-section-article .cta-text {
+    font-size: 1.2em;
+    font-family: var(--fonte-titulos);
+    color: var(--cor-titulos);
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.cta-section-article .cta-button {
+    padding: 15px 30px;
+    font-size: 1.1em;
+}
+
+/* --- Estilos para o novo layout de reviews --- */
 .gbp-review-section-personal {
     display: flex;
-    flex-direction: column; /* Padrão em mobile: imagem e texto empilhados */
-    align-items: center; /* Centraliza itens na coluna */
-    text-align: center; /* Centraliza texto */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     background-color: #f9f9f9;
     border-radius: 8px;
     margin-top: 50px;
@@ -311,7 +324,7 @@ footer {
 
 .gbp-review-section-personal .review-text-content {
     flex-grow: 1;
-    padding: 0 15px; /* Padding lateral do texto */
+    padding: 30px 15px 15px;
     max-width: 100%;
 }
 
@@ -323,6 +336,7 @@ footer {
     margin-bottom: 20px;
     border: 5px solid var(--cor-secundaria);
     flex-shrink: 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .gbp-review-section-personal .chef-image-review {
@@ -332,69 +346,16 @@ footer {
     display: block;
 }
 
-/* NOVO: Estilos para o wrapper de estrelas e botão DENTRO DO BLOCO PERSONAL */
 .gbp-review-action-wrapper {
     display: flex;
-    flex-direction: column; /* Empilha estrelas e botão */
-    align-items: center; /* Centraliza horizontalmente */
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     margin-top: 25px;
     padding-top: 15px;
     border-top: 1px dashed #e0e0e0;
 }
 
-/* Media query para telas maiores (PC) - Imagem à direita, 1/3 da área vertical */
-@media (min-width: 769px) {
-    .gbp-review-section-personal {
-        flex-direction: row;
-        justify-content: center;
-        align-items: flex-start;
-        text-align: left;
-        padding-right: 0;
-        position: relative;
-        overflow: hidden;
-    }
-    
-    .gbp-review-section-personal .review-text-content {
-        flex-basis: 66.66%;
-        max-width: 66.66%;
-        padding-right: 30px;
-        z-index: 1;
-    }
-
-    .gbp-review-section-personal .chef-image-container {
-        order: 2;
-        flex-basis: 33.33%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 300px;
-        height: 300px;
-        margin-left: -50px;
-        z-index: 2;
-        border-width: 6px;
-    }
-
-    .gbp-review-section-personal .chef-image-review {
-        /* Mantém object-fit: cover; */
-    }
-
-    .gbp-review-action-wrapper {
-        position: absolute;
-        bottom: 20px;
-        left: 0;
-        right: 0;
-        width: 100%;
-        text-align: center;
-        padding: 0 20px;
-        box-sizing: border-box;
-        border-top: none;
-        padding-top: 0;
-        margin-top: 0;
-    }
-}
-
-/* Estilos para os botões CTA (para garantir consistência visual) */
 .cta-button {
     display: inline-block;
     padding: 10px 20px;
@@ -410,14 +371,12 @@ footer {
     background-color: #e08a0b;
 }
 
-/* Ajuste no botão CTA dentro da seção de avaliações */
 .gbp-specific-button {
     background-color: #4285F4 !important;
     margin-top: 10px;
     padding: 15px 30px;
     font-size: 1.1em;
 }
-
 
 /* Otimização da Legibilidade para Listas de Parceiros e Feiras */
 .partner-list li,
@@ -457,33 +416,26 @@ footer {
     line-height: 1.5;
 }
 
-/* Otimização para telas menores */
-@media (max-width: 768px) {
-    .partner-list li,
-    .fair-list li {
-        font-size: 0.95em;
-    }
-}
 /* Estilos para o Acordeão de FAQs */
 .faq-section {
     margin-bottom: 40px;
 }
 
 .faq-section h2 {
-    text-align: left; /* Alinha o título da categoria à esquerda */
+    text-align: left;
     margin-bottom: 20px;
-    font-size: 2em; /* Destaca o título da categoria */
+    font-size: 2em;
 }
 
 .faq-item-accordion {
     border: 1px solid #ddd;
     border-radius: 5px;
     margin-bottom: 15px;
-    overflow: hidden; /* Garante que o conteúdo oculto não vaze */
+    overflow: hidden;
 }
 
 .accordion-header {
-    background-color: var(--cor-fundo); /* Fundo branco ou suave */
+    background-color: var(--cor-fundo);
     color: var(--cor-texto);
     font-family: var(--fonte-corpo);
     font-size: 1.1em;
@@ -501,136 +453,184 @@ footer {
 }
 
 .accordion-header h3 {
-    margin: 0; /* Remove margem padrão do h3 */
-    font-size: 1.1em; /* Tamanho da fonte do título da pergunta */
-    color: var(--cor-primaria); /* Cor do título da pergunta */
-    flex-grow: 1; /* Permite que o título ocupe o espaço */
+    margin: 0;
+    font-size: 1.1em;
+    color: var(--cor-primaria);
+    flex-grow: 1;
 }
 
 .accordion-header .icon {
     font-size: 1.2em;
     transition: transform 0.2s ease;
-    color: var(--cor-acao); /* Cor do ícone */
+    color: var(--cor-acao);
 }
 
 .accordion-header.active {
-    background-color: #f0f0f0; /* Fundo mais escuro quando ativo */
+    background-color: #f0f0f0;
 }
 
 .accordion-header.active .icon {
-    transform: rotate(180deg); /* Gira o ícone quando expandido */
+    transform: rotate(180deg);
 }
 
 .accordion-content {
     padding: 0 20px;
-    background-color: #fdfdfd; /* Fundo suave para a resposta */
-    max-height: 0; /* Inicia oculto */
+    background-color: #fdfdfd;
+    max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Transição suave */
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
 }
 
 .accordion-content p {
-    padding-bottom: 15px; /* Espaçamento da resposta */
-    margin-top: 10px; /* Espaçamento entre texto e limite superior */
+    padding-bottom: 15px;
+    margin-top: 10px;
     line-height: 1.7;
     color: var(--cor-texto);
 }
 
-/* Media query para mobile */
+.map-container {
+    margin-bottom: 40px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.map-container iframe {
+    border-radius: 8px;
+}
+
+
+/* --- Media Queries (Responsividade) --- */
 @media (max-width: 768px) {
-    .accordion-header {
-        font-size: 1em;
-        padding: 15px;
+    .header-flex {
+        flex-direction: column;
+        gap: 20px;
     }
-    .accordion-header h3 {
+
+    header nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+    }
+
+    header nav a.cta-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+    
+    .hero-section {
+        height: 350px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2em;
+    }
+    
+    .hero-content p {
         font-size: 1em;
     }
-    .accordion-content p {
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .top-slogan-bar {
+        font-size: 12px;
+        padding: 6px 0;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    
+    .top-slogan-bar p {
+        white-space: normal;
+    }
+
+    .partner-list li,
+    .fair-list li {
         font-size: 0.95em;
     }
-}
-.cta-section-article {
-    text-align: center;
-    margin-top: 60px; /* Espaçamento da seção */
-    padding: 30px;
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-.cta-section-article .cta-text {
-    font-size: 1.2em;
-    font-family: var(--fonte-titulos);
-    color: var(--cor-titulos);
-    margin-bottom: 20px;
-    line-height: 1.4;
-}
-.cta-section-article .cta-button {
-    padding: 15px 30px;
-    font-size: 1.1em;
-}
-/* Estilos para páginas de Artigos/Receitas */
-.article-hero-image {
-    width: 100%;
-    height: auto;
-    max-height: 500px;
-    object-fit: cover;
-    margin-bottom: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+    .gbp-review-section-personal .chef-image-container {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 25px;
+    }
+
+    .gbp-review-section-personal .review-text-content {
+        padding: 0 10px;
+    }
+
+    main .cta-button {
+        margin-top: 25px !important;
+    }
+    
+    .gbp-review-section-personal {
+        padding: 30px 25px;
+    }
 }
 
-.post-content {
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.8;
+@media (min-width: 769px) {
+    .card {
+        flex: 0 0 320px;
+    }
+    
+    .gbp-review-section-personal {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        padding: 50px 30px;
+    }
+    
+    .gbp-review-section-personal .review-text-content {
+        flex-basis: 66.66%;
+        max-width: 66.66%;
+        padding-right: 30px;
+        z-index: 1;
+    }
+    
+    .gbp-review-section-personal .chef-image-container {
+        order: 2;
+        flex-basis: 33.33%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 250px;
+        height: 250px;
+        margin-left: 30px;
+        z-index: 2;
+        border-width: 6px;
+    }
+
+    .gbp-review-action-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        margin-top: 25px;
+        padding-top: 15px;
+        border-top: 1px dashed #e0e0e0;
+    }
+
+    .gbp-review-action-wrapper > * {
+        margin-right: 15px;
+    }
+
+    .gbp-review-action-wrapper p {
+        flex-grow: 1;
+        margin: 0;
+    }
 }
 
-.post-content h1, .post-content h2 {
-    text-align: left;
-    color: var(--cor-titulos);
-    font-family: var(--fonte-titulos);
-    margin-top: 40px;
-    margin-bottom: 15px;
+@media (min-width: 1200px) {
+    .post-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
-
-.post-content ul, .post-content ol {
-    margin-left: 20px;
-    margin-bottom: 20px;
-}
-
-.post-content li {
-    margin-bottom: 10px;
-}
-
-.chef-quote {
-    background-color: #fff8e1; /* Fundo suave para destacar a citação */
-    border-left: 5px solid var(--cor-secundaria); /* Borda dourada à esquerda */
-    padding: 15px 20px;
-    margin: 30px 0;
-    font-style: italic;
-    color: var(--cor-titulos);
-}
-
-/* Estilo para a seção de CTA no final do artigo */
-.cta-section-article {
-    text-align: center;
-    margin-top: 60px;
-    padding: 30px;
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-
-.cta-section-article .cta-text {
-    font-size: 1.2em;
-    font-family: var(--fonte-titulos);
-    color: var(--cor-titulos);
-    margin-bottom: 20px;
-    line-height: 1.4;
-}
-
-.cta-section-article .cta-button {
-    padding: 15px 30px;
-    font-size: 1.1em;
-}
-]
