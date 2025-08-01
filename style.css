@@ -1,4 +1,4 @@
-/* CHEFBRICO STYLE v16.0 - SOLUÇÃO FINAL PARA LAYOUT MINIMALISTA E IMAGENS INTEGRIDAS */
+/* CHEFBRICO STYLE v17.0 - SOLUÇÃO FINAL PARA LAYOUT MINIMALISTA E IMAGENS INTEGRIDAS */
 :root {
     --cor-primaria: #01403a;
     --cor-secundaria: #bfb084;
@@ -220,24 +220,22 @@ footer {
 /* NOVO BLOCO: ESTRUTURA PARA IMAGENS DENTRO DOS ARTIGOS */
 .article-hero-image-container {
     width: 100%;
-    max-width: 1200px; /* Garante que não ultrapasse a largura do container */
+    max-width: 1200px;
     margin: 0 auto 40px;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .article-hero-image-container img {
     max-width: 100%;
     height: auto;
     display: block;
-    /* Removeremos a propriedade object-fit: contain aqui para evitar espaços vazios indesejados
-       e usaremos object-fit: cover, mas com uma abordagem onde a imagem não é o elemento principal,
-       mas sim parte do design como um todo. A imagem será a hero, mas sem texto por cima. */
-    object-fit: cover;
-    width: 100%;
-    height: 450px;
-    object-position: center top;
+    /* Mantenha a integridade da imagem, sem cortes */
+    object-fit: contain; 
 }
 
 
@@ -295,7 +293,7 @@ footer {
 .gbp-review-section-personal .chef-image-review {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
 }
 
