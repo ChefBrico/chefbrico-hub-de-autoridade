@@ -568,3 +568,68 @@ footer {
     padding: 15px 30px; /* Um pouco maior para destaque */
     font-size: 1.1em;
 }
+/* Estilos para páginas de Artigos/Receitas */
+.article-hero-image {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.post-content {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.post-content h1, .post-content h2 {
+    text-align: left;
+    color: var(--cor-titulos);
+    font-family: var(--fonte-titulos);
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.post-content ul, .post-content ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.post-content li {
+    margin-bottom: 10px;
+}
+
+.chef-quote {
+    background-color: #fff8e1; /* Fundo suave para destacar a citação */
+    border-left: 5px solid var(--cor-secundaria); /* Borda dourada à esquerda */
+    padding: 15px 20px;
+    margin: 30px 0;
+    font-style: italic;
+    color: var(--cor-titulos);
+}
+
+/* Estilo para a seção de CTA no final do artigo */
+.cta-section-article {
+    text-align: center;
+    margin-top: 60px;
+    padding: 30px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.cta-section-article .cta-text {
+    font-size: 1.2em;
+    font-family: var(--fonte-titulos);
+    color: var(--cor-titulos);
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.cta-section-article .cta-button {
+    padding: 15px 30px;
+    font-size: 1.1em;
+}
