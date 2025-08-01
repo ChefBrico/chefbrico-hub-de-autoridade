@@ -1,4 +1,4 @@
-// CHEFBRICO JAVASCRIPT v2.0 - OTIMIZAÇÃO DE ACORDEÃO E CARROSSEL
+// CHEFBRICO JAVASCRIPT v3.0 - RECONSTRUÇÃO E OTIMIZAÇÃO DE FUNCIONALIDADE
 document.addEventListener('DOMContentLoaded', function() {
     // Lógica para os acordeões do FAQ
     var accordionHeaders = document.querySelectorAll('.accordion-header');
@@ -6,11 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
     accordionHeaders.forEach(function(header) {
         header.addEventListener('click', function() {
             var accordionContent = this.nextElementSibling;
-            
-            // Verifica se o acordeão já está ativo.
             var isActive = this.classList.contains('active');
 
-            // Fecha todos os acordeões que não são o clicado
             accordionHeaders.forEach(otherHeader => {
                 if (otherHeader !== this) {
                     otherHeader.classList.remove('active');
@@ -19,13 +16,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
 
-            // Se o acordeão clicado não estava ativo, abre-o
             if (!isActive) {
                 this.classList.add('active');
                 accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
                 accordionContent.style.paddingBottom = '15px';
             } else {
-                // Se estava ativo, fecha o próprio acordeão
                 this.classList.remove('active');
                 accordionContent.style.maxHeight = null;
                 accordionContent.style.paddingBottom = '0px';
@@ -58,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!isDown) return;
             e.preventDefault();
             const x = e.pageX - carousel.offsetLeft;
-            const walk = (x - startX) * 2; // Multiplica a velocidade de rolagem
+            const walk = (x - startX) * 2;
             carousel.scrollLeft = scrollLeft - walk;
         });
     });
