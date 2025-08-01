@@ -16,7 +16,7 @@
         "@type": "Person",
         "name": "Maria Conceição"
       },
-      "image": "[URL_DA_IMAGEM_DE_DESTAQUE_AQUI]",
+      "image": "URL_DA_IMAGEM_DE_DESTAQUE_AQUI", /* Insira a URL real da imagem de destaque */
       "description": "Uma receita prática para preparar o Risoto Funghi Secchi artesanal da ChefBrico. O sabor intenso e aconchegante da culinária italiana, pronto em 18 minutos.",
       "prepTime": "PT1M",
       "cookTime": "PT18M",
@@ -47,15 +47,30 @@
           "name": "Finalize",
           "text": "Para a 'mantecatura' perfeita (o toque final cremoso), finalize com um fio de azeite extra virgem ou uma colher de manteiga vegana."
         }
-      ]
+      ],
+      "offers": {
+          "@type": "Offer",
+          "price": "34.80",
+          "priceCurrency": "BRL",
+          "url": "https://www.chefbrico.com/risoto-funghi-secchi",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@type": "Organization",
+            "name": "ChefBrico"
+          }
+        }
     }
     </script>
 </head>
 <body>
-   <header>
+    <div class="top-slogan-bar">
+        <div class="container">
+            <p>COMIDA DE VERDADE, SEM TODA AQUELA CONFUSÃO NA COZINHA! SAIBA MAIS</p>
+        </div>
+    </div>
+    <header>
         <div class="container header-flex">
-            <a href="index.html" class="logo"><img src="/imagens/flamula-chefbrico.png" alt="Logo ChefBrico" style="max-height: 100px;">
-</a>
+            <a href="index.html" class="logo"><img src="/imagens/flamula-chefbrico.png" alt="Logo ChefBrico" style="max-height: 100px;"></a>
             <nav>
                 <a href="nossa-filosofia.html">Nossa Filosofia</a>
                 <a href="receitas.html">Receitas & Dicas</a>
@@ -65,9 +80,10 @@
             </nav>
         </div>
     </header>
+
     <main>
         <article class="container">
-            <img src="[URL_DA_IMAGEM_DE_DESTAQUE_AQUI]" alt="Prato finalizado de Risoto Funghi Secchi cremoso e artesanal da ChefBrico" class="article-hero-image">
+            <img src="URL_DA_IMAGEM_DE_DESTAQUE_AQUI" alt="Prato finalizado de Risoto Funghi Secchi cremoso e artesanal da ChefBrico" class="article-hero-image">
             
             <div class="post-content">
                 <h1>Risoto Funghi Secchi: O Clássico Atemporal</h1>
@@ -88,10 +104,15 @@
                 </ol>
 
                 <h2>Dicas da Chef</h2>
-                <p><strong>O Toque da ChefBrico:</strong> <em>"Um bom risoto de funghi é pura alma na panela. Meu objetivo foi tornar essa experiência de restaurante acessível, sem cortar caminho na qualidade."</em></p>
+                <div class="chef-quote">
+                    <p><em>"Um bom risoto de funghi é pura alma na panela. Meu objetivo foi tornar essa experiência de restaurante acessível, sem cortar caminho na qualidade."</em></p>
+                </div>
                 <p><strong>Harmonização:</strong> A intensidade do Funghi Secchi pede um vinho tinto de corpo médio, como um Merlot ou Pinot Noir, para complementar as notas terrosas do prato.</p>
                 
-                <a href="https://www.chefbrico.com/risoto-funghi-secchi" class="cta-button">Comprar este Risoto</a>
+                <div class="cta-section-article">
+                    <p class="cta-text">Pronto para levar a tradição italiana para sua mesa em minutos? Compre agora a mistura de Risoto Funghi Secchi da ChefBrico e surpreenda-se!</p>
+                    <a href="https://www.chefbrico.com/risoto-funghi-secchi" target="_blank" rel="noopener noreferrer" class="cta-button">Comprar este Risoto!</a>
+                </div>
             </div>
         </article>
     </main>
