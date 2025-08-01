@@ -1,4 +1,4 @@
-/* CHEFBRICO STYLE v10.1 - CORREÇÃO CRÍTICA DO LAYOUT E HERO */
+/* CHEFBRICO STYLE v11.0 - CORREÇÃO CRÍTICA & OTIMIZAÇÃO VISUAL DEFINITIVA */
 :root {
     --cor-primaria: #01403a;
     --cor-secundaria: #bfb084;
@@ -102,7 +102,6 @@ h2 {
     display: none;
 }
 
-/* --- Cards de Revista (Layout de Grade) --- */
 .post-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -122,7 +121,7 @@ h2 {
 .card-image {
     width: 100%;
     height: 220px;
-    object-fit: cover; /* Corrigido para cobrir o espaço */
+    object-fit: cover;
     background-color: #f9f9f9;
     padding: 10px;
     border-bottom: 1px solid #eee;
@@ -185,18 +184,19 @@ footer {
     font-size: 0.9em;
 }
 
-/* CORREÇÃO CRÍTICA PARA O HERO E IMAGENS DE FUNDO */
+/* NOVO: ESTRUTURA E ESTILOS PARA SEÇÕES DE HERO (CAPA DAS PÁGINAS) */
 .hero-section {
     position: relative;
     width: 100%;
-    height: 450px;
-    overflow: hidden;
-    border-radius: 8px;
-    margin-bottom: 40px;
+    min-height: 450px; /* Garante que a imagem não fique achatada */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    overflow: hidden;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .hero-image {
@@ -215,7 +215,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.5); /* Escurece mais para o texto ser legível */
     z-index: 2;
 }
 
@@ -223,17 +223,26 @@ footer {
     position: relative;
     z-index: 3;
     color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    padding: 0 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    padding: 20px;
     max-width: 800px;
 }
 
 .hero-content h1 {
-    color: white;
     font-family: var(--fonte-titulos);
     font-size: 3.5em;
+    color: white;
     margin: 0;
     line-height: 1.2;
+}
+
+.hero-content h2 {
+    font-family: var(--fonte-titulos);
+    font-size: 2em;
+    color: white;
+    margin: 10px 0 0 0;
+    line-height: 1.2;
+    font-weight: normal; /* Subtítulo mais leve */
 }
 
 .hero-content p {
@@ -242,7 +251,7 @@ footer {
     margin-top: 15px;
 }
 
-/* Estilos para o artigo (receitas, blog) */
+/* Otimização para páginas de Artigos */
 .article-hero-image {
     width: 100%;
     height: auto;
@@ -268,47 +277,7 @@ footer {
     margin-bottom: 15px;
 }
 
-.post-content ul, .post-content ol {
-    margin-left: 20px;
-    margin-bottom: 20px;
-}
-
-.post-content li {
-    margin-bottom: 10px;
-}
-
-.chef-quote {
-    background-color: #fff8e1;
-    border-left: 5px solid var(--cor-secundaria);
-    padding: 15px 20px;
-    margin: 30px 0;
-    font-style: italic;
-    color: var(--cor-titulos);
-}
-
-.cta-section-article {
-    text-align: center;
-    margin-top: 60px;
-    padding: 30px;
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-
-.cta-section-article .cta-text {
-    font-size: 1.2em;
-    font-family: var(--fonte-titulos);
-    color: var(--cor-titulos);
-    margin-bottom: 20px;
-    line-height: 1.4;
-}
-
-.cta-section-article .cta-button {
-    padding: 15px 30px;
-    font-size: 1.1em;
-}
-
-/* --- Estilos para o novo layout de reviews --- */
+/* CORREÇÃO E OTIMIZAÇÃO DA SEÇÃO DE REVIEWS */
 .gbp-review-section-personal {
     display: flex;
     flex-direction: column;
@@ -318,13 +287,13 @@ footer {
     border-radius: 8px;
     margin-top: 50px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 30px 25px; /* Padding interno consistente */
     position: relative;
     overflow: hidden;
 }
 
 .gbp-review-section-personal .review-text-content {
     flex-grow: 1;
-    padding: 30px 15px 15px;
     max-width: 100%;
 }
 
@@ -356,6 +325,18 @@ footer {
     border-top: 1px dashed #e0e0e0;
 }
 
+.gbp-review-action-wrapper span {
+    color: #FFC107;
+    font-size: 2.8em;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.gbp-review-action-wrapper p {
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
 .cta-button {
     display: inline-block;
     padding: 10px 20px;
@@ -378,116 +359,6 @@ footer {
     font-size: 1.1em;
 }
 
-/* Otimização da Legibilidade para Listas de Parceiros e Feiras */
-.partner-list li,
-.fair-list li {
-    margin-bottom: 25px;
-    line-height: 1.6;
-    padding-bottom: 15px;
-    border-bottom: 1px dashed #e0e0e0;
-}
-
-.partner-list li:last-child,
-.fair-list li:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-    margin-bottom: 0;
-}
-
-.partner-list li strong,
-.fair-list li strong {
-    font-size: 1.1em;
-    color: var(--cor-primaria);
-}
-
-.partner-list li small,
-.fair-list li small {
-    display: block;
-    margin-top: 5px;
-    color: var(--cor-texto);
-    font-size: 0.95em;
-}
-
-.partner-list li p.description,
-.fair-list li p.description {
-    font-size: 0.9em;
-    margin-top: 8px;
-    color: #666;
-    line-height: 1.5;
-}
-
-/* Estilos para o Acordeão de FAQs */
-.faq-section {
-    margin-bottom: 40px;
-}
-
-.faq-section h2 {
-    text-align: left;
-    margin-bottom: 20px;
-    font-size: 2em;
-}
-
-.faq-item-accordion {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    overflow: hidden;
-}
-
-.accordion-header {
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto);
-    font-family: var(--fonte-corpo);
-    font-size: 1.1em;
-    font-weight: bold;
-    padding: 18px 20px;
-    width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: background-color 0.2s ease;
-}
-
-.accordion-header h3 {
-    margin: 0;
-    font-size: 1.1em;
-    color: var(--cor-primaria);
-    flex-grow: 1;
-}
-
-.accordion-header .icon {
-    font-size: 1.2em;
-    transition: transform 0.2s ease;
-    color: var(--cor-acao);
-}
-
-.accordion-header.active {
-    background-color: #f0f0f0;
-}
-
-.accordion-header.active .icon {
-    transform: rotate(180deg);
-}
-
-.accordion-content {
-    padding: 0 20px;
-    background-color: #fdfdfd;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
-}
-
-.accordion-content p {
-    padding-bottom: 15px;
-    margin-top: 10px;
-    line-height: 1.7;
-    color: var(--cor-texto);
-}
-
 .map-container {
     margin-bottom: 40px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -499,80 +370,67 @@ footer {
     border-radius: 8px;
 }
 
-
-/* --- Media Queries (Responsividade) --- */
 @media (max-width: 768px) {
     .header-flex {
         flex-direction: column;
         gap: 20px;
     }
-
     header nav {
         flex-direction: column;
         align-items: center;
         gap: 15px;
         width: 100%;
     }
-
     header nav a.cta-button {
         width: 100%;
         text-align: center;
     }
-
     h1 {
         font-size: 2.5em;
     }
-    
     .hero-section {
-        height: 350px;
+        min-height: 350px;
     }
-    
     .hero-content h1 {
-        font-size: 2em;
+        font-size: 2.2em;
     }
-    
+    .hero-content h2 {
+        font-size: 1.5em;
+    }
     .hero-content p {
         font-size: 1em;
     }
-    
     .footer-grid {
         grid-template-columns: 1fr;
         text-align: center;
         gap: 40px;
     }
-    
     .top-slogan-bar {
         font-size: 12px;
         padding: 6px 0;
         padding-left: 25px;
         padding-right: 25px;
     }
-    
     .top-slogan-bar p {
         white-space: normal;
     }
-
     .partner-list li,
     .fair-list li {
         font-size: 0.95em;
     }
-
     .gbp-review-section-personal .chef-image-container {
         width: 150px;
         height: 150px;
         margin-bottom: 25px;
     }
-
     .gbp-review-section-personal .review-text-content {
         padding: 0 10px;
     }
-
     main .cta-button {
         margin-top: 25px !important;
     }
-    
-    .gbp-review-section-personal {
-        padding: 30px 25px;
+    .gbp-review-action-wrapper {
+        align-items: center;
     }
 }
 
@@ -580,55 +438,41 @@ footer {
     .card {
         flex: 0 0 320px;
     }
-    
     .gbp-review-section-personal {
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         text-align: left;
         padding: 50px 30px;
+        gap: 30px;
     }
-    
     .gbp-review-section-personal .review-text-content {
-        flex-basis: 66.66%;
-        max-width: 66.66%;
-        padding-right: 30px;
-        z-index: 1;
+        flex-basis: 60%;
+        max-width: 60%;
+        padding: 0;
     }
-    
     .gbp-review-section-personal .chef-image-container {
         order: 2;
-        flex-basis: 33.33%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        flex-basis: 30%;
         width: 250px;
         height: 250px;
-        margin-left: 30px;
+        margin: 0;
         z-index: 2;
         border-width: 6px;
     }
-
     .gbp-review-action-wrapper {
-        display: flex;
         flex-direction: row;
         align-items: center;
-        width: 100%;
-        margin-top: 25px;
+        justify-content: flex-start;
         padding-top: 15px;
-        border-top: 1px dashed #e0e0e0;
+        margin-top: 15px;
+        gap: 20px;
     }
-
-    .gbp-review-action-wrapper > * {
-        margin-right: 15px;
-    }
-
     .gbp-review-action-wrapper p {
         flex-grow: 1;
         margin: 0;
     }
 }
-
 @media (min-width: 1200px) {
     .post-grid {
         grid-template-columns: repeat(4, 1fr);
