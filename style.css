@@ -548,3 +548,23 @@ footer {
         font-size: 0.95em;
     }
 }
+.cta-section-article {
+    text-align: center;
+    margin-top: 60px; /* Espaçamento da seção */
+    padding: 30px;
+    background-color: #f0f0f0; /* Fundo suave para destacar */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.cta-section-article .cta-text {
+    font-size: 1.2em;
+    font-family: var(--fonte-titulos);
+    color: var(--cor-titulos);
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+.cta-section-article .cta-button {
+    /* Estilo do .cta-button já existe no seu CSS, ele será aplicado aqui */
+    padding: 15px 30px; /* Um pouco maior para destaque */
+    font-size: 1.1em;
+}
