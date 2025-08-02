@@ -1,4 +1,4 @@
-/* CHEFBRICO STYLE v18.1 - SOLUÇÃO FINAL DE DESIGN PARA PERSUASÃO HUMANA E CORREÇÃO DE BUGS */
+/* CHEFBRICO STYLE v18.2 - SOLUÇÃO FINAL DE DESIGN PARA PERSUASÃO HUMANA E CORREÇÃO DE BUGS */
 :root {
     --cor-primaria: #01403a;
     --cor-secundaria: #bfb084;
@@ -23,13 +23,13 @@ body {
     color: var(--cor-texto);
     background-color: var(--cor-fundo);
     line-height: 1.8;
-    padding: 0 25px;
+    padding: 0; /* Removido padding global para evitar desalinhamento */
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0;
+    padding: 0 25px; /* Adicionado padding para o conteúdo interno */
 }
 
 .top-slogan-bar {
@@ -217,8 +217,20 @@ footer {
     font-size: 0.9em;
 }
 
-/* CORREÇÕES PARA IMAGENS E LAYOUT DOS ARTIGOS */
-.article-hero-image { /* Nova classe para a imagem principal */
+/* NOVO BLOCO: ESTRUTURA PARA IMAGENS DENTRO DOS ARTIGOS */
+.article-hero-image-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.article-hero-image {
     width: 100%;
     height: auto;
     max-height: 400px; /* Limita a altura máxima da imagem */
@@ -227,6 +239,46 @@ footer {
     margin-bottom: 30px; /* Adiciona um espaçamento abaixo da imagem */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adiciona uma sombra suave */
 }
+
+/* Nova regra para a imagem principal da página inicial */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    color: white;
+    max-width: 800px;
+}
+/* FIM do novo bloco para a imagem principal */
 
 .post-content {
     max-width: 800px;
@@ -459,30 +511,9 @@ footer {
     .top-slogan-bar p {
         white-space: normal;
     }
-    .partner-list li,
-    .fair-list li {
-        font-size: 0.95em;
-    }
-    .gbp-review-section-personal {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 20px;
-        padding: 30px 25px;
-    }
-    .gbp-review-section-personal .review-text-content {
-        order: 1;
-        padding-right: 0;
-    }
-    .gbp-review-section-personal .chef-image-container {
-        display: none;
-    }
-    .gbp-review-action-wrapper {
-        order: 2;
-        align-items: center;
-    }
-    main .cta-button {
-        margin-top: 25px !important;
-    }
+    .hero-section {
+        height: 40vh; /* Altura ajustada para mobile */
+    }
     .article-hero-image {
         max-height: 250px;
     }
