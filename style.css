@@ -254,7 +254,6 @@ footer {
     margin-top: 40px;
     margin-bottom: 15px;
 }
-
 .post-content.lead {
     text-align: center;
     font-size: 1.2em;
@@ -443,6 +442,7 @@ footer {
     h1 {
         font-size: 2.5em;
     }
+    
    .footer-grid {
         grid-template-columns: 1fr;
         text-align: center;
@@ -450,10 +450,16 @@ footer {
     }
    .top-slogan-bar {
         font-size: 12px;
-        padding: 6px 25px;
+        padding: 6px 0;
+        padding-left: 25px;
+        padding-right: 25px;
     }
    .top-slogan-bar p {
         white-space: normal;
+    }
+   .partner-list li,
+   .fair-list li {
+        font-size: 0.95em;
     }
    .gbp-review-section-personal {
         grid-template-columns: 1fr;
