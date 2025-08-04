@@ -1,4 +1,4 @@
-/* CHEFBRICO STYLE v18.4 - CORREÇÃO DEFINITIVA DE LOGO E ESTRUTURA COMPLETA */
+/* CHEFBRICO STYLE v18.5 - CORREÇÃO DEFINITIVA DE LOGO E ESTRUTURA COMPLETA */
 :root {
     --cor-primaria: #01403a;
     --cor-secundaria: #bfb084;
@@ -450,16 +450,10 @@ footer {
     }
    .top-slogan-bar {
         font-size: 12px;
-        padding: 6px 0;
-        padding-left: 25px;
-        padding-right: 25px;
+        padding: 6px 25px;
     }
    .top-slogan-bar p {
         white-space: normal;
-    }
-   .partner-list li,
-   .fair-list li {
-        font-size: 0.95em;
     }
    .gbp-review-section-personal {
         grid-template-columns: 1fr;
