@@ -1,7 +1,9 @@
 # --- Redirecionamento do URL Padrão Netlify para o seu Domínio ---
 # Substitua 'seu-projeto' pelo nome real do seu site na Netlify
-https://seu-projeto.netlify.app/* https://receitas.chefbrico.com/:splat    301!
+https://chefbrico-blog.netlify.app/* https://receitas.chefbrico.com/:splat    301!
 
 # --- Exemplo de Redirecionamento de um Post Antigo para um Novo ---
 # /caminho/do/post-antigo        /caminho/novo/do-post       301
 /receitas/minha-receita-antiga/   /receitas/minha-receita-nova/   301
+
+
