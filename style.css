@@ -1,4 +1,4 @@
-/* CHEFBRICO STYLE v18.3 - CORREÇÃO DE LOGO E APRIMORAMENTO DEFINITIVO */
+/* CHEFBRICO STYLE v18.4 - CORREÇÃO DEFINITIVA DE LOGO E ESTRUTURA COMPLETA */
 :root {
     --cor-primaria: #01403a;
     --cor-secundaria: #bfb084;
@@ -70,15 +70,18 @@ header {
     flex-wrap: wrap;
 }
 
-/* --- CORREÇÃO DO SELETOR DO LOGO --- */
+/* --- CORREÇÃO DEFINITIVA E ROBUSTA PARA O LOGO --- */
 header.logo {
-    text-decoration: none;
-    font-weight: bold;
+    display: block;
+    max-height: 80px; /* Define a altura máxima para o CONTAINER do logo */
     flex-shrink: 0;
+    text-decoration: none;
 }
 
 header.logo img {
-    max-height: 100px; /* Esta regra agora será aplicada corretamente */
+    height: 100%; /* Faz a imagem preencher 100% da altura do seu container (o link <a>) */
+    width: auto; /* Mantém a proporção correta da imagem */
+    display: block;
 }
 
 header nav {
@@ -151,18 +154,12 @@ h2 {
     border: 1px solid #eee;
     border-radius: 8px;
     overflow: hidden;
-    transition: box-shadow 0.3s ease;
-}
-
-.card:hover {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .card-image {
     width: 100%;
     height: 220px;
     object-fit: cover;
-    display: block;
     background-color: #f9f9f9;
     border-bottom: 1px solid #eee;
 }
@@ -428,59 +425,6 @@ footer {
     color: var(--cor-texto);
 }
 
-/* --- ESTILOS PARA NOVOS COMPONENTES --- */
-.author-byline {
-    text-align: center;
-    font-style: italic;
-    margin-top: -15px;
-    margin-bottom: 30px;
-    color: #555;
-}
-
-.product-cta-card {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #eee;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 40px 0;
-}
-
-.product-cta-card img {
-    max-width: 100px;
-    height: auto;
-}
-
-.product-cta-card h3 {
-    margin-top: 0;
-    color: var(--cor-primaria);
-}
-
-.author-box {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    padding: 20px;
-    margin-top: 50px;
-}
-
-.author-box img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.author-box h4 {
-    margin: 0 0 5px 0;
-    color: var(--cor-primaria);
-}
-
-/* --- ESTILOS PARA RESPONSIVIDADE --- */
 @media (max-width: 768px) {
    .header-flex {
         flex-direction: column;
