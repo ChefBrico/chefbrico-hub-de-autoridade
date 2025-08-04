@@ -1,4 +1,4 @@
-/* CHEFBRICO STYLE v18.5 - CORREÇÃO DEFINITIVA DE LOGO E ESTRUTURA COMPLETA */
+/* CHEFBRICO STYLE v18.6 - CORREÇÃO DEFINITIVA DE LOGO E ESTRUTURA COMPLETA */
 :root {
     --cor-primaria: #01403a;
     --cor-secundaria: #bfb084;
@@ -70,15 +70,15 @@ header {
     flex-wrap: wrap;
 }
 
+/* --- CORREÇÃO DEFINITIVA DO SELETOR DO LOGO --- */
 header.logo {
     text-decoration: none;
     font-weight: bold;
     flex-shrink: 0;
 }
 
-/* --- CORREÇÃO DEFINITIVA DO LOGO --- */
 header.logo img {
-    max-height: 100px; /* Restaurada a regra original e correta */
+    max-height: 100px; /* Esta regra agora será aplicada corretamente */
 }
 
 header nav {
@@ -144,13 +144,12 @@ h2 {
 }
 
 .card {
+    flex: 0 0 80%;
+    max-width: 320px;
     text-decoration: none;
     color: var(--cor-texto);
     display: flex;
     flex-direction: column;
-    border: 1px solid #eee;
-    border-radius: 8px;
-    overflow: hidden;
 }
 
 .card-image {
@@ -158,6 +157,7 @@ h2 {
     height: 220px;
     object-fit: cover;
     background-color: #f9f9f9;
+    padding: 10px;
     border-bottom: 1px solid #eee;
 }
 
@@ -165,7 +165,7 @@ h2 {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    padding: 15px;
+    padding: 0 5px;
 }
 
 .card-category {
