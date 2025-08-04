@@ -1,41 +1,18 @@
-# --- Configurações Globais de Build ---
-[build]
-  command = "npm run build" # Adapte este comando para o seu projeto (ex: hugo, eleventy, etc.)
-publish = "_site"      # Adapte este diretório para onde seu site é gerado
+# netlify.toml - Arquivo de Configuração Essencial
 
-# --- Cabeçalhos Globais para Segurança e Performance ---
+[build]
+  # Esta linha informa ao Netlify que a pasta principal do seu site 
+  # é a raiz do repositório, onde estão o index.html e o style.css.
+  publish = "."
+
 [[headers]]
   for = "/*"
   [headers.values]
-    # Ajuda a proteger contra ataques de clickjacking.
     X-Frame-Options = "DENY"
-    # Ajuda a proteger contra ataques de cross-site scripting (XSS).
     X-XSS-Protection = "1; mode=block"
-    # Política de Segurança de Conteúdo (CSP) - comece de forma restritiva e adicione fontes conforme necessário.
-    # Esta é uma política básica. Uma política de produção pode precisar de mais diretivas.
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self';"
-    # Controla como a informação de referência é passada. Bom para privacidade.
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    # Impede o navegador de tentar adivinhar o tipo de conteúdo.
-    X-Content-Type-Options = "nosniff"
 
-# --- Regras de Cache para Performance ---
-# Cache de um ano para fontes, pois elas raramente mudam.
+# Regra de cache para acelerar o carregamento de imagens
 [[headers]]
-  for = "/fonts/*"
+  for = "/imagens/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
-
-# Cache de um dia para imagens, CSS e JS.
-[[headers]]
-  for = "/images/*"
-  [headers.values]
-    Cache-Control = "public, max-age=86400"
-[[headers]]
-  for = "/css/*"
-  [headers.values]
-    Cache-Control = "public, max-age=86400"
-[[headers]]
-  for = "/js/*"
-  [headers.values]
-    Cache-Control = "public, max-age=86400"
