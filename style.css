@@ -493,3 +493,9 @@ footer {
         grid-template-columns: repeat(4, 1fr);
     }
 }
+/* Adicionar dentro da media query @media (max-width: 768px) */
+
+.card {
+    flex: 0 0 80%; /* Mantém o card ocupando 80% da largura da tela em mobile */
+    max-width: none; /* Remove a largura máxima para permitir que ele se ajuste */
+}
