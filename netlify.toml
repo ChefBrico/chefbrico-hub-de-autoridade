@@ -1,7 +1,7 @@
 # --- Configurações Globais de Build ---
 [build]
   command = "npm run build" # Adapte este comando para o seu projeto (ex: hugo, eleventy, etc.)
-  publish = "public"      # Adapte este diretório para onde seu site é gerado
+publish = "_site"      # Adapte este diretório para onde seu site é gerado
 
 # --- Cabeçalhos Globais para Segurança e Performance ---
 [[headers]]
