@@ -70,18 +70,15 @@ header {
     flex-wrap: wrap;
 }
 
-/* --- CORREÇÃO DEFINITIVA E ROBUSTA PARA O LOGO --- */
 header.logo {
-    display: block;
-    max-height: 80px; /* Define a altura máxima para o CONTAINER do logo */
-    flex-shrink: 0;
     text-decoration: none;
+    font-weight: bold;
+    flex-shrink: 0;
 }
 
+/* --- CORREÇÃO DEFINITIVA DO LOGO --- */
 header.logo img {
-    height: 100%; /* Faz a imagem preencher 100% da altura do seu container (o link <a>) */
-    width: auto; /* Mantém a proporção correta da imagem */
-    display: block;
+    max-height: 100px; /* Restaurada a regra original e correta */
 }
 
 header nav {
