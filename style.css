@@ -489,3 +489,21 @@ footer {
         grid-template-columns: repeat(4, 1fr);
     }
 }
+/* Adicionar este novo bloco ao seu style.css */
+.recipe-title-container {
+    margin-bottom: 25px; /* Espaçamento após o subtítulo */
+}
+
+.recipe-title-container h1 {
+    margin-bottom: 5px; /* Reduz o espaço entre o título e o subtítulo */
+}
+
+.recipe-subtitle {
+    font-family: var(--fonte-corpo);
+    font-size: 1.6em;
+    color: var(--cor-texto);
+    text-align: center;
+    margin-top: 0;
+    line-height: 1.4;
+    font-weight: 400; /* Mais leve que o título */
+}
