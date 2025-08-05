@@ -507,3 +507,13 @@ footer {
     line-height: 1.4;
     font-weight: 400; /* Mais leve que o título */
 }
+/* Padrão Ouro para Botão de Compra nos Cards de Produto */
+.product-cta-card .cta-button {
+  background-color: var(--cor-primaria); /* Muda a cor para o verde escuro da marca */
+  margin-top: 15px; /* Adiciona um espaço de 15px acima do botão */
+  transition: background-color 0.3s ease; /* Mantém a transição suave */
+}
+
+.product-cta-card .cta-button:hover {
+  background-color: var(--cor-titulos); /* Efeito ao passar o rato, usando a cor dos títulos */
+}
