@@ -517,3 +517,11 @@ footer {
 .product-cta-card .cta-button:hover {
   background-color: var(--cor-titulos); /* Efeito ao passar o rato, usando a cor dos títulos */
 }
+/* Estilo para a nova descrição nos cards */
+.card-description {
+    font-size: 0.95em;
+    line-height: 1.5;
+    margin-top: 8px;
+    color: #555;
+    flex-grow: 1;
+}
