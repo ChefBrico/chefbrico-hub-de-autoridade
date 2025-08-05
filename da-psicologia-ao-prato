@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Da Psicologia ao Prato: A Filosofia ChefBrico | Por Maria Conceição</title>
+    <meta name="description" content="Conheça a história de Maria Conceição, a psicóloga por trás da ChefBrico. Nossa filosofia de comida de verdade, cuidado e o reconhecimento como Mulher de Negócios 2023 pelo SEBRAE.">
+    <link rel="stylesheet" href="/style.css">
+    <!-- Schema.org Otimizado para Artigo Pilar -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Da Psicologia ao Prato: A História e Filosofia por Trás da ChefBrico",
+      "author": {
+        "@type": "Person",
+        "@id": "https://receitas.chefbrico.com/nossa-filosofia.html#maria"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "ChefBrico",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://receitas.chefbrico.com/imagens/flamula-chefbrico.png"
+        }
+      },
+      "image": "https://receitas.chefbrico.com/imagens/maria-conceicao-historia.jpg",
+      "datePublished": "2025-08-05",
+      "dateModified": "2025-08-05",
+      "description": "Descubra como a formação em psicologia de Maria Conceição moldou a missão da ChefBrico de nutrir corpo e alma através da comida de verdade, prática e afetiva."
+    }
+    </script>
+</head>
+<body>
+    <header><!-- Cabeçalho Padrão --></header>
+    <main>
+        <article class="container">
+            <div class="recipe-title-container">
+                <h1>Da Psicologia ao Prato</h1>
+                <p class="recipe-subtitle">A História e a Alma por Trás da ChefBrico</p>
+                <p class="author-byline">Por <strong>Maria Conceição</strong>, Fundadora e Chef de Criação da ChefBrico</p>
+            </div>
+            <div class="article-hero-image-container">
+                <img src="/imagens/maria-conceicao-historia.jpg" alt="Maria Conceição, fundadora da ChefBrico, sorrindo em sua cozinha artesanal.">
+            </div>
+            <div class="post-content">
+                <h2>Quem é a Mente por Trás do Sabor?</h2>
+                <p>Eu sou a Maria Conceição, e a ChefBrico nasceu do meu próprio dilema na correria de Brasília. Como psicóloga por formação, sempre soube que a comida é uma ferramenta poderosa para o nosso bem-estar e afeto. A memória da minha mesa de família, cheia de aromas e sabores que uniam a todos, foi o que me inspirou a criar a ChefBrico. Meu objetivo? Resgatar essa sensação de cuidado e conexão, transformando a obrigação de cozinhar em um momento de alegria e praticidade.</p>
+                <p>O nome **"Brico"** vem do francês *Bricolage*, que significa "Faça Você Mesmo". Minha filosofia é te dar a base perfeita com os melhores ingredientes, cuidadosamente selecionados, para que você finalize em casa uma refeição incrível, de forma simples e prazerosa.</p>
+                
+                <h2>Nosso Manifesto: Mais que Sabor, um Propósito</h2>
+                <p>Acreditamos no poder da **comida de verdade**. Na nossa cozinha, não entram nomes estranhos, aditivos ou conservantes. Nosso segredo é a **desidratação artesanal**, uma técnica que concentra o sabor e os nutrientes dos vegetais e cogumelos, no tempo certo, para garantir que você tenha um produto 100% natural com validade longa.</p>
+                <p>A ChefBrico é a sua aliada contra a correria. Queremos te dar mais tempo para o que realmente importa, seja com nossos kits para a **<a href="https://www.chefbrico.com/categoria/despensa-inteligente" target="_blank" rel="noopener noreferrer">Despensa Inteligente</a>** ou com receitas práticas de **<a href="/panela-unica.html">Panela Única</a>**. Nós celebramos a memória afetiva e o prazer, honrando a sabedoria das mulheres da minha família e a força da natureza.</p>
+                
+                <h2>Reconhecimento e Confiança: A Validação da Nossa Jornada</h2>
+                <p>Nosso compromisso com a qualidade e a inovação foi reconhecido por importantes instituições. A ChefBrico conta com o apoio técnico do **<a href="https://www.sebrae.com.br/sites/PortalSebrae/ufs/df/sebraeaz/mulheres-de-negocios-do-df-recebem-premios-do-sebrae,2f66453d10cfb810VgnVCM100000d6004b0aRCRD" target="_blank" rel="noopener noreferrer">SEBRAE</a>** e da **<a href="http://www.emater.df.gov.br/" target="_blank" rel="noopener noreferrer">EMATER-DF</a>**, que nos ajudaram a aprimorar nossos processos. Em 2023, recebemos o prestigioso **Prêmio Sebrae Mulher de Negócios DF**, uma prova irrefutável do nosso esforço e da qualidade dos nossos produtos.</p>
+                <p>A ChefBrico sou eu, Maria Conceição, uma empreendedora local de Brasília que carrega em seu coração o orgulho de nutrir as pessoas com sabor e cuidado. Convidamos você a conhecer nossos produtos e fazer parte dessa história. Visite a nossa **<a href="https://www.chefbrico.com" target="_blank" rel="noopener noreferrer">loja online</a>** para simplificar sua rotina e encantar seu paladar.</p>
+
+                <div class="author-box">
+                    <img src="/imagens/maria-conceicao-bio.jpg" alt="Foto de Maria Conceição, fundadora da ChefBrico">
+                    <div class="author-info">
+                        <h4>Sobre a Autora</h4>
+                        <p>Maria Conceição é a mente e a alma por trás da ChefBrico. Psicóloga por formação, ela une a paixão pela comida de verdade com o desejo de simplificar a rotina na cozinha. <a href="/nossa-filosofia.html">Conheça mais sobre sua filosofia aqui</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+    <footer><!-- Rodapé Padrão --></footer>
+    <script src="/script.js"></script>
+</body>
+</html>
