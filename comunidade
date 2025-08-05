@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidade #ChefBricoEmCasa | Veja o que Nossos Clientes Estão a Criar</title>
+    <meta name="description" content="Inspire-se com pratos reais feitos por clientes reais! A galeria #ChefBricoEmCasa celebra a criatividade e o amor pela comida de verdade.">
+    <link rel="stylesheet" href="/style.css">
+    <!-- Schema.org Otimizado para Artigo Pilar -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Comunidade #ChefBricoEmCasa: A Galeria da Comida de Verdade",
+      "author": {
+        "@type": "Person",
+        "@id": "https://receitas.chefbrico.com/nossa-filosofia.html#maria"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "ChefBrico",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://receitas.chefbrico.com/imagens/flamula-chefbrico.png"
+        }
+      },
+      "image": "https://receitas.chefbrico.com/imagens/comunidade-chefbrico-header.jpg",
+      "datePublished": "2025-08-05",
+      "dateModified": "2025-08-05",
+      "description": "Uma celebração da criatividade dos nossos clientes. Veja fotos e pratos reais feitos com os produtos ChefBrico e inspire-se para a sua próxima refeição."
+    }
+    </script>
+</head>
+<body>
+    <header><!-- Cabeçalho Padrão --></header>
+    <main>
+        <article class="container">
+            <div class="recipe-title-container">
+                <h1>Comunidade #ChefBricoEmCasa</h1>
+                <p class="recipe-subtitle">A Sua Criatividade é a Nossa Maior Inspiração!</p>
+                <p class="author-byline">Por <strong>Maria Conceição</strong>, Fundadora e Chef de Criação da ChefBrico</p>
+            </div>
+            <div class="article-hero-image-container">
+                <img src="/imagens/comunidade-chefbrico-header.jpg" alt="Mosaico de fotos de pratos feitos por clientes da ChefBrico.">
+            </div>
+            <div class="post-content">
+                <p>Nada nos deixa mais felizes do que ver a magia a acontecer na sua cozinha. A comunidade #ChefBricoEmCasa é o nosso espaço para celebrar os pratos incríveis que vocês criam com os nossos produtos. É a prova de que, com uma base de qualidade e um toque de criatividade, todos nós podemos ser chefs!</p>
+                
+                <h2>Partilhe a sua Criação!</h2>
+                <p>Fez um prato com um produto ChefBrico? Tire uma foto, poste no Instagram com a hashtag <strong>#ChefBricoEmCasa</strong> e marque o nosso perfil <a href="https://www.instagram.com/chefbrico/" target="_blank" rel="noopener noreferrer">@chefbrico</a>. As fotos mais inspiradoras aparecerão aqui na nossa galeria!</p>
+
+                <!-- Galeria da Comunidade -->
+                <div class="post-grid" style="margin-top: 40px;">
+                    <!-- Exemplo de Post da Comunidade 1 -->
+                    <div class="card">
+                        <img src="https://placehold.co/400x300/01403a/FFFFFF?text=Cliente+Feliz+1" alt="Risoto de Pêra e Gorgonzola finalizado com nozes por um cliente." class="card-image">
+                        <div class="card-content">
+                            <p class="card-description">"Simplesmente divino! O <a href='/receita-risoto-pera-gorgonzola.html'>Risoto de Pêra e Gorgonzola</a> virou o meu prato favorito para um jantar especial. Rápido e delicioso!"</p>
+                            <span class="card-category">- @cliente.feliz no Instagram</span>
+                        </div>
+                    </div>
+                    <!-- Exemplo de Post da Comunidade 2 -->
+                    <div class="card">
+                        <img src="https://placehold.co/400x300/73022c/FFFFFF?text=Cliente+Feliz+2" alt="Sopa Detox servida numa cumbuca bonita por uma cliente." class="card-image">
+                        <div class="card-content">
+                            <p class="card-description">"Começando a semana com o 'reset verde' da <a href='/receita-sopa-detox.html'>Sopa Detox</a>. Leve, saborosa e me sinto cheia de energia!"</p>
+                            <span class="card-category">- @vida.saudavel no Instagram</span>
+                        </div>
+                    </div>
+                    <!-- Adicionar mais cards aqui -->
+                </div>
+
+                <div class="author-box"><!-- Box da Autora Padrão --></div>
+            </div>
+        </article>
+    </main>
+    <footer><!-- Rodapé Padrão --></footer>
+    <script src="/script.js"></script>
+</body>
+</html>
