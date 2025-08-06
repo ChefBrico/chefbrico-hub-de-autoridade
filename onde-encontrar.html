@@ -7,6 +7,46 @@
     <meta name="description" content="Encontre a ChefBrico em empórios parceiros, feiras semanais e online com entrega em todo o Brasil. Localize nossos produtos em Vicente Pires, Asa Sul, Asa Norte e mais.">
     <link rel="stylesheet" href="/style.css">
 
+    <!-- **AJUSTES DE ESTILO "PADRÃO OURO" PARA SEÇÃO DE REVIEWS** -->
+    <style>
+        .full-width-review-section {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            margin-top: 60px;
+            margin-bottom: 40px;
+            padding: 0;
+            text-align: center;
+            overflow: hidden; /* Garante que a imagem não ultrapasse as bordas arredondadas */
+        }
+        .review-banner-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .review-cta-content {
+            padding: 30px 20px;
+        }
+        .review-cta-content h2 {
+            margin-top: 0;
+        }
+        .review-text {
+            font-size: 1.1em;
+            max-width: 700px;
+            margin: 15px auto;
+        }
+        .review-stars {
+            color: #FFC107;
+            font-size: 2.8em;
+            margin-bottom: 10px;
+        }
+        .gbp-specific-button {
+            background-color: #4285F4 !important;
+            margin-top: 10px;
+            padding: 15px 30px;
+            font-size: 1.1em;
+        }
+    </style>
+
     <!-- Schema.org e Metadados -->
     <script type="application/ld+json">
     [
@@ -93,7 +133,7 @@
             <h2>Nossa Presença em Brasília</h2>
             <p>A ChefBrico orgulha-se de ser uma marca nascida em Brasília! Estamos em <strong>Vicente Pires</strong>, e a nossa linha de sabores pode ser encontrada nos melhores empórios e parceiros no Distrito Federal.</p>
 
-            <!-- LISTA DE PARCEIROS EM FORMATO ACORDEÃO -->
+            <!-- LISTA DE PARCEIROS COMPLETA EM FORMATO ACORDEÃO -->
             <div class="faq-section" style="margin-top: 40px;">
                 <div class="faq-item-accordion">
                     <button class="accordion-header"><h3>Empório Rural do Colorado</h3><span class="icon">▼</span></button>
@@ -103,7 +143,42 @@
                     <button class="accordion-header"><h3>NOSSO Empório & Mercearia (Águas Claras)</h3><span class="icon">▼</span></button>
                     <div class="accordion-content"><p><strong>Endereço:</strong> Edifício Águas de Manaíra - R. 24 Norte, 04 - Águas Claras, Brasília - DF.<br><em>Seu ponto de encontro para praticidade e sabor em Águas Claras.</em></p></div>
                 </div>
-                <!-- ... (restante da lista de parceiros) ... -->
+                <div class="faq-item-accordion">
+                    <button class="accordion-header"><h3>Quitandas da Vó Maria</h3><span class="icon">▼</span></button>
+                    <div class="accordion-content"><p><strong>Endereço:</strong> SHIN área especial 03 loja 02 - Polo Verde, Brasília - DF.<br><em>Um toque de tradição e a ChefBrico para sua rotina.</em></p></div>
+                </div>
+                <div class="faq-item-accordion">
+                    <button class="accordion-header"><h3>Mercearia Colaborativa (Asa Norte)</h3><span class="icon">▼</span></button>
+                    <div class="accordion-content"><p><strong>Endereço:</strong> Asa Norte CLN 412 BL E LOJA 4, 6, 10 - Brasília, DF.<br><em>Um espaço único com a curadoria ChefBrico.</em></p></div>
+                </div>
+                 <div class="faq-item-accordion">
+                    <button class="accordion-header"><h3>A Casa do Manjericão (Asa Norte)</h3><span class="icon">▼</span></button>
+                    <div class="accordion-content"><p><strong>Endereço:</strong> Asa Norte CLN 215 BL B Loja 9 - Asa Norte, Brasília - DF.<br><em>Um oásis de sabores naturais na Asa Norte.</em></p></div>
+                </div>
+                 <div class="faq-item-accordion">
+                    <button class="accordion-header"><h3>Ravioli e Cia (Asa Norte)</h3><span class="icon">▼</span></button>
+                    <div class="accordion-content"><p><strong>Endereço:</strong> CLN 214, bloco D, lojas 05 e 07 - Asa Norte, Brasília - DF.<br><em>Descubra a ChefBrico junto aos clássicos da culinária italiana.</em></p></div>
+                </div>
+                 <div class="faq-item-accordion">
+                    <button class="accordion-header"><h3>Ravioli e Cia (Sudoeste)</h3><span class="icon">▼</span></button>
+                    <div class="accordion-content"><p><strong>Endereço:</strong> CLSW 302, Bloco B, loja 24, St. Sudoeste, Brasília - DF.<br><em>Praticidade e sabor ChefBrico no coração do Sudoeste.</em></p></div>
+                </div>
+                 <div class="faq-item-accordion">
+                    <button class="accordion-header"><h3>Mercado Malunga (Asa Norte)</h3><span class="icon">▼</span></button>
+                    <div class="accordion-content"><p><strong>Endereço:</strong> Asa Norte Comércio Local Norte 315 BL E loja 04 - Asa Norte, Brasília - DF.<br><em>Seus produtos ChefBrico no tradicional Mercado Malunga da Asa Norte.</em></p></div>
+                </div>
+                <div class="faq-item-accordion">
+                    <button class="accordion-header"><h3>Mercado Malunga (Asa Sul)</h3><span class="icon">▼</span></button>
+                    <div class="accordion-content"><p><strong>Endereço:</strong> Asa Sul Q SHC/Sul CL 105 bloco De SN - Asa Sul, Brasília - DF.<br><em>Encontre a ChefBrico na sua feira preferida da Asa Sul.</em></p></div>
+                </div>
+                <div class="faq-item-accordion">
+                    <button class="accordion-header"><h3>Mercado Malunga (Sudoeste)</h3><span class="icon">▼</span></button>
+                    <div class="accordion-content"><p><strong>Endereço:</strong> Q SHCSW CL 104, BLOCO A, LOJA 19 - Cruzeiro / Sudoeste / Octogonal, Brasília - DF.<br><em>A qualidade ChefBrico agora no Mercado Malunga do Sudoeste.</em></p></div>
+                </div>
+                <div class="faq-item-accordion">
+                    <button class="accordion-header"><h3>Mercado Malunga (Lago Sul)</h3><span class="icon">▼</span></button>
+                    <div class="accordion-content"><p><strong>Endereço:</strong> Shop Gilberto Salomão SHIS quadra 05 Bloco F CC Sobreloja, 09 - Lago Sul, Brasília - DF.<br><em>Conveniência e sabor ChefBrico para a região do Lago Sul.</em></p></div>
+                </div>
             </div>
 
             <!-- NOVA SEÇÃO DE REVIEWS "PADRÃO OURO" -->
@@ -126,7 +201,13 @@
     </main>
     
     <footer>
-        <!-- Rodapé Padrão -->
+        <div class="container footer-grid">
+            <div><h4>Navegação</h4><a href="/index.html">Início</a><a href="/nossa-filosofia.html">Nossa Filosofia</a><a href="/receitas.html">Receitas</a><a href="/faq.html">FAQ</a></div>
+            <div><h4>Nossos Produtos</h4><a href="https://www.chefbrico.com/risotos" target="_blank" rel="noopener noreferrer">Risotos</a><a href="https://www.chefbrico.com/sopas-funcionais" target="_blank" rel="noopener noreferrer">Sopas Funcionais</a><a href="https://www.chefbrico.com/refeicoes-praticas" target="_blank" rel="noopener noreferrer">Refeições Práticas</a><a href="https://www.chefbrico.com/emporio-da-chef" target="_blank" rel="noopener noreferrer">Empório da Chef</a></div>
+            <div><h4>Ajuda & Suporte</h4><a href="/onde-encontrar.html">Onde Encontrar</a><a href="#">Contato</a></div>
+            <div><h4>Redes Sociais</h4><a href="https://www.instagram.com/chefbrico/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://br.pinterest.com/chefbrico/" target="_blank" rel="noopener noreferrer">Pinterest</a></div>
+        </div>
+        <div class="container footer-credit"><p>© 2025 ChefBrico - Todos os direitos reservados.</p></div>
     </footer>
     <script src="/script.js"></script>
 </body>
