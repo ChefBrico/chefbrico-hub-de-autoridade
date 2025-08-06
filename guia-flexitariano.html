@@ -24,6 +24,28 @@
         font-size: 1.1em;
         color: var(--cor-texto);
       }
+      .content-hub-section {
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        padding: 25px;
+        margin-top: 40px;
+      }
+      .content-hub-section h2 {
+        margin-top: 0;
+        text-align: center;
+      }
+      .content-hub-section ul {
+        list-style-type: none;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+      }
+      .content-hub-section ul li a {
+        text-decoration: none;
+        font-weight: bold;
+        color: var(--cor-primaria);
+      }
     </style>
     
     <!-- Schema.org Otimizado para Artigo Pilar -->
@@ -46,7 +68,7 @@
       },
       "image": "https://receitas.chefbrico.com/images/bancada-vegetais.jpg",
       "datePublished": "2025-07-19",
-      "dateModified": "2025-08-05",
+      "dateModified": "2025-08-06",
       "description": "Quer comer melhor mas não é vegano? Descubra como as refeições práticas da ChefBrico são a solução perfeita para um estilo de vida flexitariano."
     }
     </script>
@@ -90,12 +112,17 @@
                 <h2>A Solução ChefBrico: Sua Transição Suave e Deliciosa</h2>
                 <p>Nossas misturas artesanais são as aliadas perfeitas para sua jornada flexitariana. Elas eliminam a "confusão na cozinha" e garantem um resultado gourmet. Nossos pratos, como o <strong><a href="/receita-baiao-de-dois.html">Baião de Dois Integral</a></strong> ou a <strong><a href="/receita-refeicao-mediterranea.html">Refeição Mediterrânea</a></strong>, são a prova de que a comida 100% vegetal pode ser robusta, cheia de sabor e incrivelmente fácil de preparar.</p>
                 
-                <div class="product-cta-card">
-                    <div class="product-cta-info">
-                        <h3>Comece sua Jornada Flexitariana Hoje!</h3>
-                        <p>Explore nossas refeições 100% à base de plantas e descubra como é fácil e delicioso comer bem.</p>
-                        <a href="https://www.chefbrico.com/refeicoes-praticas" target="_blank" rel="noopener noreferrer" class="cta-button">Ver Refeições Práticas</a>
-                    </div>
+                <!-- NOVA SEÇÃO HUB DE CONTEÚDO -->
+                <div class="content-hub-section">
+                    <h2>Explore Nossas Refeições Plant-Based Perfeitas para sua Jornada Flexitariana</h2>
+                    <ul>
+                        <li><a href="/receita-baiao-de-dois.html">Refeição: Baião de Dois Integral</a></li>
+                        <li><a href="/receita-refeicao-mediterranea.html">Refeição: Mediterrânea com Grão de Bico</a></li>
+                        <li><a href="/receita-arroz-negro-funghi.html">Refeição: Arroz Negro com Funghi</a></li>
+                        <li><a href="/receita-sopa-creme-fit.html">Sopa: Creme Fit Vegana (Proteica)</a></li>
+                        <li><a href="/receita-sopa-detox.html">Sopa: Detox com Ora-pro-nóbis</a></li>
+                        <li><a href="/receita-sopa-low-carb-funghi.html">Sopa: Low Carb de Funghi e Lentilha Beluga</a></li>
+                    </ul>
                 </div>
 
                 <div class="faq-section">
