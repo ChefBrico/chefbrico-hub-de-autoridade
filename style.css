@@ -628,3 +628,9 @@ footer {
     font-size: 0.95em;
     line-height: 1.6;
 }
+/* ===== AJUSTE FINO DE ESPAÇAMENTO (V3.6) ===== */
+.favoritas-vizinhanza { 
+    margin-top: 20px;  /* Reduzido de 30px para aproximar as seções */
+    padding-top: 30px;  /* Reduzido de 40px para diminuir o espaço interno */
+    border-top: 1px solid #eee; /* Mantém a linha divisória sutil */
+}
