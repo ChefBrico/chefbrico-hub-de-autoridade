@@ -4,77 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChefBrico na Asa Norte: Peça Online ou Fale Conosco</title>
-    <meta name="description" content="Encontre os produtos ChefBrico na Asa Norte, Brasília. Peça online em nossa loja com entrega ou fale diretamente com a Maria Conceição via WhatsApp.">
+    <meta name="description" content="Encontre os produtos ChefBrico na Asa Norte, Brasília. Peça online, fale conosco via WhatsApp ou descubra as receitas favoritas da vizinhança.">
     <link rel="stylesheet" href="/style.css">
 
     <style>
-        /* --- Protocolo de Estilo Visual Consolidado --- */
-        .page-header-local { text-align: center; margin-bottom: 50px; }
-        .page-header-local h1 { font-size: 2.8em; margin-bottom: 15px; line-height: 1.2; color: #5a3a30; }
-        .page-header-local .subtitle { font-size: 1.3em; color: #666; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .page-header-local h1 { font-size: 2.8em; margin-bottom: 15px; text-align: center; color: #5a3a30; }
+        .page-header-local .subtitle { font-size: 1.3em; text-align: center; color: #666; max-width: 700px; margin: 0 auto 40px auto; }
         .hybrid-cta-container { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 40px 0; }
         .cta-box { border: 1px solid #eee; border-radius: 8px; padding: 30px 25px; background-color: #fdfcf7; text-align: center; }
         .cta-box h2 { margin-top: 0; font-size: 1.6em; margin-bottom: 15px; }
-        .cta-box p { min-height: 60px; }
-        .partner-list-simple ul { list-style-type: none; padding-left: 0; }
-        .partner-list-simple li { background-color: #f9f9f9; padding: 15px; border-radius: 5px; margin-bottom: 10px; }
+        .cta-box p { max-width: 320px; margin: 0 auto 25px auto; line-height: 1.6; min-height: 80px; }
+        .favoritas-vizinhanza { margin-top: 60px; padding-top: 40px; border-top: 1px solid #eee; }
+        .favoritas-vizinhanza h2 { text-align: center; }
+        .favoritas-vizinhanza > p { text-align: center; max-width: 600px; margin: 15px auto 0 auto; }
+        .favoritas-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 30px; }
+        .receita-card-local { text-decoration: none; color: var(--cor-texto); text-align: left; }
+        .receita-card-local img { width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .receita-card-local h4 { color: var(--cor-titulos); font-size: 1.4em; margin-bottom: 5px; }
+        .receita-card-local p { text-align: left; font-size: 0.95em; line-height: 1.6; }
         @media (max-width: 768px) {
             .hybrid-cta-container { grid-template-columns: 1fr; }
             .page-header-local h1 { font-size: 2.2em; }
-            .page-header-local .subtitle { font-size: 1.1em; }
         }
     </style>
 
     <script type="application/ld+json">
     [
-      {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "ChefBrico na Asa Norte: Peça Online ou Fale Conosco",
-        "url": "https://receitas.chefbrico.com/onde-encontrar/asa-norte.html",
-        "description": "Descubra todas as formas de comprar os produtos ChefBrico na Asa Norte, Brasília. Oferecemos delivery para toda a região via loja online e atendimento direto via WhatsApp.",
-        "isPartOf": { "@id": "https://receitas.chefbrico.com/#website" }
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "serviceType": "DeliveryService",
-        "provider": { "@type": "FoodEstablishment", "name": "ChefBrico" },
-        "areaServed": { "@type": "Place", "name": "Asa Norte, Brasília, DF" },
-        "name": "Delivery de Produtos ChefBrico na Asa Norte"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "FoodEstablishment",
-        "name": "Mercearia Colaborativa (Asa Norte)",
-        "address": "Asa Norte CLN 412 BL E LOJA 4, 6, 10 - Brasília, DF",
-        "makesOffer": { "@type": "Offer", "itemOffered": { "@type": "Brand", "name": "ChefBrico" } }
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "FoodEstablishment",
-        "name": "A Casa do Manjericão (Asa Norte)",
-        "address": "Asa Norte CLN 215 BL B Loja 9 - Asa Norte, Brasília - DF",
-        "makesOffer": { "@type": "Offer", "itemOffered": { "@type": "Brand", "name": "ChefBrico" } }
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "FoodEstablishment",
-        "name": "Ravioli e Cia (Asa Norte)",
-        "address": "CLN 214, bloco D, lojas 05 e 07 - Asa Norte, Brasília - DF",
-        "makesOffer": { "@type": "Offer", "itemOffered": { "@type": "Brand", "name": "ChefBrico" } }
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "FoodEstablishment",
-        "name": "Mercado Malunga (Asa Norte)",
-        "address": "Asa Norte Comércio Local Norte 315 BL E loja 04 - Asa Norte, Brasília - DF",
-        "makesOffer": { "@type": "Offer", "itemOffered": { "@type": "Brand", "name": "ChefBrico" } }
-      }
+      {"@context":"https://schema.org","@type":"WebPage","name":"ChefBrico na Asa Norte: Peça Online ou Fale Conosco","url":"https://receitas.chefbrico.com/onde-encontrar/asa-norte.html","description":"Descubra todas as formas de comprar os produtos ChefBrico na Asa Norte, Brasília. Oferecemos delivery, atendimento via WhatsApp e uma lista de parceiros locais.","isPartOf":{"@id":"https://receitas.chefbrico.com/#website"}},
+      {"@context":"https://schema.org","@type":"Service","serviceType":"DeliveryService","provider":{"@type":"FoodEstablishment","name":"ChefBrico"},"areaServed":{"@type":"Place","name":"Asa Norte, Brasília, DF"},"name":"Delivery de Produtos ChefBrico na Asa Norte"},
+      {"@context":"https://schema.org","@type":"FoodEstablishment","name":"Quitandas da Vó Maria","address":"SHIN área especial 03 loja 02 - Polo Verde, Brasília - DF","makesOffer":{"@type":"Offer","itemOffered":{"@type":"Brand","name":"ChefBrico"}}},
+      {"@context":"https://schema.org","@type":"FoodEstablishment","name":"Mercearia Colaborativa (Asa Norte)","address":"Asa Norte CLN 412 BL E LOJA 4, 6, 10 - Brasília, DF","makesOffer":{"@type":"Offer","itemOffered":{"@type":"Brand","name":"ChefBrico"}}},
+      {"@context":"https://schema.org","@type":"FoodEstablishment","name":"A Casa do Manjericão (Asa Norte)","address":"Asa Norte CLN 215 BL B Loja 9 - Asa Norte, Brasília - DF","makesOffer":{"@type":"Offer","itemOffered":{"@type":"Brand","name":"ChefBrico"}}},
+      {"@context":"https://schema.org","@type":"FoodEstablishment","name":"Ravioli e Cia (Asa Norte)","address":"CLN 214, bloco D, lojas 05 e 07 - Asa Norte, Brasília - DF","makesOffer":{"@type":"Offer","itemOffered":{"@type":"Brand","name":"ChefBrico"}}},
+      {"@context":"https://schema.org","@type":"FoodEstablishment","name":"Mercado Malunga (Asa Norte)","address":"Asa Norte Comércio Local Norte 315 BL E loja 04 - Asa Norte, Brasília - DF","makesOffer":{"@type":"Offer","itemOffered":{"@type":"Brand","name":"ChefBrico"}}}
     ]
     </script>
 </head>
 <body>
+
+    <div class="top-slogan-bar">
+        <p>COMIDA DE VERDADE, SEM TODA AQUELA CONFUSÃO NA COZINHA! <a href="#">SAIBA MAIS</a></p>
+    </div>
+
     <header>
         <div class="container header-flex">
             <a href="/index.html" class="logo"><img src="/imagens/flamula-chefbrico.png" alt="Logo ChefBrico"></a>
@@ -94,77 +65,84 @@
             <p class="subtitle">Receba em casa via delivery ou compre hoje mesmo em um de nossos parceiros selecionados. A praticidade e o sabor da ChefBrico, mais perto de você.</p>
         </div>
 
-       <style>
-    /* Adicione estas novas regras ao seu bloco <style> principal na página, 
-       ou substitua as regras antigas para .cta-box p e h2 se existirem. */
-    .cta-box h2 {
-        margin-top: 0;
-        font-size: 1.6em;
-        margin-bottom: 15px;
-    }
-    .cta-box p {
-        /* ESTA É A MELHORIA PRINCIPAL */
-        max-width: 320px;  /* Controla a largura máxima do texto */
-        margin: 0 auto 25px auto; /* Centraliza o bloco de texto */
-        line-height: 1.6; /* Aumenta o espaçamento entre as linhas */
-        min-height: 80px; /* Garante alinhamento vertical dos botões */
-    }
-</style>
-
-<div class="hybrid-cta-container">
-    <div class="cta-box">
-        <h2>Opção A: Loja Online</h2>
-        <p>A maneira mais prática para comprar. Clique, peça e receba a ChefBrico no conforto da sua casa em toda a Asa Norte.</p>
-        <a href="https://www.chefbrico.com" target="_blank" rel="noopener noreferrer" class="cta-button"><strong>IR PARA A LOJA DIGITAL</strong></a>
-    </div>
-    <div class="cta-box">
-        <h2>Opção B: Fale com a Maria</h2>
-        <p>Prefere um toque humano? Fale diretamente comigo no WhatsApp para tirar dúvidas ou fazer seu pedido.</p>
-        <a href="https://wa.me/5561XXXXXXXXX" target="_blank" rel="noopener noreferrer" class="cta-button cta-button-secondary"><strong>FALAR NO WHATSAPP</strong></a>
-    </div>
-</div>
+        <div class="hybrid-cta-container">
+            <div class="cta-box">
+                <h2>Opção A: Loja Online</h2>
+                <p>A maneira mais prática para comprar. Clique, peça e receba a ChefBrico no conforto da sua casa em toda a Asa Norte.</p>
+                <a href="https://www.chefbrico.com" target="_blank" rel="noopener noreferrer" class="cta-button"><strong>IR PARA A LOJA DIGITAL</strong></a>
+            </div>
+            <div class="cta-box">
+                <h2>Opção B: Fale com a Maria</h2>
+                <p>Prefere um toque humano? Fale diretamente comigo no WhatsApp para tirar dúvidas ou fazer seu pedido.</p>
+                <a href="https://wa.me/5561XXXXXXXXX" target="_blank" rel="noopener noreferrer" class="cta-button cta-button-secondary"><strong>FALAR NO WHATSAPP</strong></a>
+            </div>
+        </div>
 
         <div id="parceiros-asa-norte" class="post-content">
             <h2 style="text-align: center; margin-top: 50px;">Pontos de Referência na Asa Norte</h2>
             <p style="text-align: center; max-width: 700px; margin: 15px auto 30px auto; font-size: 1.1em; color: #555;">
-                Para garantir a melhor experiência de compra, nossas vendas são focadas nos canais diretos. Você também pode encontrar nossos produtos nestes excelentes estabelecimentos, que selecionamos a dedo por compartilharem nossa paixão pela qualidade.
+                Para garantir a melhor experiência, nossas vendas são focadas nos canais diretos. Você também pode encontrar nossos produtos nestes excelentes estabelecimentos, que selecionamos a dedo por compartilharem nossa paixão pela qualidade.
             </p>
             
-            <div class="map-container" style="margin: 30px 0; border: 2px dashed #ccc; background-color: #fafafa; display: flex; align-items: center; justify-content: center; min-height: 450px;">
-                <p style="text-align:center; color: #999;">Área reservada para o Mapa de Parceiros da Asa Norte.</p>
+            <div class="map-container" style="margin: 30px 0;">
+                <p style="text-align:center; color: #999; padding: 150px 20px;">Área reservada para o Mapa de Parceiros da Asa Norte.</p>
             </div>
 
             <div class="faq-section">
                 <div class="faq-item-accordion">
-                    <button class="accordion-header"><h3>Mercearia Colaborativa (Asa Norte)</h3><span class="icon">▼</span></button>
-                    <div class="accordion-content">
-                        <p><strong>Endereço:</strong> Asa Norte CLN 412 BL E LOJA 4, 6, 10 - Brasília, DF.</p>
-                    </div>
+                    <button class="accordion-header"><h3>Quitandas da Vó Maria</h3><span class="icon">▼</span></button>
+                    <div class="accordion-content"><p><strong>Endereço:</strong> SHIN área especial 03 loja 02 - Polo Verde, Brasília - DF.</p></div>
                 </div>
                 <div class="faq-item-accordion">
-                    <button class="accordion-header"><h3>A Casa do Manjericão (Asa Norte)</h3><span class="icon">▼</span></button>
-                    <div class="accordion-content">
-                        <p><strong>Endereço:</strong> Asa Norte CLN 215 BL B Loja 9 - Asa Norte, Brasília - DF.</p>
-                    </div>
-                </div>
-                 <div class="faq-item-accordion">
-                    <button class="accordion-header"><h3>Ravioli e Cia (Asa Norte)</h3><span class="icon">▼</span></button>
-                    <div class="accordion-content">
-                        <p><strong>Endereço:</strong> CLN 214, bloco D, lojas 05 e 07 - Asa Norte, Brasília - DF.</p>
-                    </div>
+                    <button class="accordion-header"><h3>Mercearia Colaborativa</h3><span class="icon">▼</span></button>
+                    <div class="accordion-content"><p><strong>Endereço:</strong> Asa Norte CLN 412 BL E LOJA 4, 6, 10 - Brasília, DF.</p></div>
                 </div>
                 <div class="faq-item-accordion">
-                    <button class="accordion-header"><h3>Mercado Malunga (Asa Norte)</h3><span class="icon">▼</span></button>
-                    <div class="accordion-content">
-                        <p><strong>Endereço:</strong> Asa Norte Comércio Local Norte 315 BL E loja 04 - Asa Norte, Brasília - DF.</p>
-                    </div>
+                    <button class="accordion-header"><h3>A Casa do Manjericão</h3><span class="icon">▼</span></button>
+                    <div class="accordion-content"><p><strong>Endereço:</strong> Asa Norte CLN 215 BL B Loja 9 - Asa Norte, Brasília - DF.</p></div>
                 </div>
+                <div class="faq-item-accordion">
+                    <button class="accordion-header"><h3>Ravioli e Cia</h3><span class="icon">▼</span></button>
+                    <div class="accordion-content"><p><strong>Endereço:</strong> CLN 214, bloco D, lojas 05 e 07 - Asa Norte, Brasília - DF.</p></div>
+                </div>
+                <div class="faq-item-accordion">
+                    <button class="accordion-header"><h3>Mercado Malunga</h3><span class="icon">▼</span></button>
+                    <div class="accordion-content"><p><strong>Endereço:</strong> Asa Norte Comércio Local Norte 315 BL E loja 04 - Asa Norte, Brasília - DF.</p></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="favoritas-vizinhanza">
+            <h2>As Escolhas da Vizinhança</h2>
+            <p>Os moradores da Asa Norte adoram pratos que combinam tradição, sabor e um toque gourmet. Estas são as receitas que mais fazem sucesso por aqui!</p>
+            <div class="favoritas-grid">
+                <a href="/receita-risoto-pomodori.html" class="receita-card-local">
+                    <img src="/risotos/risoto-pomodori-pesto-tijela-chefbrico.png" alt="Prato do Risoto Pomodori & Pesto">
+                    <h4>Risoto Pomodori & Pesto</h4>
+                    <p>Um clássico italiano que agrada a todos, perfeito para um jantar especial durante a semana.</p>
+                </a>
+                <a href="/emporio-da-chef.html" class="receita-card-local">
+                    <img src="/emporio/confit-shiitake-chefbrico.png" alt="Pote do Confit de Shiitake da ChefBrico">
+                    <h4>Confit de Shiitake</h4>
+                    <p>O toque gourmet para finalizar qualquer prato. Use em massas, bruschettas e saladas.</p>
+                </a>
+                <a href="/guia-arrozes-cremosos.html" class="receita-card-local">
+                    <img src="/refeicoes-praticas/Refeicao-arroz-negro-funghi-chefbrico.png" alt="Prato de Arroz Negro com Funghi">
+                    <h4>Arrozes Especiais</h4>
+                    <p>A inspiração perfeita para sair da rotina com pratos como o nutritivo Arroz Negro.</p>
+                </a>
             </div>
         </div>
     </main>
     
     <footer>
-        <div class="container footer-grid"><div><h4>Navegação</h4><a href="/index.html">Início</a><a href="/nossa-filosofia.html">Nossa Filosofia</a><a href="/receitas.html">Receitas</a><a href="/faq.html">FAQ</a></div><div><h4>Nossos Produtos</h4><a href="https://www.chefbrico.com/risotos" target="_blank" rel="noopener noreferrer">Risotos</a><a href="https://www.chefbrico.com/sopas-funcionais" target="_blank" rel="noopener noreferrer">Sopas Funcionais</a><a href="https://www.chefbrico.com/refeicoes-praticas" target="_blank" rel="noopener noreferrer">Refeições Práticas</a><a href="https://www.chefbrico.com/emporio-da-chef" target="_blank" rel="noopener noreferrer">Empório da Chef</a></div><div><h4>Ajuda & Suporte</h4><a href="/onde-encontrar.html">Onde Encontrar</a><a href="#">Contato</a></div><div><h4>Redes Sociais</h4><a href="https://www.instagram.com/chefbrico/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://br.pinterest.com/chefbrico/" target="_blank" rel="noopener noreferrer">Pinterest</a></div></div><div class="container footer-credit"><p>© 2025 ChefBrico - Todos os direitos reservados.</p></div>
+        <div class="container footer-grid">
+            <div><h4>Navegação</h4><a href="/index.html">Início</a><a href="/nossa-filosofia.html">Nossa Filosofia</a><a href="/receitas.html">Receitas</a><a href="/faq.html">FAQ</a></div>
+            <div><h4>Nossos Produtos</h4><a href="https://www.chefbrico.com/risotos" target="_blank" rel="noopener noreferrer">Risotos</a><a href="https://www.chefbrico.com/sopas-funcionais" target="_blank" rel="noopener noreferrer">Sopas Funcionais</a><a href="https://www.chefbrico.com/refeicoes-praticas" target="_blank" rel="noopener noreferrer">Refeições Práticas</a><a href="https://www.chefbrico.com/emporio-da-chef" target="_blank" rel="noopener noreferrer">Empório da Chef</a></div>
+            <div><h4>Ajuda & Suporte</h4><a href="/onde-encontrar.html">Onde Encontrar</a><a href="#">Contato</a></div>
+            <div><h4>Redes Sociais</h4><a href="https://www.instagram.com/chefbrico/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://br.pinterest.com/chefbrico/" target="_blank" rel="noopener noreferrer">Pinterest</a></div>
+        </div>
+        <div class="container footer-credit"><p>© 2025 ChefBrico - Todos os direitos reservados.</p></div>
     </footer>
     
     <script src="/script.js"></script> 
