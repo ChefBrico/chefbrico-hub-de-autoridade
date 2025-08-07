@@ -94,18 +94,35 @@
             <p class="subtitle">Receba em casa via delivery ou compre hoje mesmo em um de nossos parceiros selecionados. A praticidade e o sabor da ChefBrico, mais perto de você.</p>
         </div>
 
-        <div class="hybrid-cta-container">
-            <div class="cta-box">
-                <h2>Opção A: Loja Online</h2>
-                <p>A forma mais prática para receber em casa. Entregamos em toda a Asa Norte.</p>
-                <a href="https://www.chefbrico.com" target="_blank" rel="noopener noreferrer" class="cta-button"><strong>IR PARA A LOJA DIGITAL</strong></a>
-            </div>
-            <div class="cta-box">
-                <h2>Opção B: Fale com a Maria</h2>
-                <p>Tem dúvidas ou prefere um atendimento personalizado? Fale diretamente comigo no WhatsApp!</p>
-                <a href="https://wa.me/5561XXXXXXXXX" target="_blank" rel="noopener noreferrer" class="cta-button cta-button-secondary"><strong>FALAR NO WHATSAPP</strong></a>
-            </div>
-        </div>
+       <style>
+    /* Adicione estas novas regras ao seu bloco <style> principal na página, 
+       ou substitua as regras antigas para .cta-box p e h2 se existirem. */
+    .cta-box h2 {
+        margin-top: 0;
+        font-size: 1.6em;
+        margin-bottom: 15px;
+    }
+    .cta-box p {
+        /* ESTA É A MELHORIA PRINCIPAL */
+        max-width: 320px;  /* Controla a largura máxima do texto */
+        margin: 0 auto 25px auto; /* Centraliza o bloco de texto */
+        line-height: 1.6; /* Aumenta o espaçamento entre as linhas */
+        min-height: 80px; /* Garante alinhamento vertical dos botões */
+    }
+</style>
+
+<div class="hybrid-cta-container">
+    <div class="cta-box">
+        <h2>Opção A: Loja Online</h2>
+        <p>A maneira mais prática para comprar. Clique, peça e receba a ChefBrico no conforto da sua casa em toda a Asa Norte.</p>
+        <a href="https://www.chefbrico.com" target="_blank" rel="noopener noreferrer" class="cta-button"><strong>IR PARA A LOJA DIGITAL</strong></a>
+    </div>
+    <div class="cta-box">
+        <h2>Opção B: Fale com a Maria</h2>
+        <p>Prefere um toque humano? Fale diretamente comigo no WhatsApp para tirar dúvidas ou fazer seu pedido.</p>
+        <a href="https://wa.me/5561XXXXXXXXX" target="_blank" rel="noopener noreferrer" class="cta-button cta-button-secondary"><strong>FALAR NO WHATSAPP</strong></a>
+    </div>
+</div>
 
         <div id="parceiros-asa-norte" class="post-content">
             <h2 style="text-align: center; margin-top: 50px;">Pontos de Referência na Asa Norte</h2>
