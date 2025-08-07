@@ -9,12 +9,16 @@
 
     <style>
         .page-header-local h1 { font-size: 2.8em; margin-bottom: 15px; text-align: center; color: #5a3a30; }
-        .page-header-local .subtitle { font-size: 1.3em; text-align: center; color: #666; max-width: 700px; margin: 0 auto 40px auto; }
+        .page-header-local .subtitle { font-size: 1.3em; text-align: center; color: #666; max-width: 700px; margin-left: auto; margin-right: auto; }
         .hybrid-cta-container { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 40px 0; }
         .cta-box { border: 1px solid #eee; border-radius: 8px; padding: 30px 25px; background-color: #fdfcf7; text-align: center; }
         .cta-box h2 { margin-top: 0; font-size: 1.6em; margin-bottom: 15px; }
         .cta-box p { max-width: 320px; margin: 0 auto 25px auto; line-height: 1.6; min-height: 80px; }
-        .favoritas-vizinhanza { margin-top: 60px; padding-top: 40px; border-top: 1px solid #eee; }
+        .favoritas-vizinhanza { 
+            margin-top: 30px; /* <<< AJUSTE REALIZADO AQUI (ERA 60px) */
+            padding-top: 40px; 
+            border-top: 1px solid #eee; 
+        }
         .favoritas-vizinhanza h2 { text-align: center; }
         .favoritas-vizinhanza > p { text-align: center; max-width: 600px; margin: 15px auto 0 auto; }
         .favoritas-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 30px; }
@@ -80,14 +84,10 @@
 
         <div id="parceiros-asa-norte" class="post-content">
             <h2 style="text-align: center; margin-top: 50px;">Pontos de Referência na Asa Norte</h2>
-            <p style="text-align: center; max-width: 700px; margin: 15px auto 30px auto; font-size: 1.1em; color: #555;">
-                Para garantir a melhor experiência, nossas vendas são focadas nos canais diretos. Você também pode encontrar nossos produtos nestes excelentes estabelecimentos, que selecionamos a dedo por compartilharem nossa paixão pela qualidade.
+            <p style="text-align: center; max-width: 700px; margin: 15px auto 40px auto; font-size: 1.1em; color: #555;">
+                Para garantir a melhor experiência de compra, nossas vendas são focadas nos canais diretos. Você também pode encontrar nossos produtos nestes excelentes estabelecimentos, que selecionamos a dedo por compartilharem nossa paixão pela qualidade.
             </p>
             
-            <div class="map-container" style="margin: 30px 0;">
-                <p style="text-align:center; color: #999; padding: 150px 20px;">Área reservada para o Mapa de Parceiros da Asa Norte.</p>
-            </div>
-
             <div class="faq-section">
                 <div class="faq-item-accordion">
                     <button class="accordion-header"><h3>Quitandas da Vó Maria</h3><span class="icon">▼</span></button>
@@ -95,7 +95,7 @@
                 </div>
                 <div class="faq-item-accordion">
                     <button class="accordion-header"><h3>Mercearia Colaborativa</h3><span class="icon">▼</span></button>
-                    <div class="accordion-content"><p><strong>Endereço:</strong> Asa Norte CLN 412 BL E LOJA 4, 6, 10 - Brasília, DF.</p></div>
+                    <div class="accordion-content"><p><strong>Endereço:</strong> Asa Norte CLN 412 BL E LOJA 4, 6, 10 - Brasília - DF.</p></div>
                 </div>
                 <div class="faq-item-accordion">
                     <button class="accordion-header"><h3>A Casa do Manjericão</h3><span class="icon">▼</span></button>
