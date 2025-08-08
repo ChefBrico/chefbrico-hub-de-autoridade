@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Onde Encontrar ChefBrico no DF - Mapa, Lojas e Delivery</title>
-    <meta name="description" content="Encontre todos os pontos de referência e áreas de entrega da ChefBrico no Distrito Federal. Navegue por nossas embaixadas digitais na Asa Sul, Asa Norte, Lago Sul, Sudoeste, Águas Claras e mais.">
+    <title>Onde Encontrar ChefBrico no DF - Mapa, Lojas, Feiras e Eventos</title>
+    <meta name="description" content="Encontre todos os pontos de referência, feiras semanais, eventos sazonais e áreas de entrega da ChefBrico no Distrito Federal.">
     <link rel="stylesheet" href="/style.css">
 
     <style>
@@ -14,39 +14,53 @@
         .region-nav { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #eee; }
         .region-nav a { background-color: #f0ead6; color: #333; padding: 10px 20px; border-radius: 20px; text-decoration: none; font-size: 0.9em; transition: background-color 0.2s; }
         .region-nav a:hover { background-color: #e0d8c4; }
+        .agenda-section { background-color: #fdfcf7; border-top: 2px solid #f0ead6; padding: 50px 20px; margin-top: 60px; }
+        .agenda-section h2 { text-align: center; font-size: 2.5em; color: var(--cor-primaria); margin-bottom: 15px; }
+        .agenda-section .subtitle { text-align: center; font-size: 1.2em; max-width: 600px; margin: 0 auto 50px auto; color: #555; }
+        .feiras-semanais-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 50px; }
+        .feira-card { border: 1px solid #eee; border-radius: 8px; padding: 25px; background-color: #fff; text-align: center; }
+        .feira-card h3 { color: var(--cor-titulos); margin-top: 0; margin-bottom: 5px; }
+        .feira-card .dia { font-weight: bold; }
+        .feira-card .local-hora { margin-top: 10px; }
+        .calendario-sazonal { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .estacao-card { border: 1px solid #eee; border-radius: 8px; overflow: hidden; background-color: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .estacao-postcard { width: 100%; height: 180px; background-color: #f0f0f0; }
+        .estacao-postcard img { width: 100%; height: 100%; object-fit: cover; }
+        .estacao-content { padding: 20px; }
+        .estacao-content h3 { color: var(--cor-primaria); margin-top: 0; font-size: 1.1em; text-transform: uppercase; }
+        .estacao-content h4 { color: var(--cor-titulos); font-size: 1.5em; margin-top: 5px; margin-bottom: 10px; }
+        .review-cta-section { background-color: #fdfcf7; border-top: 2px solid #f0ead6; padding: 50px 20px; margin-top: 60px; text-align: center; }
+        .review-cta-section h2 { color: var(--cor-titulos); font-size: 2.5em; margin-top: 0; margin-bottom: 15px; }
+        .review-cta-section .review-text { font-size: 1.1em; max-width: 700px; margin: 0 auto 20px auto; line-height: 1.7; }
+        .review-cta-section .review-stars { color: #FFC107; font-size: 2.8em; margin-bottom: 20px; letter-spacing: 5px; }
+        .review-cta-section .gbp-specific-button { background-color: #4285F4 !important; padding: 15px 30px; font-size: 1.1em; border-radius: 5px; color: white; text-decoration: none; font-weight: bold; display: inline-block; transition: transform 0.2s; }
+        .review-cta-section .gbp-specific-button:hover { transform: scale(1.05); }
     </style>
 
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "CollectionPage",
-      "name": "Onde Encontrar ChefBrico no Distrito Federal",
-      "url": "https://receitas.chefbrico.com/onde-encontrar.html",
-      "description": "Um hub com todas as áreas de atuação e pontos de referência da ChefBrico no DF, linkando para páginas dedicadas de cada micro-região.",
-      "mainEntity": {
-        "@type": "ItemList",
-        "name": "Embaixadas Digitais da ChefBrico por Micro-Região",
-        "itemListElement": [
-          {"@type": "ListItem", "position": 1, "name": "Asa Sul", "url": "https://receitas.chefbrico.com/onde-encontrar/asa-sul.html"},
-          {"@type": "ListItem", "position": 2, "name": "Asa Norte", "url": "https://receitas.chefbrico.com/onde-encontrar/asa-norte.html"},
-          {"@type": "ListItem", "position": 3, "name": "Esplanada dos Ministérios", "url": "https://receitas.chefbrico.com/onde-encontrar/esplanada-dos-ministerios.html"},
-          {"@type": "ListItem", "position": 4, "name": "Governo DF (Plano Piloto)", "url": "https://receitas.chefbrico.com/onde-encontrar/plano-piloto-governo-df.html"},
-          {"@type": "ListItem", "position": 5, "name": "Lago Sul", "url": "https://receitas.chefbrico.com/onde-encontrar/lago-sul.html"},
-          {"@type": "ListItem", "position": 6, "name": "Lago Norte & Varjão", "url": "https://receitas.chefbrico.com/onde-encontrar/lago-norte-varjao.html"},
-          {"@type": "ListItem", "position": 7, "name": "Sudoeste & Octogonal", "url": "https://receitas.chefbrico.com/onde-encontrar/sudoeste-octogonal.html"},
-          {"@type": "ListItem", "position": 8, "name": "Noroeste", "url": "https://receitas.chefbrico.com/onde-encontrar/noroeste.html"},
-          {"@type": "ListItem", "position": 9, "name": "Águas Claras & Arniqueiras", "url": "https://receitas.chefbrico.com/onde-encontrar/aguas-claras-arniqueiras.html"},
-          {"@type": "ListItem", "position": 10, "name": "Taguatinga Sul", "url": "https://receitas.chefbrico.com/onde-encontrar/taguatinga-sul.html"},
-          {"@type": "ListItem", "position": 11, "name": "Taguatinga Norte", "url": "https://receitas.chefbrico.com/onde-encontrar/taguatinga-norte.html"},
-          {"@type": "ListItem", "position": 12, "name": "Guará & Parkway", "url": "https://receitas.chefbrico.com/onde-encontrar/guara-parkway.html"},
-          {"@type": "ListItem", "position": 13, "name": "Grande Colorado & Taquari", "url": "https://receitas.chefbrico.com/onde-encontrar/grande-colorado-taquari.html"},
-          {"@type": "ListItem", "position": 14, "name": "SIA", "url": "https://receitas.chefbrico.com/onde-encontrar/sia.html"},
-          {"@type": "ListItem", "position": 15, "name": "Riacho Fundo", "url": "https://receitas.chefbrico.com/onde-encontrar/riacho-fundo.html"},
-          {"@type": "ListItem", "position": 16, "name": "Jardim Botânico", "url": "https://receitas.chefbrico.com/onde-encontrar/jardim-botanico.html"},
-          {"@type": "ListItem", "position": 17, "name": "Vicente Pires", "url": "https://receitas.chefbrico.com/onde-encontrar/vicente-pires.html"}
-        ]
-      }
-    }
+    [
+      { "@context": "https://schema.org", "@type": "CollectionPage", "name": "Onde Encontrar ChefBrico no Distrito Federal", "url": "https://receitas.chefbrico.com/onde-encontrar.html", "mainEntity": { "@type": "ItemList", "name": "Embaixadas Digitais da ChefBrico", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Asa Sul", "url": "https://receitas.chefbrico.com/onde-encontrar/asa-sul.html"},
+            {"@type": "ListItem", "position": 2, "name": "Asa Norte", "url": "https://receitas.chefbrico.com/onde-encontrar/asa-norte.html"},
+            {"@type": "ListItem", "position": 3, "name": "Esplanada dos Ministérios", "url": "https://receitas.chefbrico.com/onde-encontrar/esplanada-dos-ministerios.html"},
+            {"@type": "ListItem", "position": 4, "name": "Governo DF (Plano Piloto)", "url": "https://receitas.chefbrico.com/onde-encontrar/plano-piloto-governo-df.html"},
+            {"@type": "ListItem", "position": 5, "name": "Lago Sul", "url": "https://receitas.chefbrico.com/onde-encontrar/lago-sul.html"},
+            {"@type": "ListItem", "position": 6, "name": "Lago Norte & Varjão", "url": "https://receitas.chefbrico.com/onde-encontrar/lago-norte-varjao.html"},
+            {"@type": "ListItem", "position": 7, "name": "Sudoeste & Octogonal", "url": "https://receitas.chefbrico.com/onde-encontrar/sudoeste-octogonal.html"},
+            {"@type": "ListItem", "position": 8, "name": "Noroeste", "url": "https://receitas.chefbrico.com/onde-encontrar/noroeste.html"},
+            {"@type": "ListItem", "position": 9, "name": "Águas Claras & Arniqueiras", "url": "https://receitas.chefbrico.com/onde-encontrar/aguas-claras-arniqueiras.html"},
+            {"@type": "ListItem", "position": 10, "name": "Taguatinga Sul", "url": "https://receitas.chefbrico.com/onde-encontrar/taguatinga-sul.html"},
+            {"@type": "ListItem", "position": 11, "name": "Taguatinga Norte", "url": "https://receitas.chefbrico.com/onde-encontrar/taguatinga-norte.html"},
+            {"@type": "ListItem", "position": 12, "name": "Guará & Parkway", "url": "https://receitas.chefbrico.com/onde-encontrar/guara-parkway.html"},
+            {"@type": "ListItem", "position": 13, "name": "Grande Colorado & Taquari", "url": "https://receitas.chefbrico.com/onde-encontrar/grande-colorado-taquari.html"},
+            {"@type": "ListItem", "position": 14, "name": "SIA", "url": "https://receitas.chefbrico.com/onde-encontrar/sia.html"},
+            {"@type": "ListItem", "position": 15, "name": "Riacho Fundo", "url": "https://receitas.chefbrico.com/onde-encontrar/riacho-fundo.html"},
+            {"@type": "ListItem", "position": 16, "name": "Jardim Botânico", "url": "https://receitas.chefbrico.com/onde-encontrar/jardim-botanico.html"},
+            {"@type": "ListItem", "position": 17, "name": "Vicente Pires", "url": "https://receitas.chefbrico.com/onde-encontrar/vicente-pires.html"}
+      ]} },
+      { "@context": "https://schema.org", "@type": "Event", "name": "Feira Rural da ChefBrico no Hemocentro", "startDate": "2025-01-01T09:00", "endDate": "2025-12-31T14:00", "eventStatus": "https://schema.org/EventScheduled", "location": {"@type": "Place", "name": "Hemocentro de Brasília", "address": "SMHN Quadra 3 Conjunto A Bloco 3 - Asa Norte, Brasília - DF"}, "organizer": {"@type": "Organization", "name": "ChefBrico"}, "eventSchedule": {"@type": "Schedule", "repeatFrequency": "P1W", "byDay": "WE", "startTime": "09:00", "endTime": "14:00"} },
+      { "@context": "https://schema.org", "@type": "Event", "name": "Feira da Praça da 13 com a ChefBrico", "startDate": "2025-01-01T08:00", "endDate": "2025-12-31T14:00", "eventStatus": "https://schema.org/EventScheduled", "location": {"@type": "Place", "name": "Praça da QI 13", "address": "QI 13 - Lago Sul, Brasília - DF"}, "organizer": {"@type": "Organization", "name": "ChefBrico"}, "eventSchedule": {"@type": "Schedule", "repeatFrequency": "P1W", "byDay": "SA", "startTime": "08:00", "endTime": "14:00"} }
+    ]
     </script>
 </head>
 <body>
@@ -74,82 +88,63 @@
             <p class="subtitle">Seja para entrega em casa ou para encontrar em um parceiro perto de você, aqui está o mapa da nossa presença no DF. Navegue por nossas Embaixadas Digitais para uma experiência local.</p>
         </div>
         
-       </div>
-        
- <iframe    src="https://www.google.com/maps/d/u/1/embed?mid=1OFgLnADSGkwtKCgLdwXZDiqrAt_qgJY&ehbc=2E312F"
-                width="100%"
-                height="480"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+        <div class="map-container" style="margin: 30px 0;">
+            <iframe src="https://www.google.com/maps/d/embed?mid=SUA_ID_DO_MAPA_ASA_NORTE1" width="100%" height="480" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
-
-            <p style="text-align:center; color: #999;">Área reservada para o Mapa Mestre de todos os parceiros no DF.</p>
-        </div>
-
 
         <div class="phase-title">Fase 1: Eixos de Poder</div>
-        <nav class="region-nav">
-            <a href="/onde-encontrar/asa-sul.html">Asa Sul</a>
-            <a href="/onde-encontrar/asa-norte.html">Asa Norte</a>
-            <a href="/onde-encontrar/esplanada-dos-ministerios.html">Esplanada</a>
-            <a href="/onde-encontrar/plano-piloto-governo-df.html">Governo DF</a>
-        </nav>
-
+        <nav class="region-nav"></nav>
         <div class="phase-title">Fase 2: Lifestyle & Sofisticação</div>
-        <nav class="region-nav">
-            <a href="/onde-encontrar/lago-sul.html">Lago Sul</a>
-            <a href="/onde-encontrar/lago-norte-varjao.html">Lago Norte & Varjão</a>
-            <a href="/onde-encontrar/sudoeste-octogonal.html">Sudoeste & Octogonal</a>
-            <a href="/onde-encontrar/noroeste.html">Noroeste</a>
-            <a href="/onde-encontrar/aguas-claras-arniqueiras.html">Águas Claras & Arniqueiras</a>
-        </nav>
-
+        <nav class="region-nav"></nav>
         <div class="phase-title">Fase 3: Consolidação</div>
-        <nav class="region-nav" style="border-bottom:none;">
-            <a href="/onde-encontrar/taguatinga-sul.html">Taguatinga Sul</a>
-            <a href="/onde-encontrar/taguatinga-norte.html">Taguatinga Norte</a>
-            <a href="/onde-encontrar/guara-parkway.html">Guará & Parkway</a>
-            <a href="/onde-encontrar/grande-colorado-taquari.html">Grande Colorado & Taquari</a>
-            <a href="/onde-encontrar/sia.html">SIA</a>
-            <a href="/onde-encontrar/riacho-fundo.html">Riacho Fundo</a>
-            <a href="/onde-encontrar/jardim-botanico.html">Jardim Botânico</a>
-            <a href="/onde-encontrar/vicente-pires.html">Vicente Pires</a>
-        </nav>
+        <nav class="region-nav" style="border-bottom:none;"></nav>
 
         <div id="todos-parceiros" class="post-content">
             <h2 style="text-align: center; margin-top: 60px;">Diretório Completo de Parceiros</h2>
-            <p style="text-align: center; max-width: 700px; margin: 15px auto 40px auto; font-size: 1.1em; color: #555;">
-                Para referência, listamos abaixo todos os excelentes estabelecimentos onde você pode encontrar os produtos ChefBrico em Brasília e região.
-            </p>
-            <div class="faq-section">
-                <div class="faq-item-accordion">
-                    <button class="accordion-header"><h3>NOSSO Empório & Mercearia (Águas Claras)</h3><span class="icon">▼</span></button>
-                    <div class="accordion-content"><p><strong>Endereço:</strong> Edifício Águas de Manaíra - R. 24 Norte, 04 - Águas Claras, Brasília - DF.</p></div>
-                </div>
-                <div class="faq-item-accordion">
-                    <button class="accordion-header"><h3>Mercearia Colaborativa (Asa Norte)</h3><span class="icon">▼</span></button>
-                    <div class="accordion-content"><p><strong>Endereço:</strong> Asa Norte CLN 412 BL E LOJA 4, 6, 10 - Brasília, DF.</p></div>
-                </div>
-                <div class="faq-item-accordion">
-                    <button class="accordion-header"><h3>Mercado Malunga (Lago Sul)</h3><span class="icon">▼</span></button>
-                    <div class="accordion-content"><p><strong>Endereço:</strong> Shop Gilberto Salomão SHIS quadra 05 Bloco F CC Sobreloja, 09 - Lago Sul, Brasília - DF.</p></div>
-                </div>
+            <div class="faq-section" style="margin-top: 40px;">
+                <div class="faq-item-accordion"><button class="accordion-header"><h3>NOSSO Empório & Mercearia (Águas Claras)</h3><span class="icon">▼</span></button><div class="accordion-content"><p><strong>Endereço:</strong> Edifício Águas de Manaíra - R. 24 Norte, 04 - Águas Claras, Brasília - DF.</p></div></div>
+                <div class="faq-item-accordion"><button class="accordion-header"><h3>Mercearia Colaborativa (Asa Norte)</h3><span class="icon">▼</span></button><div class="accordion-content"><p><strong>Endereço:</strong> Asa Norte CLN 412 BL E LOJA 4, 6, 10 - Brasília, DF.</p></div></div>
+                <div class="faq-item-accordion"><button class="accordion-header"><h3>Quitandas da Vó Maria (Asa Norte)</h3><span class="icon">▼</span></button><div class="accordion-content"><p><strong>Endereço:</strong> SHIN área especial 03 loja 02 - Polo Verde, Brasília - DF.</p></div></div>
+                <div class="faq-item-accordion"><button class="accordion-header"><h3>A Casa do Manjericão (Asa Norte)</h3><span class="icon">▼</span></button><div class="accordion-content"><p><strong>Endereço:</strong> Asa Norte CLN 215 BL B Loja 9 - Asa Norte, Brasília - DF.</p></div></div>
+                <div class="faq-item-accordion"><button class="accordion-header"><h3>Ravioli e Cia (Asa Norte)</h3><span class="icon">▼</span></button><div class="accordion-content"><p><strong>Endereço:</strong> CLN 214, bloco D, lojas 05 e 07 - Asa Norte, Brasília - DF.</p></div></div>
+                <div class="faq-item-accordion"><button class="accordion-header"><h3>Mercado Malunga (Asa Norte)</h3><span class="icon">▼</span></button><div class="accordion-content"><p><strong>Endereço:</strong> Asa Norte Comércio Local Norte 315 BL E loja 04 - Asa Norte, Brasília - DF.</p></div></div>
+                <div class="faq-item-accordion"><button class="accordion-header"><h3>Mercado Malunga (Asa Sul)</h3><span class="icon">▼</span></button><div class="accordion-content"><p><strong>Endereço:</strong> Asa Sul Q SHC/Sul CL 105 bloco De SN - Asa Sul, Brasília - DF.</p></div></div>
+                <div class="faq-item-accordion"><button class="accordion-header"><h3>Empório Rural do Colorado (Grande Colorado/Taquari)</h3><span class="icon">▼</span></button><div class="accordion-content"><p><strong>Endereço:</strong> DF-150 - Sobradinho, Brasília - DF.</p></div></div>
+                <div class="faq-item-accordion"><button class="accordion-header"><h3>Mercado Malunga (Lago Sul)</h3><span class="icon">▼</span></button><div class="accordion-content"><p><strong>Endereço:</strong> Shop Gilberto Salomão SHIS quadra 05 Bloco F CC Sobreloja, 09 - Lago Sul, Brasília - DF.</p></div></div>
+                <div class="faq-item-accordion"><button class="accordion-header"><h3>Mercado Malunga (Sudoeste)</h3><span class="icon">▼</span></button><div class="accordion-content"><p><strong>Endereço:</strong> Q SHCSW CL 104, BLOCO A, LOJA 19 - Cruzeiro / Sudoeste / Octogonal, Brasília - DF.</p></div></div>
+                <div class="faq-item-accordion"><button class="accordion-header"><h3>Ravioli e Cia (Sudoeste)</h3><span class="icon">▼</span></button><div class="accordion-content"><p><strong>Endereço:</strong> CLSW 302, Bloco B, loja 24, St. Sudoeste, Brasília - DF.</p></div></div>
             </div>
         </div>
+        
+        <section class="agenda-section">
+            <div class="container">
+                <h2>Agenda de Encontros com a Maria</h2>
+                <p class="subtitle">A ChefBrico vai além do online! Venha me encontrar pessoalmente, provar novidades e bater um papo sobre comida de verdade.</p>
+                <h3>Nossos Encontros Fixos</h3>
+                <div class="feiras-semanais-grid">
+                    <div class="feira-card"><h3>Feira Rural do Hemocentro</h3><p class="dia">Toda Quarta-feira</p><p class="local-hora">📍 Hemocentro de Brasília | 🕒 9h às 14h</p></div>
+                    <div class="feira-card"><h3>Feira da Praça da 13</h3><p class="dia">Todo Sábado</p><p class="local-hora">📍 QI 13 do Lago Sul | 🕒 8h às 14h</p></div>
+                </div>
+                <h3 style="margin-top:50px;">Calendário Sazonal de Festas Temáticas</h3>
+                <div class="calendario-sazonal">
+                    <div class="estacao-card"><div class="estacao-postcard"><img src="https://placehold.co/400x250/f57e8f/FFFFFF?text=Festa+do+Morango" alt="Banner da Festa do Morango"></div><div class="estacao-content"><h3>PRIMAVERA</h3><h4>Festa do Morango</h4><p>Celebramos a estação das flores com o melhor do morango de Brasília.</p></div></div>
+                    <div class="estacao-card"><div class="estacao-postcard"><img src="https://placehold.co/400x250/e9c46a/FFFFFF?text=Festa+da+Goiaba" alt="Banner da Festa da Goiaba"></div><div class="estacao-content"><h3>VERÃO</h3><h4>Festa da Goiaba</h4><p>O calor de Brasília pede a doçura da goiaba. Venha provar nossas criações.</p></div></div>
+                    <div class="estacao-card"><div class="estacao-postcard"><img src="https://placehold.co/400x250/2a9d8f/FFFFFF?text=AgroBrasília" alt="Banner da AgroBrasília"></div><div class="estacao-content"><h3>OUTONO</h3><h4>AgroBrasília</h4><p>Marcamos presença na maior feira de agronegócio, lançando nossas sopas para o inverno.</p></div></div>
+                    <div class="estacao-card"><div class="estacao-postcard"><img src="https://placehold.co/400x250/264653/FFFFFF?text=Festa+da+Uva" alt="Banner da Festa da Uva"></div><div class="estacao-content"><h3>INVERNO</h3><h4>Festa da Uva</h4><p>O friozinho de Brasília combina com o sabor intenso da uva e de nossos confits.</p></div></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="review-cta-section">
+            <h2>Conte sua Experiência!</h2>
+            <p class="review-text">Olá, sou a Maria Conceição! Cada receita é feita com muito carinho e a paixão pela comida de verdade. Seu feedback é essencial para continuarmos a transformar a rotina na cozinha.</p>
+            <div class="review-stars">★★★★★</div>
+            <a href="https://g.page/r/CWIKRViCYBCDEAI/review" target="_blank" rel="noopener noreferrer" class="gbp-specific-button">Deixe Sua Avaliação no Google!</a>
+        </section>
     </main>
     
-     <footer>
-        <div class="container footer-grid">
-            <div><h4>Navegação</h4><a href="index.html">Início</a><a href="nossa-filosofia.html">Nossa Filosofia</a><a href="receitas.html">Receitas</a><a href="faq.html">FAQ</a></div>
-            <div><h4>Nossos Produtos</h4><a href="risotos.html">Risotos</a><a href="sopas-funcionais.html">Sopas Funcionais</a><a href="refeicoes-praticas.html">Refeições Práticas</a><a href="emporio-da-chef.html">Empório da Chef</a></div>
-            <div><h4>Ajuda & Suporte</h4><a href="onde-encontrar.html">Onde Encontrar</a><a href="#">Contato</a></div>
-            <div><h4>Redes Sociais</h4><a href="https://www.instagram.com/chefbrico/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="#" target="_blank" rel="noopener noreferrer">YouTube</a><a href="https://br.pinterest.com/chefbrico/" target="_blank" rel="noopener noreferrer">Pinterest</a></div>
-        </div>
-        <div class="container footer-credit"><p>© 2025 ChefBrico - Todos os direitos reservados.</p></div>
-    </footer>
+    <footer>
+       </footer>
     
     <script src="/script.js"></script> 
 </body>
