@@ -698,3 +698,59 @@ footer {
         gap: 40px;
     }
 }
+<style>
+    .hero-section-v2 {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr; /* Coluna da imagem menor, coluna do texto maior */
+        align-items: center;
+        gap: 40px;
+        padding: 60px 0;
+        min-height: 400px;
+    }
+    .hero-image-circular {
+        width: 100%;
+        max-width: 350px; /* Tamanho máximo da imagem */
+        aspect-ratio: 1 / 1; /* Garante que seja um quadrado perfeito */
+        border-radius: 50%; /* Cria o círculo */
+        object-fit: cover;
+        border: 5px solid var(--cor-secundaria);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        justify-self: center; /* Centraliza a imagem na sua coluna */
+    }
+    .hero-content-v2 {
+        text-align: left;
+    }
+    .hero-content-v2 h1 {
+        text-align: left;
+        font-size: 3.5em; /* Um pouco maior para destaque */
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+    .hero-content-v2 p {
+        font-size: 1.3em;
+        max-width: 500px;
+        margin-bottom: 30px;
+    }
+    .hero-content-v2 .cta-button {
+        font-size: 1.2em;
+        padding: 15px 35px;
+    }
+
+    /* --- Adaptação para Mobile --- */
+    @media (max-width: 768px) {
+        .hero-section-v2 {
+            grid-template-columns: 1fr; /* Empilha as colunas */
+            text-align: center;
+            padding: 40px 0;
+        }
+        .hero-image-circular {
+            max-width: 280px; /* Reduz a imagem no mobile */
+            margin-bottom: 30px;
+        }
+        .hero-content-v2 h1, .hero-content-v2 p {
+            text-align: center; /* Centraliza o texto no mobile */
+        }
+        .hero-content-v2 h1 {
+            font-size: 2.5em;
+        }
+    }
