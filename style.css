@@ -634,3 +634,67 @@ footer {
     padding-top: 30px;  /* Reduzido de 40px para diminuir o espaço interno */
     border-top: 1px solid #eee; /* Mantém a linha divisória sutil */
 }
+/* ======================================================= */
+/* ===== PROTOCOLO DE OTIMIZAÇÃO MOBILE FIRST V1.0 ===== */
+/* estas regras SÓ se aplicam a telas com 768px de largura ou menos */
+/* ======================================================= */
+
+@media (max-width: 768px) {
+
+    /* --- AJUSTES GERAIS --- */
+    body {
+        padding: 0 15px; /* Reduz o espaçamento lateral para telas pequenas */
+    }
+
+    h1 {
+        font-size: 2.2em; /* Reduz o tamanho do título principal */
+    }
+    
+    .subtitle, .page-header-local .subtitle {
+        font-size: 1.1em; /* Reduz o tamanho dos subtítulos */
+    }
+
+    /* --- CABEÇALHO (HEADER) --- */
+    .header-flex {
+        flex-direction: column; /* Empilha a logo e o menu */
+        gap: 20px;
+    }
+    header nav {
+        flex-direction: column; /* Empilha os itens do menu */
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+    }
+    header nav a.cta-button {
+        width: 100%;
+        text-align: center; /* Garante que o botão ocupe toda a largura */
+    }
+
+    /* --- PÁGINAS DE MICRO-REGIÃO --- */
+    .hybrid-cta-container {
+        grid-template-columns: 1fr; /* Força os 2 CTAs a ficarem um em cima do outro */
+    }
+
+    .cta-box p {
+        min-height: auto; /* Remove a altura mínima no mobile para um layout mais natural */
+    }
+
+    /* --- AGENDA DE ENCONTROS --- */
+    .feiras-semanais-grid {
+        grid-template-columns: 1fr; /* Empilha os cards das feiras */
+    }
+    .feira-card {
+        flex-direction: column; /* Empilha a imagem e o texto da feira */
+        text-align: center;
+    }
+    .feira-info {
+        text-align: center;
+    }
+
+    /* --- FOOTER --- */
+    .footer-grid {
+        grid-template-columns: 1fr; /* Empilha as colunas do rodapé */
+        text-align: center;
+        gap: 40px;
+    }
+}
