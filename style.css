@@ -776,3 +776,50 @@ footer {
             font-size: 2.5em;
         }
     }
+/* ===== CÓDIGO PARA O ARQUIVO style.css ===== */
+/* --- COMPONENTE: CAIXA DA AUTORA PADRÃO OURO --- */
+
+.author-box {
+    display: grid;
+    grid-template-columns: auto 1fr; /* Coluna da imagem se ajusta, texto ocupa o resto */
+    align-items: center;
+    gap: 30px;
+    margin-top: 60px;
+    padding: 30px;
+    border-top: 2px solid #f0f0f0;
+    background-color: #fdfcf7;
+    border-radius: 8px;
+}
+
+.author-box .author-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* O CÍRCULO */
+    object-fit: cover;
+    border: 4px solid var(--cor-secundaria); /* A BORDA DOURADA */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.author-box .author-info h4 {
+    margin: 0 0 10px 0;
+    font-family: var(--fonte-titulos);
+    color: var(--cor-primaria);
+    font-size: 1.5em;
+}
+
+.author-box .author-info p {
+    margin: 0;
+    line-height: 1.7;
+}
+
+/* --- Adaptação para Mobile --- */
+@media (max-width: 768px) {
+    .author-box {
+        grid-template-columns: 1fr; /* Empilha a imagem e o texto */
+        text-align: center;
+        gap: 20px;
+    }
+    .author-box .author-image {
+        margin: 0 auto; /* Centraliza a imagem */
+    }
+}
