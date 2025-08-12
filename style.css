@@ -19,11 +19,56 @@ body { font-family: var(--fonte-corpo); color: var(--cor-texto); background-colo
 .top-slogan-bar { background-color: var(--cor-secundaria); color: #333; padding: 10px 0; text-align: center; font-size: 0.9em; font-weight: bold; }
 .top-slogan-bar a { color: var(--cor-primaria); }
 header { padding: 15px 0; border-bottom: 1px solid #f0f0f0; }
-.header-flex { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
-header nav { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
-header nav a { text-decoration: none; color: var(--cor-texto); font-weight: bold; }
-header nav a.cta-button { background-color: var(--cor-acao); color: white; padding: 12px 24px; border-radius: 50px; }
-main { padding: 40px 0; }
+/* ======================================================= */
+/* ===== REENGENHARIA DO CABEÇALHO V2.1 (Padrão Ouro) ===== */
+/* (Substitua as regras antigas .header-flex e nav)    */
+/* ======================================================= */
+
+.header-flex {
+    display: flex;
+    justify-content: space-between; /* Mantém a logo na esquerda e o resto na direita */
+    align-items: center;
+    padding: 15px 0;
+}
+
+/* Isola a logo, garantindo que ela não ocupe espaço extra */
+.header-flex .logo {
+    flex-shrink: 0;
+}
+
+/* O container GERAL do menu e do botão */
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Alinha tudo à direita inicialmente */
+    flex-grow: 1; /* Permite que a navegação ocupe o espaço disponível */
+    gap: 25px;
+}
+
+/* NOVO container APENAS para os links do menu, para podermos centralizá-los */
+.main-nav-links {
+    display: flex;
+    justify-content: center; /* <<< A MÁGICA ACONTECE AQUI: Centraliza os links */
+    flex-grow: 1; /* Faz este bloco ocupar todo o espaço entre a logo e o botão */
+    gap: 25px; /* Espaçamento entre os links */
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--cor-texto);
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* Mantém o botão de ação no final, sem encolher */
+header nav .cta-button {
+    background-color: var(--cor-acao);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-align: center;
+    flex-shrink: 0; 
+}
 h1 { font-family: var(--fonte-titulos); color: var(--cor-titulos); font-size: 3em; text-align: center; line-height: 1.2; }
 h2 { font-family: var(--fonte-titulos); color: var(--cor-primaria); font-size: 2.2em; margin-top: 50px; margin-bottom: 20px; }
 .post-carousel { display: flex; overflow-x: auto; gap: 20px; padding-bottom: 20px; scrollbar-width: none; cursor: grab; }
