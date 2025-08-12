@@ -4,76 +4,134 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Receitas Práticas e Artesanais | ChefBrico</title>
-    <meta name="description" content="Explore nossas receitas de risotos, sopas funcionais, refeições completas e mais. O sabor da comida de verdade, para sua rotina.">
+    <meta name="description" content="Explore nossas categorias de receitas: Risotos, Sopas Funcionais, Refeições Práticas e nosso Empório Gourmet. O sabor da comida de verdade para sua rotina.">
     <link rel="stylesheet" href="style.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Receitas Práticas e Artesanais da ChefBrico",
+      "url": "https://receitas.chefbrico.com/receitas.html",
+      "description": "Navegue por nossas categorias de receitas e descubra como usar os produtos ChefBrico para criar pratos incríveis, da entrada à refeição principal.",
+      "mainEntity": {
+        "@type": "ItemList",
+        "name": "Categorias de Receitas",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Arrozes do Mundo",
+            "url": "https://receitas.chefbrico.com/risotos.html",
+            "description": "Uma viagem de sabores que explora arrozes cremosos, caldosos e tenros."
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Sopas Funcionais",
+            "url": "https://receitas.chefbrico.com/sopas-funcionais.html",
+            "description": "Descubra como nossas sopas podem revolucionar sua dieta com saúde e praticidade."
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Refeições Práticas",
+            "url": "https://receitas.chefbrico.com/refeicoes-praticas.html",
+            "description": "Soluções completas para os dias mais corridos, do PFzinho Kids ao Feiju Veg."
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Empório da Chef",
+            "url": "https://receitas.chefbrico.com/emporio-da-chef.html",
+            "description": "O toque final de sabor com nossos antepastos, confits e produtos gourmet."
+          }
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "ChefBrico"
+      }
+    }
+    </script>
 </head>
 <body>
 
-<header>
+    <div class="top-slogan-bar">
+        <p>COMIDA DE VERDADE, SEM TODA AQUELA CONFUSÃO NA COZINHA! </a></p>
+    </div>
+
+    <header>
         <div class="container header-flex">
-            <a href="index.html" class="logo"><img src="/imagens/flamula-chefbrico.png" alt="Logo ChefBrico" style="max-height: 100px;">
-</a>
+            <a href="index.html" class="logo">
+                <img src="/imagens/flamula-chefbrico.png" alt="Logo ChefBrico">
+            </a>
             <nav>
                 <a href="nossa-filosofia.html">Nossa Filosofia</a>
-                <a href="receitas.html">Receitas & Dicas</a>
+                <a href="receitas.html" style="text-decoration: underline;">Receitas & Dicas</a>
                 <a href="onde-encontrar.html">Onde Encontrar</a>
                 <a href="faq.html">FAQ</a>
                 <a href="https://www.chefbrico.com" target="_blank" rel="noopener noreferrer" class="cta-button">Ir para a Loja</a>
             </nav>
         </div>
     </header>
-    <main>
-        <section class="container">
+
+    <main class="container">
+        
+        <div class="recipe-title-container">
             <h1>Receitas Artesanais para uma Vida Prática</h1>
-            <p>Bem-vindo à biblioteca de sabores da ChefBrico. Aqui você encontrará inspiração para transformar nossas misturas em pratos incríveis. Cada receita é um convite para celebrar a comida de verdade, sem complicação.</p>
+            <p class="recipe-subtitle">Bem-vindo à biblioteca de sabores da ChefBrico. Aqui você encontrará inspiração para transformar nossas misturas em pratos incríveis. Cada receita é um convite para celebrar a comida de verdade, sem complicação.</p>
+        </div>
 
-           <div class="post-grid" style="margin-top: 40px;">
-                <a href="risotos.html" class="card">
-                    <img src="/risotos/risoto-pomodori-pesto-tijela-chefbrico.png" alt="Um prato de arroz do mundo, rico e aromático" class="card-image">
-                    <div class="card-content">
-                        <span class="card-category">Cluster</span>
-                        <h3>Arrozes do Mundo</h3>
-                        <p>Uma viagem de sabores que explora arrozes cremosos, caldosos e tenros, da Itália ao Brasil.</p>
-                    </div>
-                </a>
+        <div class="post-grid" style="margin-top: 40px;">
+            <a href="risotos.html" class="card">
+                <img src="/risotos/risoto-pomodori-pesto-tijela-chefbrico.png" alt="Um prato de arroz do mundo, rico e aromático" class="card-image">
+                <div class="card-content">
+                    <span class="card-category">Categoria</span>
+                    <h3>Arrozes do Mundo</h3>
+                    <p class="card-description">Uma viagem de sabores que explora arrozes cremosos, caldosos e tenros, da Itália ao Brasil.</p>
+                </div>
+            </a>
 
-                <a href="sopas-funcionais.html" class="card">
-                    <img src="/imagens/low-carb-vegetais-sopa-chefbrico.png" alt="Tigela de sopa funcional e nutritiva" class="card-image">
-                    <div class="card-content">
-                        <span class="card-category">Cluster</span>
-                        <h3>Sopas Funcionais</h3>
-                        <p>Descubra como nossas sopas podem revolucionar sua dieta com saúde e praticidade.</p>
-                    </div>
-                </a>
+            <a href="sopas-funcionais.html" class="card">
+                <img src="/imagens/low-carb-vegetais-sopa-chefbrico.png" alt="Tigela de sopa funcional e nutritiva" class="card-image">
+                <div class="card-content">
+                    <span class="card-category">Categoria</span>
+                    <h3>Sopas Funcionais</h3>
+                    <p class="card-description">Descubra como nossas sopas podem revolucionar sua dieta com saúde e praticidade.</p>
+                </div>
+            </a>
 
-                <a href="refeicoes-praticas.html" class="card">
-                    <img src="/refeicoes-praticas/refeicao-grao-bico-chefbrico.png"alt="Refeição prática preparar, saborosa e nutritiva" class="card-image">
-                        <div class="card-content">
-                        <span class="card-category">Cluster</span>
-                        <h3>Refeições Práticas ("Mãozinha na Rotina")</h3>
-                        <p>Soluções completas para os dias mais corridos, do PFzinho Kids ao Feiju Veg.</p>
-                    </div>
-                </a>
+            <a href="refeicoes-praticas.html" class="card">
+                <img src="/refeicoes-praticas/refeicao-grao-bico-chefbrico.png" alt="Refeição prática preparar, saborosa e nutritiva" class="card-image">
+                <div class="card-content">
+                    <span class="card-category">Categoria</span>
+                    <h3>Refeições Práticas</h3>
+                    <p class="card-description">Soluções completas para os dias mais corridos, do PFzinho Kids ao Feiju Veg.</p>
+                </div>
+            </a>
 
-                <a href="emporio-da-chef.html" class="card">
-                    <img src="/emporio/confit-shiitake-chefbrico.png" alt="Potes de antepastos e confits artesanais" class="card-image">
-                    <div class="card-content">
-                        <span class="card-category">Cluster</span>
-                        <h3>Empório da Chef</h3>
-                        <p>O toque final de sabor com nossos antepastos, confits e produtos gourmet.</p>
-                    </div>
-                </a>
-            </div>
-        </section>
+            <a href="emporio-da-chef.html" class="card">
+                <img src="/emporio/confit-shiitake-chefbrico.png" alt="Potes de antepastos e confits artesanais" class="card-image">
+                <div class="card-content">
+                    <span class="card-category">Categoria</span>
+                    <h3>Empório da Chef</h3>
+                    <p class="card-description">O toque final de sabor com nossos antepastos, confits e produtos gourmet.</p>
+                </div>
+            </a>
+        </div>
     </main>
-<footer>
+
+    <footer>
         <div class="container footer-grid">
             <div><h4>Navegação</h4><a href="index.html">Início</a><a href="nossa-filosofia.html">Nossa Filosofia</a><a href="receitas.html">Receitas</a><a href="faq.html">FAQ</a></div>
-            <div><h4>Nossos Produtos</h4><a href="risotos.html">Risotos</a><a href="sopas-funcionais.html">Sopas Funcionais</a><a href="refeicoes-praticas.html">Refeições Práticas</a><a href="emporio-da-chef.html">Empório da Chef</a></div>
+            <div><h4>Nossos Produtos</h4><a href="https://www.chefbrico.com/risotos" target="_blank" rel="noopener noreferrer">Risotos</a><a href="https://www.chefbrico.com/sopas-funcionais" target="_blank" rel="noopener noreferrer">Sopas Funcionais</a><a href="https://www.chefbrico.com/refeicoes-praticas" target="_blank" rel="noopener noreferrer">Refeições Práticas</a><a href="https://www.chefbrico.com/emporio-da-chef" target="_blank" rel="noopener noreferrer">Empório da Chef</a></div>
             <div><h4>Ajuda & Suporte</h4><a href="onde-encontrar.html">Onde Encontrar</a><a href="#">Contato</a></div>
-            <div><h4>Redes Sociais</h4><a href="https://www.instagram.com/chefbrico/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="#" target="_blank" rel="noopener noreferrer">YouTube</a><a href="https://br.pinterest.com/chefbrico/" target="_blank" rel="noopener noreferrer">Pinterest</a></div>
+            <div><h4>Redes Sociais</h4><a href="https://www.instagram.com/chefbrico/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://br.pinterest.com/chefbrico/" target="_blank" rel="noopener noreferrer">Pinterest</a></div>
         </div>
-        <div class="container footer-credit"><p>&copy; 2025 ChefBrico - Todos os direitos reservados.</p></div>
+        <div class="container footer-credit"><p>© 2025 ChefBrico - Todos os direitos reservados.</p></div>
     </footer>
+    
+    <script src="script.js"></script>
 </body>
 </html>
