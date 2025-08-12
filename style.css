@@ -94,3 +94,14 @@ main.container {
     .author-box .author-image { margin: 0 auto; }
     .footer-grid { grid-template-columns: 1fr; text-align: center; }
 }
+/* ======================================================= */
+/* ===== PROTOCOLO DE LAYOUT DE PRECISÃO V19.3         ===== */
+/* Garante 4 colunas para os cards de categoria na página de Receitas */
+/* ======================================================= */
+
+@media (min-width: 1200px) {
+    /* Esta regra SÓ se aplica na página de receitas em telas grandes */
+    .page-receitas .post-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
