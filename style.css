@@ -683,12 +683,26 @@ footer {
     .feiras-semanais-grid {
         grid-template-columns: 1fr; /* Empilha os cards das feiras */
     }
-    .feira-card {
-        flex-direction: column; /* Empilha a imagem e o texto da feira */
-        text-align: center;
-    }
-    .feira-info {
-        text-align: center;
+    .feira-card { display: flex; align-items: center; gap: 20px; border: 1px solid #eee; border-radius: 8px; padding: 20px; background-color: #fff; }
+    .feira-imagem-circulo { flex-shrink: 0; width: 100px; height: 100px; border-radius: 50%; overflow: hidden; border: 3px solid var(--cor-secundaria); }
+    .feira-imagem-circulo img { width: 100%; height: 100%; object-fit: cover; }
+    .feira-info { text-align: left; }
+    .feira-info h3 { color: var(--cor-titulos); margin-top: 0; margin-bottom: 8px; font-size: 1.4em; }
+    /* ATUALIZAÇÃO: Ajuste de espaçamento e adição de novos estilos */
+    .feira-info p { margin: 4px 0; }
+    .feira-info .dia { font-weight: bold; }
+    .feira-info .horario { font-size: 0.9em; color: #555; }
+    .feira-info .endereco { font-size: 0.9em; color: #666; margin-top: 8px; }
+
+    /* Adaptação para mobile */
+    @media (max-width: 480px) {
+        .feira-card {
+            flex-direction: column;
+            text-align: center;
+        }
+        .feira-info {
+            text-align: center;
+        }
     }
 
     /* --- FOOTER --- */
