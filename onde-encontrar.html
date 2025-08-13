@@ -37,25 +37,29 @@
         .review-cta-section .gbp-specific-button:hover { transform: scale(1.05); }
     </style>
 
-  <script type="application/ld+json">
-[
-    {
-      "@context": "https://schema.org",
-      "@type": "FoodEstablishment",
-      "name": "ChefBrico",
-      "description": "ChefBrico: Comida de verdade, sem toda aquela confusão em Brasília! A solução ideal para você preparar em casa refeições incríveis, de forma prática e 100% natural, com opções veganas, sem glúten e Low Carb.",
-      "url": "https://www.chefbrico.com",
-      "logo": "https://receitas.chefbrico.com/imagens/flamula-chefbrico.png",
-      "telephone": "+5561996659880",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Rua 5, Chácara 122, Lote 17, Loja 2",
-        "addressLocality": "Vicente Pires",
-        "addressRegion": "DF",
-        "postalCode": "72006-060",
-        "addressCountry": "BR"
-      },
-      "areaServed": [
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FoodEstablishment",
+  "name": "ChefBrico",
+  "description": "ChefBrico: Comida de verdade, sem toda aquela confusão em Brasília! A solução ideal para você preparar em casa refeições incríveis, de forma prática e 100% natural, com opções veganas, sem glúten e Low Carb.",
+  "url": "https://www.chefbrico.com",
+  "logo": "https://receitas.chefbrico.com/imagens/flamula-chefbrico.png",
+  "telephone": "+5561996659880",
+  "taxID": "36.014.833/0001-59", // <<< DADO INSTITUCIONAL ADICIONADO
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua 5, Chácara 122, Lote 17, Loja 2",
+    "addressLocality": "Vicente Pires",
+    "addressRegion": "DF",
+    "postalCode": "72006-060",
+    "addressCountry": "BR"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "08:00", "closes": "17:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "14:00" }
+  ],
+  "areaServed": [
         { "@type": "Place", "name": "Brasília, DF, Brasil" },
         { "@type": "Place", "name": "Asa Sul, Brasília - DF, Brasil" },
         { "@type": "Place", "name": "Lago Sul, Brasília - DF, Brasil" },
