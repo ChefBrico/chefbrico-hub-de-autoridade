@@ -241,3 +241,13 @@ main.container {
         height: 120px;
     }
 }
+/* ======================================================= */
+/* ===== HELPER DE CENTRALIZAÇÃO (Padrão Ouro) ===== */
+/* ======================================================= */
+
+/* Use esta classe em qualquer container para centralizar seu conteúdo */
+.content-centered {
+    max-width: 800px; /* Ou o tamanho que preferir */
+    margin-left: auto;
+    margin-right: auto;
+}
