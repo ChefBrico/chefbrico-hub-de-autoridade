@@ -291,3 +291,8 @@ main.container {
     /* 5. A regra de ouro para evitar distorção */
     object-fit: cover;
 }
+/* Ajuste para alinhar as imagens dos cards ao topo */
+.card-img-top {
+  object-fit: cover;
+  object-position: center top;
+}
