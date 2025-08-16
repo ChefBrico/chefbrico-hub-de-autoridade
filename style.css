@@ -263,3 +263,31 @@ main.container {
     margin-left: auto;
     margin-right: auto;
 }
+/* ======================================================= */
+/* ===== COMPONENTE: IMAGEM CIRCULAR PADRÃO OURO ===== */
+/* ======================================================= */
+
+.imagem-circular-container {
+    /* 1. Defina o tamanho do círculo aqui */
+    width: 250px;
+    height: 250px;
+
+    /* 2. A mágica que cria o círculo */
+    border-radius: 50%;
+
+    /* 3. A tesoura que corta as sobras */
+    overflow: hidden;
+
+    /* (Opcional) Adicione a borda dourada para o padrão ChefBrico */
+    border: 5px solid var(--cor-secundaria);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.imagem-circular-container img {
+    /* 4. Ordena que a imagem preencha a moldura */
+    width: 100%;
+    height: 100%;
+
+    /* 5. A regra de ouro para evitar distorção */
+    object-fit: cover;
+}
