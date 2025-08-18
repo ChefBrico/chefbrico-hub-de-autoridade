@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio Consultável | ChefBrico</title>
+    <meta name="description" content="Explore nosso cardápio completo com mais de 26 opções e filtre por tipo, dieta ou ocasião para encontrar o prato perfeito para sua rotina.">
+    <link rel="stylesheet" href="/style.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K58FN8J2VC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K58FN8J2VC');
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Cardápio Completo e Consultável da ChefBrico",
+      "description": "Explore e filtre nosso catálogo completo de refeições artesanais. Encontre pratos veganos, sem glúten, low carb, para jantares românticos, pós-treino e muito mais.",
+      "url": "https://receitas.chefbrico.com/cardapio.html",
+      "publisher": { "@type": "Organization", "@id": "https://www.chefbrico.com/#organization" }
+    }
+    </script>
+    <style>
+        .page-header-local { text-align: center; margin: 40px 20px; }
+        #filter-buttons { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 0 20px 40px 20px; }
+        .filter-btn { background-color: #f0ead6; color: #333; padding: 10px 20px; border-radius: 20px; border: none; cursor: pointer; font-size: 0.9em; font-weight: bold; transition: all 0.2s ease-in-out; }
+        .filter-btn:hover { background-color: #e0d8c4; }
+        .filter-btn.active { background-color: var(--cor-primaria); color: white; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 50px; }
+        .product-card { border: 1px solid #eee; border-radius: 8px; overflow: hidden; text-decoration: none; color: var(--cor-texto); display: flex; flex-direction: column; transition: transform 0.3s ease, opacity 0.3s ease, width 0s, padding 0s, margin 0s; }
+        .product-card.hide { transform: scale(0); opacity: 0; width: 0; padding: 0; margin: 0; border: none; gap: 0; transition: transform 0.3s ease, opacity 0.3s ease, width 0s 0.3s, padding 0s 0.3s, margin 0s 0.3s; }
+        .product-card-image { width: 100%; height: 180px; object-fit: cover; }
+        .product-card-content { padding: 20px; display: flex; flex-direction: column; flex-grow: 1; }
+        .product-card-content h4 { margin-top: 0; margin-bottom: 10px; }
+        .product-card-content p { font-size: 0.9em; line-height: 1.6; flex-grow: 1; margin-bottom: 15px; }
+        .product-card-content .cta-button { margin-top: auto; text-align: center; }
+    </style>
+</head>
+<body>
+    
+    <header>
+        </header>
+
+    <main class="container">
+        <div class="page-header-local">
+            <h1>Nosso Cardápio de Comida de Verdade</h1>
+            <p class="subtitle">Aqui você encontra todas as nossas criações. Use os filtros para descobrir o prato perfeito para cada momento da sua rotina.</p>
+        </div>
+
+        <div id="filter-buttons">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="risoto">Risotos</button>
+            <button class="filter-btn" data-filter="sopa">Sopas</button>
+            <button class="filter-btn" data-filter="refeicao">Refeições</button>
+            <button class="filter-btn" data-filter="antepasto">Antepastos</button>
+            <button class="filter-btn" data-filter="vegano">Vegano</button>
+            <button class="filter-btn" data-filter="sem-gluten">Sem Glúten</button>
+            <button class="filter-btn" data-filter="jantar-romantico">Jantar Romântico</button>
+            <button class="filter-btn" data-filter="pos-treino">Pós-Treino</button>
+            <button class="filter-btn" data-filter="low-carb">Low Carb</button>
+        </div>
+
+        <div class="product-grid">
+            
+            <div class="product-card" data-category="[ETIQUETAS AQUI, SEPARADAS POR ESPAÇO]">
+                <img src="[CAMINHO/PARA/IMAGEM.png]" alt="[NOME DO PRODUTO]" class="product-card-image">
+                <div class="product-card-content">
+                    <h4>[NOME DO PRODUTO]</h4>
+                    <p>[PEQUENA DESCRIÇÃO ATRAENTE]</p>
+                    <a href="[LINK PARA A PÁGINA-SOMBRA DO PRODUTO]" class="cta-button">Ver Detalhes</a>
+                </div>
+            </div>
+            <div class="product-card" data-category="risoto vegano sem-gluten rapido jantar-romantico">
+                <img src="/risotos/risoto-pomodori-pesto-tijela-chefbrico.png" alt="Risoto Pomodori & Pesto" class="product-card-image">
+                <div class="product-card-content">
+                    <h4>Risoto Pomodori & Pesto</h4>
+                    <p>O clássico sabor da Itália, cremoso e reconfortante. Pronto em 18 minutos.</p>
+                    <a href="/receita-risoto-pomodori.html" class="cta-button">Ver Detalhes</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="sopa vegano sem-gluten pos-treino">
+                <img src="/sopas/sopa-creme-fit.png" alt="Sopa Creme Fit Vegana" class="product-card-image">
+                <div class="product-card-content">
+                    <h4>Sopa Creme Fit Vegana</h4>
+                    <p>Rica em proteína vegetal, ideal para a recuperação pós-treino. Sabor e nutrição em minutos.</p>
+                    <a href="/receita-sopa-creme-fit.html" class="cta-button">Ver Detalhes</a>
+                </div>
+            </div>
+            
+            </div>
+    </main>
+    
+    <footer>
+        </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const filterButtons = document.querySelectorAll('#filter-buttons .filter-btn');
+        const productCards = document.querySelectorAll('.product-grid .product-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove a classe 'active' de todos os botões e a adiciona ao clicado
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+
+                const filter = this.getAttribute('data-filter');
+
+                // Mostra ou esconde os cards com base no filtro
+                productCards.forEach(card => {
+                    // Ignora o molde (caso você o deixe no código)
+                    if (card.getAttribute('data-category').includes('[ETIQUETAS AQUI]')) {
+                        card.classList.add('hide');
+                        return;
+                    }
+
+                    if (filter === 'all' || card.getAttribute('data-category').includes(filter)) {
+                        card.classList.remove('hide');
+                    } else {
+                        card.classList.add('hide');
+                    }
+                });
+            });
+        });
+    });
+    </script>
+</body>
+</html>
