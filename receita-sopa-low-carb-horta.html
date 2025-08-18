@@ -4,124 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Metadados e SEO Otimizados -->
     <title>Como Fazer Sopa Low Carb da Horta em 15 Minutos? | ChefBrico</title>
     <meta name="description" content="Aprenda o passo a passo para preparar a Sopa Low Carb da Horta da ChefBrico. Uma receita funcional, leve, colorida e com dicas da Chef Maria Conceição.">
     
     <link rel="stylesheet" href="/style.css">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-K58FN8J2VC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K58FN8J2VC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-K58FN8J2VC');
-</script>
-    <!-- **AJUSTES DE ESTILO "PADRÃO OURO"** -->
-    <style>
-      .article-hero-image-container {
-        max-width: 800px; /* Alinha a imagem com o conteúdo do texto */
-      }
-      .recipe-title-container {
-        text-align: center; /* Centraliza todo o conteúdo do bloco de título */
-        margin-bottom: 25px;
-      }
-      .author-byline {
-        margin-top: 10px; /* Adiciona um pequeno espaço acima da linha da autora */
-        font-size: 1.1em;
-        color: var(--cor-texto);
-      }
-    </style>
+      gtag('config', 'G-K58FN8J2VC');
+    </script>
     
-    <!-- Schema.org Otimizado para E-E-A-T e Sinergia -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org/",
-      "@type": "Recipe",
+      "@type": "Product",
       "name": "Sopa Low Carb da Horta",
-      "author": {
-        "@type": "Person",
-        "@id": "https://receitas.chefbrico.com/nossa-filosofia.html#maria"
-      },
-      "image": [
-        "https://receitas.chefbrico.com/imagens/low-carb-vegetais-sopa-chefbrico.png"
-      ],
-      "description": "Uma receita de sopa low carb para dar ânimo à sua dieta. A Sopa da Horta da ChefBrico é rica em vegetais, 100% natural e pronta em 15 minutos.",
-      "prepTime": "PT1M",
-      "cookTime": "PT15M",
-      "totalTime": "PT16M",
-      "recipeYield": "3 porções (1 litro)",
-      "recipeCuisine": "Funcional",
-      "keywords": "sopa low carb, receita fit, sopa de legumes, dieta para emagrecer",
-      "recipeIngredient": [
-        "1 pacote (150g) de Mistura para Sopa Low Carb da Horta ChefBrico",
-        "1000ml (1 litro) de água fria",
-        "Sal a gosto",
-        "1 fio de azeite (opcional)",
-        "Gotas de limão (opcional)"
-      ],
-      "recipeInstructions": [
-        { "@type": "HowToStep", "text": "Em uma panela, coloque todo o conteúdo do pacote, 1 litro de água fria, sal a gosto e um fio de azeite (opcional)." },
-        { "@type": "HowToStep", "text": "Leve ao fogo médio. Assim que ferver, abaixe o fogo e cozinhe com a panela semi-tampada por aproximadamente 15 minutos, ou até que a lentilha e os vegetais estejam macios." },
-        { "@type": "HowToStep", "text": "Sua sopa low carb está pronta! Sirva bem quentinha, finalizada com umas gotas de limão para realçar o frescor dos vegetais." }
-      ],
-      "nutrition": {
-        "@type": "NutritionInformation",
-        "calories": "Aproximadamente 160 kcal por porção."
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5",
-        "ratingCount": "33",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
+      "description": "Uma sopa low carb para dar ânimo à sua dieta! A Sopa da Horta da ChefBrico é rica em vegetais, 100% natural, vegana e pronta em 15 minutos.",
+      "sku": "SOP-LCH-004",
+      "brand": { "@type": "Brand", "name": "ChefBrico", "@id": "https://www.chefbrico.com/#organization" },
+      "image": "/sopas/sopa-low-carb-da-horta-chefbrico.png",
+      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "ratingCount": "33" },
       "offers": {
         "@type": "Offer",
-        "price": "29.60",
-        "priceCurrency": "BRL",
         "url": "https://www.chefbrico.com/sopa-low-carb-da-horta",
+        "priceCurrency": "BRL",
+        "price": "29.60",
         "availability": "https://schema.org/InStock",
-        "seller": {
-          "@type": "Organization",
-          "name": "ChefBrico",
-          "url": "https://www.chefbrico.com"
+        "seller": { "@type": "Organization", "@id": "https://www.chefbrico.com/#organization" },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "description": "O valor do frete é calculado dinamicamente com base no CEP de destino durante o checkout.",
+          "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "BR" },
+          "shippingRate": { "@type": "MonetaryAmount", "currency": "BRL" },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": { "@type": "QuantitativeValue", "minValue": "1", "maxValue": "2", "unitCode": "DAY" },
+            "transitTime": { "@type": "QuantitativeValue", "minValue": "3", "maxValue": "10", "unitCode": "DAY" }
+          },
+          "carrier": { "@type": "Organization", "name": "Correios" }
         }
       },
-       "suitableForDiet": [
-        "https://schema.org/GlutenFreeDiet",
-        "https://schema.org/VeganDiet",
-        "https://schema.org/VegetarianDiet",
-        "https://schema.org/LowCalorieDiet",
-        "https://schema.org/LowCarbDiet"
-      ]
+      "nutrition": { "@type": "NutritionInformation", "servingSize": "50 g", "calories": "160 kcal", "proteinContent": "8 g", "fiberContent": "9 g", "carbohydrateContent": "28 g" },
+      "suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VeganDiet", "https://schema.org/VegetarianDiet", "https://schema.org/LowCalorieDiet", "https://schema.org/LowCarbDiet"],
+      "allergenInformation": "Livre de Glúten. Livre de Lactose. Pode conter traços de castanhas.",
+      "recipe": {
+        "@type": "Recipe",
+        "name": "Receita Rápida: Sopa Low Carb da Horta ChefBrico",
+        "prepTime": "PT1M",
+        "cookTime": "PT15M",
+        "totalTime": "PT16M",
+        "recipeYield": "3 porções (1 litro)",
+        "recipeCuisine": "Funcional",
+        "keywords": "sopa low carb, receita fit, sopa de legumes, dieta para emagrecer",
+        "recipeIngredient": [
+          "1 pacote (150g) de Mistura para Sopa Low Carb da Horta ChefBrico",
+          "1000ml (1 litro) de água fria",
+          "Sal a gosto",
+          "1 fio de azeite (opcional)"
+        ],
+        "recipeInstructions": [
+          { "@type": "HowToStep", "text": "Em uma panela, coloque o conteúdo do pacote, 1 litro de água fria e sal." },
+          { "@type": "HowToStep", "text": "Leve ao fogo médio. Assim que ferver, abaixe o fogo e cozinhe por aproximadamente 15 minutos." },
+          { "@type": "HowToStep", "text": "Sirva bem quentinha, finalizada com gotas de limão para realçar o frescor dos vegetais." }
+        ]
+      }
     }
     </script>
 </head>
 <body>
+    
     <header>
-        <!-- O cabeçalho unificado será inserido aqui dinamicamente -->
-    </header>
+        </header>
 
     <main>
         <article class="container">
-            <!-- ESTRUTURA DE TÍTULO "PADRÃO OURO" -->
             <div class="recipe-title-container">
                 <h1>Sopa Low Carb da Horta</h1>
-                <p class="recipe-subtitle">Sabor e Leveza para sua Dieta!</p>
+                <p class="recipe-subtitle">Sabor, Cor e Leveza para sua Dieta!</p>
                 <p class="author-byline">Por <strong>Maria Conceição</strong>, Fundadora e Chef de Criação da ChefBrico</p>
             </div>
 
             <div class="article-hero-image-container">
-                <img src="/imagens/low-carb-vegetais-sopa-chefbrico.png" alt="Prato finalizado de Sopa Low Carb da Horta, colorida e vibrante.">
+                <img src="[caminho/para/imagem-sopa-low-carb-horta.png]" alt="Prato finalizado de Sopa Low Carb da Horta, colorida e vibrante.">
             </div>
 
             <div class="post-content">
-                <p>Manter o foco na dieta low carb ficou muito mais fácil e delicioso. Apresentamos a "Sopa Coragem", uma refeição leve, colorida e vibrante, criada para combater a monotonia e dar ânimo à sua rotina. Combinamos a leveza dos vegetais da horta com a proteína da lentilha vermelha e um mix de especiarias da Chef que aquece o paladar.</p>
+                <p>Manter o foco na dieta low carb ficou muito mais fácil e delicioso. Apresentamos uma sopa leve, colorida e vibrante, criada para combater a monotonia e dar ânimo à sua rotina. Combinamos a leveza dos vegetais da horta com a proteína da lentilha vermelha e um mix de especiarias da Chef que aquece o paladar sem pesar na consciência.</p>
 
                 <div class="product-cta-card">
-                    <img src="/imagens/embalagem-sopa-low-carb-horta.png" alt="Embalagem da Sopa Low Carb da Horta da ChefBrico">
+                    <img src="[caminho/para/imagem-embalagem-sopa-lc-horta.png]" alt="Embalagem da Sopa Low Carb da Horta da ChefBrico">
                     <div class="product-cta-info">
                         <h3>A Estrela da Receita</h3>
                         <p>A base para esta refeição leve é a nossa <strong>Mistura para Sopa Low Carb da Horta</strong>. Manter o foco na dieta nunca foi tão prazeroso!</p>
@@ -131,13 +105,18 @@
 
                 <h2>Por que Você Vai Amar esta Sopa Leve e Prática</h2>
                 <ul>
-                    <li>✅ <strong>Leveza e Frescor da Horta:</strong> Uma combinação de vegetais frescos e coloridos que resulta na sopa mais leve e refrescante do nosso cardápio.</li>
-                    <li>✅ <strong>A Sopa "Coragem" da Dieta:</strong> O sabor delicioso e os ingredientes vibrantes te dão o ânimo para continuar firme no seu objetivo low carb.</li>
-                    <li>✅ <strong>Nutrição Colorida e Vitaminada:</strong> Rica em vitaminas e minerais com baixíssimo carboidrato.</li>
+                    <li>✅ <strong>Leveza e Frescor da Horta:</strong> Uma combinação de vegetais frescos e coloridos que resulta em uma das sopas mais leves do nosso cardápio.</li>
+                    <li>✅ **A "Coragem" da Dieta:** O sabor delicioso e os ingredientes vibrantes te dão o ânimo para continuar firme no seu objetivo low carb.</li>
+                    <li>✅ <strong>Nutrição Colorida:</strong> Rica em vitaminas e minerais com baixíssimo carboidrato, para nutrir seu corpo de verdade.</li>
                 </ul>
 
+                <div class="testimonial-box">
+                    <blockquote><p>"Essa sopinha é meu jantar de quase toda noite. Leve, gostosa, esquenta o corpo e a alma. E o melhor é saber que estou comendo algo que faz bem e me ajuda a manter meu peso."</p></blockquote>
+                    <cite>&mdash; Patrícia G., Cliente ChefBrico</cite>
+                </div>
+
                 <h2>O Que Vem no Pacote</h2>
-                <p>Lentilha vermelha, abobrinha desidratada, cenoura desidratada, alho-poró desidratado, couve desidratada, espinafre desidratado, cebola desidratada, especiarias da Chef (cúrcuma, gengibre, páprica). E nada mais!</p>
+                <p>Lentilha vermelha, abobrinha desidratada, cenoura desidratada, alho-poró desidratado, couve desidratada, espinafre desidratado, cebola desidratada, especiarias da Chef (cúrcuma, gengibre, páprica) e caldo de vegetais caseiro ChefBrico. E nada mais!</p>
 
                 <h2>Você Vai Precisar de</h2>
                 <ul>
@@ -148,101 +127,52 @@
 
                 <h2>Modo de Preparo Simplificado</h2>
                 <ol>
-                    <li><strong>Reúna os Ingredientes:</strong> Em uma panela, coloque todo o conteúdo do pacote, 1 litro de água fria, sal a gosto e um fio de azeite (opcional).</li>
-                    <li><strong>Cozinhe com Carinho:</strong> Leve ao fogo médio. Assim que ferver, abaixe o fogo e cozinhe com a panela semi-tampada por aproximadamente 15 minutos.</li>
-                    <li><strong>Sirva a Leveza:</strong> Sua sopa low carb está pronta! Sirva bem quentinha, finalizada com umas gotas de limão para realçar o frescor.</li>
+                    <li><strong>Reúna os Ingredientes:</strong> Em uma panela, coloque o conteúdo do pacote, 1 litro de água fria e sal.</li>
+                    <li><strong>Cozinhe com Carinho:</strong> Leve ao fogo médio. Assim que ferver, abaixe o fogo e cozinhe por aproximadamente 15 minutos.</li>
+                    <li><strong>Sirva a Leveza:</strong> Sirva bem quentinha, finalizada com umas gotas de limão para realçar o frescor.</li>
                 </ol>
 
                 <h2>Dicas da Chef</h2>
                 <p><em>"Criei a Low Carb da Horta para ser o oposto da dieta repetitiva: uma sopa colorida e cheia de texturas. Para uma refeição ainda mais completa, sirva com um ovo cozido picado por cima. Adiciona proteína e cremosidade!"</em></p>
+                
+                <div class="cross-sell-box">
+                    <h3>Combina Perfeitamente Com:</h3>
+                    <p>Para um plano low carb completo, intercale esta sopa com a nossa <strong><a href="[LINK PARA A SOPA LOW CARB DE FUNGHI]">Sopa Low Carb de Funghi</a></strong> para variar os sabores durante a semana.</p>
+                </div>
 
                 <h2>Informações Adicionais</h2>
                 <ul>
-                    <li><strong>Peso Líquido:</strong> 150g (Rende 3 porções bem servidas - 1 litro)</li>
-                    <li><strong>Validade:</strong> 12 meses a partir da data de fabricação.</li>
-                    <li><strong>Dieta e Alergénicos:</strong> 100% Plant-Based. Sem Glúten. Sem Lactose. Baixo Carboidrato.</li>
-                    <li><strong>Origem:</strong> Produzido Artesanalmente em Brasília-DF pela ChefBrico.</li>
+                    <li><strong>Peso Líquido:</strong> 150g (Rende 3 porções)</li>
+                    <li><strong>Validade:</strong> 12 meses.</li>
+                    <li><strong>Dieta e Alergênicos:</strong> 100% Plant-Based. Sem Glúten. Sem Lactose. Baixo Carboidrato.</li>
+                    <li><strong>Origem:</strong> Produzido Artesanalmente em Brasília-DF.</li>
+                    <li>🚚 <strong>Entrega:</strong> Para todo o Brasil via Correios.</li>
                 </ul>
 
                 <div class="faq-section">
                     <h2>Dúvidas Frequentes</h2>
                     <div class="faq-item-accordion">
-                        <button class="accordion-header">
-                            <h3>Esta sopa é realmente low carb?</h3>
-                            <span class="icon">▼</span>
-                        </button>
-                        <div class="accordion-content">
-                            <p>Sim! A base dela é a lentilha vermelha e uma grande variedade de vegetais de baixo índice glicémico, como abobrinha, couve e espinafre. É uma das nossas opções com menor quantidade de carboidratos, pensada especificamente para quem segue esta estratégia alimentar.</p>
-                        </div>
+                        <button class="accordion-header"><h3>Esta sopa é realmente low carb?</h3><span class="icon">▼</span></button>
+                        <div class="accordion-content"><p>Sim! A base dela é a lentilha vermelha e uma grande variedade de vegetais de baixo índice glicêmico, como abobrinha, couve e espinafre. É uma das nossas opções com menor quantidade de carboidratos.</p></div>
                     </div>
                     <div class="faq-item-accordion">
-                        <button class="accordion-header">
-                            <h3>A sopa sacia bem, mesmo sendo leve?</h3>
-                            <span class="icon">▼</span>
-                        </button>
-                        <div class="accordion-content">
-                            <p>Com certeza. A combinação da proteína da lentilha vermelha com as fibras dos vegetais ajuda a promover uma excelente sensação de saciedade, mantendo você satisfeito por mais tempo, mas sem a sensação de peso no estômago.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item-accordion">
-                        <button class="accordion-header">
-                            <h3>Qual a informação nutricional desta sopa?</h3>
-                            <span class="icon">▼</span>
-                        </button>
-                        <div class="accordion-content">
-                            <p>Cada porção (um terço do pacote), preparada apenas com água e sal, tem aproximadamente 160 kcal. É uma sopa extremamente leve em calorias, mas muito densa em vitaminas e minerais, ideal para nutrir o corpo durante uma dieta de restrição calórica.</p>
-                        </div>
+                        <button class="accordion-header"><h3>A sopa sacia bem, mesmo sendo leve?</h3><span class="icon">▼</span></button>
+                        <div class="accordion-content"><p>Com certeza. A combinação da proteína da lentilha vermelha com as fibras dos vegetais ajuda a promover uma excelente sensação de saciedade, mantendo você satisfeito por mais tempo.</p></div>
                     </div>
                 </div>
 
-    <div class="author-box">
-    <img src="/imagens/maria-conceicao-chefbrico-pra-voce-panela-candanga-jul2025.jpg" alt="Retrato de Maria Conceição, fundadora da ChefBrico" class="author-image">
-    <div class="author-info">
-        <h4>Uma mensagem da Maria Conceição</h4>
-        <p>Como psicóloga, sei que nutrir o corpo é fundamental para acalmar a mente. Cada sopa funcional que crio é pensada para ser um 'reset' no seu dia: ingredientes com propósito, sabor que conforta e a leveza que seu corpo precisa para seguir em frente com energia.</p>
-        <a href="/nossa-filosofia.html" style="font-weight: bold; color: var(--cor-primaria);">Conheça mais sobre a minha filosofia.</a>
-    </div>
-</div>
+                <div class="author-box">
+                    <img src="/imagens/maria-conceicao-pra-voce.png" alt="Retrato de Maria Conceição, fundadora da ChefBrico" class="author-image">
+                    <div class="author-info">
+                        <p>Maria Conceição é a mente e a alma por trás da ChefBrico. Psicóloga por formação, ela une a paixão pela comida de verdade com o desejo de simplificar a rotina na cozinha. <a href="/nossa-filosofia.html">Conheça mais sobre sua filosofia aqui</a>.</p>
+                    </div>
                 </div>
             </div>
         </article>
     </main>
 
-   <footer>
-    <div class="container footer-grid">
-        <div>
-            <h4>Navegação</h4>
-            <a href="/index.html">Início</a>
-            <a href="/nossa-filosofia.html">Nossa Filosofia</a>
-            <a href="/receitas.html">Receitas & Dicas</a>
-            <a href="/faq.html">FAQ</a>
-        </div>
-        <div>
-            <h4>Nossos Produtos</h4>
-            <a href="https://www.chefbrico.com/risotos" target="_blank" rel="noopener noreferrer">Risotos</a>
-            <a href="https://www.chefbrico.com/sopas-funcionais" target="_blank" rel="noopener noreferrer">Sopas Funcionais</a>
-            <a href="https://www.chefbrico.com/refeicoes-praticas" target="_blank" rel="noopener noreferrer">Refeições Práticas</a>
-            <a href="https://www.chefbrico.com/emporio-da-chef" target="_blank" rel="noopener noreferrer">Empório da Chef</a>
-        </div>
-        <div>
-            <h4>Ajuda & Suporte</h4>
-            <a href="/onde-encontrar.html">Onde Encontrar</a>
-            <a href="https://www.chefbrico.com/como-comprar" target="_blank" rel="noopener noreferrer">Como Comprar/Envio</a>
-            <a href="https://www.chefbrico.com/trocas-e-devolucoes" target="_blank" rel="noopener noreferrer">Trocas e Devoluções</a>
-            <a href="https://wa.me/5561996659880" target="_blank" rel="noopener noreferrer">Contato</a>
-        </div>
-        <div>
-            <h4>Redes Sociais</h4>
-            <a href="https://www.instagram.com/chefbrico/" target="_blank" rel="noopener noreferrer">Instagram</a>
-            <a href="https://br.pinterest.com/chefbrico/" target="_blank" rel="noopener noreferrer">Pinterest</a>
-        </div>
-    </div>
-       
-    <div class="container footer-credit">
-        <p>© 2025 ChefBrico - Todos os direitos reservados.</p>
-        <p> Maria Conceição | CNPJ: 36.014.833/0001-59 </p>
-    </div>
-</footer>
+    <footer>
+        </footer>
     <script src="/script.js"></script>
 </body>
 </html>
