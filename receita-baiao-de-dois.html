@@ -35,67 +35,62 @@
     </style>
     
     <!-- Schema.org Otimizado para E-E-A-T e Sinergia -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org/",
-      "@type": "Recipe",
-      "name": "Baião de Dois Integral com Toque Defumado",
-      "author": {
-        "@type": "Person",
-        "@id": "https://receitas.chefbrico.com/nossa-filosofia.html#maria"
+   <script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "Baião de Dois com Grãos Integrais",
+  "description": "O clássico Baião de Dois em uma versão integral, vegana e saudável! Nossa mistura prática com um toque defumado de shiitake é 100% natural e cheia de sabor.",
+  "sku": "REF-BAI-002",
+  "brand": { "@type": "Brand", "name": "ChefBrico", "@id": "https://www.chefbrico.com/#organization" },
+  "image": "/refeicoes-praticas/baiao-de-2-refeicao-pratica-chefbrico.png",
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "ratingCount": "19" },
+  "offers": {
+    "@type": "Offer",
+    "url": "https://www.chefbrico.com/baiao-de-2-graos-integrais",
+    "priceCurrency": "BRL",
+    "price": "34.80",
+    "availability": "https://schema.org/InStock",
+    "seller": { "@type": "Organization", "@id": "https://www.chefbrico.com/#organization" },
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "description": "O valor do frete é calculado dinamicamente com base no CEP de destino durante o checkout.",
+      "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "BR" },
+      "shippingRate": { "@type": "MonetaryAmount", "currency": "BRL" },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": { "@type": "QuantitativeValue", "minValue": "1", "maxValue": "2", "unitCode": "DAY" },
+        "transitTime": { "@type": "QuantitativeValue", "minValue": "3", "maxValue": "10", "unitCode": "DAY" }
       },
-      "image": [
-        "https://receitas.chefbrico.com/refeicoes-praticas/baiao-de-2-refeicao-pratica-chefbrico.png"
-      ],
-      "description": "Uma releitura saudável e sofisticada do clássico brasileiro. Receita de Baião de Dois Integral da ChefBrico, 100% natural e pronta em 45 minutos.",
-      "prepTime": "PT1M",
-      "cookTime": "PT45M",
-      "totalTime": "PT46M",
-      "recipeYield": "2 porções",
-      "recipeCuisine": "Brasileira",
-      "keywords": "baião de dois, receita integral, comida brasileira, feijão fradinho",
-      "recipeIngredient": [
-        "1 pacote (180g) de Mistura para Baião de Dois Integral ChefBrico",
-        "1000ml (1 litro) de água fria",
-        "1 fio de azeite",
-        "Sal a gosto",
-        "Coentro ou cheiro-verde fresco picado (opcional)"
-      ],
-      "recipeInstructions": [
-        { "@type": "HowToStep", "text": "Aqueça um fio de azeite e refogue o conteúdo do pacote por 1 minuto para liberar os aromas das especiarias e do toque defumado." },
-        { "@type": "HowToStep", "text": "Adicione 1 litro de água fria e sal a gosto. Cozinhe em fogo baixo, com a panela semi-tampada, por cerca de 45 minutos, ou até que os grãos e o feijão estejam macios." },
-        { "@type": "HowToStep", "text": "Este prato fica perfeito finalizado com coentro ou cheiro-verde fresco picado e, se desejar, umas gotas de pimenta." }
-      ],
-      "nutrition": {
-        "@type": "NutritionInformation",
-        "calories": "Aproximadamente 410 kcal por porção (sem os ingredientes opcionais)."
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5",
-        "ratingCount": "19",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "34.80",
-        "priceCurrency": "BRL",
-        "url": "https://www.chefbrico.com/baiao-de-2-graos-integrais",
-        "availability": "https://schema.org/InStock",
-        "seller": {
-          "@type": "Organization",
-          "name": "ChefBrico",
-          "url": "https://www.chefbrico.com"
-        }
-      },
-       "suitableForDiet": [
-        "https://schema.org/GlutenFreeDiet",
-        "https://schema.org/VeganDiet",
-        "https://schema.org/VegetarianDiet"
-      ]
+      "carrier": { "@type": "Organization", "name": "Correios" }
     }
-    </script>
+  },
+  "nutrition": { "@type": "NutritionInformation", "servingSize": "90 g", "calories": "410 kcal", "proteinContent": "15 g", "fiberContent": "12 g", "carbohydrateContent": "70 g" },
+  "suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VeganDiet", "https://schema.org/VegetarianDiet"],
+  "allergenInformation": "Livre de Glúten. Livre de Lactose. Pode conter traços de castanhas.",
+  "recipe": {
+    "@type": "Recipe",
+    "name": "Receita Rápida: Baião de Dois Integral ChefBrico",
+    "prepTime": "PT1M",
+    "cookTime": "PT45M",
+    "totalTime": "PT46M",
+    "recipeYield": "2 porções",
+    "recipeCuisine": "Brasileira",
+    "recipeIngredient": [
+      "1 pacote (180g) de Mistura para Baião de Dois Integral ChefBrico",
+      "1000ml (1 litro) de água fria",
+      "1 fio de azeite",
+      "Sal a gosto",
+      "Coentro ou cheiro-verde fresco picado"
+    ],
+    "recipeInstructions": [
+      { "@type": "HowToStep", "text": "Aqueça um fio de azeite e refogue o conteúdo do pacote por 1 minuto para liberar os aromas." },
+      { "@type": "HowToStep", "text": "Adicione 1 litro de água fria e sal a gosto. Cozinhe em fogo baixo, com a panela semi-tampada, por cerca de 45 minutos." },
+      { "@type": "HowToStep", "text": "Finalize com coentro ou cheiro-verde fresco picado e, se desejar, umas gotas de pimenta." }
+    ]
+  }
+}
+</script>
 </head>
 <body>
     <header>
