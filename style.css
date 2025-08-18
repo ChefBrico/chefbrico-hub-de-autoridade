@@ -398,15 +398,19 @@ main.container {
     }
 }
 
-/* ============================================= */
-/* ===== CORREÇÃO MOBILE: ESPAÇO PARA RESPIRAR ==== */
-/* ============================================= */
+/* ======================================================= */
+/* ===== CORREÇÃO MOBILE V2.0: ESPAÇO PARA RESPIRAR ===== */
+/* ======================================================= */
 
 @media (max-width: 768px) {
-    /* Esta regra aplica um espaçamento interno de 20px 
-       nas laterais do container principal em telas de celular */
-    .container {
+    /* Esta regra aplica o "respiro" lateral a MÚLTIPLOS 
+       tipos de containers de conteúdo do seu site para garantir 
+       que nenhum fique de fora.
+    */
+    .container,
+    .post-content {
         padding-left: 20px;
         padding-right: 20px;
+        box-sizing: border-box; /* Garante que o padding não quebre o layout */
     }
 }
