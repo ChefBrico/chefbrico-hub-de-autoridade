@@ -75,7 +75,7 @@ h2 { font-family: var(--fonte-titulos); color: var(--cor-primaria); font-size: 2
 .post-carousel::-webkit-scrollbar { display: none; }
 .post-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
 .card { text-decoration: none; color: var(--cor-texto); display: flex; flex-direction: column; max-width: 320px; }
-.card-image { width: 100%; height: 220px; object-fit: cover; border-radius: 8px 8px 0 0;object-position: center top; }
+.card-image { width: 100%; height: 200px; object-fit: cover; border-radius: 8px 8px 0 0;object-position: center top; }
 .card-content { display: flex; flex-direction: column; flex-grow: 1; padding: 15px; }
 .card-category { font-size: 0.8em; font-weight: bold; color: var(--cor-acao); }
 .card h3 { font-size: 1.4em; color: var(--cor-titulos); margin: 5px 0; }
