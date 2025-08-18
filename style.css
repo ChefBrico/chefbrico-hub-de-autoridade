@@ -344,3 +344,47 @@ main.container {
 .carousel-card.estacao-card {
     width: 300px; /* Os cards de estação podem ser um pouco menores */
 }
+
+/* ============================================= */
+/* ===== ESTILO DO CABEÇALHO PADRÃO DOURADO ===== */
+/* ============================================= */
+
+.top-slogan-bar {
+    background-color: #E0D8C4; /* <<< SUA COR DOURADA/BEGE PADRÃO */
+    padding: 8px 10px;
+    text-align: center;
+}
+
+.top-slogan-bar p {
+    margin: 0;
+    font-size: 0.9em;
+    font-weight: 500;
+    color: #5a3a30; /* <<< COR DO TEXTO PARA CONTRASTAR COM O FUNDO */
+}
+
+header {
+    background-color: #E0D8C4; /* <<< SUA COR DOURADA/BEGE PADRÃO */
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Ajusta a cor dos links dentro do cabeçalho para garantir a leitura */
+header nav a {
+    color: #5a3a30; 
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Garante que o botão de "Ir para a Loja" mantenha o estilo original */
+header .cta-button {
+    background-color: #f58220; /* Laranja padrão do botão */
+    color: white !important; /* Força a cor branca no texto do botão */
+    text-decoration: none;
+}
+
+header .cta-button:hover {
+    background-color: #e07019; /* Laranja um pouco mais escuro */
+}
