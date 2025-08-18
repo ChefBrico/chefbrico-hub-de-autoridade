@@ -345,4 +345,37 @@ main.container {
     width: 300px; /* Os cards de estação podem ser um pouco menores */
 }
 
+/* ============================================= */
+/* ===== ESTILO PARA BLOCO DE DEPOIMENTO V1.0 ==== */
+/* ============================================= */
 
+.testimonial-box {
+    background-color: #fdfcf7; /* Um fundo suave para diferenciar */
+    border-left: 5px solid var(--cor-secundaria, #e0d8c4); /* Uma barra lateral dourada para chamar atenção */
+    padding: 25px 30px;
+    margin: 40px 0; /* Espaçamento para respirar */
+    border-radius: 0 8px 8px 0;
+}
+
+.testimonial-box blockquote {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.testimonial-box blockquote p {
+    font-style: italic;
+    font-size: 1.1em;
+    line-height: 1.7;
+    color: #555;
+    margin: 0;
+}
+
+.testimonial-box cite {
+    display: block; /* Para que o autor vá para a linha de baixo */
+    text-align: right;
+    margin-top: 15px;
+    font-weight: bold;
+    color: var(--cor-primaria);
+    font-style: normal;
+}
