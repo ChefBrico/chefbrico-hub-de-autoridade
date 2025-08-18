@@ -35,67 +35,99 @@
     </style>
     
     <!-- Schema.org Otimizado para E-E-A-T e Sinergia -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org/",
-      "@type": "Recipe",
-      "name": "Refeição com Arroz Negro e Funghi",
-      "author": {
-        "@type": "Person",
-        "@id": "https://receitas.chefbrico.com/nossa-filosofia.html#maria"
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "Refeição com Arroz Negro e Funghi",
+  "description": "Uma refeição sofisticada e nutritiva para preparar em casa. Nossa mistura 100% natural combina o sabor amendoado do arroz negro integral com a intensidade do cogumelo Funghi Secchi.",
+  "sku": "REF-ARN-180", // <<< SEU CÓDIGO DE PRODUTO
+  "brand": {
+    "@type": "Brand",
+    "name": "ChefBrico",
+    "@id": "https://www.chefbrico.com/#organization"
+  },
+  "image": "/refeicoes-praticas/Refeicao-arroz-negro-funghi-chefbrico.png",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "ratingCount": "15"
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": "https://www.chefbrico.com/refeicao-arroz-negro-funghi",
+    "priceCurrency": "BRL",
+    "price": "34.80",
+    "availability": "https://schema.org/InStock",
+    "seller": {
+      "@type": "Organization",
+      "@id": "https://www.chefbrico.com/#organization"
+    },
+
+    // --- SEÇÃO DE ENTREGA NACIONAL COM FRETE VARIÁVEL ---
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "description": "O valor do frete é calculado dinamicamente com base no CEP de destino durante o checkout.",
+      "shippingDestination": {
+        "@type": "DefinedRegion",
+        "addressCountry": "BR"
       },
-      "image": [
-        "/refeicoes-praticas/Refeicao-arroz-negro-funghi-chefbrico.png"
-      ],
-      "description": "Uma receita sofisticada e nutritiva para preparar a Refeição com Arroz Negro e Funghi da ChefBrico. 100% natural e à base de plantas.",
-      "prepTime": "PT1M",
-      "cookTime": "PT35M",
-      "totalTime": "PT36M",
-      "recipeYield": "2 porções",
-      "recipeCuisine": "Contemporânea",
-      "keywords": "arroz negro, funghi secchi, receita saudável, comida integral",
-      "recipeIngredient": [
-        "1 pacote (180g) de Mistura para Refeição com Arroz Negro e Funghi ChefBrico",
-        "800ml de água fria",
-        "1 fio de azeite",
-        "Sal a gosto",
-        "Nozes ou amêndoas picadas (opcional)"
-      ],
-      "recipeInstructions": [
-        { "@type": "HowToStep", "text": "Aqueça um fio de azeite e refogue o conteúdo do pacote por 1 minuto para liberar o perfume terroso do cogumelo." },
-        { "@type": "HowToStep", "text": "Adicione 800ml de água fria e sal a gosto. Cozinhe em fogo baixo, com a panela semi-tampada, por cerca de 30-35 minutos, ou até os grãos estarem macios." },
-        { "@type": "HowToStep", "text": "Finalize com um fio de azeite de boa qualidade e, se desejar, nozes ou amêndoas picadas para adicionar crocância." }
-      ],
-      "nutrition": {
-        "@type": "NutritionInformation",
-        "calories": "Aproximadamente 390 kcal por porção (sem os ingredientes opcionais)."
+      "shippingRate": {
+        "@type": "MonetaryAmount",
+        "currency": "BRL"
       },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5",
-        "ratingCount": "15",
-        "bestRating": "5",
-        "worstRating": "1"
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": { "@type": "QuantitativeValue", "minValue": "1", "maxValue": "2", "unitCode": "DAY" },
+        "transitTime": { "@type": "QuantitativeValue", "minValue": "5", "maxValue": "10", "unitCode": "DAY" }
       },
-      "offers": {
-        "@type": "Offer",
-        "price": "34.80",
-        "priceCurrency": "BRL",
-        "url": "https://www.chefbrico.com/refeicao-arroz-negro-funghi",
-        "availability": "https://schema.org/InStock",
-        "seller": {
-          "@type": "Organization",
-          "name": "ChefBrico",
-          "url": "https://www.chefbrico.com"
-        }
-      },
-       "suitableForDiet": [
-        "https://schema.org/GlutenFreeDiet",
-        "https://schema.org/VeganDiet",
-        "https://schema.org/VegetarianDiet"
-      ]
+      "carrier": {
+        "@type": "Organization",
+        "name": "Correios"
+      }
     }
-    </script>
+    // --- FIM DA SEÇÃO DE ENTREGA NACIONAL ---
+  },
+
+  // --- SEÇÃO OBSESSIVAMENTE DETALHADA (YMYL) ---
+  "nutrition": {
+    "@type": "NutritionInformation",
+    "servingSize": "90 g",
+    "calories": "390 kcal",
+    "fiberContent": "8 g",
+    "proteinContent": "12 g",
+    "carbohydrateContent": "75 g"
+  },
+  "suitableForDiet": [
+    "https://schema.org/GlutenFreeDiet",
+    "https://schema.org/VeganDiet",
+    "https://schema.org/VegetarianDiet"
+  ],
+  "allergenInformation": "Livre de Glúten. Livre de Lactose. Pode conter traços de castanhas e amendoim.",
+
+  // --- RECEITA ANINHADA DENTRO DO PRODUTO ---
+  "recipe": {
+    "@type": "Recipe",
+    "name": "Receita Rápida: Arroz Negro com Funghi ChefBrico",
+    "prepTime": "PT1M",
+    "cookTime": "PT35M",
+    "totalTime": "PT36M",
+    "recipeYield": "2 porções",
+    "recipeCuisine": "Contemporânea",
+    "recipeIngredient": [
+      "1 pacote (180g) de Mistura para Refeição com Arroz Negro e Funghi ChefBrico",
+      "800ml de água fria",
+      "1 fio de azeite",
+      "Sal a gosto"
+    ],
+    "recipeInstructions": [
+      { "@type": "HowToStep", "text": "Aqueça um fio de azeite e refogue o conteúdo do pacote por 1 minuto." },
+      { "@type": "HowToStep", "text": "Adicione 800ml de água fria e sal a gosto. Cozinhe em fogo baixo, com a panela semi-tampada, por cerca de 30-35 minutos." },
+      { "@type": "HowToStep", "text": "Finalize com um fio de azeite de boa qualidade e, se desejar, nozes picadas." }
+    ]
+  }
+}
+</script>
 </head>
 <body>
     <header>
