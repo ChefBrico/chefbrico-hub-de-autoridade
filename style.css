@@ -298,3 +298,49 @@ main.container {
         height: 120px;
     }
 }
+
+/* ============================================= */
+/* ===== CÓDIGO DO CARROSSEL HORIZONTAL V1.0 ===== */
+/* ============================================= */
+
+.carousel-container {
+    overflow-x: auto; /* A mágica acontece aqui: permite a rolagem horizontal */
+    -webkit-overflow-scrolling: touch; /* Melhora a experiência em iOS */
+    padding-bottom: 20px; /* Um espaço para a barra de rolagem não cortar os cards */
+    scrollbar-width: thin; /* Estilo da barra de rolagem para Firefox */
+    scrollbar-color: var(--cor-primaria) #f0ead6; /* Cor da barra de rolagem */
+}
+
+/* Estilo da barra de rolagem para Chrome/Safari */
+.carousel-container::-webkit-scrollbar {
+    height: 8px;
+}
+.carousel-container::-webkit-scrollbar-track {
+    background: #f0ead6;
+    border-radius: 4px;
+}
+.carousel-container::-webkit-scrollbar-thumb {
+    background-color: var(--cor-primaria);
+    border-radius: 4px;
+}
+
+.carousel-track {
+    display: flex; /* Alinha os cards lado a lado */
+    flex-wrap: nowrap; /* Impede que os cards quebrem para a linha de baixo */
+    gap: 30px; /* Espaço entre os cards */
+    width: max-content; /* Garante que o container se expanda o necessário */
+}
+
+.carousel-card {
+    flex: 0 0 auto; /* Impede que os cards encolham ou estiquem */
+    width: 320px; /* Define uma largura fixa para cada card */
+}
+
+/* Ajustes específicos para os cards dentro do carrossel */
+.carousel-card.feira-card {
+    width: 400px; /* As feiras podem ter um card um pouco maior */
+}
+
+.carousel-card.estacao-card {
+    width: 300px; /* Os cards de estação podem ser um pouco menores */
+}
