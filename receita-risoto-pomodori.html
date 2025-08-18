@@ -4,108 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Metadados e SEO Otimizados -->
     <title>Como Fazer Risoto Pomodori & Pesto em 18 Minutos? | ChefBrico</title>
     <meta name="description" content="Aprenda o passo a passo para preparar o Risoto Pomodori & Pesto da ChefBrico. Uma receita 100% natural, com o autêntico sabor da Itália e dicas da Chef Maria Conceição.">
     
     <link rel="stylesheet" href="/style.css">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-K58FN8J2VC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K58FN8J2VC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-K58FN8J2VC');
-</script>
-    <!-- **AJUSTES DE ESTILO "PADRÃO OURO"** -->
-    <style>
-      .article-hero-image-container {
-        max-width: 800px; /* Alinha a imagem com o conteúdo do texto */
-      }
-      .recipe-title-container {
-        text-align: center; /* Centraliza todo o conteúdo do bloco de título */
-        margin-bottom: 25px;
-      }
-      .author-byline {
-        margin-top: 10px; /* Adiciona um pequeno espaço acima da linha da autora */
-        font-size: 1.1em;
-        color: var(--cor-texto);
-      }
-    </style>
+      gtag('config', 'G-K58FN8J2VC');
+    </script>
     
-    <!-- Schema.org Otimizado para E-E-A-T e Sinergia -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org/",
-      "@type": "Recipe",
+      "@type": "Product",
       "name": "Risoto Pomodori & Pesto",
-      "author": {
-        "@type": "Person",
-        "@id": "https://receitas.chefbrico.com/nossa-filosofia.html#maria"
-      },
-      "image": [
-        "https://receitas.chefbrico.com/risotos/risoto-pomodori-pesto-tijela-chefbrico.png"
-      ],
-      "description": "Uma receita clássica italiana para preparar o Risoto Pomodori & Pesto da ChefBrico. 100% natural, vegetariano e pronto em 18 minutos.",
-      "prepTime": "PT1M",
-      "cookTime": "PT18M",
-      "totalTime": "PT19M",
-      "recipeYield": "2 porções",
-      "recipeCuisine": "Italiana",
-      "keywords": "risoto de tomate seco, risoto pomodori, pesto, receita italiana",
-      "recipeIngredient": [
-        "1 pacote (180g) de Mistura para Risoto Pomodori & Pesto ChefBrico",
-        "720ml de água fria",
-        "1 fio de azeite",
-        "Sal a gosto",
-        "Folhas de manjericão fresco (opcional)",
-        "Lascas de queijo parmesão (opcional)"
-      ],
-      "recipeInstructions": [
-        { "@type": "HowToStep", "text": "Aqueça um fio de azeite e refogue o conteúdo do pacote por 1 minuto para liberar os aromas." },
-        { "@type": "HowToStep", "text": "Adicione 720ml de água fria e sal a gosto. Cozinhe em fogo baixo por cerca de 18 minutos, mexendo ocasionalmente." },
-        { "@type": "HowToStep", "text": "Fica incrível finalizado com folhas de manjericão fresco e, para uma experiência completa, lascas de queijo parmesão (ou parmesão vegano)." }
-      ],
-      "nutrition": {
-        "@type": "NutritionInformation",
-        "calories": "Aproximadamente 370 kcal por porção (sem os ingredientes opcionais)."
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5",
-        "ratingCount": "35",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
+      "description": "O sabor autêntico da Itália em 18 minutos! Nossa mistura artesanal para Risoto Pomodori & Pesto é 100% natural, vegana e sem glúten.",
+      "sku": "RIS-POM-002",
+      "brand": { "@type": "Brand", "name": "ChefBrico", "@id": "https://www.chefbrico.com/#organization" },
+      "image": "/risotos/risoto-pomodori-pesto-tijela-chefbrico.png",
+      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "ratingCount": "35" },
       "offers": {
         "@type": "Offer",
-        "price": "34.80",
-        "priceCurrency": "BRL",
         "url": "https://www.chefbrico.com/risoto-pomodori-amp-pesto",
+        "priceCurrency": "BRL",
+        "price": "34.80",
         "availability": "https://schema.org/InStock",
-        "seller": {
-          "@type": "Organization",
-          "name": "ChefBrico",
-          "url": "https://www.chefbrico.com"
+        "seller": { "@type": "Organization", "@id": "https://www.chefbrico.com/#organization" },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "description": "O valor do frete é calculado dinamicamente com base no CEP de destino durante o checkout.",
+          "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "BR" },
+          "shippingRate": { "@type": "MonetaryAmount", "currency": "BRL" },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": { "@type": "QuantitativeValue", "minValue": "1", "maxValue": "2", "unitCode": "DAY" },
+            "transitTime": { "@type": "QuantitativeValue", "minValue": "3", "maxValue": "10", "unitCode": "DAY" }
+          },
+          "carrier": { "@type": "Organization", "name": "Correios" }
         }
       },
-       "suitableForDiet": [
-        "https://schema.org/GlutenFreeDiet",
-        "https://schema.org/VeganDiet",
-        "https://schema.org/VegetarianDiet"
-      ]
+      "nutrition": { "@type": "NutritionInformation", "servingSize": "90 g", "calories": "370 kcal", "proteinContent": "10 g", "fiberContent": "7 g", "carbohydrateContent": "71 g" },
+      "suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VeganDiet", "https://schema.org/VegetarianDiet"],
+      "allergenInformation": "Livre de Glúten. Livre de Lactose. Contém Castanha de Caju.",
+      "recipe": {
+        "@type": "Recipe",
+        "name": "Receita Rápida: Risoto Pomodori & Pesto ChefBrico",
+        "prepTime": "PT1M",
+        "cookTime": "PT18M",
+        "totalTime": "PT19M",
+        "recipeYield": "2 porções",
+        "recipeCuisine": "Italiana",
+        "recipeIngredient": [
+          "1 pacote (180g) de Mistura para Risoto Pomodori & Pesto ChefBrico",
+          "720ml de água fria",
+          "1 fio de azeite",
+          "Sal a gosto"
+        ],
+        "recipeInstructions": [
+          { "@type": "HowToStep", "text": "Aqueça um fio de azeite e refogue o conteúdo do pacote por 1 minuto para liberar os aromas." },
+          { "@type": "HowToStep", "text": "Adicione 720ml de água fria e sal a gosto. Cozinhe em fogo baixo por cerca de 18 minutos, mexendo ocasionalmente." },
+          { "@type": "HowToStep", "text": "Finalize com folhas de manjericão fresco e, para uma experiência completa, lascas de queijo parmesão (ou parmesão vegano)." }
+        ]
+      }
     }
     </script>
 </head>
 <body>
+    
     <header>
-        <!-- O cabeçalho unificado será inserido aqui dinamicamente -->
-    </header>
+        </header>
 
     <main>
         <article class="container">
-            <!-- ESTRUTURA DE TÍTULO "PADRÃO OURO" -->
             <div class="recipe-title-container">
                 <h1>Risoto Pomodori & Pesto</h1>
                 <p class="recipe-subtitle">O Sabor da Itália em 18 Minutos!</p>
@@ -113,14 +87,14 @@
             </div>
 
             <div class="article-hero-image-container">
-                <img src="/risotos/risoto-pomodori-pesto-tijela-chefbrico.png" alt="Prato finalizado de Risoto Pomodori & Pesto, decorado com manjericão fresco.">
+                <img src="[caminho/para/imagem-risoto-pomodori.png]" alt="Prato finalizado de Risoto Pomodori & Pesto, decorado com manjericão fresco.">
             </div>
 
             <div class="post-content">
                 <p>Teletransporte-se para uma cantina ensolarada na Toscana. Nosso Risoto Pomodori celebra a combinação amada da Itália: o sabor intenso e adocicado do tomate seco com o perfume fresco e inconfundível do manjericão. É um prato que abraça, conforta e traz o verdadeiro "sapore" italiano para a sua mesa, com a praticidade que só a ChefBrico oferece.</p>
 
                 <div class="product-cta-card">
-                    <img src="/risotos/embalagem-risoto-pomodori.png" alt="Embalagem do Risoto Pomodori & Pesto da ChefBrico">
+                    <img src="[caminho/para/imagem-embalagem-pomodori.png]" alt="Embalagem do Risoto Pomodori & Pesto da ChefBrico">
                     <div class="product-cta-info">
                         <h3>A Estrela da Receita</h3>
                         <p>A base para este clássico italiano é a nossa <strong>Mistura para Risoto Pomodori & Pesto</strong>. Garanta a sua e sinta o sabor da Itália!</p>
@@ -130,13 +104,18 @@
 
                 <h2>Por que Você Vai Amar este Clássico Italiano</h2>
                 <ul>
-                    <li>✅ <strong>Sabor Intenso e Autêntico:</strong> A combinação perfeita do tomate seco de alta qualidade com o frescor do manjericão.</li>
+                    <li>✅ <strong>Sabor Intenso e Autêntico:</strong> A combinação perfeita do tomate seco de alta qualidade com o frescor do nosso pesto de manjericão.</li>
                     <li>✅ <strong>Culinária Afetiva:</strong> Um prato que evoca memória e conforto, pronto em aproximadamente 18 minutos!</li>
-                    <li>✅ <strong>100% Natural e Vegetariano:</strong> Ingredientes puros e selecionados, sem conservantes ou aditivos.</li>
+                    <li>✅ <strong>100% Natural e Vegano:</strong> Ingredientes puros e selecionados, sem conservantes ou aditivos.</li>
                 </ul>
 
+                <div class="testimonial-box">
+                    <blockquote><p>"Esse é o risoto que peço em restaurante, mas feito em casa em menos de 20 minutos. O sabor do tomate seco é incrível e é super cremoso. Já comprei 3 vezes!"</p></blockquote>
+                    <cite>&mdash; Roberta G., Cliente ChefBrico</cite>
+                </div>
+
                 <h2>O Que Vem no Pacote</h2>
-                <p>Arroz arbóreo, tomate desidratado, manjericão desidratado, caldo de vegetais desidratado (cenoura, cebola, alho-poró, salsão), queijo parmesão veg. (castanha de caju e levedura nutricional), alho e cebola desidratada. E nada mais.</p>
+                <p>Arroz arbóreo, tomate desidratado, pesto de manjericão desidratado (manjericão, castanha de caju, levedura nutricional), caldo de vegetais desidratado (cenoura, cebola, alho-poró, salsão), alho e cebola desidratada. E nada mais.</p>
 
                 <h2>Você Vai Precisar de</h2>
                 <ul>
@@ -149,100 +128,51 @@
                 <h2>Modo de Preparo Simplificado</h2>
                 <ol>
                     <li><strong>Refogue:</strong> Aqueça um fio de azeite e refogue o conteúdo do pacote por 1 minuto para liberar os aromas.</li>
-                    <li><strong>Cozinhe:</strong> Adicione 720ml de água fria e sal a gosto. Nosso caldo especial já está na mistura! Cozinhe em fogo baixo por cerca de 18 minutos, mexendo ocasionalmente.</li>
-                    <li><strong>Finalize:</strong> Fica incrível finalizado com folhas de manjericão fresco e, para uma experiência completa, lascas de queijo parmesão (ou parmesão vegano).</li>
+                    <li><strong>Cozinhe:</strong> Adicione 720ml de água fria e sal a gosto. Cozinhe em fogo baixo por cerca de 18 minutos, mexendo ocasionalmente.</li>
+                    <li><strong>Finalize:</strong> Sirva com folhas de manjericão fresco e, para uma experiência completa, lascas de queijo parmesão (ou parmesão vegano).</li>
                 </ol>
 
                 <h2>Dicas da Chef</h2>
-                <p><em>"Para mim, Pomodori é o sabor da simplicidade perfeita. O segredo é a qualidade do tomate seco, que traz uma doçura que equilibra todo o prato. Um clássico italiano pede um vinho! Harmoniza perfeitamente com um Chianti ou outro tinto à base da uva Sangiovese."</em></p>
+                <p><em>"Pomodori é o sabor da simplicidade perfeita. O segredo é a qualidade do tomate seco, que traz uma doçura que equilibra todo o prato. Um clássico italiano pede um vinho! Harmoniza perfeitamente com um Chianti ou outro tinto à base da uva Sangiovese."</em></p>
+                
+                <div class="cross-sell-box">
+                    <h3>Combina Perfeitamente Com:</h3>
+                    <p>Sirva como prato principal ou, para uma entrada rápida, prepare bruschettas com o nosso <strong><a href="[LINK PARA A CAPONATA NA LOJA]">Pesto de Manjericão</a></strong>, o mesmo que dá alma a este risoto.</p>
+                </div>
 
                 <h2>Informações Adicionais</h2>
                 <ul>
-                    <li><strong>Peso Líquido:</strong> 180g (Serve generosamente 2 porções)</li>
-                    <li><strong>Validade:</strong> 12 meses a partir da data de fabricação.</li>
-                    <li><strong>Dieta e Alergénicos:</strong> 100% Plant-Based. Sem Glúten. Sem Lactose.</li>
-                    <li><strong>Origem:</strong> Produzido Artesanalmente em Brasília-DF pela ChefBrico.</li>
+                    <li><strong>Peso Líquido:</strong> 180g (Serve 2 porções)</li>
+                    <li><strong>Validade:</strong> 12 meses.</li>
+                    <li><strong>Dieta e Alergênicos:</strong> 100% Plant-Based. Sem Glúten. Sem Lactose. **Contém Castanha de Caju.**</li>
+                    <li><strong>Origem:</strong> Produzido Artesanalmente em Brasília-DF.</li>
+                    <li>🚚 <strong>Entrega:</strong> Para todo o Brasil via Correios.</li>
                 </ul>
 
                 <div class="faq-section">
                     <h2>Dúvidas Frequentes</h2>
                     <div class="faq-item-accordion">
-                        <button class="accordion-header">
-                            <h3>O "parmesão veg." tem gosto de queijo de verdade?</h3>
-                            <span class="icon">▼</span>
-                        </button>
-                        <div class="accordion-content">
-                            <p>Ele recria a sensação de 'umami' e o sabor salgadinho do queijo parmesão tradicional. Usamos uma mistura de castanha de caju e levedura nutricional que, quando cozida no risoto, adiciona uma cremosidade e um sabor delicioso que lembra muito o original.</p>
-                        </div>
+                        <button class="accordion-header"><h3>O "parmesão veg." vem no pesto?</h3><span class="icon">▼</span></button>
+                        <div class="accordion-content"><p>Sim! Nosso pesto é 100% vegano. Usamos uma mistura de castanha de caju e levedura nutricional para recriar a sensação de 'umami' e o sabor salgadinho do queijo, adicionando cremosidade e um sabor delicioso.</p></div>
                     </div>
                     <div class="faq-item-accordion">
-                        <button class="accordion-header">
-                            <h3>Este risoto é muito ácido por causa do tomate seco?</h3>
-                            <span class="icon">▼</span>
-                        </button>
-                        <div class="accordion-content">
-                            <p>Não. O nosso processo de desidratação artesanal concentra a doçura natural do tomate. O resultado é um sabor intenso e adocicado, não ácido, que se equilibra perfeitamente com o frescor do manjericão e a base do nosso caldo de vegetais.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item-accordion">
-                        <button class="accordion-header">
-                            <h3>Qual a informação nutricional deste risoto?</h3>
-                            <span class="icon">▼</span>
-                        </button>
-                        <div class="accordion-content">
-                            <p>Cada porção (metade do pacote), preparada apenas com água e sal, tem aproximadamente 370 kcal. É uma refeição completa e afetiva, que conforta e nutre na medida certa.</p>
-                        </div>
+                        <button class="accordion-header"><h3>Este risoto é muito ácido por causa do tomate seco?</h3><span class="icon">▼</span></button>
+                        <div class="accordion-content"><p>Não. Nosso processo de desidratação artesanal concentra a doçura natural do tomate. O resultado é um sabor intenso e adocicado, que se equilibra perfeitamente com o frescor do manjericão.</p></div>
                     </div>
                 </div>
 
-    <div class="author-box">
-    <img src="/images/maria-conceicao-chefbrico1.png" alt="Retrato de Maria Conceição, fundadora da ChefBrico" class="author-image">
-    <div class="author-info">
-        <h4>Uma mensagem da Maria Conceição</h4>
-        <p>Para mim, um risoto é um ato de amor e paciência. Eu assumi a parte demorada para que você possa focar na magia: a cremosidade perfeita e o sabor que abraça. Este prato é a prova de que um almoço e jantar gourmet pode, sim, ser prático.</p>
-        <a href="/nossa-filosofia.html" style="font-weight: bold; color: var(--cor-primaria);">Conheça mais sobre a minha filosofia.</a>
-    </div>
-</div>
+                <div class="author-box">
+                    <img src="/imagens/maria-conceicao-pra-voce.png" alt="Retrato de Maria Conceição, fundadora da ChefBrico" class="author-image">
+                    <div class="author-info">
+                        <p>Maria Conceição é a mente e a alma por trás da ChefBrico. Psicóloga por formação, ela une a paixão pela comida de verdade com o desejo de simplificar a rotina na cozinha. <a href="/nossa-filosofia.html">Conheça mais sobre sua filosofia aqui</a>.</p>
+                    </div>
                 </div>
             </div>
         </article>
     </main>
 
-   <footer>
-    <div class="container footer-grid">
-        <div>
-            <h4>Navegação</h4>
-            <a href="/index.html">Início</a>
-            <a href="/nossa-filosofia.html">Nossa Filosofia</a>
-            <a href="/receitas.html">Receitas & Dicas</a>
-            <a href="/faq.html">FAQ</a>
-        </div>
-        <div>
-            <h4>Nossos Produtos</h4>
-            <a href="https://www.chefbrico.com/risotos" target="_blank" rel="noopener noreferrer">Risotos</a>
-            <a href="https://www.chefbrico.com/sopas-funcionais" target="_blank" rel="noopener noreferrer">Sopas Funcionais</a>
-            <a href="https://www.chefbrico.com/refeicoes-praticas" target="_blank" rel="noopener noreferrer">Refeições Práticas</a>
-            <a href="https://www.chefbrico.com/emporio-da-chef" target="_blank" rel="noopener noreferrer">Empório da Chef</a>
-        </div>
-        <div>
-            <h4>Ajuda & Suporte</h4>
-            <a href="/onde-encontrar.html">Onde Encontrar</a>
-            <a href="https://www.chefbrico.com/como-comprar" target="_blank" rel="noopener noreferrer">Como Comprar/Envio</a>
-            <a href="https://www.chefbrico.com/trocas-e-devolucoes" target="_blank" rel="noopener noreferrer">Trocas e Devoluções</a>
-            <a href="https://wa.me/5561996659880" target="_blank" rel="noopener noreferrer">Contato</a>
-        </div>
-        <div>
-            <h4>Redes Sociais</h4>
-            <a href="https://www.instagram.com/chefbrico/" target="_blank" rel="noopener noreferrer">Instagram</a>
-            <a href="https://br.pinterest.com/chefbrico/" target="_blank" rel="noopener noreferrer">Pinterest</a>
-        </div>
-    </div>
-       
-    <div class="container footer-credit">
-        <p>© 2025 ChefBrico - Todos os direitos reservados.</p>
-        <p> Maria Conceição | CNPJ: 36.014.833/0001-59 </p>
-    </div>
-</footer>
+    <footer>
+        </footer>
     <script src="/script.js"></script>
 </body>
 </html>
