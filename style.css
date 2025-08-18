@@ -296,3 +296,41 @@ main.container {
   object-fit: cover;
   object-position: center top;
 }
+/* ============================================= */
+/* CSS para o Componente "Voz da Chef" (Author Box) */
+/* ============================================= */
+.author-box {
+  display: flex; /* Alinha os itens (imagem e texto) lado a lado */
+  align-items: center; /* Centraliza os itens verticalmente */
+  gap: 25px; /* Cria um espaço de 25px entre a imagem e o texto */
+  max-width: 750px;
+  margin: 40px auto; /* Aumentei a margem para dar mais respiro */
+  padding: 25px; /* Adiciona um preenchimento interno */
+  background-color: #fdfcf7;
+  border-radius: 8px;
+  border: 1px solid #f0ead6;
+}
+
+.author-image {
+  width: 100px; /* Define um tamanho fixo para a imagem */
+  height: 100px;
+  border-radius: 50%; /* Deixa a imagem perfeitamente redonda */
+  object-fit: cover; /* Garante que a foto preencha o círculo sem distorcer */
+  flex-shrink: 0; /* Impede que a imagem seja esmagada */
+}
+
+.author-info {
+  flex-grow: 1; /* Permite que o texto ocupe o espaço restante */
+  text-align: left; /* Garante que o texto dentro dele fique alinhado à esquerda */
+}
+
+.author-info h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: var(--cor-titulos);
+}
+
+.author-info p {
+  margin-bottom: 0;
+  line-height: 1.6;
+}
