@@ -379,3 +379,34 @@ main.container {
     color: var(--cor-primaria);
     font-style: normal;
 }
+/* ============================================= */
+/* ===== CORREÇÃO MOBILE: CABEÇALHO RESPONSIVO ==== */
+/* ============================================= */
+
+@media (max-width: 768px) {
+    /* Faz o cabeçalho organizar seus itens em coluna (logo em cima, nav embaixo) */
+    .header-flex {
+        flex-direction: column;
+        gap: 20px; /* Aumenta o espaço entre o logo e o menu */
+    }
+
+    /* Permite que os links do menu quebrem a linha */
+    .main-nav-links {
+        flex-wrap: wrap;
+        justify-content: center; /* Centraliza os links quando eles quebram a linha */
+        gap: 15px 25px; /* Espaço vertical e horizontal entre os links */
+    }
+}
+
+/* ============================================= */
+/* ===== CORREÇÃO MOBILE: ESPAÇO PARA RESPIRAR ==== */
+/* ============================================= */
+
+@media (max-width: 768px) {
+    /* Esta regra aplica um espaçamento interno de 20px 
+       nas laterais do container principal em telas de celular */
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
