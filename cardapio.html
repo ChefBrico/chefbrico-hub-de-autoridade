@@ -23,7 +23,33 @@
       "publisher": { "@type": "Organization", "@id": "https://www.chefbrico.com/#organization" }
     }
     </script>
-   
+    <style>
+        .page-header-local { text-align: center; margin: 40px 20px; }
+        .filter-section { margin-bottom: 20px; }
+        .filter-title { text-align: center; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; color: var(--cor-primaria); margin-bottom: 15px; font-size: 1.1em; }
+        .filter-buttons { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 0 20px 40px 20px; padding-bottom: 30px; border-bottom: 2px solid #f0ead6;}
+        .filter-buttons:last-of-type { border-bottom: none; }
+        .filter-btn { background-color: #f9f6ef; color: #5a3a30; padding: 10px 20px; border-radius: 20px; border: 1px solid #f0ead6; cursor: pointer; font-size: 0.9em; font-weight: bold; transition: all 0.2s ease-in-out; }
+        .filter-btn:hover { background-color: #e0d8c4; }
+        .filter-btn.active { background-color: var(--cor-primaria); color: white; border-color: var(--cor-primaria); }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 50px; }
+        .product-card { border: 1px solid #eee; border-radius: 8px; overflow: hidden; text-decoration: none; color: var(--cor-texto); display: flex; flex-direction: column; transition: transform 0.3s ease, opacity 0.3s ease, width 0s, padding 0s, margin 0s; }
+        .product-card.hide { transform: scale(0.95); opacity: 0; width: 0; padding: 0; margin: 0; border: none; gap: 0; font-size: 0; transition: transform 0.3s ease, opacity 0.3s ease, width 0s 0.3s, padding 0s 0.3s, margin 0s 0.3s; }
+        .product-card-image { width: 100%; height: 180px; object-fit: cover; }
+        .product-card-content { padding: 20px; display: flex; flex-direction: column; flex-grow: 1; }
+        .product-card-content h4 { margin-top: 0; margin-bottom: 10px; }
+        .product-card-content p { font-size: 0.9em; line-height: 1.6; flex-grow: 1; margin-bottom: 15px; }
+        .product-card-content .cta-button { margin-top: auto; text-align: center; }
+        /* Estilos para o menu Dropdown */
+        .dropdown { position: relative; display: inline-block; }
+        .dropbtn { cursor: pointer; }
+        .dropdown-content { display: none; position: absolute; background-color: #fdfcf7; min-width: 250px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1); z-index: 100; border-radius: 8px; border: 1px solid #f0ead6; padding: 10px 0; }
+        .dropdown-content a, .dropdown-content .dropdown-title { color: var(--cor-primaria, #5a3a30); padding: 12px 16px; text-decoration: none; display: block; text-align: left; }
+        .dropdown-content .dropdown-title { font-weight: bold; font-size: 0.8em; text-transform: uppercase; color: #aaa; padding-top: 15px; padding-bottom: 5px; }
+        .dropdown-content a:hover { background-color: #f0ead6; }
+        .dropdown:hover .dropdown-content { display: block; }
+        .dropdown-content hr { border: none; border-top: 1px solid #f0ead6; margin: 10px 0; }
+    </style>
 </head>
 <body>
 
@@ -116,41 +142,71 @@
     </main>
     
     <footer>
-        <div class="container footer-grid">
-            <div><h4>Navegação</h4><a href="/index.html">Início</a><a href="/nossa-filosofia.html">Nossa Filosofia</a><a href="/cardapio.html">Cardápio Completo</a><a href="/faq.html">FAQ</a><a href="/chefbrico-club.html">ChefBrico Club</a></div>
-            <div><h4>Nossos Produtos</h4><a href="/risotos.html">Risotos</a><a href="/sopas-funcionais.html">Sopas Funcionais</a><a href="/refeicoes-praticas.html">Refeições Práticas</a><a href="/emporio-da-chef.html">Empório da Chef</a></div>
-            <div><h4>Ajuda & Suporte</h4><a href="/onde-encontrar.html">Onde Encontrar</a><a href="https://www.chefbrico.com/como-comprar" target="_blank" rel="noopener noreferrer">Como Comprar na Loja</a><a href="https://www.chefbrico.com/trocas-e-devolucoes" target="_blank" rel="noopener noreferrer">Trocas e Devoluções</a><a href="https://wa.me/5561996659880" target="_blank" rel="noopener noreferrer">Contato</a></div>
-            <div><h4>Redes Sociais</h4><a href="https://www.instagram.com/chefbrico/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://br.pinterest.com/chefbrico/" target="_blank" rel="noopener noreferrer">Pinterest</a></div>
-        </div>
-        <div class="container footer-credit"><p>© 2025 ChefBrico - Todos os direitos reservados.</p><p> Maria Conceição | CNPJ: 36.014.833/0001-59 </p></div>
-    </footer>
+        </footer>
 
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Seleciona TODOS os botões de filtro
-        const allFilterButtons = document.querySelectorAll('.filter-btn');
-        const productCards = document.querySelectorAll('.product-grid .product-card');
+        document.addEventListener('DOMContentLoaded', function() {
+            const allFilterButtons = document.querySelectorAll('.filter-buttons .filter-btn');
+            const productCards = document.querySelectorAll('.product-grid .product-card');
+            const solutionFilterButtons = document.querySelector('.solution-filters').querySelectorAll('.filter-btn');
+            const categoryFilterButtons = document.querySelector('.category-filters').querySelectorAll('.filter-btn');
 
-        allFilterButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                // Remove a classe 'active' de todos os botões
-                allFilterButtons.forEach(btn => btn.classList.remove('active'));
-                // Adiciona 'active' apenas ao botão clicado
-                this.classList.add('active');
+            allFilterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
+                    const isSolutionFilter = this.parentElement.classList.contains('solution-filters');
+                    
+                    // Lógica para ativar/desativar botões
+                    if (isSolutionFilter) {
+                        resetActive(categoryFilterButtons);
+                    } else {
+                        resetActive(solutionFilterButtons);
+                        document.querySelector('.solution-filters .filter-btn[data-filter="all"]').classList.remove('active');
+                    }
+                    
+                    if (filter === 'all') {
+                        resetActive(categoryFilterButtons);
+                        this.classList.add('active');
+                    } else {
+                        this.classList.toggle('active');
+                    }
+                    
+                    filterProducts();
+                });
+            });
 
-                const filter = this.getAttribute('data-filter');
+            function resetActive(buttonGroup) {
+                 buttonGroup.forEach(btn => btn.classList.remove('active'));
+            }
 
-                // Mostra ou esconde os cards
+            function filterProducts() {
+                const activeFilters = [];
+                document.querySelectorAll('.filter-btn.active').forEach(btn => {
+                    if (btn.getAttribute('data-filter') !== 'all') {
+                        activeFilters.push(btn.getAttribute('data-filter'));
+                    }
+                });
+                
+                let allButton = document.querySelector('.solution-filters .filter-btn[data-filter="all"]');
+
+                if (activeFilters.length === 0) {
+                    if(allButton) allButton.classList.add('active');
+                } else {
+                    if(allButton) allButton.classList.remove('active');
+                }
+
                 productCards.forEach(card => {
-                    if (filter === 'all' || card.getAttribute('data-category').includes(filter)) {
+                    const cardCategories = card.getAttribute('data-category');
+                    let matchesAllFilters = activeFilters.every(filter => cardCategories.includes(filter));
+
+                    if (activeFilters.length === 0 || matchesAllFilters) {
                         card.classList.remove('hide');
                     } else {
                         card.classList.add('hide');
                     }
                 });
-            });
+            }
         });
-    });
     </script>
 </body>
 </html>
