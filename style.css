@@ -582,7 +582,7 @@ main.container {
 }
 
 /* ======================================================= */
-/* ===== CÓDIGO FINAL E UNIFICADO PARA O CARDÁPIO V3.0 ===== */
+/* ===== CÓDIGO FINAL E SIMPLIFICADO - CARDÁPIO V4.0 ===== */
 /* ======================================================= */
 
 /* --- Controla o container geral da grade para centralização --- */
@@ -594,9 +594,9 @@ main.container {
 /* --- A grade de produtos --- */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Aumentamos um pouco a base do card */
     gap: 30px;
-    align-items: stretch; /* Garante que os cards na mesma linha tenham a mesma altura */
+    /* REMOVEMOS o 'align-items: stretch' daqui para permitir alturas diferentes */
 }
 
 /* --- O card individual do produto --- */
@@ -604,10 +604,11 @@ main.container {
     display: flex;
     flex-direction: column;
     text-align: center;
-    border: 1px solid #eee;
+    border: 1px solid #f0f0f0;
     border-radius: 8px;
     overflow: hidden;
     background-color: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Sombra suave para dar profundidade */
 }
 
 /* --- A imagem do produto --- */
@@ -622,21 +623,43 @@ main.container {
 .product-card-content {
     display: flex;
     flex-direction: column;
-    flex-grow: 1; /* Faz esta caixa ocupar todo o espaço vertical disponível */
-    padding: 20px;
+    flex-grow: 1; /* Faz esta caixa ocupar o espaço vertical necessário */
+    padding: 25px;
 }
 
 .product-card-content h4 {
-    font-size: 1.2em;
-    min-height: 45px; /* Garante que títulos de 1 ou 2 linhas tenham altura parecida */
+    font-size: 1.3em;
+    margin-top: 0;
 }
 
 .product-card-content p {
-    font-size: 0.95em;
+    font-size: 1em;
     flex-grow: 1; /* Garante que a descrição empurre o botão para baixo */
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .product-card-content .cta-button {
-    margin-top: auto; /* Truque mágico para alinhar o botão no final, mesmo com textos de tamanhos diferentes */
+    margin-top: auto; /* Alinha o botão no final do card */
+}
+
+/* ======================================================= */
+/* ===== AJUSTES FINOS DE ESPAÇAMENTO - CARDAPIO V2.0 ==== */
+/* ======================================================= */
+
+/* 1. REDUZ A DISTÂNCIA ENTRE O MENU E O TÍTULO H1 */
+main.container > .page-header-local {
+    margin-top: 25px; /* Reduzimos o espaço superior */
+    margin-bottom: 30px; /* Também reduzimos o espaço inferior */
+}
+
+/* 2. REDUZ O ESPAÇO ENTRE O TÍTULO H1 E O PRIMEIRO BLOCO DE FILTROS */
+main.container > .filter-section:first-of-type {
+    margin-top: -20px; /* Usamos uma margem negativa para "puxar" o bloco para cima */
+}
+
+/* 3. REDUZ O ESPAÇO ENTRE OS DOIS BLOCOS DE FILTROS */
+.filter-buttons {
+    /* Diminuímos o espaço final de cada bloco de botões */
+    margin-bottom: 25px; 
+    padding-bottom: 25px;
 }
