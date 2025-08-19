@@ -34,17 +34,16 @@
         .filter-btn.active { background-color: var(--cor-primaria); color: white; border-color: var(--cor-primaria); }
         .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 50px; }
         .product-card { border: 1px solid #eee; border-radius: 8px; overflow: hidden; text-decoration: none; color: var(--cor-texto); display: flex; flex-direction: column; transition: transform 0.3s ease, opacity 0.3s ease, width 0s, padding 0s, margin 0s; }
-        .product-card.hide { transform: scale(0.95); opacity: 0; width: 0; padding: 0; margin: 0; border: none; gap: 0; font-size: 0; transition: transform 0.3s ease, opacity 0.3s ease, width 0s 0.3s, padding 0s 0.3s, margin 0s 0.3s; }
+        .product-card.hide { transform: scale(0.95); opacity: 0; display: none; }
         .product-card-image { width: 100%; height: 180px; object-fit: cover; }
         .product-card-content { padding: 20px; display: flex; flex-direction: column; flex-grow: 1; }
         .product-card-content h4 { margin-top: 0; margin-bottom: 10px; }
         .product-card-content p { font-size: 0.9em; line-height: 1.6; flex-grow: 1; margin-bottom: 15px; }
         .product-card-content .cta-button { margin-top: auto; text-align: center; }
-        /* Estilos para o menu Dropdown */
         .dropdown { position: relative; display: inline-block; }
         .dropbtn { cursor: pointer; }
         .dropdown-content { display: none; position: absolute; background-color: #fdfcf7; min-width: 250px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1); z-index: 100; border-radius: 8px; border: 1px solid #f0ead6; padding: 10px 0; }
-        .dropdown-content a, .dropdown-content .dropdown-title { color: var(--cor-primaria, #5a3a30); padding: 12px 16px; text-decoration: none; display: block; text-align: left; }
+        .dropdown-content a, .dropdown-content .dropdown-title { padding: 12px 16px; text-decoration: none; display: block; text-align: left; }
         .dropdown-content .dropdown-title { font-weight: bold; font-size: 0.8em; text-transform: uppercase; color: #aaa; padding-top: 15px; padding-bottom: 5px; }
         .dropdown-content a:hover { background-color: #f0ead6; }
         .dropdown:hover .dropdown-content { display: block; }
@@ -113,99 +112,66 @@
         </div>
         
         <div class="product-grid">
-            <div class="product-card" data-category="risoto vegano sem-gluten momento-especial gourmet-pratico terroso umami"><img src="/risotos/risoto-funghi-secchi.png" alt="Risoto Funghi Secchi" class="product-card-image"><div class="product-card-content"><h4>Risoto Funghi Secchi</h4><p>Sabor de restaurante em 18 minutos! Intenso e 100% natural.</p><a href="/receita-risoto-funghi.html" class="cta-button">Ver Detalhes</a></div></div>
-            <div class="product-card" data-category="risoto vegano sem-gluten jantar-rapido momento-especial gourmet-pratico classico italiano"><img src="/risotos/risoto-pomodori-pesto.png" alt="Risoto Pomodori & Pesto" class="product-card-image"><div class="product-card-content"><h4>Risoto Pomodori & Pesto</h4><p>O sabor autêntico da Itália. Cremosidade e afeto em cada garfada.</p><a href="/receita-risoto-pomodori.html" class="cta-button">Ver Detalhes</a></div></div>
-            <div class="product-card" data-category="risoto sem-gluten leveza refrescante marmita-inteligente"><img src="/risotos/risoto-zucchini-alho-poro.png" alt="Risoto de Zucchini e Alho-Poró" class="product-card-image"><div class="product-card-content"><h4>Risoto de Zucchini e Alho-Poró</h4><p>Uma refeição leve, saudável e incrivelmente saborosa.</p><a href="/receita-risoto-zucchini.html" class="cta-button">Ver Detalhes</a></div></div>
-            <div class="product-card" data-category="risoto vegano sem-gluten momento-especial gourmet-pratico espanhol"><img src="/risotos/risoto-paella-veg.png" alt="Risoto Paella Veg." class="product-card-image"><div class="product-card-content"><h4>Risoto Paella Veg.</h4><p>Uma viagem à Espanha com cúrcuma e páprica defumada.</p><a href="/receita-paella-veg.html" class="cta-button">Ver Detalhes</a></div></div>
-            <div class="product-card" data-category="risoto vegano sem-gluten momento-especial jantar-romantico gourmet-pratico agridoce divertido"><img src="/risotos/risoto-pera-gorgonzola.png" alt="Risoto de Pêra e Gorgonzola Vegano" class="product-card-image"><div class="product-card-content"><h4>Risoto de Pêra e Gorgonzola Veg.</h4><p>O clássico agridoce em uma versão gourmet e 100% à base de plantas.</p><a href="/receita-risoto-pera-gorgonzola.html" class="cta-button">Ver Detalhes</a></div></div>
-            <div class="product-card" data-category="risoto vegano sem-gluten momento-especial agridoce divertido"><img src="/risotos/risoto-morango.png" alt="Risoto Agridoce de Morango" class="product-card-image"><div class="product-card-content"><h4>Risoto Agridoce de Morango</h4><p>Uma experiência sofisticada e surpreendente para paladares ousados.</p><a href="/receita-risoto-morango.html" class="cta-button">Ver Detalhes</a></div></div>
-            <div class="product-card" data-category="risoto vegano sem-gluten momento-especial gourmet-pratico terroso umami"><img src="/risotos/risoto-mix-funghi.png" alt="Risoto Mix Funghi" class="product-card-image"><div class="product-card-content"><h4>Risoto Mix Funghi</h4><p>A experiência definitiva para amantes de cogumelos, com um blend de espécies.</p><a href="/receita-risoto-mix-funghi.html" class="cta-button">Ver Detalhes</a></div></div>
-            <div class="product-card" data-category="risoto vegano sem-gluten gourmet-pratico terroso umami"><img src="/risotos/risoto-shiimeji-alho-poro.png" alt="Risoto de Shiimeji e Alho-Poró" class="product-card-image"><div class="product-card-content"><h4>Risoto de Shiimeji e Alho-Poró</h4><p>Uma refeição sofisticada e reconfortante com o toque oriental do shiitake.</p><a href="/receita-risoto-shiimeji.html" class="cta-button">Ver Detalhes</a></div></div>
-            <div class="product-card" data-category="risoto vegano sem-gluten gourmet-pratico"><img src="/risotos/risoto-pesto-alho-poro.png" alt="Risoto de Pesto e Alho-Poró" class="product-card-image"><div class="product-card-content"><h4>Risoto de Pesto e Alho-Poró</h4><p>Um risoto cremoso e sofisticado com o frescor do manjericão.</p><a href="/receita-risoto-pesto-alho-poro.html" class="cta-button">Ver Detalhes</a></div></div>
-            <div class="product-card" data-category="risoto leveza refrescante"><img src="/risotos/risoto-mediterraneo.png" alt="Risoto Mediterrâneo" class="product-card-image"><div class="product-card-content"><h4>Risoto Mediterrâneo</h4><p>Refeição saudável com um toque cítrico de limão-siciliano.</p><a href="/receita-risoto-mediterraneo.html" class="cta-button">Ver Detalhes</a></div></div>
-            <div class="product-card" data-category="risoto vegano sem-gluten classico italiano jantar-rapido para-familia"><img src="/risotos/risoto-tomate-manjericao.png" alt="Risoto de Tomate e Manjericão" class="product-card-image"><div class="product-card-content"><h4>Risoto de Tomate e Manjericão</h4><p>O sabor clássico de comida de casa em uma versão cremosa e prática.</p><a href="/receita-risoto-tomate-manjericao.html" class="cta-button">Ver Detalhes</a></div></div>
-            
-            <div class="product-card" data-category="sopa vegano sem-gluten para-familia conforto dia-a-dia"><img src="/sopas/sopa-jeitinho-de-vo.png" alt="Sopa Jeitinho de Vó Lentilha" class="product-card-image"><div class="product-card-content"><h4>Jeitinho de Vó Lentilha</h4><p>Sabor de afeto em 15 minutos! Uma sopa caseira, prática e reconfortante.</p><a href="/receita-sopa-jeitinho-de-vo.html" class="cta-button">Ver Detalhes</a></div></div>
-            <div class="product-card" data-category="sopa para-familia conforto kids"><img src="/sopas/sopinha-da-biza-vo.png" alt="Sopinha da Biza Vó" class="product-card-image"><div class="product-card-content"><h4>Sopinha da Biza Vó</h4><p>O aconchego da infância em uma versão nutritiva e funcional que as crianças amam.</p><a href="/receita-sopinha-biza-vo.html" class="cta-button">Ver Detalhes</a></div></div>
-            <div class="product-card" data-category="sopa vegano sem-gluten performance low-carb"><img src="/sopas/sopa-low-carb-funghi.png" alt="Sopa Low Carb Funghi" class="product-card-image"><div class="product-card-content"><h4>Sopa Low Carb Funghi</h4><p>Sabor gourmet sem culpa. Rica em sabor e proteína, com Funghi e lentilha negra.</p><a href="/receita-sopa-low-carb-funghi.html" class="cta-button">Ver Detalhes</a></div></div>
-            <div class="product-card" data-category="sopa vegano sem-gluten performance low-carb leveza"><img src="/sopas/sopa-low-carb-da-horta.png" alt="Sopa Low Carb da Horta" class="product-card-image"><div class="product-card-content"><h4>Sopa Low Carb da Horta</h4><p>Uma deliciosa e colorida mistura de vegetais e especiarias, pronta em 15 min.</p><a href="/receita-sopa-low-carb-horta.html" class="cta-button">Ver Detalhes</a></div></div>
-            <div class="product-card" data-category="sopa vegano sem-gluten performance detox leveza"><img src="/sopas/sopa-detox.png" alt="Sopa Detox" class="product-card-image"><div class="product-card-content"><h4>Sopa Detox</h4><p>Um "reset verde" para o corpo! Mistura funcional com Ora-pro-nóbis e gengibre.</p><a href="/receita-sopa-detox.html" class="cta-button">Ver Detalhes</a></div></div>
-            <div class="product-card" data-category="sopa vegano sem-gluten performance pos-treino proteico"><img src="/sopas/sopa-creme-fit.png" alt="Sopa Creme Fit" class="product-card-image"><div class="product-card-content"><h4>Sopa Creme Fit</h4><p>Sopa proteica com ervilha partida. Sacia e ajuda na recuperação muscular.</p><a href="/receita-sopa-creme-fit.html" class="cta-button">Ver Detalhes</a></div></div>
+            <div class="product-card" data-category="risoto vegano sem-gluten momento-especial gourmet-pratico terroso umami"><img src="/risotos/risoto-funghi-secchi.png" alt="Risoto Funghi Secchi" class="product-card-image"><div class="product-card-content"><h4>Risoto Funghi Secchi</h4><p>Sabor de restaurante em 18 minutos!</p><a href="/receita-risoto-funghi.html" class="cta-button">Ver Detalhes</a></div></div>
+            <div class="product-card" data-category="risoto vegano sem-gluten jantar-rapido momento-especial gourmet-pratico classico italiano"><img src="/risotos/risoto-pomodori-pesto.png" alt="Risoto Pomodori & Pesto" class="product-card-image"><div class="product-card-content"><h4>Risoto Pomodori & Pesto</h4><p>O sabor autêntico da Itália em 18 minutos!</p><a href="/receita-risoto-pomodori.html" class="cta-button">Ver Detalhes</a></div></div>
+            <div class="product-card" data-category="risoto sem-gluten leveza refrescante marmita-inteligente"><img src="/risotos/risoto-zucchini-alho-poro.png" alt="Risoto de Zucchini e Alho-Poró" class="product-card-image"><div class="product-card-content"><h4>Risoto de Zucchini e Alho-Poró</h4><p>Uma refeição leve e saudável em 18 minutos!</p><a href="/receita-risoto-zucchini.html" class="cta-button">Ver Detalhes</a></div></div>
+            <div class="product-card" data-category="risoto vegano sem-gluten momento-especial gourmet-pratico espanhol"><img src="/risotos/risoto-paella-veg.png" alt="Risoto Paella Veg." class="product-card-image"><div class="product-card-content"><h4>Risoto Paella Veg.</h4><p>Viagem culinária à Espanha com cúrcuma e páprica.</p><a href="/receita-paella-veg.html" class="cta-button">Ver Detalhes</a></div></div>
+            <div class="product-card" data-category="risoto vegano sem-gluten momento-especial jantar-romantico gourmet-pratico agridoce divertido"><img src="/risotos/risoto-pera-gorgonzola.png" alt="Risoto de Pêra e Gorgonzola Vegano" class="product-card-image"><div class="product-card-content"><h4>Risoto de Pêra e Gorgonzola Veg.</h4><p>O clássico agridoce em uma versão gourmet.</p><a href="/receita-risoto-pera-gorgonzola.html" class="cta-button">Ver Detalhes</a></div></div>
+            <div class="product-card" data-category="risoto vegano sem-gluten momento-especial agridoce divertido"><img src="/risotos/risoto-morango.png" alt="Risoto Agridoce de Morango" class="product-card-image"><div class="product-card-content"><h4>Risoto Agridoce de Morango</h4><p>Uma experiência sofisticada e surpreendente.</p><a href="/receita-risoto-morango.html" class="cta-button">Ver Detalhes</a></div></div>
+            <div class="product-card" data-category="risoto vegano sem-gluten momento-especial gourmet-pratico terroso umami"><img src="/risotos/risoto-mix-funghi.png" alt="Risoto Mix Funghi" class="product-card-image"><div class="product-card-content"><h4>Risoto Mix Funghi</h4><p>A experiência definitiva para amantes de cogumelos.</p><a href="/receita-risoto-mix-funghi.html" class="cta-button">Ver Detalhes</a></div></div>
+            <div class="product-card" data-category="risoto vegano sem-gluten gourmet-pratico terroso umami"><img src="/risotos/risoto-shiimeji-alho-poro.png" alt="Risoto de Shiimeji e Alho-Poró" class="product-card-image"><div class="product-card-content"><h4>Risoto de Shiimeji e Alho-Poró</h4><p>Uma refeição sofisticada e reconfortante.</p><a href="/receita-risoto-shiimeji.html" class="cta-button">Ver Detalhes</a></div></div>
+            <div class="product-card" data-category="risoto vegano sem-gluten gourmet-pratico"><img src="/risotos/risoto-pesto-alho-poro.png" alt="Risoto de Pesto e Alho-Poró" class="product-card-image"><div class="product-card-content"><h4>Risoto de Pesto e Alho-Poró</h4><p>Um risoto cremoso com o frescor do manjericão.</p><a href="/receita-risoto-pesto-alho-poro.html" class="cta-button">Ver Detalhes</a></div></div>
+            <div class="product-card" data-category="risoto leveza refrescante"><img src="/risotos/risoto-mediterraneo.png" alt="Risoto Mediterrâneo" class="product-card-image"><div class="product-card-content"><h4>Risoto Mediterrâneo</h4><p>Refeição saudável com toque cítrico de limão-siciliano.</p><a href="/receita-risoto-mediterraneo.html" class="cta-button">Ver Detalhes</a></div></div>
+            <div class="product-card" data-category="risoto vegano sem-gluten classico italiano jantar-rapido para-familia"><img src="/risotos/risoto-tomate-manjericao.png" alt="Risoto de Tomate e Manjericão" class="product-card-image"><div class="product-card-content"><h4>Risoto de Tomate e Manjericão</h4><p>O sabor clássico de comida de casa, cremoso e prático.</p><a href="/receita-risoto-tomate-manjericao.html" class="cta-button">Ver Detalhes</a></div></div>
+            <div class="product-card" data-category="sopa vegano sem-gluten para-familia conforto dia-a-dia"><img src="/sopas/sopa-jeitinho-de-vo.png" alt="Sopa Jeitinho de Vó Lentilha" class="product-card-image"><div class="product-card-content"><h4>Jeitinho de Vó Lentilha</h4><p>Sabor de afeto em 15 minutos! Uma sopa caseira e reconfortante.</p><a href="/receita-sopa-jeitinho-de-vo.html" class="cta-button">Ver Detalhes</a></div></div>
+            <div class="product-card" data-category="sopa para-familia conforto kids"><img src="/sopas/sopinha-da-biza-vo.png" alt="Sopinha da Biza Vó" class="product-card-image"><div class="product-card-content"><h4>Sopinha da Biza Vó</h4><p>O aconchego da infância em uma versão nutritiva que as crianças amam.</p><a href="/receita-sopinha-biza-vo.html" class="cta-button">Ver Detalhes</a></div></div>
+            <div class="product-card" data-category="sopa vegano sem-gluten performance low-carb"><img src="/sopas/sopa-low-carb-funghi.png" alt="Sopa Low Carb Funghi" class="product-card-image"><div class="product-card-content"><h4>Sopa Low Carb Funghi</h4><p>Sabor gourmet sem culpa, com Funghi e lentilha negra.</p><a href="/receita-sopa-low-carb-funghi.html" class="cta-button">Ver Detalhes</a></div></div>
+            <div class="product-card" data-category="sopa vegano sem-gluten performance low-carb leveza"><img src="/sopas/sopa-low-carb-da-horta.png" alt="Sopa Low Carb da Horta" class="product-card-image"><div class="product-card-content"><h4>Sopa Low Carb da Horta</h4><p>Uma deliciosa mistura de vegetais, pronta em 15 min.</p><a href="/receita-sopa-low-carb-horta.html" class="cta-button">Ver Detalhes</a></div></div>
+            <div class="product-card" data-category="sopa vegano sem-gluten performance detox leveza"><img src="/sopas/sopa-detox.png" alt="Sopa Detox" class="product-card-image"><div class="product-card-content"><h4>Sopa Detox</h4><p>Um "reset verde" para o corpo, com Ora-pro-nóbis.</p><a href="/receita-sopa-detox.html" class="cta-button">Ver Detalhes</a></div></div>
+            <div class="product-card" data-category="sopa vegano sem-gluten performance pos-treino proteico"><img src="/sopas/sopa-creme-fit.png" alt="Sopa Creme Fit" class="product-card-image"><div class="product-card-content"><h4>Sopa Creme Fit</h4><p>Sopa proteica que sacia e ajuda na recuperação muscular.</p><a href="/receita-sopa-creme-fit.html" class="cta-button">Ver Detalhes</a></div></div>
             <div class="product-card" data-category="sopa vegano sem-gluten conforto kids"><img src="/sopas/canja-vegana.png" alt="Canja Vegana" class="product-card-image"><div class="product-card-content"><h4>Canja Vegana</h4><p>Nutritiva e reconfortante com arroz jasmini e lentilha vermelha.</p><a href="/receita-canja-vegana.html" class="cta-button">Ver Detalhes</a></div></div>
-
-            <div class="product-card" data-category="refeicao vegano sem-gluten para-familia dia-a-dia marmita-inteligente brasileiro"><img src="/refeicoes/baiao-de-dois.png" alt="Baião de Dois grãos integrais" class="product-card-image"><div class="product-card-content"><h4>Baião de Dois grãos integrais</h4><p>O clássico brasileiro em uma versão integral, vegana, saudável e prática.</p><a href="/receita-baiao-de-dois.html" class="cta-button">Ver Detalhes</a></div></div>
-             <div class="product-card" data-category="refeicao vegano sem-gluten marmita-inteligente mediterraneo leveza"><img src="/refeicoes/refeicao-mediterranea.png" alt="Refeição Mediterrânea" class="product-card-image"><div class="product-card-content"><h4>Refeição Mediterrânea</h4><p>Saudável e saborosa, com grão de bico, arroz vermelho e toque cítrico.</p><a href="/refeicao-mediterranea.html" class="cta-button">Ver Detalhes</a></div></div>
-            <div class="product-card" data-category="antepasto vegano sem-gluten momento-especial gourmet-pratico"><img src="/antepastos/funghi-confitado.png" alt="Funghi Confitado" class="product-card-image"><div class="product-card-content"><h4>Funghi Confitado no Azeite</h4><p>O segredo dos chefs para elevar seus pratos. Um finalizador gourmet.</p><a href="/receita-funghi-confitado.html" class="cta-button">Ver Detalhes</a></div></div>
-            <div class="product-card" data-category="antepasto sem-gluten momento-especial gourmet-pratico italiano"><img src="/antepastos/pesto-manjericao.png" alt="Pesto Manjericão" class="product-card-image"><div class="product-card-content"><h4>Pesto Manjericão com Castanha-do-Pará</h4><p>O autêntico sabor genovês com o toque brasileiro da Castanha-do-Pará.</p><a href="/receita-pesto-manjericao.html" class="cta-button">Ver Detalhes</a></div></div>
-            <div class="product-card" data-category="antepasto vegano sem-gluten momento-especial gourmet-pratico"><img src="/antepastos/caponata-shiitake.png" alt="Caponata com Shiitake" class="product-card-image"><div class="product-card-content"><h4>Caponata com Shiitake Grelhado</h4><p>Um antepasto gourmet para qualquer ocasião, com a técnica confit.</p><a href="/receita-caponata-shiitake.html" class="cta-button">Ver Detalhes</a></div></div>
+            <div class="product-card" data-category="refeicao vegano sem-gluten para-familia dia-a-dia marmita-inteligente brasileiro"><img src="/refeicoes/baiao-de-dois.png" alt="Baião de Dois grãos integrais" class="product-card-image"><div class="product-card-content"><h4>Baião de Dois grãos integrais</h4><p>O clássico brasileiro em uma versão integral e saudável.</p><a href="/receita-baiao-de-dois.html" class="cta-button">Ver Detalhes</a></div></div>
+            <div class="product-card" data-category="refeicao vegano sem-gluten marmita-inteligente mediterraneo leveza"><img src="/refeicoes/refeicao-mediterranea.png" alt="Refeição Mediterrânea" class="product-card-image"><div class="product-card-content"><h4>Refeição Mediterrânea</h4><p>Saudável e saborosa, com grão de bico e arroz vermelho.</p><a href="/refeicao-mediterranea.html" class="cta-button">Ver Detalhes</a></div></div>
+            <div class="product-card" data-category="antepasto vegano sem-gluten momento-especial gourmet-pratico"><img src="/antepastos/funghi-confitado.png" alt="Funghi Confitado" class="product-card-image"><div class="product-card-content"><h4>Funghi Confitado no Azeite</h4><p>O segredo dos chefs para elevar seus pratos.</p><a href="/receita-funghi-confitado.html" class="cta-button">Ver Detalhes</a></div></div>
+            <div class="product-card" data-category="antepasto sem-gluten momento-especial gourmet-pratico italiano"><img src="/antepastos/pesto-manjericao.png" alt="Pesto Manjericão" class="product-card-image"><div class="product-card-content"><h4>Pesto Manjericão</h4><p>O autêntico sabor genovês com o toque da Castanha-do-Pará.</p><a href="/receita-pesto-manjericao.html" class="cta-button">Ver Detalhes</a></div></div>
+            <div class="product-card" data-category="antepasto vegano sem-gluten momento-especial gourmet-pratico"><img src="/antepastos/caponata-shiitake.png" alt="Caponata com Shiitake" class="product-card-image"><div class="product-card-content"><h4>Caponata com Shiitake Grelhado</h4><p>Um antepasto gourmet para qualquer ocasião.</p><a href="/receita-caponata-shiitake.html" class="cta-button">Ver Detalhes</a></div></div>
         </div>
     </main>
     
-    <footer>
-        </footer>
+    <footer><div class="container footer-grid"><div><h4>Navegação</h4><a href="/index.html">Início</a><a href="/nossa-filosofia.html">Nossa Filosofia</a><a href="/cardapio.html">Cardápio Completo</a><a href="/faq.html">FAQ</a><a href="/chefbrico-club.html">ChefBrico Club</a></div><div><h4>Nossos Produtos</h4><a href="/risotos.html">Risotos</a><a href="/sopas-funcionais.html">Sopas Funcionais</a><a href="/refeicoes-praticas.html">Refeições Práticas</a><a href="/emporio-da-chef.html">Empório da Chef</a></div><div><h4>Ajuda & Suporte</h4><a href="/onde-encontrar.html">Onde Encontrar</a><a href="https://www.chefbrico.com/como-comprar" target="_blank" rel="noopener noreferrer">Como Comprar na Loja</a><a href="https://www.chefbrico.com/trocas-e-devolucoes" target="_blank" rel="noopener noreferrer">Trocas e Devoluções</a><a href="https://wa.me/5561996659880" target="_blank" rel="noopener noreferrer">Contato</a></div><div><h4>Redes Sociais</h4><a href="https://www.instagram.com/chefbrico/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://br.pinterest.com/chefbrico/" target="_blank" rel="noopener noreferrer">Pinterest</a></div></div><div class="container footer-credit"><p>© 2025 ChefBrico - Todos os direitos reservados.</p><p> Maria Conceição | CNPJ: 36.014.833/0001-59 </p></div></footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const allFilterButtons = document.querySelectorAll('.filter-buttons .filter-btn');
             const productCards = document.querySelectorAll('.product-grid .product-card');
-            const solutionFilterButtons = document.querySelector('.solution-filters').querySelectorAll('.filter-btn');
-            const categoryFilterButtons = document.querySelector('.category-filters').querySelectorAll('.filter-btn');
 
             allFilterButtons.forEach(button => {
                 button.addEventListener('click', function() {
                     const filter = this.getAttribute('data-filter');
-                    const isSolutionFilter = this.parentElement.classList.contains('solution-filters');
                     
-                    // Lógica para ativar/desativar botões
-                    if (isSolutionFilter) {
-                        resetActive(categoryFilterButtons);
+                    if (this.classList.contains('active') && filter !== 'all') {
+                        this.classList.remove('active');
+                        // Se nenhum outro filtro estiver ativo, ativa o 'Todos'
+                        if (document.querySelectorAll('.filter-btn.active').length === 0) {
+                            document.querySelector('.filter-btn[data-filter="all"]').classList.add('active');
+                        }
                     } else {
-                        resetActive(solutionFilterButtons);
-                        document.querySelector('.solution-filters .filter-btn[data-filter="all"]').classList.remove('active');
+                        // Reseta todos os botões antes de ativar o novo
+                         allFilterButtons.forEach(btn => btn.classList.remove('active'));
+                         this.classList.add('active');
                     }
                     
-                    if (filter === 'all') {
-                        resetActive(categoryFilterButtons);
-                        this.classList.add('active');
-                    } else {
-                        this.classList.toggle('active');
-                    }
-                    
-                    filterProducts();
+                    const activeFilter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
+
+                    productCards.forEach(card => {
+                        if (activeFilter === 'all' || card.getAttribute('data-category').includes(activeFilter)) {
+                            card.classList.remove('hide');
+                        } else {
+                            card.classList.add('hide');
+                        }
+                    });
                 });
             });
-
-            function resetActive(buttonGroup) {
-                 buttonGroup.forEach(btn => btn.classList.remove('active'));
-            }
-
-            function filterProducts() {
-                const activeFilters = [];
-                document.querySelectorAll('.filter-btn.active').forEach(btn => {
-                    if (btn.getAttribute('data-filter') !== 'all') {
-                        activeFilters.push(btn.getAttribute('data-filter'));
-                    }
-                });
-                
-                let allButton = document.querySelector('.solution-filters .filter-btn[data-filter="all"]');
-
-                if (activeFilters.length === 0) {
-                    if(allButton) allButton.classList.add('active');
-                } else {
-                    if(allButton) allButton.classList.remove('active');
-                }
-
-                productCards.forEach(card => {
-                    const cardCategories = card.getAttribute('data-category');
-                    let matchesAllFilters = activeFilters.every(filter => cardCategories.includes(filter));
-
-                    if (activeFilters.length === 0 || matchesAllFilters) {
-                        card.classList.remove('hide');
-                    } else {
-                        card.classList.add('hide');
-                    }
-                });
-            }
         });
     </script>
 </body>
