@@ -582,104 +582,61 @@ main.container {
 }
 
 /* ======================================================= */
-/* ===== MELHORIA ESTÉTICA PARA O CARDÁPIO (DESKTOP) ===== */
+/* ===== CÓDIGO FINAL E UNIFICADO PARA O CARDÁPIO V3.0 ===== */
 /* ======================================================= */
 
-/* Este é o novo container que vamos criar no HTML */
+/* --- Controla o container geral da grade para centralização --- */
 .product-grid-container {
-    max-width: 1200px; /* Define a largura máxima da sua grade de produtos */
-    margin: 0 auto;    /* Truque mágico para centralizar o container na tela */
+    max-width: 1200px; /* Define a largura máxima da grade */
+    margin: 0 auto;    /* Centraliza a grade na tela */
 }
 
-/* Opcional: Um pequeno ajuste para os títulos das seções de filtro */
-.filter-title {
-    margin-top: 40px;
-}
-/* ======================================================= */
-/* ===== AJUSTES FINOS DE ESPAÇAMENTO - CARDAPIO V1.1 ==== */
-/* ======================================================= */
-
-/* 1. REDUZIR A DISTÂNCIA ENTRE O MENU E O TÍTULO H1
-  A classe '.page-header-local' é a caixa que contém seu H1.
-  Estamos diminuindo a margem no topo dela.
-*/
-.page-header-local {
-    margin-top: 20px; /* Originalmente era 40px, reduzimos pela metade */
-}
-
-/* 2. REDUZIR A DISTÂNCIA ENTRE OS DOIS GRUPOS DE FILTROS
-  A classe '.filter-buttons' é a caixa de cada grupo de botões.
-  Estamos diminuindo a margem no final dela.
-*/
-.filter-buttons {
-    margin-bottom: 20px; /* Originalmente era 40px, reduzimos */
-}
-
-/*
-  3. AJUSTAR O TAMANHO DOS CARDS DOS PRODUTOS
-  A classe '.product-card' controla a aparência de cada produto.
-  Vamos definir uma largura máxima e mínima para que eles fiquem
-  mais consistentes em telas largas, evitando que fiquem muito "esticados".
-*/
-.product-grid {
-    /* Esta nova regra garante que a grade fique centralizada e elegante */
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.product-card {
-    /* Um pequeno ajuste para garantir que o conteúdo interno se alinhe bem */
-    text-align: center;
-}
-
-.product-card-content p {
-    font-size: 0.95em; /* Um pouco maior para melhor leitura */
-    min-height: 70px; /* Garante que as descrições tenham altura parecida, alinhando os botões */
-}
-/* ======================================================= */
-/* ===== MELHORIA CARDS CARDÁPIO - ALTURA DINÂMICA V2.0 ==== */
-/* ======================================================= */
-
-/* A regra principal da grade permanece a mesma */
+/* --- A grade de produtos --- */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
-    align-items: stretch; /* <<< NOVO: Garante que os cards na mesma linha se estiquem para ter a mesma altura total */
+    align-items: stretch; /* Garante que os cards na mesma linha tenham a mesma altura */
 }
 
+/* --- O card individual do produto --- */
 .product-card {
-    /* A estrutura do card permanece, garantindo que ele se expanda verticalmente */
     display: flex;
     flex-direction: column;
+    text-align: center;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
 }
 
-/* NOVA LÓGICA PARA A IMAGEM */
+/* --- A imagem do produto --- */
 .product-card-image {
     width: 100%;
-    height: auto; /* <<< MUDANÇA: A altura agora é automática, não mais fixa em 180px */
-    aspect-ratio: 4 / 3; /* <<< MÁGICA: Garante que todas as imagens tenham a mesma proporção (4:3, retangular), sem cortar */
+    height: auto;
+    aspect-ratio: 4 / 3; /* Proporção 4:3 para consistência visual */
     object-fit: cover;
 }
 
+/* --- A caixa de conteúdo do card (título, texto, botão) --- */
 .product-card-content {
-    /* A estrutura do conteúdo permanece, garantindo que o botão fique no final */
     display: flex;
     flex-direction: column;
-    flex-grow: 1; 
+    flex-grow: 1; /* Faz esta caixa ocupar todo o espaço vertical disponível */
+    padding: 20px;
 }
 
-/* REMOVEMOS AS REGRAS DE 'min-height' DAQUI */
 .product-card-content h4 {
     font-size: 1.2em;
+    min-height: 45px; /* Garante que títulos de 1 ou 2 linhas tenham altura parecida */
 }
 
 .product-card-content p {
     font-size: 0.95em;
     flex-grow: 1; /* Garante que a descrição empurre o botão para baixo */
+    margin-bottom: 15px;
 }
 
 .product-card-content .cta-button {
-    margin-top: 15px; /* Adiciona um espaço acima do botão */
+    margin-top: auto; /* Truque mágico para alinhar o botão no final, mesmo com textos de tamanhos diferentes */
 }
