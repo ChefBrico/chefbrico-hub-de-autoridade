@@ -580,3 +580,18 @@ main.container {
     border-top: 1px solid #f0ead6;
     margin: 10px 0;
 }
+
+/* ======================================================= */
+/* ===== MELHORIA ESTÉTICA PARA O CARDÁPIO (DESKTOP) ===== */
+/* ======================================================= */
+
+/* Este é o novo container que vamos criar no HTML */
+.product-grid-container {
+    max-width: 1200px; /* Define a largura máxima da sua grade de produtos */
+    margin: 0 auto;    /* Truque mágico para centralizar o container na tela */
+}
+
+/* Opcional: Um pequeno ajuste para os títulos das seções de filtro */
+.filter-title {
+    margin-top: 40px;
+}
