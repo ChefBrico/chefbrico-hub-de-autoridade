@@ -633,12 +633,53 @@ main.container {
     text-align: center;
 }
 
-.product-card-content h4 {
-    font-size: 1.2em; /* Podemos aumentar um pouco o título do produto */
-    min-height: 45px; /* Garante que os títulos tenham uma altura parecida, alinhando os textos */
-}
-
 .product-card-content p {
     font-size: 0.95em; /* Um pouco maior para melhor leitura */
     min-height: 70px; /* Garante que as descrições tenham altura parecida, alinhando os botões */
+}
+/* ======================================================= */
+/* ===== MELHORIA CARDS CARDÁPIO - ALTURA DINÂMICA V2.0 ==== */
+/* ======================================================= */
+
+/* A regra principal da grade permanece a mesma */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    align-items: stretch; /* <<< NOVO: Garante que os cards na mesma linha se estiquem para ter a mesma altura total */
+}
+
+.product-card {
+    /* A estrutura do card permanece, garantindo que ele se expanda verticalmente */
+    display: flex;
+    flex-direction: column;
+}
+
+/* NOVA LÓGICA PARA A IMAGEM */
+.product-card-image {
+    width: 100%;
+    height: auto; /* <<< MUDANÇA: A altura agora é automática, não mais fixa em 180px */
+    aspect-ratio: 4 / 3; /* <<< MÁGICA: Garante que todas as imagens tenham a mesma proporção (4:3, retangular), sem cortar */
+    object-fit: cover;
+}
+
+.product-card-content {
+    /* A estrutura do conteúdo permanece, garantindo que o botão fique no final */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; 
+}
+
+/* REMOVEMOS AS REGRAS DE 'min-height' DAQUI */
+.product-card-content h4 {
+    font-size: 1.2em;
+}
+
+.product-card-content p {
+    font-size: 0.95em;
+    flex-grow: 1; /* Garante que a descrição empurre o botão para baixo */
+}
+
+.product-card-content .cta-button {
+    margin-top: 15px; /* Adiciona um espaço acima do botão */
 }
