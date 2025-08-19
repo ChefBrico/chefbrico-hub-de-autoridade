@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cardápio Consultável | ChefBrico</title>
-    <meta name="description" content="Explore nosso cardápio completo com mais de 26 opções e filtre por tipo, dieta ou ocasião para encontrar o prato perfeito para sua rotina.">
+    <title>Cardápio Inteligente: Encontre sua Solução | ChefBrico</title>
+    <meta name="description" content="Explore o cardápio completo da ChefBrico. Filtre por solução, dieta ou tipo de prato e encontre a refeição perfeita para sua rotina.">
     <link rel="stylesheet" href="/style.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-K58FN8J2VC"></script>
     <script>
@@ -24,11 +24,15 @@
     }
     </script>
     <style>
+        /* Estilos da Página e Componentes */
         .page-header-local { text-align: center; margin: 40px 20px; }
-        #filter-buttons { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 0 20px 40px 20px; }
-        .filter-btn { background-color: #f0ead6; color: #333; padding: 10px 20px; border-radius: 20px; border: none; cursor: pointer; font-size: 0.9em; font-weight: bold; transition: all 0.2s ease-in-out; }
+        .filter-section { margin-bottom: 20px; }
+        .filter-title { text-align: center; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; color: var(--cor-primaria); margin-bottom: 15px; font-size: 1.1em; }
+        .filter-buttons { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 0 20px 40px 20px; padding-bottom: 30px; border-bottom: 2px solid #f0ead6;}
+        .filter-buttons:last-of-type { border-bottom: none; }
+        .filter-btn { background-color: #f9f6ef; color: #5a3a30; padding: 10px 20px; border-radius: 20px; border: 1px solid #f0ead6; cursor: pointer; font-size: 0.9em; font-weight: bold; transition: all 0.2s ease-in-out; }
         .filter-btn:hover { background-color: #e0d8c4; }
-        .filter-btn.active { background-color: var(--cor-primaria); color: white; }
+        .filter-btn.active { background-color: var(--cor-primaria); color: white; border-color: var(--cor-primaria); }
         .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 50px; }
         .product-card { border: 1px solid #eee; border-radius: 8px; overflow: hidden; text-decoration: none; color: var(--cor-texto); display: flex; flex-direction: column; transition: transform 0.3s ease, opacity 0.3s ease, width 0s, padding 0s, margin 0s; }
         .product-card.hide { transform: scale(0); opacity: 0; width: 0; padding: 0; margin: 0; border: none; gap: 0; transition: transform 0.3s ease, opacity 0.3s ease, width 0s 0.3s, padding 0s 0.3s, margin 0s 0.3s; }
@@ -37,87 +41,134 @@
         .product-card-content h4 { margin-top: 0; margin-bottom: 10px; }
         .product-card-content p { font-size: 0.9em; line-height: 1.6; flex-grow: 1; margin-bottom: 15px; }
         .product-card-content .cta-button { margin-top: auto; text-align: center; }
+        /* Estilos para o menu Dropdown */
+        .dropdown { position: relative; display: inline-block; }
+        .dropbtn { cursor: pointer; }
+        .dropdown-content { display: none; position: absolute; background-color: #fdfcf7; min-width: 250px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1); z-index: 100; border-radius: 8px; border: 1px solid #f0ead6; padding: 10px 0; }
+        .dropdown-content a, .dropdown-content .dropdown-title { color: var(--cor-primaria, #5a3a30); padding: 12px 16px; text-decoration: none; display: block; text-align: left; }
+        .dropdown-content .dropdown-title { font-weight: bold; font-size: 0.8em; text-transform: uppercase; color: #aaa; padding-top: 15px; padding-bottom: 5px; }
+        .dropdown-content a:hover { background-color: #f0ead6; }
+        .dropdown:hover .dropdown-content { display: block; }
+        .dropdown-content hr { border: none; border-top: 1px solid #f0ead6; margin: 10px 0; }
     </style>
 </head>
 <body>
-    
+
+    <div class="top-slogan-bar"><p>COMIDA DE VERDADE, SEM TODA AQUELA CONFUSÃO NA COZINHA!</p></div>
     <header>
-        </header>
+        <div class="container header-flex">
+            <a href="/index.html" class="logo"><img src="/imagens/flamula-chefbrico.png" alt="Logo ChefBrico"></a>
+            <nav>
+                <div class="main-nav-links">
+                    <a href="/nossa-filosofia.html">Nossa Filosofia</a>
+                    <div class="dropdown">
+                        <a href="/cardapio.html" class="dropbtn">Nosso Cardápio ▼</a>
+                        <div class="dropdown-content">
+                            <span class="dropdown-title">NAVEGUE POR SOLUÇÃO</span>
+                            <a href="/solucao-jantar-rapido.html">Jantar Rápido para a Semana</a>
+                            <a href="/solucao-momentos-especiais.html">Para um Momento a Dois</a>
+                            <a href="/solucao-performance.html">Cardápio para sua Dieta</a>
+                            <a href="/solucao-familia.html">Opções para Crianças</a>
+                            <hr>
+                            <span class="dropdown-title">NAVEGUE POR CATEGORIA</span>
+                            <a href="/risotos.html">Risotos</a>
+                            <a href="/sopas-funcionais.html">Sopas Funcionais</a>
+                            <a href="/refeicoes-praticas.html">Refeições Práticas</a>
+                            <a href="/emporio-da-chef.html">Empório da Chef</a>
+                        </div>
+                    </div>
+                    <a href="/onde-encontrar.html">Onde Encontrar</a>
+                    <a href="/chefbrico-club.html">ChefBrico Club</a>
+                    <a href="/faq.html">FAQ</a>
+                </div>
+                <a href="https://www.chefbrico.com" target="_blank" rel="noopener noreferrer" class="cta-button">Ir para a Loja</a>
+            </nav>
+        </div>
+    </header>
 
     <main class="container">
         <div class="page-header-local">
-            <h1>Nosso Cardápio de Comida de Verdade</h1>
-            <p class="subtitle">Aqui você encontra todas as nossas criações. Use os filtros para descobrir o prato perfeito para cada momento da sua rotina.</p>
+            <h1>Nosso Cardápio Inteligente</h1>
+            <p class="subtitle">Encontre a solução perfeita para cada momento. Use nossos filtros por Solução, Categoria ou Dieta para navegar em nosso universo de sabores.</p>
         </div>
 
-        <div id="filter-buttons">
-            <button class="filter-btn active" data-filter="all">Todos</button>
-            <button class="filter-btn" data-filter="risoto">Risotos</button>
-            <button class="filter-btn" data-filter="sopa">Sopas</button>
-            <button class="filter-btn" data-filter="refeicao">Refeições</button>
-            <button class="filter-btn" data-filter="antepasto">Antepastos</button>
-            <button class="filter-btn" data-filter="vegano">Vegano</button>
-            <button class="filter-btn" data-filter="sem-gluten">Sem Glúten</button>
-            <button class="filter-btn" data-filter="jantar-romantico">Jantar Romântico</button>
-            <button class="filter-btn" data-filter="pos-treino">Pós-Treino</button>
-            <button class="filter-btn" data-filter="low-carb">Low Carb</button>
+        <div class="filter-section">
+            <div class="filter-title">🔎 Navegue por Solução</div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="jantar-rapido">Jantar Rápido</button>
+                <button class="filter-btn" data-filter="marmita-inteligente">Marmita Saudável</button>
+                <button class="filter-btn" data-filter="momento-especial">Momentos Especiais</button>
+                <button class="filter-btn" data-filter="para-familia">Para a Família</button>
+                <button class="filter-btn" data-filter="performance">Performance & Dieta</button>
+            </div>
         </div>
-
+        <div class="filter-section">
+            <div class="filter-title">🍲 Navegue por Categoria</div>
+            <div class="filter-buttons">
+                 <button class="filter-btn" data-filter="risoto">Risotos</button>
+                 <button class="filter-btn" data-filter="sopa">Sopas</button>
+                 <button class="filter-btn" data-filter="refeicao">Refeições</button>
+                 <button class="filter-btn" data-filter="antepasto">Empório</button>
+            </div>
+        </div>
+        
         <div class="product-grid">
+            <div class="product-card" data-category="risoto vegano sem-gluten momento-especial gourmet-pratico terroso umami"><img src="/risotos/risoto-funghi-secchi.png" alt="Risoto Funghi Secchi" class="product-card-image"><div class="product-card-content"><h4>Risoto Funghi Secchi</h4><p>Sabor de restaurante em 18 minutos! Intenso e 100% natural.</p><a href="/receita-risoto-funghi.html" class="cta-button">Ver Detalhes</a></div></div>
+            <div class="product-card" data-category="risoto vegano sem-gluten jantar-rapido momento-especial gourmet-pratico classico italiano"><img src="/risotos/risoto-pomodori-pesto.png" alt="Risoto Pomodori & Pesto" class="product-card-image"><div class="product-card-content"><h4>Risoto Pomodori & Pesto</h4><p>O sabor autêntico da Itália. Cremosidade e afeto em cada garfada.</p><a href="/receita-risoto-pomodori.html" class="cta-button">Ver Detalhes</a></div></div>
+            <div class="product-card" data-category="risoto sem-gluten leveza refrescante marmita-inteligente"><img src="/risotos/risoto-zucchini-alho-poro.png" alt="Risoto de Zucchini e Alho-Poró" class="product-card-image"><div class="product-card-content"><h4>Risoto de Zucchini e Alho-Poró</h4><p>Uma refeição leve, saudável e incrivelmente saborosa.</p><a href="/receita-risoto-zucchini.html" class="cta-button">Ver Detalhes</a></div></div>
+            <div class="product-card" data-category="risoto vegano sem-gluten momento-especial gourmet-pratico espanhol"><img src="/risotos/risoto-paella-veg.png" alt="Risoto Paella Veg." class="product-card-image"><div class="product-card-content"><h4>Risoto Paella Veg.</h4><p>Uma viagem à Espanha com cúrcuma e páprica defumada.</p><a href="/receita-paella-veg.html" class="cta-button">Ver Detalhes</a></div></div>
+            <div class="product-card" data-category="risoto vegano sem-gluten momento-especial jantar-romantico gourmet-pratico agridoce divertido"><img src="/risotos/risoto-pera-gorgonzola.png" alt="Risoto de Pêra e Gorgonzola Vegano" class="product-card-image"><div class="product-card-content"><h4>Risoto de Pêra e Gorgonzola Veg.</h4><p>O clássico agridoce em uma versão gourmet e 100% à base de plantas.</p><a href="/receita-risoto-pera-gorgonzola.html" class="cta-button">Ver Detalhes</a></div></div>
+            <div class="product-card" data-category="risoto vegano sem-gluten momento-especial agridoce divertido"><img src="/risotos/risoto-morango.png" alt="Risoto Agridoce de Morango" class="product-card-image"><div class="product-card-content"><h4>Risoto Agridoce de Morango</h4><p>Uma experiência sofisticada e surpreendente para paladares ousados.</p><a href="/receita-risoto-morango.html" class="cta-button">Ver Detalhes</a></div></div>
+            <div class="product-card" data-category="risoto vegano sem-gluten momento-especial gourmet-pratico terroso umami"><img src="/risotos/risoto-mix-funghi.png" alt="Risoto Mix Funghi" class="product-card-image"><div class="product-card-content"><h4>Risoto Mix Funghi</h4><p>A experiência definitiva para amantes de cogumelos, com um blend de espécies.</p><a href="/receita-risoto-mix-funghi.html" class="cta-button">Ver Detalhes</a></div></div>
+            <div class="product-card" data-category="risoto vegano sem-gluten gourmet-pratico terroso umami"><img src="/risotos/risoto-shiimeji-alho-poro.png" alt="Risoto de Shiimeji e Alho-Poró" class="product-card-image"><div class="product-card-content"><h4>Risoto de Shiimeji e Alho-Poró</h4><p>Uma refeição sofisticada e reconfortante com o toque oriental do shiitake.</p><a href="/receita-risoto-shiimeji.html" class="cta-button">Ver Detalhes</a></div></div>
+            <div class="product-card" data-category="risoto vegano sem-gluten gourmet-pratico"><img src="/risotos/risoto-pesto-alho-poro.png" alt="Risoto de Pesto e Alho-Poró" class="product-card-image"><div class="product-card-content"><h4>Risoto de Pesto e Alho-Poró</h4><p>Um risoto cremoso e sofisticado com o frescor do manjericão.</p><a href="/receita-risoto-pesto-alho-poro.html" class="cta-button">Ver Detalhes</a></div></div>
+            <div class="product-card" data-category="risoto leveza refrescante"><img src="/risotos/risoto-mediterraneo.png" alt="Risoto Mediterrâneo" class="product-card-image"><div class="product-card-content"><h4>Risoto Mediterrâneo</h4><p>Refeição saudável com um toque cítrico de limão-siciliano.</p><a href="/receita-risoto-mediterraneo.html" class="cta-button">Ver Detalhes</a></div></div>
+            <div class="product-card" data-category="risoto vegano sem-gluten classico italiano jantar-rapido para-familia"><img src="/risotos/risoto-tomate-manjericao.png" alt="Risoto de Tomate e Manjericão" class="product-card-image"><div class="product-card-content"><h4>Risoto de Tomate e Manjericão</h4><p>O sabor clássico de comida de casa em uma versão cremosa e prática.</p><a href="/receita-risoto-tomate-manjericao.html" class="cta-button">Ver Detalhes</a></div></div>
             
-            <div class="product-card" data-category="[ETIQUETAS AQUI, SEPARADAS POR ESPAÇO]">
-                <img src="[CAMINHO/PARA/IMAGEM.png]" alt="[NOME DO PRODUTO]" class="product-card-image">
-                <div class="product-card-content">
-                    <h4>[NOME DO PRODUTO]</h4>
-                    <p>[PEQUENA DESCRIÇÃO ATRAENTE]</p>
-                    <a href="[LINK PARA A PÁGINA-SOMBRA DO PRODUTO]" class="cta-button">Ver Detalhes</a>
-                </div>
-            </div>
-            <div class="product-card" data-category="risoto vegano sem-gluten rapido jantar-romantico">
-                <img src="/risotos/risoto-pomodori-pesto-tijela-chefbrico.png" alt="Risoto Pomodori & Pesto" class="product-card-image">
-                <div class="product-card-content">
-                    <h4>Risoto Pomodori & Pesto</h4>
-                    <p>O clássico sabor da Itália, cremoso e reconfortante. Pronto em 18 minutos.</p>
-                    <a href="/receita-risoto-pomodori.html" class="cta-button">Ver Detalhes</a>
-                </div>
-            </div>
+            <div class="product-card" data-category="sopa vegano sem-gluten para-familia conforto dia-a-dia"><img src="/sopas/sopa-jeitinho-de-vo.png" alt="Sopa Jeitinho de Vó Lentilha" class="product-card-image"><div class="product-card-content"><h4>Jeitinho de Vó Lentilha</h4><p>Sabor de afeto em 15 minutos! Uma sopa caseira, prática e reconfortante.</p><a href="/receita-sopa-jeitinho-de-vo.html" class="cta-button">Ver Detalhes</a></div></div>
+            <div class="product-card" data-category="sopa para-familia conforto kids"><img src="/sopas/sopinha-da-biza-vo.png" alt="Sopinha da Biza Vó" class="product-card-image"><div class="product-card-content"><h4>Sopinha da Biza Vó</h4><p>O aconchego da infância em uma versão nutritiva e funcional que as crianças amam.</p><a href="/receita-sopinha-biza-vo.html" class="cta-button">Ver Detalhes</a></div></div>
+            <div class="product-card" data-category="sopa vegano sem-gluten performance low-carb"><img src="/sopas/sopa-low-carb-funghi.png" alt="Sopa Low Carb Funghi" class="product-card-image"><div class="product-card-content"><h4>Sopa Low Carb Funghi</h4><p>Sabor gourmet sem culpa. Rica em sabor e proteína, com Funghi e lentilha negra.</p><a href="/receita-sopa-low-carb-funghi.html" class="cta-button">Ver Detalhes</a></div></div>
+            <div class="product-card" data-category="sopa vegano sem-gluten performance low-carb leveza"><img src="/sopas/sopa-low-carb-da-horta.png" alt="Sopa Low Carb da Horta" class="product-card-image"><div class="product-card-content"><h4>Sopa Low Carb da Horta</h4><p>Uma deliciosa e colorida mistura de vegetais e especiarias, pronta em 15 min.</p><a href="/receita-sopa-low-carb-horta.html" class="cta-button">Ver Detalhes</a></div></div>
+            <div class="product-card" data-category="sopa vegano sem-gluten performance detox leveza"><img src="/sopas/sopa-detox.png" alt="Sopa Detox" class="product-card-image"><div class="product-card-content"><h4>Sopa Detox</h4><p>Um "reset verde" para o corpo! Mistura funcional com Ora-pro-nóbis e gengibre.</p><a href="/receita-sopa-detox.html" class="cta-button">Ver Detalhes</a></div></div>
+            <div class="product-card" data-category="sopa vegano sem-gluten performance pos-treino proteico"><img src="/sopas/sopa-creme-fit.png" alt="Sopa Creme Fit" class="product-card-image"><div class="product-card-content"><h4>Sopa Creme Fit</h4><p>Sopa proteica com ervilha partida. Sacia e ajuda na recuperação muscular.</p><a href="/receita-sopa-creme-fit.html" class="cta-button">Ver Detalhes</a></div></div>
+            <div class="product-card" data-category="sopa vegano sem-gluten conforto kids"><img src="/sopas/canja-vegana.png" alt="Canja Vegana" class="product-card-image"><div class="product-card-content"><h4>Canja Vegana</h4><p>Nutritiva e reconfortante com arroz jasmini e lentilha vermelha.</p><a href="/receita-canja-vegana.html" class="cta-button">Ver Detalhes</a></div></div>
 
-            <div class="product-card" data-category="sopa vegano sem-gluten pos-treino">
-                <img src="/sopas/sopa-creme-fit.png" alt="Sopa Creme Fit Vegana" class="product-card-image">
-                <div class="product-card-content">
-                    <h4>Sopa Creme Fit Vegana</h4>
-                    <p>Rica em proteína vegetal, ideal para a recuperação pós-treino. Sabor e nutrição em minutos.</p>
-                    <a href="/receita-sopa-creme-fit.html" class="cta-button">Ver Detalhes</a>
-                </div>
-            </div>
-            
-            </div>
+            <div class="product-card" data-category="refeicao vegano sem-gluten para-familia dia-a-dia marmita-inteligente brasileiro"><img src="/refeicoes/baiao-de-dois.png" alt="Baião de Dois grãos integrais" class="product-card-image"><div class="product-card-content"><h4>Baião de Dois grãos integrais</h4><p>O clássico brasileiro em uma versão integral, vegana, saudável e prática.</p><a href="/receita-baiao-de-dois.html" class="cta-button">Ver Detalhes</a></div></div>
+             <div class="product-card" data-category="refeicao vegano sem-gluten marmita-inteligente mediterraneo leveza"><img src="/refeicoes/refeicao-mediterranea.png" alt="Refeição Mediterrânea" class="product-card-image"><div class="product-card-content"><h4>Refeição Mediterrânea</h4><p>Saudável e saborosa, com grão de bico, arroz vermelho e toque cítrico.</p><a href="/refeicao-mediterranea.html" class="cta-button">Ver Detalhes</a></div></div>
+            <div class="product-card" data-category="antepasto vegano sem-gluten momento-especial gourmet-pratico"><img src="/antepastos/funghi-confitado.png" alt="Funghi Confitado" class="product-card-image"><div class="product-card-content"><h4>Funghi Confitado no Azeite</h4><p>O segredo dos chefs para elevar seus pratos. Um finalizador gourmet.</p><a href="/receita-funghi-confitado.html" class="cta-button">Ver Detalhes</a></div></div>
+            <div class="product-card" data-category="antepasto sem-gluten momento-especial gourmet-pratico italiano"><img src="/antepastos/pesto-manjericao.png" alt="Pesto Manjericão" class="product-card-image"><div class="product-card-content"><h4>Pesto Manjericão com Castanha-do-Pará</h4><p>O autêntico sabor genovês com o toque brasileiro da Castanha-do-Pará.</p><a href="/receita-pesto-manjericao.html" class="cta-button">Ver Detalhes</a></div></div>
+            <div class="product-card" data-category="antepasto vegano sem-gluten momento-especial gourmet-pratico"><img src="/antepastos/caponata-shiitake.png" alt="Caponata com Shiitake" class="product-card-image"><div class="product-card-content"><h4>Caponata com Shiitake Grelhado</h4><p>Um antepasto gourmet para qualquer ocasião, com a técnica confit.</p><a href="/receita-caponata-shiitake.html" class="cta-button">Ver Detalhes</a></div></div>
+        </div>
     </main>
     
     <footer>
-        </footer>
+        <div class="container footer-grid">
+            <div><h4>Navegação</h4><a href="/index.html">Início</a><a href="/nossa-filosofia.html">Nossa Filosofia</a><a href="/cardapio.html">Cardápio Completo</a><a href="/faq.html">FAQ</a><a href="/chefbrico-club.html">ChefBrico Club</a></div>
+            <div><h4>Nossos Produtos</h4><a href="/risotos.html">Risotos</a><a href="/sopas-funcionais.html">Sopas Funcionais</a><a href="/refeicoes-praticas.html">Refeições Práticas</a><a href="/emporio-da-chef.html">Empório da Chef</a></div>
+            <div><h4>Ajuda & Suporte</h4><a href="/onde-encontrar.html">Onde Encontrar</a><a href="https://www.chefbrico.com/como-comprar" target="_blank" rel="noopener noreferrer">Como Comprar na Loja</a><a href="https://www.chefbrico.com/trocas-e-devolucoes" target="_blank" rel="noopener noreferrer">Trocas e Devoluções</a><a href="https://wa.me/5561996659880" target="_blank" rel="noopener noreferrer">Contato</a></div>
+            <div><h4>Redes Sociais</h4><a href="https://www.instagram.com/chefbrico/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://br.pinterest.com/chefbrico/" target="_blank" rel="noopener noreferrer">Pinterest</a></div>
+        </div>
+        <div class="container footer-credit"><p>© 2025 ChefBrico - Todos os direitos reservados.</p><p> Maria Conceição | CNPJ: 36.014.833/0001-59 </p></div>
+    </footer>
 
     <script>
     document.addEventListener('DOMContentLoaded', function() {
-        const filterButtons = document.querySelectorAll('#filter-buttons .filter-btn');
+        // Seleciona TODOS os botões de filtro
+        const allFilterButtons = document.querySelectorAll('.filter-btn');
         const productCards = document.querySelectorAll('.product-grid .product-card');
 
-        filterButtons.forEach(button => {
+        allFilterButtons.forEach(button => {
             button.addEventListener('click', function() {
-                // Remove a classe 'active' de todos os botões e a adiciona ao clicado
-                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Remove a classe 'active' de todos os botões
+                allFilterButtons.forEach(btn => btn.classList.remove('active'));
+                // Adiciona 'active' apenas ao botão clicado
                 this.classList.add('active');
 
                 const filter = this.getAttribute('data-filter');
 
-                // Mostra ou esconde os cards com base no filtro
+                // Mostra ou esconde os cards
                 productCards.forEach(card => {
-                    // Ignora o molde (caso você o deixe no código)
-                    if (card.getAttribute('data-category').includes('[ETIQUETAS AQUI]')) {
-                        card.classList.add('hide');
-                        return;
-                    }
-
                     if (filter === 'all' || card.getAttribute('data-category').includes(filter)) {
                         card.classList.remove('hide');
                     } else {
