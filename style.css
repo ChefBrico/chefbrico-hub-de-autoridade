@@ -415,80 +415,126 @@ main.container {
     }
 }
 /* ================================================================= */
-/* ===== CÓDIGO DEFINITIVO E UNIFICADO PARA CARDÁPIO E MENU V6.0 ===== */
+/* ===== ARQUIVO STYLE.CSS MESTRE E UNIFICADO - CHEFBRICO V1.0 ===== */
 /* ================================================================= */
 
-/* --- Estilos Gerais da Página Cardápio --- */
-.page-header-local {
-    margin-top: 25px;
-    margin-bottom: 30px;
-}
-.filter-section:first-of-type {
-    margin-top: -20px;
-}
-.filter-buttons {
-    margin-bottom: 25px;
-    padding-bottom: 25px;
+/* --- Variáveis de Cor e Fonte (assumindo que você as tenha) --- */
+:root {
+    --cor-primaria: #5a3a30; /* Um marrom escuro, ajuste se necessário */
+    --cor-secundaria: #E0D8C4; /* O dourado/bege do cabeçalho */
+    --cor-laranja-cta: #f58220;
+    --cor-texto: #333;
+    --fonte-titulos: 'SuaFonteDeTitulos', serif; /* Substitua pela sua fonte */
+    --fonte-corpo: 'SuaFonteDeCorpo', sans-serif; /* Substitua pela sua fonte */
 }
 
-/* --- Container da grade de produtos --- */
-.product-grid-container {
+/* --- Estilos Gerais --- */
+body {
+    font-family: var(--fonte-corpo);
+    color: var(--cor-texto);
+    margin: 0;
+}
+.container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
     box-sizing: border-box;
 }
 
-/* --- A grade de produtos --- */
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    /* Removemos o align-items: stretch para permitir alturas naturais */
-}
-
-/* --- O card individual do produto --- */
-.product-card {
-    display: flex;
-    flex-direction: column;
+/* ======================================================= */
+/* ===== CABEÇALHO, DROPDOWN E RESPONSIVIDADE        ===== */
+/* ======================================================= */
+.top-slogan-bar {
+    background-color: var(--cor-secundaria);
+    padding: 8px 10px;
     text-align: center;
-    border: 1px solid #f0f0f0;
-    border-radius: 8px;
-    overflow: hidden;
-    background-color: white;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
-
-/* --- A IMAGEM DO PRODUTO (SOLUÇÃO FINAL) --- */
-.product-card-image-container {
-    width: 100%;
+.top-slogan-bar p {
+    margin: 0;
+    font-size: 0.9em;
+    font-weight: 500;
+    color: var(--cor-primaria);
 }
-.product-card-image {
-    width: 100%;
-    height: auto;           /* Altura automática para manter a proporção */
-    aspect-ratio: 4 / 3;    /* Proporção 4:3 (retângulo) */
-    object-fit: cover;      /* Garante que a imagem preencha a área sem distorcer */
-    display: block;
+header {
+    background-color: var(--cor-secundaria);
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
 }
-
-/* --- A caixa de conteúdo do card (título, texto, botão) --- */
-.product-card-content {
+.header-flex {
     display: flex;
-    flex-direction: column;
-    flex-grow: 1; 
-    padding: 25px;
+    justify-content: space-between;
+    align-items: center;
 }
-.product-card-content h4 {
-    font-size: 1.3em;
-    margin-top: 0;
-    margin-bottom: 10px;
-    /* Removemos o min-height para um fluxo mais natural */
+.logo img { max-height: 60px; }
+nav { display: flex; align-items: center; gap: 20px; }
+.main-nav-links { display: flex; align-items: center; gap: 25px; }
+
+header nav a {
+    color: var(--cor-primaria); 
+    font-weight: bold;
+    text-decoration: none;
 }
-.product-card-content p {
-    font-size: 1em;
-    flex-grow: 1; /* Empurra o botão para o final */
-    margin-bottom: 20px;
+header nav a:hover { text-decoration: underline; }
+.cta-button {
+    background-color: var(--cor-laranja-cta);
+    color: white !important;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.2s;
 }
-.product-card-content .cta-button {
-    margin-top: auto; /* Alinha o botão na base do card */
+header .cta-button:hover {
+    background-color: #e07019;
+    text-decoration: none;
+}
+
+/* --- Estilos para o Menu Dropdown --- */
+.dropdown { position: relative; display: inline-block; }
+.dropbtn { cursor: pointer; }
+.dropdown-content { display: none; position: absolute; background-color: #fdfcf7; min-width: 250px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1); z-index: 100; border-radius: 8px; border: 1px solid #f0ead6; padding: 10px 0; }
+.dropdown-content a, .dropdown-content .dropdown-title { padding: 12px 16px; display: block; text-align: left; }
+.dropdown-content .dropdown-title { font-weight: bold; font-size: 0.8em; text-transform: uppercase; color: #aaa; padding-top: 15px; padding-bottom: 5px; }
+.dropdown-content a:hover { background-color: #f0ead6; }
+.dropdown:hover .dropdown-content { display: block; }
+.dropdown-content hr { border: none; border-top: 1px solid #f0ead6; margin: 10px 0; }
+
+/* ======================================================= */
+/* ===== CARDÁPIO INTELIGENTE (FILTROS E CARDS)      ===== */
+/* ======================================================= */
+
+.page-header-local { text-align: center; margin-top: 25px; margin-bottom: 30px; }
+.filter-section { margin-bottom: 20px; }
+.filter-section:first-of-type { margin-top: -20px; }
+.filter-title { text-align: center; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; color: var(--cor-primaria); margin-bottom: 15px; font-size: 1.1em; }
+.filter-buttons { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 0 20px 25px 20px; padding-bottom: 25px; border-bottom: 2px solid #f0ead6;}
+.filter-buttons:last-of-type { border-bottom: none; }
+.filter-btn { background-color: #f9f6ef; color: #5a3a30; padding: 10px 20px; border-radius: 20px; border: 1px solid #f0ead6; cursor: pointer; font-size: 0.9em; font-weight: bold; transition: all 0.2s ease-in-out; }
+.filter-btn:hover { background-color: #e0d8c4; }
+.filter-btn.active { background-color: var(--cor-primaria); color: white; border-color: var(--cor-primaria); }
+
+.product-grid-container { max-width: 1200px; margin: 0 auto; }
+.product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.product-card { display: flex; flex-direction: column; text-align: center; border: 1px solid #f0f0f0; border-radius: 8px; overflow: hidden; background-color: white; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+
+.product-card-image-container { width: 100%; }
+.product-card-image { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
+
+.product-card-content { display: flex; flex-direction: column; flex-grow: 1; padding: 25px; }
+.product-card-content h4 { font-size: 1.3em; margin-top: 0; min-height: 48px; }
+.product-card-content p { font-size: 1em; flex-grow: 1; margin-bottom: 20px; }
+.product-card-content .cta-button { margin-top: auto; }
+
+/* ======================================================= */
+/* ===== RESPONSIVIDADE MOBILE                       ===== */
+/* ======================================================= */
+@media (max-width: 768px) {
+    .container { padding-left: 20px; padding-right: 20px; }
+    .post-content { padding-left: 0; padding-right: 0; } /* Ajuste se necessário */
+    
+    /* Cabeçalho Responsivo */
+    .header-flex { flex-direction: column; gap: 20px; }
+    .main-nav-links { flex-wrap: wrap; justify-content: center; gap: 15px 25px; }
+    .dropdown:hover .dropdown-content { display: none; } /* Desativa o dropdown no hover em mobile */
+    .dropdown.active .dropdown-content { display: block; } /* Ativa com clique via JS */
 }
