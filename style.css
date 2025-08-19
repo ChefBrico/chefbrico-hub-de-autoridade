@@ -595,3 +595,50 @@ main.container {
 .filter-title {
     margin-top: 40px;
 }
+/* ======================================================= */
+/* ===== AJUSTES FINOS DE ESPAÇAMENTO - CARDAPIO V1.1 ==== */
+/* ======================================================= */
+
+/* 1. REDUZIR A DISTÂNCIA ENTRE O MENU E O TÍTULO H1
+  A classe '.page-header-local' é a caixa que contém seu H1.
+  Estamos diminuindo a margem no topo dela.
+*/
+.page-header-local {
+    margin-top: 20px; /* Originalmente era 40px, reduzimos pela metade */
+}
+
+/* 2. REDUZIR A DISTÂNCIA ENTRE OS DOIS GRUPOS DE FILTROS
+  A classe '.filter-buttons' é a caixa de cada grupo de botões.
+  Estamos diminuindo a margem no final dela.
+*/
+.filter-buttons {
+    margin-bottom: 20px; /* Originalmente era 40px, reduzimos */
+}
+
+/*
+  3. AJUSTAR O TAMANHO DOS CARDS DOS PRODUTOS
+  A classe '.product-card' controla a aparência de cada produto.
+  Vamos definir uma largura máxima e mínima para que eles fiquem
+  mais consistentes em telas largas, evitando que fiquem muito "esticados".
+*/
+.product-grid {
+    /* Esta nova regra garante que a grade fique centralizada e elegante */
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product-card {
+    /* Um pequeno ajuste para garantir que o conteúdo interno se alinhe bem */
+    text-align: center;
+}
+
+.product-card-content h4 {
+    font-size: 1.2em; /* Podemos aumentar um pouco o título do produto */
+    min-height: 45px; /* Garante que os títulos tenham uma altura parecida, alinhando os textos */
+}
+
+.product-card-content p {
+    font-size: 0.95em; /* Um pouco maior para melhor leitura */
+    min-height: 70px; /* Garante que as descrições tenham altura parecida, alinhando os botões */
+}
