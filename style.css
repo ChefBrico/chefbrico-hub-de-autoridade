@@ -582,21 +582,21 @@ main.container {
 }
 
 /* ======================================================= */
-/* ===== CÓDIGO FINAL E SIMPLIFICADO - CARDÁPIO V4.0 ===== */
+/* ===== CÓDIGO DEFINITIVO PARA O CARDÁPIO V5.0        ===== */
 /* ======================================================= */
 
-/* --- Controla o container geral da grade para centralização --- */
+/* --- Container da grade --- */
 .product-grid-container {
-    max-width: 1200px; /* Define a largura máxima da grade */
-    margin: 0 auto;    /* Centraliza a grade na tela */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* --- A grade de produtos --- */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Aumentamos um pouco a base do card */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    /* REMOVEMOS o 'align-items: stretch' daqui para permitir alturas diferentes */
+    align-items: stretch; 
 }
 
 /* --- O card individual do produto --- */
@@ -608,38 +608,45 @@ main.container {
     border-radius: 8px;
     overflow: hidden;
     background-color: white;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Sombra suave para dar profundidade */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
-/* --- A imagem do produto --- */
+/* --- A IMAGEM DO PRODUTO (A GRANDE MUDANÇA ESTÁ AQUI) --- */
+.product-card-image-container {
+    /* Esta nova 'caixa' segura a imagem */
+    width: 100%;
+    overflow: hidden; /* Garante que a imagem não vaze */
+}
 .product-card-image {
     width: 100%;
-    height: auto;
-    aspect-ratio: 4 / 3; /* Proporção 4:3 para consistência visual */
-    object-fit: cover;
+    height: auto; /* A altura é automática para manter a proporção original */
+    max-height: 225px; /* Define uma ALTURA MÁXIMA para a imagem */
+    object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+    display: block; /* Remove espaços extras */
 }
 
 /* --- A caixa de conteúdo do card (título, texto, botão) --- */
 .product-card-content {
     display: flex;
     flex-direction: column;
-    flex-grow: 1; /* Faz esta caixa ocupar o espaço vertical necessário */
+    flex-grow: 1; 
     padding: 25px;
 }
 
 .product-card-content h4 {
     font-size: 1.3em;
     margin-top: 0;
+    min-height: 48px;
 }
 
 .product-card-content p {
     font-size: 1em;
-    flex-grow: 1; /* Garante que a descrição empurre o botão para baixo */
+    flex-grow: 1;
     margin-bottom: 20px;
 }
 
 .product-card-content .cta-button {
-    margin-top: auto; /* Alinha o botão no final do card */
+    margin-top: auto;
 }
 
 /* ======================================================= */
