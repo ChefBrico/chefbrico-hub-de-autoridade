@@ -646,3 +646,40 @@ h2 + p {
 
 /* Adicione a classe 'nossa-filosofia-page' na tag <body> da sua página para ativar a regra acima */
 /* Exemplo: <body class="nossa-filosofia-page"> */
+/* ================================================================= */
+/* ===== REPARO CIRÚRGICO P/ CARROSSEL DA PÁGINA 'FILOSOFIA' ===== */
+/* ================================================================= */
+
+.nossa-filosofia-page .post-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 30px;
+    padding-bottom: 20px; /* Espaço para a barra de rolagem */
+    scrollbar-width: thin;
+    scrollbar-color: var(--cor-primaria) #f0ead6;
+}
+
+.nossa-filosofia-page .post-carousel::-webkit-scrollbar { height: 8px; }
+.nossa-filosofia-page .post-carousel::-webkit-scrollbar-track { background: #f0ead6; border-radius: 4px; }
+.nossa-filosofia-page .post-carousel::-webkit-scrollbar-thumb { background-color: var(--cor-primaria); border-radius: 4px; }
+
+.nossa-filosofia-page .post-carousel .card {
+    flex: 0 0 320px; /* Largura fixa para cada card */
+    display: flex;
+    flex-direction: column;
+    height: auto; /* Altura automática */
+}
+
+.nossa-filosofia-page .post-carousel .card-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.nossa-filosofia-page .post-carousel .card-description {
+    flex-grow: 1;
+}
+
+.nossa-filosofia-page .post-carousel .cta-button {
+    margin-top: auto; /* Alinha o botão na base */
+}
