@@ -582,3 +582,33 @@ header .cta-button:hover {
 .card .cta-button {
     margin-top: auto; /* O truque mágico para alinhar o botão na base do card */
 }
+/* ======================================================= */
+/* ===== AJUSTE DE HIERARQUIA E ESPAÇAMENTO H2/H3      ===== */
+/* ======================================================= */
+
+/* --- Regra Geral para Títulos H2 --- */
+/* Aumenta o espaço ACIMA de todos os títulos H2 para separá-los da seção anterior */
+h2 {
+    margin-top: 60px; /* Aumenta o respiro superior */
+    margin-bottom: 20px; /* Garante um bom espaço antes do texto seguinte */
+    font-size: 2.2em; /* Um pouco maior para mais impacto */
+    text-align: center; /* Garante a centralização */
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--cor-secundaria, #f0ead6); /* Linha sutil para destacar */
+}
+
+/* --- Regra Específica para o parágrafo abaixo de um H2 --- */
+/* Aumenta o espaço entre o H2 e o parágrafo de introdução */
+h2 + p {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px auto; /* Centraliza e adiciona um bom espaço abaixo */
+    font-size: 1.1em;
+    line-height: 1.7;
+}
+
+/* --- Ajuste para o Título H3 dentro dos Cards --- */
+.card-content h3 {
+    font-size: 1.4em; /* Tamanho ideal para o título dentro do card */
+    margin-bottom: 10px;
+}
