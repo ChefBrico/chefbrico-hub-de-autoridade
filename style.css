@@ -539,40 +539,52 @@ header .cta-button:hover {
     .dropdown.active .dropdown-content { display: block; } /* Ativa com clique via JS */
 }
 /* ================================================================= */
-/* ===== AJUSTE DE ALINHAMENTO PARA CARDS HORIZONTAIS V1.0 ===== */
+/* ===== CÓDIGO DEFINITIVO P/ CARROSSEL HORIZONTAL ALINHADO V2.0 ===== */
 /* ================================================================= */
 
-/* Garante que o container do carrossel alinhe os cards corretamente */
 .post-carousel {
-    display: grid;
-    grid-auto-flow: column; /* Organiza os cards em uma linha */
-    grid-auto-columns: 1fr; /* Tenta dar a mesma largura para cada card */
-    gap: 30px;
-    overflow-x: auto; /* Permite rolar horizontalmente se não couber */
-    padding-bottom: 20px;
+    display: flex; /* USA FLEXBOX para alinhar os cards lado a lado */
+    overflow-x: auto; /* Permite a rolagem horizontal */
+    gap: 30px; /* Espaço entre os cards */
+    padding: 20px 0; /* Espaço para respiro e para a barra de rolagem */
+    scrollbar-width: thin;
+    scrollbar-color: var(--cor-primaria) #f0ead6;
 }
 
-@media (min-width: 1024px) {
-    /* Em telas grandes, define um número fixo de colunas */
-    .post-carousel {
-        grid-template-columns: repeat(5, 1fr); /* << Para 5 cards */
-    }
-}
+/* Barra de rolagem para Chrome/Safari */
+.post-carousel::-webkit-scrollbar { height: 8px; }
+.post-carousel::-webkit-scrollbar-track { background: #f0ead6; border-radius: 4px; }
+.post-carousel::-webkit-scrollbar-thumb { background-color: var(--cor-primaria); border-radius: 4px; }
 
-
-/* Garante que cada card tenha a mesma altura e alinhe seu conteúdo */
 .card {
+    flex: 0 0 320px; /* Define uma largura fixa de 320px para cada card, impedindo que encolham */
     display: flex;
-    flex-direction: column; /* Empilha o conteúdo (imagem, texto, botão) verticalmente */
-    height: 100%; /* Força o card a ocupar toda a altura disponível na linha */
+    flex-direction: column; /* Organiza o conteúdo do card na vertical */
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
-/* Garante que o conteúdo de texto ocupe o espaço necessário */
+.card-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
 .card-content {
     display: flex;
     flex-direction: column;
-    flex-grow: 1; /* Faz esta seção se esticar para preencher o espaço vertical */
-    padding: 20px;
+    flex-grow: 1; /* Faz esta caixa se esticar para ocupar a altura toda do card */
+    padding: 25px;
+    text-align: left;
+}
+
+.card-content h3 {
+    font-size: 1.4em;
+    margin-top: 0;
 }
 
 .card-description {
@@ -580,7 +592,7 @@ header .cta-button:hover {
 }
 
 .card .cta-button {
-    margin-top: auto; /* O truque mágico para alinhar o botão na base do card */
+    margin-top: auto; /* Alinha o botão na base do card */
 }
 /* ======================================================= */
 /* ===== AJUSTE DE HIERARQUIA E ESPAÇAMENTO H2/H3      ===== */
