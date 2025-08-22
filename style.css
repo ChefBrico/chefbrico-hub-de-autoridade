@@ -624,3 +624,25 @@ h2 + p {
     font-size: 1.4em; /* Tamanho ideal para o título dentro do card */
     margin-bottom: 10px;
 }
+/* ======================================================= */
+/* ===== ESTILO CARROSSEL HORIZONTAL - FILOSOFIA V1.0 ==== */
+/* ======================================================= */
+.post-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 30px;
+    padding: 20px 0;
+    scrollbar-width: thin;
+    scrollbar-color: var(--cor-primaria) #f0ead6;
+}
+.post-carousel::-webkit-scrollbar { height: 8px; }
+.post-carousel::-webkit-scrollbar-track { background: #f0ead6; border-radius: 4px; }
+.post-carousel::-webkit-scrollbar-thumb { background-color: var(--cor-primaria); border-radius: 4px; }
+
+/* Ajusta a largura dos cards dentro deste carrossel específico */
+.nossa-filosofia-page .post-carousel .product-card {
+    flex: 0 0 320px; /* Largura fixa de 320px por card */
+}
+
+/* Adicione a classe 'nossa-filosofia-page' na tag <body> da sua página para ativar a regra acima */
+/* Exemplo: <body class="nossa-filosofia-page"> */
