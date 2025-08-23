@@ -1,48 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
     <url>
         <loc>https://receitas.chefbrico.com/index.html</loc>
-        <lastmod>2025-08-12</lastmod>
+        <lastmod>2025-08-23</lastmod>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://receitas.chefbrico.com/cardapio.html</loc>
+        <lastmod>2025-08-23</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://receitas.chefbrico.com/nossa-filosofia.html</loc>
-        <lastmod>2025-08-12</lastmod>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://receitas.chefbrico.com/receitas.html</loc>
-        <lastmod>2025-08-12</lastmod>
+        <lastmod>2025-08-23</lastmod>
         <priority>0.9</priority>
     </url>
     <url>
         <loc>https://receitas.chefbrico.com/onde-encontrar.html</loc>
-        <lastmod>2025-08-12</lastmod>
+        <lastmod>2025-08-23</lastmod>
         <priority>0.9</priority>
     </url>
+     <url>
+        <loc>https://receitas.chefbrico.com/receitas.html</loc>
+        <lastmod>2025-08-23</lastmod>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://receitas.chefbrico.com/chefbrico-club.html</loc>
+        <lastmod>2025-08-23</lastmod>
+        <priority>0.9</priority>
+    </url>
+    
     <url>
         <loc>https://receitas.chefbrico.com/faq.html</loc>
         <lastmod>2025-08-12</lastmod>
         <priority>0.9</priority>
     </url>
+     <url>
 
-    <url><loc>https://receitas.chefbrico.com/onde-encontrar/asa-sul.html</loc><lastmod>2025-08-12</lastmod><priority>0.8</priority></url>
-    <url><loc>https://receitas.chefbrico.com/onde-encontrar/asa-norte.html</loc><lastmod>2025-08-12</lastmod><priority>0.8</priority></url>
-    <url><loc>https://receitas.chefbrico.com/onde-encontrar/esplanada-dos-ministerios.html</loc><lastmod>2025-08-12</lastmod><priority>0.8</priority></url>
-    <url><loc>https://receitas.chefbrico.com/onde-encontrar/plano-piloto-governo-df.html</loc><lastmod>2025-08-12</lastmod><priority>0.8</priority></url>
+    <url><loc>https://receitas.chefbrico.com/faq.html</loc><lastmod>2025-08-23</lastmod><priority>0.6</priority></url>
+    <url><loc>https://receitas.chefbrico.com/a-verdade-sobre-a-chefbox.html</loc><lastmod>2025-08-23</lastmod><priority>0.6</priority></url>
+         
+      <url>    
+    <url><loc>https://receitas.chefbrico.com/solucao-jantar-rapido.html</loc><lastmod>2025-08-23</lastmod><priority>0.9</priority></url>
+    <url><loc>https://receitas.chefbrico.com/solucao-marmita-saudavel.html</loc><lastmod>2025-08-23</lastmod><priority>0.9</priority></url>
+    <url><loc>https://receitas.chefbrico.com/solucao-momento-a-dois.html</loc><lastmod>2025-08-23</lastmod><priority>0.9</priority></url>
+    <url><loc>https://receitas.chefbrico.com/solucao-para-criancas.html</loc><lastmod>2025-08-23</lastmod><priority>0.9</priority></url>
+    <url><loc>https://receitas.chefbrico.com/solucao-dieta-performance.html</loc><lastmod>2025-08-23</lastmod><priority>0.9</priority></url>
+    <url><loc>https://receitas.chefbrico.com/solucao-trilha-viagem.html</loc><lastmod>2025-08-23</lastmod><priority>0.9</priority></url>
+
+    <url><loc>https://receitas.chefbrico.com/risotos.html</loc><lastmod>2025-08-23</lastmod><priority>0.8</priority></url>
+    <url><loc>https://receitas.chefbrico.com/sopas-funcionais.html</loc><lastmod>2025-08-23</lastmod><priority>0.8</priority></url>
+    <url><loc>https://receitas.chefbrico.com/refeicoes-praticas.html</loc><lastmod>2025-08-23</lastmod><priority>0.8</priority></url>
+    <url><loc>https://receitas.chefbrico.com/emporio-da-chef.html</loc><lastmod>2025-08-23</lastmod><priority>0.8</priority></url>
+
+    <url><loc>https://receitas.chefbrico.com/receita-risoto-funghi.html</loc><lastmod>2025-08-23</lastmod><priority>0.7</priority></url>
+    <url><loc>https://receitas.chefbrico.com/receita-risoto-pomodori.html</loc><lastmod>2025-08-23</lastmod><priority>0.7</priority></url>
+    <url><loc>https://receitas.chefbrico.com/receita-risoto-zucchini.html</loc><lastmod>2025-08-23</lastmod><priority>0.7</priority></url>
+    <url><loc>https://receitas.chefbrico.com/receita-paella-veg.html</loc><lastmod>2025-08-23</lastmod><priority>0.7</priority></url>
+    <url><loc>https://receitas.chefbrico.com/receita-risoto-pera-gorgonzola.html</loc><lastmod>2025-08-23</lastmod><priority>0.7</priority></url>
+    <url><loc>https://receitas.chefbrico.com/receita-risoto-morango.html</loc><lastmod>2025-08-23</lastmod><priority>0.7</priority></url>
+    <url><loc>https://receitas.chefbrico.com/receita-risoto-mix-funghi.html</loc><lastmod>2025-08-23</lastmod><priority>0.7</priority></url>
+    <url><loc>https://receitas.chefbrico.com/receita-risoto-shiimeji.html</loc><lastmod>2025-08-23</lastmod><priority>0.7</priority></url>
+    <url><loc>https://receitas.chefbrico.com/receita-risoto-pesto-alho-poro.html</loc><lastmod>2025-08-23</lastmod><priority>0.7</priority></url>
+    <url><loc>https://receitas.chefbrico.com/receita-risoto-mediterraneo.html</loc><lastmod>2025-08-23</lastmod><priority>0.7</priority></url>
+    <url><loc>https://receitas.chefbrico.com/receita-risoto-tomate-manjericao.html</loc><lastmod>2025-08-23</lastmod><priority>0.7</priority></url>
+    <url><loc>https://receitas.chefbrico.com/receita-sopa-jeitinho-de-vo.html</loc><lastmod>2025-08-23</lastmod><priority>0.7</priority></url>
+    <url><loc>https://receitas.chefbrico.com/receita-sopinha-biza-vo.html</loc><lastmod>2025-08-23</lastmod><priority>0.7</priority></url>
+    <url><loc>https://receitas.chefbrico.com/receita-sopa-low-carb-funghi.html</loc><lastmod>2025-08-23</lastmod><priority>0.7</priority></url>
+    <url><loc>https://receitas.chefbrico.com/receita-sopa-low-carb-horta.html</loc><lastmod>2025-08-23</lastmod><priority>0.7</priority></url>
+    <url><loc>https://receitas.chefbrico.com/receita-sopa-detox.html</loc><lastmod>2025-08-23</lastmod><priority>0.7</priority></url>
+    <url><loc>https://receitas.chefbrico.com/receita-sopa-creme-fit.html</loc><lastmod>2025-08-23</lastmod><priority>0.7</priority></url>
+    <url><loc>https://receitas.chefbrico.com/receita-canja-vegana.html</loc><lastmod>2025-08-23</lastmod><priority>0.7</priority></url>
+    <url><loc>https://receitas.chefbrico.com/receita-refeicao-mediterranea.html</loc><lastmod>2025-08-23</lastmod><priority>0.7</priority></url>
+    <url><loc>https://receitas.chefbrico.com/receita-baiao-de-dois.html</loc><lastmod>2025-08-23</lastmod><priority>0.7</priority></url>
+    <url><loc>https://receitas.chefbrico.com/receita-funghi-confitado.html</loc><lastmod>2025-08-23</lastmod><priority>0.7</priority></url>
+    <url><loc>https://receitas.chefbrico.com/receita-pesto-manjericao.html</loc><lastmod>2025-08-23</lastmod><priority>0.7</priority></url>
+    <url><loc>https://receitas.chefbrico.com/receita-caponata-shiitake.html</loc><lastmod>2025-08-23</lastmod><priority>0.7</priority></url>
     
-    <url><loc>https://receitas.chefbrico.com/onde-encontrar/lago-sul.html</loc><lastmod>2025-08-12</lastmod><priority>0.8</priority></url>
-    <url><loc>https://receitas.chefbrico.com/onde-encontrar/lago-norte-varjao.html</loc><lastmod>2025-08-12</lastmod><priority>0.8</priority></url>
-    <url><loc>https://receitas.chefbrico.com/onde-encontrar/sudoeste-octogonal.html</loc><lastmod>2025-08-12</lastmod><priority>0.8</priority></url>
-    <url><loc>https://receitas.chefbrico.com/onde-encontrar/noroeste.html</loc><lastmod>2025-08-12</lastmod><priority>0.8</priority></url>
-    <url><loc>https://receitas.chefbrico.com/onde-encontrar/aguas-claras-arniqueiras.html</loc><lastmod>2025-08-12</lastmod><priority>0.8</priority></url>
 
-    <url><loc>https://receitas.chefbrico.com/onde-encontrar/taguatinga-sul.html</loc><lastmod>2025-08-12</lastmod><priority>0.8</priority></url>
-    <url><loc>https://receitas.chefbrico.com/onde-encontrar/taguatinga-norte.html</loc><lastmod>2025-08-12</lastmod><priority>0.8</priority></url>
-    <url><loc>https://receitas.chefbrico.com/onde-encontrar/guara-parkway.html</loc><lastmod>2025-08-12</lastmod><priority>0.8</priority></url>
-    <url><loc>https://receitas.chefbrico.com/onde-encontrar/grande-colorado-taquari.html</loc><lastmod>2025-08-12</lastmod><priority>0.8</priority></url>
-    <url><loc>https://receitas.chefbrico.com/onde-encontrar/sia.html</loc><lastmod>2025-08-12</lastmod><priority>0.8</priority></url>
-    <url><loc>https://receitas.chefbrico.com/onde-encontrar/riacho-fundo.html</loc><lastmod>2025-08-12</lastmod><priority>0.8</priority></url>
-    <url><loc>https://receitas.chefbrico.com/onde-encontrar/jardim-botanico.html</loc><lastmod>2025-08-12</lastmod><priority>0.8</priority></url>
-    <url><loc>https://receitas.chefbrico.com/onde-encontrar/vicente-pires.html</loc><lastmod>2025-08-12</lastmod><priority>0.8</priority></url>
+
+    </url>
+  
+  
+    <url><loc>https://receitas.chefbrico.com/onde-encontrar/asa-sul.html</loc><lastmod>2025-08-23</lastmod><priority>0.5</priority></url>
+    <url><loc>https://receitas.chefbrico.com/onde-encontrar/asa-norte.html</loc><lastmod>2025-08-23</lastmod><priority>0.5</priority></url>
+    <url><loc>https://receitas.chefbrico.com/onde-encontrar/esplanada-dos-ministerios.html</loc><lastmod>2025-08-23</lastmod><priority>0.5</priority></url>
+    <url><loc>https://receitas.chefbrico.com/onde-encontrar/plano-piloto-governo-df.html</loc><lastmod>2025-08-23</lastmod><priority>0.5</priority></url>
+    <url><loc>https://receitas.chefbrico.com/onde-encontrar/lago-sul.html</loc><lastmod>2025-08-23</lastmod><priority>0.5</priority></url>
+    <url><loc>https://receitas.chefbrico.com/onde-encontrar/lago-norte-varjao.html</loc><lastmod>2025-08-23</lastmod><priority>0.5</priority></url>
+    <url><loc>https://receitas.chefbrico.com/onde-encontrar/sudoeste-octogonal.html</loc><lastmod>2025-08-23</lastmod><priority>0.5</priority></url>
+    <url><loc>https://receitas.chefbrico.com/onde-encontrar/noroeste.html</loc><lastmod>2025-08-23</lastmod><priority>0.5</priority></url>
+    <url><loc>https://receitas.chefbrico.com/onde-encontrar/aguas-claras-arniqueiras.html</loc><lastmod>2025-08-23</lastmod><priority>0.5</priority></url>
+    <url><loc>https://receitas.chefbrico.com/onde-encontrar/taguatinga-sul.html</loc><lastmod>2025-08-23</lastmod><priority>0.5</priority></url>
+    <url><loc>https://receitas.chefbrico.com/onde-encontrar/taguatinga-norte.html</loc><lastmod>2025-08-23</lastmod><priority>0.5</priority></url>
+    <url><loc>https://receitas.chefbrico.com/onde-encontrar/guara-parkway.html</loc><lastmod>2025-08-23</lastmod><priority>0.5</priority></url>
+    <url><loc>https://receitas.chefbrico.com/onde-encontrar/grande-colorado-taquari.html</loc><lastmod>2025-08-23</lastmod><priority>0.5</priority></url>
+    <url><loc>https://receitas.chefbrico.com/onde-encontrar/sia.html</loc><lastmod>2025-08-23</lastmod><priority>0.5</priority></url>
+    <url><loc>https://receitas.chefbrico.com/onde-encontrar/riacho-fundo.html</loc><lastmod>2025-08-23</lastmod><priority>0.5</priority></url>
+    <url><loc>https://receitas.chefbrico.com/onde-encontrar/jardim-botanico.html</loc><lastmod>2025-08-23</lastmod><priority>0.5</priority></url>
+    <url><loc>https://receitas.chefbrico.com/onde-encontrar/vicente-pires.html</loc><lastmod>2025-08-23</lastmod><priority>0.5</priority></url>
+
 </urlset>
