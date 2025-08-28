@@ -4,13 +4,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // =============================================
     // ===== MOTOR 1: ACORDEÃO DO FAQ (JÁ EXISTENTE) =====
     // =============================================
+   
+
+    document.addEventListener('DOMContentLoaded', function() {
+    
+    // --- Lógica para os acordeões do FAQ ---
     const accordionHeaders = document.querySelectorAll('.accordion-header');
     accordionHeaders.forEach(function(header) {
         header.addEventListener('click', function() {
-            const accordionContent = this.nextElementSibling;
-            const isActive = this.classList.contains('active');
-
-            // Fecha todos os outros acordeões
+            // Fecha todos os outros acordeões antes de abrir o novo
             accordionHeaders.forEach(otherHeader => {
                 if (otherHeader !== this) {
                     otherHeader.classList.remove('active');
@@ -18,17 +20,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
 
-            // Abre ou fecha o acordeão clicado
-            if (!isActive) {
-                this.classList.add('active');
-                accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
-            } else {
-                this.classList.remove('active');
+            // Abre ou fecha o acordeão que foi clicado
+            this.classList.toggle('active');
+            const accordionContent = this.nextElementSibling;
+            if (accordionContent.style.maxHeight) {
                 accordionContent.style.maxHeight = null;
+            } else {
+                accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
             }
         });
     });
 
+   
     // =======================================================
     // ===== MOTOR 2: CARROSSEL COM ROLAGEM SUAVE (JÁ EXISTENTE) =====
     // =======================================================
