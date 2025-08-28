@@ -20,77 +20,6 @@ body { font-family: var(--fonte-corpo); color: var(--cor-texto); background-colo
 .top-slogan-bar a { color: var(--cor-primaria); }
 header { padding: 15px 0; border-bottom: 1px solid #f0f0f0; }
 /* ======================================================= */
-/* ===== REENGENHARIA DO CABEÇALHO V2.1 (Padrão Ouro) ===== */
-/* (Substitua as regras antigas .header-flex e nav)    */
-/* ======================================================= */
-
-.header-flex {
-    display: flex;
-    justify-content: space-between; /* Mantém a logo na esquerda e o resto na direita */
-    align-items: center;
-    padding: 15px 0;
-}
-
-/* Isola a logo, garantindo que ela não ocupe espaço extra */
-.header-flex .logo {
-    flex-shrink: 0;
-}
-
-/* O container GERAL do menu e do botão */
-header nav {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end; /* Alinha tudo à direita inicialmente */
-    flex-grow: 1; /* Permite que a navegação ocupe o espaço disponível */
-    gap: 25px;
-}
-
-/* NOVO container APENAS para os links do menu, para podermos centralizá-los */
-.main-nav-links {
-    display: flex;
-    justify-content: center; /* <<< A MÁGICA ACONTECE AQUI: Centraliza os links */
-    flex-grow: 1; /* Faz este bloco ocupar todo o espaço entre a logo e o botão */
-    gap: 25px; /* Espaçamento entre os links */
-}
-
-header nav a {
-    text-decoration: none;
-    color: var(--cor-texto);
-    font-weight: bold;
-    font-size: 1.1em;
-}
-
-/* Mantém o botão de ação no final, sem encolher */
-header nav .cta-button {
-    background-color: var(--cor-acao);
-    color: white;
-    padding: 12px 24px;
-    border-radius: 50px;
-    text-align: center;
-    flex-shrink: 0; 
-}
-h1 { font-family: var(--fonte-titulos); color: var(--cor-titulos); font-size: 3em; text-align: center; line-height: 1.2; }
-h2 { font-family: var(--fonte-titulos); color: var(--cor-primaria); font-size: 2.2em; margin-top: 50px; margin-bottom: 20px; }
-.post-carousel { display: flex; overflow-x: auto; gap: 20px; padding-bottom: 20px; scrollbar-width: none; cursor: grab; }
-.post-carousel::-webkit-scrollbar { display: none; }
-.post-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
-.card { text-decoration: none; color: var(--cor-texto); display: flex; flex-direction: column; max-width: 320px; }
-.card-image { width: 100%; height: 260px; object-fit: cover; border-radius: 8px 8px 0 0;object-position: center top; }
-.card-content { display: flex; flex-direction: column; flex-grow: 1; padding: 15px; }
-.card-category { font-size: 0.8em; font-weight: bold; color: var(--cor-acao); }
-.card h3 { font-size: 1.4em; color: var(--cor-titulos); margin: 5px 0; }
-.card-description { font-size: 0.95em; line-height: 1.5; color: #555; flex-grow: 1; }
-.faq-item-accordion { border: 1px solid #ddd; border-radius: 5px; margin-bottom: 15px; overflow: hidden; }
-.accordion-header { background-color: #fff; font-size: 1.1em; font-weight: bold; padding: 18px 20px; width: 100%; text-align: left; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-.accordion-header h3 { margin: 0; font-size: 1.1em; color: var(--cor-primaria); }
-.accordion-content { padding: 0 20px; background-color: #fdfdfd; max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
-footer { text-align: center; padding: 40px 0; margin-top: 60px; border-top: 2px solid #f0f0f0; }
-.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: left; }
-.footer-grid h4 { font-size: 1.2em; margin-bottom: 15px; color: var(--cor-titulos); }
-.footer-grid a { color: var(--cor-texto); text-decoration: none; display: block; margin-bottom: 12px; }
-.footer-credit { margin-top: 40px; border-top: 1px solid #e0e0e0; padding-top: 20px; font-size: 0.9em; }
-
-/* ======================================================= */
 /* ===== ADIÇÕES SEGURAS "PADRÃO OURO" (V20.0) ===== */
 /* ======================================================= */
 
@@ -442,64 +371,6 @@ body {
 }
 
 /* ======================================================= */
-/* ===== CABEÇALHO, DROPDOWN E RESPONSIVIDADE        ===== */
-/* ======================================================= */
-.top-slogan-bar {
-    background-color: var(--cor-secundaria);
-    padding: 8px 10px;
-    text-align: center;
-}
-.top-slogan-bar p {
-    margin: 0;
-    font-size: 0.9em;
-    font-weight: 500;
-    color: var(--cor-primaria);
-}
-header {
-    background-color: var(--cor-secundaria);
-    padding: 15px 0;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-}
-.header-flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.logo img { max-height: 60px; }
-nav { display: flex; align-items: center; gap: 20px; }
-.main-nav-links { display: flex; align-items: center; gap: 25px; }
-
-header nav a {
-    color: var(--cor-primaria); 
-    font-weight: bold;
-    text-decoration: none;
-}
-header nav a:hover { text-decoration: underline; }
-.cta-button {
-    background-color: var(--cor-laranja-cta);
-    color: white !important;
-    text-decoration: none;
-    padding: 12px 24px;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: background-color 0.2s;
-}
-header .cta-button:hover {
-    background-color: #e07019;
-    text-decoration: none;
-}
-
-/* --- Estilos para o Menu Dropdown --- */
-.dropdown { position: relative; display: inline-block; }
-.dropbtn { cursor: pointer; }
-.dropdown-content { display: none; position: absolute; background-color: #fdfcf7; min-width: 250px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1); z-index: 100; border-radius: 8px; border: 1px solid #f0ead6; padding: 10px 0; }
-.dropdown-content a, .dropdown-content .dropdown-title { padding: 12px 16px; display: block; text-align: left; }
-.dropdown-content .dropdown-title { font-weight: bold; font-size: 0.8em; text-transform: uppercase; color: #aaa; padding-top: 15px; padding-bottom: 5px; }
-.dropdown-content a:hover { background-color: #f0ead6; }
-.dropdown:hover .dropdown-content { display: block; }
-.dropdown-content hr { border: none; border-top: 1px solid #f0ead6; margin: 10px 0; }
-
-/* ======================================================= */
 /* ===== CARDÁPIO INTELIGENTE (FILTROS E CARDS)      ===== */
 /* ======================================================= */
 
@@ -683,3 +554,67 @@ h2 + p {
 .nossa-filosofia-page .post-carousel .cta-button {
     margin-top: auto; /* Alinha o botão na base */
 }
+/* ================================================================= */
+/* ===== ESTILO DEFINITIVO E UNIFICADO PARA O SITE CHEFBRICO V1.0 ==== */
+/* ================================================================= */
+
+/* --- Variáveis de Cor e Fonte (Base da Marca) --- */
+:root {
+    --cor-primaria: #5a3a30; /* Marrom escuro para textos e destaques */
+    --cor-secundaria: #E0D8C4; /* Bege/dourado para fundos como o cabeçalho */
+    --cor-laranja-cta: #f58220; /* Laranja para botões de ação */
+    --cor-texto: #333;
+    /* Adicione suas fontes aqui se tiver */
+}
+
+/* --- Estilos Gerais (Reset e Padrões) --- */
+body { font-family: sans-serif; color: var(--cor-texto); margin: 0; background-color: #fff; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; box-sizing: border-box; }
+h1, h2, h3, h4 { color: var(--cor-primaria); }
+
+/* --- Barra de Slogan --- */
+.top-slogan-bar { background-color: var(--cor-secundaria); padding: 8px 10px; text-align: center; }
+.top-slogan-bar p { margin: 0; font-size: 0.9em; font-weight: 500; color: var(--cor-primaria); }
+
+/* --- Estrutura Principal do Cabeçalho --- */
+header { background-color: var(--cor-secundaria); padding: 15px 0; border-bottom: 1px solid rgba(0,0,0,0.1); }
+.header-flex { display: flex; justify-content: space-between; align-items: center; }
+.logo img { max-height: 60px; display: block; flex-shrink: 0; }
+
+/* --- Container da Navegação (Menu + Botão) --- */
+header nav { display: flex; align-items: center; flex-grow: 1; justify-content: flex-end; }
+.main-nav-links { display: flex; flex-grow: 1; justify-content: center; gap: 25px; align-items: center; }
+
+/* --- Estilos Gerais de Links e Botões --- */
+.main-nav-links a { color: var(--cor-primaria); font-weight: bold; text-decoration: none; padding: 5px 0; }
+.main-nav-links a:hover { text-decoration: underline; }
+.cta-button { background-color: var(--cor-laranja-cta); color: white !important; text-decoration: none; padding: 12px 24px; border-radius: 8px; font-weight: bold; white-space: nowrap; transition: background-color 0.2s; }
+.cta-button:hover { background-color: #e07019; text-decoration: none !important; }
+.mobile-nav-toggle { display: none; }
+
+/* --- Menu Dropdown --- */
+.dropdown { position: relative; display: inline-block; }
+.dropbtn { cursor: pointer; }
+.dropdown-content { display: none; position: absolute; background-color: #fdfcf7; min-width: 250px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1); z-index: 100; border-radius: 8px; border: 1px solid #f0ead6; padding: 10px 0; }
+.dropdown-content a, .dropdown-content .dropdown-title { padding: 12px 16px; display: block; text-align: left; }
+.dropdown-content .dropdown-title { font-weight: bold; font-size: 0.8em; text-transform: uppercase; color: #aaa; padding-top: 15px; padding-bottom: 5px; }
+.dropdown-content a:hover { background-color: #f0ead6; }
+.dropdown:hover .dropdown-content { display: block; }
+.dropdown-content hr { border: none; border-top: 1px solid #f0ead6; margin: 10px 0; }
+
+/* --- RESPONSIVIDADE (Mobile First) --- */
+@media (max-width: 1024px) {
+    header nav { display: none; position: absolute; top: 100px; left: 0; width: 100%; background-color: #E0D8C4; flex-direction: column; padding: 20px; box-sizing: border-box; }
+    header nav.active { display: flex; }
+    .main-nav-links { flex-direction: column; gap: 20px; margin-bottom: 20px; }
+    .mobile-nav-toggle { display: block; font-size: 2em; background: none; border: none; color: #5a3a30; cursor: pointer; }
+    .dropdown:hover .dropdown-content { display: none; }
+}
+
+/* --- Rodapé (Footer) --- */
+footer { text-align: center; padding: 40px 20px; margin-top: 60px; background-color: #f9f6ef; }
+.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: left; }
+.footer-grid h4 { color: var(--cor-primaria); }
+.footer-grid a { color: var(--cor-texto); text-decoration: none; display: block; margin-bottom: 12px; }
+.footer-grid a:hover { text-decoration: underline; }
+.footer-credit { margin-top: 40px; border-top: 1px solid #e0e0e0; padding-top: 20px; font-size: 0.9em; }
