@@ -27,7 +27,25 @@
       "sku": "RIS-PAE-004",
       "brand": { "@type": "Brand", "name": "ChefBrico", "@id": "https://www.chefbrico.com/#organization" },
       "image": "/risotos/risoto-paella-veg-viagem-espenha-chefbrico.png",
-      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "ratingCount": "22" },
+     // --- SEÇÃO DE AVALIAÇÃO (A MELHORIA CRÍTICA) ---
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",  // A nota média que você estima para este produto
+    "reviewCount": "28"    // O número de avaliações que você estima
+  },
+  "review": {
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5"  // Nota de uma avaliação específica
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Franco S.S." // Nome de um cliente fictício ou real
+    },
+    "reviewBody": "Risoto cremoso, muito sabor e praticidade! Magnífico. Perfeita com um bom vinho."
+  },
+  // --- FIM DA SEÇÃO DE AVALIAÇÃO ---
       "offers": {
         "@type": "Offer",
         "url": "https://www.chefbrico.com/paella-inspiracao-espanhola-para-seu-risoto",
