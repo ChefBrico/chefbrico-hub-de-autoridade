@@ -1,5 +1,5 @@
 // ================================================================= //
-// ===== ARQUIVO SCRIPT.JS MESTRE E DEFINITIVO - CHEFBRICO V4.0 ==== //
+// ===== ARQUIVO SCRIPT.JS MESTRE E DEFINITIVO - CHEFBRICO V5.0 ==== //
 // ================================================================= //
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -34,12 +34,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // --- MOTOR 3: FILTROS DO CARDÁPIO INTELIGENTE COM CURADORIA (V3.0 - FINAL) ---
-    const allFilterButtons = document.querySelectorAll('.filter-btn');
-    const productCards = document.querySelectorAll('.product-grid .product-card');
-    const curatorshipBox = document.getElementById('curatorship-box');
-
-    if (allFilterButtons.length > 0 && productCards.length > 0 && curatorshipBox) {
+    // --- MOTOR 3: FILTROS DO CARDÁPIO INTELIGENTE COM CURADORIA (V4.0 - FINAL) ---
+    const filterContainer = document.querySelector('.filters-container'); // Container geral
+    if (filterContainer) {
+        const allFilterButtons = filterContainer.querySelectorAll('.filter-btn');
+        const productCards = document.querySelectorAll('.product-grid .product-card');
+        const curatorshipBox = document.getElementById('curatorship-box');
         const curatorshipTitle = document.getElementById('curatorship-title');
         const curatorshipText = document.getElementById('curatorship-text');
 
@@ -55,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
             button.addEventListener('click', function() {
                 const filter = this.getAttribute('data-filter');
                 
+                // Desativa todos os botões e ativa apenas o clicado
                 allFilterButtons.forEach(btn => btn.classList.remove('active'));
                 this.classList.add('active');
 
