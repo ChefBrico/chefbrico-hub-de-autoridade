@@ -771,3 +771,79 @@ footer { text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 2
 .footer-grid h4 { font-size: 1.2em; margin-bottom: 15px; }
 .footer-grid a { color: var(--cor-texto); text-decoration: none; display: block; margin-bottom: 12px; }
 .footer-credit { margin-top: 40px; border-top: 1px solid #e0e0e0; padding-top: 20px; font-size: 0.9em; }
+
+/* ======================================================= */
+/* ===== ESTILO DEFINITIVO PARA O MENU DROPDOWN V2.0 ===== */
+/* ======================================================= */
+
+/* O container do item de menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* O botão que aciona o dropdown */
+.dropbtn {
+    cursor: pointer;
+    padding: 5px 0; /* Garante que tenha a mesma área de clique dos outros links */
+}
+
+/* A "caixa" que aparece com os links */
+.dropdown-content {
+    display: none; /* Começa escondido */
+    position: absolute;
+    background-color: #fdfcf7; /* Fundo branco-gelo */
+    min-width: 280px; /* Largura mínima */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    z-index: 101; /* Garante que fique acima de outros conteúdos */
+    border-radius: 8px;
+    border: 1px solid #f0ead6;
+    padding: 10px 0;
+}
+
+/* Mostra a caixa quando o mouse está sobre o item do menu */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* O título dentro do dropdown (NAVEGUE POR SOLUÇÃO) */
+.dropdown-content .dropdown-title {
+    padding: 12px 20px 5px 20px; /* Espaçamento (topo, lados, fundo) */
+    font-weight: bold;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    color: #999; /* Cor mais suave para o título */
+    display: block;
+}
+
+/* Os links individuais dentro do dropdown */
+.dropdown-content a {
+    color: var(--cor-primaria, #5a3a30);
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block; /* Garante que cada link ocupe uma linha */
+    text-align: left;
+    font-weight: bold;
+    font-size: 1em; /* Tamanho da fonte dos links */
+    line-height: 1.5; /* Espaçamento entre as linhas */
+}
+
+/* Efeito de hover nos links */
+.dropdown-content a:hover {
+    background-color: #f0ead6;
+    text-decoration: none;
+}
+
+/* A linha divisória */
+.dropdown-content hr {
+    border: none;
+    border-top: 1px solid #f0ead6;
+    margin: 10px 0;
+}
+
+/* Regra de segurança para o mobile */
+@media (max-width: 1024px) {
+    .dropdown:hover .dropdown-content {
+        display: none; /* Desativa a abertura com o mouse em telas de toque */
+    }
+}
