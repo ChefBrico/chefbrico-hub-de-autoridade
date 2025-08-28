@@ -899,3 +899,32 @@ footer { text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 2
         text-align: center;
     }
 }
+/* ================================================================= */
+/* ===== ESTILO PARA A CAIXA DE CURADORIA (CARDÁPIO) V1.0 ======= */
+/* ================================================================= */
+
+#curatorship-box {
+    text-align: center;
+    margin: -20px 20px 40px; /* Margem negativa para "puxar" para perto dos botões */
+    padding: 25px 30px;
+    background-color: #fdfaf2; /* Um tom de bege muito sutil */
+    border-radius: 8px;
+    border: 1px solid #f0ead6;
+    transition: all 0.3s ease-in-out; /* Animação suave */
+}
+
+#curatorship-box h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+    color: var(--cor-primaria);
+}
+
+#curatorship-box p {
+    margin-bottom: 0;
+    font-size: 1.1em;
+    line-height: 1.6;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
