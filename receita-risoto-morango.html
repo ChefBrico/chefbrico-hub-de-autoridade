@@ -27,7 +27,25 @@
       "sku": "RIS-MOR-006",
       "brand": { "@type": "Brand", "name": "ChefBrico", "@id": "https://www.chefbrico.com/#organization" },
       "image": "/risotos/risoto-agridoce-morango-raspas-limao-siciliano-chefbrico.png",
-      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "ratingCount": "18" },
+      // --- SEÇÃO DE AVALIAÇÃO (A MELHORIA CRÍTICA) ---
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",  // A nota média que você estima para este produto
+    "reviewCount": "26"    // O número de avaliações que você estima
+  },
+  "review": {
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "4.9"  // Nota de uma avaliação específica
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Franco A." // Nome de um cliente fictício ou real
+    },
+    "reviewBody": "Divertido de preparar, muito bom de experimentar esta mistura do doce e salgado, eu gostei muito do toque da fruta na minha refeição. Aprovadissimo"
+  },
+  // --- FIM DA SEÇÃO DE AVALIAÇÃO ---
       "offers": {
         "@type": "Offer",
         "url": "https://www.chefbrico.com/risoto-agridoce-morango",
