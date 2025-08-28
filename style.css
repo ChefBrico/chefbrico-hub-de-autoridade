@@ -618,3 +618,71 @@ footer { text-align: center; padding: 40px 20px; margin-top: 60px; background-co
 .footer-grid a { color: var(--cor-texto); text-decoration: none; display: block; margin-bottom: 12px; }
 .footer-grid a:hover { text-decoration: underline; }
 .footer-credit { margin-top: 40px; border-top: 1px solid #e0e0e0; padding-top: 20px; font-size: 0.9em; }
+/* ======================================================= */
+/* ===== CÓDIGO DE REPARO PARA O ACORDEÃO DO FAQ      ===== */
+/* ======================================================= */
+
+.faq-section {
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.faq-item-accordion {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden; /* Importante para o efeito de "deslizar" */
+}
+
+.accordion-header {
+    background-color: #fdfcf7; /* Fundo suave */
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 18px 20px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.accordion-header:hover {
+    background-color: #f9f6ef;
+}
+
+.accordion-header h3 {
+    margin: 0;
+    font-size: 1em; /* Ajuste para o H3 dentro do botão */
+    color: var(--cor-primaria);
+}
+
+.accordion-header .icon {
+    transition: transform 0.3s ease-out;
+}
+
+.accordion-header.active .icon {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    padding: 0 20px;
+    background-color: #fff;
+    max-height: 0; /* Começa fechado */
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+.accordion-content p {
+    margin: 0;
+    padding: 20px 0; /* Adiciona o padding apenas quando aberto via JS */
+    line-height: 1.7;
+}
+
+/* O JavaScript vai adicionar/remover a classe .active, 
+   que ativa a transição de abertura */
+.accordion-header.active + .accordion-content {
+    max-height: 500px; /* Uma altura máxima grande o suficiente para o conteúdo */
+}
