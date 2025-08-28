@@ -370,31 +370,7 @@ body {
     box-sizing: border-box;
 }
 
-/* ======================================================= */
-/* ===== CARDÁPIO INTELIGENTE (FILTROS E CARDS)      ===== */
-/* ======================================================= */
 
-.page-header-local { text-align: center; margin-top: 25px; margin-bottom: 30px; }
-.filter-section { margin-bottom: 20px; }
-.filter-section:first-of-type { margin-top: -20px; }
-.filter-title { text-align: center; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; color: var(--cor-primaria); margin-bottom: 15px; font-size: 1.1em; }
-.filter-buttons { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 0 20px 25px 20px; padding-bottom: 25px; border-bottom: 2px solid #f0ead6;}
-.filter-buttons:last-of-type { border-bottom: none; }
-.filter-btn { background-color: #f9f6ef; color: #5a3a30; padding: 10px 20px; border-radius: 20px; border: 1px solid #f0ead6; cursor: pointer; font-size: 0.9em; font-weight: bold; transition: all 0.2s ease-in-out; }
-.filter-btn:hover { background-color: #e0d8c4; }
-.filter-btn.active { background-color: var(--cor-primaria); color: white; border-color: var(--cor-primaria); }
-
-.product-grid-container { max-width: 1200px; margin: 0 auto; }
-.product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-.product-card { display: flex; flex-direction: column; text-align: center; border: 1px solid #f0f0f0; border-radius: 8px; overflow: hidden; background-color: white; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-
-.product-card-image-container { width: 100%; }
-.product-card-image { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
-
-.product-card-content { display: flex; flex-direction: column; flex-grow: 1; padding: 25px; }
-.product-card-content h4 { font-size: 1.3em; margin-top: 0; min-height: 48px; }
-.product-card-content p { font-size: 1em; flex-grow: 1; margin-bottom: 20px; }
-.product-card-content .cta-button { margin-top: auto; }
 
 /* ======================================================= */
 /* ===== RESPONSIVIDADE MOBILE                       ===== */
@@ -928,3 +904,51 @@ footer { text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 2
     margin-left: auto;
     margin-right: auto;
 }
+/* ================================================================= */
+/* ===== ESTILO PARA FILTROS E CURADORIA (Padrão Ouro)         ===== */
+/* ================================================================= */
+.filter-section { margin-bottom: 20px; }
+.filter-title { text-align: center; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; color: var(--cor-primaria); margin-bottom: 15px; font-size: 1.1em; }
+.filter-buttons { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 0 20px 25px 20px; padding-bottom: 25px; border-bottom: 2px solid #f0ead6;}
+.filter-buttons:last-of-type { border-bottom: none; }
+.filter-btn { background-color: #f9f6ef; color: #5a3a30; padding: 10px 20px; border-radius: 20px; border: 1px solid #f0ead6; cursor: pointer; font-size: 0.9em; font-weight: bold; transition: all 0.2s ease-in-out; }
+.filter-btn:hover { background-color: #e0d8c4; }
+.filter-btn.active { background-color: var(--cor-primaria); color: white; border-color: var(--cor-primaria); }
+
+#curatorship-box {
+    text-align: center;
+    margin: -10px 20px 40px;
+    padding: 25px 30px;
+    background-color: #fdfaf2;
+    border-radius: 8px;
+    border: 1px solid #f0ead6;
+    transition: all 0.3s ease-in-out;
+}
+#curatorship-box h4 { margin-top: 0; margin-bottom: 10px; font-size: 1.4em; }
+#curatorship-box p { margin-bottom: 0; font-size: 1.1em; line-height: 1.6; max-width: 700px; margin-left: auto; margin-right: auto; }
+
+/* ======================================================= */
+/* ===== CARDÁPIO INTELIGENTE (FILTROS E CARDS)      ===== */
+/* ======================================================= */
+
+.page-header-local { text-align: center; margin-top: 25px; margin-bottom: 30px; }
+.filter-section { margin-bottom: 20px; }
+.filter-section:first-of-type { margin-top: -20px; }
+.filter-title { text-align: center; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; color: var(--cor-primaria); margin-bottom: 15px; font-size: 1.1em; }
+.filter-buttons { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 0 20px 25px 20px; padding-bottom: 25px; border-bottom: 2px solid #f0ead6;}
+.filter-buttons:last-of-type { border-bottom: none; }
+.filter-btn { background-color: #f9f6ef; color: #5a3a30; padding: 10px 20px; border-radius: 20px; border: 1px solid #f0ead6; cursor: pointer; font-size: 0.9em; font-weight: bold; transition: all 0.2s ease-in-out; }
+.filter-btn:hover { background-color: #e0d8c4; }
+.filter-btn.active { background-color: var(--cor-primaria); color: white; border-color: var(--cor-primaria); }
+
+.product-grid-container { max-width: 1200px; margin: 0 auto; }
+.product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.product-card { display: flex; flex-direction: column; text-align: center; border: 1px solid #f0f0f0; border-radius: 8px; overflow: hidden; background-color: white; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+
+.product-card-image-container { width: 100%; }
+.product-card-image { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
+
+.product-card-content { display: flex; flex-direction: column; flex-grow: 1; padding: 25px; }
+.product-card-content h4 { font-size: 1.3em; margin-top: 0; min-height: 48px; }
+.product-card-content p { font-size: 1em; flex-grow: 1; margin-bottom: 20px; }
+.product-card-content .cta-button { margin-top: auto; }
