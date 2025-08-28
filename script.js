@@ -95,6 +95,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // =======================================================
     // ===== MOTOR 4: MENU HAMBÚRGUER MOBILE (NOVO)      =====
     // =======================================================
+
+ document.addEventListener('DOMContentLoaded', function() {
     const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
     const mainNav = document.querySelector('header nav');
 
@@ -103,4 +105,6 @@ document.addEventListener('DOMContentLoaded', function() {
             mainNav.classList.toggle('active');
         });
     }
-});
+
+    // ... seu outro código JS para acordeão e filtros continua aqui
+});                         
