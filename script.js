@@ -1,5 +1,5 @@
 // ================================================================= //
-// ===== ARQUIVO SCRIPT.JS MESTRE E DEFINITIVO - CHEFBRICO V4.0 ==== //
+// ===== ARQUIVO SCRIPT.JS MESTRE E DEFINITIVO - CHEFBRICO V4.0 .==== //
 // ================================================================= //
 
 document.addEventListener('DOMContentLoaded', function() {
