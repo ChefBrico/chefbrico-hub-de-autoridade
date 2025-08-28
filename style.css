@@ -629,13 +629,57 @@ header { background-color: var(--cor-secundaria); padding: 15px 0; border-bottom
 .card-content .cta-button { margin-top: auto; }
 
 /* ======================================================= */
-/* ===== ACORDEÃO (FAQ, ONDE ENCONTRAR)              ===== */
+/* ===== CÓDIGO DEFINITIVO PARA O ACORDEÃO (FAQ/ONDE) ===== */
 /* ======================================================= */
-.faq-item-accordion, .onde-encontrar-item { border: 1px solid #ddd; border-radius: 8px; margin-bottom: 15px; overflow: hidden; }
-.accordion-header { background-color: #fdfcf7; padding: 18px 20px; width: 100%; text-align: left; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-.accordion-header h3 { margin: 0; font-size: 1.1em; color: var(--cor-primaria); font-weight: bold; }
-.accordion-content { padding: 0 20px; background-color: #fff; max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
-.accordion-header.active + .accordion-content { max-height: 500px; /* Altura suficiente para o conteúdo */ padding: 20px; }
+
+.faq-item-accordion, .onde-encontrar-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.accordion-header {
+    background-color: #fdfcf7;
+    padding: 18px 20px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion-header h3 {
+    margin: 0;
+    font-size: 1.1em;
+    color: var(--cor-primaria);
+    font-weight: bold;
+}
+
+.accordion-header .icon {
+    transition: transform 0.3s ease-out;
+}
+
+/* Regra que faz a setinha girar */
+.accordion-header.active .icon {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    padding: 0 20px;
+    background-color: #fff;
+    max-height: 0; /* Começa fechado */
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+/* A REGRA MAIS IMPORTANTE QUE ESTAVA FALTANDO */
+.accordion-header.active + .accordion-content {
+    max-height: 500px; /* Define uma altura máxima para a animação de abertura */
+    padding: 20px;
+}
 
 /* --- RODAPÉ --- */
 footer { text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 2px solid #f0f0f0; background-color: #f9f6ef; }
