@@ -8,6 +8,7 @@
     --cor-secundaria: #E0D8C4;
     --cor-laranja-cta: #f58220;
     --cor-texto: #333;
+    /* Adicione suas fontes aqui se tiver */
 }
 
 /* --- Estilos Gerais --- */
@@ -46,10 +47,33 @@ header nav { display: flex; align-items: center; flex-grow: 1; justify-content: 
 /* ======================================================= */
 /* ===== CARDS DE CONTEÚDO E CARROSSÉIS              ===== */
 /* ======================================================= */
-.post-grid, .card-carousel { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-.card { border: 1px solid #eee; border-radius: 8px; text-decoration: none; color: var(--cor-texto); display: flex; flex-direction: column; }
-.card-image { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 8px 8px 0 0; }
-.card-content { padding: 20px; display: flex; flex-direction: column; flex-grow: 1; }
+.post-grid, .card-carousel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+.card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--cor-texto);
+    display: flex;
+    flex-direction: column;
+}
+/* SOLUÇÃO PARA IMAGENS CORTADAS */
+.card-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3; /* Proporção 4:3 SEM CORTES */
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+.card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
 .card-content h3 { margin-top: 0; }
 .card-description { flex-grow: 1; }
 .card-content .cta-button { margin-top: auto; }
@@ -66,4 +90,6 @@ header nav { display: flex; align-items: center; flex-grow: 1; justify-content: 
 /* --- RODAPÉ --- */
 footer { text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 2px solid #f0f0f0; background-color: #f9f6ef; }
 .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: left; }
-.footer-grid h4
+.footer-grid h4 { font-size: 1.2em; margin-bottom: 15px; }
+.footer-grid a { color: var(--cor-texto); text-decoration: none; display: block; margin-bottom: 12px; }
+.footer-credit { margin-top: 40px; border-top: 1px solid #e0e0e0; padding-top: 20px; font-size: 0.9em; }
