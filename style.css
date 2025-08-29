@@ -97,6 +97,81 @@ footer { text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 2
 .footer-grid a { color: var(--cor-texto); text-decoration: none; display: block; margin-bottom: 12px; }
 .footer-credit { margin-top: 40px; border-top: 1px solid #e0e0e0; padding-top: 20px; font-size: 0.9em; }
 
+/* ================================================================= */
+/* ===== ESTILO DEFINITIVO P/ CARDS E CARROSSÉIS (SEM CORTES) ===== */
+/* ================================================================= */
+
+/* --- Container para Carrosséis Horizontais (Páginas Filosofia, Receitas) --- */
+.card-carousel {
+    display: grid;
+    grid-auto-flow: column; /* Organiza os cards em uma linha contínua */
+    grid-auto-columns: 90%; /* Largura de cada card no mobile */
+    gap: 20px;
+    overflow-x: auto; /* Permite a rolagem horizontal */
+    padding: 20px;
+    scroll-snap-type: x mandatory; /* Efeito de "ímã" ao rolar */
+    -webkit-overflow-scrolling: touch; /* Melhora a experiência em iOS */
+    scrollbar-width: none; /* Esconde a barra de rolagem no Firefox */
+}
+.card-carousel::-webkit-scrollbar {
+    display: none; /* Esconde a barra de rolagem no Chrome/Safari */
+}
+
+/* --- Media Queries para ajustar o número de colunas em telas maiores --- */
+@media (min-width: 768px) {
+    .card-carousel {
+        grid-auto-columns: calc(50% - 10px); /* 2 cards por linha em tablets */
+    }
+}
+@media (min-width: 1024px) {
+    .card-carousel {
+        grid-auto-columns: calc(25% - 15px); /* 4 cards por linha em desktops */
+    }
+}
+
+/* --- O Card de Conteúdo Individual (para carrosséis) --- */
+.card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--cor-texto);
+    display: flex;
+    flex-direction: column; /* Garante o alinhamento vertical interno */
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    scroll-snap-align: start; /* Para o efeito "ímã" */
+}
+
+/* A SOLUÇÃO DEFINITIVA PARA IMAGENS CORTADAS */
+.card-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3; /* Força a proporção 4:3 (retângulo) SEM CORTES */
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+/* --- O Conteúdo dentro do Card --- */
+.card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Faz esta caixa se esticar */
+    text-align: left;
+}
+.card-content h3 {
+    margin-top: 0;
+    font-size: 1.4em;
+}
+.card-description {
+    flex-grow: 1; /* Empurra o botão para a base */
+    font-size: 1em;
+    line-height: 1.6;
+}
+.card-content .cta-button {
+    margin-top: auto; /* Alinha o botão na base do card */
+    text-align: center;
+}
 /* ======================================================= */
 /* ===== REPARO CIRÚRGICO PARA CARDS DE CONTEÚDO      ===== */
 /* ======================================================= */
