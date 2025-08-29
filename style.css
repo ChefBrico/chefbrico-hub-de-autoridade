@@ -201,89 +201,118 @@ footer { text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 2
 .footer-credit { margin-top: 40px; border-top: 1px solid #e0e0e0; padding-top: 20px; font-size: 0.9em; }
 
 
-
 /* =================================================================== */
-/* ===== CORREÇÃO PARA OS CARDS DE CARROSSEL HORIZONTAL ===== */
+/* ===== CORREÇÃO PARA OS CARDS DE CARROSSEL HORIZONTAL (vFINAL) ==== */
 /* =================================================================== */
 
-/* 1. O Contêiner do Carrossel */
-/* Esta regra transforma o 'div' que segura os cards em uma linha horizontal e permite a rolagem. */
-.post-carousel {
-    display: flex; /* Alinha os cards um ao lado do outro */
-    overflow-x: auto; /* Cria a barra de rolagem horizontal se necessário */
-    scroll-behavior: smooth; /* Deixa a rolagem mais suave */
-    
-    /* Espaçamento e padding para um visual mais limpo */
-    gap: 20px; /* Cria um espaço de 20px entre cada card */
-    padding-top: 15px;
-    padding-bottom: 25px; /* Um espaço extra embaixo para a barra de rolagem não ficar colada */
-    
-    /* As 3 linhas abaixo servem para ESCONDER a barra de rolagem, mas MANTER a funcionalidade de rolar com o mouse/dedo. */
-    -ms-overflow-style: none;  /* Para Internet Explorer e Edge */
-    scrollbar-width: none;  /* Para Firefox */
+/* 1. O Contêiner do Carrossel (ATUALIZADO) */
+/* Agora esta regra se aplica a TODAS as 3 variações de contêineres do site. */
+.post-carousel,
+.post-grid,
+.carousel-container .carousel-track { /* Alvo específico para a página 'Onde Encontrar' */
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 15px 0 25px 0;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
-.post-carousel::-webkit-scrollbar {
-    display: none; /* Para Chrome, Safari e Opera */
+.post-carousel::-webkit-scrollbar,
+.post-grid::-webkit-scrollbar,
+.carousel-container .carousel-track::-webkit-scrollbar {
+    display: none;
 }
 
 
-/* 2. O Card Individual */
-/* Esta regra define um tamanho fixo para cada card, impedindo que eles sejam esmagados ou esticados. */
-.card {
-    flex-shrink: 0; /* Impede que o card encolha */
-    flex-grow: 0; /* Impede que o card estique */
-    width: 320px; /* Define uma largura fixa de 320px para cada card */
-    
-    /* Estilos visuais para o card */
+/* 2. O Card Individual (ATUALIZADO) */
+/* Agora esta regra se aplica a TODAS as 3 variações de cards do site. */
+.card,
+.product-card,
+.carousel-card {
+    flex-shrink: 0;
+    flex-grow: 0;
+    width: 320px;
     background-color: #ffffff;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    text-decoration: none; /* Garante que não haja sublinhado no texto por ser um link */
-    color: #333; /* Cor do texto padrão para o card */
+    text-decoration: none;
+    color: #333;
     display: flex;
-    flex-direction: column; /* Organiza o conteúdo do card (imagem, texto) em coluna */
-    overflow: hidden; /* Garante que a imagem com cantos retos não vaze para fora dos cantos arredondados do card */
-    transition: transform 0.3s, box-shadow 0.3s; /* Efeito suave ao passar o mouse */
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
-.card:hover {
-    transform: translateY(-8px); /* Levanta um pouco o card ao passar o mouse */
+.card:hover,
+.product-card:hover,
+.carousel-card:hover {
+    transform: translateY(-8px);
     box-shadow: 0 8px 25px rgba(0,0,0,0.12);
 }
 
 
-/* 3. A Imagem Dentro do Card */
-/* Esta regra corrige o tamanho da imagem, fazendo com que ela ocupe o espaço designado sem distorcer. */
-.card-image {
-    width: 100%; /* Faz a imagem ter a largura total do card */
-    height: 200px; /* Define uma altura fixa para a imagem */
-    object-fit: cover; /* ESSENCIAL: Redimensiona a imagem para cobrir a área sem perder a proporção (evita que ela fique esticada ou esmagada) */
+/* 3. A Imagem Dentro do Card (ATUALIZADO) */
+/* Regra genérica para as imagens dos cards */
+.card-image,
+.product-card-image,
+.estacao-postcard img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
 
-/* 4. O Conteúdo de Texto do Card */
-.card-content {
+/* 4. O Conteúdo de Texto do Card (ATUALIZADO) */
+/* Regras para os 3 tipos de conteúdo de texto */
+.card-content,
+.product-card-content,
+.estacao-content { /* Adicionada a classe da página 'Onde Encontrar' */
     padding: 20px;
-    text-align: left; /* Alinha o texto à esquerda para melhor leitura */
-    flex-grow: 1; /* Faz esta área crescer para empurrar o botão (se houver) para baixo */
+    text-align: left;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
-
 .card-category {
     font-size: 0.8rem;
     font-weight: 600;
-    color: #A67B5B; /* Um tom de marrom/dourado para a categoria */
+    color: #A67B5B;
     text-transform: uppercase;
     display: block;
     margin-bottom: 8px;
 }
-
-.card-content h3 {
+.card-content h3,
+.product-card-content h4,
+.estacao-content h4 {
     font-size: 1.25rem;
     margin-bottom: 10px;
     line-height: 1.3;
 }
-
-.card-description {
+.estacao-content h3 { /* Estilo específico para PRIMAVERA, VERÃO etc */
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #A67B5B;
+    text-transform: uppercase;
+}
+.card-description,
+.product-card-content p,
+.estacao-content p {
     font-size: 0.95rem;
     line-height: 1.6;
     color: #666;
+    margin-bottom: 1.5rem;
+}
+.product-card .cta-button {
+    background-color: #d98d4c;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: auto;
+}
+.product-card .cta-button:hover {
+    background-color: #c77c3e;
 }
