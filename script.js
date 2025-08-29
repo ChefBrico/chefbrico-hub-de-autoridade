@@ -1,5 +1,5 @@
 // ================================================================= //
-// ===== ARQUIVO SCRIPT.JS MESTRE E DEFINITIVO - CHEFBRICO V5.0 ==== //
+// ===== ARQUIVO SCRIPT.JS MESTRE E DEFINITIVO - CHEFBRICO V5.1 ==== //
 // ================================================================= //
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -24,9 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const postCarousels = document.querySelectorAll('.post-carousel, .card-carousel');
     if (postCarousels.length > 0) {
         postCarousels.forEach(carousel => {
-            let isDown = false;
-            let startX;
-            let scrollLeft;
+            let isDown = false; let startX; let scrollLeft;
             carousel.addEventListener('mousedown', (e) => { isDown = true; carousel.style.cursor = 'grabbing'; startX = e.pageX - carousel.offsetLeft; scrollLeft = carousel.scrollLeft; });
             carousel.addEventListener('mouseleave', () => { isDown = false; carousel.style.cursor = 'grab'; });
             carousel.addEventListener('mouseup', () => { isDown = false; carousel.style.cursor = 'grab'; });
@@ -34,10 +32,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // --- MOTOR 3: FILTROS DO CARDÁPIO INTELIGENTE COM CURADORIA (V4.0 - FINAL) ---
-    const filterContainer = document.querySelector('.filters-container'); // Container geral
-    if (filterContainer) {
-        const allFilterButtons = filterContainer.querySelectorAll('.filter-btn');
+    // --- MOTOR 3: FILTROS DO CARDÁPIO INTELIGENTE (V5.1 - COM PRÉ-SELEÇÃO) ---
+    // Verifica se estamos na página do cardápio antes de rodar o código de filtro
+    const productGrid = document.querySelector('.product-grid');
+    if (productGrid) {
+        const allFilterButtons = document.querySelectorAll('.filter-btn');
         const productCards = document.querySelectorAll('.product-grid .product-card');
         const curatorshipBox = document.getElementById('curatorship-box');
         const curatorshipTitle = document.getElementById('curatorship-title');
@@ -51,38 +50,56 @@ document.addEventListener('DOMContentLoaded', function() {
             'performance': { title: "Para sua Performance e Dieta", text: "Comida como combustível. Aqui estão as opções com foco em proteína, leveza e baixo carboidrato para te ajudar a alcançar seus objetivos." }
         };
 
+        function applyFilter(filterValue) {
+            allFilterButtons.forEach(btn => {
+                if (btn.getAttribute('data-filter') === filterValue) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+
+            if (curatorshipContent[filterValue]) {
+                curatorshipTitle.textContent = curatorshipContent[filterValue].title;
+                curatorshipText.textContent = curatorshipContent[filterValue].text;
+                curatorshipBox.style.display = 'block';
+            } else {
+                curatorshipBox.style.display = 'none';
+            }
+
+            productCards.forEach(card => {
+                if (filterValue === 'all' || card.getAttribute('data-category').includes(filterValue)) {
+                    card.classList.remove('hide');
+                } else {
+                    card.classList.add('hide');
+                }
+            });
+        }
+
         allFilterButtons.forEach(button => {
             button.addEventListener('click', function() {
                 const filter = this.getAttribute('data-filter');
-                
-                // Desativa todos os botões e ativa apenas o clicado
-                allFilterButtons.forEach(btn => btn.classList.remove('active'));
-                this.classList.add('active');
-
-                // Lógica da Caixa de Curadoria
-                if (curatorshipContent[filter]) {
-                    curatorshipTitle.textContent = curatorshipContent[filter].title;
-                    curatorshipText.textContent = curatorshipContent[filter].text;
-                    curatorshipBox.style.display = 'block';
-                } else {
-                    curatorshipBox.style.display = 'none';
-                }
-
-                // Lógica dos Filtros
-                productCards.forEach(card => {
-                    if (filter === 'all' || card.getAttribute('data-category').includes(filter)) {
-                        card.classList.remove('hide');
-                    } else {
-                        card.classList.add('hide');
-                    }
-                });
+                applyFilter(filter);
             });
         });
+        
+        const urlParams = new URLSearchParams(window.location.search);
+        const filterFromURL = urlParams.get('filtro');
+
+        if (filterFromURL) {
+            applyFilter(filterFromURL);
+        } else {
+            // Se não, verifica se o botão "Todos" existe e o ativa por padrão
+            const allButton = document.querySelector('.filter-btn[data-filter="all"]');
+            if (allButton) {
+                applyFilter('all');
+            }
+        }
     }
 
     // --- MOTOR 4: MENU HAMBÚRGUER MOBILE ---
     const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
-    const mainNav = document.querySelector('header nav');
+    const mainNav = document.querySelector('header .main-nav');
     if (mobileNavToggle && mainNav) {
         mobileNavToggle.addEventListener('click', () => {
             mainNav.classList.toggle('active');
