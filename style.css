@@ -316,3 +316,83 @@ footer { text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 2
 .product-card .cta-button:hover {
     background-color: #c77c3e;
 }
+/* =================================================================== */
+/* ===== CORREÇÃO PARA O BLOCO "MENSAGEM DA MARIA CONCEIÇÃO" ===== */
+/* =================================================================== */
+
+/* 1. O Contêiner Principal da Mensagem (fundo bege, etc.) */
+/* Esta regra se aplica a .author-box e outras seções similares. */
+.author-box,
+.message-section, /* Adicionei um nome genérico caso use no futuro */
+.hero-section-v2 {
+    background-color: #FEFDFB; /* Um tom de bege bem claro, quase branco */
+    border: 1px solid #F2EBE3; /* Borda sutil na cor de fundo do site */
+    border-radius: 15px;
+    padding: 2.5rem;
+    margin: 2rem 0;
+    display: flex; /* ESSENCIAL: Alinha a imagem e o texto lado a lado */
+    align-items: center; /* Centraliza verticalmente a imagem e o texto */
+    gap: 2.5rem; /* Cria um espaço de 2.5rem entre a imagem e o texto */
+}
+
+
+/* 2. A Imagem Circular da Fundadora */
+/* Esta regra se aplica a .author-image e à imagem circular do topo. */
+.author-image,
+.hero-image-circular {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* CRIA O EFEITO CIRCULAR */
+    object-fit: cover; /* Garante que a foto preencha o círculo sem distorcer */
+    border: 5px solid #ffffff; /* Uma pequena borda branca em volta */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Sombra suave para dar profundidade */
+    flex-shrink: 0; /* Impede que a imagem encolha se o texto for grande */
+}
+/* Caso especial para a imagem maior no topo da página inicial */
+.hero-section-v2 .hero-image-circular {
+    width: 350px;
+    height: 350px;
+}
+
+
+/* 3. O Bloco de Conteúdo/Texto */
+.author-info,
+.hero-content-v2 {
+    flex-grow: 1; /* Permite que o bloco de texto ocupe o espaço restante */
+}
+
+.author-info h4,
+.hero-content-v2 h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+.hero-content-v2 h1 {
+    font-size: 2.8rem; /* Tamanho maior para o título principal */
+}
+
+.author-info p,
+.hero-content-v2 p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #666;
+}
+
+
+/* 4. Responsividade para Celulares */
+/* Em telas pequenas, o layout fica vertical: imagem em cima, texto embaixo */
+@media (max-width: 768px) {
+    .author-box,
+    .message-section,
+    .hero-section-v2 {
+        flex-direction: column; /* Coloca os itens em coluna */
+        text-align: center; /* Centraliza o texto */
+        padding: 2rem;
+        gap: 1.5rem;
+    }
+
+    .hero-section-v2 .hero-image-circular {
+        width: 250px;
+        height: 250px;
+    }
+}
