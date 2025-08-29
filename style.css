@@ -92,3 +92,57 @@ footer { text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 2
 .footer-grid h4 { font-size: 1.2em; margin-bottom: 15px; }
 .footer-grid a { color: var(--cor-texto); text-decoration: none; display: block; margin-bottom: 12px; }
 .footer-credit { margin-top: 40px; border-top: 1px solid #e0e0e0; padding-top: 20px; font-size: 0.9em; }
+/* ======================================================= */
+/* ===== REPARO CIRÚRGICO P/ CAIXA DA AUTORA (MARIA) ===== */
+/* ======================================================= */
+
+.author-box {
+    display: grid;
+    grid-template-columns: auto 1fr; /* Coluna da imagem se ajusta, texto ocupa o resto */
+    gap: 30px;
+    align-items: center;
+    background-color: #fdfcf7; /* Fundo suave */
+    border: 1px solid #f0ead6;
+    border-radius: 8px;
+    padding: 30px;
+    margin-top: 60px;
+}
+
+.author-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* << A MÁGICA DO CÍRCULO */
+    object-fit: cover;
+    border: 4px solid white; /* Borda branca sutil para destacar */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.author-info {
+    text-align: left;
+}
+
+.author-info h4 {
+    margin-top: 0;
+    font-size: 1.4em;
+}
+
+.author-info p {
+    margin-bottom: 0;
+    line-height: 1.7;
+    font-size: 1.1em;
+}
+
+/* --- Adaptação para telas de celular --- */
+@media (max-width: 600px) {
+    .author-box {
+        grid-template-columns: 1fr; /* Uma única coluna no mobile */
+        text-align: center;
+        gap: 20px;
+    }
+    .author-image {
+        margin: 0 auto; /* Centraliza a imagem */
+    }
+    .author-info {
+        text-align: center;
+    }
+}
