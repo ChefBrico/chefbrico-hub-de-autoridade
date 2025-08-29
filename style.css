@@ -294,3 +294,108 @@ footer { text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 2
     margin-left: auto;
     margin-right: auto;
 }
+======================================================= */
+
+/* ===== PROTOCOLO DE REPARAÇÃO: CAIXA DA AUTORA V2.2 ===== */
+
+/* Versão com ID para máxima especificidade        */
+
+/* ======================================================= */
+
+
+
+#voz-da-chef-box { /* <<< Usando o ID para a regra principal */
+
+    display: grid;
+
+    grid-template-columns: auto 1fr; /* Coluna da imagem se ajusta, texto ocupa o resto */
+
+    align-items: center;
+
+    gap: 30px;
+
+    margin-top: 60px;
+
+    padding: 30px;
+
+    border-top: 2px solid #f0f0f0;
+
+    background-color: #fdfcf7;
+
+    border-radius: 8px;
+
+}
+
+
+
+#voz-da-chef-box .author-image { /* <<< Regra específica para a imagem dentro da nossa caixa */
+
+    width: 150px;
+
+    height: 150px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 4px solid var(--cor-secundaria);
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+
+}
+
+
+
+#voz-da-chef-box .author-info h4 { /* <<< Regra específica para o título */
+
+    margin: 0 0 10px 0;
+
+    font-family: var(--fonte-titulos);
+
+    color: var(--cor-primaria);
+
+    font-size: 1.5em;
+
+}
+
+
+
+#voz-da-chef-box .author-info p { /* <<< Regra específica para o parágrafo */
+
+    margin: 0;
+
+    line-height: 1.7;
+
+    margin-bottom: 15px;
+
+}
+
+
+
+/* --- Adaptação para Mobile --- */
+
+@media (max-width: 768px) {
+
+    #voz-da-chef-box {
+
+        grid-template-columns: 1fr; /* Empilha a imagem e o texto */
+
+        text-align: center;
+
+        gap: 20px;
+
+        padding: 25px;
+
+    }
+
+    #voz-da-chef-box .author-image {
+
+        margin: 0 auto; /* Centraliza a imagem */
+
+        width: 120px;
+
+        height: 120px;
+
+    }
+
+}
