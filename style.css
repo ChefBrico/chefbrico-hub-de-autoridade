@@ -199,3 +199,91 @@ footer { text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 2
 .footer-grid h4 { font-size: 1.2em; margin-bottom: 15px; }
 .footer-grid a { color: var(--cor-texto); text-decoration: none; display: block; margin-bottom: 12px; }
 .footer-credit { margin-top: 40px; border-top: 1px solid #e0e0e0; padding-top: 20px; font-size: 0.9em; }
+
+
+
+/* =================================================================== */
+/* ===== CORREÇÃO PARA OS CARDS DE CARROSSEL HORIZONTAL ===== */
+/* =================================================================== */
+
+/* 1. O Contêiner do Carrossel */
+/* Esta regra transforma o 'div' que segura os cards em uma linha horizontal e permite a rolagem. */
+.post-carousel {
+    display: flex; /* Alinha os cards um ao lado do outro */
+    overflow-x: auto; /* Cria a barra de rolagem horizontal se necessário */
+    scroll-behavior: smooth; /* Deixa a rolagem mais suave */
+    
+    /* Espaçamento e padding para um visual mais limpo */
+    gap: 20px; /* Cria um espaço de 20px entre cada card */
+    padding-top: 15px;
+    padding-bottom: 25px; /* Um espaço extra embaixo para a barra de rolagem não ficar colada */
+    
+    /* As 3 linhas abaixo servem para ESCONDER a barra de rolagem, mas MANTER a funcionalidade de rolar com o mouse/dedo. */
+    -ms-overflow-style: none;  /* Para Internet Explorer e Edge */
+    scrollbar-width: none;  /* Para Firefox */
+}
+.post-carousel::-webkit-scrollbar {
+    display: none; /* Para Chrome, Safari e Opera */
+}
+
+
+/* 2. O Card Individual */
+/* Esta regra define um tamanho fixo para cada card, impedindo que eles sejam esmagados ou esticados. */
+.card {
+    flex-shrink: 0; /* Impede que o card encolha */
+    flex-grow: 0; /* Impede que o card estique */
+    width: 320px; /* Define uma largura fixa de 320px para cada card */
+    
+    /* Estilos visuais para o card */
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    text-decoration: none; /* Garante que não haja sublinhado no texto por ser um link */
+    color: #333; /* Cor do texto padrão para o card */
+    display: flex;
+    flex-direction: column; /* Organiza o conteúdo do card (imagem, texto) em coluna */
+    overflow: hidden; /* Garante que a imagem com cantos retos não vaze para fora dos cantos arredondados do card */
+    transition: transform 0.3s, box-shadow 0.3s; /* Efeito suave ao passar o mouse */
+}
+.card:hover {
+    transform: translateY(-8px); /* Levanta um pouco o card ao passar o mouse */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+
+/* 3. A Imagem Dentro do Card */
+/* Esta regra corrige o tamanho da imagem, fazendo com que ela ocupe o espaço designado sem distorcer. */
+.card-image {
+    width: 100%; /* Faz a imagem ter a largura total do card */
+    height: 200px; /* Define uma altura fixa para a imagem */
+    object-fit: cover; /* ESSENCIAL: Redimensiona a imagem para cobrir a área sem perder a proporção (evita que ela fique esticada ou esmagada) */
+}
+
+
+/* 4. O Conteúdo de Texto do Card */
+.card-content {
+    padding: 20px;
+    text-align: left; /* Alinha o texto à esquerda para melhor leitura */
+    flex-grow: 1; /* Faz esta área crescer para empurrar o botão (se houver) para baixo */
+}
+
+.card-category {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #A67B5B; /* Um tom de marrom/dourado para a categoria */
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.card-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.card-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #666;
+}
