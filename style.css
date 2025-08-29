@@ -96,3 +96,81 @@ footer { text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 2
 .footer-grid h4 { font-size: 1.2em; margin-bottom: 15px; color: var(--cor-titulos); }
 .footer-grid a { color: var(--cor-texto); text-decoration: none; display: block; margin-bottom: 12px; }
 .footer-credit { margin-top: 40px; border-top: 1px solid #e0e0e0; padding-top: 20px; font-size: 0.9em; }
+
+/* ================================================================= */
+/* ===== NOVO COMPONENTE: CARD DE CONTEÚDO (SEM CONFLITOS) ===== */
+/* ================================================================= */
+
+.card-carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 90%; /* Largura de cada card no mobile */
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Esconde a barra de rolagem no Firefox */
+}
+.card-carousel::-webkit-scrollbar {
+    display: none; /* Esconde a barra de rolagem no Chrome/Safari */
+}
+
+/* Ajusta o número de colunas em telas maiores */
+@media (min-width: 768px) {
+    .card-carousel {
+        grid-auto-columns: calc(50% - 10px); /* 2 cards por linha em tablets */
+    }
+}
+@media (min-width: 1024px) {
+    .card-carousel {
+        grid-auto-columns: calc(25% - 15px); /* 4 cards por linha em desktops */
+    }
+}
+
+/* O novo estilo para o card de conteúdo */
+.content-card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--cor-texto);
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    scroll-snap-align: start;
+}
+
+/* A SOLUÇÃO DEFINITIVA PARA IMAGENS CORTADAS */
+.content-card-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3; /* Proporção 4:3 SEM CORTES */
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.content-card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.content-card-category {
+    font-size: 0.8em;
+    font-weight: bold;
+    color: var(--cor-acao);
+}
+.content-card-content h3 {
+    margin-top: 5px;
+    font-size: 1.4em;
+}
+.content-card-description {
+    flex-grow: 1;
+    font-size: 1em;
+    line-height: 1.6;
+}
+.content-card-content .cta-button {
+    margin-top: auto;
+    text-align: center;
+}
