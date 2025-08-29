@@ -1,10 +1,11 @@
 // ================================================================= //
-// ===== ARQUIVO SCRIPT.JS MESTRE E DEFINITIVO - CHEFBRICO V5.3 ==== //
+// ===== ARQUIVO SCRIPT.JS MESTRE E DEFINITIVO - CHEFBRICO V6.0 ==== //
 // ================================================================= //
 
 document.addEventListener('DOMContentLoaded', function() {
 
     // --- MOTOR 1: ACORDEÃO (PARA FAQ E ONDE ENCONTRAR) ---
+    // Esta funcionalidade está mantida e intacta.
     const accordionHeaders = document.querySelectorAll('.accordion-header');
     if (accordionHeaders.length > 0) {
         accordionHeaders.forEach(header => {
@@ -21,10 +22,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // --- MOTOR 2: CARROSSEL DE CARDS HORIZONTAIS ---
-    const postCarousels = document.querySelectorAll('.post-carousel, .card-carousel');
+    // Esta funcionalidade está mantida e intacta.
+    const postCarousels = document.querySelectorAll('.post-carousel, .carousel-container .carousel-track');
     if (postCarousels.length > 0) {
         postCarousels.forEach(carousel => {
             let isDown = false; let startX; let scrollLeft;
+            carousel.style.cursor = 'grab';
             carousel.addEventListener('mousedown', (e) => { isDown = true; carousel.style.cursor = 'grabbing'; startX = e.pageX - carousel.offsetLeft; scrollLeft = carousel.scrollLeft; });
             carousel.addEventListener('mouseleave', () => { isDown = false; carousel.style.cursor = 'grab'; });
             carousel.addEventListener('mouseup', () => { isDown = false; carousel.style.cursor = 'grab'; });
@@ -32,10 +35,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // --- MOTOR 3: FILTROS DO CARDÁPIO INTELIGENTE (V5.3 - CORRIGIDO) ---
-    // A LINHA ABAIXO FOI CORRIGIDA PARA ENCONTRAR A GRADE DE PRODUTOS CORRETAMENTE
-    const productGrid = document.querySelector('.product-grid'); 
-    
+    // --- MOTOR 3: FILTROS DO CARDÁPIO INTELIGENTE (VERSÃO FINAL E CORRIGIDA) ---
+    const productGrid = document.querySelector('.product-grid');
     if (productGrid) {
         const allFilterButtons = document.querySelectorAll('.filter-btn');
         const productCards = document.querySelectorAll('.product-grid .product-card');
@@ -54,11 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         function applyFilter(filterValue) {
             allFilterButtons.forEach(btn => {
-                if (btn.getAttribute('data-filter') === filterValue) {
-                    btn.classList.add('active');
-                } else {
-                    btn.classList.remove('active');
-                }
+                btn.classList.toggle('active', btn.getAttribute('data-filter') === filterValue);
             });
 
             if (curatorshipContent[filterValue]) {
@@ -70,18 +67,15 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             productCards.forEach(card => {
-                if (filterValue === 'all' || card.getAttribute('data-category').includes(filterValue)) {
-                    card.classList.remove('hide');
-                } else {
-                    card.classList.add('hide');
-                }
+                const cardCategories = card.getAttribute('data-category') || '';
+                const shouldShow = filterValue === 'all' || cardCategories.includes(filterValue);
+                card.style.display = shouldShow ? '' : 'none';
             });
         }
 
         allFilterButtons.forEach(button => {
             button.addEventListener('click', function() {
-                const filter = this.getAttribute('data-filter');
-                applyFilter(filter);
+                applyFilter(this.getAttribute('data-filter'));
             });
         });
         
@@ -93,13 +87,13 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             const allButton = document.querySelector('.filter-btn[data-filter="all"]');
             if (allButton) {
-                allButton.classList.add('active'); // Garante que o botão 'Todos' comece ativo
                 applyFilter('all');
             }
         }
     }
 
     // --- MOTOR 4: MENU HAMBÚRGUER MOBILE ---
+    // Esta funcionalidade está mantida e intacta.
     const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
     const mainNav = document.querySelector('header .main-nav');
     if (mobileNavToggle && mainNav) {
