@@ -396,39 +396,7 @@
     
     <footer><div class="container footer-grid"><div><h4>Navegação</h4><a href="/index.html">Início</a><a href="/nossa-filosofia.html">Nossa Filosofia</a><a href="/cardapio.html">Cardápio Completo</a><a href="/faq.html">FAQ</a><a href="/chefbrico-club.html">ChefBrico Club</a></div><div><h4>Nossos Produtos</h4><a href="/risotos.html">Risotos</a><a href="/sopas-funcionais.html">Sopas Funcionais</a><a href="/refeicoes-praticas.html">Refeições Práticas</a><a href="/emporio-da-chef.html">Empório da Chef</a></div><div><h4>Ajuda & Suporte</h4><a href="/onde-encontrar.html">Onde Encontrar</a><a href="https://www.chefbrico.com/como-comprar" target="_blank" rel="noopener noreferrer">Como Comprar na Loja</a><a href="https://www.chefbrico.com/trocas-e-devolucoes" target="_blank" rel="noopener noreferrer">Trocas e Devoluções</a><a href="https://wa.me/5561996659880" target="_blank" rel="noopener noreferrer">Contato</a></div><div><h4>Redes Sociais</h4><a href="https://www.instagram.com/chefbrico/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://br.pinterest.com/chefbrico/" target="_blank" rel="noopener noreferrer">Pinterest</a></div></div><div class="container footer-credit"><p>© 2025 ChefBrico - Todos os direitos reservados.</p><p> Maria Conceição | CNPJ: 36.014.833/0001-59 </p></div></footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const allFilterButtons = document.querySelectorAll('.filter-buttons .filter-btn');
-            const productCards = document.querySelectorAll('.product-grid .product-card');
+ <script src="/js/script.js"></script>
 
-            allFilterButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const filter = this.getAttribute('data-filter');
-                    
-                    if (this.classList.contains('active') && filter !== 'all') {
-                        this.classList.remove('active');
-                        // Se nenhum outro filtro estiver ativo, ativa o 'Todos'
-                        if (document.querySelectorAll('.filter-btn.active').length === 0) {
-                            document.querySelector('.filter-btn[data-filter="all"]').classList.add('active');
-                        }
-                    } else {
-                        // Reseta todos os botões antes de ativar o novo
-                         allFilterButtons.forEach(btn => btn.classList.remove('active'));
-                         this.classList.add('active');
-                    }
-                    
-                    const activeFilter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
-
-                    productCards.forEach(card => {
-                        if (activeFilter === 'all' || card.getAttribute('data-category').includes(activeFilter)) {
-                            card.classList.remove('hide');
-                        } else {
-                            card.classList.add('hide');
-                        }
-                    });
-                });
-            });
-        });
-    </script>
 </body>
 </html>
