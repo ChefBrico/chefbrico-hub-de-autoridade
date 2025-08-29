@@ -97,6 +97,22 @@ footer { text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 2
 .footer-grid a { color: var(--cor-texto); text-decoration: none; display: block; margin-bottom: 12px; }
 .footer-credit { margin-top: 40px; border-top: 1px solid #e0e0e0; padding-top: 20px; font-size: 0.9em; }
 
+/* ======================================================= */
+/* ===== REPARO CIRÚRGICO PARA CARDS DE CONTEÚDO      ===== */
+/* ======================================================= */
+
+.post-grid .card-image, .card-carousel .card-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3; /* Proporção 4:3 SEM CORTES */
+    object-fit: cover;
+}
+
+.post-grid, .card-carousel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
 /* ================================================================= */
 /* ===== NOVO COMPONENTE: CARD DE CONTEÚDO (SEM CONFLITOS) ===== */
 /* ================================================================= */
