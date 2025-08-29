@@ -1,5 +1,5 @@
 // ================================================================= //
-// ===== ARQUIVO SCRIPT.JS MESTRE E DEFINITIVO - CHEFBRICO V5.2 ==== //
+// ===== ARQUIVO SCRIPT.JS MESTRE E DEFINITIVO - CHEFBRICO V5.3 ==== //
 // ================================================================= //
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -32,8 +32,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // --- MOTOR 3: FILTROS DO CARDÁPIO INTELIGENTE (V5.2 - FINAL) ---
-    const productGrid = document.querySelector('.product-grid');
+    // --- MOTOR 3: FILTROS DO CARDÁPIO INTELIGENTE (V5.3 - CORRIGIDO) ---
+    // A LINHA ABAIXO FOI CORRIGIDA PARA ENCONTRAR A GRADE DE PRODUTOS CORRETAMENTE
+    const productGrid = document.querySelector('.product-grid'); 
+    
     if (productGrid) {
         const allFilterButtons = document.querySelectorAll('.filter-btn');
         const productCards = document.querySelectorAll('.product-grid .product-card');
@@ -47,7 +49,6 @@ document.addEventListener('DOMContentLoaded', function() {
             'momento-especial': { title: "Para um Momento Especial a Dois", text: "Crie uma noite inesquecível com estes pratos gourmet. A praticidade fica por minha conta, o romance por conta de vocês!" },
             'para-familia': { title: "Aprovados pela Família (e pelas Crianças!)", text: "Estes são os pratos que fazem sucesso com todos em casa, unindo o sabor que as crianças amam com a nutrição que os pais procuram." },
             'performance': { title: "Para sua Performance e Dieta", text: "Comida como combustível. Aqui estão as opções com foco em proteína, leveza e baixo carboidrato para te ajudar a alcançar seus objetivos." },
-            // NOVA MENSAGEM ADICIONADA ABAIXO
             'trilha-viagem': { title: "O Sabor que Te Acompanha em Qualquer Aventura", text: "Para o Trilheiro do Cerrado ou o Viajante Airbnb: comida de verdade que não pesa na mochila, não precisa de refrigeração e garante sua nutrição longe de casa." }
         };
 
@@ -92,6 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             const allButton = document.querySelector('.filter-btn[data-filter="all"]');
             if (allButton) {
+                allButton.classList.add('active'); // Garante que o botão 'Todos' comece ativo
                 applyFilter('all');
             }
         }
