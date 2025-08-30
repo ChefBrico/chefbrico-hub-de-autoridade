@@ -1,5 +1,5 @@
 // ================================================================= //
-// ===== ARQUIVO SCRIPT.JS MESTRE E DEFINITIVO - CHEFBRICO V5.2 ==== //
+// ===== ARQUIVO SCRIPT.JS MESTRE E DEFINITIVO - CHEFBRICO V5.1 ==== //
 // ================================================================= //
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -32,7 +32,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // --- MOTOR 3: FILTROS DO CARDÁPIO INTELIGENTE (V5.2 - FINAL) ---
+    // --- MOTOR 3: FILTROS DO CARDÁPIO INTELIGENTE (V5.1 - COM PRÉ-SELEÇÃO) ---
+    // Verifica se estamos na página do cardápio antes de rodar o código de filtro
     const productGrid = document.querySelector('.product-grid');
     if (productGrid) {
         const allFilterButtons = document.querySelectorAll('.filter-btn');
@@ -46,9 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'marmita-inteligente': { title: "Para uma Marmita Saudável e Prática", text: "Estas são as minhas soluções favoritas para um almoço nutritivo no trabalho. Fáceis de preparar e deliciosas para reaquecer." },
             'momento-especial': { title: "Para um Momento Especial a Dois", text: "Crie uma noite inesquecível com estes pratos gourmet. A praticidade fica por minha conta, o romance por conta de vocês!" },
             'para-familia': { title: "Aprovados pela Família (e pelas Crianças!)", text: "Estes são os pratos que fazem sucesso com todos em casa, unindo o sabor que as crianças amam com a nutrição que os pais procuram." },
-            'performance': { title: "Para sua Performance e Dieta", text: "Comida como combustível. Aqui estão as opções com foco em proteína, leveza e baixo carboidrato para te ajudar a alcançar seus objetivos." },
-            // NOVA MENSAGEM ADICIONADA ABAIXO
-            'trilha-viagem': { title: "O Sabor que Te Acompanha em Qualquer Aventura", text: "Para o Trilheiro do Cerrado ou o Viajante Airbnb: comida de verdade que não pesa na mochila, não precisa de refrigeração e garante sua nutrição longe de casa." }
+            'performance': { title: "Para sua Performance e Dieta", text: "Comida como combustível. Aqui estão as opções com foco em proteína, leveza e baixo carboidrato para te ajudar a alcançar seus objetivos." }
         };
 
         function applyFilter(filterValue) {
@@ -87,9 +86,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const urlParams = new URLSearchParams(window.location.search);
         const filterFromURL = urlParams.get('filtro');
 
-        if (filterFromURL && document.querySelector(`.filter-btn[data-filter="${filterFromURL}"]`)) {
+        if (filterFromURL) {
             applyFilter(filterFromURL);
         } else {
+            // Se não, verifica se o botão "Todos" existe e o ativa por padrão
             const allButton = document.querySelector('.filter-btn[data-filter="all"]');
             if (allButton) {
                 applyFilter('all');
