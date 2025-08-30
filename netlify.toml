@@ -1,10 +1,9 @@
-# netlify.toml - Arquivo de Configuração Essencial e Corrigido
+# netlify.toml - Arquivo de Configuração Essencial
 
 [build]
-  # Comando para dizer ao Netlify para usar o Eleventy para construir o site.
-  command = "eleventy"
-  # Esta é a correção final: Aponta para a pasta correta onde o site pronto está.
-  publish = "_site"
+  # Esta linha informa ao Netlify que a pasta principal do seu site 
+  # é a raiz do repositório, onde estão o index.html e o style.css.
+  publish = "."
 
 [[headers]]
   for = "/*"
