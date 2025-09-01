@@ -1,14 +1,13 @@
 {
   "name": "chefbrico-hub-de-autoridade",
   "version": "1.0.0",
-  "description": "Hub de autoridade do ChefBrico para SEO",
+  "description": "O Hub de Autoridade (SUPER BLOG) do Projeto Fênix para a ChefBrico.",
   "main": "index.js",
   "scripts": {
     "build": "eleventy",
     "start": "eleventy --serve"
   },
-  "keywords": [],
-  "author": "",
+  "author": "ChefBrico (Maria Conceição)",
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1"
