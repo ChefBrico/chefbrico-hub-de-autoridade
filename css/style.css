@@ -399,25 +399,22 @@ footer { text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 2
     }
 }
 /* ================================================= */
-/* --- REVISÃO ESTRATÉGICA 'PADRÃO OURO' - v2 --- */
+/* --- REVISÃO ESTRATÉGICA 'PADRÃO OURO' - v3 --- */
 /* ================================================= */
 
-/* --- 1. Base de Leitura e Espaçamento (Mobile First) --- */
+/* --- Base de Leitura e Espaçamento (Mantido da v2) --- */
 .post-content {
-    /* Centraliza o conteúdo principal em uma coluna de leitura confortável em telas grandes */
     max-width: 720px;
     margin-left: auto;
     margin-right: auto;
-    line-height: 1.7; /* Melhora a legibilidade dos parágrafos */
+    line-height: 1.7;
 }
-/* Adiciona o respiro lateral em telas pequenas */
 @media (max-width: 768px) {
     .container {
         padding-left: 20px;
         padding-right: 20px;
     }
 }
-/* Adiciona um espaçamento consistente entre as seções */
 .post-content h2,
 .post-content .testimonial-box,
 .post-content .cta-receita-autoral,
@@ -426,55 +423,80 @@ footer { text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 2
     margin-bottom: 20px;
 }
 
-
-/* --- 3. Novo Card 'Compre esta Receita' (Mais Harmônico) --- */
-.cta-receita-autoral {
-    display: grid; /* Usando Grid para mais controle */
-    grid-template-columns: 100px 1fr; /* Coluna da imagem fixa, texto flexível */
-    gap: 20px;
-    align-items: center;
-    background-color: #f9f9f9;
+/* --- 1. Imagem Principal (Hero) - CONTROLE DE ALTURA --- */
+.article-hero-image-container {
+    width: 100%;
+    /* Define uma altura máxima para a imagem não dominar a tela */
+    max-height: 500px; 
+    overflow: hidden; /* Esconde o que sobrar da imagem */
     border-radius: 8px;
-    padding: 20px;
+    margin: 20px 0;
+}
+.article-hero-image-container img {
+    width: 100%;
+    height: 100%;
+    /* Garante que a imagem cubra a área sem distorcer, cortando o excesso */
+    object-fit: cover; 
+}
+/* Em telas de celular, a altura máxima é ainda menor */
+@media (max-width: 768px) {
+    .article-hero-image-container {
+        max-height: 300px;
+    }
+}
+
+
+/* --- 2. Card CTA (Mais Compacto e Equilibrado) --- */
+.cta-receita-autoral {
+    display: grid;
+    grid-template-columns: 120px 1fr; /* Aumentei um pouco a imagem */
+    gap: 25px; /* Aumentei o espaço entre imagem e texto */
+    align-items: center;
+    background-color: #fdfaf6;
+    border: 1px solid #f0e9df;
+    border-radius: 8px;
+    padding: 20px; /* Reduzi o padding interno */
 }
 .cta-receita-autoral img {
-    width: 100px;
+    width: 120px;
     height: auto;
+    border-radius: 4px;
 }
 .cta-receita-info h3 {
     margin-top: 0;
+    font-size: 1.3em;
 }
 .cta-receita-info p {
     margin-bottom: 15px;
+    line-height: 1.5;
 }
-/* Em telas pequenas, o layout muda para imagem em cima e texto embaixo */
 @media (max-width: 500px) {
     .cta-receita-autoral {
-        grid-template-columns: 1fr; /* Uma única coluna */
+        grid-template-columns: 1fr;
         text-align: center;
     }
     .cta-receita-autoral img {
-        margin: 0 auto 15px; /* Centraliza a imagem e dá espaço abaixo */
+        margin: 0 auto 15px;
     }
 }
 
 
-/* --- 4. Testemunhal (Mais Delicado e Proporcional) --- */
+/* --- 3. Testemunhal (Ainda Mais Delicado e Sutil) --- */
 .testimonial-box {
     background-color: #FBF8F3;
     border-left: 4px solid #D4A373;
-    padding: 25px 30px;
+    padding: 25px 30px; /* Reduzido */
     border-radius: 0 8px 8px 0;
-    max-width: 90%; /* Não ocupa a largura toda, criando um recuo elegante */
-    margin-left: auto; /* Alinha à direita */
-    margin-right: auto; /* Alinha à esquerda (se precisar, use apenas margin-left: auto) */
+    max-width: 85%; /* Reduzido para ficar mais recuado */
+    margin: 40px auto; /* Centralizado com margem automática */
 }
 .testimonial-box blockquote p {
     font-family: 'Dancing Script', cursive;
-    font-size: 1.5em; /* Reduzido para ficar mais delicado */
-    line-height: 1.5;
+    font-size: 1.4em; /* Reduzido para ficar mais delicado */
+    line-height: 1.6;
     color: #444;
     margin: 0;
+    text-align: center;
 }
 .testimonial-box cite {
     display: block;
@@ -487,7 +509,7 @@ footer { text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 2
 }
 
 
-/* --- 5. Modo de Preparo (Alinhamento dos Números) --- */
+/* --- MODO DE PREPARO E FAQ (Mantidos da v2, pois estavam bons) --- */
 .modo-preparo-lista {
     list-style: none;
     counter-reset: preparo-counter;
@@ -497,7 +519,7 @@ footer { text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 2
 .modo-preparo-lista li {
     counter-increment: preparo-counter;
     margin-bottom: 25px;
-    padding-left: 55px; /* Mais espaço para o número */
+    padding-left: 55px;
     position: relative;
     font-size: 1.1em;
 }
@@ -505,8 +527,7 @@ footer { text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 2
     content: "#" counter(preparo-counter);
     position: absolute;
     left: 0;
-    /* Ajuste de posição para alinhar com o texto */
-    top: 0.1em; 
+    top: 0.1em;
     background-color: #D4A373;
     color: white;
     width: 38px;
@@ -518,18 +539,14 @@ footer { text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 2
     font-weight: bold;
 }
 .modo-preparo-lista li strong {
-    display: block; /* Faz o título (Refogue, Cozinhe) ocupar uma linha */
+    display: block;
     margin-bottom: 5px;
     color: #333;
 }
-
-
-/* --- 6. Aumento da Fonte do FAQ (Melhor Visibilidade) --- */
 .accordion-header h3 {
-    font-size: 1.3em; /* Aumentei mais um pouco */
+    font-size: 1.3em;
     margin: 0;
 }
-/* Melhorando a área de clique no mobile */
 @media (max-width: 768px) {
     .accordion-header {
         padding: 15px 10px;
