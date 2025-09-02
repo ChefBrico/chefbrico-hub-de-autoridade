@@ -397,57 +397,41 @@ footer { text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 2
         width: 250px;
         height: 250px;
     }
-/* ================================================= */
-/* --- REVISÃO ESTRATÉGICA 'PADRÃO OURO' - v10 --- */
-/* ================================================= */
+/* =================================================== */
+/* --- REVISÃO ESTRATÉGICA 'PADRÃO OURO' - v11 FINAL --- */
+/* =================================================== */
 
-/* --- Base de Leitura e Espaçamento (Mantido) --- */
+/* --- Base de Leitura e Espaçamento --- */
 .post-content { max-width: 720px; margin-left: auto; margin-right: auto; line-height: 1.7; }
 @media (max-width: 768px) { .container { padding-left: 20px; padding-right: 20px; } }
 .post-content h2, .post-content .testimonial-box, .post-content .card-modelo-autora, .post-content .faq-section { margin-top: 40px; margin-bottom: 20px; }
 
+/* --- Hero Card (Aprovado!) --- */
+.hero-card { max-width: 720px; margin-left: auto; margin-right: auto; background-color: #ffffff; border: 1px solid #EAEAEA; border-radius: 16px; padding: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.07); margin-top: 30px; margin-bottom: 30px; }
+.hero-card img { width: 100%; height: auto; border-radius: 8px; display: block; }
+@media (max-width: 768px) { .hero-card { padding: 15px; } }
 
-/* --- 1. HERO CARD v10 (ALINHADO COM O CONTEÚDO PARA HARMONIA MÁXIMA) --- */
-.hero-card {
-    /* AS 3 LINHAS DA HARMONIA! */
-    max-width: 720px;       /* A mesma largura máxima do texto abaixo */
-    margin-left: auto;      /* Centraliza o card na página */
-    margin-right: auto;     /* Centraliza o card na página */
-
-    background-color: #ffffff;
-    border: 1px solid #EAEAEA;
-    border-radius: 16px;
-    padding: 20px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-.hero-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    display: block;
-}
-@media (max-width: 768px) {
-    .hero-card {
-        padding: 15px;
-    }
-}
-
-
-/* --- Trava de Segurança Anti-Colapso (Mantida) --- */
+/* --- Trava de Segurança Anti-Colapso --- */
 .recipe-meta-icons, .post-content { clear: both; position: relative; z-index: 1; }
 
-/* --- Card CTA (Estilo 'Autora' Mantido) --- */
+/* --- Card CTA v11 (COM IMAGEM CIRCULAR, COMO VOCÊ PEDIU) --- */
 .card-modelo-autora { display: flex; align-items: center; gap: 30px; background-color: #fdfaf6; border: 1px solid #f0e9df; padding: 30px; border-radius: 16px; }
-.card-modelo-autora-image { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+.card-modelo-autora-image {
+    width: 120px;       /* Tamanho do círculo */
+    height: 120px;      /* Altura IGUAL à largura para um círculo perfeito */
+    border-radius: 50%; /* A MÁGICA DO CÍRCULO! */
+    object-fit: cover;  /* Garante que a foto preencha o círculo sem distorcer */
+    flex-shrink: 0;
+    border: 3px solid #fff; /* Opcional: uma pequena borda branca */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Opcional: uma pequena sombra */
+}
 .card-modelo-autora-content { display: flex; flex-direction: column; }
 .card-modelo-autora-content h3 { margin: 0 0 10px 0; font-size: 1.4em; }
 .card-modelo-autora-content p { margin: 0 0 20px 0; line-height: 1.6; flex-grow: 1; }
 .card-modelo-autora-content .cta-button { align-self: flex-start; font-weight: bold; }
-@media (max-width: 600px) { .card-modelo-autora { flex-direction: column; text-align: center; padding: 25px; } .card-modelo-autora-image { width: 120px; height: 120px; } .card-modelo-autora-content .cta-button { align-self: center; } }
+@media (max-width: 600px) { .card-modelo-autora { flex-direction: column; text-align: center; padding: 25px; } .card-modelo-autora-content .cta-button { align-self: center; } }
 
-/* --- Testemunhal (Estilo Minimalista Mantido) --- */
+/* --- Testemunhal (ESTILO CORRIGIDO E REINSERIDO) --- */
 .testimonial-box { background-color: transparent; border: none; padding: 15px 0; max-width: 75%; margin: 50px auto; text-align: center; position: relative; }
 .testimonial-box blockquote::before { content: '“'; position: absolute; top: -15px; left: 50%; transform: translateX(-50%); font-size: 4.5em; color: #EADFD0; z-index: -1; line-height: 1; }
 .testimonial-box blockquote { margin: 0; }
