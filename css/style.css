@@ -397,8 +397,8 @@ footer { text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 2
         width: 250px;
         height: 250px;
     }
-}/* ================================================= */
-/* --- REVISÃO ESTRATÉGICA 'PADRÃO OURO' - v9 --- */
+/* ================================================= */
+/* --- REVISÃO ESTRATÉGICA 'PADRÃO OURO' - v10 --- */
 /* ================================================= */
 
 /* --- Base de Leitura e Espaçamento (Mantido) --- */
@@ -407,22 +407,27 @@ footer { text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 2
 .post-content h2, .post-content .testimonial-box, .post-content .card-modelo-autora, .post-content .faq-section { margin-top: 40px; margin-bottom: 20px; }
 
 
-/* --- 1. NOVO HERO CARD v9 (ESTILO CONSISTENTE COM O SITE) --- */
+/* --- 1. HERO CARD v10 (ALINHADO COM O CONTEÚDO PARA HARMONIA MÁXIMA) --- */
 .hero-card {
-    background-color: #ffffff; /* Fundo branco para o card */
-    border: 1px solid #EAEAEA; /* Borda sutil como nos outros cards */
-    border-radius: 16px;       /* Bordas arredondadas */
-    padding: 20px;             /* O espaçamento interno que cria a 'moldura' */
-    box-shadow: 0 5px 20px rgba(0,0,0,0.07); /* Sombra suave para destacar */
-    margin: 30px 0;            /* Espaçamento acima e abaixo do card */
+    /* AS 3 LINHAS DA HARMONIA! */
+    max-width: 720px;       /* A mesma largura máxima do texto abaixo */
+    margin-left: auto;      /* Centraliza o card na página */
+    margin-right: auto;     /* Centraliza o card na página */
+
+    background-color: #ffffff;
+    border: 1px solid #EAEAEA;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 .hero-card img {
-    width: 100%;               /* A imagem ocupa 100% da largura do card */
-    height: auto;              /* A altura se ajusta para manter a proporção (sem cortes!) */
-    border-radius: 8px;        /* Arredonda os cantos da imagem também */
-    display: block;            /* Remove qualquer espaço extra indesejado abaixo da imagem */
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
 }
-/* No mobile, a moldura (padding) é um pouco menor */
 @media (max-width: 768px) {
     .hero-card {
         padding: 15px;
