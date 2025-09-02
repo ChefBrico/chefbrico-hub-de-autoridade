@@ -398,80 +398,45 @@ footer { text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 2
         height: 250px;
     }
 }
-* ================================================= */
-/* --- REVISÃO ESTRATÉGICA 'PADRÃO OURO' - v7 --- */
+/* ================================================= */
+/* --- REVISÃO ESTRATÉGICA 'PADRÃO OURO' - v8 --- */
 /* ================================================= */
 
-/* --- Base de Leitura e Espaçamento (Mantido) --- */
+/* --- Base de Leitura e Espaçamento --- */
 .post-content { max-width: 720px; margin-left: auto; margin-right: auto; line-height: 1.7; }
 @media (max-width: 768px) { .container { padding-left: 20px; padding-right: 20px; } }
 .post-content h2, .post-content .testimonial-box, .post-content .card-modelo-autora, .post-content .faq-section { margin-top: 40px; margin-bottom: 20px; }
 
-/* --- Imagem Principal (Hero) - Modo 'Conter' (Mantido) --- */
+/* --- Imagem Principal (Hero) --- */
 .article-hero-image-container { width: 100%; max-height: 500px; border-radius: 8px; margin: 20px 0; background-color: #f9f9f9; }
 .article-hero-image-container img { width: 100%; height: 100%; object-fit: contain; }
 @media (max-width: 768px) { .article-hero-image-container { max-height: 400px; } }
 
-/* --- CARD CTA v7 (REPLICANDO O ESTILO DO CARD DA AUTORA) --- */
-.card-modelo-autora {
-    display: flex;
-    align-items: center;
-    gap: 30px; /* Espaço entre o círculo e o texto */
-    background-color: #fdfaf6;
-    border: 1px solid #f0e9df;
-    padding: 30px;
-    border-radius: 16px; /* Bordas mais arredondadas como no modelo */
-}
-.card-modelo-autora-image {
-    width: 140px;       /* Tamanho da imagem */
-    height: 140px;      /* Altura IGUAL à largura para um círculo perfeito */
-    border-radius: 50%; /* A MÁGICA DO CÍRCULO! */
-    object-fit: cover;  /* Garante que a foto preencha o círculo sem distorcer */
-    flex-shrink: 0;     /* Impede que a imagem encolha */
-}
-.card-modelo-autora-content {
-    display: flex;
-    flex-direction: column; /* Empilha título, texto e botão */
-}
-.card-modelo-autora-content h3 {
-    margin: 0 0 10px 0;
-    font-size: 1.4em;
-}
-.card-modelo-autora-content p {
-    margin: 0 0 20px 0;
-    line-height: 1.6;
-    flex-grow: 1;
-}
-.card-modelo-autora-content .cta-button {
-    align-self: flex-start; /* Alinha o botão à esquerda */
-    font-weight: bold;
-}
-/* Adaptação para mobile */
-@media (max-width: 600px) {
-    .card-modelo-autora {
-        flex-direction: column; /* Imagem fica em cima */
-        text-align: center;
-        padding: 25px;
-    }
-    .card-modelo-autora-image {
-        width: 120px;
-        height: 120px;
-    }
-    .card-modelo-autora-content .cta-button {
-        align-self: center; /* Centraliza o botão */
-    }
+/* --- A TRAVA DE SEGURANÇA ANTI-COLAPSO --- */
+/* Esta regra força o bloco de ícones e o conteúdo principal a respeitarem o fluxo da página */
+.recipe-meta-icons, .post-content {
+    clear: both;
+    position: relative;
+    z-index: 1;
 }
 
+/* --- Card CTA v7 (Estilo do Card da Autora) --- */
+.card-modelo-autora { display: flex; align-items: center; gap: 30px; background-color: #fdfaf6; border: 1px solid #f0e9df; padding: 30px; border-radius: 16px; }
+.card-modelo-autora-image { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+.card-modelo-autora-content { display: flex; flex-direction: column; }
+.card-modelo-autora-content h3 { margin: 0 0 10px 0; font-size: 1.4em; }
+.card-modelo-autora-content p { margin: 0 0 20px 0; line-height: 1.6; flex-grow: 1; }
+.card-modelo-autora-content .cta-button { align-self: flex-start; font-weight: bold; }
+@media (max-width: 600px) { .card-modelo-autora { flex-direction: column; text-align: center; padding: 25px; } .card-modelo-autora-image { width: 120px; height: 120px; } .card-modelo-autora-content .cta-button { align-self: center; } }
 
-/* --- Testemunhal (Mantido da v6) --- */
+/* --- Testemunhal (Estilo Minimalista) --- */
 .testimonial-box { background-color: transparent; border: none; padding: 15px 0; max-width: 75%; margin: 50px auto; text-align: center; position: relative; }
 .testimonial-box blockquote::before { content: '“'; position: absolute; top: -15px; left: 50%; transform: translateX(-50%); font-size: 4.5em; color: #EADFD0; z-index: -1; line-height: 1; }
 .testimonial-box blockquote { margin: 0; }
 .testimonial-box blockquote p { font-family: 'Dancing Script', cursive; font-size: 1.4em; line-height: 1.6; color: #5C4728; margin: 0; }
 .testimonial-box cite { display: block; text-align: center; margin-top: 15px; font-style: normal; font-weight: normal; color: #777; font-size: 0.9em; }
 
-
-/* --- Modo de Preparo e FAQ (Mantidos) --- */
+/* --- Modo de Preparo e FAQ --- */
 .modo-preparo-lista { list-style: none; counter-reset: preparo-counter; padding-left: 0; margin-top: 30px; }
 .modo-preparo-lista li { counter-increment: preparo-counter; margin-bottom: 25px; padding-left: 55px; position: relative; font-size: 1.1em; }
 .modo-preparo-lista li::before { content: "#" counter(preparo-counter); position: absolute; left: 0; top: 0.1em; background-color: #D4A373; color: white; width: 38px; height: 38px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-weight: bold; }
