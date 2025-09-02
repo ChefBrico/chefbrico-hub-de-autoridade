@@ -398,109 +398,140 @@ footer { text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 2
         height: 250px;
     }
 }
-/* ============================================= */
-/* --- AJUSTES FINAIS DO MOLDE DE RECEITAS --- */
-/* ============================================= */
+/* ================================================= */
+/* --- REVISÃO ESTRATÉGICA 'PADRÃO OURO' - v2 --- */
+/* ================================================= */
 
-/* --- 1. Ajuste Mobile First (Alinhamento e Espaçamento) --- */
-/* Adiciona um respiro nas laterais para o texto não colar na borda da tela */
+/* --- 1. Base de Leitura e Espaçamento (Mobile First) --- */
+.post-content {
+    /* Centraliza o conteúdo principal em uma coluna de leitura confortável em telas grandes */
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7; /* Melhora a legibilidade dos parágrafos */
+}
+/* Adiciona o respiro lateral em telas pequenas */
 @media (max-width: 768px) {
     .container {
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+/* Adiciona um espaçamento consistente entre as seções */
+.post-content h2,
+.post-content .testimonial-box,
+.post-content .cta-receita-autoral,
+.post-content .faq-section {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+
+/* --- 3. Novo Card 'Compre esta Receita' (Mais Harmônico) --- */
+.cta-receita-autoral {
+    display: grid; /* Usando Grid para mais controle */
+    grid-template-columns: 100px 1fr; /* Coluna da imagem fixa, texto flexível */
+    gap: 20px;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+}
+.cta-receita-autoral img {
+    width: 100px;
+    height: auto;
+}
+.cta-receita-info h3 {
+    margin-top: 0;
+}
+.cta-receita-info p {
+    margin-bottom: 15px;
+}
+/* Em telas pequenas, o layout muda para imagem em cima e texto embaixo */
+@media (max-width: 500px) {
+    .cta-receita-autoral {
+        grid-template-columns: 1fr; /* Uma única coluna */
+        text-align: center;
+    }
+    .cta-receita-autoral img {
+        margin: 0 auto 15px; /* Centraliza a imagem e dá espaço abaixo */
     }
 }
 
 
-/* --- 3. Ajuste do Card 'Compre esta Receita' --- */
-/* Usei a classe correta '.cta-receita-autoral' que estava no seu HTML */
-.cta-receita-autoral {
-    border: 1px solid #eee;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 30px 0;
-    background-color: #f9f9f9;
-}
-.cta-receita-autoral-content {
-    display: flex; /* Coloca a imagem e o texto lado a lado */
-    align-items: center; /* Alinha verticalmente no centro */
-    gap: 20px; /* Cria um espaço entre a imagem e o texto */
-    margin-bottom: 20px;
-}
-.cta-receita-autoral-content img {
-    max-width: 100px; /* Define um tamanho máximo para a imagem da embalagem */
-    height: auto;
-    border-radius: 4px;
-}
-.cta-receita-autoral-content h3 {
-    margin-top: 0;
-}
-.cta-receita-autoral .cta-button {
-    width: 100%;
-    text-align: center;
-}
-
-
-/* --- 4. Estilo da Caixa de Testemunho --- */
+/* --- 4. Testemunhal (Mais Delicado e Proporcional) --- */
 .testimonial-box {
-    background-color: #FBF8F3; /* Um fundo creme bem suave */
-    border-left: 4px solid #D4A373; /* Uma borda de destaque na cor da marca */
-    padding: 20px 25px;
-    margin: 30px 0;
+    background-color: #FBF8F3;
+    border-left: 4px solid #D4A373;
+    padding: 25px 30px;
     border-radius: 0 8px 8px 0;
+    max-width: 90%; /* Não ocupa a largura toda, criando um recuo elegante */
+    margin-left: auto; /* Alinha à direita */
+    margin-right: auto; /* Alinha à esquerda (se precisar, use apenas margin-left: auto) */
 }
 .testimonial-box blockquote p {
-    font-family: 'Dancing Script', cursive; /* A FONTE CURSIVA! */
-    font-size: 1.6em; /* Tamanho maior para dar destaque */
-    color: #333;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5em; /* Reduzido para ficar mais delicado */
+    line-height: 1.5;
+    color: #444;
     margin: 0;
-    line-height: 1.4;
 }
 .testimonial-box cite {
     display: block;
     text-align: right;
-    margin-top: 10px;
+    margin-top: 15px;
     font-style: normal;
     font-weight: bold;
     color: #555;
+    font-size: 0.9em;
 }
 
 
-/* --- 5. Destaque para o Modo de Preparo Simplificado --- */
-/* Usando a classe '.modo-preparo-lista' que adicionamos no HTML */
+/* --- 5. Modo de Preparo (Alinhamento dos Números) --- */
 .modo-preparo-lista {
-    list-style: none; /* Remove os números padrão da lista */
-    counter-reset: preparo-counter; /* Inicia nosso contador personalizado */
+    list-style: none;
+    counter-reset: preparo-counter;
     padding-left: 0;
+    margin-top: 30px;
 }
 .modo-preparo-lista li {
-    counter-increment: preparo-counter; /* Aumenta o contador a cada item */
-    margin-bottom: 20px;
-    padding-left: 50px;
+    counter-increment: preparo-counter;
+    margin-bottom: 25px;
+    padding-left: 55px; /* Mais espaço para o número */
     position: relative;
     font-size: 1.1em;
 }
 .modo-preparo-lista li::before {
-    content: "#" counter(preparo-counter); /* Cria o conteúdo: #1, #2, #3 */
+    content: "#" counter(preparo-counter);
     position: absolute;
     left: 0;
-    top: -2px;
-    background-color: #D4A373; /* Cor de destaque da marca */
+    /* Ajuste de posição para alinhar com o texto */
+    top: 0.1em; 
+    background-color: #D4A373;
     color: white;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%; /* Deixa o fundo redondo */
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    font-size: 1em;
+}
+.modo-preparo-lista li strong {
+    display: block; /* Faz o título (Refogue, Cozinhe) ocupar uma linha */
+    margin-bottom: 5px;
+    color: #333;
 }
 
 
-/* --- 6. Aumento da Fonte do FAQ (Accordion) no Mobile --- */
+/* --- 6. Aumento da Fonte do FAQ (Melhor Visibilidade) --- */
+.accordion-header h3 {
+    font-size: 1.3em; /* Aumentei mais um pouco */
+    margin: 0;
+}
+/* Melhorando a área de clique no mobile */
 @media (max-width: 768px) {
-    .accordion-header h3 {
-        font-size: 1.2em; /* Aumenta o tamanho da fonte apenas da pergunta */
+    .accordion-header {
+        padding: 15px 10px;
     }
 }
