@@ -398,157 +398,83 @@ footer { text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 2
         height: 250px;
     }
 }
+* ================================================= */
+/* --- REVISÃO ESTRATÉGICA 'PADRÃO OURO' - v7 --- */
 /* ================================================= */
-/* --- REVISÃO ESTRATÉGICA 'PADRÃO OURO' - v3 --- */
-/* ================================================= */
 
-/* --- Base de Leitura e Espaçamento (Mantido da v2) --- */
-.post-content {
-    max-width: 720px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.7;
-}
-@media (max-width: 768px) {
-    .container {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-}
-.post-content h2,
-.post-content .testimonial-box,
-.post-content .cta-receita-autoral,
-.post-content .faq-section {
-    margin-top: 40px;
-    margin-bottom: 20px;
-}
+/* --- Base de Leitura e Espaçamento (Mantido) --- */
+.post-content { max-width: 720px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+@media (max-width: 768px) { .container { padding-left: 20px; padding-right: 20px; } }
+.post-content h2, .post-content .testimonial-box, .post-content .card-modelo-autora, .post-content .faq-section { margin-top: 40px; margin-bottom: 20px; }
 
-/* --- 1. Imagem Principal (Hero) - CONTROLE DE ALTURA --- */
-.article-hero-image-container {
-    width: 100%;
-    /* Define uma altura máxima para a imagem não dominar a tela */
-    max-height: 500px; 
-    overflow: hidden; /* Esconde o que sobrar da imagem */
-    border-radius: 8px;
-    margin: 20px 0;
-}
-.article-hero-image-container img {
-    width: 100%;
-    height: 100%;
-    /* Garante que a imagem cubra a área sem distorcer, cortando o excesso */
-    object-fit: cover; 
-}
-/* Em telas de celular, a altura máxima é ainda menor */
-@media (max-width: 768px) {
-    .article-hero-image-container {
-        max-height: 300px;
-    }
-}
+/* --- Imagem Principal (Hero) - Modo 'Conter' (Mantido) --- */
+.article-hero-image-container { width: 100%; max-height: 500px; border-radius: 8px; margin: 20px 0; background-color: #f9f9f9; }
+.article-hero-image-container img { width: 100%; height: 100%; object-fit: contain; }
+@media (max-width: 768px) { .article-hero-image-container { max-height: 400px; } }
 
-
-/* --- 2. Card CTA (Mais Compacto e Equilibrado) --- */
-.cta-receita-autoral {
-    display: grid;
-    grid-template-columns: 120px 1fr; /* Aumentei um pouco a imagem */
-    gap: 25px; /* Aumentei o espaço entre imagem e texto */
+/* --- CARD CTA v7 (REPLICANDO O ESTILO DO CARD DA AUTORA) --- */
+.card-modelo-autora {
+    display: flex;
     align-items: center;
+    gap: 30px; /* Espaço entre o círculo e o texto */
     background-color: #fdfaf6;
     border: 1px solid #f0e9df;
-    border-radius: 8px;
-    padding: 20px; /* Reduzi o padding interno */
+    padding: 30px;
+    border-radius: 16px; /* Bordas mais arredondadas como no modelo */
 }
-.cta-receita-autoral img {
-    width: 120px;
-    height: auto;
-    border-radius: 4px;
+.card-modelo-autora-image {
+    width: 140px;       /* Tamanho da imagem */
+    height: 140px;      /* Altura IGUAL à largura para um círculo perfeito */
+    border-radius: 50%; /* A MÁGICA DO CÍRCULO! */
+    object-fit: cover;  /* Garante que a foto preencha o círculo sem distorcer */
+    flex-shrink: 0;     /* Impede que a imagem encolha */
 }
-.cta-receita-info h3 {
-    margin-top: 0;
-    font-size: 1.3em;
-}
-.cta-receita-info p {
-    margin-bottom: 15px;
-    line-height: 1.5;
-}
-@media (max-width: 500px) {
-    .cta-receita-autoral {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    .cta-receita-autoral img {
-        margin: 0 auto 15px;
-    }
-}
-
-
-/* --- 3. Testemunhal (Ainda Mais Delicado e Sutil) --- */
-.testimonial-box {
-    background-color: #FBF8F3;
-    border-left: 4px solid #D4A373;
-    padding: 25px 30px; /* Reduzido */
-    border-radius: 0 8px 8px 0;
-    max-width: 85%; /* Reduzido para ficar mais recuado */
-    margin: 40px auto; /* Centralizado com margem automática */
-}
-.testimonial-box blockquote p {
-    font-family: 'Dancing Script', cursive;
-    font-size: 1.4em; /* Reduzido para ficar mais delicado */
-    line-height: 1.6;
-    color: #444;
-    margin: 0;
-    text-align: center;
-}
-.testimonial-box cite {
-    display: block;
-    text-align: right;
-    margin-top: 15px;
-    font-style: normal;
-    font-weight: bold;
-    color: #555;
-    font-size: 0.9em;
-}
-
-
-/* --- MODO DE PREPARO E FAQ (Mantidos da v2, pois estavam bons) --- */
-.modo-preparo-lista {
-    list-style: none;
-    counter-reset: preparo-counter;
-    padding-left: 0;
-    margin-top: 30px;
-}
-.modo-preparo-lista li {
-    counter-increment: preparo-counter;
-    margin-bottom: 25px;
-    padding-left: 55px;
-    position: relative;
-    font-size: 1.1em;
-}
-.modo-preparo-lista li::before {
-    content: "#" counter(preparo-counter);
-    position: absolute;
-    left: 0;
-    top: 0.1em;
-    background-color: #D4A373;
-    color: white;
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
+.card-modelo-autora-content {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column; /* Empilha título, texto e botão */
+}
+.card-modelo-autora-content h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.4em;
+}
+.card-modelo-autora-content p {
+    margin: 0 0 20px 0;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+.card-modelo-autora-content .cta-button {
+    align-self: flex-start; /* Alinha o botão à esquerda */
     font-weight: bold;
 }
-.modo-preparo-lista li strong {
-    display: block;
-    margin-bottom: 5px;
-    color: #333;
-}
-.accordion-header h3 {
-    font-size: 1.3em;
-    margin: 0;
-}
-@media (max-width: 768px) {
-    .accordion-header {
-        padding: 15px 10px;
+/* Adaptação para mobile */
+@media (max-width: 600px) {
+    .card-modelo-autora {
+        flex-direction: column; /* Imagem fica em cima */
+        text-align: center;
+        padding: 25px;
+    }
+    .card-modelo-autora-image {
+        width: 120px;
+        height: 120px;
+    }
+    .card-modelo-autora-content .cta-button {
+        align-self: center; /* Centraliza o botão */
     }
 }
+
+
+/* --- Testemunhal (Mantido da v6) --- */
+.testimonial-box { background-color: transparent; border: none; padding: 15px 0; max-width: 75%; margin: 50px auto; text-align: center; position: relative; }
+.testimonial-box blockquote::before { content: '“'; position: absolute; top: -15px; left: 50%; transform: translateX(-50%); font-size: 4.5em; color: #EADFD0; z-index: -1; line-height: 1; }
+.testimonial-box blockquote { margin: 0; }
+.testimonial-box blockquote p { font-family: 'Dancing Script', cursive; font-size: 1.4em; line-height: 1.6; color: #5C4728; margin: 0; }
+.testimonial-box cite { display: block; text-align: center; margin-top: 15px; font-style: normal; font-weight: normal; color: #777; font-size: 0.9em; }
+
+
+/* --- Modo de Preparo e FAQ (Mantidos) --- */
+.modo-preparo-lista { list-style: none; counter-reset: preparo-counter; padding-left: 0; margin-top: 30px; }
+.modo-preparo-lista li { counter-increment: preparo-counter; margin-bottom: 25px; padding-left: 55px; position: relative; font-size: 1.1em; }
+.modo-preparo-lista li::before { content: "#" counter(preparo-counter); position: absolute; left: 0; top: 0.1em; background-color: #D4A373; color: white; width: 38px; height: 38px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-weight: bold; }
+.modo-preparo-lista li strong { display: block; margin-bottom: 5px; color: #333; }
+.accordion-header h3 { font-size: 1.3em; margin: 0; }
+@media (max-width: 768px) { .accordion-header { padding: 15px 10px; } }
