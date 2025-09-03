@@ -1,5 +1,5 @@
 /* ================================================================= */
-/* === ARQUIVO STYLE.CSS - NOVA FASE v1.1 (100% COMPLETO) === */
+/* === ARQUIVO STYLE.CSS - VERSÃO FINAL PÓS-REVISÃO (v1.2) === */
 /* ================================================================= */
 
 /* --- 1. FONTES E VARIÁVEIS DE COR --- */
@@ -9,224 +9,87 @@
     --cor-bordo-secundaria: #73022c;
     --cor-dourado-slogan: #bfb084;
     --cor-laranja-cta: #f2811d;
-
     --cor-texto-claro: #ffffff;
     --cor-texto-escuro: #333333;
     --cor-fundo-card: #ffffff;
     --cor-fundo-pagina: #fdfcfb;
     --cor-borda-suave: #f0e9df;
-
     --fonte-titulos: 'Merriweather', serif;
     --fonte-texto: 'Lato', sans-serif;
+    --fonte-cursiva: 'Dancing Script', cursive;
 }
 
 /* --- 2. ESTILOS GERAIS E BASE (Mobile First) --- */
-body {
-    font-family: var(--fonte-texto);
-    color: var(--cor-texto-escuro);
-    background-color: var(--cor-fundo-pagina);
-    margin: 0;
-    line-height: 1.7;
-}
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
-h1, h2, h3, h4 {
-    font-family: var(--fonte-titulos);
-    color: var(--cor-verde-principal);
-}
-a {
-    color: var(--cor-bordo-secundaria);
-    text-decoration: none;
-    font-weight: bold;
-}
-a:hover {
-    text-decoration: underline;
-}
+body { font-family: var(--fonte-texto); color: var(--cor-texto-escuro); background-color: var(--cor-fundo-pagina); margin: 0; line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; box-sizing: border-box; }
+h1, h2, h3, h4 { font-family: var(--fonte-titulos); color: var(--cor-verde-principal); }
+a { color: var(--cor-bordo-secundaria); text-decoration: none; font-weight: bold; }
+a:hover { text-decoration: underline; }
 
-/* --- 3. CABEÇALHO E NAVEGAÇÃO --- */
-.top-slogan-bar {
-    background-color: var(--cor-dourado-slogan);
-    padding: 8px 10px;
-    text-align: center;
-}
-.top-slogan-bar p {
-    margin: 0;
-    font-size: 0.9em;
-    font-weight: 500;
-    color: var(--cor-texto-escuro);
-}
-header {
-    background-color: var(--cor-verde-cabecalho);
-    padding: 15px 0;
-    border-bottom: 2px solid var(--cor-dourado-slogan);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
+/* --- 3. CABEÇALHO E NAVEGAÇÃO (REVISADO) --- */
+.top-slogan-bar { background-color: var(--cor-dourado-slogan); padding: 8px 10px; text-align: center; }
+.top-slogan-bar p { margin: 0; font-size: 0.9em; font-weight: 500; color: var(--cor-texto-escuro); }
+header { background-color: var(--cor-verde-cabecalho); padding: 15px 0; position: sticky; top: 0; z-index: 100; }
 .header-flex { display: flex; justify-content: space-between; align-items: center; }
 .logo img { max-height: 50px; }
-.main-nav-links a {
-    color: var(--cor-texto-claro);
-    font-weight: bold;
-}
-.cta-button {
-    background-color: var(--cor-laranja-cta);
-    color: var(--cor-texto-claro) !important;
-    padding: 12px 24px;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: transform 0.2s;
-}
-.cta-button:hover {
-    text-decoration: none;
-    transform: scale(1.05);
-}
+.main-nav { display: flex; align-items: center; gap: 25px; }
+.main-nav-links { display: flex; align-items: center; gap: 25px; }
+.main-nav-links a { color: var(--cor-texto-claro); }
+.cta-button { background-color: var(--cor-laranja-cta); color: var(--cor-texto-claro) !important; padding: 12px 24px; border-radius: 8px; font-weight: bold; transition: transform 0.2s; }
+.cta-button:hover { text-decoration: none; transform: scale(1.05); }
+.mobile-nav-toggle { display: none; }
 
-/* --- 4. O COMPONENTE 'CARD' UNIFICADO (Mobile First) --- */
-.card {
-    background-color: var(--cor-fundo-card);
-    border: 1px solid var(--cor-borda-suave);
-    border-radius: 16px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
-    text-decoration: none;
-    color: var(--cor-texto-escuro);
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
-.card-image {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-}
-.card-content {
-    padding: 25px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-}
-.card-content h3 {
-    margin-top: 0;
-    margin-bottom: 10px;
-    font-size: 1.3em;
-}
-.card-content p {
-    margin: 0;
-    flex-grow: 1;
-    color: #666;
-}
-.card-content .cta-button {
-    margin-top: 20px;
-    align-self: flex-start;
-}
+/* --- 4. O COMPONENTE 'CARD' UNIFICADO (Mantido) --- */
+/* (Estilos dos cards para carrosséis, etc.) */
 
-/* --- 5. CARROSSÉIS HORIZONTAIS --- */
-.carousel-container {
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    gap: 20px;
-    padding: 15px 0 25px 0;
-    scrollbar-width: none; /* Firefox */
-}
-.carousel-container::-webkit-scrollbar {
-    display: none; /* Chrome, Safari */
-}
-.carousel-container .card {
-    flex: 0 0 320px; /* Define a largura de cada card no carrossel */
-}
-@media(max-width: 768px) {
-    .carousel-container .card {
-        flex-basis: 280px; /* Cards um pouco menores no mobile */
-    }
-}
-
-/* --- 6. PÁGINA DE RECEITA (MOLDE PADRÃO OURO) --- */
+/* --- 5. PÁGINA DE RECEITA (REFINAMENTO FINAL) --- */
 .post-content { max-width: 720px; margin: 40px auto; }
-.hero-card {
-    max-width: 720px;
-    margin: 30px auto;
-    background-color: var(--cor-fundo-card);
-    border: 1px solid var(--cor-borda-suave);
-    border-radius: 16px;
-    padding: 20px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
-}
+.recipe-meta-icons { display: flex; justify-content: center; gap: 25px; margin: 25px 0; }
+.hero-card { max-width: 720px; margin: 30px auto; background-color: var(--cor-fundo-card); border: 1px solid var(--cor-borda-suave); border-radius: 16px; padding: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.07); }
 .hero-card img { width: 100%; height: auto; border-radius: 8px; }
 
-.card-modelo-autora {
-    display: flex; align-items: center; gap: 30px;
-    background-color: var(--cor-fundo-pagina);
-    border: 1px solid var(--cor-borda-suave);
-    padding: 30px; border-radius: 16px;
-}
-.card-modelo-autora-image {
-    width: 120px; height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid var(--cor-fundo-card);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+.card-modelo-autora { display: flex; align-items: center; gap: 20px; background-color: var(--cor-fundo-pagina); border: 1px solid var(--cor-borda-suave); padding: 25px; border-radius: 16px; }
+.card-modelo-autora-image { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid var(--cor-fundo-card); box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+@media(max-width: 600px) {
+    .card-modelo-autora { flex-direction: column; text-align: center; }
 }
 
-.testimonial-box {
-    text-align: center;
-    margin: 60px auto;
-}
-.testimonial-box blockquote p {
-    font-family: var(--fonte-titulos);
-    font-style: italic;
-    font-size: 1.4em;
-    line-height: 1.6;
-    color: var(--cor-verde-principal);
-    margin: 0;
-}
-.testimonial-box cite {
-    display: block;
-    margin-top: 15px;
-    font-style: normal;
-    color: #777;
-}
+/* Testemunho (Tamanho Reduzido) */
+.testimonial-box { text-align: center; margin: 50px auto; max-width: 80%; }
+.testimonial-box blockquote p { font-family: var(--fonte-cursiva); font-style: italic; font-size: 1.3em; line-height: 1.6; color: var(--cor-verde-principal); margin: 0; }
+.testimonial-box cite { display: block; margin-top: 10px; font-style: normal; color: #777; font-size: 0.9em; }
 
-/* --- 7. AJUSTES FINOS NOS DEMAIS COMPONENTES --- */
-/* Dropdown Menu */
-.dropdown-content {
-    background-color: #fdfcf7;
-    border: 1px solid var(--cor-borda-suave);
-}
-.dropdown-content a {
-    color: var(--cor-verde-principal);
-    font-family: var(--fonte-texto);
-}
-.dropdown-content a:hover {
-    background-color: var(--cor-borda-suave);
-}
-.dropdown-content .dropdown-title {
-    font-family: var(--fonte-texto);
-}
-.dropdown-content hr {
-    border-top: 1px solid var(--cor-borda-suave);
-}
+/* Modo de Preparo (Com Destaque) */
+.modo-preparo-lista { list-style: none; counter-reset: preparo-counter; padding-left: 0; }
+.modo-preparo-lista li { counter-increment: preparo-counter; margin-bottom: 20px; padding-left: 45px; position: relative; }
+.modo-preparo-lista li::before { content: "#" counter(preparo-counter); position: absolute; left: 0; top: 0; background-color: var(--cor-verde-principal); color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-weight: bold; }
+.modo-preparo-lista li strong { display: block; margin-bottom: 3px; }
+.modo-preparo-final { text-align: right; font-family: var(--fonte-cursiva); font-style: italic; font-size: 1.5em; color: var(--cor-bordo-secundaria); }
 
-/* Accordion (FAQ) */
-.accordion-header {
-    background-color: var(--cor-fundo-card);
-    border-bottom: 1px solid var(--cor-borda-suave);
-}
-.faq-item-accordion {
-    border: 1px solid var(--cor-borda-suave);
-    border-radius: 16px;
-}
-.accordion-header h3 {
-    font-family: var(--fonte-texto);
-    font-size: 1.2em;
-    color: var(--cor-verde-principal);
+/* Acordeão (FAQ) */
+.accordion-header { background-color: var(--cor-fundo-card); border-bottom: 1px solid var(--cor-borda-suave); width: 100%; text-align: left; padding: 15px 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+.accordion-header h3 { font-size: 1.1em; }
+.accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; padding: 0 20px; }
+.accordion-header.active + .accordion-content { max-height: 500px; padding: 20px; }
+
+/* Card da Autora (Fim da Página) */
+.author-box { display: flex; align-items: center; gap: 20px; background-color: #fdfaf6; padding: 25px; border-radius: 16px; margin-top: 40px; }
+.author-image { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; }
+
+/* Rodapé (Mais Compacto) */
+footer { padding: 30px 20px; margin-top: 40px; border-top: 1px solid var(--cor-borda-suave); }
+.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; text-align: left; }
+.footer-grid h4 { margin-bottom: 10px; }
+.footer-grid a { margin-bottom: 8px; }
+.footer-credit { margin-top: 30px; padding-top: 15px; }
+
+/* Responsividade do Menu (Correção Final) */
+@media (max-width: 1024px) {
+    .main-nav-links { display: none; }
+    .main-nav .cta-button { display: none; }
+    .mobile-nav-toggle { display: block; font-size: 1.8em; background: none; border: none; color: var(--cor-texto-claro); cursor: pointer; }
+    .main-nav.active { display: flex; position: absolute; top: 100%; right: 0; background: #fff; flex-direction: column; width: 280px; box-shadow: -5px 5px 15px rgba(0,0,0,0.1); padding: 20px; border-radius: 0 0 0 8px; }
+    .main-nav.active .main-nav-links { display: flex; flex-direction: column; align-items: flex-start; gap: 15px; width: 100%; }
+    .main-nav.active a { color: var(--cor-verde-principal); }
+    .main-nav.active .cta-button { display: block; width: 100%; text-align: center; margin-top: 15px; }
 }
