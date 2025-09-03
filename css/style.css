@@ -1,6 +1,6 @@
-/* ================================================================= */
-/* === ARQUIVO CSS UNIVERSAL DEFINITIVO v3.0 - CHEFBRICO RE-INAUGURAÇÃO === */
-/* ================================================================= */
+/* ======================================================= */
+/* === ARQUIVO CSS MESTRE v2.0 - CHEFBRICO (NOVA FASE) === */
+/* ======================================================= */
 
 /* --- 1. FONTES E VARIÁVEIS DE COR --- */
 :root {
@@ -26,7 +26,7 @@ h1, h2, h3, h4 { font-family: var(--fonte-titulos); color: var(--cor-verde-princ
 a { color: var(--cor-bordo-secundaria); text-decoration: none; font-weight: bold; }
 a:hover { text-decoration: underline; }
 
-/* --- 3. CABEÇALHO E NAVEGAÇÃO --- */
+/* --- 3. CABEÇALHO E NAVEGAÇÃO (CORRIGIDO) --- */
 .top-slogan-bar { background-color: var(--cor-dourado-slogan); padding: 6px 10px; text-align: center; }
 .top-slogan-bar p { margin: 0; font-size: 0.85em; font-weight: 500; }
 header { background-color: var(--cor-verde-cabecalho); padding: 10px 0; position: sticky; top: 0; z-index: 100; }
@@ -35,7 +35,7 @@ header { background-color: var(--cor-verde-cabecalho); padding: 10px 0; position
 .main-nav { display: flex; align-items: center; gap: 25px; }
 .main-nav-links { display: flex; align-items: center; gap: 30px; }
 .main-nav-links a { color: var(--cor-texto-claro); }
-.header-flex .cta-button { background-color: var(--cor-laranja-cta); color: var(--cor-texto-claro) !important; padding: 10px 20px; border-radius: 8px; font-weight: bold; margin-left: auto; }
+.header-flex .cta-button { background-color: var(--cor-laranja-cta); color: var(--cor-texto-claro) !important; padding: 10px 20px; border-radius: 8px; font-weight: bold; margin-left: 20px; }
 .mobile-nav-toggle { display: none; }
 .dropdown { position: relative; }
 .dropdown-content { display: none; position: absolute; background-color: #fdfcf7; min-width: 250px; box-shadow: 0 8px 16px rgba(0,0,0,0.1); z-index: 101; border-radius: 8px; border: 1px solid var(--cor-borda-suave); padding: 8px 0; }
@@ -44,93 +44,49 @@ header { background-color: var(--cor-verde-cabecalho); padding: 10px 0; position
 .dropdown-content a:hover { background-color: var(--cor-borda-suave); }
 
 /* --- 4. CARDS E CARROSSÉIS (CORREÇÃO UNIVERSAL) --- */
-/* Força TODOS os contêineres de carrossel a serem horizontais */
-.carousel-container .carousel-track, .post-grid, .carousel-container {
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    gap: 20px;
-    padding: 15px 2px 25px 2px;
-    scrollbar-width: none;
-}
-.carousel-container .carousel-track::-webkit-scrollbar, .post-grid::-webkit-scrollbar, .carousel-container::-webkit-scrollbar { display: none; }
-
-/* Regra unificada para TODOS os cards, com tamanho reduzido */
-.card, .product-card, .carousel-card {
-    background-color: var(--cor-fundo-card);
-    border: 1px solid var(--cor-borda-suave);
-    border-radius: 16px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
-    text-decoration: none;
-    color: var(--cor-texto-escuro);
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
-    flex: 0 0 260px; /* Largura reduzida */
-}
+.carousel-container, .post-carousel, .post-grid { display: flex; overflow-x: auto; scroll-behavior: smooth; gap: 20px; padding: 15px 2px 25px 2px; scrollbar-width: none; }
+.carousel-container::-webkit-scrollbar, .post-carousel::-webkit-scrollbar, .post-grid::-webkit-scrollbar { display: none; }
+.card, .product-card, .carousel-card { background-color: var(--cor-fundo-card); border: 1px solid var(--cor-borda-suave); border-radius: 16px; box-shadow: 0 5px 20px rgba(0,0,0,0.07); text-decoration: none; color: var(--cor-texto-escuro); display: flex; flex-direction: column; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; flex: 0 0 260px; }
 .card:hover, .product-card:hover, .carousel-card:hover { transform: translateY(-8px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-
-/* Correção universal para IMAGENS CORTADAS */
-.card-image, .product-card-image, .estacao-postcard img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-}
+.card-image, .product-card-image, .estacao-postcard img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
 .card-content { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
+.card-content h3 { margin-top: 0; margin-bottom: 10px; font-size: 1.2em; }
+.card-content p { margin: 0; flex-grow: 1; color: #666; font-size: 0.9em; }
+.card-content .cta-button { margin-top: 15px; align-self: flex-start; padding: 8px 16px; font-size: 0.9em; }
 
-/* --- 5. BLOCO DE MENSAGEM (ESTILO 'AUTORA' UNIVERSAL) --- */
-/* Aplica o estilo de imagem circular a TODOS os blocos de mensagem */
-.author-box, .message-section, .hero-section-v2 {
-    display: flex; align-items: center; gap: 25px;
-    background-color: var(--cor-fundo-pagina);
-    border: 1px solid var(--cor-borda-suave);
-    padding: 25px; border-radius: 16px; margin: 40px 0;
-}
-.author-image, .hero-image-circular {
-    width: 150px; height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid var(--cor-fundo-card);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    flex-shrink: 0;
-}
-
-/* --- 6. PÁGINA DE RECEITA (MOLDE PADRÃO OURO) --- */
+/* --- 5. PÁGINA DE RECEITA E COMPONENTES ESPECIAIS --- */
 .post-content { max-width: 720px; margin: 40px auto; }
+.recipe-meta-icons { display: flex; justify-content: center; gap: 25px; margin: 25px 0; }
 /* Correção em Massa para Imagem Principal de TODAS as Receitas */
-.article-hero-image-container {
-    max-width: 720px; margin: 30px auto;
-    background-color: var(--cor-fundo-card);
-    border: 1px solid var(--cor-borda-suave);
-    border-radius: 16px; padding: 20px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
-}
+.article-hero-image-container { max-width: 720px; margin: 30px auto; background-color: var(--cor-fundo-card); border: 1px solid var(--cor-borda-suave); border-radius: 16px; padding: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.07); }
 .article-hero-image-container img { width: 100%; height: auto; border-radius: 8px; }
 
-/* Testemunho (Novo Layout) */
-.testimonial-box { text-align: center; margin: 50px auto; max-width: 100%; }
-.testimonial-box blockquote p {
-    font-family: var(--fonte-cursiva);
-    font-style: italic;
-    font-size: 1.2em; /* Reduzido */
-    line-height: 1.6;
-    color: var(--cor-verde-principal);
-    margin: 0;
-    -webkit-column-count: 2; /* Força 2 colunas em navegadores Chrome/Safari */
-    -moz-column-count: 2; /* Força 2 colunas em Firefox */
-    column-count: 2; /* Padrão */
-    -webkit-column-gap: 40px;
-    -moz-column-gap: 40px;
-    column-gap: 40px;
-}
-.testimonial-box cite { display: block; margin-top: 15px; font-style: normal; color: #777; font-size: 0.8em; font-family: var(--fonte-texto); text-align: right; }
+/* Bloco de Mensagem Universal (Estilo 'Autora') */
+.author-box, .message-section, .card-modelo-autora { display: flex; align-items: center; gap: 20px; background-color: var(--cor-fundo-pagina); border: 1px solid var(--cor-borda-suave); padding: 25px; border-radius: 16px; margin: 40px 0; }
+.author-image, .card-modelo-autora-image { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid var(--cor-fundo-card); box-shadow: 0 2px 8px rgba(0,0,0,0.1); flex-shrink: 0; }
 
-/* --- 7. RODAPÉ E RESPONSIVIDADE FINAL --- */
+/* Testemunho (Compacto) */
+.testimonial-box { text-align: center; margin: 50px auto; max-width: 60%; }
+.testimonial-box blockquote p { font-family: var(--fonte-cursiva); font-style: italic; font-size: 1.25em; line-height: 1.6; color: var(--cor-verde-principal); margin: 0; }
+.testimonial-box cite { display: block; margin-top: 10px; font-style: normal; color: #777; font-size: 0.85em; }
+
+/* Acordeão (Universal e Compacto) */
+.faq-item-accordion, .onde-encontrar-item { border: none; border-bottom: 1px solid var(--cor-borda-suave); margin-bottom: 0; border-radius: 0; }
+.accordion-header { background-color: transparent; width: 100%; text-align: left; padding: 12px 5px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; border: none; }
+.accordion-header h3 { font-size: 1.1em; font-family: var(--fonte-texto); }
+
+/* --- 6. RODAPÉ E RESPONSIVIDADE --- */
+footer { padding: 30px 20px; margin-top: 40px; border-top: 1px solid var(--cor-borda-suave); }
+.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px 30px; text-align: left; }
+.footer-credit { margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--cor-borda-suave); text-align: center; font-size: 0.9em; }
 @media (max-width: 1024px) {
     .main-nav { display: none; }
     .header-flex .cta-button { display: none; }
     .mobile-nav-toggle { display: block; font-size: 1.8em; background: none; border: none; color: var(--cor-texto-claro); cursor: pointer; }
-    /* (Restante das regras de responsividade) */
+    .main-nav.active { display: flex; position: absolute; top: 100%; right: 0; background: var(--cor-fundo-card); flex-direction: column; width: 280px; box-shadow: -5px 5px 15px rgba(0,0,0,0.1); padding: 20px; border-radius: 0 0 0 8px; }
+    .main-nav.active .main-nav-links { display: flex; flex-direction: column; align-items: flex-start; gap: 15px; width: 100%; }
+    .main-nav.active a { color: var(--cor-verde-principal); }
+    .main-nav.active .cta-button { display: block; width: 100%; text-align: center; margin-top: 15px; }
+    .dropdown:hover .dropdown-content { display: none; }
+    .author-box, .card-modelo-autora { flex-direction: column; text-align: center; }
 }
