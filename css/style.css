@@ -1,5 +1,5 @@
 /* ================================================================= */
-/* === ARQUIVO STYLE.CSS - VERSÃO FINAL PÓS-REVISÃO (v1.2) === */
+/* === ARQUIVO STYLE.CSS - v1.3 (POLIMENTO FINAL) - CHEFBRICO === */
 /* ================================================================= */
 
 /* --- 1. FONTES E VARIÁVEIS DE COR --- */
@@ -19,58 +19,62 @@
     --fonte-cursiva: 'Dancing Script', cursive;
 }
 
-/* --- 2. ESTILOS GERAIS E BASE (Mobile First) --- */
+/* --- 2. ESTILOS GERAIS E BASE --- */
 body { font-family: var(--fonte-texto); color: var(--cor-texto-escuro); background-color: var(--cor-fundo-pagina); margin: 0; line-height: 1.7; }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; box-sizing: border-box; }
 h1, h2, h3, h4 { font-family: var(--fonte-titulos); color: var(--cor-verde-principal); }
 a { color: var(--cor-bordo-secundaria); text-decoration: none; font-weight: bold; }
 a:hover { text-decoration: underline; }
 
-/* --- 3. CABEÇALHO E NAVEGAÇÃO (REVISADO) --- */
-.top-slogan-bar { background-color: var(--cor-dourado-slogan); padding: 8px 10px; text-align: center; }
-.top-slogan-bar p { margin: 0; font-size: 0.9em; font-weight: 500; color: var(--cor-texto-escuro); }
-header { background-color: var(--cor-verde-cabecalho); padding: 15px 0; position: sticky; top: 0; z-index: 100; }
+/* --- 3. CABEÇALHO E NAVEGAÇÃO (REFINADO) --- */
+.top-slogan-bar { background-color: var(--cor-dourado-slogan); padding: 6px 10px; }
+.top-slogan-bar p { margin: 0; font-size: 0.85em; font-weight: 500; }
+header { background-color: var(--cor-verde-cabecalho); padding: 10px 0; position: sticky; top: 0; z-index: 100; }
 .header-flex { display: flex; justify-content: space-between; align-items: center; }
-.logo img { max-height: 50px; }
-.main-nav { display: flex; align-items: center; gap: 25px; }
-.main-nav-links { display: flex; align-items: center; gap: 25px; }
+.logo img { max-height: 45px; }
+.main-nav { display: flex; align-items: center; flex-grow: 1; justify-content: center; }
+.main-nav-links { display: flex; align-items: center; gap: 30px; }
 .main-nav-links a { color: var(--cor-texto-claro); }
-.cta-button { background-color: var(--cor-laranja-cta); color: var(--cor-texto-claro) !important; padding: 12px 24px; border-radius: 8px; font-weight: bold; transition: transform 0.2s; }
-.cta-button:hover { text-decoration: none; transform: scale(1.05); }
+.header-flex .cta-button { margin-left: 20px; padding: 10px 20px; }
 .mobile-nav-toggle { display: none; }
 
-/* --- 4. O COMPONENTE 'CARD' UNIFICADO (Mantido) --- */
-/* (Estilos dos cards para carrosséis, etc.) */
+/* Dropdown */
+.dropdown { position: relative; }
+.dropdown-content { display: none; position: absolute; background-color: #fdfcf7; min-width: 280px; box-shadow: 0 8px 16px rgba(0,0,0,0.1); z-index: 101; border-radius: 8px; border: 1px solid var(--cor-borda-suave); padding: 10px 0; }
+.dropdown:hover .dropdown-content { display: block; }
+.dropdown-content a { color: var(--cor-verde-principal); padding: 10px 20px; display: block; }
+.dropdown-content a:hover { background-color: var(--cor-borda-suave); }
 
-/* --- 5. PÁGINA DE RECEITA (REFINAMENTO FINAL) --- */
+/* --- 4. PÁGINA DE RECEITA (REFINAMENTO FINAL) --- */
 .post-content { max-width: 720px; margin: 40px auto; }
 .recipe-meta-icons { display: flex; justify-content: center; gap: 25px; margin: 25px 0; }
 .hero-card { max-width: 720px; margin: 30px auto; background-color: var(--cor-fundo-card); border: 1px solid var(--cor-borda-suave); border-radius: 16px; padding: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.07); }
 .hero-card img { width: 100%; height: auto; border-radius: 8px; }
 
+/* Card CTA (Mantido) */
 .card-modelo-autora { display: flex; align-items: center; gap: 20px; background-color: var(--cor-fundo-pagina); border: 1px solid var(--cor-borda-suave); padding: 25px; border-radius: 16px; }
 .card-modelo-autora-image { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid var(--cor-fundo-card); box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-@media(max-width: 600px) {
-    .card-modelo-autora { flex-direction: column; text-align: center; }
-}
 
-/* Testemunho (Tamanho Reduzido) */
-.testimonial-box { text-align: center; margin: 50px auto; max-width: 80%; }
-.testimonial-box blockquote p { font-family: var(--fonte-cursiva); font-style: italic; font-size: 1.3em; line-height: 1.6; color: var(--cor-verde-principal); margin: 0; }
-.testimonial-box cite { display: block; margin-top: 10px; font-style: normal; color: #777; font-size: 0.9em; }
+/* Testemunho (Tamanho Reduzido 50%) */
+.testimonial-box { text-align: center; margin: 50px auto; max-width: 65%; }
+.testimonial-box blockquote p { font-family: var(--fonte-cursiva); font-style: italic; font-size: 1.2em; line-height: 1.6; color: var(--cor-verde-principal); margin: 0; }
+.testimonial-box cite { display: block; margin-top: 10px; font-style: normal; color: #777; font-size: 0.85em; }
 
 /* Modo de Preparo (Com Destaque) */
 .modo-preparo-lista { list-style: none; counter-reset: preparo-counter; padding-left: 0; }
 .modo-preparo-lista li { counter-increment: preparo-counter; margin-bottom: 20px; padding-left: 45px; position: relative; }
 .modo-preparo-lista li::before { content: "#" counter(preparo-counter); position: absolute; left: 0; top: 0; background-color: var(--cor-verde-principal); color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-weight: bold; }
 .modo-preparo-lista li strong { display: block; margin-bottom: 3px; }
-.modo-preparo-final { text-align: right; font-family: var(--fonte-cursiva); font-style: italic; font-size: 1.5em; color: var(--cor-bordo-secundaria); }
+.modo-preparo-final { text-align: right; font-family: var(--fonte-cursiva); font-style: italic; font-size: 1.5em; color: var(--cor-bordo-secundaria); margin-top: 10px; }
 
-/* Acordeão (FAQ) */
-.accordion-header { background-color: var(--cor-fundo-card); border-bottom: 1px solid var(--cor-borda-suave); width: 100%; text-align: left; padding: 15px 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-.accordion-header h3 { font-size: 1.1em; }
-.accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; padding: 0 20px; }
-.accordion-header.active + .accordion-content { max-height: 500px; padding: 20px; }
+/* Acordeão (FAQ - Mais Leve e Compacto) */
+.faq-item-accordion { border: none; border-bottom: 1px solid var(--cor-borda-suave); margin-bottom: 0; border-radius: 0; }
+.accordion-header { background-color: transparent; width: 100%; text-align: left; padding: 18px 10px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; border: none; }
+.accordion-header h3 { font-size: 1.1em; font-family: var(--fonte-texto); }
+.accordion-header .icon { transition: transform 0.3s; }
+.accordion-header.active .icon { transform: rotate(180deg); }
+.accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
+.accordion-header.active + .accordion-content { max-height: 500px; padding: 10px 10px 20px 10px; }
 
 /* Card da Autora (Fim da Página) */
 .author-box { display: flex; align-items: center; gap: 20px; background-color: #fdfaf6; padding: 25px; border-radius: 16px; margin-top: 40px; }
@@ -78,18 +82,18 @@ header { background-color: var(--cor-verde-cabecalho); padding: 15px 0; position
 
 /* Rodapé (Mais Compacto) */
 footer { padding: 30px 20px; margin-top: 40px; border-top: 1px solid var(--cor-borda-suave); }
-.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; text-align: left; }
+.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px 30px; text-align: left; }
 .footer-grid h4 { margin-bottom: 10px; }
-.footer-grid a { margin-bottom: 8px; }
-.footer-credit { margin-top: 30px; padding-top: 15px; }
+.footer-grid a { margin-bottom: 8px; display: block; }
+.footer-credit { margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--cor-borda-suave); text-align: center; font-size: 0.9em; }
 
-/* Responsividade do Menu (Correção Final) */
+/* --- RESPONSIVIDADE FINAL (MENU MOBILE) --- */
 @media (max-width: 1024px) {
-    .main-nav-links { display: none; }
-    .main-nav .cta-button { display: none; }
+    .main-nav { display: none; }
     .mobile-nav-toggle { display: block; font-size: 1.8em; background: none; border: none; color: var(--cor-texto-claro); cursor: pointer; }
-    .main-nav.active { display: flex; position: absolute; top: 100%; right: 0; background: #fff; flex-direction: column; width: 280px; box-shadow: -5px 5px 15px rgba(0,0,0,0.1); padding: 20px; border-radius: 0 0 0 8px; }
+    .main-nav.active { display: flex; position: absolute; top: 100%; right: 0; background: var(--cor-fundo-card); flex-direction: column; width: 280px; box-shadow: -5px 5px 15px rgba(0,0,0,0.1); padding: 20px; border-radius: 0 0 0 8px; }
     .main-nav.active .main-nav-links { display: flex; flex-direction: column; align-items: flex-start; gap: 15px; width: 100%; }
     .main-nav.active a { color: var(--cor-verde-principal); }
     .main-nav.active .cta-button { display: block; width: 100%; text-align: center; margin-top: 15px; }
+    .dropdown:hover .dropdown-content { display: none; }
 }
