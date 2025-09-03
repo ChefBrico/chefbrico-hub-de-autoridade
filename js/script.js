@@ -4,21 +4,28 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 
-    // --- MOTOR 1: ACORDEÃO (PARA FAQ E ONDE ENCONTRAR) ---
-    const accordionHeaders = document.querySelectorAll('.accordion-header');
-    if (accordionHeaders.length > 0) {
-        accordionHeaders.forEach(header => {
-            header.addEventListener('click', function() {
-                this.classList.toggle('active');
-                const content = this.nextElementSibling;
-                if (content.style.maxHeight) {
-                    content.style.maxHeight = null;
-                } else {
-                    content.style.maxHeight = content.scrollHeight + 'px';
-                }
+    // --- MOTOR 1: ACORDEÃO (VERSÃO Padrão Ouro - fecha os outros automaticamente) ---
+const accordionHeaders = document.querySelectorAll('.accordion-header');
+if (accordionHeaders.length > 0) {
+    accordionHeaders.forEach(header => {
+        header.addEventListener('click', function() {
+            const wasActive = this.classList.contains('active');
+
+            // PRIMEIRO: Fecha todos os itens abertos
+            accordionHeaders.forEach(otherHeader => {
+                otherHeader.classList.remove('active');
+                otherHeader.nextElementSibling.style.maxHeight = null;
             });
+
+            // SEGUNDO: Se o item clicado não estava ativo, abre-o
+            if (!wasActive) {
+                this.classList.add('active');
+                const content = this.nextElementSibling;
+                content.style.maxHeight = content.scrollHeight + 'px';
+            }
         });
-    }
+    });
+}
 
     // --- MOTOR 2: CARROSSEL DE CARDS HORIZONTAIS ---
     const postCarousels = document.querySelectorAll('.post-carousel, .carousel-container .carousel-track');
