@@ -103,3 +103,25 @@ footer { padding: 30px 20px; margin-top: 40px; border-top: 1px solid var(--cor-b
     .dropdown:hover .dropdown-content { display: none; }
     .author-box, .card-modelo-autora { flex-direction: column; text-align: center; }
 }
+/* ================================================================= */
+/* === CÓDIGO CIRÚRGICO #1: MOLDURA PARA IMAGEM DA RECEITA === */
+/* Adicione este bloco no FINAL do seu arquivo style.css restaurado */
+/* ================================================================= */
+
+/* Correção em Massa para Imagem Principal de TODAS as Receitas */
+.article-hero-image-container {
+    max-width: 720px; /* Alinha com a coluna de texto para harmonia */
+    margin: 30px auto; /* Centraliza o card na página */
+    background-color: #ffffff; /* Fundo branco para a moldura */
+    border: 1px solid #f0e9df; /* Borda sutil da sua nova identidade */
+    border-radius: 16px;       /* Cantos arredondados */
+    padding: 20px;             /* O espaçamento que cria a 'moldura' */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07); /* Sombra suave */
+}
+
+.article-hero-image-container img {
+    width: 100%;    /* A imagem ocupa 100% da largura do card */
+    height: auto;   /* A altura se ajusta para manter a proporção (SEM CORTES) */
+    border-radius: 8px; /* Cantos da imagem levemente arredondados */
+    display: block;
+}
