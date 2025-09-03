@@ -1,501 +1,232 @@
-
-
-
-/* *================================================================= */
-/* ===== ARQUIVO STYLE.CSS DEFINITIVO E RESTAURADO - CHEFBRICO ===== */
+/* ================================================================= */
+/* === ARQUIVO STYLE.CSS - NOVA FASE v1.1 (100% COMPLETO) === */
 /* ================================================================= */
 
-/* --- Variáveis de Cor e Fonte --- */
+/* --- 1. FONTES E VARIÁVEIS DE COR --- */
 :root {
-    --cor-primaria: #5a3a30;
-    --cor-secundaria: #E0D8C4;
-    --cor-laranja-cta: #f58220;
-    --cor-texto: #333;
+    --cor-verde-principal: #014641;
+    --cor-verde-cabecalho: #01403a;
+    --cor-bordo-secundaria: #73022c;
+    --cor-dourado-slogan: #bfb084;
+    --cor-laranja-cta: #f2811d;
+
+    --cor-texto-claro: #ffffff;
+    --cor-texto-escuro: #333333;
+    --cor-fundo-card: #ffffff;
+    --cor-fundo-pagina: #fdfcfb;
+    --cor-borda-suave: #f0e9df;
+
+    --fonte-titulos: 'Merriweather', serif;
+    --fonte-texto: 'Lato', sans-serif;
 }
 
-/* --- Estilos Gerais --- */
-body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--cor-texto); margin: 0; }
-.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; box-sizing: border-box; }
-h1, h2, h3, h4 { color: var(--cor-primaria); }
-
-/* ======================================================= */
-/* ===== CABEÇALHO E RESPONSIVIDADE (SOLUÇÃO FINAL)  ===== */
-/* ======================================================= */
-.top-slogan-bar { background-color: var(--cor-secundaria); padding: 8px 10px; text-align: center; }
-.top-slogan-bar p { margin: 0; font-size: 0.9em; font-weight: 500; color: var(--cor-primaria); }
-header { background-color: var(--cor-secundaria); padding: 15px 0; border-bottom: 1px solid rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
-.header-flex { display: flex; justify-content: space-between; align-items: center; }
-.logo img { max-height: 60px; display: block; flex-shrink: 0; }
-.main-nav { display: flex; align-items: center; justify-content: space-between; flex-grow: 1; margin: 0 30px; }
-.main-nav-links { display: flex; align-items: center; gap: 25px; }
-.main-nav-links a { color: var(--cor-primaria); font-weight: bold; text-decoration: none; }
-.cta-button { background-color: var(--cor-laranja-cta); color: white !important; text-decoration: none !important; padding: 12px 24px; border-radius: 8px; font-weight: bold; white-space: nowrap; transition: background-color 0.2s; }
-.mobile-nav-toggle { display: none; } /* Esconde o botão 'hambúrguer' no desktop */
-
-/* ======================================================= */
-/* ===== ESTILO DEFINITIVO PARA O MENU DROPDOWN V2.0 ===== */
-/* ======================================================= */
-
-/* O container do item de menu */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-/* O botão que aciona o dropdown */
-.dropbtn {
-    cursor: pointer;
-}
-
-/* A "caixa" que aparece com os links */
-.dropdown-content {
-    display: none; /* Começa escondido */
-    position: absolute;
-    background-color: #fdfcf7; /* Fundo branco-gelo */
-    min-width: 280px; /* Largura mínima */
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
-    z-index: 101; /* Garante que fique acima de outros conteúdos */
-    border-radius: 8px;
-    border: 1px solid #f0ead6;
-    padding: 10px 0;
-}
-
-/* Mostra a caixa quando o mouse está sobre o item do menu */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* O título dentro do dropdown (NAVEGUE POR SOLUÇÃO) */
-.dropdown-content .dropdown-title {
-    padding: 12px 20px 5px 20px; /* Espaçamento (topo, lados, fundo) */
-    font-weight: bold;
-    font-size: 0.8em;
-    text-transform: uppercase;
-    color: #999; /* Cor mais suave para o título */
-    display: block;
-}
-
-/* Os links individuais dentro do dropdown */
-.dropdown-content a {
-    color: var(--cor-primaria, #5a3a30);
-    padding: 10px 20px;
-    text-decoration: none;
-    display: block; /* Garante que cada link ocupe uma linha */
-    text-align: left;
-    font-weight: bold;
-    font-size: 1em; /* Tamanho da fonte dos links */
-    line-height: 1.5; /* Espaçamento entre as linhas */
-}
-
-/* Efeito de hover nos links */
-.dropdown-content a:hover {
-    background-color: #f0ead6;
-    text-decoration: none;
-}
-
-/* A linha divisória */
-.dropdown-content hr {
-    border: none;
-    border-top: 1px solid #f0ead6;
-    margin: 10px 0;
-}
-
-/* Regra de segurança para o mobile */
-@media (max-width: 1024px) {
-    .dropdown:hover .dropdown-content {
-        display: none; /* Desativa a abertura com o mouse em telas de toque */
-    }
-}
-
-@media (max-width: 1024px) {
-    .main-nav { display: none; position: absolute; top: 100%; left: 0; width: 100%; background-color: var(--cor-secundaria); flex-direction: column; padding: 20px; box-sizing: border-box; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-    .main-nav.active { display: flex; }
-    .main-nav-links { flex-direction: column; gap: 20px; margin-bottom: 20px; }
-    .mobile-nav-toggle { display: block; font-size: 2em; background: none; border: none; color: var(--cor-primaria); cursor: pointer; }
-    .dropdown:hover .dropdown-content { display: none; }
-}
-
-/* ======================================================= */
-/* ===== CARDS DE CONTEÚDO (INDEX, FILOSOFIA, RECEITAS) ===== */
-/* ======================================================= */
-.post-grid, .card-carousel {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
-.card {
-    border: 1px solid #eee;
-    border-radius: 8px;
-    text-decoration: none;
-    color: var(--cor-texto);
-    display: flex;
-    flex-direction: column;
-}
-/* SOLUÇÃO PARA IMAGENS CORTADAS */
-.card-image {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 4 / 3; /* Proporção 4:3 sem cortes */
-    object-fit: cover;
-    border-radius: 8px 8px 0 0;
-}
-.card-content { padding: 20px; display: flex; flex-direction: column; flex-grow: 1; }
-.card-content h3 { margin-top: 0; }
-.card-description { flex-grow: 1; }
-.card-content .cta-button { margin-top: auto; }
-
-/* ======================================================= */
-/* ===== CÓDIGO DEFINITIVO PARA O ACORDEÃO (FAQ/ONDE) ===== */
-/* ======================================================= */
-
-.faq-item-accordion, .onde-encontrar-item {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    overflow: hidden;
-}
-
-.accordion-header {
-    background-color: #fdfcf7;
-    padding: 18px 20px;
-    width: 100%;
-    text-align: left;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.accordion-header h3 {
+/* --- 2. ESTILOS GERAIS E BASE (Mobile First) --- */
+body {
+    font-family: var(--fonte-texto);
+    color: var(--cor-texto-escuro);
+    background-color: var(--cor-fundo-pagina);
     margin: 0;
-    font-size: 1.1em;
-    color: var(--cor-primaria);
+    line-height: 1.7;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+h1, h2, h3, h4 {
+    font-family: var(--fonte-titulos);
+    color: var(--cor-verde-principal);
+}
+a {
+    color: var(--cor-bordo-secundaria);
+    text-decoration: none;
     font-weight: bold;
 }
-
-.accordion-header .icon {
-    transition: transform 0.3s ease-out;
+a:hover {
+    text-decoration: underline;
 }
 
-/* Regra que faz a setinha girar */
-.accordion-header.active .icon {
-    transform: rotate(180deg);
+/* --- 3. CABEÇALHO E NAVEGAÇÃO --- */
+.top-slogan-bar {
+    background-color: var(--cor-dourado-slogan);
+    padding: 8px 10px;
+    text-align: center;
 }
-
-.accordion-content {
-    padding: 0 20px;
-    background-color: #fff;
-    max-height: 0; /* Começa fechado */
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
+.top-slogan-bar p {
+    margin: 0;
+    font-size: 0.9em;
+    font-weight: 500;
+    color: var(--cor-texto-escuro);
 }
-
-/* A REGRA MAIS IMPORTANTE QUE ESTAVA FALTANDO */
-.accordion-header.active + .accordion-content {
-    max-height: 500px; /* Define uma altura máxima para a animação de abertura */
-    padding: 20px;
+header {
+    background-color: var(--cor-verde-cabecalho);
+    padding: 15px 0;
+    border-bottom: 2px solid var(--cor-dourado-slogan);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
-/* --- RODAPÉ --- */
-footer { text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 2px solid #f0f0f0; background-color: #f9f6ef; }
-.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: left; }
-.footer-grid h4 { font-size: 1.2em; margin-bottom: 15px; }
-.footer-grid a { color: var(--cor-texto); text-decoration: none; display: block; margin-bottom: 12px; }
-.footer-credit { margin-top: 40px; border-top: 1px solid #e0e0e0; padding-top: 20px; font-size: 0.9em; }
-
-
-/* =================================================================== */
-/* ===== CORREÇÃO PARA OS CARDS DE CARROSSEL HORIZONTAL (vFINAL) ==== */
-/* =================================================================== */
-
-/* 1. O Contêiner do Carrossel (ATUALIZADO) */
-/* Agora esta regra se aplica a TODAS as 3 variações de contêineres do site. */
-.post-carousel,
-.post-grid,
-.carousel-container .carousel-track { /* Alvo específico para a página 'Onde Encontrar' */
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    gap: 20px;
-    padding: 15px 0 25px 0;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+.header-flex { display: flex; justify-content: space-between; align-items: center; }
+.logo img { max-height: 50px; }
+.main-nav-links a {
+    color: var(--cor-texto-claro);
+    font-weight: bold;
 }
-.post-carousel::-webkit-scrollbar,
-.post-grid::-webkit-scrollbar,
-.carousel-container .carousel-track::-webkit-scrollbar {
-    display: none;
+.cta-button {
+    background-color: var(--cor-laranja-cta);
+    color: var(--cor-texto-claro) !important;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: transform 0.2s;
 }
-
-
-/* 2. O Card Individual (ATUALIZADO) */
-/* Agora esta regra se aplica a TODAS as 3 variações de cards do site. */
-.card,
-.product-card,
-.carousel-card {
-    flex-shrink: 0;
-    flex-grow: 0;
-    width: 320px;
-    background-color: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+.cta-button:hover {
     text-decoration: none;
-    color: #333;
+    transform: scale(1.05);
+}
+
+/* --- 4. O COMPONENTE 'CARD' UNIFICADO (Mobile First) --- */
+.card {
+    background-color: var(--cor-fundo-card);
+    border: 1px solid var(--cor-borda-suave);
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    text-decoration: none;
+    color: var(--cor-texto-escuro);
     display: flex;
     flex-direction: column;
     overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
 }
-.card:hover,
-.product-card:hover,
-.carousel-card:hover {
+.card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
-
-
-/* 3. A Imagem Dentro do Card (ATUALIZADO) */
-/* Regra genérica para as imagens dos cards */
-.card-image,
-.product-card-image,
-.estacao-postcard img {
+.card-image {
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
 }
-
-
-/* 4. O Conteúdo de Texto do Card (ATUALIZADO) */
-/* Regras para os 3 tipos de conteúdo de texto */
-.card-content,
-.product-card-content,
-.estacao-content { /* Adicionada a classe da página 'Onde Encontrar' */
-    padding: 20px;
-    text-align: left;
+.card-content {
+    padding: 25px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
 }
-.card-category {
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: #A67B5B;
-    text-transform: uppercase;
-    display: block;
-    margin-bottom: 8px;
-}
-.card-content h3,
-.product-card-content h4,
-.estacao-content h4 {
-    font-size: 1.25rem;
+.card-content h3 {
+    margin-top: 0;
     margin-bottom: 10px;
-    line-height: 1.3;
+    font-size: 1.3em;
 }
-.estacao-content h3 { /* Estilo específico para PRIMAVERA, VERÃO etc */
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: #A67B5B;
-    text-transform: uppercase;
-}
-.card-description,
-.product-card-content p,
-.estacao-content p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: #666;
-    margin-bottom: 1.5rem;
-}
-.product-card .cta-button {
-    background-color: #d98d4c;
-    color: #ffffff;
-    padding: 0.75rem 1.5rem;
-    border-radius: 5px;
-    font-weight: 600;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: auto;
-}
-.product-card .cta-button:hover {
-    background-color: #c77c3e;
-}
-/* =================================================================== */
-/* ===== CORREÇÃO PARA O BLOCO "MENSAGEM DA MARIA CONCEIÇÃO" ===== */
-/* =================================================================== */
-
-/* 1. O Contêiner Principal da Mensagem (fundo bege, etc.) */
-/* Esta regra se aplica a .author-box e outras seções similares. */
-.author-box,
-.message-section, /* Adicionei um nome genérico caso use no futuro */
-.hero-section-v2 {
-    background-color: #FEFDFB; /* Um tom de bege bem claro, quase branco */
-    border: 1px solid #F2EBE3; /* Borda sutil na cor de fundo do site */
-    border-radius: 15px;
-    padding: 2.5rem;
-    margin: 2rem 0;
-    display: flex; /* ESSENCIAL: Alinha a imagem e o texto lado a lado */
-    align-items: center; /* Centraliza verticalmente a imagem e o texto */
-    gap: 2.5rem; /* Cria um espaço de 2.5rem entre a imagem e o texto */
-}
-
-
-/* 2. A Imagem Circular da Fundadora */
-/* Esta regra se aplica a .author-image e à imagem circular do topo. */
-.author-image,
-.hero-image-circular {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%; /* CRIA O EFEITO CIRCULAR */
-    object-fit: cover; /* Garante que a foto preencha o círculo sem distorcer */
-    border: 5px solid #ffffff; /* Uma pequena borda branca em volta */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Sombra suave para dar profundidade */
-    flex-shrink: 0; /* Impede que a imagem encolha se o texto for grande */
-}
-/* Caso especial para a imagem maior no topo da página inicial */
-.hero-section-v2 .hero-image-circular {
-    width: 350px;
-    height: 350px;
-}
-
-
-/* 3. O Bloco de Conteúdo/Texto */
-.author-info,
-.hero-content-v2 {
-    flex-grow: 1; /* Permite que o bloco de texto ocupe o espaço restante */
-}
-
-.author-info h4,
-.hero-content-v2 h1 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    line-height: 1.3;
-}
-.hero-content-v2 h1 {
-    font-size: 2.8rem; /* Tamanho maior para o título principal */
-}
-
-.author-info p,
-.hero-content-v2 p {
-    font-size: 1rem;
-    line-height: 1.7;
+.card-content p {
+    margin: 0;
+    flex-grow: 1;
     color: #666;
 }
-
-
-/* 4. Responsividade para Celulares */
-/* Em telas pequenas, o layout fica vertical: imagem em cima, texto embaixo */
-@media (max-width: 768px) {
-    .author-box,
-    .message-section,
-    .hero-section-v2 {
-        flex-direction: column; /* Coloca os itens em coluna */
-        text-align: center; /* Centraliza o texto */
-        padding: 2rem;
-        gap: 1.5rem;
-    }
-
-    .hero-section-v2 .hero-image-circular {
-        width: 250px;
-        height: 250px;
-    }
-
-
-/* ========================================================= */
-/* --- REVISÃO ESTRATÉGICA 'PADRÃO OURO' - v12 DEFINITIVO --- */
-/* ========================================================= */
-
-/* --- Base de Leitura e Espaçamento --- */
-.post-content { max-width: 720px; margin-left: auto; margin-right: auto; line-height: 1.7; }
-@media (max-width: 768px) { .container { padding-left: 20px; padding-right: 20px; } }
-.post-content h2, .post-content .testimonial-box, .post-content .card-modelo-autora, .post-content .faq-section { margin-top: 40px; margin-bottom: 20px; }
-
-/* --- Hero Card (Aprovado!) --- */
-.hero-card { max-width: 720px; margin-left: auto; margin-right: auto; background-color: #ffffff; border: 1px solid #EAEAEA; border-radius: 16px; padding: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.07); margin-top: 30px; margin-bottom: 30px; }
-.hero-card img { width: 100%; height: auto; border-radius: 8px; display: block; }
-@media (max-width: 768px) { .hero-card { padding: 15px; } }
-
-/* --- Trava de Segurança Anti-Colapso --- */
-.recipe-meta-icons, .post-content { clear: both; position: relative; z-index: 1; }
-
-/* --- Card CTA v12 (COM IMAGEM CIRCULAR) --- */
-/* ATENÇÃO: Se as classes no HTML ainda forem 'cta-receita-autoral', precisamos mudar o HTML para 'card-modelo-autora' */
-/* Se você confirmou que o HTML usa 'card-modelo-autora', este código está certo. */
-.card-modelo-autora { display: flex; align-items: center; gap: 30px; background-color: #fdfaf6; border: 1px solid #f0e9df; padding: 30px; border-radius: 16px; }
-.card-modelo-autora-image {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    flex-shrink: 0;
-    border: 3px solid #fff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    border-radius: 50% !important; /* REGRA FORTALECIDA */
+.card-content .cta-button {
+    margin-top: 20px;
+    align-self: flex-start;
 }
-.card-modelo-autora-content { display: flex; flex-direction: column; }
-.card-modelo-autora-content h3 { margin: 0 0 10px 0; font-size: 1.4em; }
-.card-modelo-autora-content p { margin: 0 0 20px 0; line-height: 1.6; flex-grow: 1; }
-.card-modelo-autora-content .cta-button { align-self: flex-start; font-weight: bold; }
-@media (max-width: 600px) { .card-modelo-autora { flex-direction: column; text-align: center; padding: 25px; } .card-modelo-autora-image { width: 120px; height: 120px; } .card-modelo-autora-content .cta-button { align-self: center; } }
 
-/* --- Testemunhal (ESTILO CORRIGIDO) --- */
-.testimonial-box { background-color: transparent; border: none; padding: 15px 0; max-width: 75%; margin: 50px auto; text-align: center; position: relative; }
-.testimonial-box blockquote::before { content: '“'; position: absolute; top: -15px; left: 50%; transform: translateX(-50%); font-size: 4.5em; color: #EADFD0; z-index: -1; line-height: 1; }
-.testimonial-box blockquote { margin: 0; }
-.testimonial-box blockquote p { font-family: 'Dancing Script', cursive; font-size: 1.4em; line-height: 1.6; color: #5C4728; margin: 0; }
-.testimonial-box cite { display: block; text-align: center; margin-top: 15px; font-style: normal; font-weight: normal; color: #777; font-size: 0.9em; }
-
-/* --- Modo de Preparo e FAQ --- */
-.modo-preparo-lista { list-style: none; counter-reset: preparo-counter; padding-left: 0; margin-top: 30px; }
-.modo-preparo-lista li { counter-increment: preparo-counter; margin-bottom: 25px; padding-left: 55px; position: relative; font-size: 1.1em; }
-.modo-preparo-lista li::before { content: "#" counter(preparo-counter); position: absolute; left: 0; top: 0.1em; background-color: #D4A373; color: white; width: 38px; height: 38px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-weight: bold; }
-.modo-preparo-lista li strong { display: block; margin-bottom: 5px; color: #333; }
-.accordion-header h3 { font-size: 1.3em; margin: 0; }
-@media (max-width: 768px) { .accordion-header { padding: 15px 10px; } }
-
-/* --- Conteúdo ANTIGO de components.css (COLADO AQUI ABAIXO) --- */
-/* IMPORTANTE: As regras abaixo não terão efeito se o HTML estiver usando as classes novas (card-modelo-autora, testimonial-box) */
-/* Este bloco é mais um registro. O importante é o HTML estar correto. */
-/* Estilo para o novo CTA "Compre esta Receita Autoral" */
-.cta-receita-autoral {
-    background-color: #fffaf5;
-    border: 2px solid #f0ead6;
-    border-radius: 15px;
-    padding: 2rem;
-    margin: 2rem 0;
+/* --- 5. CARROSSÉIS HORIZONTAIS --- */
+.carousel-container {
     display: flex;
-    align-items: center;
-    gap: 2rem;
-    text-align: left;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 15px 0 25px 0;
+    scrollbar-width: none; /* Firefox */
+}
+.carousel-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+.carousel-container .card {
+    flex: 0 0 320px; /* Define a largura de cada card no carrossel */
+}
+@media(max-width: 768px) {
+    .carousel-container .card {
+        flex-basis: 280px; /* Cards um pouco menores no mobile */
+    }
 }
 
-.cta-receita-autoral img {
-    width: 120px;
-    height: 120px;
-    object-fit: contain;
-    flex-shrink: 0;
+/* --- 6. PÁGINA DE RECEITA (MOLDE PADRÃO OURO) --- */
+.post-content { max-width: 720px; margin: 40px auto; }
+.hero-card {
+    max-width: 720px;
+    margin: 30px auto;
+    background-color: var(--cor-fundo-card);
+    border: 1px solid var(--cor-borda-suave);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+}
+.hero-card img { width: 100%; height: auto; border-radius: 8px; }
+
+.card-modelo-autora {
+    display: flex; align-items: center; gap: 30px;
+    background-color: var(--cor-fundo-pagina);
+    border: 1px solid var(--cor-borda-suave);
+    padding: 30px; border-radius: 16px;
+}
+.card-modelo-autora-image {
+    width: 120px; height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--cor-fundo-card);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.cta-receita-autoral h3 {
-    margin: 0 0 0.5rem 0;
-    font-size: 1.5rem;
-    color: #333;
-}
-
-.cta-receita-autoral p {
-    margin: 0 0 1rem 0;
-    color: #666;
-}
-
-/* Outros componentes que podemos criar no futuro */
-.author-byline {
+.testimonial-box {
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin: 60px auto;
+}
+.testimonial-box blockquote p {
+    font-family: var(--fonte-titulos);
+    font-style: italic;
+    font-size: 1.4em;
+    line-height: 1.6;
+    color: var(--cor-verde-principal);
+    margin: 0;
+}
+.testimonial-box cite {
+    display: block;
+    margin-top: 15px;
+    font-style: normal;
     color: #777;
 }
 
-.recipe-meta-icons {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin: 1.5rem 0;
-    font-weight: 500;
+/* --- 7. AJUSTES FINOS NOS DEMAIS COMPONENTES --- */
+/* Dropdown Menu */
+.dropdown-content {
+    background-color: #fdfcf7;
+    border: 1px solid var(--cor-borda-suave);
+}
+.dropdown-content a {
+    color: var(--cor-verde-principal);
+    font-family: var(--fonte-texto);
+}
+.dropdown-content a:hover {
+    background-color: var(--cor-borda-suave);
+}
+.dropdown-content .dropdown-title {
+    font-family: var(--fonte-texto);
+}
+.dropdown-content hr {
+    border-top: 1px solid var(--cor-borda-suave);
+}
+
+/* Accordion (FAQ) */
+.accordion-header {
+    background-color: var(--cor-fundo-card);
+    border-bottom: 1px solid var(--cor-borda-suave);
+}
+.faq-item-accordion {
+    border: 1px solid var(--cor-borda-suave);
+    border-radius: 16px;
+}
+.accordion-header h3 {
+    font-family: var(--fonte-texto);
+    font-size: 1.2em;
+    color: var(--cor-verde-principal);
 }
