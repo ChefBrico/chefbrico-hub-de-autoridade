@@ -188,3 +188,73 @@ footer { padding: 30px 20px; margin-top: 40px; border-top: 1px solid var(--cor-b
     font-size: 0.9em; /* Tamanho de fonte menor e sutil */
     color: #777;
 }
+/* ================================================================= */
+/* === BLOCO DE CORREÇÃO CIRÚRGICA FINAL (ADICIONAR AO FINAL) === */
+/* ================================================================= */
+
+/* --- 1. CORREÇÃO DO RODAPÉ --- */
+/* Força os links do rodapé a ficarem um embaixo do outro */
+.footer-grid a {
+    display: block;
+}
+.footer-credit {
+    text-align: center;
+}
+
+/* --- 2. ESTILOS DO MOLDE DE RECEITA (Padrão Ouro) --- */
+/* Garante que a coluna de texto principal tenha a largura correta */
+.post-content { 
+    max-width: 720px; 
+    margin: 40px auto; 
+    line-height: 1.7; 
+}
+
+/* Garante o estilo da Moldura/Hero Card nas páginas de receita */
+.article-hero-image-container {
+    max-width: 720px;
+    margin: 30px auto;
+    background-color: #ffffff;
+    border: 1px solid #f0e9df;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+}
+.article-hero-image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Estilo do Testemunho (Versão Final) */
+.testimonial-box { text-align: center; margin: 50px auto; max-width: 100%; border-top: 1px solid #f0e9df; border-bottom: 1px solid #f0e9df; padding: 25px 0; }
+.testimonial-box blockquote { margin: 0; }
+.testimonial-box blockquote p { font-family: 'Merriweather', serif; font-style: italic; font-size: 1.2em; line-height: 1.6; color: #333; text-align: justify; -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; -webkit-column-gap: 40px; -moz-column-gap: 40px; column-gap: 40px; }
+.testimonial-box cite { display: block; text-align: right; margin-top: 15px; font-family: 'Lato', sans-serif; font-style: normal; font-size: 0.9em; color: #777; }
+
+/* Estilo do Modo de Preparo com destaque */
+.modo-preparo-lista { list-style: none; counter-reset: preparo-counter; padding-left: 0; }
+.modo-preparo-lista li { counter-increment: preparo-counter; margin-bottom: 20px; padding-left: 45px; position: relative; }
+.modo-preparo-lista li::before { content: "#" counter(preparo-counter); position: absolute; left: 0; top: 0; background-color: #014641; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-weight: bold; }
+.modo-preparo-lista li strong { display: block; margin-bottom: 3px; }
+.modo-preparo-final { text-align: center; font-family: 'Dancing Script', cursive; font-style: italic; font-size: 1.5em; color: #73022c; margin-top: 20px; }
+
+/* --- 3. CORREÇÃO DO ACORDEÃO (FAQ) --- */
+/* Garante que o conteúdo do acordeão comece escondido e tenha animação */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0 20px; /* Garante que não tenha padding quando fechado */
+}
+/* Regra que abre o acordeão quando a classe .active é adicionada pelo JavaScript */
+.accordion-header.active + .accordion-content {
+    max-height: 500px; /* Altura máxima para a animação */
+    padding: 20px;
+}
+/* Faz a seta girar */
+.accordion-header .icon {
+    transition: transform 0.3s ease-out;
+}
+.accordion-header.active .icon {
+    transform: rotate(180deg);
+}
