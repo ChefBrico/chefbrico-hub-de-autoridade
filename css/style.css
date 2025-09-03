@@ -125,3 +125,25 @@ footer { padding: 30px 20px; margin-top: 40px; border-top: 1px solid var(--cor-b
     border-radius: 8px; /* Cantos da imagem levemente arredondados */
     display: block;
 }
+/* ================================================================= */
+/* === CÓDIGO CIRÚRGICO #2: A MOLDURA COM O ENDEREÇO CORRETO === */
+/* ================================================================= */
+
+/* Aplica o estilo de moldura à classe '.hero-card' que está no seu HTML */
+.hero-card {
+    max-width: 720px; /* Alinha com a coluna de texto para harmonia */
+    margin: 30px auto; /* Centraliza o card na página */
+    background-color: #ffffff; /* Fundo branco para a moldura */
+    border: 1px solid #f0e9df; /* Borda sutil da sua nova identidade */
+    border-radius: 16px;       /* Cantos arredondados */
+    padding: 20px;             /* O espaçamento que cria a 'moldura' */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07); /* Sombra suave */
+}
+
+/* Garante que a imagem dentro do card se comporte corretamente */
+.hero-card img {
+    width: 100%;    /* A imagem ocupa 100% da largura do card */
+    height: auto;   /* A altura se ajusta para manter a proporção (SEM CORTES) */
+    border-radius: 8px; /* Cantos da imagem levemente arredondados */
+    display: block;
+}
