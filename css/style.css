@@ -1,5 +1,5 @@
 /* ================================================================= */
-/* === ARQUIVO STYLE.CSS - v1.4 (POLIMENTO CHAVE DE OURO) === */
+/* === ARQUIVO STYLE.CSS - v1.5 (VERSÃO UNIVERSAL FINAL) === */
 /* ================================================================= */
 
 /* --- 1. FONTES E VARIÁVEIS DE COR --- */
@@ -26,26 +26,57 @@ h1, h2, h3, h4 { font-family: var(--fonte-titulos); color: var(--cor-verde-princ
 a { color: var(--cor-bordo-secundaria); text-decoration: none; font-weight: bold; }
 a:hover { text-decoration: underline; }
 
-/* --- 3. CABEÇALHO E NAVEGAÇÃO (REFINADO) --- */
+/* --- 3. CABEÇALHO E NAVEGAÇÃO (CORRIGIDO) --- */
 .top-slogan-bar { background-color: var(--cor-dourado-slogan); padding: 6px 10px; text-align: center; }
 .top-slogan-bar p { margin: 0; font-size: 0.85em; font-weight: 500; }
 header { background-color: var(--cor-verde-cabecalho); padding: 10px 0; position: sticky; top: 0; z-index: 100; }
 .header-flex { display: flex; justify-content: space-between; align-items: center; }
 .logo img { max-height: 45px; }
-.main-nav { display: flex; align-items: center; flex-grow: 1; justify-content: center; }
+.main-nav { display: flex; align-items: center; gap: 25px; }
 .main-nav-links { display: flex; align-items: center; gap: 30px; }
 .main-nav-links a { color: var(--cor-texto-claro); }
-.header-flex .cta-button { margin-left: 20px; padding: 10px 20px; }
+.header-flex .cta-button { margin-left: auto; padding: 10px 20px; } /* Botão volta a aparecer */
 .mobile-nav-toggle { display: none; }
-
-/* Dropdown (Mais Compacto) */
 .dropdown { position: relative; }
 .dropdown-content { display: none; position: absolute; background-color: #fdfcf7; min-width: 250px; box-shadow: 0 8px 16px rgba(0,0,0,0.1); z-index: 101; border-radius: 8px; border: 1px solid var(--cor-borda-suave); padding: 8px 0; }
 .dropdown:hover .dropdown-content { display: block; }
 .dropdown-content a { color: var(--cor-verde-principal); padding: 8px 18px; display: block; font-size: 0.9em; }
 .dropdown-content a:hover { background-color: var(--cor-borda-suave); }
 
-/* --- 4. PÁGINA DE RECEITA (REFINAMENTO FINAL) --- */
+/* --- 4. CARDS E CARROSSÉIS (CORREÇÃO UNIVERSAL) --- */
+/* Esta regra agora se aplica a TODAS as variações de carrossel do site */
+.carousel-container, .post-carousel, .post-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 15px 0 25px 0;
+    scrollbar-width: none; /* Firefox */
+}
+.carousel-container::-webkit-scrollbar, .post-carousel::-webkit-scrollbar, .post-grid::-webkit-scrollbar { display: none; }
+
+/* Regra unificada para todos os cards */
+.card, .product-card, .carousel-card {
+    background-color: var(--cor-fundo-card);
+    border: 1px solid var(--cor-borda-suave);
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    text-decoration: none;
+    color: var(--cor-texto-escuro);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex: 0 0 320px;
+}
+.card:hover, .product-card:hover, .carousel-card:hover { transform: translateY(-8px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+.card-image, .product-card-image { width: 100%; height: 220px; object-fit: cover; }
+.card-content { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
+.card-content h3 { margin-top: 0; margin-bottom: 10px; font-size: 1.3em; }
+.card-content p { margin: 0; flex-grow: 1; color: #666; }
+.card-content .cta-button { margin-top: 20px; align-self: flex-start; }
+
+/* --- 5. PÁGINA DE RECEITA (POLIMENTO FINAL) --- */
 .post-content { max-width: 720px; margin: 40px auto; }
 .recipe-meta-icons { display: flex; justify-content: center; gap: 25px; margin: 25px 0; }
 .hero-card { max-width: 720px; margin: 30px auto; background-color: var(--cor-fundo-card); border: 1px solid var(--cor-borda-suave); border-radius: 16px; padding: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.07); }
@@ -53,12 +84,12 @@ header { background-color: var(--cor-verde-cabecalho); padding: 10px 0; position
 .card-modelo-autora { display: flex; align-items: center; gap: 20px; background-color: var(--cor-fundo-pagina); border: 1px solid var(--cor-borda-suave); padding: 25px; border-radius: 16px; }
 .card-modelo-autora-image { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid var(--cor-fundo-card); box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
 
-/* Testemunho (Reduzido e Mais Delicado) */
-.testimonial-box { text-align: center; margin: 50px auto; max-width: 60%; }
+/* Testemunho (Mais Compacto) */
+.testimonial-box { text-align: center; margin: 50px auto; max-width: 55%; }
 .testimonial-box blockquote p { font-family: var(--fonte-cursiva); font-style: italic; font-size: 1.25em; line-height: 1.6; color: var(--cor-verde-principal); margin: 0; }
 .testimonial-box cite { display: block; margin-top: 10px; font-style: normal; color: #777; font-size: 0.85em; }
 
-/* Modo de Preparo (Frase Centralizada) */
+/* Modo de Preparo */
 .modo-preparo-lista { list-style: none; counter-reset: preparo-counter; padding-left: 0; }
 .modo-preparo-lista li { counter-increment: preparo-counter; margin-bottom: 20px; padding-left: 45px; position: relative; }
 .modo-preparo-lista li::before { content: "#" counter(preparo-counter); position: absolute; left: 0; top: 0; background-color: var(--cor-verde-principal); color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-weight: bold; }
@@ -88,6 +119,7 @@ footer { padding: 30px 20px; margin-top: 40px; border-top: 1px solid var(--cor-b
 /* --- RESPONSIVIDADE FINAL (MENU MOBILE) --- */
 @media (max-width: 1024px) {
     .main-nav { display: none; }
+    .header-flex .cta-button { display: none; }
     .mobile-nav-toggle { display: block; font-size: 1.8em; background: none; border: none; color: var(--cor-texto-claro); cursor: pointer; }
     .main-nav.active { display: flex; position: absolute; top: 100%; right: 0; background: var(--cor-fundo-card); flex-direction: column; width: 280px; box-shadow: -5px 5px 15px rgba(0,0,0,0.1); padding: 20px; border-radius: 0 0 0 8px; }
     .main-nav.active .main-nav-links { display: flex; flex-direction: column; align-items: flex-start; gap: 15px; width: 100%; }
