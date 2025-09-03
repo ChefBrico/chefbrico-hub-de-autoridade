@@ -1,5 +1,5 @@
 /* ================================================================= */
-/* === ARQUIVO STYLE.CSS - v1.3 (POLIMENTO FINAL) - CHEFBRICO === */
+/* === ARQUIVO STYLE.CSS - v1.4 (POLIMENTO CHAVE DE OURO) === */
 /* ================================================================= */
 
 /* --- 1. FONTES E VARIÁVEIS DE COR --- */
@@ -27,7 +27,7 @@ a { color: var(--cor-bordo-secundaria); text-decoration: none; font-weight: bold
 a:hover { text-decoration: underline; }
 
 /* --- 3. CABEÇALHO E NAVEGAÇÃO (REFINADO) --- */
-.top-slogan-bar { background-color: var(--cor-dourado-slogan); padding: 6px 10px; }
+.top-slogan-bar { background-color: var(--cor-dourado-slogan); padding: 6px 10px; text-align: center; }
 .top-slogan-bar p { margin: 0; font-size: 0.85em; font-weight: 500; }
 header { background-color: var(--cor-verde-cabecalho); padding: 10px 0; position: sticky; top: 0; z-index: 100; }
 .header-flex { display: flex; justify-content: space-between; align-items: center; }
@@ -38,11 +38,11 @@ header { background-color: var(--cor-verde-cabecalho); padding: 10px 0; position
 .header-flex .cta-button { margin-left: 20px; padding: 10px 20px; }
 .mobile-nav-toggle { display: none; }
 
-/* Dropdown */
+/* Dropdown (Mais Compacto) */
 .dropdown { position: relative; }
-.dropdown-content { display: none; position: absolute; background-color: #fdfcf7; min-width: 280px; box-shadow: 0 8px 16px rgba(0,0,0,0.1); z-index: 101; border-radius: 8px; border: 1px solid var(--cor-borda-suave); padding: 10px 0; }
+.dropdown-content { display: none; position: absolute; background-color: #fdfcf7; min-width: 250px; box-shadow: 0 8px 16px rgba(0,0,0,0.1); z-index: 101; border-radius: 8px; border: 1px solid var(--cor-borda-suave); padding: 8px 0; }
 .dropdown:hover .dropdown-content { display: block; }
-.dropdown-content a { color: var(--cor-verde-principal); padding: 10px 20px; display: block; }
+.dropdown-content a { color: var(--cor-verde-principal); padding: 8px 18px; display: block; font-size: 0.9em; }
 .dropdown-content a:hover { background-color: var(--cor-borda-suave); }
 
 /* --- 4. PÁGINA DE RECEITA (REFINAMENTO FINAL) --- */
@@ -50,37 +50,35 @@ header { background-color: var(--cor-verde-cabecalho); padding: 10px 0; position
 .recipe-meta-icons { display: flex; justify-content: center; gap: 25px; margin: 25px 0; }
 .hero-card { max-width: 720px; margin: 30px auto; background-color: var(--cor-fundo-card); border: 1px solid var(--cor-borda-suave); border-radius: 16px; padding: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.07); }
 .hero-card img { width: 100%; height: auto; border-radius: 8px; }
-
-/* Card CTA (Mantido) */
 .card-modelo-autora { display: flex; align-items: center; gap: 20px; background-color: var(--cor-fundo-pagina); border: 1px solid var(--cor-borda-suave); padding: 25px; border-radius: 16px; }
 .card-modelo-autora-image { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid var(--cor-fundo-card); box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
 
-/* Testemunho (Tamanho Reduzido 50%) */
-.testimonial-box { text-align: center; margin: 50px auto; max-width: 65%; }
-.testimonial-box blockquote p { font-family: var(--fonte-cursiva); font-style: italic; font-size: 1.2em; line-height: 1.6; color: var(--cor-verde-principal); margin: 0; }
+/* Testemunho (Reduzido e Mais Delicado) */
+.testimonial-box { text-align: center; margin: 50px auto; max-width: 60%; }
+.testimonial-box blockquote p { font-family: var(--fonte-cursiva); font-style: italic; font-size: 1.25em; line-height: 1.6; color: var(--cor-verde-principal); margin: 0; }
 .testimonial-box cite { display: block; margin-top: 10px; font-style: normal; color: #777; font-size: 0.85em; }
 
-/* Modo de Preparo (Com Destaque) */
+/* Modo de Preparo (Frase Centralizada) */
 .modo-preparo-lista { list-style: none; counter-reset: preparo-counter; padding-left: 0; }
 .modo-preparo-lista li { counter-increment: preparo-counter; margin-bottom: 20px; padding-left: 45px; position: relative; }
 .modo-preparo-lista li::before { content: "#" counter(preparo-counter); position: absolute; left: 0; top: 0; background-color: var(--cor-verde-principal); color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-weight: bold; }
 .modo-preparo-lista li strong { display: block; margin-bottom: 3px; }
-.modo-preparo-final { text-align: right; font-family: var(--fonte-cursiva); font-style: italic; font-size: 1.5em; color: var(--cor-bordo-secundaria); margin-top: 10px; }
+.modo-preparo-final { text-align: center; font-family: var(--fonte-cursiva); font-style: italic; font-size: 1.5em; color: var(--cor-bordo-secundaria); margin-top: 20px; }
 
-/* Acordeão (FAQ - Mais Leve e Compacto) */
+/* Acordeão (FAQ - Mais Compacto e Leve) */
 .faq-item-accordion { border: none; border-bottom: 1px solid var(--cor-borda-suave); margin-bottom: 0; border-radius: 0; }
-.accordion-header { background-color: transparent; width: 100%; text-align: left; padding: 18px 10px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; border: none; }
+.accordion-header { background-color: transparent; width: 100%; text-align: left; padding: 12px 5px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; border: none; }
 .accordion-header h3 { font-size: 1.1em; font-family: var(--fonte-texto); }
 .accordion-header .icon { transition: transform 0.3s; }
 .accordion-header.active .icon { transform: rotate(180deg); }
 .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
-.accordion-header.active + .accordion-content { max-height: 500px; padding: 10px 10px 20px 10px; }
+.accordion-header.active + .accordion-content { max-height: 500px; padding: 10px 5px 20px 5px; }
 
-/* Card da Autora (Fim da Página) */
+/* Card da Autora */
 .author-box { display: flex; align-items: center; gap: 20px; background-color: #fdfaf6; padding: 25px; border-radius: 16px; margin-top: 40px; }
 .author-image { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; }
 
-/* Rodapé (Mais Compacto) */
+/* Rodapé */
 footer { padding: 30px 20px; margin-top: 40px; border-top: 1px solid var(--cor-borda-suave); }
 .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px 30px; text-align: left; }
 .footer-grid h4 { margin-bottom: 10px; }
