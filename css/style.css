@@ -147,3 +147,44 @@ footer { padding: 30px 20px; margin-top: 40px; border-top: 1px solid var(--cor-b
     border-radius: 8px; /* Cantos da imagem levemente arredondados */
     display: block;
 }
+/* ================================================================= */
+/* === AJUSTE FINAL: NOVO LAYOUT DO TESTEMUNHO (FULL-WIDTH) === */
+/* ================================================================= */
+
+/* Zeramos o estilo antigo para reconstruir */
+.testimonial-box, 
+.testimonial-box blockquote::before {
+    all: unset; /* Remove TODOS os estilos anteriores, como mágica */
+}
+
+/* Novo container do testemunho */
+.testimonial-box {
+    display: block; /* Garante que o container se comporte como um bloco */
+    width: 100%;    /* Ocupa 100% da largura da coluna de texto */
+    margin: 40px 0; /* Espaçamento vertical */
+    border-top: 2px solid #f0e9df;  /* Linha sutil acima */
+    border-bottom: 2px solid #f0e9df; /* Linha sutil abaixo */
+    padding: 25px 0; /* Espaçamento interno */
+}
+
+/* O parágrafo da citação */
+.testimonial-box blockquote p {
+    font-family: var(--fonte-titulos); /* Usando a fonte de títulos para ser mais sério */
+    font-style: italic;
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: var(--cor-texto-escuro);
+    text-align: justify; /* Alinha o texto para formar um bloco reto nas laterais */
+    margin: 0;
+}
+
+/* A assinatura do cliente */
+.testimonial-box cite {
+    display: block; /* Garante que fique em uma nova linha */
+    text-align: right; /* Alinha à direita */
+    margin-top: 15px;
+    font-family: var(--fonte-texto); /* Fonte padrão da revista */
+    font-style: normal;
+    font-size: 0.9em; /* Tamanho de fonte menor e sutil */
+    color: #777;
+}
