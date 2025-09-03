@@ -252,3 +252,78 @@ footer { padding: 30px 20px; margin-top: 40px; border-top: 1px solid var(--cor-b
 .accordion-header.active .icon {
     transform: rotate(180deg);
 }
+
+/* ================================================================= */
+/* === CÓDIGO CIRÚRGICO FINAL: CORREÇÃO UNIVERSAL DE CARROSSÉIS === */
+/* Este bloco único conserta os carrosséis de TODAS as páginas.      */
+/* ================================================================= */
+
+/* 1. Regra UNIVERSAL para transformar os contêineres em carrosséis */
+.carousel-container,
+.carousel-container .carousel-track,
+.post-grid {
+    display: flex;           /* A mágica do alinhamento horizontal! */
+    overflow-x: auto;        /* Permite a rolagem lateral */
+    scroll-behavior: smooth; /* Rolagem suave */
+    gap: 20px;               /* Espaçamento entre os cards */
+    padding: 15px 2px 25px 2px; /* Espaçamento interno para respiro */
+    scrollbar-width: none;   /* Esconde a barra de rolagem no Firefox */
+    -ms-overflow-style: none; /* Esconde a barra de rolagem no IE */
+}
+
+/* 2. Regra UNIVERSAL para esconder a barra de rolagem no Chrome/Safari */
+.carousel-container::-webkit-scrollbar,
+.carousel-container .carousel-track::-webkit-scrollbar,
+.post-grid::-webkit-scrollbar {
+    display: none;
+}
+
+/* 3. Estilo UNIFICADO para os cards dentro dos carrosséis */
+.carousel-card,
+.card { /* Aplica-se a ambos os tipos de card */
+    background-color: #ffffff;
+    border: 1px solid #f0e9df;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex: 0 0 300px; /* Largura fixa para cada card */
+}
+.carousel-card:hover,
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* 4. Estilos específicos para os cards das FEIRAS */
+.feira-card {
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+.feira-imagem-circulo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+.feira-info h3 { font-size: 1.2em; margin: 0 0 10px 0; }
+.feira-info p { margin: 5px 0; font-size: 0.9em; }
+
+/* 5. Estilos específicos para os cards das ESTAÇÕES */
+.estacao-postcard img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+.estacao-content {
+    padding: 20px;
+}
+.estacao-content h3 { font-size: 0.8em; text-transform: uppercase; color: #999; margin: 0; }
+.estacao-content h4 { font-size: 1.3em; margin: 5px 0 10px 0; }
+.estacao-content p { font-size: 0.9em; line-height: 1.5; }
