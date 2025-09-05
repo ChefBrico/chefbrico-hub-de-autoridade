@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChefBrico na Esplanada: Delivery de Comida de Verdade para sua Rotina</title>
     <meta name="description" content="Trabalha na Esplanada dos Ministérios? A ChefBrico entrega sua refeição saudável e prática. Peça online ou fale conosco pelo WhatsApp.">
-    <link rel="stylesheet" href="/style.css">
 
     <style>
         .page-header-local h1 { font-size: 2.8em; margin-bottom: 15px; text-align: center; color: #5a3a30; }
@@ -49,26 +48,11 @@
 </head>
 <body>
 
-    <div class="top-slogan-bar">
-        <p>COMIDA DE VERDADE, SEM TODA AQUELA CONFUSÃO NA COZINHA! </a></p>
-    </div>
+    {% include "cabecalho.html" %}
 
-    <header>
-        <div class="container header-flex">
-            <a href="/index.html" class="logo"><img src="/imagens/flamula-chefbrico.png" alt="Logo ChefBrico"></a>
-            <nav>
-                <a href="/nossa-filosofia.html">Nossa Filosofia</a>
-                <a href="/receitas.html">Receitas & Dicas</a>
-                <a href="/onde-encontrar.html">Onde Encontrar</a>
-                <a href="/faq.html">FAQ</a>
-                <a href="https://www.chefbrico.com" target="_blank" rel="noopener noreferrer" class="cta-button">Ir para a Loja</a>
-            </nav>
-        </div>
-    </header>
-
-  <main class="container">
+    <main class="container">
         <div class="page-header-local">
-            <h1>ChefBrico na Esplanada dos Ministerios</h1>
+            <h1>ChefBrico na Esplanada dos Ministérios</h1>
             <p class="subtitle">A solução inteligente para sua rotina. Receba no trabalho ou em casa com nosso delivery ou encontre um parceiro perto da sua casa para a volta do expediente.</p>
         </div>
 
@@ -91,73 +75,25 @@
                 Trabalha no Plano Piloto, mas mora em outra região? Para sua conveniência, aqui está a lista completa de onde você pode encontrar os produtos ChefBrico perto da sua casa.
             </p>
             
-            <div class="faq-section"> 
-                <div class="faq-item-accordion"><button class="accordion-header"><h3>NOSSO Empório & Mercearia (Águas Claras)</h3><span class="icon">▼</span></button><div class="accordion-content"><p><strong>Endereço:</strong> Edifício Águas de Manaíra - R. 24 Norte, 04 - Águas Claras, Brasília - DF.</p></div></div>
-                <div class="faq-item-accordion"><button class="accordion-header"><h3>Mercearia Colaborativa (Asa Norte)</h3><span class="icon">▼</span></button><div class="accordion-content"><p><strong>Endereço:</strong> Asa Norte CLN 412 BL E LOJA 4, 6, 10 - Brasília, DF.</p></div></div>
-                <div class="faq-item-accordion"><button class="accordion-header"><h3>Quitandas da Vó Maria (Asa Norte)</h3><span class="icon">▼</span></button><div class="accordion-content"><p><strong>Endereço:</strong> SHIN área especial 03 loja 02 - Polo Verde, Brasília - DF.</p></div></div>
-                <div class="faq-item-accordion"><button class="accordion-header"><h3>A Casa do Manjericão (Asa Norte)</h3><span class="icon">▼</span></button><div class="accordion-content"><p><strong>Endereço:</strong> Asa Norte CLN 215 BL B Loja 9 - Asa Norte, Brasília - DF.</p></div></div>
-                <div class="faq-item-accordion"><button class="accordion-header"><h3>Ravioli e Cia (Asa Norte)</h3><span class="icon">▼</span></button><div class="accordion-content"><p><strong>Endereço:</strong> CLN 214, bloco D, lojas 05 e 07 - Asa Norte, Brasília - DF.</p></div></div>
-                <div class="faq-item-accordion"><button class="accordion-header"><h3>Mercado Malunga (Asa Norte)</h3><span class="icon">▼</span></button><div class="accordion-content"><p><strong>Endereço:</strong> Asa Norte Comércio Local Norte 315 BL E loja 04 - Asa Norte, Brasília - DF.</p></div></div>
-                <div class="faq-item-accordion"><button class="accordion-header"><h3>Mercado Malunga (Asa Sul)</h3><span class="icon">▼</span></button><div class="accordion-content"><p><strong>Endereço:</strong> Asa Sul Q SHC/Sul CL 105 bloco De SN - Asa Sul, Brasília - DF.</p></div></div>
-                <div class="faq-item-accordion"><button class="accordion-header"><h3>Empório Rural do Colorado com Dona Ismênia (Grande Colorado/Taquari)</h3><span class="icon">▼</span></button><div class="accordion-content"><p><strong>Endereço:</strong> DF-150 - Sobradinho, Brasília - DF.</p></div></div>
-                <div class="faq-item-accordion"><button class="accordion-header"><h3>Mercado Malunga (Lago Sul)</h3><span class="icon">▼</span></button><div class="accordion-content"><p><strong>Endereço:</strong> Shop Gilberto Salomão SHIS quadra 05 Bloco F CC Sobreloja, 09 - Lago Sul, Brasília - DF.</p></div></div>
-                <div class="faq-item-accordion"><button class="accordion-header"><h3>Mercado Malunga (Sudoeste)</h3><span class="icon">▼</span></button><div class="accordion-content"><p><strong>Endereço:</strong> Q SHCSW CL 104, BLOCO A, LOJA 19 - Cruzeiro / Sudoeste / Octogonal, Brasília - DF.</p></div></div>
-                <div class="faq-item-accordion"><button class="accordion-header"><h3>Ravioli e Cia (Sudoeste)</h3><span class="icon">▼</span></button><div class="accordion-content"><p><strong>Endereço:</strong> CLSW 302, Bloco B, loja 24, St. Sudoeste, Brasília - DF.</p></div></div>
-            <div class="faq-item-accordion" style="border: 2px solid var(--cor-primaria);">
-    <button class="accordion-header">
-        <h3 style="color: var(--cor-titulos);">📍 Cozinha Central (Vicente Pires)</h3>
-        <span class="icon">▼</span>
-    </button>
-    <div class="accordion-content">
-        <p>
-            <strong>ChefBrico</strong><br>
-            <strong>Endereço:</strong> Rua 5, Chácara 122, Lote 17, Loja 2<br>
-            Vicente Pires, Brasília - DF, CEP: 72006-060<br>
-            <strong>Telefone/WhatsApp:</strong> (61) 99665-9880
-        </p>
-        <p style="font-size: 0.9em; font-style: italic;">
-            Este é a minha cozinha, onde a magia acontece! Não tenho atendimento de balcão, mas é daqui que partem todas as nossas entregas para levar comida de verdade até você.
-        </p>
-    </div>
-</div>
+            <div class="accordion-container">
+                <div class="accordion-item"><div class="accordion-header"><span class="partner-name">NOSSO Empório & Mercearia (Águas Claras)</span><span class="arrow-icon"></span></div><div class="accordion-body"><p><strong>Endereço:</strong> Edifício Águas de Manaíra - R. 24 Norte, 04 - Águas Claras, Brasília - DF.</p></div></div>
+                <div class="accordion-item"><div class="accordion-header"><span class="partner-name">Mercearia Colaborativa (Asa Norte)</span><span class="arrow-icon"></span></div><div class="accordion-body"><p><strong>Endereço:</strong> Asa Norte CLN 412 BL E LOJA 4, 6, 10 - Brasília, DF.</p></div></div>
+                <div class="accordion-item"><div class="accordion-header"><span class="partner-name">Quitandas da Vó Maria (Asa Norte)</span><span class="arrow-icon"></span></div><div class="accordion-body"><p><strong>Endereço:</strong> SHIN área especial 03 loja 02 - Polo Verde, Brasília - DF.</p></div></div>
+                <div class="accordion-item"><div class="accordion-header"><span class="partner-name">A Casa do Manjericão (Asa Norte)</span><span class="arrow-icon"></span></div><div class="accordion-body"><p><strong>Endereço:</strong> Asa Norte CLN 215 BL B Loja 9 - Asa Norte, Brasília - DF.</p></div></div>
+                <div class="accordion-item"><div class="accordion-header"><span class="partner-name">Ravioli e Cia (Asa Norte)</span><span class="arrow-icon"></span></div><div class="accordion-body"><p><strong>Endereço:</strong> CLN 214, bloco D, lojas 05 e 07 - Asa Norte, Brasília - DF.</p></div></div>
+                <div class="accordion-item"><div class="accordion-header"><span class="partner-name">Mercado Malunga (Asa Norte)</span><span class="arrow-icon"></span></div><div class="accordion-body"><p><strong>Endereço:</strong> Asa Norte Comércio Local Norte 315 BL E loja 04 - Asa Norte, Brasília - DF.</p></div></div>
+                <div class="accordion-item"><div class="accordion-header"><span class="partner-name">Mercado Malunga (Asa Sul)</span><span class="arrow-icon"></span></div><div class="accordion-body"><p><strong>Endereço:</strong> Asa Sul Q SHC/Sul CL 105 bloco De SN - Asa Sul, Brasília - DF.</p></div></div>
+                <div class="accordion-item"><div class="accordion-header"><span class="partner-name">Empório Rural do Colorado com Dona Ismênia (Grande Colorado/Taquari)</span><span class="arrow-icon"></span></div><div class="accordion-body"><p><strong>Endereço:</strong> DF-150 - Sobradinho, Brasília - DF.</p></div></div>
+                <div class="accordion-item"><div class="accordion-header"><span class="partner-name">Mercado Malunga (Lago Sul)</span><span class="arrow-icon"></span></div><div class="accordion-body"><p><strong>Endereço:</strong> Shop Gilberto Salomão SHIS quadra 05 Bloco F CC Sobreloja, 09 - Lago Sul, Brasília - DF.</p></div></div>
+                <div class="accordion-item"><div class="accordion-header"><span class="partner-name">Mercado Malunga (Sudoeste)</span><span class="arrow-icon"></span></div><div class="accordion-body"><p><strong>Endereço:</strong> Q SHCSW CL 104, BLOCO A, LOJA 19 - Cruzeiro / Sudoeste / Octogonal, Brasília - DF.</p></div></div>
+                <div class="accordion-item"><div class="accordion-header"><span class="partner-name">Ravioli e Cia (Sudoeste)</span><span class="arrow-icon"></span></div><div class="accordion-body"><p><strong>Endereço:</strong> CLSW 302, Bloco B, loja 24, St. Sudoeste, Brasília - DF.</p></div></div>
+                <div class="accordion-item active" style="border: 2px solid var(--cor-primaria);"><div class="accordion-header"><span class="partner-name" style="color: var(--cor-titulos);">📍 Cozinha Central (Vicente Pires)</span><span class="arrow-icon"></span></div><div class="accordion-body"><p><strong>ChefBrico</strong><br><strong>Endereço:</strong> Rua 5, Chácara 122, Lote 17, Loja 2<br>Vicente Pires, Brasília - DF, CEP: 72006-060<br><strong>Telefone/WhatsApp:</strong> (61) 99665-9880</p><p style="font-size: 0.9em; font-style: italic;">Este é a minha cozinha, onde a magia acontece! Não tenho atendimento de balcão, mas é daqui que partem todas as nossas entregas para levar comida de verdade até você.</p></div></div>
+            </div>
+        </div>
     </main>
     
-    <footer>
-    <div class="container footer-grid">
-        <div>
-            <h4>Navegação</h4>
-            <a href="/index.html">Início</a>
-            <a href="/nossa-filosofia.html">Nossa Filosofia</a>
-            <a href="/receitas.html">Receitas & Dicas</a>
-            <a href="/faq.html">FAQ</a>
-        </div>
-        <div>
-            <h4>Nossos Produtos</h4>
-            <a href="https://www.chefbrico.com/risotos" target="_blank" rel="noopener noreferrer">Risotos</a>
-            <a href="https://www.chefbrico.com/sopas-funcionais" target="_blank" rel="noopener noreferrer">Sopas Funcionais</a>
-            <a href="https://www.chefbrico.com/refeicoes-praticas" target="_blank" rel="noopener noreferrer">Refeições Práticas</a>
-            <a href="https://www.chefbrico.com/emporio-da-chef" target="_blank" rel="noopener noreferrer">Empório da Chef</a>
-        </div>
-        <div>
-            <h4>Ajuda & Suporte</h4>
-            <a href="/onde-encontrar.html">Onde Encontrar</a>
-            <a href="https://www.chefbrico.com/como-comprar" target="_blank" rel="noopener noreferrer">Como Comprar/Envio</a>
-            <a href="https://www.chefbrico.com/trocas-e-devolucoes" target="_blank" rel="noopener noreferrer">Trocas e Devoluções</a>
-            <a href="https://wa.me/5561996659880" target="_blank" rel="noopener noreferrer">Contato</a>
-        </div>
-        <div>
-            <h4>Redes Sociais</h4>
-            <a href="https://www.instagram.com/chefbrico/" target="_blank" rel="noopener noreferrer">Instagram</a>
-            <a href="https://br.pinterest.com/chefbrico/" target="_blank" rel="noopener noreferrer">Pinterest</a>
-        </div>
-    </div>
-       
-    <div class="container footer-credit">
-        <p>© 2025 ChefBrico - Todos os direitos reservados.</p>
-        <p> Maria Conceição | CNPJ: 36.014.833/0001-59 </p>
-    </div>
-</footer>
+    {% include "rodape.html" %}
     
-    <script src="/script.js"></script> 
+    <script src="/js/script.js"></script> 
 </body>
 </html>
