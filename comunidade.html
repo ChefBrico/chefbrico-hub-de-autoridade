@@ -1,65 +1,85 @@
 <!DOCTYPE html>
-<html lang="pt--BR">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comunidade #ChefBricoEmCasa | Veja o que Nossos Clientes Estão a Criar</title>
     <link rel="canonical" href="https://receitas.chefbrico.com/comunidade.html" />
     <meta name="description" content="Inspire-se com pratos reais feitos por clientes reais! A galeria #ChefBricoEmCasa celebra a criatividade e o amor pela comida de verdade.">
-    <link rel="stylesheet" href="/css/style.css">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-K58FN8J2VC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-K58FN8J2VC');
-</script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K58FN8J2VC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K58FN8J2VC');
+    </script>
+    
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://receitas.chefbrico.com/comunidade.html"
+      },
       "headline": "Comunidade #ChefBricoEmCasa: A Galeria da Comida de Verdade",
       "author": {
         "@type": "Person",
-        "@id": "https://receitas.chefbrico.com/nossa-filosofia.html#maria-conceicao"
+        "name": "Maria Conceição",
+        "url": "https://receitas.chefbrico.com/nossa-filosofia.html#autora"
       },
       "publisher": {
         "@type": "Organization",
         "name": "ChefBrico",
-        "logo": { "@type": "ImageObject", "url": "https://receitas.chefbrico.com/imagens/flamula-chefbrico.png" }
+        "logo": {
+          "@type": "ImageObject",
+          "url": "/imagens/flamula-logo-chefbrico.png"
+        }
       },
-      "image": "/images/veg-transforme-sua-rotina-diaria-chefbrico.png",
-      "datePublished": "2025-08-12",
-      "dateModified": "2025-08-12",
+      "image": {
+        "@type": "ImageObject",
+        "url": "/imagens/veg-transforme-sua-rotina-diaria-chefbrico.png",
+        "width": 1200,
+        "height": 675
+      },
+      "datePublished": "2025-08-12T09:00:00-03:00",
+      "dateModified": "2025-09-06T10:00:00-03:00",
       "description": "Uma celebração da criatividade dos nossos clientes. Veja fotos e pratos reais feitos com os produtos ChefBrico e inspire-se para a sua próxima refeição."
     }
     </script>
 </head>
 <body>
 
-   {% include "cabecalho.html" %}
-    <main class="container">
+    {% include "cabecalho.html" %}
 
-        <section class="hero-section-v2 align-top" style="min-height: auto; padding: 40px 0;">
-            <img src="/imagens/veg-transforme-sua-rotina-diaria-chefbrico.png" alt="Mosaico de fotos de pratos feitos por clientes da ChefBrico." class="hero-image-circular">
-            <div class="hero-content-v2">
-                <span class="article-category">Nossa Comunidade</span>
-                <h1>#ChefBricoEmCasa</h1>
-                <p class="subtitle" style="text-align: left; max-width: none;">
-                    A sua criatividade é a nossa maior inspiração! Este espaço celebra os pratos incríveis que vocês criam e a prova de que, com uma base de qualidade, todos nós podemos ser chefs.
-                </p>
-            </div>
-        </section>
+    <main class="container">
+        <div class="recipe-title-container" style="text-align:center;">
+            <span class="article-category" style="font-size: 0.8em; text-transform: uppercase; color: #999; font-weight: bold;">Nossa Comunidade</span>
+            <h1>#ChefBricoEmCasa</h1>
+            <p class="recipe-subtitle">A sua criatividade é a nossa maior inspiração! Este espaço celebra os pratos incríveis que vocês criam e a prova de que, com uma base de qualidade, todos nós podemos ser chefs.</p>
+        </div>
+
+        <div class="hero-card">
+            <img src="/imagens/veg-transforme-sua-rotina-diaria-chefbrico.png" alt="Mosaico de fotos de pratos deliciosos feitos por clientes da ChefBrico.">
+        </div>
 
         <div class="post-content">
-            <p class="author-byline">Por <strong>Maria Conceição</strong>, Fundadora da ChefBrico</p>
+            <p class="author-byline" style="text-align:center;">Por <strong>Maria Conceição</strong>, Fundadora da ChefBrico</p>
             
             <h2>Partilhe a sua Criação!</h2>
             <p>Fez um prato com um produto ChefBrico? Tire uma foto, poste no Instagram com a hashtag <strong>#ChefBricoEmCasa</strong> e marque o nosso perfil <a href="https://www.instagram.com/chefbrico/" target="_blank" rel="noopener noreferrer">@chefbrico</a>. As fotos mais inspiradoras aparecerão aqui na nossa galeria!</p>
 
-            <div class="post-grid" style="margin-top: 40px;">
+            <div class="carousel-container" style="margin-top: 40px;">
                 <div class="card">
                     <img src="/imagens/bancada-vegetais.jpg" alt="Balcão com Vegetais, cogumelos e muito mais" class="card-image">
                     <div class="card-content">
@@ -68,13 +88,20 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img src="https://placehold.co/400x300/73022c/FFFFFF?text=Cliente+Feliz+2" alt="Sopa Detox servida por uma cliente." class="card-image">
+                    <img src="https://placehold.co/400x300/014641/FFFFFF?text=Cliente+Feliz+2" alt="Sopa Detox servida por uma cliente." class="card-image">
                     <div class="card-content">
                         <p class="card-description">"Começando a semana com o 'reset verde' da <a href='/sopas-funcionais.html'>Sopa Detox</a>. Leve, saborosa e me sinto cheia de energia!"</p>
                         <span class="card-category" style="text-align: right; margin-top: 10px;">- @vida.saudavel</span>
                     </div>
                 </div>
+                 <div class="card">
+                    <img src="https://placehold.co/400x300/73022c/FFFFFF?text=Cliente+Feliz+3" alt="Baião de Dois por um cliente" class="card-image">
+                    <div class="card-content">
+                        <p class="card-description">"Até as crianças repetiram! Virou o favorito aqui de casa. Salvação para a rotina da família!"</p>
+                        <span class="card-category" style="text-align: right; margin-top: 10px;">- @mae_na_cozinha</span>
+                    </div>
                 </div>
+            </div>
 
             <div class="author-box">
                 <img src="/imagens/maria-conceicao-pra-voce.png" alt="Retrato de Maria Conceição, fundadora da ChefBrico" class="author-image">
