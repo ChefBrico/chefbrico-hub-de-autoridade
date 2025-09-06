@@ -5,7 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChefBrico para GDF, SMU e Cruzeiro: Delivery Prático e Saudável</title>
     <meta name="description" content="A ChefBrico atende a região do Governo do DF, Setor Militar Urbano e Cruzeiro com delivery de refeições. Peça online e simplifique sua rotina.">
-    <link rel="stylesheet" href="/style.css">
+   
+ 
+    <link rel="stylesheet" href="/css/style.css">
+<!-- Google tag (gtag.js) -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K58FN8J2VC"></script>
+
+    <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-K58FN8J2VC');
+
+
 
     <style>
         .page-header-local h1 { font-size: 2.8em; margin-bottom: 15px; text-align: center; color: #5a3a30; }
@@ -50,22 +64,8 @@
 </head>
 <body>
 
-    <div class="top-slogan-bar">
-        <p>COMIDA DE VERDADE, SEM TODA AQUELA CONFUSÃO NA COZINHA! </a></p>
-    </div>
+   {% include "cabecalho.html" %}
 
-    <header>
-        <div class="container header-flex">
-            <a href="/index.html" class="logo"><img src="/imagens/flamula-chefbrico.png" alt="Logo ChefBrico"></a>
-            <nav>
-                <a href="/nossa-filosofia.html">Nossa Filosofia</a>
-                <a href="/receitas.html">Receitas & Dicas</a>
-                <a href="/onde-encontrar.html">Onde Encontrar</a>
-                <a href="/faq.html">FAQ</a>
-                <a href="https://www.chefbrico.com" target="_blank" rel="noopener noreferrer" class="cta-button">Ir para a Loja</a>
-            </nav>
-        </div>
-    </header>
 
 <main class="container">
         <div class="page-header-local">
@@ -123,42 +123,10 @@
 </div>
     </main>
     
-   <footer>
-    <div class="container footer-grid">
-        <div>
-            <h4>Navegação</h4>
-            <a href="/index.html">Início</a>
-            <a href="/nossa-filosofia.html">Nossa Filosofia</a>
-            <a href="/receitas.html">Receitas & Dicas</a>
-            <a href="/faq.html">FAQ</a>
-        </div>
-        <div>
-            <h4>Nossos Produtos</h4>
-            <a href="https://www.chefbrico.com/risotos" target="_blank" rel="noopener noreferrer">Risotos</a>
-            <a href="https://www.chefbrico.com/sopas-funcionais" target="_blank" rel="noopener noreferrer">Sopas Funcionais</a>
-            <a href="https://www.chefbrico.com/refeicoes-praticas" target="_blank" rel="noopener noreferrer">Refeições Práticas</a>
-            <a href="https://www.chefbrico.com/emporio-da-chef" target="_blank" rel="noopener noreferrer">Empório da Chef</a>
-        </div>
-        <div>
-            <h4>Ajuda & Suporte</h4>
-            <a href="/onde-encontrar.html">Onde Encontrar</a>
-            <a href="https://www.chefbrico.com/como-comprar" target="_blank" rel="noopener noreferrer">Como Comprar/Envio</a>
-            <a href="https://www.chefbrico.com/trocas-e-devolucoes" target="_blank" rel="noopener noreferrer">Trocas e Devoluções</a>
-            <a href="https://wa.me/5561996659880" target="_blank" rel="noopener noreferrer">Contato</a>
-        </div>
-        <div>
-            <h4>Redes Sociais</h4>
-            <a href="https://www.instagram.com/chefbrico/" target="_blank" rel="noopener noreferrer">Instagram</a>
-            <a href="https://br.pinterest.com/chefbrico/" target="_blank" rel="noopener noreferrer">Pinterest</a>
-        </div>
-    </div>
-       
-    <div class="container footer-credit">
-        <p>© 2025 ChefBrico - Todos os direitos reservados.</p>
-        <p> Maria Conceição | CNPJ: 36.014.833/0001-59 </p>
-    </div>
-</footer>
-    
-    <script src="/script.js"></script> 
+   
+{% include "rodape.html" %}
+
+    <script src="/js/script.js"></script>
+
 </body>
 </html>
