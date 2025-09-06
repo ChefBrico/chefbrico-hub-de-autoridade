@@ -3,20 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>ChefBrico em [NOME DA REGIÃO]: Delivery e Parceiros Locais</title>
-    <meta name="description" content="Encontre a ChefBrico em [NOME DA REGIÃO]. Peça seu delivery, fale com a Conceição ou encontre nossos parceiros locais mais próximos de você.">
-    <link rel="canonical" href="https://receitas.chefbrico.com/onde-encontrar/[url-da-pagina].html" />
-     <link rel="stylesheet" href="/css/style.css">
-<!-- Google tag (gtag.js) -->
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K58FN8J2VC"></script>
-
-    <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
+    
+    <title>Onde Encontrar ChefBrico no DF - Mapa, Lojas, Feiras e Eventos</title>
+    <meta name="description" content="Encontre todos os pontos de referência, feiras semanais, eventos sazonais e áreas de entrega da ChefBrico no Distrito Federal.">
+    <link rel="canonical" href="https://receitas.chefbrico.com/onde-encontrar.html" />
+    
     <link rel="stylesheet" href="/css/style.css">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-K58FN8J2VC"></script>
@@ -28,17 +19,16 @@
     </script>
 
     <style>
-        /* Header da Página */
         .page-header-local h1 { font-size: 2.8em; margin-bottom: 15px; text-align: center; color: #5a3a30; }
         .page-header-local .subtitle { font-size: 1.3em; text-align: center; color: #666; max-width: 700px; margin: 0 auto 40px auto; }
-        
-        /* CTAs Híbridos (Online / WhatsApp) */
+        .phase-title { text-align: center; margin-top: 40px; margin-bottom: 20px; color: #5a3a30; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+        .region-nav { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #eee; }
+        .region-nav a { background-color: #f0ead6; color: #333; padding: 10px 20px; border-radius: 20px; text-decoration: none; font-size: 0.9em; transition: background-color 0.2s; }
+        .region-nav a:hover { background-color: #e0d8c4; }
         .hybrid-cta-container { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 40px 0; }
         .cta-box { border: 1px solid #eee; border-radius: 8px; padding: 30px 25px; background-color: #fdfcf7; text-align: center; }
         .cta-box h2 { margin-top: 0; font-size: 1.6em; margin-bottom: 15px; }
         .cta-box p { max-width: 320px; margin: 0 auto 25px auto; line-height: 1.6; min-height: 80px; }
-
-        /* Seção de Agenda e Feiras (Copiado da Mãe) */
         .agenda-section { background-color: #fdfcf7; border-top: 2px solid #f0ead6; padding: 50px 20px; margin-top: 60px; }
         .agenda-section h2 { text-align: center; font-size: 2.5em; color: var(--cor-primaria); margin-bottom: 15px; }
         .agenda-section .subtitle { text-align: center; font-size: 1.2em; max-width: 600px; margin: 0 auto 50px auto; color: #555; }
@@ -47,34 +37,23 @@
         .feira-imagem-circulo img { width: 100%; height: 100%; object-fit: cover; }
         .feira-info { text-align: left; }
         .feira-info h3 { color: var(--cor-titulos); margin-top: 0; margin-bottom: 5px; font-size: 1.4em; }
-        .feira-info .dia { font-weight: bold; }
-        .feira-info .local-hora { margin-top: 8px; font-size: 0.9em; }
-
-        /* Calendário Sazonal (Copiado da Mãe) */
         .estacao-card { border: 1px solid #eee; border-radius: 8px; overflow: hidden; background-color: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
         .estacao-postcard { width: 100%; height: 180px; background-color: #f0f0f0; }
         .estacao-postcard img { width: 100%; height: 100%; object-fit: cover; }
         .estacao-content { padding: 20px; }
         .estacao-content h3 { color: var(--cor-primaria); margin-top: 0; font-size: 1.1em; text-transform: uppercase; }
         .estacao-content h4 { color: var(--cor-titulos); font-size: 1.5em; margin-top: 5px; margin-bottom: 10px; }
-
-        /* Review CTA (Copiado da Mãe) */
+        .depoimento-card { background-color: #fff; border: 1px solid #eee; padding: 25px; border-radius: 8px; text-align: center; }
+        .depoimento-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .depoimento-card .quote { font-style: italic; color: #555; }
+        .depoimento-card .author { font-weight: bold; color: var(--cor-primaria); margin-top: 15px; display: block; }
         .review-cta-section-v2 { background-color: #fdfcf7; border: 1px solid #f0ead6; border-radius: 8px; margin-top: 60px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
         .review-banner-image img { width: 100%; height: auto; display: block; }
         .review-cta-content { padding: 40px 25px; text-align: center; }
         .review-cta-content h2 { color: var(--cor-titulos); font-size: 2.5em; margin-top: 0; margin-bottom: 15px; }
         .review-cta-content .review-text { font-size: 1.1em; max-width: 700px; margin: 0 auto 20px auto; line-height: 1.7; }
         .review-cta-content .review-stars { color: #FFC107; font-size: 2.8em; margin-bottom: 20px; letter-spacing: 5px; }
-        .review-cta-content .gbp-specific-button { background-color: #4285F4 !important; padding: 15px 30px; font-size: 1.1em; border-radius: 5px; color: white; text-decoration: none; font-weight: bold; display: inline-block; transition: transform 0.2s; }
-        .review-cta-content .gbp-specific-button:hover { transform: scale(1.05); }
-
-        /* Estilo para Depoimentos (Reutilizando classes existentes) */
-        .depoimento-card { background-color: #fff; border: 1px solid #eee; padding: 25px; border-radius: 8px; text-align: center; }
-        .depoimento-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
-        .depoimento-card .quote { font-style: italic; color: #555; }
-        .depoimento-card .author { font-weight: bold; color: var(--cor-primaria); margin-top: 15px; display: block; }
-
-        /* Media Queries para responsivo */
+        .review-cta-content .gbp-specific-button { background-color: #4285F4 !important; }
         @media (max-width: 768px) {
             .hybrid-cta-container { grid-template-columns: 1fr; }
             .page-header-local h1 { font-size: 2.2em; }
@@ -85,28 +64,62 @@
     [
       {
         "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "ChefBrico em [NOME DA REGIÃO]: Delivery e Parceiros Locais",
-        "url": "https://receitas.chefbrico.com/onde-encontrar/[url-da-pagina].html",
-        "description": "Encontre a ChefBrico em [NOME DA REGIÃO]. Peça seu delivery, fale com a Conceição ou encontre nossos parceiros locais.",
-        "isPartOf": {
-          "@id": "https://receitas.chefbrico.com/onde-encontrar.html"
-        }
+        "@type": "FoodEstablishment",
+        "name": "ChefBrico",
+        "description": "ChefBrico: Comida de verdade, sem toda aquela confusão em Brasília! A solução ideal para você preparar em casa refeições incríveis, de forma prática e 100% natural.",
+        "url": "https://www.chefbrico.com",
+        "logo": "https://receitas.chefbrico.com/imagens/flamula-chefbrico.png",
+        "telephone": "+5561996659880",
+        "taxID": "36.014.833/0001-59",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Rua 5, Chácara 122, Lote 17, Loja 2",
+          "addressLocality": "Vicente Pires",
+          "addressRegion": "DF",
+          "postalCode": "72006-060",
+          "addressCountry": "BR"
+        },
+        "openingHoursSpecification": [
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "08:00", "closes": "17:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "14:00" }
+        ],
+        "areaServed": [
+            { "@type": "Place", "name": "Brasília, DF, Brasil" },
+            { "@type": "Place", "name": "Asa Sul, Brasília - DF, Brasil" },
+            { "@type": "Place", "name": "Lago Sul, Brasília - DF, Brasil" },
+            { "@type": "Place", "name": "Asa Norte, Brasília - DF, Brasil" },
+            { "@type": "Place", "name": "Lago Norte, Brasília - DF, Brasil" },
+            { "@type": "Place", "name": "Taguatinga, Brasília - DF, Brasil" },
+            { "@type": "Place", "name": "Águas Claras, Brasília - DF, Brasil" }
+        ]
       },
       {
         "@context": "https://schema.org",
-        "@type": "Service",
-        "serviceType": "DeliveryService",
-        "name": "Delivery ChefBrico para [NOME DA REGIÃO]",
-        "areaServed": [
-          { "@type": "Place", "name": "[NOME DA REGIÃO], Brasília, DF" },
-          { "@type": "Place", "name": "[BAIRRO 1 DA REGIÃO], Brasília, DF" },
-          { "@type": "Place", "name": "[BAIRRO 2 DA REGIÃO], Brasília, DF" }
-        ],
-        "provider": {
-          "@type": "FoodEstablishment",
-          "name": "ChefBrico",
-          "url": "https://www.chefbrico.com"
+        "@type": "CollectionPage",
+        "name": "Onde Encontrar a ChefBrico no Distrito Federal",
+        "url": "https://receitas.chefbrico.com/onde-encontrar.html",
+        "mainEntity": {
+          "@type": "ItemList",
+          "name": "Embaixadas Digitais da ChefBrico por Micro-Região",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Asa Sul", "url": "https://receitas.chefbrico.com/onde-encontrar/asa-sul.html"},
+            {"@type": "ListItem", "position": 2, "name": "Asa Norte", "url": "https://receitas.chefbrico.com/onde-encontrar/asa-norte.html"},
+            {"@type": "ListItem", "position": 3, "name": "Esplanada dos Ministérios", "url": "https://receitas.chefbrico.com/onde-encontrar/esplanada-dos-ministerios.html"},
+            {"@type": "ListItem", "position": 4, "name": "Governo DF (Plano Piloto)", "url": "https://receitas.chefbrico.com/onde-encontrar/plano-piloto-governo-df.html"},
+            {"@type": "ListItem", "position": 5, "name": "Lago Sul", "url": "https://receitas.chefbrico.com/onde-encontrar/lago-sul.html"},
+            {"@type": "ListItem", "position": 6, "name": "Lago Norte & Varjão", "url": "https://receitas.chefbrico.com/onde-encontrar/lago-norte-varjao.html"},
+            {"@type": "ListItem", "position": 7, "name": "Sudoeste & Octogonal", "url": "https://receitas.chefbrico.com/onde-encontrar/sudoeste-octogonal.html"},
+            {"@type": "ListItem", "position": 8, "name": "Noroeste", "url": "https://receitas.chefbrico.com/onde-encontrar/noroeste.html"},
+            {"@type": "ListItem", "position": 9, "name": "Águas Claras & Arniqueiras", "url": "https://receitas.chefbrico.com/onde-encontrar/aguas-claras-arniqueiras.html"},
+            {"@type": "ListItem", "position": 10, "name": "Taguatinga Sul", "url": "https://receitas.chefbrico.com/onde-encontrar/taguatinga-sul.html"},
+            {"@type": "ListItem", "position": 11, "name": "Taguatinga Norte", "url": "https://receitas.chefbrico.com/onde-encontrar/taguatinga-norte.html"},
+            {"@type": "ListItem", "position": 12, "name": "Guará & Parkway", "url": "https://receitas.chefbrico.com/onde-encontrar/guara-parkway.html"},
+            {"@type": "ListItem", "position": 13, "name": "Grande Colorado & Taquari", "url": "https://receitas.chefbrico.com/onde-encontrar/grande-colorado-taquari.html"},
+            {"@type": "ListItem", "position": 14, "name": "SIA", "url": "https://receitas.chefbrico.com/onde-encontrar/sia.html"},
+            {"@type": "ListItem", "position": 15, "name": "Riacho Fundo", "url": "https://receitas.chefbrico.com/onde-encontrar/riacho-fundo.html"},
+            {"@type": "ListItem", "position": 16, "name": "Jardim Botânico", "url": "https://receitas.chefbrico.com/onde-encontrar/jardim-botanico.html"},
+            {"@type": "ListItem", "position": 17, "name": "Vicente Pires", "url": "https://receitas.chefbrico.com/onde-encontrar/vicente-pires.html"}
+          ]
         }
       },
       {
@@ -130,80 +143,128 @@
         "@context": "https://schema.org",
         "@type": "Event",
         "name": "Feira Rural da ChefBrico no Hemocentro",
-        "startDate": "2025-01-01T09:00",
-        "endDate": "2025-12-31T14:00",
-        "eventStatus": "https://schema.org/EventScheduled",
-        "location": {"@type": "Place", "name": "Hemocentro de Brasília", "address": "SMHN Quadra 3 Conjunto A Bloco 3 - Asa Norte, Brasília - DF"},
-        "organizer": {"@type": "Organization", "name": "ChefBrico"},
-        "eventSchedule": {"@type": "Schedule", "repeatFrequency": "P1W", "byDay": "WE", "startTime": "09:00", "endTime": "14:00"}
+        "startDate": "2025-01-01T09:00", "endDate": "2025-12-31T14:00", "eventStatus": "https://schema.org/EventScheduled", "location": {"@type": "Place", "name": "Hemocentro de Brasília", "address": "SMHN Quadra 3 Conjunto A Bloco 3 - Asa Norte, Brasília - DF"}, "organizer": {"@type": "Organization", "name": "ChefBrico"}, "eventSchedule": {"@type": "Schedule", "repeatFrequency": "P1W", "byDay": "WE", "startTime": "09:00", "endTime": "14:00"}
       },
       {
         "@context": "https://schema.org",
         "@type": "Event",
         "name": "Feira da Praça da 13 com a ChefBrico",
-        "startDate": "2025-01-01T08:00",
-        "endDate": "2025-12-31T14:00",
-        "eventStatus": "https://schema.org/EventScheduled",
-        "location": {"@type": "Place", "name": "Praça da QI 13", "address": "QI 13 - Lago Sul, Brasília - DF"},
-        "organizer": {"@type": "Organization", "name": "ChefBrico"},
-        "eventSchedule": {"@type": "Schedule", "repeatFrequency": "P1W", "byDay": "SA", "startTime": "08:00", "endTime": "14:00"}
+        "startDate": "2025-01-01T08:00", "endDate": "2025-12-31T14:00", "eventStatus": "https://schema.org/EventScheduled", "location": {"@type": "Place", "name": "Praça da QI 13", "address": "QI 13 - Lago Sul, Brasília - DF"}, "organizer": {"@type": "Organization", "name": "ChefBrico"}, "eventSchedule": {"@type": "Schedule", "repeatFrequency": "P1W", "byDay": "SA", "startTime": "08:00", "endTime": "14:00"}
       }
     ]
     </script>
 </head>
 <body>
 
-{% include "cabecalho.html" %} 
+{% include "cabecalho.html" %}
+
 <main class="container">
 
     <div class="page-header-local">
-        <h1>ChefBrico na [NOME DA REGIÃO]</h1>
-        <p class="subtitle">A solução inteligente para sua rotina em [NOME DA REGIÃO]. Receba em casa ou no trabalho com nosso delivery ou encontre um parceiro local.</p>
+        <h1>Nosso Território o Distrito Federal</h1>
+        <p class="subtitle">Seja para entrega em casa ou para encontrar em um parceiro perto de você, aqui está o mapa da nossa presença no DF. Navegue por nossas Embaixadas Digitais para uma experiência local.</p>
+    </div>
+    
+    <div class="map-container" style="margin: 30px 0;">
+        <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1OFgLnADSGkwtKCgLdwXZDiqrAt_qgJY&ehbc=2E312F"
+            width="100%"
+            height="480"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
     </div>
 
-    <div class="hybrid-cta-container">
+    <div class="phase-title">Plano Piloto</div>
+    <nav class="region-nav">
+        <a href="/onde-encontrar/asa-sul.html">Asa Sul</a>
+        <a href="/onde-encontrar/asa-norte.html">Asa Norte</a>
+        <a href="/onde-encontrar/esplanada-dos-ministerios.html">Esplanada dos Ministérios</a>
+        <a href="/onde-encontrar/plano-piloto-governo-df.html">Plano Piloto em Brasília</a>
+    </nav>
+
+    <div class="phase-title">Brasília</div>
+    <nav class="region-nav">
+        <a href="/onde-encontrar/lago-sul.html">Lago Sul</a>
+        <a href="/onde-encontrar/lago-norte-varjao.html">Lago Norte</a>
+        <a href="/onde-encontrar/sudoeste-octogonal.html">Sudoeste & Octogonal</a>
+        <a href="/onde-encontrar/noroeste.html">Noroeste</a>
+        <a href="/onde-encontrar/aguas-claras-arniqueiras.html">Águas Claras & Arniqueiras</a>
+    </nav>
+
+    <div class="phase-title"> Próximo à Brasília </div>
+    <nav class="region-nav" style="border-bottom:none;">
+        <a href="/onde-encontrar/taguatinga-sul.html">Taguatinga Sul</a>
+        <a href="/onde-encontrar/taguatinga-norte.html">Taguatinga Norte</a>
+        <a href="/onde-encontrar/guara-parkway.html">Guará & Park Way</a>
+        <a href="/onde-encontrar/grande-colorado-taquari.html">Grande Colorado & Taquari</a>
+        <a href="/onde-encontrar/sia.html">SIA</a>
+        <a href="/onde-encontrar/riacho-fundo.html">Riacho Fundo</a>
+        <a href="/onde-encontrar/jardim-botanico.html">Jardim Botânico</a>
+        <a href="/onde-encontrar/vicente-pires.html">Vicente Pires</a>
+    </nav>
+    
+    <div class="hybrid-cta-container" style="margin-top: 60px; border-top: 1px solid #eee; padding-top: 50px;">
         <div class="cta-box">
-            <h2>Delivery na Região</h2>
-            <p>Peça online e receba com a máxima praticidade no seu endereço em [NOME DA REGIÃO].</p>
+            <h2>Planeje sua Semana (Loja Online)</h2>
+            <p>Acesse nossa loja virtual, veja o catálogo completo e faça seu pedido. Entregamos em todo o DF.</p>
             <a href="https://www.chefbrico.com" target="_blank" rel="noopener noreferrer" class="cta-button"><strong>PLANEJAR MINHA SEMANA</strong></a>
         </div>
         <div class="cta-box">
-            <h2>Fale com a Conceição</h2>
-            <p>Precisa de um pedido ou quer tirar dúvidas? Fale diretamente comigo. Tenho o catálogo completo no WhatsApp!</p>
+            <h2>Fale com a Conceição (WhatsApp)</h2>
+            <p>Precisa de um pedido especial ou quer tirar dúvidas? Fale diretamente comigo. Tenho o catálogo completo no WhatsApp!</p>
             <a href="https://wa.me/5561996659880" target="_blank" rel="noopener noreferrer" class="cta-button cta-button-secondary"><strong>FALAR NO WHATSAPP</strong></a>
         </div>
     </div>
 
     <div id="todos-parceiros" class="post-content content-centered" style="margin-top: 40px;">
-        <h2 style="text-align: center;">Nossos Parceiros em [NOME DA REGIÃO]</h2>
+        <h2 style="text-align: center;">Pontos de Referência em Brasília</h2>
         <p style="text-align: center; max-width: 700px; margin: 15px auto 40px auto; font-size: 1.1em; color: #555;">
-            Encontre uma seleção dos nossos produtos nestes estabelecimentos incríveis na região.
+            Encontre uma seleção de produtos nestes excelentes estabelecimentos, que selecionamos a dedo por compartilharem nossa paixão pela qualidade.
         </p>
         
         <div class="faq-section" style="margin-top: 40px;">
+            <div class="faq-item-accordion"><button class="accordion-header"><h3>NOSSO Empório & Mercearia (Águas Claras)</h3><span class="icon">▼</span></button><div class="accordion-content"><p><strong>Endereço:</strong> Edifício Águas de Manaíra - R. 24 Norte, 04 - Águas Claras, Brasília - DF.</p></div></div>
+            <div class="faq-item-accordion"><button class="accordion-header"><h3>Mercearia Colaborativa (Asa Norte)</h3><span class="icon">▼</span></button><div class="accordion-content"><p><strong>Endereço:</strong> Asa Norte CLN 412 BL E LOJA 4, 6, 10 - Brasília, DF.</p></div></div>
+            <div class="faq-item-accordion"><button class="accordion-header"><h3>Quitandas da Vó Maria (Asa Norte)</h3><span class="icon">▼</span></button><div class="accordion-content"><p><strong>Endereço:</strong> SHIN área especial 03 loja 02 - Polo Verde, Brasília - DF.</p></div></div>
+            <div class="faq-item-accordion"><button class="accordion-header"><h3>A Casa do Manjericão (Asa Norte)</h3><span class="icon">▼</span></button><div class="accordion-content"><p><strong>Endereço:</strong> Asa Norte CLN 215 BL B Loja 9 - Asa Norte, Brasília - DF.</p></div></div>
+            <div class="faq-item-accordion"><button class="accordion-header"><h3>Ravioli e Cia (Asa Norte)</h3><span class="icon">▼</span></button><div class="accordion-content"><p><strong>Endereço:</strong> CLN 214, bloco D, lojas 05 e 07 - Asa Norte, Brasília - DF.</p></div></div>
+            <div class="faq-item-accordion"><button class="accordion-header"><h3>Mercado Malunga (Asa Norte)</h3><span class="icon">▼</span></button><div class="accordion-content"><p><strong>Endereço:</strong> Asa Norte Comércio Local Norte 315 BL E loja 04 - Asa Norte, Brasília - DF.</p></div></div>
+            <div class="faq-item-accordion"><button class="accordion-header"><h3>Mercado Malunga (Asa Sul)</h3><span class="icon">▼</span></button><div class="accordion-content"><p><strong>Endereço:</strong> Asa Sul Q SHC/Sul CL 105 bloco De SN - Asa Sul, Brasília - DF.</p></div></div>
+            <div class="faq-item-accordion"><button class="accordion-header"><h3>Empório Rural do Colorado com Dona Ismênia (Grande Colorado/Taquari)</h3><span class="icon">▼</span></button><div class="accordion-content"><p><strong>Endereço:</strong> DF-150 - Sobradinho, Brasília - DF.</p></div></div>
+            <div class="faq-item-accordion"><button class="accordion-header"><h3>Mercado Malunga (Lago Sul)</h3><span class="icon">▼</span></button><div class="accordion-content"><p><strong>Endereço:</strong> Shop Gilberto Salomão SHIS quadra 05 Bloco F CC Sobreloja, 09 - Lago Sul, Brasília - DF.</p></div></div>
+            <div class="faq-item-accordion"><button class="accordion-header"><h3>Mercado Malunga (Sudoeste)</h3><span class="icon">▼</span></button><div class="accordion-content"><p><strong>Endereço:</strong> Q SHCSW CL 104, BLOCO A, LOJA 19 - Cruzeiro / Sudoeste / Octogonal, Brasília - DF.</p></div></div>
+            <div class="faq-item-accordion"><button class="accordion-header"><h3>Ravioli e Cia (Sudoeste)</h3><span class="icon">▼</span></button><div class="accordion-content"><p><strong>Endereço:</strong> CLSW 302, Bloco B, loja 24, St. Sudoeste, Brasília - DF.</p></div></div>
             
-            <div class="faq-item-accordion">
-                <button class="accordion-header"><h3>NOME DO PARCEIRO (Bairro)</h3><span class="icon">▼</span></button>
-                <div class="accordion-content"><p><strong>Endereço:</strong> Endereço completo do parceiro aqui.</p></div>
+            <div class="faq-item-accordion" style="border: 2px solid var(--cor-primaria);">
+                <button class="accordion-header">
+                    <h3 style="color: var(--cor-titulos);">📍 Cozinha Central (Vicente Pires)</h3>
+                    <span class="icon">▼</span>
+                </button>
+                <div class="accordion-content">
+                    <p>
+                        <strong>ChefBrico</strong><br>
+                        <strong>Endereço:</strong> Rua 5, Chácara 122, Lote 17, Loja 2<br>
+                        Vicente Pires, Brasília - DF, CEP: 72006-060<br>
+                        <strong>Telefone/WhatsApp:</strong> (61) 99665-9880
+                    </p>
+                    <p style="font-size: 0.9em; font-style: italic;">
+                        Este é a minha cozinha, onde a magia acontece! Não tenho atendimento de balcão, mas é daqui que partem todas as nossas entregas.
+                    </p>
+                </div>
             </div>
-            <div class="faq-item-accordion">
-                <button class="accordion-header"><h3>Exemplo: Mercearia Fictícia (Asa Sul)</h3><span class="icon">▼</span></button>
-                <div class="accordion-content"><p><strong>Endereço:</strong> SCLS 405 BL B LOJA 10 - Asa Sul, Brasília - DF.</p></div>
             </div>
-
-        </div>
     </div>
 
     <section class="agenda-section py-5">
         <div class="container">
             <h2 class="text-center">Agenda de Encontros com a Conceição</h2>
-            <p class="text-center subtitle mb-4">A ChefBrico vai além do online! Venha me encontrar pessoalmente em nossos pontos fixos, provar novidades e bater um papo sobre comida de verdade.</p>
-            <h3 class="text-center mb-4">Nossos Encontros Fixos (Global)</h3>
+            <p class="text-center subtitle mb-4">Venha me encontrar pessoalmente em nossos pontos fixos, provar novidades e bater um papo sobre comida de verdade.</p>
+            <h3 class="text-center mb-4">Nossos Encontros Fixos</h3>
             <div class="carousel-container">
                 <div class="carousel-card feira-card">
-                    <div class="feira-imagem-circulo">
-                        <img src="/imagens/conceicao-feira-tematica-chefbrico.jpeg" alt="Feira Rural do Hemocentro">
-                    </div>
+                    <div class="feira-imagem-circulo"><img src="/imagens/conceicao-feira-tematica-chefbrico.jpeg" alt="Feira Rural do Hemocentro"></div>
                     <div class="feira-info">
                         <h3>Feira Rural do Hemocentro</h3>
                         <p class="dia">Toda Quarta-feira</p>
@@ -212,9 +273,7 @@
                     </div>
                 </div>
                 <div class="carousel-card feira-card">
-                    <div class="feira-imagem-circulo">
-                        <img src="/imagens/maria-conceicao-feira-tematica.jpeg" alt="Feira da Praça da 13 no Lago Sul">
-                    </div>
+                    <div class="feira-imagem-circulo"><img src="/imagens/maria-conceicao-feira-tematica.jpeg" alt="Feira da Praça da 13 no Lago Sul"></div>
                     <div class="feira-info">
                         <h3>Feira da Praça da 13</h3>
                         <p class="dia">Todo Sábado</p>
@@ -222,7 +281,19 @@
                         <p class="endereco">📍 QI 13 - Lago Sul</p>
                     </div>
                 </div>
-            </div>
+
+                <div class="carousel-card feira-card">
+                    <div class="feira-imagem-circulo">
+                        <img src="/imagens/placeholder-nova-feira.jpeg" alt="Placeholder para a nova feira ou encontro">
+                    </div>
+                    <div class="feira-info">
+                        <h3>Nome da Nova Feira/Encontro</h3>
+                        <p class="dia">Toda [DIA DA SEMANA]</p>
+                        <p class="horario">🕒 [HORA INÍCIO] às [HORA FIM]</p>
+                        <p class="endereco">📍 [LOCALIZAÇÃO DA NOVA FEIRA]</p>
+                    </div>
+                </div>
+                </div>
         </div>
     </section>
 
@@ -230,34 +301,10 @@
         <div class="container">
             <h2 class="text-center mb-4">Calendário Sazonal de Festas Temáticas</h2>
             <div class="carousel-container">
-                <div class="carousel-card estacao-card">
-                    <div class="estacao-postcard"><img src="/imagens/festa-tematica-morango-chefbrico.png" alt="Banner da Festa do Morango"></div>
-                    <div class="estacao-content">
-                        <h3>PRIMAVERA</h3> <h4>Festa do Morango</h4>
-                        <p>Celebramos a estação com o melhor do morango de Brasília.</p>
-                    </div>
-                </div>
-                <div class="carousel-card estacao-card">
-                    <div class="estacao-postcard"><img src="/imagens/festa-goiaba-chefbrico.png" alt="Banner da Festa da Goiaba"></div>
-                    <div class="estacao-content">
-                        <h3>VERÃO</h3> <h4>Festa da Goiaba</h4>
-                        <p>O calor de Brasília pede a doçura da goiaba. Venha provar nossas criações.</p>
-                    </div>
-                </div>
-                <div class="carousel-card estacao-card">
-                    <div class="estacao-postcard"><img src="/imagens/agro-brasilia-maria-conceicao-chefbrico.png" alt="Banner da AgroBrasília"></div>
-                    <div class="estacao-content">
-                        <h3>OUTONO</h3> <h4>AgroBrasília</h4>
-                        <p>Marcamos presença na maior feira do planalto central, mostrando a força dos produtores.</p>
-                    </div>
-                </div>
-                <div class="carousel-card estacao-card">
-                    <div class="estacao-postcard"><img src="/imagens/festa-tematica-uva-chefbrico.png" alt="Banner da Festa da Uva"></div>
-                    <div class="estacao-content">
-                        <h3>INVERNO</h3> <h4>Festa da Uva</h4>
-                        <p>O friozinho de Brasília combina com o sabor da uva e nossos molhos especiais.</p>
-                    </div>
-                </div>
+                <div class="carousel-card estacao-card"><div class="estacao-postcard"><img src="/imagens/festa-tematica-morango-chefbrico.png" alt="Banner Festa do Morango"></div><div class="estacao-content"><h3>PRIMAVERA</h3> <h4>Festa do Morango</h4></div></div>
+                <div class="carousel-card estacao-card"><div class="estacao-postcard"><img src="/imagens/festa-goiaba-chefbrico.png" alt="Banner Festa da Goiaba"></div><div class="estacao-content"><h3>VERÃO</h3> <h4>Festa da Goiaba</h4></div></div>
+                <div class="carousel-card estacao-card"><div class="estacao-postcard"><img src="/imagens/agro-brasilia-maria-conceicao-chefbrico.png" alt="Banner AgroBrasília"></div><div class="estacao-content"><h3>OUTONO</h3> <h4>AgroBrasília</h4></div></div>
+                <div class="carousel-card estacao-card"><div class="estacao-postcard"><img src="/imagens/festa-tematica-uva-chefbrico.png" alt="Banner Festa da Uva"></div><div class="estacao-content"><h3>INVERNO</h3> <h4>Festa da Uva</h4></div></div>
             </div>
         </div>
     </section>
@@ -266,39 +313,41 @@
         <div class="container">
             <h2 class="text-center mb-4">O que nossas fãs dizem</h2>
             <div class="carousel-container">
+                
                 <div class="carousel-card depoimento-card">
-                    <img src="/imagens/chefbrico-fullbanner-Pinterest1.png" alt="Depoimento de cliente sobre risoto ChefBrico">
-                    <p class="quote">"Salvou minha semana! O risoto de cogumelos é incrível e ficou pronto em 5 minutos. Praticidade sem perder o sabor de comida de verdade."</p>
-                    <span class="author">Cliente - Sudoeste</span>
-                </div>
-                <div class="carousel-card depoimento-card">
-                    <img src="/imagens/chefbrico-fullbanner-Pinterest2.png" alt="Depoimento de cliente sobre sopa ChefBrico">
-                    <p class="quote">"As sopas funcionais são maravilhosas, especialmente no friozinho de Brasília. Me sinto nutrida e tudo 100% natural."</p>
-                    <span class="author">Cliente - Asa Norte</span>
+                    <img src="/imagens/depoimentos/cliente-1.jpg" alt="Depoimento cliente ChefBrico Risoto">
+                    <p class="quote">"Salvou minha semana! O risoto de cogumelos é incrível e ficou pronto em 5 minutos."</p>
+                    <span class="author">Juliana M. - Sudoeste</span>
                 </div>
                 
                 <div class="carousel-card depoimento-card">
-                    <img src="/imagens/chefbrico-fullbanner-Pinterest3.png" alt="Depoimento de cliente sobre praticidade ChefBrico">
-                    <p class="quote">"Falar com a Conceição pelo WhatsApp é como falar com uma amiga. Ela entende tudo, monta meu pedido e a entrega é perfeita aqui no trabalho."</p>
-                    <span class="author">Cliente - Lago Norte</span>
+                    <img src="/imagens/depoimentos/cliente-2.jpg" alt="Depoimento cliente ChefBrico Sopa">
+                    <p class="quote">"As sopas funcionais são maravilhosas, especialmente no friozinho de Brasília."</p>
+                    <span class="author">Fernanda R. - Asa Norte</span>
                 </div>
                 
-             <div class="carousel-card depoimento-card">
-                    <img src="/imagens/chefbrico-fullbanner-Pinterest4.png" alt="Depoimento de cliente sobre praticidade ChefBrico">
-                    <p class="quote">"Falar com a Conceição pelo WhatsApp é como falar com uma amiga. Ela entende tudo, monta meu pedido e a entrega é perfeita aqui no trabalho."</p>
-                    <span class="author">Cliente - Lago Sul</span>
+                <div class="carousel-card depoimento-card">
+                    <img src="/imagens/depoimentos/cliente-3.jpg" alt="Depoimento cliente ChefBrico Atendimento">
+                    <p class="quote">"Falar com a Conceição pelo WhatsApp é como falar com uma amiga. Ela entende tudo."</p>
+                    <span class="author">Carla S. - Lago Sul</span>
                 </div>
-            </div>
-            </div>
+
+                <div class="carousel-card depoimento-card">
+                    <img src="/imagens/depoimentos/cliente-4.jpg" alt="Depoimento cliente ChefBrico sobre nova categoria">
+                    <p class="quote">"[COLOQUE AQUI O TEXTO DO NOVO DEPOIMENTO, EX: SOBRE OS ANTEPASTOS OU OUTRA CATEGORIA]"</p>
+                    <span class="author">[NOME DA CLIENTE] - [BAIRRO]</span>
+                </div>
+                </div>
+        </div>
     </section>
 
     <section class="review-cta-section-v2">
         <div class="review-banner-image">
-            <img src="/imagens/uma-maozinha-chefbrico-1.png" alt="Maria Conceição, fundadora da ChefBrico, com o slogan Uma Mãozinha na Rotina da Família">
+            <img src="/imagens/uma-maozinha-chefbrico-1.png" alt="Maria Conceição, fundadora da ChefBrico">
         </div>
         <div class="review-cta-content">
             <h2>Conte sua Experiência!</h2>
-            <p class="review-text">Seu feedback é essencial para continuarmos a transformar a rotina na cozinha. Sua opinião ajuda-nos a crescer e a oferecer sempre o melhor!</p>
+            <p class="review-text">Seu feedback é essencial para continuarmos a transformar a rotina na cozinha. Sua opinião ajuda-nos a crescer!</p>
             <div class="review-stars">★★★★★</div>
             <a href="https://g.page/r/CWIKRViCYBCDEAI/review" target="_blank" rel="noopener noreferrer" class="gbp-specific-button">Deixe Sua Avaliação no Google!</a>
         </div>
@@ -307,6 +356,7 @@
 </main>
 
 {% include "rodape.html" %}
+
 <script src="/js/script.js"></script>
 
 </body>
