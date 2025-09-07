@@ -30,7 +30,7 @@
       "@type": ["WebPage", "CommunityPage", "CollectionPage"],
       "name": "ChefBrico Club: Vantagens Exclusivas e Comunidade #ChefBricoEmCasa",
       "url": "https://receitas.chefbrico.com/chefbrico-club.html",
-      "description": "Página de inscrição para o ChefBrico Club. Membros recebem cupons, novidades e podem participar da galeria da comunidade #ChefBricoEmCasa, inspirando-se com pratos reais de clientes.",
+      "description": "Página de inscrição para o ChefBrico Club. Membros recebem cupons, novidades e podem participar da galeria da comunidade #ChefBricoEmCasa.",
       "image": {
         "@type": "ImageObject",
         "url": "/imagens/chef-brico-club-banner.png",
@@ -60,7 +60,76 @@
       }
     }
     </script>
-</head>
+
+    <style>
+        /* FIX 1: A "MOLDURA" DA IMAGEM HERO (PADRÃO OURO) */
+        .hero-card {
+            max-width: 900px; /* Largura máxima da moldura */
+            max-height: 450px; /* << A CHAVE: Limita a altura da imagem vertical */
+            margin: 0 auto 40px auto; /* Centraliza a moldura */
+            overflow: hidden; /* Corta o excesso da imagem */
+            border-radius: 8px; /* Cantos suaves */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Sombra suave */
+        }
+        .hero-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Faz a imagem cobrir o frame sem distorcer */
+            object-position: center; /* Centraliza a imagem dentro do corte */
+        }
+
+        /* FIX 2: O FORMULÁRIO DE CAPTURA "DEFORMATADO" */
+        .capture-block {
+            background-color: #fdfaf2;
+            border: 1px solid #f0ead6;
+            border-radius: 8px;
+            padding: 40px 30px;
+            text-align: center;
+            max-width: 700px;
+            margin: 40px auto; /* Centraliza o bloco na página */
+        }
+        .capture-block h2 {
+            margin-top: 0;
+            color: var(--cor-primaria);
+        }
+        .capture-form {
+            display: flex; /* << A MÁGICA: Usa Flexbox para alinhar os itens */
+            flex-wrap: wrap; /* Permite quebrar (empilhar) em telas móveis */
+            gap: 10px; /* Espaço entre o input e o botão */
+            justify-content: center; /* Centraliza o formulário */
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+        .capture-form input[type="email"] {
+            flex-grow: 1; /* Faz o campo de e-mail ocupar o máximo de espaço possível */
+            min-width: 250px; /* Largura mínima antes de quebrar a linha */
+            padding: 15px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box; /* Garante que o padding não quebre o layout */
+        }
+        /* Garantir que nosso .cta-button padrão se alinhe com o input */
+        .capture-form .cta-button {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            font-size: 1em;
+            height: auto;
+            white-space: nowrap; /* Impede que o texto do botão quebre linha */
+        }
+
+        /* Estilizando a lista de vantagens (seu código original) */
+        .lista-vantagens {
+            list-style: none;
+            padding: 0;
+            margin: 25px auto 0 auto;
+            text-align: left;
+            max-width: 450px; /* Controla a largura da lista */
+            color: #555;
+            line-height: 1.7;
+        }
+    </style>
+    </head>
 <body>
     
     {% include "cabecalho.html" %}
