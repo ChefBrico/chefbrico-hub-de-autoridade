@@ -47,35 +47,67 @@
         .depoimento-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
         .depoimento-card .quote { font-style: italic; color: #555; }
         .depoimento-card .author { font-weight: bold; color: var(--cor-primaria); margin-top: 15px; display: block; }
-        .review-cta-section-v2 { background-color: #fdfcf7; border: 1px solid #f0ead6; border-radius: 8px; margin-top: 60px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        .review-banner-image img { width: 100%; height: auto; display: block; }
-       /* --- KAIZEN: NOVO ESTILO BOTÃO GBP (Mais atrativo e minimalista) --- */
+        /* Estilos para a seção de CTA de Review (GBP) */
+.review-cta-section-v2 { 
+    background-color: #fdfcf7; 
+    border: 1px solid #f0ead6; 
+    border-radius: 8px; 
+    margin-top: 60px; 
+    overflow: hidden; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+}
+.review-banner-image img { 
+    width: 100%; 
+    height: auto; 
+    display: block; 
+}
+
+/* KAIZEN: NOVO ESTILO PARA CENTRALIZAR O CONTEÚDO DENTRO DO CARD GBP */
+.review-cta-content { 
+    padding: 40px 25px; 
+    text-align: center !important; /* Força o alinhamento central */
+}
+.review-cta-content h2 { 
+    color: var(--cor-titulos); 
+    font-size: 2.5em; 
+    margin-top: 0; 
+    margin-bottom: 15px;
+    max-width: 700px; /* Garante que o H2 também centralize corretamente se for largo */
+    margin-left: auto;
+    margin-right: auto;
+}
+.review-cta-content .review-text { 
+    font-size: 1.1em; 
+    max-width: 700px; 
+    margin: 0 auto 20px auto; /* Centraliza e define largura máxima */
+    line-height: 1.7; 
+}
+.review-cta-content .review-stars { 
+    color: #FFC107; 
+    font-size: 2.8em; 
+    margin-bottom: 20px; 
+    letter-spacing: 5px; 
+    display: block; /* Garante que as estrelas se comportem como um bloco para centralizar */
+}
+
+/* Estilos para o botão (já atualizados na fase anterior, repetido para contexto) */
 .review-cta-content .gbp-specific-button {
-    background-color: #4285F4 !important; /* Mantém o azul confiável do Google */
+    background-color: #4285F4 !important;
     padding: 15px 30px;
     font-size: 1.1em;
-    border-radius: 8px; /* 1. Cantos mais suaves, combinando com os cards */
+    border-radius: 8px;
     color: white;
     text-decoration: none;
     font-weight: bold;
     display: inline-block;
-    letter-spacing: 0.5px; /* 4. Visual mais elegante/premium */
-    border: none; /* Garante que não haja borda padrão */
+    letter-spacing: 0.5px;
+    border: none;
     cursor: pointer;
-    
-    /* 2. Sombra sutil para dar profundidade (pop) */
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
-
-    /* Transição suave para TODOS os efeitos (hover) */
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
-
-/* 3. EFEITO HOVER (Ao passar o mouse) - Mais interativo */
 .review-cta-content .gbp-specific-button:hover {
-    /* Escurece levemente o azul para dar feedback */
     background-color: #3a7bd5 !important;
-    
-    /* Levanta o botão e aumenta a sombra, convidando ao clique */
     transform: scale(1.03) translateY(-2px);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
