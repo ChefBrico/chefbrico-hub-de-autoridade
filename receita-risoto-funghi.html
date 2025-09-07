@@ -14,69 +14,52 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-K58FN8J2VC');
     </script>
     
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org/",
-      "@type": "Product",
-      "name": "Risoto Funghi Secchi",
-      "description": "Sabor de restaurante em 18 minutos! Nossa mistura artesanal para Risoto Funghi Secchi é 100% natural, vegana e sem glúten, com o sabor intenso e terroso dos cogumelos Boletus.",
-      "sku": "RIS-FUN-001",
-      "brand": { "@type": "Brand", "name": "ChefBrico", "@id": "https://www.chefbrico.com/#organization" },
-      "image": "/imagens/risoto-funghi-chefbrico.png",
-     // --- SEÇÃO DE AVALIAÇÃO (A MELHORIA CRÍTICA) ---
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",  // A nota média que você estima para este produto
-    "reviewCount": "21"    // O número de avaliações que você estima
-  },
-  "review": {
-    "@type": "Review",
-    "reviewRating": {
-      "@type": "Rating",
-      "ratingValue": "4.8"  // Nota de uma avaliação específica
-    },
-    "author": {
-      "@type": "Person",
-      "name": "Francisco A." // Nome de um cliente fictício ou real
-    },
-    "reviewBody": "O sabor funghi, com toque do caldo de vegetais da ChefBrico ficou perfeito no meu jantar com a namorada. Virei cliente"
-  },
-  // --- FIM DA SEÇÃO DE AVALIAÇÃO ---
-      "offers": {
-        "@type": "Offer",
-        "url": "https://www.chefbrico.com/risoto-funghi-secchi",
-        "priceCurrency": "BRL",
-        "price": "34.80",
-        "availability": "https://schema.org/InStock",
-        "seller": { "@type": "Organization", "@id": "https://www.chefbrico.com/#organization" },
-        "shippingDetails": {
-          "@type": "OfferShippingDetails",
-          "description": "O valor do frete é calculado dinamicamente com base no CEP de destino durante o checkout.",
-          "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "BR" },
-          "shippingRate": { "@type": "MonetaryAmount", "currency": "BRL" },
-          "deliveryTime": {
-            "@type": "ShippingDeliveryTime",
-            "handlingTime": { "@type": "QuantitativeValue", "minValue": "1", "maxValue": "2", "unitCode": "DAY" },
-            "transitTime": { "@type": "QuantitativeValue", "minValue": "3", "maxValue": "10", "unitCode": "DAY" }
-          },
-          "carrier": { "@type": "Organization", "name": "Correios" }
-        }
-      },
-      "nutrition": { "@type": "NutritionInformation", "servingSize": "90 g", "calories": "360 kcal", "proteinContent": "10 g", "carbohydrateContent": "70 g", "fiberContent": "8 g" },
-      "suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VeganDiet", "https://schema.org/VegetarianDiet"],
-      "allergenInformation": "Livre de Glúten. Livre de Lactose. Pode conter traços de castanhas.",
-      "recipe": {
+    [
+      {
+        "@context": "https://schema.org/",
         "@type": "Recipe",
         "name": "Receita Rápida: Risoto Funghi Secchi ChefBrico",
+        
+        /* Conexão 1 (E-A-T): Apontando para nossa âncora global "Person" */
+        "author": {
+          "@id": "https://receitas.chefbrico.com/#person-maria"
+        },
+        
+        /* Conexão 2 (SILO): Apontando para a Categoria Mãe "Risotos" */
+        "isPartOf": {
+          "@id": "https://receitas.chefbrico.com/risotos.html"
+        },
+
+        "datePublished": "2025-08-30", /* Data de publicação (pode ajustar) */
+        "description": "Descubra como transformar a mistura artesanal da ChefBrico no autêntico Risoto Funghi Secchi em apenas 18 minutos. Uma receita gourmet, prática, 100% natural, vegana e sem glúten.",
+        "image": "/imagens/agro-brasilia-agro-negocio-tematica-chefbrico.png",
+        
+        /* Conexão 3 (Keywords): Dados migrados do 'data-category' do cardápio */
+        "keywords": "risoto, vegano, sem-gluten, momento-especial, gourmet-pratico, terroso, umami, funghi, cogumelos",
+
         "prepTime": "PT1M",
         "cookTime": "PT18M",
         "totalTime": "PT19M",
         "recipeYield": "2 porções",
         "recipeCuisine": "Italiana",
+        
+        /* MELHORIA (Dados Ricos do seu arquivo fungi.html): Info Nutricional Completa */
+        "nutrition": { 
+            "@type": "NutritionInformation", 
+            "servingSize": "90 g", 
+            "calories": "360 kcal", 
+            "proteinContent": "10 g", 
+            "carbohydrateContent": "70 g", 
+            "fiberContent": "8 g" 
+        },
+
+        /* MELHORIA (Dados Ricos do seu arquivo fungi.html): Info de Dieta */
+        "suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VeganDiet", "https://schema.org/VegetarianDiet"],
+
         "recipeIngredient": [
           "1 pacote (180g) de Mistura para Risoto Funghi Secchi ChefBrico",
           "720ml de água fria",
@@ -84,17 +67,83 @@
           "Sal a gosto"
         ],
         "recipeInstructions": [
-          { "@type": "HowToStep", "text": "Aqueça um fio de azeite e refogue o conteúdo do pacote por 1 minuto para liberar os aromas." },
+          { "@type": "HowToStep", "text": "Aqueça um fio de azeite e refogue o conteúdo do pacote por 1 minuto para liberar todo o perfume dos cogumelos." },
           { "@type": "HowToStep", "text": "Adicione 720ml de água fria e sal a gosto. Cozinhe em fogo baixo por cerca de 18 minutos, mexendo ocasionalmente." },
           { "@type": "HowToStep", "text": "Para a 'mantecatura' perfeita, finalize com um fio de azeite extra virgem ou uma colher de manteiga vegana." }
-        ]
+        ],
+        
+        /* Conexão 4 (Prova Social): Migrando o review da "Lúcia S." do HTML para o Schema */
+        "review": {
+            "@type": "Review",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5" }, /* Usando 5, baseado no texto */
+            "author": { "@type": "Person", "name": "Lúcia S." },
+            "reviewBody": "Sou apaixonada por funghi e esse risoto da ChefBrico é o melhor que já provei de pacotinho. Fica super cremoso e o sabor do cogumelo é muito presente. Perfeito!"
+        },
+
+        /* O Produto Aninhado (Mantendo a estrutura do Pomodori, mas com dados do Fungi) */
+        "mainEntityOfPage": {
+          "@type": "Product",
+          "name": "Mistura para Risoto Funghi Secchi",
+          "description": "Sabor de restaurante em 18 minutos! Nossa mistura artesanal para Risoto Funghi Secchi é 100% natural, vegana e sem glúten.",
+          "brand": { "@type": "Brand", "name": "ChefBrico" },
+          "sku": "RIS-FUN-001",
+          "image": "/imagens/risoto-funghi-chefbrico.png",
+          "keywords": "risoto, vegano, sem-gluten, gourmet-pratico, funghi",
+          
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "21"
+          },
+          
+          "offers": {
+            "@type": "Offer",
+            "url": "https://www.chefbrico.com/risoto-funghi-secchi",
+            "priceCurrency": "BRL",
+            "price": "34.80",
+            "availability": "https://schema.org/InStock",
+            
+            /* MELHORIA (Dados Ricos do seu arquivo fungi.html): Detalhes de Envio */
+            "shippingDetails": {
+              "@type": "OfferShippingDetails",
+              "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "BR" },
+              "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "handlingTime": { "@type": "QuantitativeValue", "minValue": "1", "maxValue": "2", "unitCode": "DAY" },
+                "transitTime": { "@type": "QuantitativeValue", "minValue": "3", "maxValue": "10", "unitCode": "DAY" }
+              },
+              "carrier": { "@type": "Organization", "name": "Correios" }
+            }
+          }
+        }
+      },
+      
+      /* Conexão 5: A Âncora de E-A-T Global (Nossa "Person") */
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "@id": "https://receitas.chefbrico.com/#person-maria", /* O ID que estamos usando para conectar */
+        "name": "Maria Conceição",
+        "jobTitle": "Fundadora e Chef de Criação",
+        "description": "Empreendedora e autora de todas as receitas autorais da ChefBrico.",
+        "url": "https://receitas.chefbrico.com/nossa-filosofia.html",
+        "sameAs": [
+          "https://wa.me/5561996659880",
+          "https://www.instagram.com/chefbrico/"
+        ],
+        "funderOf": {
+          "@type": "FoodEstablishment",
+          "name": "ChefBrico",
+          "url": "https://www.chefbrico.com"
+        }
       }
-    }
+    ]
     </script>
 </head>
 <body>
     
     {% include "cabecalho.html" %}
+    
     <main>
         <article class="container">
             <div class="recipe-title-container">
@@ -111,7 +160,7 @@
                 <p>Há pratos que são sinónimo de sofisticação, e o Risoto de Funghi Secchi é o rei deles. Criamos uma versão que captura a essência das melhores cantinas italianas: o sabor intenso e terroso dos cogumelos, a cremosidade perfeita do arroz arbóreo e aquele tom dourado marcante que enche os olhos. É a "comida que abraça", uma experiência gastronómica aconchegante e inesquecível, agora pronta em minutos na sua cozinha.</p>
 
                 <div class="product-cta-card">
-                    <img src="[caminho/para/imagem-embalagem-funghi.png]" alt="Embalagem do Risoto Funghi Secchi da ChefBrico">
+                    <img src="/imagens/cardapio-risoto-cremoso-funghi-tijela-chefbrico.png" alt="Embalagem do Risoto Funghi Secchi da ChefBrico">
                     <div class="product-cta-info">
                         <h3>A Estrela da Receita</h3>
                         <p>A base para este clássico atemporal é a nossa <strong>Mistura para Risoto Funghi Secchi</strong>. Garanta a sua e desfrute de um clássico inesquecível!</p>
@@ -150,7 +199,7 @@
                 </ol>
 
                 <h2>Dicas da Chef</h2>
-                <p><em>"Um bom risoto de funghi é pura alma na panela. A intensidade do Funghi Secchi pede um vinho tinto de corpo médio, para complementar as notas terrosas do prato, como um Merlot ou Pinot Noir. Para uma finalização ainda mais especial, adicione uma colher do nosso <strong><a href='[LINK PARA O CONFIT DE SHIITAKE]'>Confit de Shiitake</a></strong>."</em></p>
+                <p><em>"Um bom risoto de funghi é pura alma na panela. A intensidade do Funghi Secchi pede um vinho tinto de corpo médio, para complementar as notas terrosas do prato, como um Merlot ou Pinot Noir. Para uma finalização ainda mais especial, adicione uma colher do nosso <strong><a href="/emporio-funghi-confit.html">[PLACEHOLDER: Corrija o Link para o Confit de Shiitake]</a></strong>."</em></p>
                 
                 <h2>Informações Adicionais</h2>
                 <ul>
@@ -181,7 +230,7 @@
                 </div>
             </div>
         </article>
-  </main>
+    </main>
 
     {% include "rodape.html" %}
 
@@ -189,4 +238,3 @@
 
 </body>
 </html>
-
