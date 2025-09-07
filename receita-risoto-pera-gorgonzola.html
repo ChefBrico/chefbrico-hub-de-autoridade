@@ -1,3 +1,24 @@
+Recebido\! Esta é a última receita da categoria "Risotos": `receita-risoto-pera-gorgonzola.html`.
+
+Este arquivo também é perfeito. Ele tem o layout antigo (que vamos corrigir), mas está cheio de dados ricos (SKU, avaliações, nutrição, `suitableForDiet`) e conteúdo E-A-T excelente (especialmente o FAQ explicando como o "gorgonzola" pode ser vegano, o que é uma resposta direta a uma pergunta complexa de usuário).
+
+Aplicando nosso processo "Padrão Ouro v1.2":
+
+1.  **Layout (Vitrine):** Reconstruí todo o HTML para o **Layout Padrão Ouro (do Pomodori)**. Adicionei os ícones de meta-dados (`.recipe-meta-icons`) que faltavam e padronizei o CTA para **"Compre esta Receita Autoral"**.
+2.  **Conteúdo:** Migrei todo o seu conteúdo único: os textos (H1 "A Elegância Agridoce"), a "Dica da Chef" sobre Chardonnay, o cross-sell (sobre sálvia frita) e o FAQ sobre o "queijo" vegano.
+3.  **Correção de Dados (E-A-T):** Corrigi a inconsistência dos depoimentos. O JSON antigo citava "Jonas P.", mas o HTML visível (a "Vitrine") citava "Joana F.". Usei o depoimento de **"Joana F."** no novo Schema para garantir o alinhamento total.
+4.  **Upgrade de Schema (v1.2):** Criei o Grafo v1.2 completo. Injetei todos os seus dados ricos (SKU, 4.8/26 reviews, `suitableForDiet`, e o alergênico crucial `"knownAllergen": "Contém Castanhas"`).
+5.  **Injeção de Keywords:** Busquei as `keywords` corretas no `cardapio.html` ("vegano", "sem-gluten", "momento-especial", "agridoce", "divertido") e as adicionei ao schema.
+
+Com este arquivo, finalizamos a transformação de todas as receitas da Categoria "Risotos"\!
+
+Aqui está o código completo e finalizado, pronto para salvar como `receita-risoto-pera-gorgonzola.html`.
+
+-----
+
+### Código Completo: receita-risoto-pera-gorgonzola.html (Padrão Ouro v1.2)
+
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -9,74 +30,56 @@
     <meta name="description" content="Aprenda o passo a passo para preparar o Risoto de Pêra e Gorgonzola Vegano da ChefBrico. Uma receita 100% natural, gourmet e com dicas da Chef Maria Conceição.">
     
     <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-K58FN8J2VC"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-K58FN8J2VC');
     </script>
     
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org/",
-      "@type": "Product",
-      "name": "Risoto de Pêra e Gorgonzola Vegano",
-      "description": "Um clássico gourmet agridoce! Nossa mistura artesanal para Risoto de Pêra e Gorgonzola vegano fica pronta em 18 minutos e é 100% natural, à base de plantas.",
-      "sku": "RIS-PER-005",
-      "brand": { "@type": "Brand", "name": "ChefBrico", "@id": "https://www.chefbrico.com/#organization" },
-      "image": "/imagens/risoto-agridoce-pera-gorgonzola-veg-chefbrico.png",
-      // --- SEÇÃO DE AVALIAÇÃO (A MELHORIA CRÍTICA) ---
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",  // A nota média que você estima para este produto
-    "reviewCount": "26"    // O número de avaliações que você estima
-  },
-  "review": {
-    "@type": "Review",
-    "reviewRating": {
-      "@type": "Rating",
-      "ratingValue": "5"  // Nota de uma avaliação específica
-    },
-    "author": {
-      "@type": "Person",
-      "name": "Jonas P." // Nome de um cliente fictício ou real
-    },
-    "reviewBody": "Simplesmente vivertido, sabor agri-doce com toque vegano da levedura da gorgonzola! Muito boa experiência gourmet prático de preparar em casa. Ficou perfeito com meu espumante."
-  },
-  // --- FIM DA SEÇÃO DE AVALIAÇÃO ---
-      "offers": {
-        "@type": "Offer",
-        "url": "https://www.chefbrico.com/risoto-de-pera-e-gorgonzola-vegano",
-        "priceCurrency": "BRL",
-        "price": "34.80",
-        "availability": "https://schema.org/InStock",
-        "seller": { "@type": "Organization", "@id": "https://www.chefbrico.com/#organization" },
-        "shippingDetails": {
-          "@type": "OfferShippingDetails",
-          "description": "O valor do frete é calculado dinamicamente com base no CEP de destino durante o checkout.",
-          "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "BR" },
-          "shippingRate": { "@type": "MonetaryAmount", "currency": "BRL" },
-          "deliveryTime": {
-            "@type": "ShippingDeliveryTime",
-            "handlingTime": { "@type": "QuantitativeValue", "minValue": "1", "maxValue": "2", "unitCode": "DAY" },
-            "transitTime": { "@type": "QuantitativeValue", "minValue": "3", "maxValue": "10", "unitCode": "DAY" }
-          },
-          "carrier": { "@type": "Organization", "name": "Correios" }
-        }
-      },
-      "nutrition": { "@type": "NutritionInformation", "servingSize": "90 g", "calories": "390 kcal", "proteinContent": "10 g", "fiberContent": "7 g", "carbohydrateContent": "76 g" },
-      "suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VeganDiet", "https://schema.org/VegetarianDiet"],
-      "allergenInformation": "Livre de Glúten. Livre de Lactose. Contém Castanhas (para o 'queijo' vegano).",
-      "recipe": {
+    [
+      {
+        "@context": "https://schema.org/",
         "@type": "Recipe",
         "name": "Receita Rápida: Risoto de Pêra e Gorgonzola Vegano ChefBrico",
+        "author": {
+          "@id": "https://receitas.chefbrico.com/#person-maria"
+        },
+        "isPartOf": {
+          "@id": "https://receitas.chefbrico.com/risotos.html"
+        },
+        "datePublished": "2025-08-21",
+        "description": "Aprenda a fazer o Risoto de Pêra e Gorgonzola Vegano da ChefBrico. Uma receita 100% natural, agridoce, gourmet e pronta em 18 minutos.",
+        "image": "/imagens/chefbrico-risoto-agridoce-pera-gorgonzola-veg%20(1080%20x%20566%20px).png",
+        "keywords": "risoto, vegano, sem-gluten, momento-especial, jantar-romantico, gourmet-pratico, agridoce, divertido, pera, gorgonzola",
         "prepTime": "PT1M",
         "cookTime": "PT18M",
         "totalTime": "PT19M",
         "recipeYield": "2 porções",
         "recipeCuisine": "Contemporânea",
+        "nutrition": { 
+            "@type": "NutritionInformation", 
+            "servingSize": "90 g", 
+            "calories": "390 kcal", 
+            "proteinContent": "10 g", 
+            "carbohydrateContent": "76 g", 
+            "fiberContent": "7 g" 
+        },
+        "suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VeganDiet", "https://schema.org/VegetarianDiet"],
+        "knownAllergen": "Contém Castanhas (para o 'queijo' vegano).", 
+
         "recipeIngredient": [
           "1 pacote (180g) de Mistura para Risoto de Pêra e Gorgonzola Vegano ChefBrico",
           "720ml de água fria",
@@ -88,38 +91,100 @@
           { "@type": "HowToStep", "text": "Aqueça um fio de azeite e refogue o conteúdo do pacote por 1 minuto para liberar os aromas." },
           { "@type": "HowToStep", "text": "Adicione 720ml de água fria e sal a gosto. Cozinhe em fogo baixo por cerca de 18 minutos, mexendo ocasionalmente." },
           { "@type": "HowToStep", "text": "Para um toque extra de sofisticação, finalize com nozes picadas e, se gostar, um fio de melado de cana." }
-        ]
+        ],
+        /* CORREÇÃO E-A-T: Usando o review "Joana F." que está visível no HTML */
+        "review": {
+            "@type": "Review",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+            "author": { "@type": "Person", "name": "Joana F." },
+            "reviewBody": "Esse risoto é de outro mundo! Sou vegana e sentia falta de um prato com gorgonzola. A versão da ChefBrico é perfeita, super saborosa e cremosa. Já servi para amigos que não são veganos e todos amaram!"
+        },
+        "mainEntityOfPage": {
+          "@type": "Product",
+          "name": "Mistura para Risoto de Pêra e Gorgonzola Vegano",
+          "description": "Um clássico gourmet agridoce! Nossa mistura artesanal para Risoto de Pêra e Gorgonzola vegano fica pronta em 18 minutos e é 100% natural, à base de plantas.",
+          "brand": { "@type": "Brand", "name": "ChefBrico" },
+          "sku": "RIS-PER-005",
+          "image": "/imagens/risoto-agridoce-pera-gorgonzola-veg-chefbrico.png",
+          "keywords": "risoto, vegano, sem-gluten, agridoce, momento-especial, jantar-romantico",
+          "knownAllergen": "Contém Castanhas.",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "26"
+          },
+          "offers": {
+            "@type": "Offer",
+            "url": "https://www.chefbrico.com/risoto-de-pera-e-gorgonzola-vegano",
+            "priceCurrency": "BRL",
+            "price": "34.80",
+            "availability": "https://schema.org/InStock",
+            "shippingDetails": {
+              "@type": "OfferShippingDetails",
+              "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "BR" },
+              "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "handlingTime": { "@type": "QuantitativeValue", "minValue": "1", "maxValue": "2", "unitCode": "DAY" },
+                "transitTime": { "@type": "QuantitativeValue", "minValue": "3", "maxValue": "10", "unitCode": "DAY" }
+              },
+              "carrier": { "@type": "Organization", "name": "Correios" }
+            }
+          }
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "@id": "https://receitas.chefbrico.com/#person-maria", 
+        "name": "Maria Conceição",
+        "jobTitle": "Fundadora e Chef de Criação",
+        "description": "Empreendedora e autora de todas as receitas autorais da ChefBrico.",
+        "url": "https://receitas.chefbrico.com/nossa-filosofia.html",
+        "sameAs": [
+          "https://wa.me/5561996659880",
+          "https://www.instagram.com/chefbrico/"
+        ],
+        "funderOf": {
+          "@type": "FoodEstablishment",
+          "name": "ChefBrico",
+          "url": "https://www.chefbrico.com"
+        }
       }
-    }
+    ]
     </script>
 </head>
 <body>
-    
-   {% include "cabecalho.html" %}
+
+    {% include "cabecalho.html" %}
 
     <main>
         <article class="container">
-            <div class="recipe-title-container">
+            <div class="recipe-title-container" style="text-align:center;">
                 <h1>Risoto de Pêra e Gorgonzola Vegano</h1>
                 <p class="recipe-subtitle">A Elegância Agridoce Pronta em 18 Minutos</p>
                 <p class="author-byline">Por <strong>Maria Conceição</strong>, Fundadora e Chef de Criação da ChefBrico</p>
             </div>
 
-            <div class="article-hero-image-container">
+           <div class="hero-card">
                 <img src="/imagens/chefbrico-risoto-agridoce-pera-gorgonzola-veg%20(1080%20x%20566%20px).png" alt="Prato finalizado de Risoto de Pêra e Gorgonzola Vegano, cremoso e com nozes.">
+            </div>
+            <div class="recipe-meta-icons">
+                <span>🕒 <strong>Tempo:</strong> 19 min</span>
+                <span>🍳 <strong>Dificuldade:</strong> Muito Fácil</span>
+                <span>👨‍👩‍👧‍👦 <strong>Serve:</strong> 2 pessoas</span>
             </div>
 
             <div class="post-content">
                 <p>Uma combinação que nasceu nos melhores restaurantes do mundo, agora na sua cozinha, em uma versão 100% à base de plantas. Descubra como o doce aveludado da pêra desidratada dança em perfeita harmonia com o sabor intenso e marcante do nosso queijo estilo gorgonzola vegano, feito à base de castanhas. É a prova de que a alta gastronomia pode ser incrivelmente prática, saudável e inclusiva.</p>
 
-                <div class="product-cta-card">
-                    <img src="[caminho/para/imagem-embalagem-pera.png]" alt="Embalagem do Risoto de Pêra e Gorgonzola Vegano da ChefBrico">
-                    <div class="product-cta-info">
-                        <h3>A Estrela da Receita</h3>
-                        <p>A base para este prato elegante é a nossa <strong>Mistura para Risoto de Pêra e Gorgonzola Vegano</strong>. Prepare-se para os aplausos!</p>
-                        <a href="https://www.chefbrico.com/risoto-de-pera-e-gorgonzola-vegano" target="_blank" rel="noopener noreferrer" class="cta-button">Comprar na Loja Agora</a>
-                    </div>
-                </div>
+               <div class="card-modelo-autora">
+                    <img class="card-modelo-autora-image" src="/imagens/cardapio-chefbrico-risoto-pera-e-lima%CC%83o-siciliano.png" alt="Embalagem do Risoto de Pêra e Gorgonzola Vegano da ChefBrico">
+                   <div class="card-modelo-autora-content">
+                       <h3>Compre esta Receita Autoral</h3>
+                       <p>A base para este prato elegante é a nossa <strong>Mistura para Risoto de Pêra e Gorgonzola Vegano</strong>. Prepare-se para os aplausos!</p>
+                       <a href="https://www.chefbrico.com/risoto-de-pera-e-gorgonzola-vegano" target="_blank" rel="noopener noreferrer" class="cta-button">Ver na Loja Agora</a>
+                   </div>
+               </div>
 
                 <h2>Por que Você Vai Amar este Clássico Gourmet</h2>
                 <ul>
@@ -145,14 +210,15 @@
                 </ul>
 
                 <h2>Modo de Preparo Simplificado</h2>
-                <ol>
+                <ol class="modo-preparo-lista">
                     <li><strong>Refogue:</strong> Aqueça um fio de azeite e refogue o conteúdo do pacote por 1 minuto para liberar os aromas.</li>
                     <li><strong>Cozinhe:</strong> Adicione 720ml de água fria e sal a gosto. Cozinhe em fogo baixo por cerca de 18 minutos, mexendo ocasionalmente.</li>
                     <li><strong>Finalize:</strong> Para um toque extra de sofisticação, sirva com nozes picadas por cima e, se gostar, um fio de melado de cana.</li>
                 </ol>
+                <p class="modo-preparo-final">simples assim!!</p>
 
                 <h2>Dicas da Chef</h2>
-                <p><em>"Recriar o Pêra e Gorgonzola em uma versão 100% vegetal foi um dos meus desafios e orgulhos. O segredo é o nosso 'queijo' à base de castanhas, que derrete e traz a cremosidade certa. Este prato rico e complexo pede um vinho branco mais encorpado, como um Chardonnay, ou um tinto leve e frutado."</em></p>
+                <p><em>"Recriar o Pêra e Gorgonzola em uma versão 100% vegetal foi um dos meus desafios e orgulhos. O segredo é o nosso 'queijo' à base de castanhas, que derrete e traz a cremosidade certa. Este prato rico e complexo pede um vinho branco encorpado, como um Chardonnay, ou um tinto leve e frutado."</em></p>
                 
                 <div class="cross-sell-box">
                     <h3>Combina Perfeitamente Com:</h3>
@@ -188,7 +254,7 @@
                 </div>
             </div>
         </article>
- </main>
+    </main>
 
     {% include "rodape.html" %}
 
@@ -196,3 +262,4 @@
 
 </body>
 </html>
+```
