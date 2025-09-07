@@ -49,11 +49,36 @@
         .depoimento-card .author { font-weight: bold; color: var(--cor-primaria); margin-top: 15px; display: block; }
         .review-cta-section-v2 { background-color: #fdfcf7; border: 1px solid #f0ead6; border-radius: 8px; margin-top: 60px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
         .review-banner-image img { width: 100%; height: auto; display: block; }
-        .review-cta-content { padding: 40px 25px; text-align: center; }
-        .review-cta-content h2 { color: var(--cor-titulos); font-size: 2.5em; margin-top: 0; margin-bottom: 15px; }
-        .review-cta-content .review-text { font-size: 1.1em; max-width: 700px; margin: 0 auto 20px auto; line-height: 1.7; }
-        .review-cta-content .review-stars { color: #FFC107; font-size: 2.8em; margin-bottom: 20px; letter-spacing: 5px; }
-        .review-cta-content .gbp-specific-button { background-color: #4285F4 !important; }
+       /* --- KAIZEN: NOVO ESTILO BOTÃO GBP (Mais atrativo e minimalista) --- */
+.review-cta-content .gbp-specific-button {
+    background-color: #4285F4 !important; /* Mantém o azul confiável do Google */
+    padding: 15px 30px;
+    font-size: 1.1em;
+    border-radius: 8px; /* 1. Cantos mais suaves, combinando com os cards */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    letter-spacing: 0.5px; /* 4. Visual mais elegante/premium */
+    border: none; /* Garante que não haja borda padrão */
+    cursor: pointer;
+    
+    /* 2. Sombra sutil para dar profundidade (pop) */
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+
+    /* Transição suave para TODOS os efeitos (hover) */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* 3. EFEITO HOVER (Ao passar o mouse) - Mais interativo */
+.review-cta-content .gbp-specific-button:hover {
+    /* Escurece levemente o azul para dar feedback */
+    background-color: #3a7bd5 !important;
+    
+    /* Levanta o botão e aumenta a sombra, convidando ao clique */
+    transform: scale(1.03) translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
         @media (max-width: 768px) {
             .hybrid-cta-container { grid-template-columns: 1fr; }
             .page-header-local h1 { font-size: 2.2em; }
