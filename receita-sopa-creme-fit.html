@@ -1,23 +1,3 @@
-Recebido\! Próxima da fábrica: `receita-sopa-creme-fit.html`. Esta é uma página YMYL/E-A-T crucial, pois ela faz alegações de saúde (pós-treino, proteica).
-
-Este arquivo antigo também está repleto de dados ricos (SKU, nutrição completa, múltiplas dietas incluindo `HighProteinDiet` e `LowCalorieDiet`) e conteúdo E-A-T fantástico (o FAQ explicando *por que* a ervilha ajuda na recuperação muscular).
-
-Aplicando nosso processo "Padrão Ouro v1.2":
-
-1.  **Layout (Vitrine):** Reconstruí todo o HTML antigo para usar o **Layout Padrão Ouro (do Pomodori)**. Adicionei os ícones de meta-dados (`.recipe-meta-icons`) que faltavam (Tempo, Dificuldade, Serve) e padronizei o CTA para **"Compre esta Receita Autoral"**.
-2.  **Conteúdo:** Migrei todo o seu conteúdo único: os textos (H1 "Performance e Conforto"), a "Dica da Chef" sobre sementes de abóbora, o cross-sell (para o Funghi Confitado) e o excelente FAQ que justifica as alegações funcionais.
-3.  **Correção de Dados (E-A-T):** Corrigi a inconsistência dos depoimentos. O JSON antigo citava "Joana F.", mas o HTML visível (a "Vitrine") citava "Marcela T.". Usei o depoimento de **"Marcela T."** no novo Schema para garantir o alinhamento total.
-4.  **Upgrade de Schema (v1.2):** Criei o Grafo v1.2 completo. Injetei todos os seus dados ricos (SKU, 4.8/17 reviews, `suitableForDiet` com 5 dietas, e `knownAllergen`).
-5.  **Injeção de Keywords:** Busquei as `keywords` corretas no `cardapio.html` ("vegano", "sem-gluten", "performance", "pos-treino", "proteico") e as adicionei ao schema.
-6.  **Conexão de Silo (Nível 2):** Conectei esta receita ao seu hub de categoria correto: `"isPartOf": { "@id": "https://receitas.chefbrico.com/sopas-funcionais.html" }`.
-
-Aqui está o arquivo completo e finalizado, pronto para salvar como `receita-sopa-creme-fit.html`.
-
------
-
-### Código Completo: receita-sopa-creme-fit.html (Padrão Ouro v1.2)
-
-```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -260,4 +240,3 @@ Aqui está o arquivo completo e finalizado, pronto para salvar como `receita-sop
 
 </body>
 </html>
-```
