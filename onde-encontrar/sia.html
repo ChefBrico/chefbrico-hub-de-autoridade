@@ -3,30 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChefBrico no SIA: Delivery de Almoço Prático e Saudável</title>
-    <meta name="description" content="Trabalha no SIA? A ChefBrico entrega seu almoço de verdade, nutritivo e saboroso, diretamente no seu escritório. Peça online ou pelo WhatsApp.">
-   
-
+    
+    <title>ChefBrico em [NOME DA REGIÃO]: Delivery e Parceiros Locais</title>
+    <meta name="description" content="Encontre a ChefBrico em [NOME DA REGIÃO]. Peça seu delivery, fale com a Conceição ou encontre nossos parceiros locais mais próximos de você.">
+    <link rel="canonical" href="https://receitas.chefbrico.com/onde-encontrar/[url-da-pagina].html" />
+    
     <link rel="stylesheet" href="/css/style.css">
-<!-- Google tag (gtag.js) -->
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-K58FN8J2VC"></script>
-
     <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-K58FN8J2VC');
-
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K58FN8J2VC');
+    </script>
 
     <style>
         .page-header-local h1 { font-size: 2.8em; margin-bottom: 15px; text-align: center; color: #5a3a30; }
-        .page-header-local .subtitle { font-size: 1.3em; text-align: center; color: #666; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .page-header-local .subtitle { font-size: 1.3em; text-align: center; color: #666; max-width: 700px; margin: 0 auto 40px auto; }
+        
+        /* NOVO BOTÃO DE VOLTAR (Como solicitado, estilo idêntico) */
+        .back-to-hub-container { text-align: center; margin: 30px 0 40px 0; }
+        .back-to-hub-button {
+            background-color: #f0ead6;
+            color: #333;
+            padding: 10px 25px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 1.0em;
+            font-weight: bold;
+            transition: background-color 0.2s;
+            display: inline-block;
+        }
+        .back-to-hub-button:hover { background-color: #e0d8c4; }
+
         .hybrid-cta-container { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 40px 0; }
         .cta-box { border: 1px solid #eee; border-radius: 8px; padding: 30px 25px; background-color: #fdfcf7; text-align: center; }
         .cta-box h2 { margin-top: 0; font-size: 1.6em; margin-bottom: 15px; }
         .cta-box p { max-width: 320px; margin: 0 auto 25px auto; line-height: 1.6; min-height: 80px; }
+        
+        .depoimento-card { background-color: #fff; border: 1px solid #eee; padding: 25px; border-radius: 8px; text-align: center; }
+        .depoimento-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+        .depoimento-card .quote { font-style: italic; color: #555; }
+        .depoimento-card .author { font-weight: bold; color: var(--cor-primaria); margin-top: 15px; display: block; }
+
+        /* Estilos do Bloco de Review GBP (Centralizado) */
+        .review-cta-section-v2 { background-color: #fdfcf7; border: 1px solid #f0ead6; border-radius: 8px; margin-top: 60px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .review-banner-image img { width: 100%; height: auto; display: block; }
+        .review-cta-content { padding: 40px 25px; text-align: center !important; }
+        .review-cta-content h2 { color: var(--cor-titulos); font-size: 2.5em; margin: 0 auto 15px auto; max-width: 700px; }
+        .review-cta-content .review-text { font-size: 1.1em; max-width: 700px; margin: 0 auto 20px auto; line-height: 1.7; }
+        .review-cta-content .review-stars { color: #FFC107; font-size: 2.8em; margin-bottom: 20px; letter-spacing: 5px; display: block; }
+        .review-cta-content .gbp-specific-button { background-color: #4285F4 !important; padding: 15px 30px; font-size: 1.1em; border-radius: 8px; color: white; text-decoration: none; font-weight: bold; display: inline-block; letter-spacing: 0.5px; border: none; cursor: pointer; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; }
+        .review-cta-content .gbp-specific-button:hover { background-color: #3a7bd5 !important; transform: scale(1.03) translateY(-2px); box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); }
+        
         @media (max-width: 768px) {
             .hybrid-cta-container { grid-template-columns: 1fr; }
             .page-header-local h1 { font-size: 2.2em; }
@@ -38,55 +68,156 @@
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": "ChefBrico no SIA: Delivery de Almoço Prático e Saudável",
-        "url": "https://receitas.chefbrico.com/onde-encontrar/sia.html",
-        "description": "Serviço de delivery da ChefBrico focado em atender empresas e profissionais no SIA (Setor de Indústria e Abastecimento) com almoços e refeições saudáveis.",
-        "isPartOf": { "@id": "https://receitas.chefbrico.com/#website" }
+        "name": "ChefBrico em [NOME DA REGIÃO]: Delivery e Parceiros Locais",
+        "url": "https://receitas.chefbrico.com/onde-encontrar/[url-da-pagina].html",
+        "description": "Encontre a ChefBrico em [NOME DA REGIÃO]. Peça seu delivery, fale com a Conceição ou encontre nossos parceiros.",
+        "isPartOf": {
+          "@id": "https://receitas.chefbrico.com/onde-encontrar.html"
+        }
       },
       {
         "@context": "https://schema.org",
         "@type": "Service",
         "serviceType": "DeliveryService",
+        "name": "Delivery ChefBrico para [NOME DA REGIÃO]",
+        "areaServed": [
+          { "@type": "Place", "name": "[NOME DA REGIÃO], Brasília, DF" },
+          { "@type": "Place", "name": "[BAIRRO 1 DA REGIÃO], Brasília, DF" }
+        ],
         "provider": {
           "@type": "FoodEstablishment",
-          "name": "ChefBrico"
+          "name": "ChefBrico",
+          "url": "https://www.chefbrico.com"
         },
-        "areaServed": [
-            { "@type": "Place", "name": "SIA (Setor de Indústria e Abastecimento), Brasília, DF" }
+        "review": [
+          {
+            "@type": "Review",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+            "reviewBody": "Salvou minha semana! O risoto de cogumelos é incrível e ficou pronto em 5 minutos.",
+            "author": {"@type": "Person", "name": "Juliana M."}
+          },
+          {
+            "@type": "Review",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+            "reviewBody": "As sopas funcionais são maravilhosas, especialmente no friozinho de Brasília.",
+            "author": {"@type": "Person", "name": "Fernanda R."}
+          },
+          {
+            "@type": "Review",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+            "reviewBody": "Falar com a Conceição pelo WhatsApp é como falar com uma amiga. Ela entende tudo.",
+            "author": {"@type": "Person", "name": "Carla S."}
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Maria Conceição",
+        "jobTitle": "Fundadora e Chef",
+        "description": "Empreendedora e autora das receitas da ChefBrico.",
+        "url": "https://receitas.chefbrico.com/onde-encontrar.html",
+        "sameAs": [
+          "https://wa.me/5561996659880",
+          "https://www.instagram.com/chefbrico/"
         ],
-        "name": "Delivery ChefBrico para o SIA"
+        "funderOf": {
+          "@type": "FoodEstablishment",
+          "name": "ChefBrico",
+          "url": "https://www.chefbrico.com"
+        }
       }
     ]
     </script>
 </head>
 <body>
 
-    {% include "cabecalho.html" %}
+{% include "cabecalho.html" %}
 
-    <main class="container">
-        <div class="page-header-local">
-            <h1>Comida de Verdade no SIA</h1>
-            <p class="subtitle">A pausa para o almoço que sua produtividade merece. Refeições saborosas, saudáveis e práticas, entregues diretamente para você no SIA.</p>
-        </div>
+<main class="container">
 
-        <div class="hybrid-cta-container">
-            <div class="cta-box">
-                <h2>Opção A: Pedido Semanal</h2>
-                <p>Planeje seus almoços da semana com nossos kits ChefBox. A forma mais inteligente de comer bem sem perder tempo.</p>
-                <a href="https://www.chefbrico.com" target="_blank" rel="noopener noreferrer" class="cta-button"><strong>MONTAR MEU KIT SEMANAL</strong></a>
-            </div>
-            <div class="cta-box">
-                <h2>Opção B: Pedidos para Equipes</h2>
-                <p>Quer oferecer um almoço de qualidade para sua equipe? Fale comigo no WhatsApp para conhecer nossas opções corporativas.</p>
-                <a href="https://wa.me/5561996659880" target="_blank" rel="noopener noreferrer" class="cta-button cta-button-secondary"><strong>FALAR NO WHATSAPP</strong></a>
-            </div>
-        </div>
-    </main>
+    <div class="page-header-local">
+        <h1>ChefBrico na [NOME DA REGIÃO]</h1>
+        <p class="subtitle">A solução inteligente para sua rotina em [NOME DA REGIÃO]. Receba em casa ou no trabalho com nosso delivery ou encontre um parceiro local.</p>
+    </div>
     
-   
+    <div class="back-to-hub-container">
+        <a href="/onde-encontrar.html" class="back-to-hub-button">&larr; Voltar ao Mapa de Todas as Regiões</a>
+    </div>
+
+    <div class="hybrid-cta-container">
+        <div class="cta-box">
+            <h2>Delivery na Região</h2>
+            <p>Peça online e receba com a máxima praticidade no seu endereço em [NOME DA REGIÃO].</p>
+            <a href="https://www.chefbrico.com" target="_blank" rel="noopener noreferrer" class="cta-button"><strong>PLANEJAR MINHA SEMANA</strong></a>
+        </div>
+        <div class="cta-box">
+            <h2>Fale com a Conceição</h2>
+            <p>Precisa de um pedido especial ou quer tirar dúvidas? Fale diretamente comigo. Tenho o catálogo completo no WhatsApp!</p>
+            <a href="https://wa.me/5561996659880" target="_blank" rel="noopener noreferrer" class="cta-button cta-button-secondary"><strong>FALAR NO WHATSAPP</strong></a>
+        </div>
+    </div>
+
+    <div id="todos-parceiros" class="post-content content-centered" style="margin-top: 40px; padding-top: 40px; border-top: 1px solid #eee;">
+        <h2 style="text-align: center;">Nossos Parceiros em [NOME DA REGIÃO]</h2>
+        <p style="text-align: center; max-width: 700px; margin: 15px auto 40px auto; font-size: 1.1em; color: #555;">
+            Encontre uma seleção dos nossos produtos nestes estabelecimentos incríveis na região.
+        </p>
+        
+        <div class="faq-section" style="margin-top: 40px;">
+            
+            <div class="faq-item-accordion">
+                <button class="accordion-header"><h3>NOME DO PARCEIRO LOCAL (Bairro)</h3><span class="icon">▼</span></button>
+                <div class="accordion-content"><p><strong>Endereço:</strong> Endereço completo do parceiro aqui.</p></div>
+            </div>
+            </div>
+    </div>
+
+
+    <section class="depoimentos-section py-5" style="background-color: #fff; padding-top: 50px; margin-top: 40px; border-top: 1px solid #eee;">
+        <div class="container">
+            <h2 class="text-center mb-4">O que nossas fãs da região dizem</h2>
+            <div class="carousel-container">
+                
+                <div class="carousel-card depoimento-card">
+                    <img src="/imagens/depoimentos/cliente-regiao-1.jpg" alt="Depoimento cliente ChefBrico [Nome da Região]">
+                    <p class="quote">"[PLACEHOLDER: Depoimento da Cliente 1]"</p>
+                    <span class="author">[Nome da Cliente] - [Bairro da Região]</span>
+                </div>
+                
+                <div class="carousel-card depoimento-card">
+                    <img src="/imagens/depoimentos/cliente-regiao-2.jpg" alt="Depoimento cliente ChefBrico [Nome da Região]">
+                    <p class="quote">"[PLACEHOLDER: Depoimento da Cliente 2]"</p>
+                    <span class="author">[Nome da Cliente] - [Bairro da Região]</span>
+                </div>
+                
+                <div class="carousel-card depoimento-card">
+                    <img src="/imagens/depoimentos/cliente-regiao-3.jpg" alt="Depoimento cliente ChefBrico [Nome da Região]">
+                    <p class="quote">"[PLACEHOLDER: Depoimento da Cliente 3]"</p>
+                    <span class="author">[Nome da Cliente] - [Bairro da Região]</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="review-cta-section-v2">
+        <div class="review-banner-image">
+            <img src="/imagens/uma-maozinha-chefbrico-1.png" alt="Maria Conceição, fundadora da ChefBrico">
+        </div>
+        <div class="review-cta-content">
+            <h2>Conte sua Experiência!</h2>
+            <p class="review-text">Seu feedback é essencial para continuarmos a transformar a rotina na cozinha. Sua opinião ajuda-nos a crescer!</p>
+            <div class="review-stars">★★★★★</div>
+            <a href="https://g.page/r/CWIKRViCYBCDEAI/review" target="_blank" rel="noopener noreferrer" class="gbp-specific-button">Deixe Sua Avaliação no Google!</a>
+        </div>
+    </section>
+
+</main>
+
 {% include "rodape.html" %}
 
-    <script src="/js/script.js"></script>
+<script src="/js/script.js"></script>
 
 </body>
 </html>
