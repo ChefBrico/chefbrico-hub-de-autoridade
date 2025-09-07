@@ -28,57 +28,106 @@
     </script>
     
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org/",
-      "@type": "Recipe",
-      "name": "Receita Rápida: Risoto Pomodori & Pesto ChefBrico",
-      "author": {
-        "@type": "Person",
-        "name": "Maria Conceição",
-        "url": "https://receitas.chefbrico.com/nossa-filosofia.html"
-      },
-      "datePublished": "2025-08-31",
-      "description": "Descubra como transformar a mistura artesanal da ChefBrico no autêntico Risoto Pomodori & Pesto italiano em apenas 18 minutos. Uma refeição gourmet, prática, 100% natural e vegana.",
-      "image": "/imagens/risoto-pomodori-pesto-tijela-chefbrico.png",
-      "prepTime": "PT1M",
-      "cookTime": "PT18M",
-      "totalTime": "PT19M",
-      "recipeYield": "2 porções",
-      "recipeCuisine": "Italiana",
-      "nutrition": { "@type": "NutritionInformation", "servingSize": "90 g", "calories": "370 kcal", "proteinContent": "10 g" },
-      "recipeIngredient": [
-        "1 pacote (180g) de Mistura para Risoto Pomodori & Pesto ChefBrico",
-        "720ml de água fria",
-        "1 fio de azeite",
-        "Sal a gosto",
-        "Folhas de manjericão fresco (opcional)",
-        "Lascas de parmesão ou parmesão vegano (opcional)"
-      ],
-      "recipeInstructions": [
-        { "@type": "HowToStep", "text": "Aqueça um fio de azeite e refogue o conteúdo do pacote por 1 minuto para liberar os aromas." },
-        { "@type": "HowToStep", "text": "Adicione 720ml de água fria e sal a gosto. Cozinhe em fogo baixo por cerca de 18 minutos, mexendo ocasionalmente." },
-        { "@type": "HowToStep", "text": "Finalize com folhas de manjericão fresco e, para uma experiência completa, lascas de queijo parmesão." }
-      ],
-      "mainEntityOfPage": {
-        "@type": "Product",
-        "name": "Mistura para Risoto Pomodori & Pesto",
-        "description": "O sabor autêntico da Itália em 18 minutos! Nossa mistura artesanal para Risoto Pomodori & Pesto é 100% natural, vegana e sem glúten.",
-        "brand": { "@type": "Brand", "name": "ChefBrico" },
-        "sku": "RIS-POM-002",
-        "offers": {
-          "@type": "Offer",
-          "url": "https://www.chefbrico.com/risoto-pomodori-amp-pesto",
-          "priceCurrency": "BRL",
-          "price": "34.80",
-          "availability": "https://schema.org/InStock"
+    [
+      {
+        "@context": "https://schema.org/",
+        "@type": "Recipe",
+        "name": "Receita Rápida: Risoto Pomodori & Pesto ChefBrico",
+        
+        /* MELHORIA 4: Conectando a Autora ao nosso Grafo de E-A-T Global */
+        "author": {
+          "@id": "https://receitas.chefbrico.com/#person-maria" 
         },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "reviewCount": "29"
+        
+        /* MELHORIA 1: Conectando esta receita ao Silo de Categoria "Risotos" */
+        "isPartOf": {
+          "@id": "https://receitas.chefbrico.com/risotos.html"
+        },
+
+        "datePublished": "2025-08-31",
+        "description": "Descubra como transformar a mistura artesanal da ChefBrico no autêntico Risoto Pomodori & Pesto italiano em apenas 18 minutos. Uma refeição gourmet, prática, 100% natural e vegana.",
+        "image": "/imagens/risoto-pomodori-pesto-tijela-chefbrico.png",
+        
+        /* MELHORIA 2: Injetando as Keywords que a IA procura */
+        "keywords": "risoto, vegano, sem-gluten, jantar-rapido, momento-especial, gourmet-pratico, classico, italiano, pomodori, pesto",
+
+        "prepTime": "PT1M",
+        "cookTime": "PT18M",
+        "totalTime": "PT19M",
+        "recipeYield": "2 porções",
+        "recipeCuisine": "Italiana",
+        "nutrition": { "@type": "NutritionInformation", "servingSize": "90 g", "calories": "370 kcal", "proteinContent": "10 g" },
+        "recipeIngredient": [
+          "1 pacote (180g) de Mistura para Risoto Pomodori & Pesto ChefBrico",
+          "720ml de água fria",
+          "1 fio de azeite",
+          "Sal a gosto",
+          "Folhas de manjericão fresco (opcional)",
+          "Lascas de parmesão ou parmesão vegano (opcional)"
+        ],
+        "recipeInstructions": [
+          { "@type": "HowToStep", "text": "Aqueça um fio de azeite e refogue o conteúdo do pacote por 1 minuto para liberar os aromas." },
+          { "@type": "HowToStep", "text": "Adicione 720ml de água fria e sal a gosto. Cozinhe em fogo baixo por cerca de 18 minutos, mexendo ocasionalmente." },
+          { "@type": "HowToStep", "text": "Finalize com folhas de manjericão fresco e, para uma experiência completa, lascas de queijo parmesão." }
+        ],
+        
+        /* MELHORIA 3: Conectando o depoimento da "Roberta G." (HTML) ao Schema */
+        "review": {
+            "@type": "Review",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+            "author": { "@type": "Person", "name": "Roberta G." },
+            "reviewBody": "Esse é o risoto que peço em restaurante, mas feito em casa em menos de 20 minutos. O sabor do tomate seco é incrível e é super cremoso. Já comprei 3 vezes!"
+        },
+
+        /* O Produto Aninhado (já estava ótimo, apenas adicionei keywords) */
+        "mainEntityOfPage": {
+          "@type": "Product",
+          "name": "Mistura para Risoto Pomodori & Pesto",
+          "description": "O sabor autêntico da Itália em 18 minutos! Nossa mistura artesanal para Risoto Pomodori & Pesto é 100% natural, vegana e sem glúten.",
+          "brand": { "@type": "Brand", "name": "ChefBrico" },
+          "sku": "RIS-POM-002",
+          "image": "/imagens/risoto-pomodori-pesto-tijela-chefbrico.png",
+          
+          /* MELHORIA 5: Keywords também no produto */
+          "keywords": "risoto, vegano, sem-gluten, jantar-rapido, classico, italiano",
+          
+          "offers": {
+            "@type": "Offer",
+            "url": "https://www.chefbrico.com/risoto-pomodori-amp-pesto",
+            "priceCurrency": "BRL",
+            "price": "34.80",
+            "availability": "https://schema.org/InStock"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "29"
+          }
+        }
+      },
+      
+      /* ESTE É O NOSSO SCHEMA "PESSOA" GLOBAL (A ÂNCORA DE E-A-T)
+        (Nós o adicionamos aqui para que a propriedade "author" acima possa se conectar a ele)
+      */
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "@id": "https://receitas.chefbrico.com/#person-maria", /* O ID que estamos usando para conectar */
+        "name": "Maria Conceição",
+        "jobTitle": "Fundadora e Chef de Criação",
+        "description": "Empreendedora e autora de todas as receitas autorais da ChefBrico.",
+        "url": "https://receitas.chefbrico.com/nossa-filosofia.html",
+        "sameAs": [
+          "https://wa.me/5561996659880",
+          "https://www.instagram.com/chefbrico/"
+        ],
+        "funderOf": {
+          "@type": "FoodEstablishment",
+          "name": "ChefBrico",
+          "url": "https://www.chefbrico.com"
         }
       }
-    }
+    ]
     </script>
 </head>
 <body>
@@ -150,7 +199,7 @@
                 
                 <div class="cross-sell-box">
                     <h3>Combina Perfeitamente Com:</h3>
-                    <p>Sirva com um pão de fermentação natural para absorver o molho cremoso. Para uma entrada, nosso <strong><a href="[LINK PARA O PESTO NA LOJA]">Pesto de Manjericão</a></strong> em torradas é a combinação ideal.</p>
+                    <p>Sirva com um pão de fermentação natural para absorver o molho cremoso. Para uma entrada, nosso <strong><a href="/emporio-pesto-manjericao.html">[PLACEHOLDER: Corrija o Link para Pesto]</a></strong> em torradas é a combinação ideal.</p>
                 </div>
 
                 <h2>Informações Adicionais</h2>
@@ -190,4 +239,3 @@
 
 </body>
 </html>
-
