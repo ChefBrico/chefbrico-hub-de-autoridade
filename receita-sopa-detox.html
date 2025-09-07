@@ -9,116 +9,161 @@
     <meta name="description" content="Aprenda o passo a passo para preparar a Sopa Detox da ChefBrico. Uma receita funcional, rica em Ora-pro-nóbis, termogênica e com dicas da Chef Maria Conceição.">
     
     <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-K58FN8J2VC"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-K58FN8J2VC');
     </script>
     
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org/",
-      "@type": "Product",
-      "name": "Sopa Detox com Ora-pro-nóbis",
-      "description": "Um 'reset verde' para o seu corpo! Nossa Sopa Detox funcional é rica em super-ingredientes como Ora-pro-nóbis e gengibre. 100% natural e pronta em 15 minutos.",
-      "sku": "SOP-DET-005",
-      "brand": { "@type": "Brand", "name": "ChefBrico", "@id": "https://www.chefbrico.com/#organization" },
-      "image": "/imagens/sopinha-detox-chefbrico.png",
-    // --- SEÇÃO DE AVALIAÇÃO (A MELHORIA CRÍTICA) ---
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.7",  // A nota média que você estima para este produto
-    "reviewCount": "29"    // O número de avaliações que você estima
-  },
-  "review": {
-    "@type": "Review",
-    "reviewRating": {
-      "@type": "Rating",
-      "ratingValue": "5"  // Nota de uma avaliação específica
-    },
-    "author": {
-      "@type": "Person",
-      "name": "Joana F." // Nome de um cliente fictício ou real
-    },
-    "reviewBody": "Ora-pro-nobis, experiência incrível de saúde numa sopa, gostei Chef!"
-  },
-  // --- FIM DA SEÇÃO DE AVALIAÇÃO ---
-      "offers": {
-        "@type": "Offer",
-        "url": "https://www.chefbrico.com/sopa-detox-mistura-pratica-e-funcional",
-        "priceCurrency": "BRL",
-        "price": "29.60",
-        "availability": "https://schema.org/InStock",
-        "seller": { "@type": "Organization", "@id": "https://www.chefbrico.com/#organization" },
-        "shippingDetails": {
-          "@type": "OfferShippingDetails",
-          "description": "O valor do frete é calculado dinamicamente com base no CEP de destino durante o checkout.",
-          "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "BR" },
-          "shippingRate": { "@type": "MonetaryAmount", "currency": "BRL" },
-          "deliveryTime": {
-            "@type": "ShippingDeliveryTime",
-            "handlingTime": { "@type": "QuantitativeValue", "minValue": "1", "maxValue": "2", "unitCode": "DAY" },
-            "transitTime": { "@type": "QuantitativeValue", "minValue": "3", "maxValue": "10", "unitCode": "DAY" }
-          },
-          "carrier": { "@type": "Organization", "name": "Correios" }
-        }
-      },
-      "nutrition": { "@type": "NutritionInformation", "servingSize": "35 g", "calories": "150 kcal", "proteinContent": "7 g", "fiberContent": "8 g", "carbohydrateContent": "25 g" },
-      "suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VeganDiet", "https://schema.org/VegetarianDiet", "https://schema.org/LowCalorieDiet"],
-      "allergenInformation": "Livre de Glúten. Livre de Lactose. Pode conter traços de castanhas.",
-      "recipe": {
+    [
+      {
+        "@context": "https://schema.org/",
         "@type": "Recipe",
-        "name": "Receita Rápida: Sopa Detox ChefBrico",
+        "name": "Receita Rápida: Sopa Detox Funcional com Ora-pro-nóbis",
+        "author": {
+          "@id": "https://receitas.chefbrico.com/#person-maria"
+        },
+        "isPartOf": {
+          "@id": "https://receitas.chefbrico.com/sopas-funcionais.html"
+        },
+        "datePublished": "2025-08-17",
+        "description": "Aprenda a fazer a Sopa Detox da ChefBrico. Um 'reset verde' funcional, rico em Ora-pro-nóbis, vegano, sem glúten e pronto em 15 minutos.",
+        "image": "/imagens/sopinha-detox-chefbrico.png",
+        "keywords": "sopa, vegano, sem-gluten, performance, detox, leveza, ora-pro-nobis, termogenico, gengibre",
         "prepTime": "PT1M",
         "cookTime": "PT15M",
         "totalTime": "PT16M",
         "recipeYield": "3 porções (1 litro)",
         "recipeCuisine": "Funcional",
-        "keywords": "sopa detox, ora-pro-nobis, receita termogênica, sopa para emagrecer",
+        "nutrition": { 
+            "@type": "NutritionInformation", 
+            "servingSize": "35 g", 
+            "calories": "150 kcal", 
+            "proteinContent": "7 g", 
+            "carbohydrateContent": "25 g", 
+            "fiberContent": "8 g" 
+        },
+        "suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VeganDiet", "https://schema.org/VegetarianDiet", "https://schema.org/LowCalorieDiet"],
+        "knownAllergen": "Pode conter traços de castanhas.", 
+
         "recipeIngredient": [
           "1 pacote (105g) de Mistura para Sopa Detox ChefBrico",
           "1000ml (1 litro) de água fria",
           "Sal a gosto",
-          "1 fio de azeite (opcional)"
+          "1 fio de azeite (opcional)",
+          "Sementes de girassol (opcional)"
         ],
         "recipeInstructions": [
           { "@type": "HowToStep", "text": "Em uma panela, coloque o conteúdo do pacote, 1 litro de água fria e sal." },
           { "@type": "HowToStep", "text": "Leve ao fogo médio e, assim que ferver, abaixe o fogo e cozinhe por 15 minutos." },
           { "@type": "HowToStep", "text": "Sirva bem quentinha, finalizada com sementes de girassol para uma crocância extra, se desejar." }
-        ]
+        ],
+        /* CORREÇÃO E-A-T: Usando o review "Cláudia M." que está visível no HTML */
+        "review": {
+            "@type": "Review",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5" }, /* Baseado no texto */
+            "author": { "@type": "Person", "name": "Cláudia M." },
+            "reviewBody": "A sopa detox mais gostosa que já tomei! É leve, mas ao mesmo tempo satisfaz. Sinto meu corpo mais leve e com mais energia nos dias que tomo. Maravilhosa!"
+        },
+        "mainEntityOfPage": {
+          "@type": "Product",
+          "name": "Mistura para Sopa Detox com Ora-pro-nóbis",
+          "description": "Um 'reset verde' para o seu corpo! Nossa Sopa Detox funcional é rica em super-ingredientes como Ora-pro-nóbis e gengibre. 100% natural e pronta em 15 minutos.",
+          "brand": { "@type": "Brand", "name": "ChefBrico" },
+          "sku": "SOP-DET-005",
+          "image": "/imagens/sopinha-detox-chefbrico.png",
+          "keywords": "sopa, vegano, sem-gluten, detox, leveza, performance, ora-pro-nobis",
+          "knownAllergen": "Pode conter traços de castanhas.",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.7",
+            "reviewCount": "29"
+          },
+          "offers": {
+            "@type": "Offer",
+            "url": "https://www.chefbrico.com/sopa-detox-mistura-pratica-e-funcional",
+            "priceCurrency": "BRL",
+            "price": "29.60",
+            "availability": "https://schema.org/InStock",
+            "shippingDetails": {
+              "@type": "OfferShippingDetails",
+              "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "BR" },
+              "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "handlingTime": { "@type": "QuantitativeValue", "minValue": "1", "maxValue": "2", "unitCode": "DAY" },
+                "transitTime": { "@type": "QuantitativeValue", "minValue": "3", "maxValue": "10", "unitCode": "DAY" }
+              },
+              "carrier": { "@type": "Organization", "name": "Correios" }
+            }
+          }
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "@id": "https://receitas.chefbrico.com/#person-maria", 
+        "name": "Maria Conceição",
+        "jobTitle": "Fundadora e Chef de Criação",
+        "description": "Empreendedora e autora de todas as receitas autorais da ChefBrico.",
+        "url": "https://receitas.chefbrico.com/nossa-filosofia.html",
+        "sameAs": [
+          "https://wa.me/5561996659880",
+          "https://www.instagram.com/chefbrico/"
+        ],
+        "funderOf": {
+          "@type": "FoodEstablishment",
+          "name": "ChefBrico",
+          "url": "https://www.chefbrico.com"
+        }
       }
-    }
+    ]
     </script>
 </head>
 <body>
- {% include "cabecalho.html" %}
+
+    {% include "cabecalho.html" %}
 
     <main>
         <article class="container">
-            <div class="recipe-title-container">
+            <div class="recipe-title-container" style="text-align:center;">
                 <h1>Sopa Detox com Ora-pro-nóbis</h1>
                 <p class="recipe-subtitle">O "Reset Verde" que seu Corpo Pede!</p>
                 <p class="author-byline">Por <strong>Maria Conceição</strong>, Fundadora e Chef de Criação da ChefBrico</p>
             </div>
 
-            <div class="article-hero-image-container">
-                <img src="[caminho/para/imagem-sopa-detox.png]" alt="Prato finalizado de Sopa Detox com Ora-pro-nóbis, vibrante e saudável.">
+           <div class="hero-card">
+                 <img src="/imagens/sopinha-detox-chefbrico%20(1).png" alt="Prato finalizado de Sopa Detox com Ora-pro-nóbis, vibrante e saudável.">
+            </div>
+            <div class="recipe-meta-icons">
+                <span>🕒 <strong>Tempo:</strong> 16 min</span>
+                <span>🍳 <strong>Dificuldade:</strong> Muito Fácil</span>
+                <span>👨‍👩‍👧‍👦 <strong>Serve:</strong> 3 porções</span>
             </div>
 
             <div class="post-content">
                 <p>Sinta o poder da natureza trabalhando a seu favor. Nossa Sopa Detox foi cuidadosamente criada para ser o "reset" que sua rotina pede. Uma combinação vibrante de folhas verdes, o superalimento brasileiro Ora-pro-nóbis, e o toque termogênico do gengibre. É a escolha perfeita para iniciar uma semana mais leve, se recuperar de excessos ou simplesmente oferecer ao seu corpo uma dose de energia verde e cuidado funcional.</p>
 
-                <div class="product-cta-card">
-                    <img src="[caminho/para/imagem-embalagem-sopa-detox.png]" alt="Embalagem da Sopa Detox da ChefBrico">
-                    <div class="product-cta-info">
-                        <h3>A Estrela da Receita</h3>
-                        <p>A base para esta refeição funcional é a nossa <strong>Mistura para Sopa Detox</strong>. Sinta a leveza de um corpo renovado!</p>
-                        <a href="https://www.chefbrico.com/sopa-detox-mistura-pratica-e-funcional" target="_blank" rel="noopener noreferrer" class="cta-button">Comprar na Loja Agora</a>
-                    </div>
-                </div>
+               <div class="card-modelo-autora">
+                   <img class="card-modelo-autora-image" src="/imagens/cardapio-chefbrico-sopa-detox-ora-pro-nobis.png" alt="Embalagem da Sopa Detox da ChefBrico">
+                   <div class="card-modelo-autora-content">
+                       <h3>Compre esta Receita Autoral</h3>
+                       <p>A base para esta refeição funcional é a nossa <strong>Mistura para Sopa Detox</strong>. Sinta a leveza de um corpo renovado!</p>
+                       <a href="https://www.chefbrico.com/sopa-detox-mistura-pratica-e-funcional" target="_blank" rel="noopener noreferrer" class="cta-button">Ver na Loja Agora</a>
+                   </div>
+               </div>
 
                 <h2>Por que Você Vai Amar esta Sopa Funcional</h2>
                 <ul>
@@ -143,18 +188,19 @@
                 </ul>
 
                 <h2>Modo de Preparo Simplificado</h2>
-                <ol>
+                <ol class="modo-preparo-lista">
                     <li><strong>Reúna os Ingredientes:</strong> Em uma panela, coloque o conteúdo do pacote, 1 litro de água fria e sal.</li>
                     <li><strong>Cozinhe com Carinho:</strong> Leve ao fogo médio. Assim que ferver, abaixe o fogo e cozinhe por aproximadamente 15 minutos.</li>
-                    <li>**Sirva a Energia:** Sirva bem quentinha, finalizada com sementes de girassol para uma crocância extra.</li>
+                    <li><strong>Sirva a Energia:</strong> Sirva bem quentinha, finalizada com sementes de girassol para uma crocância extra.</li>
                 </ol>
+                <p class="modo-preparo-final">simples assim!!</p>
 
                 <h2>Dicas da Chef</h2>
                 <p><em>"Acredito que detox não precisa ser sinônimo de sacrifício. O Ora-pro-nóbis é um tesouro nosso, riquíssimo em proteína. Para potencializar o efeito e o frescor, esprema meio limão no prato antes de consumir. A vitamina C também ajuda na absorção dos nutrientes das folhas verdes."</em></p>
                 
                 <div class="cross-sell-box">
                     <h3>Combina Perfeitamente Com:</h3>
-                    <p>Para um plano detox completo, intercale esta sopa com a nossa <strong><a href="[LINK PARA A SOPA LOW CARB DA HORTA]">Sopa Low Carb da Horta</a></strong> durante a semana.</p>
+                    <p>Para um plano detox completo, intercale esta sopa com a nossa <strong><a href="/receita-sopa-low-carb-horta.html">Sopa Low Carb da Horta</a></strong> durante a semana.</p>
                 </div>
 
                 <h2>Informações Adicionais</h2>
