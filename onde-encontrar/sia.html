@@ -22,19 +22,8 @@
         .page-header-local h1 { font-size: 2.8em; margin-bottom: 15px; text-align: center; color: #5a3a30; }
         .page-header-local .subtitle { font-size: 1.3em; text-align: center; color: #666; max-width: 700px; margin: 0 auto 40px auto; }
         
-        /* NOVO BOTÃO DE VOLTAR (Como solicitado, estilo idêntico) */
         .back-to-hub-container { text-align: center; margin: 30px 0 40px 0; }
-        .back-to-hub-button {
-            background-color: #f0ead6;
-            color: #333;
-            padding: 10px 25px;
-            border-radius: 20px;
-            text-decoration: none;
-            font-size: 1.0em;
-            font-weight: bold;
-            transition: background-color 0.2s;
-            display: inline-block;
-        }
+        .back-to-hub-button { background-color: #f0ead6; color: #333; padding: 10px 25px; border-radius: 20px; text-decoration: none; font-size: 1.0em; font-weight: bold; transition: background-color 0.2s; display: inline-block; }
         .back-to-hub-button:hover { background-color: #e0d8c4; }
 
         .hybrid-cta-container { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 40px 0; }
@@ -47,7 +36,16 @@
         .depoimento-card .quote { font-style: italic; color: #555; }
         .depoimento-card .author { font-weight: bold; color: var(--cor-primaria); margin-top: 15px; display: block; }
 
-        /* Estilos do Bloco de Review GBP (Centralizado) */
+        /* ESTILO REUTILIZADO para a Nova Seção "Food Porn" */
+        .food-porn-section { background-color: #fdfcf7; border-top: 2px solid #f0ead6; padding: 50px 20px; margin-top: 60px; }
+        .estacao-card { border: 1px solid #eee; border-radius: 8px; overflow: hidden; background-color: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .estacao-postcard { width: 100%; height: 220px; /* Um pouco mais alto para Food Porn */ background-color: #f0f0f0; }
+        .estacao-postcard img { width: 100%; height: 100%; object-fit: cover; }
+        .estacao-content { padding: 20px; text-align: center; }
+        .estacao-content h3 { color: var(--cor-primaria); margin-top: 0; font-size: 1.1em; text-transform: uppercase; }
+        .estacao-content h4 { color: var(--cor-titulos); font-size: 1.5em; margin-top: 5px; margin-bottom: 10px; }
+        /* Fim do estilo reutilizado */
+
         .review-cta-section-v2 { background-color: #fdfcf7; border: 1px solid #f0ead6; border-radius: 8px; margin-top: 60px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
         .review-banner-image img { width: 100%; height: auto; display: block; }
         .review-cta-content { padding: 40px 25px; text-align: center !important; }
@@ -93,20 +91,42 @@
           {
             "@type": "Review",
             "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-            "reviewBody": "Salvou minha semana! O risoto de cogumelos é incrível e ficou pronto em 5 minutos.",
+            "reviewBody": "Salvou minha semana! O risoto de cogumelos é incrível.",
             "author": {"@type": "Person", "name": "Juliana M."}
           },
           {
             "@type": "Review",
             "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-            "reviewBody": "As sopas funcionais são maravilhosas, especialmente no friozinho de Brasília.",
+            "reviewBody": "As sopas funcionais são maravilhosas, especialmente no friozinho.",
             "author": {"@type": "Person", "name": "Fernanda R."}
           },
           {
             "@type": "Review",
             "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-            "reviewBody": "Falar com a Conceição pelo WhatsApp é como falar com uma amiga. Ela entende tudo.",
+            "reviewBody": "Falar com a Conceição pelo WhatsApp é como falar com uma amiga.",
             "author": {"@type": "Person", "name": "Carla S."}
+          }
+        ],
+        "offers": [
+          {
+            "@type": "Product",
+            "name": "[PRODUTO DESTAQUE 1 - EX: Risoto de Cogumelos]",
+            "image": "https://receitas.chefbrico.com/imagens/food-porn/regiao-produto-1.jpg"
+          },
+          {
+            "@type": "Product",
+            "name": "[PRODUTO DESTAQUE 2 - EX: Sopa Detox]",
+            "image": "https://receitas.chefbrico.com/imagens/food-porn/regiao-produto-2.jpg"
+          },
+          {
+            "@type": "Product",
+            "name": "[PRODUTO DESTAQUE 3 - EX: Antepasto de Berinjela]",
+            "image": "https://receitas.chefbrico.com/imagens/food-porn/regiao-produto-3.jpg"
+          },
+          {
+            "@type": "Product",
+            "name": "[PRODUTO DESTAQUE 4 - EX: Goiabada Cascão]",
+            "image": "https://receitas.chefbrico.com/imagens/food-porn/regiao-produto-4.jpg"
           }
         ]
       },
@@ -161,11 +181,10 @@
     <div id="todos-parceiros" class="post-content content-centered" style="margin-top: 40px; padding-top: 40px; border-top: 1px solid #eee;">
         <h2 style="text-align: center;">Nossos Parceiros em [NOME DA REGIÃO]</h2>
         <p style="text-align: center; max-width: 700px; margin: 15px auto 40px auto; font-size: 1.1em; color: #555;">
-            Encontre uma seleção dos nossos produtos nestes estabelecimentos incríveis na região.
+            (PLACEHOLDER: Apague esta seção inteira se não houver parceiros nesta região. Caso contrário, preencha os acordeões abaixo.)
         </p>
         
         <div class="faq-section" style="margin-top: 40px;">
-            
             <div class="faq-item-accordion">
                 <button class="accordion-header"><h3>NOME DO PARCEIRO LOCAL (Bairro)</h3><span class="icon">▼</span></button>
                 <div class="accordion-content"><p><strong>Endereço:</strong> Endereço completo do parceiro aqui.</p></div>
@@ -178,29 +197,72 @@
         <div class="container">
             <h2 class="text-center mb-4">O que nossas fãs da região dizem</h2>
             <div class="carousel-container">
-                
                 <div class="carousel-card depoimento-card">
                     <img src="/imagens/depoimentos/cliente-regiao-1.jpg" alt="Depoimento cliente ChefBrico [Nome da Região]">
                     <p class="quote">"[PLACEHOLDER: Depoimento da Cliente 1]"</p>
                     <span class="author">[Nome da Cliente] - [Bairro da Região]</span>
                 </div>
-                
                 <div class="carousel-card depoimento-card">
                     <img src="/imagens/depoimentos/cliente-regiao-2.jpg" alt="Depoimento cliente ChefBrico [Nome da Região]">
                     <p class="quote">"[PLACEHOLDER: Depoimento da Cliente 2]"</p>
                     <span class="author">[Nome da Cliente] - [Bairro da Região]</span>
                 </div>
-                
                 <div class="carousel-card depoimento-card">
                     <img src="/imagens/depoimentos/cliente-regiao-3.jpg" alt="Depoimento cliente ChefBrico [Nome da Região]">
                     <p class="quote">"[PLACEHOLDER: Depoimento da Cliente 3]"</p>
                     <span class="author">[Nome da Cliente] - [Bairro da Região]</span>
                 </div>
-
             </div>
         </div>
     </section>
 
+    <section class="food-porn-section">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5em; color: var(--cor-primaria); margin-bottom: 15px;">Os Queridinhos da [NOME DA REGIÃO]</h2>
+            <p style="text-align: center; font-size: 1.2em; max-width: 600px; margin: 0 auto 50px auto; color: #555;">
+                [PLACEHOLDER: Texto persuasivo. Ex: "Cada região tem seus favoritos! Vimos que o pessoal de [NOME DA REGIÃO] não abre mão da praticidade dos nossos risotos para o jantar e das sopas leves..."]
+            </p>
+
+            <div class="carousel-container">
+                <div class="carousel-card estacao-card">
+                    <div class="estacao-postcard">
+                        <img src="/imagens/food-porn/regiao-produto-1.jpg" alt="[PLACEHOLDER: Alt da Imagem]">
+                    </div>
+                    <div class="estacao-content">
+                        <h4>[Produto A - EX: Risoto de Cogumelos]</h4>
+                        <p>[Breve descrição persuasiva do produto]</p>
+                    </div>
+                </div>
+                <div class="carousel-card estacao-card">
+                    <div class="estacao-postcard">
+                        <img src="/imagens/food-porn/regiao-produto-2.jpg" alt="[PLACEHOLDER: Alt da Imagem]">
+                    </div>
+                    <div class="estacao-content">
+                        <h4>[Produto B - EX: Sopa Detox]</h4>
+                        <p>[Breve descrição persuasiva do produto]</p>
+                    </div>
+                </div>
+                <div class="carousel-card estacao-card">
+                    <div class="estacao-postcard">
+                        <img src="/imagens/food-porn/regiao-produto-3.jpg" alt="[PLACEHOLDER: Alt da Imagem]">
+                    </div>
+                    <div class="estacao-content">
+                        <h4>[Produto C - EX: Antepasto de Berinjela]</h4>
+                        <p>[Breve descrição persuasiva do produto]</p>
+                    </div>
+                </div>
+                <div class="carousel-card estacao-card">
+                    <div class="estacao-postcard">
+                        <img src="/imagens/food-porn/regiao-produto-4.jpg" alt="[PLACEHOLDER: Alt da Imagem]">
+                    </div>
+                    <div class="estacao-content">
+                        <h4>[Produto D - EX: Goiabada Cascão]</h4>
+                        <p>[Breve descrição persuasiva do produto]</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="review-cta-section-v2">
         <div class="review-banner-image">
             <img src="/imagens/uma-maozinha-chefbrico-1.png" alt="Maria Conceição, fundadora da ChefBrico">
