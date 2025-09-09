@@ -1,7 +1,7 @@
 {
   "name": "chefbrico-hub-de-autoridade",
   "version": "1.0.0",
-  "description": "Hub de autoridade do ChefBrico par SEO",
+  "description": "Hub de autoridade do ChefBrico para SEO",
   "main": "index.js",
   "scripts": {
     "build": "eleventy",
