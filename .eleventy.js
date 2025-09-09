@@ -1,5 +1,15 @@
-// .eleventy.js - O Motor da nossa Arquitetura Inteligente
+// A primeira linha importa o plugin que vai gerar o sitemap.
+const sitemap = require("@quasibit/eleventy-plugin-sitemap");
+
 module.exports = function(eleventyConfig) {
+
+  // NOVA INSTRUÇÃO PARA O SITEMAP:
+  // Aqui, instalamos e configuramos o plugin, dizendo a ele qual é o endereço principal do seu site.
+  eleventyConfig.addPlugin(sitemap, {
+    sitemap: {
+      hostname: "https://receitas.chefbrico.com",
+    },
+  });
   
   // INSTRUÇÃO EXPLÍCITA: Copie estas pastas, como estão, para o site final.
   eleventyConfig.addPassthroughCopy("./css");
