@@ -1,4 +1,4 @@
-// A primeira linha importa o plugin que vai gerar o sitemap.
+// A primeira linha importa  o plugin que vai gerar o sitemap.
 const sitemap = require("@quasibit/eleventy-plugin-sitemap");
 
 module.exports = function(eleventyConfig) {
