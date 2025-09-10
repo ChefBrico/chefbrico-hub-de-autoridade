@@ -1,23 +1,4 @@
-Perfeito\! Próximo da fábrica: `receita-sopa-biza-vo.html`.
 
-Este arquivo é um exemplo fantástico de E-A-T e YMYL. Ele não está apenas vendendo uma sopa; ele está respondendo a perguntas complexas sobre saúde ("macarrão funcional", "amido resistente", "bom para crianças").
-
-Apliquei nosso processo "Padrão Ouro v1.2" completo:
-
-1.  **Layout (Vitrine):** Reconstruí todo o HTML antigo (que usava `.article-hero-image-container` e `<ol>` simples) para usar o **Layout Padrão Ouro (do Pomodori)**. Adicionei os ícones de meta-dados (`.recipe-meta-icons`) que faltavam e padronizei o CTA para **"Compre esta Receita Autoral"**.
-2.  **Conteúdo:** Migrei todo o seu conteúdo único: os textos (H1 "O Aconchego da Infância..."), a "Dica da Chef" sobre limão, o cross-sell (sobre tofu) e o excelente FAQ que define "macarrão funcional" (isso é puro E-A-T\!).
-3.  **Correção de Dados (E-A-T):** Corrigi a inconsistência dos depoimentos. O JSON antigo citava "Carla F.", mas o HTML visível (a "Vitrine") citava "Roberta P.". Usei o depoimento de **"Roberta P."** no novo Schema para alinhar 100% o que a IA lê e o que o humano vê.
-4.  **Upgrade de Schema (v1.2):** Criei o Grafo v1.2 completo. Injetei todos os seus dados ricos (SKU, 4.6/28 reviews, `suitableForDiet` incluindo `LowCalorieDiet`, e o `knownAllergen`).
-5.  **Injeção de Keywords:** Busquei as `keywords` corretas no `cardapio.html` ("para-familia", "conforto", "kids") e as adicionei ao schema.
-6.  **Conexão de Silo (Nível 2):** Conectei esta receita ao seu hub de categoria correto: `"isPartOf": { "@id": "https://receitas.chefbrico.com/sopas-funcionais.html" }`.
-
-Aqui está o arquivo completo e finalizado, pronto para salvar como `receita-sopa-biza-vo.html`.
-
------
-
-### Código Completo: receita-sopa-biza-vo.html (Padrão Ouro v1.2)
-
-```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -78,12 +59,35 @@ Aqui está o arquivo completo e finalizado, pronto para salvar como `receita-sop
         },
         "suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VeganDiet", "https://schema.org/VegetarianDiet", "https://schema.org/LowCalorieDiet"],
         "knownAllergen": "Pode conter traços de castanhas.", 
-
-        "recipeIngredient": [
-          "1 pacote (105g) de Mistura para Sopinha da Biza Vó ChefBrico",
-          "1000ml (1 litro) de água fria",
-          "Sal a gosto",
-          "1 fio de azeite (opcional)"
+"recipeIngredient": [
+  {
+    "@type": "HowToSupply",
+    "name": "Mistura para Sopinha da Biza Vó ChefBrico",
+    "requiredQuantity": {
+      "@type": "QuantitativeValue",
+      "value": "1",
+      "unitText": "pacote (105g)"
+    }
+  },
+  {
+    "@type": "HowToSupply",
+    "name": "água fria",
+    "requiredQuantity": {
+      "@type": "QuantitativeValue",
+      "value": "1000",
+      "unitText": "ml (1 litro)"
+    }
+  },
+  {
+    "@type": "HowToSupply",
+    "name": "Sal",
+    "requiredQuantity": "a gosto"
+  },
+  {
+    "@type": "HowToSupply",
+    "name": "1 fio de azeite (opcional)"
+  }
+],
         ],
         "recipeInstructions": [
           { "@type": "HowToStep", "text": "Em uma panela, adicione o conteúdo do pacote e 1.000ml de água fria. Tempere com sal." },
@@ -259,4 +263,4 @@ Aqui está o arquivo completo e finalizado, pronto para salvar como `receita-sop
 
 </body>
 </html>
-```
+
