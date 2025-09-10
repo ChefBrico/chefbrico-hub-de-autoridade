@@ -59,12 +59,40 @@
         "suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VeganDiet", "https://schema.org/VegetarianDiet"],
         "knownAllergen": "Pode conter traços de castanhas.", 
 
-        "recipeIngredient": [
-          "1 pacote (180g) de Mistura para Baião de Dois Integral ChefBrico",
-          "1000ml (1 litro) de água fria",
-          "1 fio de azeite",
-          "Sal a gosto",
-          "Coentro ou cheiro-verde fresco picado"
+      "recipeIngredient": [
+  {
+    "@type": "HowToSupply",
+    "name": "Mistura para Baião de Dois Integral ChefBrico",
+    "requiredQuantity": {
+      "@type": "QuantitativeValue",
+      "value": "1",
+      "unitText": "pacote (180g)"
+    }
+  },
+  {
+    "@type": "HowToSupply",
+    "name": "água fria",
+    "requiredQuantity": {
+      "@type": "QuantitativeValue",
+      "value": "1000",
+      "unitText": "ml (1 litro)"
+    }
+  },
+  {
+    "@type": "HowToSupply",
+    "name": "azeite",
+    "requiredQuantity": "1 fio"
+  },
+  {
+    "@type": "HowToSupply",
+    "name": "Sal",
+    "requiredQuantity": "a gosto"
+  },
+  {
+    "@type": "HowToSupply",
+    "name": "Coentro ou cheiro-verde fresco picado (para finalizar)"
+  }
+],
         ],
         "recipeInstructions": [
           { "@type": "HowToStep", "text": "Aqueça um fio de azeite e refogue o conteúdo do pacote por 1 minuto para liberar os aromas." },
