@@ -58,11 +58,39 @@
         },
         "suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VeganDiet", "https://schema.org/VegetarianDiet"],
         "recipeIngredient": [
-          "1 pacote (180g) de Mistura para Risoto de Paella Veg. ChefBrico",
-          "720ml de água fria",
-          "1 fio de azeite",
-          "Sal a gosto",
-          "Rodelas de limão siciliano"
+  {
+    "@type": "HowToSupply",
+    "name": "Mistura para Risoto de Paella Veg. ChefBrico",
+    "requiredQuantity": {
+      "@type": "QuantitativeValue",
+      "value": "1",
+      "unitText": "pacote (180g)"
+    }
+  },
+  {
+    "@type": "HowToSupply",
+    "name": "água fria",
+    "requiredQuantity": {
+      "@type": "QuantitativeValue",
+      "value": "720",
+      "unitText": "ml"
+    }
+  },
+  {
+    "@type": "HowToSupply",
+    "name": "azeite",
+    "requiredQuantity": "1 fio"
+  },
+  {
+    "@type": "HowToSupply",
+    "name": "Sal",
+    "requiredQuantity": "a gosto"
+  },
+  {
+    "@type": "HowToSupply",
+    "name": "Rodelas de limão siciliano (para servir)"
+  }
+],
         ],
         "recipeInstructions": [
           { "@type": "HowToStep", "text": "Aqueça um fio de azeite e refogue o conteúdo do pacote por 1 minuto para liberar os aromas das especiarias." },
