@@ -25,48 +25,54 @@
     </script>
     
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Article",
-          "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://receitas.chefbrico.com/nossa-filosofia.html"
-          },
-          "headline": "A Trilha da ChefBrico: A História e Filosofia por Trás da Comida de Verdade",
-          "image": "/imagens/maria-conceicao-premio-sebrae-2023-chefbrico.jpg",
-          "datePublished": "2017-04-01T08:00:00-03:00",
-          "dateModified": "2025-09-05T10:00:00-03:00",
-          "author": {
-            "@type": "Person",
-            "name": "Maria Conceição",
-            "url": "https://receitas.chefbrico.com/nossa-filosofia.html#autora"
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "ChefBrico",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "/imagens/flamula-logo-chefbrico.png"
-            }
-          },
-          "description": "A jornada de 6 anos da empreendedora Maria Conceição. Descubra como a ChefBrico evoluiu de uma pequena produção de cogumelos para uma referência em alimentação prática e saudável em Brasília."
-        },
-        {
-          "@type": "Person",
-          "@id": "https://receitas.chefbrico.com/nossa-filosofia.html#autora",
-          "name": "Maria Conceição",
-          "jobTitle": "Fundadora e Chef de Criação",
-          "image": "/imagens/maria-conceicao-pra-voce.png",
-          "worksFor": {
-            "@type": "Organization",
-            "name": "ChefBrico"
-          }
-        }
-      ]
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://receitas.chefbrico.com/nossa-filosofia.html"
+      },
+      "headline": "A Trilha da ChefBrico: A História e Filosofia por Trás da Comida de Verdade",
+      "image": "https://receitas.chefbrico.com/imagens/maria-conceicao-premio-sebrae-2023-chefbrico.jpg", // URL Absoluto
+      "datePublished": "2017-04-01T08:00:00-03:00",
+      "dateModified": "2025-09-10T11:00:00-03:00", // Data atualizada para hoje
+      "author": {
+        "@id": "https://receitas.chefbrico.com/#person-maria" // Conexão com o ID da pessoa
+      },
+      "publisher": {
+         "@id": "https://receitas.chefbrico.com/#organization" // Conexão com o ID da organização
+      },
+      "description": "A jornada de 6 anos da empreendedora Maria Conceição. Descubra como a ChefBrico evoluiu de uma pequena produção de cogumelos para uma referência em alimentação prática e saudável em Brasília, culminando no Prêmio Sebrae Mulher de Negócios."
+    },
+    {
+      "@type": "Person",
+      "@id": "https://receitas.chefbrico.com/#person-maria", // ID único e consistente
+      "name": "Maria Conceição",
+      "jobTitle": "Fundadora e Chef de Criação",
+      "image": "https://receitas.chefbrico.com/imagens/maria-conceicao-pra-voce.png", // URL Absoluto
+      "worksFor": {
+        "@id": "https://receitas.chefbrico.com/#organization" // Conexão com o ID da organização
+      },
+      "sameAs": [ // Lista completa para consistência
+          "https://www.instagram.com/chefbrico",
+          "https://br.pinterest.com/chefbrico/",
+          "https://www.facebook.com/chefbrico",
+          "https://www.google.com/search?kgmid=/g/11g140fcnw"
+      ],
+      "award": "Prêmio Sebrae Mulher de Negócios DF 2023" // <-- MELHORIA CRÍTICA!
+    },
+    {
+      // Adicionamos a Organização aqui para ser referenciada
+      "@type": "FoodEstablishment",
+      "@id": "https://receitas.chefbrico.com/#organization",
+      "name": "ChefBrico",
+      "logo": "https://receitas.chefbrico.com/imagens/flamula-logo-chefbrico.png" // URL Absoluto
     }
-    </script>
+  ]
+}
+</script>
 </head>
 <body class="nossa-filosofia-page">
 
