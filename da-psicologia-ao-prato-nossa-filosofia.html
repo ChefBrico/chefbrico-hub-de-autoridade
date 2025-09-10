@@ -25,54 +25,62 @@
     </script>
     
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Article",
-          "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://receitas.chefbrico.com/da-psicologia-ao-prato-nossa-filosofia.html"
-          },
-          "headline": "Da Psicologia ao Prato: A História e Filosofia por Trás da ChefBrico",
-          "image": {
-            "@type": "ImageObject",
-            "url": "/imagens/sebrae-premio-mulher-negocio-maria-conceicao.png",
-            "width": 1200,
-            "height": 675
-          },
-          "datePublished": "2025-08-12T09:00:00-03:00",
-          "dateModified": "2025-09-05T12:00:00-03:00",
-          "author": {
-            "@type": "Person",
-            "name": "Maria Conceição",
-            "url": "https://receitas.chefbrico.com/nossa-filosofia.html#autora"
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "ChefBrico",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "/imagens/flamula-logo-chefbrico.png"
-            }
-          },
-          "description": "Descubra como a formação em psicologia de Maria Conceição moldou a missão da ChefBrico de nutrir corpo e alma através da comida de verdade, prática e afetiva."
-        },
-        {
-          "@type": "Person",
-          "@id": "https://receitas.chefbrico.com/nossa-filosofia.html#autora",
-          "name": "Maria Conceição",
-          "jobTitle": "Fundadora e Chef de Criação",
-          "image": "/imagens/maria-conceicao-pra-voce.png",
-          "worksFor": {
-            "@type": "Organization",
-            "name": "ChefBrico"
-          },
-          "award": "Prêmio Sebrae Mulher de Negócios DF 2023"
-        }
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://receitas.chefbrico.com/da-psicologia-ao-prato-nossa-filosofia.html"
+      },
+      "headline": "Da Psicologia ao Prato: A História e Filosofia por Trás da ChefBrico",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://receitas.chefbrico.com/imagens/sebrae-premio-mulher-negocio-maria-conceicao.png",
+        "width": 1200,
+        "height": 675
+      },
+      "datePublished": "2025-08-12T09:00:00-03:00",
+      "dateModified": "2025-09-10T11:10:00-03:00", // Data atualizada
+      "author": {
+        "@id": "https://receitas.chefbrico.com/#person-maria" // Conexão mais forte
+      },
+      "publisher": {
+        "@id": "https://receitas.chefbrico.com/#organization" // Conexão mais forte
+      },
+      "description": "Descubra como a formação em psicologia de Maria Conceição moldou a missão da ChefBrico de nutrir corpo e alma através da comida de verdade, prática e afetiva.",
+      "about": [
+        { "@id": "https://receitas.chefbrico.com/#person-maria" },
+        { "@id": "https://receitas.chefbrico.com/#organization" }
       ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://receitas.chefbrico.com/#person-maria",
+      "name": "Maria Conceição",
+      "jobTitle": "Fundadora e Chef de Criação",
+      "image": "https://receitas.chefbrico.com/imagens/maria-conceicao-pra-voce.png",
+      "worksFor": {
+        "@id": "https://receitas.chefbrico.com/#organization"
+      },
+      "award": "Prêmio Sebrae Mulher de Negócios DF 2023",
+      "sameAs": [
+          "https://www.instagram.com/chefbrico",
+          "https://br.pinterest.com/chefbrico/",
+          "https://www.facebook.com/chefbrico",
+          "https://www.google.com/search?kgmid=/g/11g140fcnw"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://receitas.chefbrico.com/#organization",
+      "name": "ChefBrico",
+      "logo": "https://receitas.chefbrico.com/imagens/flamula-logo-chefbrico.png"
     }
-    </script>
+  ]
+}
+</script>
 </head>
 <body>
 
