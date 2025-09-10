@@ -28,137 +28,43 @@
     </script>
     
     <script type="application/ld+json">
-    [
-      {
-        "@context": "https://schema.org/",
-        "@type": "Recipe",
-        "name": "Receita Rápida: Baião de Dois Integral e Vegano ChefBrico",
-        "author": {
-          "@id": "https://receitas.chefbrico.com/#person-maria"
-        },
-        "isPartOf": {
-          "@id": "https://receitas.chefbrico.com/refeicoes-praticas.html"
-        },
-        "datePublished": "2025-08-10",
-        "description": "Aprenda a fazer o Baião de Dois Integral da ChefBrico. Uma releitura saudável, vegana, sem glúten e 100% natural do clássico brasileiro, com toque defumado de shiitake.",
-        "image": "/imagens/chefbrico-Refeic%CC%A7a%CC%83o-baiao-2%20(1080%20x%20566%20px).png",
-        "keywords": "refeicao, baiao de dois, vegano, sem-gluten, para-familia, dia-a-dia, marmita-inteligente, brasileiro, integral",
-        "prepTime": "PT1M",
-        "cookTime": "PT45M",
-        "totalTime": "PT46M",
-        "recipeYield": "2 porções generosas",
-        "recipeCuisine": "Brasileira",
-        "nutrition": { 
-            "@type": "NutritionInformation", 
-            "servingSize": "90 g", 
-            "calories": "410 kcal", 
-            "proteinContent": "15 g", 
-            "carbohydrateContent": "70 g", 
-            "fiberContent": "12 g" 
-        },
-        "suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VeganDiet", "https://schema.org/VegetarianDiet"],
-        "knownAllergen": "Pode conter traços de castanhas.", 
-
-      "recipeIngredient": [
-  {
-    "@type": "HowToSupply",
-    "name": "Mistura para Baião de Dois Integral ChefBrico",
-    "requiredQuantity": {
-      "@type": "QuantitativeValue",
-      "value": "1",
-      "unitText": "pacote (180g)"
-    }
-  },
-  {
-    "@type": "HowToSupply",
-    "name": "água fria",
-    "requiredQuantity": {
-      "@type": "QuantitativeValue",
-      "value": "1000",
-      "unitText": "ml (1 litro)"
-    }
-  },
-  {
-    "@type": "HowToSupply",
-    "name": "azeite",
-    "requiredQuantity": "1 fio"
-  },
-  {
-    "@type": "HowToSupply",
-    "name": "Sal",
-    "requiredQuantity": "a gosto"
-  },
-  {
-    "@type": "HowToSupply",
-    "name": "Coentro ou cheiro-verde fresco picado (para finalizar)"
-  }
-],
-        ],
-        "recipeInstructions": [
-          { "@type": "HowToStep", "text": "Aqueça um fio de azeite e refogue o conteúdo do pacote por 1 minuto para liberar os aromas." },
-          { "@type": "HowToStep", "text": "Adicione 1 litro de água fria e sal a gosto. Cozinhe em fogo baixo, com a panela semi-tampada, por cerca de 45 minutos." },
-          { "@type": "HowToStep", "text": "Finalize com coentro ou cheiro-verde fresco picado e, se desejar, umas gotas de pimenta." }
-        ],
-        /* CORREÇÃO E-A-T: Usando o review "Fernanda R." que está visível no HTML */
-        "review": {
-            "@type": "Review",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5" }, /* Baseado no texto */
-            "author": { "@type": "Person", "name": "Fernanda R." },
-            "reviewBody": "Esse Baião de Dois virou o coringa aqui em casa. As crianças amam e eu fico tranquila por saber que é super nutritivo. Salvação para a rotina da família!"
-        },
-        "mainEntityOfPage": {
-          "@type": "Product",
-          "name": "Mistura para Baião de Dois com Grãos Integrais",
-          "description": "O clássico Baião de Dois em uma versão integral, vegana e saudável! Nossa mistura prática com um toque defumado de shiitake é 100% natural e cheia de sabor.",
-          "brand": { "@type": "Brand", "name": "ChefBrico" },
-          "sku": "REF-BAI-002",
-          "image": "/refeicoes-praticas/baiao-de-2-refeicao-pratica-chefbrico.png",
-          "keywords": "refeicao, baiao de dois, vegano, sem-gluten, para-familia, brasileiro",
-          "knownAllergen": "Pode conter traços de castanhas.",
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "reviewCount": "12"
-          },
-          "offers": {
-            "@type": "Offer",
-            "url": "https://www.chefbrico.com/baiao-de-2-graos-integrais",
-            "priceCurrency": "BRL",
-            "price": "34.80",
-            "availability": "https://schema.org/InStock",
-            "shippingDetails": {
-              "@type": "OfferShippingDetails",
-              "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "BR" },
-              "deliveryTime": {
-                "@type": "ShippingDeliveryTime",
-                "handlingTime": { "@type": "QuantitativeValue", "minValue": "1", "maxValue": "2", "unitCode": "DAY" },
-                "transitTime": { "@type": "QuantitativeValue", "minValue": "3", "maxValue": "10", "unitCode": "DAY" }
-              },
-              "carrier": { "@type": "Organization", "name": "Correios" }
-            }
-          }
-        }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Recipe",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://receitas.chefbrico.com/receita-baiao-de-dois.html"
       },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "@id": "https://receitas.chefbrico.com/#person-maria", 
-        "name": "Maria Conceição",
-        "jobTitle": "Fundadora e Chef de Criação",
-        "description": "Empreendedora e autora de todas as receitas autorais da ChefBrico.",
-        "url": "https://receitas.chefbrico.com/nossa-filosofia.html",
-        "sameAs": [
-          "https://wa.me/5561996659880",
-          "https://www.instagram.com/chefbrico/"
-        ],
-        "funderOf": {
-          "@type": "FoodEstablishment",
-          "name": "ChefBrico",
-          "url": "https://www.chefbrico.com"
-        }
-      }
-    ]
-    </script>
+      "name": "Receita Rápida: Baião de Dois Integral e Vegano ChefBrico",
+      "author": {
+        "@id": "https://receitas.chefbrico.com/#person-maria-conceicao"
+      },
+      "publisher": {
+         "@id": "https://receitas.chefbrico.com/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://receitas.chefbrico.com/refeicoes-praticas.html"
+      },
+      "datePublished": "2025-08-10",
+      "dateModified": "2025-09-10",
+      "description": "Aprenda a fazer o Baião de Dois Integral da ChefBrico. Uma releitura saudável, vegana, sem glúten e 100% natural do clássico brasileiro, com toque defumado de shiitake.",
+      "image": "https://receitas.chefbrico.com/imagens/chefbrico-Refeic%CC%A7a%CC%83o-baiao-2%20(1080%20x%20566%20px).png",
+      "keywords": "refeicao, baiao de dois, vegano, sem-gluten, para-familia, dia-a-dia, marmita-inteligente, brasileiro, integral",
+      "prepTime": "PT1M",
+      "cookTime": "PT45M",
+      "totalTime": "PT46M",
+      "recipeYield": "2 porções generosas",
+      "recipeCuisine": "Brasileira",
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "servingSize": "90 g",
+        "calories": "410 kcal",
+        "proteinContent": "15 g",
+        "carbohydrateContent": "70 g",
+        "fiberContent": "12 g"
+      },
 </head>
 <body>
 
