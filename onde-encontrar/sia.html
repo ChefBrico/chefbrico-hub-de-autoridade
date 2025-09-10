@@ -59,93 +59,80 @@
         }
     </style>
 
-    <script type="application/ld+json">
-    [
-      {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "ChefBrico no SIA: Delivery Rápido de Comida Prática",
-        "url": "https://receitas.chefbrico.com/onde-encontrar/sia.html",
-        "description": "Delivery da ChefBrico no SIA. Peça online refeições saudáveis e práticas para sua rotina de trabalho. Simplifique seu dia.",
-        "isPartOf": {
-          "@id": "https://receitas.chefbrico.com/onde-encontrar.html"
-        }
+   <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": "ChefBrico no SIA: Delivery Rápido de Comida Prática para o Trabalho",
+      "url": "https://receitas.chefbrico.com/onde-encontrar/sia.html",
+      "description": "Delivery da ChefBrico no SIA. Peça online refeições saudáveis e práticas para sua rotina de trabalho. Simplifique seu dia e receba no seu endereço.",
+      "isPartOf": {
+        "@id": "https://receitas.chefbrico.com/onde-encontrar.html"
       },
-      {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "serviceType": "DeliveryService",
-        "name": "Delivery ChefBrico para o SIA",
-        "areaServed": [
-          { "@type": "Place", "name": "SIA - Setor de Indústria e Abastecimento, Brasília, DF" }
-        ],
-        "provider": {
-          "@type": "FoodEstablishment",
-          "name": "ChefBrico",
-          "url": "https://www.chefbrico.com"
-        },
-        "review": [
-          {
-            "@type": "Review",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-            "reviewBody": "[PLACEHOLDER: Depoimento 1 de cliente do SIA]",
-            "author": {"@type": "Person", "name": "Cliente - SIA"}
-          },
-          {
-            "@type": "Review",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-            "reviewBody": "[PLACEHOLDER: Depoimento 2 de cliente do SIA]",
-            "author": {"@type": "Person", "name": "Empresário(a) - SIA"}
-          },
-          {
-            "@type": "Review",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-            "reviewBody": "[PLACEHOLDER: Depoimento 3 de cliente da região]",
-            "author": {"@type": "Person", "name": "Fã da ChefBrico"}
-          }
-        ],
-        "offers": [
+      "publisher": {
+         "@id": "https://receitas.chefbrico.com/#organization"
+      }
+    },
+    {
+      "@type": "Service",
+      "mainEntityOfPage": {
+        "@id": "https://receitas.chefbrico.com/onde-encontrar/sia.html"
+      },
+      "name": "Delivery ChefBrico para o SIA",
+      "serviceType": "Entrega de Refeições para Empresas e Escritórios",
+      "areaServed": {
+        "@type": "Place",
+        "name": "SIA - Setor de Indústria e Abastecimento, Brasília, DF"
+      },
+      "provider": {
+        "@id": "https://receitas.chefbrico.com/#organization"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+        "reviewBody": "[PLACEHOLDER: A ChefBrico salvou a hora do almoço na minha empresa aqui no SIA. Comida de verdade, rápida e que dá energia para o resto do dia!]",
+        "author": {"@type": "Person", "name": "Empresário(a) do SIA"}
+      },
+      "offers": {
+        "@type": "Offer",
+        "name": "Favoritos para a Rotina de Trabalho no SIA",
+        "itemOffered": [
           {
             "@type": "Product",
-            "name": "[PRODUTO 1 - Ex: Refeição Mediterrânea]",
-            "image": "https://receitas.chefbrico.com/refeicoes-praticas/refeicao-mediterranea-chefbrico.png"
+            "name": "Refeição Mediterrânea",
+            "image": "https://receitas.chefbrico.com/imagens/refeicoes-praticas/refeicao-mediterranea-chefbrico.png"
           },
           {
             "@type": "Product",
-            "name": "[PRODUTO 2 - Ex: Sopa Detox]",
-            "image": "https://receitas.chefbrico.com/imagens/low-carb-vegetais-sopa-chefbrico.png"
+            "name": "Sopa Detox",
+            "image": "https://receitas.chefbrico.com/imagens/sopas-funcionais/sopa-detox-chefbrico.png"
           },
           {
             "@type": "Product",
-            "name": "[PRODUTO 3 - Ex: Arrozes Especiais]",
-            "image": "https://receitas.chefbrico.com/refeicoes-praticas/Refeicao-arroz-negro-funghi-chefbrico.png"
-          },
-          {
-            "@type": "Product",
-            "name": "[PLACEHOLDER QUARTO PRODUTO]",
-            "image": "https://receitas.chefbrico.com/imagens/food-porn/regiao-produto-4.jpg"
+            "name": "Arrozes Especiais",
+            "image": "https://receitas.chefbrico.com/imagens/refeicoes-praticas/Refeicao-arroz-negro-funghi-chefbrico.png"
           }
         ]
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Maria Conceição",
-        "jobTitle": "Fundadora e Chef",
-        "description": "Empreendedora e autora das receitas da ChefBrico.",
-        "url": "https://receitas.chefbrico.com/onde-encontrar.html",
-        "sameAs": [
-          "https://wa.me/5561996659880",
-          "https://www.instagram.com/chefbrico/"
-        ],
-        "funderOf": {
-          "@type": "FoodEstablishment",
-          "name": "ChefBrico",
-          "url": "https://www.chefbrico.com"
-        }
       }
-    ]
-    </script>
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://receitas.chefbrico.com/#organization",
+      "name": "ChefBrico",
+      "founder": {
+        "@id": "https://receitas.chefbrico.com/#person-maria-conceicao"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://receitas.chefbrico.com/#person-maria-conceicao",
+      "name": "Maria Conceição"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
