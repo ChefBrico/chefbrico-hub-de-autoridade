@@ -24,41 +24,57 @@
       gtag('config', 'G-K58FN8J2VC');
     </script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Revista Digital ChefBrico",
-  "url": "https://receitas.chefbrico.com/",
-  "about": "Comida de Verdade, Sem Confusão na Cozinha. Receitas, dicas e filosofia da ChefBrico para uma vida mais prática e saudável.",
-  "publisher": {
-    "@type": "Organization",
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Revista Digital da ChefBrico",
+    "url": "https://receitas.chefbrico.com/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://receitas.chefbrico.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FoodEstablishment",
+    "@id": "https://receitas.chefbrico.com/#organization",
     "name": "ChefBrico",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://receitas.chefbrico.com/imagens/logo-chefbrico.png"
+    "url": "https://www.chefbrico.com",
+    "logo": "https://receitas.chefbrico.com/imagens/flamula-chefbrico.png",
+    "sameAs": [
+      "https://www.instagram.com/chefbrico",
+      "https://br.pinterest.com/chefbrico/",
+      "https://www.facebook.com/chefbrico",
+      "https://www.google.com/search?kgmid=/g/11g140fcnw"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua 5, Chácara 122, Lote 17, Loja 2",
+      "addressLocality": "Vicente Pires",
+      "addressRegion": "DF",
+      "postalCode": "72006-060",
+      "addressCountry": "BR"
     },
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+55-XX-YYYY-ZZZZ", // Substitua pelo seu telefone
+      "telephone": "+5561996659880",
       "contactType": "customer service"
-    },
-    "sameAs": [
-      "https://www.instagram.com/chefbrico", // Substitua pelo seu Instagram
-      "https://www.facebook.com/chefbrico"  // Substitua pelo seu Facebook
-    ]
-  },
+   },
   "mainEntityOfPage": {
     "@type": "Person",
     "name": "Maria Conceição",
     "jobTitle": "Fundadora e Chef",
     "url": "https://receitas.chefbrico.com/nossa-filosofia.html", // Link para a página da filosofia
     "image": "https://receitas.chefbrico.com/imagens/maria-conceicao-empreendedora-feira-tematica.png",
-    "sameAs": [
-        "https://www.linkedin.com/in/mariaconceicao-chefbrico", // Link do LinkedIn da Maria Conceição (se tiver)
-        "https://www.instagram.com/chefbrico" // Link pessoal da Maria (se tiver e for diferente)
-    ]
+   
   }
 }
+
 </script>
 <body>
 
