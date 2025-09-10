@@ -60,92 +60,100 @@
     </style>
 
     <script type="application/ld+json">
-    [
-      {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "ChefBrico no Noroeste: Sabor Gourmet, Entrega Exclusiva",
-        "url": "https://receitas.chefbrico.com/onde-encontrar/noroeste.html",
-        "description": "Serviço de delivery da ChefBrico focado em atender as necessidades do bairro Noroeste com refeições saudáveis, práticas e sofisticadas.",
-        "isPartOf": {
-          "@id": "https://receitas.chefbrico.com/onde-encontrar.html"
-        }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": "ChefBrico no Noroeste: Sabor Gourmet com Entrega Exclusiva",
+      "url": "https://receitas.chefbrico.com/onde-encontrar/noroeste.html",
+      "description": "A ChefBrico atende o bairro Noroeste com um serviço de delivery exclusivo. Peça online refeições práticas, saudáveis e sofisticadas para o seu estilo de vida.",
+      "isPartOf": {
+        "@id": "https://receitas.chefbrico.com/onde-encontrar.html"
       },
-      {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "serviceType": "DeliveryService",
-        "name": "Delivery ChefBrico para o Noroeste",
-        "areaServed": [
-          { "@type": "Place", "name": "Noroeste, Brasília, DF" }
-        ],
-        "provider": {
-          "@type": "FoodEstablishment",
-          "name": "ChefBrico",
-          "url": "https://www.chefbrico.com"
-        },
-        "review": [
-          {
-            "@type": "Review",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-            "reviewBody": "[PLACEHOLDER: Depoimento 1 de cliente do Noroeste]",
-            "author": {"@type": "Person", "name": "Cliente - Noroeste"}
-          },
-          {
-            "@type": "Review",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-            "reviewBody": "[PLACEHOLDER: Depoimento 2 de cliente do Noroeste]",
-            "author": {"@type": "Person", "name": "Cliente - Noroeste"}
-          },
-          {
-            "@type": "Review",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-            "reviewBody": "[PLACEHOLDER: Depoimento 3 de cliente da região]",
-            "author": {"@type": "Person", "name": "Fã da ChefBrico"}
-          }
-        ],
-        "offers": [
+      "publisher": {
+         "@id": "https://receitas.chefbrico.com/#organization"
+      }
+    },
+    {
+      "@type": "Service",
+      "mainEntityOfPage": {
+        "@id": "https://receitas.chefbrico.com/onde-encontrar/noroeste.html"
+      },
+      "name": "Delivery ChefBrico para o Noroeste",
+      "serviceType": "Entrega de Refeições Gourmet",
+      "areaServed": {
+        "@type": "Place",
+        "name": "Noroeste, Brasília, DF"
+      },
+      "provider": {
+        "@id": "https://receitas.chefbrico.com/#organization"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+        "reviewBody": "[PLACEHOLDER: A qualidade e a praticidade da ChefBrico são perfeitas para a nossa rotina corrida aqui no Noroeste. Adoramos!]",
+        "author": {"@type": "Person", "name": "[NOME DA CLIENTE 1]"}
+      },
+      "offers": {
+        "@type": "Offer",
+        "name": "Produtos Favoritos do Noroeste",
+        "itemOffered": [
           {
             "@type": "Product",
-            "name": "[PRODUTO 1 - Ex: Confit de Shiitake]",
-            "image": "https://receitas.chefbrico.com/emporio/confit-shiitake-chefbrico.png"
+            "name": "Confit de Shiitake",
+            "image": "https://receitas.chefbrico.com/imagens/emporio/confit-shiitake-chefbrico.png"
           },
           {
             "@type": "Product",
-            "name": "[PRODUTO 2 - Ex: Risoto Pomodori]",
-            "image": "https://receitas.chefbrico.com/risotos/risoto-pomodori-pesto-tijela-chefbrico.png"
+            "name": "Risoto Pomodori & Pesto",
+            "image": "https://receitas.chefbrico.com/imagens/risotos/risoto-pomodori-pesto-tijela-chefbrico.png"
           },
           {
             "@type": "Product",
-            "name": "[PRODUTO 3 - Ex: Refeição Mediterrânea]",
-            "image": "https://receitas.chefbrico.com/refeicoes-praticas/refeicao-mediterranea-chefbrico.png"
-          },
-          {
-            "@type": "Product",
-            "name": "[PLACEHOLDER QUARTO PRODUTO]",
-            "image": "https://receitas.chefbrico.com/imagens/food-porn/regiao-produto-4.jpg"
+            "name": "Refeição Mediterrânea",
+            "image": "https://receitas.chefbrico.com/imagens/refeicoes-praticas/refeicao-mediterranea-chefbrico.png"
           }
         ]
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Maria Conceição",
-        "jobTitle": "Fundadora e Chef",
-        "description": "Empreendedora e autora das receitas da ChefBrico.",
-        "url": "https://receitas.chefbrico.com/onde-encontrar.html",
-        "sameAs": [
-          "https://wa.me/5561996659880",
-          "https://www.instagram.com/chefbrico/"
-        ],
-        "funderOf": {
-          "@type": "FoodEstablishment",
-          "name": "ChefBrico",
-          "url": "https://www.chefbrico.com"
-        }
       }
-    ]
-    </script>
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Existem pontos de venda da ChefBrico no Noroeste?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Atualmente, o nosso foco para o Noroeste é o serviço de delivery exclusivo, garantindo a máxima conveniência. Para compras em lojas físicas, temos parceiros selecionados em regiões próximas, como a Asa Norte."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quais os parceiros ChefBrico mais próximos do Noroeste?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Os parceiros mais próximos do Noroeste encontram-se na Asa Norte. Você pode encontrar nossos produtos na Quitandas da Vó Maria (SHIN), Mercearia Colaborativa (CLN 412), A Casa do Manjericão (CLN 215), Ravioli e Cia (CLN 214) e no Mercado Malunga (CLN 315)."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://receitas.chefbrico.com/#organization",
+      "name": "ChefBrico",
+      "founder": {
+        "@id": "https://receitas.chefbrico.com/#person-maria-conceicao"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://receitas.chefbrico.com/#person-maria-conceicao",
+      "name": "Maria Conceição"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
