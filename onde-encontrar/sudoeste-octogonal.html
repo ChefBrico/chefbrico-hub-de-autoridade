@@ -59,94 +59,82 @@
         }
     </style>
 
-    <script type="application/ld+json">
-    [
-      {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "ChefBrico no Sudoeste e Octogonal: Praticidade Premium",
-        "url": "https://receitas.chefbrico.com/onde-encontrar/sudoeste-octogonal.html",
-        "description": "Descubra como comprar os produtos ChefBrico no Sudoeste e Octogonal. Oferecemos delivery para toda a região, atendimento via WhatsApp e parceiros locais.",
-        "isPartOf": {
-          "@id": "https://receitas.chefbrico.com/onde-encontrar.html"
-        }
+   <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": "ChefBrico no Sudoeste e Octogonal: Praticidade Premium",
+      "url": "https://receitas.chefbrico.com/onde-encontrar/sudoeste-octogonal.html",
+      "description": "A ChefBrico atende o Sudoeste e Octogonal com delivery e parceiros premium. Peça online ou encontre nossos produtos perto de você.",
+      "isPartOf": {
+        "@id": "https://receitas.chefbrico.com/onde-encontrar.html"
       },
-      {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "serviceType": "DeliveryService",
-        "name": "Delivery de Produtos ChefBrico no Sudoeste e Octogonal",
-        "areaServed": [
-          { "@type": "Place", "name": "Sudoeste, Brasília, DF" },
-          { "@type": "Place", "name": "Octogonal, Brasília, DF" }
-        ],
-        "provider": {
-          "@type": "FoodEstablishment",
-          "name": "ChefBrico",
-          "url": "https://www.chefbrico.com"
-        },
-        "review": [
-          {
-            "@type": "Review",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-            "reviewBody": "[PLACEHOLDER: Depoimento 1 de cliente do Sudoeste]",
-            "author": {"@type": "Person", "name": "Cliente - Sudoeste"}
-          },
-          {
-            "@type": "Review",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-            "reviewBody": "[PLACEHOLDER: Depoimento 2 de cliente do Octogonal]",
-            "author": {"@type": "Person", "name": "Cliente - Octogonal"}
-          },
-          {
-            "@type": "Review",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-            "reviewBody": "[PLACEHOLDER: Depoimento 3 de cliente da região]",
-            "author": {"@type": "Person", "name": "Cliente - Sudoeste"}
-          }
-        ],
-        "offers": [
-          {
-            "@type": "Product",
-            "name": "Refeição Mediterrânea",
-            "image": "https://receitas.chefbrico.com/refeicoes-praticas/refeicao-mediterranea-chefbrico.png"
-          },
-          {
-            "@type": "Product",
-            "name": "Sopa Creme Fit Vegana",
-            "image": "https://receitas.chefbrico.com/imagens/creme-fit-sopinha-chefbrico.png"
-          },
-          {
-            "@type": "Product",
-            "name": "Arrozes Especiais (Arroz Negro)",
-            "image": "https://receitas.chefbrico.com/refeicoes-praticas/Refeicao-arroz-negro-funghi-chefbrico.png"
-          },
-          {
-            "@type": "Product",
-            "name": "[PLACEHOLDER QUARTO PRODUTO]",
-            "image": "https://receitas.chefbrico.com/imagens/food-porn/regiao-produto-4.jpg"
-          }
-        ]
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Maria Conceição",
-        "jobTitle": "Fundadora e Chef",
-        "description": "Empreendedora e autora das receitas da ChefBrico.",
-        "url": "https://receitas.chefbrico.com/onde-encontrar.html",
-        "sameAs": [
-          "https://wa.me/5561996659880",
-          "https://www.instagram.com/chefbrico/"
-        ],
-        "funderOf": {
-          "@type": "FoodEstablishment",
-          "name": "ChefBrico",
-          "url": "https://www.chefbrico.com"
-        }
+      "publisher": {
+         "@id": "https://receitas.chefbrico.com/#organization"
       }
-    ]
-    </script>
+    },
+    {
+      "@type": "FoodEstablishment",
+      "mainEntityOfPage": {
+        "@id": "https://receitas.chefbrico.com/onde-encontrar/sudoeste-octogonal.html"
+      },
+      "name": "ChefBrico - Pontos de Venda e Delivery para Sudoeste e Octogonal",
+      "parentOrganization": {
+        "@id": "https://receitas.chefbrico.com/#organization"
+      },
+      "areaServed": [
+        {
+            "@type": "Place",
+            "name": "Sudoeste, Brasília, DF"
+        },
+        {
+            "@type": "Place",
+            "name": "Octogonal, Brasília, DF"
+        }
+      ],
+      "department": [
+        {
+          "@type": "FoodEstablishment",
+          "name": "Ravioli e Cia (Sudoeste)",
+          "address": "CLSW 302, Bloco B, loja 24, St. Sudoeste, Brasília - DF"
+        },
+        {
+          "@type": "FoodEstablishment",
+          "name": "Mercado Malunga (Sudoeste)",
+          "address": "Q SHCSW CL 104, BLOCO A, LOJA 19 - Cruzeiro / Sudoeste / Octogonal, Brasília - DF"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "serviceType": "DeliveryService",
+      "name": "Delivery ChefBrico para Sudoeste e Octogonal",
+      "areaServed": [
+        {
+            "@type": "Place",
+            "name": "Sudoeste, Brasília, DF"
+        },
+        {
+            "@type": "Place",
+            "name": "Octogonal, Brasília, DF"
+        }
+      ],
+      "provider": {
+        "@id": "https://receitas.chefbrico.com/#organization"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+          "reviewBody": "[PLACEHOLDER: A ChefBrico é a melhor solução para a minha rotina no Sudoeste. Pratos saudáveis, sofisticados e muito práticos!]",
+          "author": {"@type": "Person", "name": "[NOME DA CLIENTE 1]"}
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "name": "Produtos
 </head>
 <body>
 
