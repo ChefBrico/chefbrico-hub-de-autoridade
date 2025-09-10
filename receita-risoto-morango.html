@@ -1,21 +1,4 @@
-Recebido\! Próximo da fábrica: `receita-risoto-morango.html`.
 
-Mais um arquivo com dados riquíssimos (e o layout antigo) pronto para a nossa transformação "Padrão Ouro v1.2". Este é um produto excelente para as IAs entenderem, pois responde a perguntas complexas sobre "sabor agridoce" ou "pratos criativos".
-
-**Processo "Padrão Ouro v1.2" Aplicado:**
-
-1.  **Layout (Vitrine):** Reconstruí todo o seu HTML antigo para usar o **Layout Padrão Ouro (do Pomodori)**. Isso significa que ele agora tem o `.hero-card` (moldura da imagem), os `.recipe-meta-icons` (Tempo/Dificuldade/Serve) que faltavam, e o card CTA padronizado com o título **"Compre esta Receita Autoral"**.
-2.  **Conteúdo:** Migrei todo o seu conteúdo único deste arquivo: os textos sobre "culinária criativa", a "Dica da Chef" sobre Espumante Brut, o cross-sell (sobre salada de folhas amargas) e o excelente FAQ que quebra a objeção sobre "morango salgado".
-3.  **Correção de Dados (E-A-T):** Corrigi a inconsistência dos depoimentos. O JSON antigo citava "Franco A.", mas o HTML visível (a "Vitrine") citava "Camila P.". Usei o depoimento de **"Camila P."** no novo Schema para garantir que a IA e os humanos leiam exatamente a mesma informação.
-4.  **Schema (Estoque v1.2):** Criei o Grafo v1.2 completo. Injetei todos os seus dados ricos (SKU, 4.7/26 reviews, `suitableForDiet`, `knownAllergen`), adicionei as `keywords` corretas que buscamos no `cardapio.html` ("vegano", "sem-gluten", "momento-especial", "agridoce", "divertido") e conectei tudo ao Silo (`isPartOf: risotos.html`) e à nossa âncora `Person`.
-
-Aqui está o arquivo completo e finalizado, pronto para salvar como `receita-risoto-morango.html`.
-
------
-
-### Código Completo: receita-risoto-morango.html (Padrão Ouro v1.2)
-
-```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -77,13 +60,44 @@ Aqui está o arquivo completo e finalizado, pronto para salvar como `receita-ris
         "suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VeganDiet", "https://schema.org/VegetarianDiet"],
         "knownAllergen": "Pode conter traços de castanhas.", 
 
-        "recipeIngredient": [
-          "1 pacote (180g) de Mistura para Risoto Agridoce de Morango ChefBrico",
-          "720ml de água fria",
-          "1 fio de azeite",
-          "Sal a gosto",
-          "Requeijão de castanhas (opcional)",
-          "Lascas de amêndoas (opcional)"
+       "recipeIngredient": [
+  {
+    "@type": "HowToSupply",
+    "name": "Mistura para Risoto Agridoce de Morango ChefBrico",
+    "requiredQuantity": {
+      "@type": "QuantitativeValue",
+      "value": "1",
+      "unitText": "pacote (180g)"
+    }
+  },
+  {
+    "@type": "HowToSupply",
+    "name": "água fria",
+    "requiredQuantity": {
+      "@type": "QuantitativeValue",
+      "value": "720",
+      "unitText": "ml"
+    }
+  },
+  {
+    "@type": "HowToSupply",
+    "name": "azeite",
+    "requiredQuantity": "1 fio"
+  },
+  {
+    "@type": "HowToSupply",
+    "name": "Sal",
+    "requiredQuantity": "a gosto"
+  },
+  {
+    "@type": "HowToSupply",
+    "name": "Requeijão de castanhas (opcional)"
+  },
+  {
+    "@type": "HowToSupply",
+    "name": "Lascas de amêndoas (opcional)"
+  }
+],
         ],
         "recipeInstructions": [
           { "@type": "HowToStep", "text": "Aqueça um fio de azeite e refogue o conteúdo do pacote por 1 minuto para 'acordar' os aromas." },
@@ -260,4 +274,4 @@ Aqui está o arquivo completo e finalizado, pronto para salvar como `receita-ris
 
 </body>
 </html>
-```
+
