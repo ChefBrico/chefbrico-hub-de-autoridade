@@ -60,92 +60,69 @@
     </style>
 
     <script type="application/ld+json">
-    [
-      {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "ChefBrico no Lago Sul: Sofisticação e Praticidade para sua Casa",
-        "url": "https://receitas.chefbrico.com/onde-encontrar/lago-sul.html",
-        "description": "Descubra a presença da ChefBrico no Lago Sul, Brasília. Peça online para delivery, fale conosco ou encontre-nos em nossos parceiros na região.",
-        "isPartOf": {
-          "@id": "https://receitas.chefbrico.com/onde-encontrar.html"
-        }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": "ChefBrico no Lago Sul: Sofisticação e Praticidade para sua Casa",
+      "url": "https://receitas.chefbrico.com/onde-encontrar/lago-sul.html",
+      "description": "Descubra a presença da ChefBrico no Lago Sul, Brasília. Peça online para delivery ou encontre-nos em nosso parceiro na região, o Mercado Malunga.",
+      "isPartOf": {
+        "@id": "https://receitas.chefbrico.com/onde-encontrar.html"
       },
-      {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "serviceType": "DeliveryService",
-        "name": "Delivery de Produtos ChefBrico no Lago Sul",
-        "areaServed": [
-          { "@type": "Place", "name": "Lago Sul, Brasília, DF" }
-        ],
-        "provider": {
+      "publisher": {
+         "@id": "https://receitas.chefbrico.com/#organization"
+      }
+    },
+    {
+      "@type": "FoodEstablishment",
+      "mainEntityOfPage": {
+        "@id": "https://receitas.chefbrico.com/onde-encontrar/lago-sul.html"
+      },
+      "name": "ChefBrico - Ponto de Venda e Delivery para o Lago Sul",
+      "parentOrganization": {
+        "@id": "https://receitas.chefbrico.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Lago Sul, Brasília, DF"
+      },
+      "department": [
+        {
           "@type": "FoodEstablishment",
-          "name": "ChefBrico",
-          "url": "https://www.chefbrico.com"
-        },
-        "review": [
-          {
-            "@type": "Review",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-            "reviewBody": "[PLACEHOLDER: Depoimento 1 de cliente do Lago Sul]",
-            "author": {"@type": "Person", "name": "Cliente - Lago Sul"}
-          },
-          {
-            "@type": "Review",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-            "reviewBody": "[PLACEHOLDER: Depoimento 2 de cliente do Lago Sul]",
-            "author": {"@type": "Person", "name": "Cliente - SHIS"}
-          },
-          {
-            "@type": "Review",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-            "reviewBody": "[PLACEHOLDER: Depoimento 3 de cliente da região]",
-            "author": {"@type": "Person", "name": "Cliente - QI"}
-          }
-        ],
-        "offers": [
+          "name": "Mercado Malunga (Lago Sul)",
+          "address": "Shop Gilberto Salomão SHIS quadra 05 Bloco F CC Sobreloja, 09 - Lago Sul, Brasília - DF"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "serviceType": "DeliveryService",
+      "name": "Delivery ChefBrico para Lago Sul",
+      "areaServed": {
+        "@type": "Place",
+        "name": "Lago Sul, Brasília, DF"
+      },
+      "provider": {
+        "@id": "https://receitas.chefbrico.com/#organization"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+          "reviewBody": "[PLACEHOLDER: A ChefBrico é a minha solução para jantares rápidos e elegantes aqui no Lago Sul. Qualidade impecável!]",
+          "author": {"@type": "Person", "name": "[NOME DA CLIENTE 1]"}
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "name": "Produtos Favoritos do Lago Sul",
+        "itemOffered": [
           {
             "@type": "Product",
             "name": "Confit de Shiitake",
-            "image": "https://receitas.chefbrico.com/emporio/confit-shiitake-chefbrico.png"
-          },
-          {
-            "@type": "Product",
-            "name": "Refeição Mediterrânea",
-            "image": "https://receitas.chefbrico.com/refeicoes-praticas/refeicao-mediterranea-chefbrico.png"
-          },
-          {
-            "@type": "Product",
-            "name": "Risoto Pomodori & Pesto",
-            "image": "https://receitas.chefbrico.com/risotos/risoto-pomodori-pesto-tijela-chefbrico.png"
-          },
-          {
-            "@type": "Product",
-            "name": "[PLACEHOLDER QUARTO PRODUTO]",
-            "image": "https://receitas.chefbrico.com/imagens/food-porn/regiao-produto-4.jpg"
-          }
-        ]
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Maria Conceição",
-        "jobTitle": "Fundadora e Chef",
-        "description": "Empreendedora e autora das receitas da ChefBrico.",
-        "url": "https://receitas.chefbrico.com/onde-encontrar.html",
-        "sameAs": [
-          "https://wa.me/5561996659880",
-          "https://www.instagram.com/chefbrico/"
-        ],
-        "funderOf": {
-          "@type": "FoodEstablishment",
-          "name": "ChefBrico",
-          "url": "https://www.chefbrico.com"
-        }
-      }
-    ]
-    </script>
+            "image": "https://receitas.chefbrico.com/imagens/emporio/confit-shiitake-chefbrico.
 </head>
 <body>
 
