@@ -60,11 +60,35 @@
         "suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VeganDiet", "https://schema.org/VegetarianDiet", "https://schema.org/LowCalorieDiet", "https://schema.org/LowCarbDiet"],
         "knownAllergen": "Pode conter traços de castanhas.", 
 
-        "recipeIngredient": [
-          "1 pacote (150g) de Mistura para Sopa Low Carb de Funghi ChefBrico",
-          "1000ml (1 litro) de água fria",
-          "Sal a gosto",
-          "1 fio de azeite (opcional)"
+     "recipeIngredient": [
+  {
+    "@type": "HowToSupply",
+    "name": "Mistura para Sopa Low Carb de Funghi ChefBrico",
+    "requiredQuantity": {
+      "@type": "QuantitativeValue",
+      "value": "1",
+      "unitText": "pacote (150g)"
+    }
+  },
+  {
+    "@type": "HowToSupply",
+    "name": "água fria",
+    "requiredQuantity": {
+      "@type": "QuantitativeValue",
+      "value": "1000",
+      "unitText": "ml (1 litro)"
+    }
+  },
+  {
+    "@type": "HowToSupply",
+    "name": "Sal",
+    "requiredQuantity": "a gosto"
+  },
+  {
+    "@type": "HowToSupply",
+    "name": "1 fio de azeite (opcional)"
+  }
+],
         ],
         "recipeInstructions": [
           { "@type": "HowToStep", "text": "Em uma panela, coloque o conteúdo do pacote, 1 litro de água fria e sal." },
