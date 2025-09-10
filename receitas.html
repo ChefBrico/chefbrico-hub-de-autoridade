@@ -16,12 +16,21 @@
     </script>
     
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
       "@type": "CollectionPage",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://receitas.chefbrico.com/receitas.html"
+      },
       "name": "Receitas Práticas e Artesanais da ChefBrico",
       "url": "https://receitas.chefbrico.com/receitas.html",
       "description": "Navegue por nossas categorias de receitas e descubra como usar os produtos ChefBrico para criar pratos incríveis, da entrada à refeição principal.",
+      "publisher": {
+         "@id": "https://receitas.chefbrico.com/#organization"
+      },
       "mainEntity": {
         "@type": "ItemList",
         "name": "Categorias de Receitas",
@@ -31,36 +40,42 @@
             "position": 1,
             "name": "Arrozes do Mundo",
             "description": "Uma viagem de sabores que explora arrozes cremosos, caldosos e tenros.",
-            "url": "https://receitas.chefbrico.com/risotos.html" /* <-- CORRIGIDO */
+            "url": "https://receitas.chefbrico.com/risotos.html"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Sopas Funcionais",
             "description": "Descubra como nossas sopas podem revolucionar sua dieta com saúde e praticidade.",
-            "url": "https://receitas.chefbrico.com/sopas-funcionais.html" /* <-- CORRIGIDO */
+            "url": "https://receitas.chefbrico.com/sopas-funcionais.html"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "Refeições Práticas",
             "description": "Soluções completas para os dias mais corridos, do PFzinho Kids ao Feiju Veg.",
-            "url": "https://receitas.chefbrico.com/refeicoes-praticas.html" /* <-- CORRIGIDO */
+            "url": "https://receitas.chefbrico.com/refeicoes-praticas.html"
           },
           {
             "@type": "ListItem",
             "position": 4,
             "name": "Empório da Chef",
             "description": "O toque final de sabor com nossos antepastos, confits e produtos gourmet.",
-            "url": "https://receitas.chefbrico.com/emporio-da-chef.html" /* <-- CORRIGIDO */
+            "url": "https://receitas.chefbrico.com/emporio-da-chef.html"
           }
         ]
-      },
-      "publisher": {
-         "@id": "https://receitas.chefbrico.com/onde-encontrar.html#organization" 
       }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://receitas.chefbrico.com/#organization",
+      "name": "ChefBrico",
+      "url": "https://www.chefbrico.com",
+      "logo": "https://receitas.chefbrico.com/imagens/flamula-logo-chefbrico.png"
     }
-    </script>
+  ]
+}
+</script>
 </head>
 <body>
 
