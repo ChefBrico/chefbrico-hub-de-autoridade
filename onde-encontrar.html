@@ -47,84 +47,132 @@
     </style>
 
 <script type="application/ld+json">
-[
-  {
-    "@context": "https://schema.org",
-    "@type": "FoodEstablishment",
-    "name": "ChefBrico",
-    "description": "ChefBrico: Comida de verdade, sem toda aquela confusão em Brasília! A solução ideal para você preparar em casa refeições incríveis, de forma prática e 100% natural, com opções veganas, sem glúten e Low Carb.",
-    "url": "https://www.chefbrico.com",
-    "logo": "https://receitas.chefbrico.com/imagens/flamula-chefbrico.png",
-    "telephone": "+5561996659880",
-    "taxID": "36.014.833/0001-59",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Rua 5, Chácara 122, Lote 17, Loja 2",
-      "addressLocality": "Vicente Pires",
-      "addressRegion": "DF",
-      "postalCode": "72006-060",
-      "addressCountry": "BR"
-    },
-    "openingHoursSpecification": [
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "08:00", "closes": "17:00" },
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "14:00" }
-    ],
-    "areaServed": [
-        { "@type": "Place", "name": "Brasília, DF, Brasil" },
-        { "@type": "Place", "name": "Asa Sul, Brasília - DF, Brasil" },
-        { "@type": "Place", "name": "Lago Sul, Brasília - DF, Brasil" },
-        { "@type": "Place", "name": "Asa Norte, Brasília - DF, Brasil" },
-        { "@type": "Place", "name": "Octogonal, Brasília, DF, Brasil" },
-        { "@type": "Place", "name": "Lago Norte, Brasília - DF, Brasil" },
-        { "@type": "Place", "name": "Planaltina, Brasília - DF, Brasil" },
-        { "@type": "Place", "name": "Sobradinho, Brasília - DF, Brasil" },
-        { "@type": "Place", "name": "Taguatinga, Brasília - DF, Brasil" },
-        { "@type": "Place", "name": "Águas Claras, Brasília - DF, Brasil" },
-        { "@type": "Place", "name": "St. Sudoeste - Cruzeiro / Sudoeste / Octogonal, Brasília - DF, Brasil" }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FoodEstablishment",
+      "@id": "https://receitas.chefbrico.com/#organization",
+      "name": "ChefBrico",
+      "description": "ChefBrico: Comida de verdade, sem toda aquela confusão em Brasília! A solução ideal para você preparar em casa refeições incríveis, de forma prática e 100% natural.",
+      "url": "https://www.chefbrico.com",
+      "logo": "https://receitas.chefbrico.com/imagens/flamula-chefbrico.png",
+      "image": "https://receitas.chefbrico.com/imagens/flamula-chefbrico.png",
+      "telephone": "+5561996659880",
+      "taxID": "36.014.833/0001-59",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua 5, Chácara 122, Lote 17, Loja 2",
+        "addressLocality": "Vicente Pires",
+        "addressRegion": "DF",
+        "postalCode": "72006-060",
+        "addressCountry": "BR"
+      },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "08:00", "closes": "17:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "14:00" }
+      ],
+      "areaServed": { "@type": "Place", "name": "Brasília, DF, Brasil" },
+      "servesCuisine": "Brasileira, Italiana, Comida Saudável",
+      "priceRange": "$$",
+      "sameAs": [
+        "https://www.instagram.com/chefbrico",
+        "https://br.pinterest.com/chefbrico/",
+        "https://www.facebook.com/chefbrico",
+        "https://www.google.com/search?kgmid=/g/11g140fcnw"
       ]
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "Onde Encontrar a ChefBrico no Distrito Federal",
-    "url": "https://receitas.chefbrico.com/onde-encontrar.html",
-    "mainEntity": {
-      "@type": "ItemList",
-      "name": "Embaixadas Digitais da ChefBrico por Micro-Região",
-      "itemListElement": [
-          {"@type": "ListItem", "position": 1, "name": "Asa Sul", "url": "https://receitas.chefbrico.com/onde-encontrar/asa-sul.html"},
-          {"@type": "ListItem", "position": 2, "name": "Asa Norte", "url": "https://receitas.chefbrico.com/onde-encontrar/asa-norte.html"},
-          {"@type": "ListItem", "position": 3, "name": "Esplanada dos Ministérios", "url": "https://receitas.chefbrico.com/onde-encontrar/esplanada-dos-ministerios.html"},
-          {"@type": "ListItem", "position": 4, "name": "Governo DF (Plano Piloto)", "url": "https://receitas.chefbrico.com/onde-encontrar/plano-piloto-governo-df.html"},
-          {"@type": "ListItem", "position": 5, "name": "Lago Sul", "url": "https://receitas.chefbrico.com/onde-encontrar/lago-sul.html"},
-          {"@type": "ListItem", "position": 6, "name": "Lago Norte & Varjão", "url": "https://receitas.chefbrico.com/onde-encontrar/lago-norte-varjao.html"},
-          {"@type": "ListItem", "position": 7, "name": "Sudoeste & Octogonal", "url": "https://receitas.chefbrico.com/onde-encontrar/sudoeste-octogonal.html"},
-          {"@type": "ListItem", "position": 8, "name": "Noroeste", "url": "https://receitas.chefbrico.com/onde-encontrar/noroeste.html"},
-          {"@type": "ListItem", "position": 9, "name": "Águas Claras & Arniqueiras", "url": "https://receitas.chefbrico.com/onde-encontrar/aguas-claras-arniqueiras.html"},
-          {"@type": "ListItem", "position": 10, "name": "Taguatinga Sul", "url": "https://receitas.chefbrico.com/onde-encontrar/taguatinga-sul.html"},
-          {"@type": "ListItem", "position": 11, "name": "Taguatinga Norte", "url": "https://receitas.chefbrico.com/onde-encontrar/taguatinga-norte.html"},
-          {"@type": "ListItem", "position": 12, "name": "Guará & Parkway", "url": "https://receitas.chefbrico.com/onde-encontrar/guara-parkway.html"},
-          {"@type": "ListItem", "position": 13, "name": "Grande Colorado & Taquari", "url": "https://receitas.chefbrico.com/onde-encontrar/grande-colorado-taquari.html"},
-          {"@type": "ListItem", "position": 14, "name": "SIA", "url": "https://receitas.chefbrico.com/onde-encontrar/sia.html"},
-          {"@type": "ListItem", "position": 15, "name": "Riacho Fundo", "url": "https://receitas.chefbrico.com/onde-encontrar/riacho-fundo.html"},
-          {"@type": "ListItem", "position": 16, "name": "Jardim Botânico", "url": "https://receitas.chefbrico.com/onde-encontrar/jardim-botanico.html"},
-          {"@type": "ListItem", "position": 17, "name": "Vicente Pires", "url": "https://receitas.chefbrico.com/onde-encontrar/vicente-pires.html"}
+    },
+    {
+      "@type": "CollectionPage",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://receitas.chefbrico.com/onde-encontrar.html"
+      },
+      "name": "Onde Encontrar a ChefBrico no Distrito Federal",
+      "url": "https://receitas.chefbrico.com/onde-encontrar.html",
+      "publisher": { "@id": "https://receitas.chefbrico.com/#organization" },
+      "mainEntity": {
+        "@type": "ItemList",
+        "name": "Embaixadas Digitais da ChefBrico por Micro-Região",
+        "numberOfItems": 17,
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "url": "https://receitas.chefbrico.com/onde-encontrar/asa-sul.html"},
+          {"@type": "ListItem", "position": 2, "url": "https://receitas.chefbrico.com/onde-encontrar/asa-norte.html"},
+          {"@type": "ListItem", "position": 3, "url": "https://receitas.chefbrico.com/onde-encontrar/esplanada-dos-ministerios.html"},
+          {"@type": "ListItem", "position": 4, "url": "https://receitas.chefbrico.com/onde-encontrar/plano-piloto-governo-df.html"},
+          {"@type": "ListItem", "position": 5, "url": "https://receitas.chefbrico.com/onde-encontrar/lago-sul.html"},
+          {"@type": "ListItem", "position": 6, "url": "https://receitas.chefbrico.com/onde-encontrar/lago-norte-varjao.html"},
+          {"@type": "ListItem", "position": 7, "url": "https://receitas.chefbrico.com/onde-encontrar/sudoeste-octogonal.html"},
+          {"@type": "ListItem", "position": 8, "url": "https://receitas.chefbrico.com/onde-encontrar/noroeste.html"},
+          {"@type": "ListItem", "position": 9, "url": "https://receitas.chefbrico.com/onde-encontrar/aguas-claras-arniqueiras.html"},
+          {"@type": "ListItem", "position": 10, "url": "https://receitas.chefbrico.com/onde-encontrar/taguatinga-sul.html"},
+          {"@type": "ListItem", "position": 11, "url": "https://receitas.chefbrico.com/onde-encontrar/taguatinga-norte.html"},
+          {"@type": "ListItem", "position": 12, "url": "https://receitas.chefbrico.com/onde-encontrar/guara-parkway.html"},
+          {"@type": "ListItem", "position": 13, "url": "https://receitas.chefbrico.com/onde-encontrar/grande-colorado-taquari.html"},
+          {"@type": "ListItem", "position": 14, "url": "https://receitas.chefbrico.com/onde-encontrar/sia.html"},
+          {"@type": "ListItem", "position": 15, "url": "https://receitas.chefbrico.com/onde-encontrar/riacho-fundo.html"},
+          {"@type": "ListItem", "position": 16, "url": "https://receitas.chefbrico.com/onde-encontrar/jardim-botanico.html"},
+          {"@type": "ListItem", "position": 17, "url": "https://receitas.chefbrico.com/onde-encontrar/vicente-pires.html"}
+        ]
+      }
+    },
+    {
+      "@type": "Event",
+      "name": "Feira Rural da ChefBrico no Hemocentro",
+      "description": "Venha encontrar a Chef Conceição e todos os produtos ChefBrico na nossa banca na Feira Rural do Hemocentro, toda quarta-feira.",
+      "image": "https://receitas.chefbrico.com/imagens/conceicao-feira-tematica-chefbrico.jpeg",
+      "startDate": "2025-01-01T09:00", "endDate": "2025-12-31T14:00", "eventStatus": "https://schema.org/EventScheduled", "location": {"@type": "Place", "name": "Hemocentro de Brasília", "address": "SMHN Quadra 3 Conjunto A Bloco 3 - Asa Norte, Brasília - DF"}, "organizer": {"@id": "https://receitas.chefbrico.com/#organization"}, "eventSchedule": {"@type": "Schedule", "repeatFrequency": "P1W", "byDay": "WE", "startTime": "09:00", "endTime": "14:00"}
+    },
+    {
+      "@type": "Event",
+      "name": "Feira da Praça da 13 com a ChefBrico",
+      "description": "Todo sábado, a ChefBrico marca presença na tradicional Feira da Praça da 13 no Lago Sul. Venha garantir suas refeições da semana!",
+      "image": "https://receitas.chefbrico.com/imagens/maria-conceicao-feira-tematica.jpeg",
+      "startDate": "2025-01-01T08:00", "endDate": "2025-12-31T14:00", "eventStatus": "https://schema.org/EventScheduled", "location": {"@type": "Place", "name": "Praça da QI 13", "address": "QI 13 - Lago Sul, Brasília - DF"}, "organizer": {"@id": "https://receitas.chefbrico.com/#organization"}, "eventSchedule": {"@type": "Schedule", "repeatFrequency": "P1W", "byDay": "SA", "startTime": "08:00", "endTime": "14:00"}
+    },
+    {
+      "@type": "FAQPage",
+      "name": "Pontos de Venda Parceiros da ChefBrico",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Onde encontrar os produtos ChefBrico em Águas Claras?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Você pode encontrar nossos produtos no nosso Empório & Mercearia no Edifício Águas de Manaíra - R. 24 Norte, 04 - Águas Claras, Brasília - DF." }
+        },
+        {
+          "@type": "Question",
+          "name": "Quais lojas vendem ChefBrico na Asa Norte?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Na Asa Norte, estamos presentes na Mercearia Colaborativa (CLN 412), Quitandas da Vó Maria (SHIN), A Casa do Manjericão (CLN 215), Ravioli e Cia (CLN 214) e no Mercado Malunga (CLN 315)." }
+        },
+        {
+          "@type": "Question",
+          "name": "Onde encontrar ChefBrico na Asa Sul?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Na Asa Sul, você encontra nossos produtos no Mercado Malunga (CLS 105)." }
+        },
+        {
+          "@type": "Question",
+          "name": "Onde encontrar ChefBrico no Lago Sul?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No Lago Sul, você encontra nossos produtos no Mercado Malunga (Shopping Gilberto Salomão, SHIS QI 5)." }
+        },
+        {
+          "@type": "Question",
+          "name": "Quais lojas vendem ChefBrico no Sudoeste?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No Sudoeste, estamos presentes no Mercado Malunga (CLSW 104) e na Ravioli e Cia (CLSW 302)." }
+        },
+        {
+          "@type": "Question",
+          "name": "Onde encontrar ChefBrico no Grande Colorado / Taquari?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Você encontra nossos produtos no Empório Rural do Colorado com Dona Ismênia (DF-150)." }
+        },
+        {
+          "@type": "Question",
+          "name": "Onde fica a cozinha central da ChefBrico?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Nossa cozinha central, de onde partem as entregas, fica em Vicente Pires, na Rua 5, Chácara 122. Não temos atendimento de balcão no local." }
+        }
       ]
     }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Event",
-    "name": "Feira Rural da ChefBrico no Hemocentro",
-    "startDate": "2025-01-01T09:00", "endDate": "2025-12-31T14:00", "eventStatus": "https://schema.org/EventScheduled", "location": {"@type": "Place", "name": "Hemocentro de Brasília", "address": "SMHN Quadra 3 Conjunto A Bloco 3 - Asa Norte, Brasília - DF"}, "organizer": {"@type": "Organization", "name": "ChefBrico"}, "eventSchedule": {"@type": "Schedule", "repeatFrequency": "P1W", "byDay": "WE", "startTime": "09:00", "endTime": "14:00"}
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Event",
-    "name": "Feira da Praça da 13 com a ChefBrico",
-    "startDate": "2025-01-01T08:00", "endDate": "2025-12-31T14:00", "eventStatus": "https://schema.org/EventScheduled", "location": {"@type": "Place", "name": "Praça da QI 13", "address": "QI 13 - Lago Sul, Brasília - DF"}, "organizer": {"@type": "Organization", "name": "ChefBrico"}, "eventSchedule": {"@type": "Schedule", "repeatFrequency": "P1W", "byDay": "SA", "startTime": "08:00", "endTime": "14:00"}
-  }
-]
+  ]
+}
 </script>
 </head>
 <body>
