@@ -24,39 +24,40 @@
       gtag('config', 'G-K58FN8J2VC');
     </script>
     
-    <script type="application/ld+json">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@type": "Article",
+      "@type": "Product",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://receitas.chefbrico.com/a-verdade-sobre-a-chefbox.html"
       },
-      "headline": "A Verdade Sobre a ChefBox: Muito Além de um Desconto",
-      "author": {
-        "@type": "Person",
-        "name": "Maria Conceição",
-        "url": "https://receitas.chefbrico.com/nossa-filosofia.html"
+      "name": "ChefBox ChefBrico",
+      "description": "Monte sua ChefBox personalizada com 4 sabores à sua escolha e receba o 5º como um presente da Chef. Uma experiência que une economia, criatividade e a celebração do quinto sabor.",
+      "image": "https://receitas.chefbrico.com/imagens/uma-mazinha-icone-chefbrico.png",
+      "brand": {
+        "@id": "https://receitas.chefbrico.com/#organization"
       },
-      "publisher": {
-        "@type": "Organization",
-        "name": "ChefBrico",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "/imagens/flamula-logo-chefbrico.png"
-        }
-      },
-      "image": {
-        "@type": "ImageObject",
-        "url": "/imagens/a-verdade-sobre-a-chefbox-banner.png",
-        "width": 1200,
-        "height": 675
-      },
-      "datePublished": "2025-08-20T09:00:00-03:00",
-      "dateModified": "2025-09-05T23:00:00-03:00",
-      "description": "Descubra as 4 verdades por trás da oferta 'Compre 4, Leve 5' da ChefBrico. Uma filosofia que envolve economia, presentes, criatividade e a celebração do quinto sabor, o Umami."
+      "offers": {
+        "@type": "SpecialOffer",
+        "name": "Monte sua ChefBox: Compre 4, Leve 5",
+        "url": "https://www.chefbrico.com/chefbox",
+        "description": "Escolha 4 produtos ChefBrico para montar sua caixa e o 5º sabor é um presente nosso para você, representando um desconto de 20%.",
+        "price": "0", // O preço da oferta em si é o benefício
+        "priceCurrency": "BRL",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://receitas.chefbrico.com/#organization",
+      "name": "ChefBrico"
     }
-    </script>
+  ]
+}
+</script>
 </head>
 <body>
 
