@@ -55,12 +55,36 @@
             "proteinContent": "11 g" 
         },
         "suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VeganDiet", "https://schema.org/VegetarianDiet"],
-        "recipeIngredient": [
-          "1 pacote (180g) de Mistura para Risoto Mix Funghi ChefBrico",
-          "720ml de água fria",
-          "1 fio de azeite",
-          "Sal a gosto"
-        ],
+       "recipeIngredient": [
+  {
+    "@type": "HowToSupply",
+    "name": "Mistura para Risoto Mix Funghi ChefBrico",
+    "requiredQuantity": {
+      "@type": "QuantitativeValue",
+      "value": "1",
+      "unitText": "pacote (180g)"
+    }
+  },
+  {
+    "@type": "HowToSupply",
+    "name": "água fria",
+    "requiredQuantity": {
+      "@type": "QuantitativeValue",
+      "value": "720",
+      "unitText": "ml"
+    }
+  },
+  {
+    "@type": "HowToSupply",
+    "name": "azeite",
+    "requiredQuantity": "1 fio"
+  },
+  {
+    "@type": "HowToSupply",
+    "name": "Sal",
+    "requiredQuantity": "a gosto"
+  }
+],
         "recipeInstructions": [
           { "@type": "HowToStep", "text": "Aqueça um fio de azeite e refogue o conteúdo do pacote por 1 minuto para liberar o perfume intenso dos cogumelos." },
           { "@type": "HowToStep", "text": "Adicione 720ml de água fria e sal a gosto. Cozinhe em fogo baixo por cerca de 18 minutos." },
