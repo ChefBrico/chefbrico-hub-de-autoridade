@@ -59,93 +59,100 @@
         }
     </style>
 
-    <script type="application/ld+json">
-    [
-      {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "ChefBrico no Jardim Botânico: Delivery para seu Bem-Estar",
-        "url": "https://receitas.chefbrico.com/onde-encontrar/jardim-botanico.html",
-        "description": "Descubra a presença da ChefBrico no Jardim Botânico, Brasília. Peça online para delivery, fale conosco ou encontre-nos em nossos parceiros na região.",
-        "isPartOf": {
-          "@id": "https://receitas.chefbrico.com/onde-encontrar.html"
-        }
+   <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": "ChefBrico no Jardim Botânico: Delivery para seu Bem-Estar",
+      "url": "https://receitas.chefbrico.com/onde-encontrar/jardim-botanico.html",
+      "description": "Descubra a presença da ChefBrico no Jardim Botânico, Brasília. Peça online para delivery ou encontre-nos em nosso parceiro na região, o Mercado Malunga.",
+      "isPartOf": {
+        "@id": "https://receitas.chefbrico.com/onde-encontrar.html"
       },
-      {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "serviceType": "DeliveryService",
-        "name": "Delivery ChefBrico para Jardim Botânico",
-        "areaServed": [
-          { "@type": "Place", "name": "Jardim Botânico, Brasília, DF" }
-        ],
-        "provider": {
+      "publisher": {
+         "@id": "https://receitas.chefbrico.com/#organization"
+      }
+    },
+    {
+      "@type": "FoodEstablishment",
+      "mainEntityOfPage": {
+        "@id": "https://receitas.chefbrico.com/onde-encontrar/jardim-botanico.html"
+      },
+      "name": "ChefBrico - Delivery e Parceiros para o Jardim Botânico",
+      "parentOrganization": {
+        "@id": "https://receitas.chefbrico.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Jardim Botânico, Brasília, DF"
+      },
+      "department": [
+        {
           "@type": "FoodEstablishment",
-          "name": "ChefBrico",
-          "url": "https://www.chefbrico.com"
-        },
-        "review": [
-          {
-            "@type": "Review",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-            "reviewBody": "[PLACEHOLDER: Depoimento 1 de cliente do Jardim Botânico]",
-            "author": {"@type": "Person", "name": "Cliente - Jardim Botânico"}
-          },
-          {
-            "@type": "Review",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-            "reviewBody": "[PLACEHOLDER: Depoimento 2 de cliente do Jardim Botânico]",
-            "author": {"@type": "Person", "name": "Cliente - Jardim Botânico"}
-          },
-          {
-            "@type": "Review",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-            "reviewBody": "[PLACEHOLDER: Depoimento 3 de cliente da região]",
-            "author": {"@type": "Person", "name": "Fã da ChefBrico"}
-          }
-        ],
-        "offers": [
+          "name": "Mercado Malunga (Lago Sul)",
+          "address": "Shop Gilberto Salomão SHIS quadra 05 Bloco F CC Sobreloja, 09 - Lago Sul, Brasília - DF"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "serviceType": "DeliveryService",
+      "name": "Delivery ChefBrico para Jardim Botânico",
+      "areaServed": {
+        "@type": "Place",
+        "name": "Jardim Botânico, Brasília, DF"
+      },
+      "provider": {
+        "@id": "https://receitas.chefbrico.com/#organization"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+          "reviewBody": "[PLACEHOLDER: A praticidade da ChefBrico combina perfeitamente com a nossa rotina aqui no Jardim Botânico. Qualidade incrível!]",
+          "author": {"@type": "Person", "name": "[NOME DA CLIENTE 1]"}
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "name": "Produtos Favoritos do Jardim Botânico",
+        "itemOffered": [
           {
             "@type": "Product",
             "name": "Confit de Shiitake",
-            "image": "https://receitas.chefbrico.com/emporio/confit-shiitake-chefbrico.png"
+            "image": "https://receitas.chefbrico.com/imagens/emporio/confit-shiitake-chefbrico.png"
           },
           {
             "@type": "Product",
             "name": "Refeição Mediterrânea",
-            "image": "https://receitas.chefbrico.com/refeicoes-praticas/refeicao-mediterranea-chefbrico.png"
+            "image": "https://receitas.chefbrico.com/imagens/refeicoes-praticas/refeicao-mediterranea-chefbrico.png"
           },
           {
             "@type": "Product",
             "name": "Risoto Pomodori & Pesto",
-            "image": "https://receitas.chefbrico.com/risotos/risoto-pomodori-pesto-tijela-chefbrico.png"
-          },
-          {
-            "@type": "Product",
-            "name": "[PLACEHOLDER QUARTO PRODUTO]",
-            "image": "https://receitas.chefbrico.com/imagens/food-porn/regiao-produto-4.jpg"
+            "image": "https://receitas.chefbrico.com/imagens/risotos/risoto-pomodori-pesto-tijela-chefbrico.png"
           }
         ]
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Maria Conceição",
-        "jobTitle": "Fundadora e Chef",
-        "description": "Empreendedora e autora das receitas da ChefBrico.",
-        "url": "https://receitas.chefbrico.com/onde-encontrar.html",
-        "sameAs": [
-          "https://wa.me/5561996659880",
-          "https://www.instagram.com/chefbrico/"
-        ],
-        "funderOf": {
-          "@type": "FoodEstablishment",
-          "name": "ChefBrico",
-          "url": "https://www.chefbrico.com"
-        }
       }
-    ]
-    </script>
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://receitas.chefbrico.com/#organization",
+      "name": "ChefBrico",
+      "founder": {
+        "@id": "https://receitas.chefbrico.com/#person-maria-conceicao"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://receitas.chefbrico.com/#person-maria-conceicao",
+      "name": "Maria Conceição"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
