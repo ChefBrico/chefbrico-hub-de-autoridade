@@ -1,22 +1,4 @@
-Recebido\! Próximo da fábrica: `receita-risoto-mediterraneo.html`.
 
-Mais um arquivo com ótimos dados (e o layout antigo) pronto para a nossa transformação "Padrão Ouro".
-
-**Processo "Kaizen" Aplicado:**
-
-1.  **Migração de Conteúdo:** Peguei todo o seu conteúdo único deste arquivo: os textos (H1, subtítulo "Sabor e Leveza de um Dia de Sol"), os ingredientes, a "Dica da Chef" sobre vinho rosé, o cross-sell para a Caponata e o FAQ específico sobre o limão-siciliano.
-2.  **Layout "Padrão Ouro":** Reconstruí todo o HTML usando o **Layout do Pomodori**, o que significa que **adicionei** os ícones de meta-dados (`.recipe-meta-icons`) que faltavam no seu arquivo e padronizei o card de CTA para **"Compre esta Receita Autoral"**.
-3.  **Correção de Dados (E-A-T):** Corrigi a inconsistência dos depoimentos. O JSON-LD antigo citava "Pedro S.", mas o HTML visível citava "Ana C.". Usei o depoimento de **"Ana C."** no novo Schema para alinhar 100% a "vitrine" (HTML) e o "estoque" (JSON-LD).
-4.  **Correção de Keywords:** Notei que seus `data-category` originais (na página `cardapio.html`) não marcavam este prato como "vegano" ou "sem-gluten", mas o seu próprio HTML e Schema antigo confirmam que ele **é** os dois. Para garantir a resposta certa das IAs, **adicionei "vegano" e "sem-gluten"** às keywords deste produto.
-5.  **Upgrade de Schema (v1.2):** Criei o **Schema Padrão Ouro v1.2** completo. Injetei todos os seus dados ricos (SKU, 4.7/29 reviews, `suitableForDiet`, `knownAllergen`) e conectei tudo ao Silo (`isPartOf: risotos.html`).
-
-Aqui está o arquivo completo e finalizado, pronto para salvar como `receita-risoto-mediterraneo.html`.
-
------
-
-### Código Completo: receita-risoto-mediterraneo.html (Padrão Ouro v1.2)
-
-```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -79,12 +61,40 @@ Aqui está o arquivo completo e finalizado, pronto para salvar como `receita-ris
         "suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VeganDiet", "https://schema.org/VegetarianDiet"],
         "knownAllergen": "Pode conter traços de castanhas.", 
 
-        "recipeIngredient": [
-          "1 pacote (180g) de Mistura para Risoto Mediterrâneo ChefBrico",
-          "720ml de água fria",
-          "1 fio de azeite",
-          "Sal a gosto",
-          "Folhas de manjericão fresco"
+       "recipeIngredient": [
+  {
+    "@type": "HowToSupply",
+    "name": "Mistura para Risoto Mediterrâneo ChefBrico",
+    "requiredQuantity": {
+      "@type": "QuantitativeValue",
+      "value": "1",
+      "unitText": "pacote (180g)"
+    }
+  },
+  {
+    "@type": "HowToSupply",
+    "name": "água fria",
+    "requiredQuantity": {
+      "@type": "QuantitativeValue",
+      "value": "720",
+      "unitText": "ml"
+    }
+  },
+  {
+    "@type": "HowToSupply",
+    "name": "azeite",
+    "requiredQuantity": "1 fio"
+  },
+  {
+    "@type": "HowToSupply",
+    "name": "Sal",
+    "requiredQuantity": "a gosto"
+  },
+  {
+    "@type": "HowToSupply",
+    "name": "Folhas de manjericão fresco (para finalizar)"
+  }
+],
         ],
         "recipeInstructions": [
           { "@type": "HowToStep", "text": "Aqueça um fio de azeite e refogue o conteúdo do pacote por 1 minuto para 'acordar' os aromas." },
@@ -261,4 +271,4 @@ Aqui está o arquivo completo e finalizado, pronto para salvar como `receita-ris
 
 </body>
 </html>
-```
+
