@@ -126,9 +126,30 @@
           "@type": "FoodEstablishment",
           "name": "ChefBrico",
           "url": "https://www.chefbrico.com"
-        }
+        },
+    // Adicione este bloco ao seu JSON-LD principal
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "O arroz negro demora muito para cozinhar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Por ser integral, ele leva cerca de 30-35 minutos. O resultado é uma textura mais firme, um sabor amendoado e um valor nutricional muito maior. Vale cada minuto!"
       }
-    ]
+    },
+    {
+      "@type": "Question",
+      "name": "Este prato é um risoto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não exatamente. O arroz negro integral não libera a mesma cremosidade do arroz arbóreo. O resultado é um prato mais 'soltinho', com grãos bem definidos. É uma experiência de textura diferente e deliciosa."
+      }
+    }
+  ]
+}
     </script>
 </head>
 <body>
