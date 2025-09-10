@@ -1,21 +1,4 @@
-Ótimo\! Fico feliz que o processo esteja funcionando bem. Próxima transformação recebida: o arquivo antigo de **"Taguatinga Norte"**.
 
-Este é outro caso de página "delivery-focado", muito similar ao Guará e Riacho Fundo, com uma forte mensagem voltada para "família" e "sabor de casa".
-
-O processo foi o mesmo:
-
-1.  **Migração de Dados:** Migrei 100% dos seus dados reais (SEO, H1, subtítulo e os textos dos CTAs focados em "Família").
-2.  **Ajuste de Conteúdo:** Como não há parceiros locais listados no arquivo antigo, eu **removi** a seção inteira do acordeão de parceiros, mantendo a página limpa e focada nos canais diretos.
-3.  **Correção de Schema:** Descartei o JSON-LD antigo e quebrado (que tinha o link `isPartOf` errado) e criei o grafo v2.1 completo, com a `areaServed` ("Taguatinga Norte") correta, o `isPartOf` apontando para a Página Mãe e os nós de `Review` e `Offers` (placeholders).
-4.  **Adição de Funis (Padronização):** **Adicionei os funis que faltavam** do nosso Molde Mestre: a seção "Depoimentos" e a seção "Food Porn", ambas com placeholders e textos customizados para o público desta região (famílias), como seus textos sugeriram.
-
-Aqui está o arquivo completo e finalizado, pronto para salvar como `taguatinga-norte.html`.
-
------
-
-### Código Completo: taguatinga-norte.html (Versão Final v2.1)
-
-```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -77,93 +60,70 @@ Aqui está o arquivo completo e finalizado, pronto para salvar como `taguatinga-
         }
     </style>
 
-    <script type="application/ld+json">
-    [
-      {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "ChefBrico em Taguatinga Norte: Delivery de Comida Caseira e Prática",
-        "url": "https://receitas.chefbrico.com/onde-encontrar/taguatinga-norte.html",
-        "description": "Serviço de delivery da ChefBrico focado em atender as famílias e trabalhadores de Taguatinga Norte com refeições práticas, saudáveis e com sabor de casa.",
-        "isPartOf": {
-          "@id": "https://receitas.chefbrico.com/onde-encontrar.html"
-        }
+   <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": "ChefBrico em Taguatinga Norte: Delivery de Comida Caseira e Prática",
+      "url": "https://receitas.chefbrico.com/onde-encontrar/taguatinga-norte.html",
+      "description": "A ChefBrico entrega em Taguatinga Norte! Peça online nossas refeições com sabor de casa, práticas e saudáveis, e receba na sua porta.",
+      "isPartOf": {
+        "@id": "https://receitas.chefbrico.com/onde-encontrar.html"
       },
-      {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "serviceType": "DeliveryService",
-        "name": "Delivery ChefBrico para Taguatinga Norte",
-        "areaServed": [
-          { "@type": "Place", "name": "Taguatinga Norte, Taguatinga, DF" }
-        ],
-        "provider": {
-          "@type": "FoodEstablishment",
-          "name": "ChefBrico",
-          "url": "https://www.chefbrico.com"
-        },
-        "review": [
-          {
-            "@type": "Review",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-            "reviewBody": "[PLACEHOLDER: Depoimento 1 de cliente de Taguatinga Norte]",
-            "author": {"@type": "Person", "name": "Cliente - Taguatinga Norte"}
-          },
-          {
-            "@type": "Review",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-            "reviewBody": "[PLACEHOLDER: Depoimento 2 de cliente de Taguatinga Norte]",
-            "author": {"@type": "Person", "name": "Cliente - Taguatinga Norte"}
-          },
-          {
-            "@type": "Review",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-            "reviewBody": "[PLACEHOLDER: Depoimento 3 de cliente da região]",
-            "author": {"@type": "Person", "name": "Fã da ChefBrico"}
-          }
-        ],
-        "offers": [
+      "publisher": {
+         "@id": "https://receitas.chefbrico.com/#organization"
+      }
+    },
+    {
+      "@type": "Service",
+      "mainEntityOfPage": {
+        "@id": "https://receitas.chefbrico.com/onde-encontrar/taguatinga-norte.html"
+      },
+      "name": "Delivery ChefBrico para Taguatinga Norte",
+      "serviceType": "Entrega de Refeições para Família",
+      "areaServed": {
+        "@type": "Place",
+        "name": "Taguatinga Norte, Taguatinga, DF"
+      },
+      "provider": {
+        "@id": "https://receitas.chefbrico.com/#organization"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+        "reviewBody": "[PLACEHOLDER: Finalmente uma opção de comida prática e realmente saudável em Taguatinga Norte. Minha família adorou o Baião de Dois!]",
+        "author": {"@type": "Person", "name": "[NOME DA CLIENTE 1]"}
+      },
+      "offers": {
+        "@type": "Offer",
+        "name": "Produtos Favoritos das Famílias de Taguatinga Norte",
+        "itemOffered": [
           {
             "@type": "Product",
-            "name": "[PRODUTO 1 - Ex: Baião de Dois Vegano]",
-            "image": "https://receitas.chefbrico.com/refeicoes-praticas/refeicao-baiao-dois-chefbrico.png"
+            "name": "Baião de Dois Vegano",
+            "image": "https://receitas.chefbrico.com/imagens/refeicoes-praticas/refeicao-baiao-dois-chefbrico.png"
           },
           {
             "@type": "Product",
-            "name": "[PRODUTO 2 - Ex: Sopas Funcionais]",
+            "name": "Sopas Funcionais",
             "image": "https://receitas.chefbrico.com/imagens/low-carb-vegetais-sopa-chefbrico.png"
           },
           {
             "@type": "Product",
-            "name": "[PRODUTO 3 - Ex: Risotos Práticos]",
-            "image": "https://receitas.chefbrico.com/risotos/risoto-pomodori-pesto-tijela-chefbrico.png"
-          },
-          {
-            "@type": "Product",
-            "name": "[PLACEHOLDER QUARTO PRODUTO]",
-            "image": "https://receitas.chefbrico.com/imagens/food-porn/regiao-produto-4.jpg"
+            "name": "Risotos Práticos",
+            "image": "https://receitas.chefbrico.com/imagens/risotos/risoto-pomodori-pesto-tijela-chefbrico.png"
           }
         ]
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Maria Conceição",
-        "jobTitle": "Fundadora e Chef",
-        "description": "Empreendedora e autora das receitas da ChefBrico.",
-        "url": "https://receitas.chefbrico.com/onde-encontrar.html",
-        "sameAs": [
-          "https://wa.me/5561996659880",
-          "https://www.instagram.com/chefbrico/"
-        ],
-        "funderOf": {
-          "@type": "FoodEstablishment",
-          "name": "ChefBrico",
-          "url": "https://www.chefbrico.com"
-        }
       }
-    ]
-    </script>
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://receitas.chefbrico.com/#organization",
+      "name": "ChefBrico",
+      "founder": {
+        "@id": "https://receitas.chefbrico.
 </head>
 <body>
 
@@ -291,4 +251,4 @@ Aqui está o arquivo completo e finalizado, pronto para salvar como `taguatinga-
 
 </body>
 </html>
-```
+
