@@ -60,94 +60,97 @@
     </style>
 
     <script type="application/ld+json">
-    [
-      {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "ChefBrico para GDF, SMU e Cruzeiro: Delivery Prático e Saudável",
-        "url": "https://receitas.chefbrico.com/onde-encontrar/plano-piloto-governo-df.html",
-        "description": "Serviço de delivery da ChefBrico focado em atender as necessidades de servidores do GDF, militares do SMU e moradores do Cruzeiro com refeições saudáveis.",
-        "isPartOf": {
-          "@id": "https://receitas.chefbrico.com/onde-encontrar.html"
-        }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": "ChefBrico para GDF, SMU e Cruzeiro: Delivery Prático e Saudável",
+      "url": "https://receitas.chefbrico.com/onde-encontrar/plano-piloto-governo-df.html",
+      "description": "A ChefBrico atende a região do Governo do DF, Setor Militar Urbano e Cruzeiro com delivery de refeições. Peça online e simplifique sua rotina.",
+      "isPartOf": {
+        "@id": "https://receitas.chefbrico.com/onde-encontrar.html"
       },
-      {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "serviceType": "DeliveryService",
-        "name": "Delivery ChefBrico para a região do Governo DF, SMU e Cruzeiro",
-        "areaServed": [
-            { "@type": "Place", "name": "Setor de Autarquias, Brasília, DF" },
-            { "@type": "Place", "name": "Setor Militar Urbano, Brasília, DF" },
-            { "@type": "Place", "name": "Cruzeiro, Brasília, DF" }
-        ],
-        "provider": {
-          "@type": "FoodEstablishment",
-          "name": "ChefBrico",
-          "url": "https://www.chefbrico.com"
+      "publisher": {
+         "@id": "https://receitas.chefbrico.com/#organization"
+      }
+    },
+    {
+      "@type": "Service",
+      "mainEntityOfPage": {
+        "@id": "https://receitas.chefbrico.com/onde-encontrar/plano-piloto-governo-df.html"
+      },
+      "name": "Delivery ChefBrico para a região do GDF, SMU e Cruzeiro",
+      "serviceType": "Entrega de Refeições Saudáveis para Escritório e Residência",
+      "areaServed": [
+        {
+            "@type": "Place",
+            "name": "Zona Cívico-Administrativa, Brasília, DF"
         },
-        "review": [
-          {
-            "@type": "Review",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-            "reviewBody": "[PLACEHOLDER: Depoimento 1 de cliente do GDF]",
-            "author": {"@type": "Person", "name": "Cliente - GDF"}
-          },
-          {
-            "@type": "Review",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-            "reviewBody": "[PLACEHOLDER: Depoimento 2 de cliente do SMU]",
-            "author": {"@type": "Person", "name": "Cliente - SMU"}
-          },
-          {
-            "@type": "Review",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-            "reviewBody": "[PLACEHOLDER: Depoimento 3 de cliente do Cruzeiro]",
-            "author": {"@type": "Person", "name": "Cliente - Cruzeiro"}
-          }
-        ],
-        "offers": [
-          {
-            "@type": "Product",
-            "name": "[PRODUTO 1 - Ex: Refeição Mediterrânea]",
-            "image": "https://receitas.chefbrico.com/refeicoes-praticas/refeicao-mediterranea-chefbrico.png"
-          },
+        {
+            "@type": "Place",
+            "name": "Setor Militar Urbano, Brasília, DF"
+        },
+        {
+            "@type": "Place",
+            "name": "Cruzeiro, Brasília, DF"
+        }
+      ],
+      "provider": {
+        "@id": "https://receitas.chefbrico.com/#organization"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+        "reviewBody": "[PLACEHOLDER: A melhor solução para o almoço na correria do trabalho! A entrega na Esplanada é super pontual e a comida é deliciosa.]",
+        "author": {"@type": "Person", "name": "Servidor(a) Público(a)"}
+      },
+      "offers": {
+        "@type": "Offer",
+        "name": "Favoritos para a Rotina de Trabalho",
+        "itemOffered": [
           {
             "@type": "Product",
-            "name": "[PRODUTO 2 - Ex: Sopa Detox]",
-            "image": "https://receitas.chefbrico.com/imagens/low-carb-vegetais-sopa-chefbrico.png"
+            "name": "Refeição Mediterrânea",
+            "image": "https://receitas.chefbrico.com/imagens/refeicoes-praticas/refeicao-mediterranea-chefbrico.png"
           },
           {
             "@type": "Product",
-            "name": "[PRODUTO 3 - Ex: Risoto]",
-            "image": "https://receitas.chefbrico.com/risotos/risoto-pomodori-pesto-tijela-chefbrico.png"
-          },
-          {
-            "@type": "Product",
-            "name": "[PLACEHOLDER QUARTO PRODUTO]",
-            "image": "https://receitas.chefbrico.com/imagens/food-porn/regiao-produto-4.jpg"
+            "name": "Sopa Detox",
+            "image": "https://receitas.chefbrico.com/imagens/sopas-funcionais/sopa-detox-chefbrico.png"
           }
         ]
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Maria Conceição",
-        "jobTitle": "Fundadora e Chef",
-        "description": "Empreendedora e autora das receitas da ChefBrico.",
-        "url": "https://receitas.chefbrico.com/onde-encontrar.html",
-        "sameAs": [
-          "https://wa.me/5561996659880",
-          "https://www.instagram.com/chefbrico/"
-        ],
-        "funderOf": {
-          "@type": "FoodEstablishment",
-          "name": "ChefBrico",
-          "url": "https://www.chefbrico.com"
-        }
       }
-    ]
-    </script>
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "A ChefBrico tem lojas físicas no Plano Piloto ou Cruzeiro?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Atualmente, o nosso foco para a região do GDF, SMU e Cruzeiro é o serviço de delivery, que garante a entrega de refeições práticas diretamente no seu trabalho ou residência. Para compras em lojas físicas, temos parceiros em bairros próximos como Asa Norte e Asa Sul."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://receitas.chefbrico.com/#organization",
+      "name": "ChefBrico",
+      "founder": {
+        "@id": "https://receitas.chefbrico.com/#person-maria-conceicao"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://receitas.chefbrico.com/#person-maria-conceicao",
+      "name": "Maria Conceição"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
