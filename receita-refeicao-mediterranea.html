@@ -28,131 +28,165 @@
     </script>
     
     <script type="application/ld+json">
-    [
-      {
-        "@context": "https://schema.org/",
-        "@type": "Recipe",
-        "name": "Receita Rápida: Refeição Mediterrânea Vegana ChefBrico",
-        "author": {
-          "@id": "https://receitas.chefbrico.com/#person-maria"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Recipe",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://receitas.chefbrico.com/receita-refeicao-mediterranea.html"
+      },
+      "name": "Receita Rápida: Refeição Mediterrânea Vegana ChefBrico",
+      "author": {
+        "@id": "https://receitas.chefbrico.com/#person-maria-conceicao"
+      },
+      "publisher": {
+         "@id": "https://receitas.chefbrico.com/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://receitas.chefbrico.com/refeicoes-praticas.html"
+      },
+      "recipeCategory": "Refeição Principal",
+      "datePublished": "2025-08-09T09:00:00-03:00",
+      "dateModified": "2025-09-11T09:00:00-03:00",
+      "description": "Aprenda a fazer a Refeição Mediterrânea Vegana da ChefBrico. Uma receita 100% natural, com grão de bico, arroz vermelho e toque de limão-siciliano.",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://receitas.chefbrico.com/imagens/refeicao-grao-bico-arroz-integral-vermelho-chefbrico.png"
+      },
+      "keywords": "refeicao, vegano, sem-gluten, marmita-inteligente, mediterraneo, leveza, grao de bico, arroz vermelho",
+      "prepTime": "PT1M",
+      "cookTime": "PT25M",
+      "totalTime": "PT26M",
+      "recipeYield": "3 porções",
+      "recipeCuisine": "Mediterrânea",
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "servingSize": "50 g",
+        "calories": "350 kcal",
+        "proteinContent": "13 g",
+        "carbohydrateContent": "60 g",
+        "fiberContent": "11 g"
+      },
+      "suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VeganDiet", "https://schema.org/VegetarianDiet"],
+      "recipeIngredient": [
+        {
+          "@type": "HowToSupply",
+          "name": "Mistura para Refeição Mediterrânea ChefBrico",
+          "requiredQuantity": { "@type": "QuantitativeValue", "value": "1", "unitText": "pacote (150g)" }
         },
-        "isPartOf": {
-          "@id": "https://receitas.chefbrico.com/refeicoes-praticas.html"
+        {
+          "@type": "HowToSupply",
+          "name": "água fria",
+          "requiredQuantity": { "@type": "QuantitativeValue", "value": "1000", "unitText": "ml (1 litro)" }
         },
-        "datePublished": "2025-08-09",
-        "description": "Aprenda a fazer a Refeição Mediterrânea Vegana da ChefBrico. Uma receita 100% natural, com grão de bico, arroz vermelho e toque de limão-siciliano.",
-        "image": "/imagens/refeicao-grao-bico-arroz-integral-vermelho-chefbrico.png",
-        "keywords": "refeicao, vegano, sem-gluten, marmita-inteligente, mediterraneo, leveza, grao de bico, arroz vermelho",
-        "prepTime": "PT1M",
-        "cookTime": "PT25M",
-        "totalTime": "PT26M",
-        "recipeYield": "3 porções",
-        "recipeCuisine": "Mediterrânea",
-        "nutrition": { 
-            "@type": "NutritionInformation", 
-            "servingSize": "50 g", 
-            "calories": "350 kcal", 
-            "proteinContent": "13 g", 
-            "carbohydrateContent": "60 g", 
-            "fiberContent": "11 g" 
+        {
+          "@type": "HowToSupply",
+          "name": "Sal",
+          "requiredQuantity": "a gosto"
         },
-        "suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VeganDiet", "https://schema.org/VegetarianDiet"],
-        "knownAllergen": "Pode conter traços de castanhas.", 
-
-        "recipeIngredient": [
-  {
-    "@type": "HowToSupply",
-    "name": "Mistura para Refeição Mediterrânea ChefBrico",
-    "requiredQuantity": {
-      "@type": "QuantitativeValue",
-      "value": "1",
-      "unitText": "pacote (150g)"
-    }
-  },
-  {
-    "@type": "HowToSupply",
-    "name": "água fria",
-    "requiredQuantity": {
-      "@type": "QuantitativeValue",
-      "value": "1000",
-      "unitText": "ml (1 litro)"
-    }
-  },
-  {
-    "@type": "HowToSupply",
-    "name": "Sal",
-    "requiredQuantity": "a gosto"
-  },
-  {
-    "@type": "HowToSupply",
-    "name": "1 fio de azeite (opcional)"
-  }
-],
-        "recipeInstructions": [
-          { "@type": "HowToStep", "text": "Na panela de pressão, coloque o conteúdo do pacote, 1 litro de água fria, sal e um fio de azeite. Misture." },
-          { "@type": "HowToStep", "text": "Tampe a panela. Leve ao fogo alto e, assim que pegar pressão, abaixe o fogo e cozinhe por 25 minutos." },
-          { "@type": "HowToStep", "text": "Desligue o fogo e espere a pressão sair completamente ANTES de abrir a panela. Mexa bem e sirva." }
-        ],
-        /* CORREÇÃO E-A-T: Usando o review "Beatriz C." que está visível no HTML */
-        "review": {
-            "@type": "Review",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5" }, /* Baseado no texto */
-            "author": { "@type": "Person", "name": "Beatriz C." },
-            "reviewBody": "Essa refeição mediterrânea é incrível! Super saborosa, me sinto leve e satisfeita. Virou meu almoço favorito para a marmita da semana."
+        {
+          "@type": "HowToSupply",
+          "name": "1 fio de azeite (opcional)"
+        }
+      ],
+      "recipeInstructions": [
+        {
+          "@type": "HowToStep",
+          "name": "Preparar",
+          "text": "Na panela de pressão, coloque o conteúdo do pacote, 1 litro de água fria, sal e um fio de azeite. Misture.",
+          "url": "https://receitas.chefbrico.com/receita-refeicao-mediterranea.html#passo1",
+          "image": { "@type": "ImageObject", "url": "https://receitas.chefbrico.com/imagens/passos/cozinhar-generico.png" }
         },
-        "mainEntityOfPage": {
-          "@type": "Product",
-          "name": "Mistura para Refeição Mediterrânea com Grão de Bico",
-          "description": "Uma refeição completa, saudável e saborosa! Nossa mistura mediterrânea com grão de bico, arroz vermelho e um toque de limão-siciliano é 100% natural e vegana.",
-          "brand": { "@type": "Brand", "name": "ChefBrico" },
-          "sku": "REF-MED-001",
-          "image": "/imagens/refeicao-grao-bico-arroz-integral-vermelho-chefbrico.png",
-          "keywords": "refeicao, vegano, sem-gluten, marmita-inteligente, mediterraneo, leveza",
-          "knownAllergen": "Pode conter traços de castanhas.",
-          "aggregateRating": {
+        {
+          "@type": "HowToStep",
+          "name": "Cozinhar",
+          "text": "Tampe a panela. Leve ao fogo alto e, assim que pegar pressão, abaixe o fogo e cozinhe por 25 minutos.",
+          "url": "https://receitas.chefbrico.com/receita-refeicao-mediterranea.html#passo2",
+          "image": { "@type": "ImageObject", "url": "https://receitas.chefbrico.com/imagens/passos/cozinhar-pressao-generico.png" }
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Finalizar",
+          "text": "Desligue o fogo e espere a pressão sair completamente ANTES de abrir a panela. Mexa bem e sirva.",
+          "url": "https://receitas.chefbrico.com/receita-refeicao-mediterranea.html#passo3",
+          "image": { "@type": "ImageObject", "url": "https://receitas.chefbrico.com/imagens/passos/finalizar-generico.png" }
+        }
+      ],
+      "review": {
+        "@type": "Review",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+        "author": { "@type": "Person", "name": "Beatriz C." },
+        "reviewBody": "Essa refeição mediterrânea é incrível! Super saborosa, me sinto leve e satisfeita. Virou meu almoço favorito para a marmita da semana."
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "23"
+      },
+      "video": {
+        "@type": "VideoObject",
+        "name": "Como Fazer a Refeição Mediterrânea Vegana da ChefBrico",
+        "description": "Descubra como preparar uma refeição mediterrânea completa e saudável, com grão de bico e arroz vermelho, em minutos.",
+        "thumbnailUrl": "https://receitas.chefbrico.com/URL_DA_IMAGEM_DE_CAPA_DO_VIDEO_MEDITERRANEA.jpg",
+        "contentUrl": "https://www.youtube.com/watch?v=SEU_VIDEO_ID_MEDITERRANEA",
+        "uploadDate": "2025-09-11T09:00:00-03:00",
+        "duration": "PT1M"
+      },
+      "about": {
+        "@type": "Product",
+        "name": "Mistura para Refeição Mediterrânea com Grão de Bico",
+        "description": "Uma refeição completa, saudável e saborosa! Nossa mistura mediterrânea com grão de bico, arroz vermelho e um toque de limão-siciliano é 100% natural e vegana.",
+        "brand": { "@type": "Brand", "name": "ChefBrico" },
+        "sku": "REF-MED-001",
+        "image": "https://receitas.chefbrico.com/imagens/refeicao-grao-bico-arroz-integral-vermelho-chefbrico.png",
+        "knownAllergen": "Pode conter traços de castanhas.",
+        "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.9",
             "reviewCount": "23"
-          },
-          "offers": {
-            "@type": "Offer",
-            "url": "https://www.chefbrico.com/refeicao-mediterranea-com-grao-de-bico",
-            "priceCurrency": "BRL",
-            "price": "29.60",
-            "availability": "https://schema.org/InStock",
-            "shippingDetails": {
-              "@type": "OfferShippingDetails",
-              "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "BR" },
-              "deliveryTime": {
-                "@type": "ShippingDeliveryTime",
-                "handlingTime": { "@type": "QuantitativeValue", "minValue": "1", "maxValue": "2", "unitCode": "DAY" },
-                "transitTime": { "@type": "QuantitativeValue", "minValue": "3", "maxValue": "10", "unitCode": "DAY" }
-              },
-              "carrier": { "@type": "Organization", "name": "Correios" }
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.chefbrico.com/refeicao-mediterranea-com-grao-de-bico",
+          "priceCurrency": "BRL",
+          "price": "34.80",
+          "priceValidUntil": "2026-12-31",
+          "availability": "https://schema.org/InStock",
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingDestination": {
+              "@type": "DefinedRegion",
+              "addressCountry": "BR"
+            },
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": { "@type": "QuantitativeValue", "minValue": "1", "maxValue": "2", "unitCode": "DAY" },
+              "transitTime": { "@type": "QuantitativeValue", "minValue": "3", "maxValue": "10", "unitCode": "DAY" }
             }
+          },
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "url": "https://www.chefbrico.com/trocas-e-devolucoes",
+            "applicableCountry": "BR",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 7
           }
         }
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "@id": "https://receitas.chefbrico.com/#person-maria", 
-        "name": "Maria Conceição",
-        "jobTitle": "Fundadora e Chef de Criação",
-        "description": "Empreendedora e autora de todas as receitas autorais da ChefBrico.",
-        "url": "https://receitas.chefbrico.com/nossa-filosofia.html",
-        "sameAs": [
-          "https://wa.me/5561996659880",
-          "https://www.instagram.com/chefbrico/"
-        ],
-        "funderOf": {
-          "@type": "FoodEstablishment",
-          "name": "ChefBrico",
-          "url": "https://www.chefbrico.com"
-        }
       }
-    ]
-    </script>
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://receitas.chefbrico.com/#organization"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://receitas.chefbrico.com/#person-maria-conceicao"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
