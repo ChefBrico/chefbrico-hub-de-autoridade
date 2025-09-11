@@ -27,84 +27,89 @@
       gtag('config', 'G-K58FN8J2VC');
     </script>
     
-    <script type="application/ld+json">
-    [
-      {
-        "@context": "https://schema.org/",
-        "@type": "Product",
-        "name": "Pesto de Manjericão com Castanha-do-Pará",
-        "url": "https://receitas.chefbrico.com/emporio-pesto-manjericao.html",
-        "image": [
-          "https://receitas.chefbrico.com/emporio/pesto-manjericao-chefbrico.png"
-        ],
-        "description": "Feito como manda a tradição italiana, nosso Pesto Genovês é uma celebração ao sabor autêntico, com o toque de brasilidade da Castanha-do-Pará, que confere uma cremosidade incomparável.",
-        "brand": {
-          "@type": "Brand",
-          "name": "ChefBrico"
-        },
-        "sku": "ANT-PES-002",
-        
-        /* Conexão E-A-T: Ligando o produto ao fabricante (Maria) */
-        "manufacturer": {
-           "@id": "https://receitas.chefbrico.com/#person-maria"
-        },
-
-        /* Conexão SILO: Ligando ao Hub de Categoria "Empório" */
-        "isPartOf": {
-          "@id": "https://receitas.chefbrico.com/emporio-da-chef.html"
-        },
-        
-        /* Keywords do Cardápio */
-        "keywords": "antepasto, pesto, sem-gluten, momento-especial, gourmet-pratico, italiano, manjericão",
-
-        /* Dados YMYL Críticos */
-        "suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VegetarianDiet"],
-        "knownAllergen": "Contém Leite (Queijo Parmesão), Contém Castanha-do-Pará.",
-        
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "5",
-          "reviewCount": "25"
-        },
-        "review": {
-          "@type": "Review",
-          "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-          "author": { "@type": "Person", "name": "Joana F." },
-          "reviewBody": "Simplesmente divino! O melhor pesto que já provei. Perfeita com meu queijo preferido e um vinho."
-        },
-        "offers": {
-          "@type": "Offer",
-          "price": "29.80",
-          "priceCurrency": "BRL",
-          "url": "https://www.chefbrico.com/pesto-manjericao-com-castanha-do-para",
-          "availability": "https://schema.org/InStock",
-          "seller": {
-            "@type": "Organization",
-            "name": "ChefBrico",
-            "url": "https://www.chefbrico.com"
-          }
-        }
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://receitas.chefbrico.com/emporio-pesto-manjericao.html"
       },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "@id": "https://receitas.chefbrico.com/#person-maria", 
-        "name": "Maria Conceição",
-        "jobTitle": "Fundadora e Chef de Criação",
-        "description": "Empreendedora e autora de todas as receitas autorais da ChefBrico.",
-        "url": "https://receitas.chefbrico.com/nossa-filosofia.html",
-        "sameAs": [
-          "https://wa.me/5561996659880",
-          "https://www.instagram.com/chefbrico/"
-        ],
-        "funderOf": {
-          "@type": "FoodEstablishment",
-          "name": "ChefBrico",
-          "url": "https://www.chefbrico.com"
+      "name": "Pesto de Manjericão com Castanha-do-Pará",
+      "url": "https://receitas.chefbrico.com/emporio-pesto-manjericao.html",
+      "image": "https://receitas.chefbrico.com/imagens/emporio/pesto-manjericao-chefbrico.png",
+      "description": "Feito como manda a tradição italiana, nosso Pesto Genovês é uma celebração ao sabor autêntico, com o toque de brasilidade da Castanha-do-Pará, que confere uma cremosidade incomparável.",
+      "brand": {
+        "@id": "https://receitas.chefbrico.com/#organization"
+      },
+      "sku": "ANT-PES-002",
+      "manufacturer": {
+        "@id": "https://receitas.chefbrico.com/#person-maria-conceicao"
+      },
+      "isPartOf": {
+        "@id": "https://receitas.chefbrico.com/emporio-da-chef.html"
+      },
+      "keywords": "antepasto, pesto, sem-gluten, momento-especial, gourmet-pratico, italiano, manjericão",
+      "suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VegetarianDiet"],
+      "knownAllergen": "Contém Leite (Queijo Parmesão), Contém Castanha-do-Pará.",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "25"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+        "author": { "@type": "Person", "name": "Joana F." },
+        "reviewBody": "Simplesmente divino! O melhor pesto que já provei. Perfeita com meu queijo preferido e um bom vinho."
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "29.80",
+        "priceCurrency": "BRL",
+        "priceValidUntil": "2026-12-31",
+        "url": "https://www.chefbrico.com/pesto-manjericao-com-castanha-do-para",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@id": "https://receitas.chefbrico.com/#organization"
+        },
+        "shippingDetails": {
+           "@type": "OfferShippingDetails",
+           "shippingDestination": {
+             "@type": "DefinedRegion",
+             "addressCountry": "BR"
+           },
+           "deliveryTime": {
+             "@type": "ShippingDeliveryTime",
+             "handlingTime": { "@type": "QuantitativeValue", "minValue": "1", "maxValue": "2", "unitCode": "DAY" },
+             "transitTime": { "@type": "QuantitativeValue", "minValue": "3", "maxValue": "10", "unitCode": "DAY" }
+           }
+        },
+        "hasMerchantReturnPolicy": {
+           "@type": "MerchantReturnPolicy",
+           "url": "https://www.chefbrico.com/trocas-e-devolucoes",
+           "applicableCountry": "BR",
+           "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+           "merchantReturnDays": 7
         }
       }
-    ]
-    </script>
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://receitas.chefbrico.com/#organization",
+      "name": "ChefBrico",
+      "founder": { "@id": "https://receitas.chefbrico.com/#person-maria-conceicao" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://receitas.chefbrico.com/#person-maria-conceicao",
+      "name": "Maria Conceição"
+    }
+  ]
+}
+</script>
 </head>
 <body>
     {% include "cabecalho.html" %}
