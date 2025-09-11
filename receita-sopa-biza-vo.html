@@ -29,130 +29,165 @@
     </script>
     
     <script type="application/ld+json">
-    [
-      {
-        "@context": "https://schema.org/",
-        "@type": "Recipe",
-        "name": "Receita Rápida: Sopinha da Biza Vó Funcional ChefBrico",
-        "author": {
-          "@id": "https://receitas.chefbrico.com/#person-maria"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Recipe",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://receitas.chefbrico.com/receita-sopa-biza-vo.html"
+      },
+      "name": "Receita Rápida: Sopinha da Biza Vó Funcional ChefBrico",
+      "author": {
+        "@id": "https://receitas.chefbrico.com/#person-maria-conceicao"
+      },
+      "publisher": {
+         "@id": "https://receitas.chefbrico.com/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://receitas.chefbrico.com/sopas-funcionais.html"
+      },
+      "recipeCategory": "Sopa",
+      "datePublished": "2025-08-19T09:00:00-03:00",
+      "dateModified": "2025-09-11T09:00:00-03:00",
+      "description": "Aprenda a fazer a Sopinha da Biza Vó da ChefBrico. O aconchego da infância em uma versão nutritiva, funcional, vegana e sem glúten, pronta em 15 min.",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://receitas.chefbrico.com/imagens/sopinha-da-biza-vo-chefbrico.png"
+      },
+      "keywords": "sopa, sopinha, para-familia, conforto, kids, funcional, vegano, sem-gluten",
+      "prepTime": "PT1M",
+      "cookTime": "PT15M",
+      "totalTime": "PT16M",
+      "recipeYield": "3 porções (1 litro)",
+      "recipeCuisine": "Funcional, Brasileira",
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "servingSize": "50 g",
+        "calories": "170 kcal",
+        "proteinContent": "8 g",
+        "carbohydrateContent": "30 g",
+        "fiberContent": "7 g"
+      },
+      "suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VeganDiet", "https://schema.org/VegetarianDiet", "https://schema.org/LowCalorieDiet"],
+      "recipeIngredient": [
+        {
+          "@type": "HowToSupply",
+          "name": "Mistura para Sopinha da Biza Vó ChefBrico",
+          "requiredQuantity": { "@type": "QuantitativeValue", "value": "1", "unitText": "pacote (105g)" }
         },
-        "isPartOf": {
-          "@id": "https://receitas.chefbrico.com/sopas-funcionais.html"
+        {
+          "@type": "HowToSupply",
+          "name": "água fria",
+          "requiredQuantity": { "@type": "QuantitativeValue", "value": "1000", "unitText": "ml (1 litro)" }
         },
-        "datePublished": "2025-08-19",
-        "description": "Aprenda a fazer a Sopinha da Biza Vó da ChefBrico. O aconchego da infância em uma versão nutritiva, funcional, vegana e sem glúten, pronta em 15 min.",
-        "image": "/imagens/sopinha-da-biza-vo-chefbrico.png",
-        "keywords": "sopa, sopinha, para-familia, conforto, kids, funcional, vegano, sem-gluten",
-        "prepTime": "PT1M",
-        "cookTime": "PT15M",
-        "totalTime": "PT16M",
-        "recipeYield": "3 porções (1 litro)",
-        "recipeCuisine": "Funcional, Brasileira",
-        "nutrition": { 
-            "@type": "NutritionInformation", 
-            "servingSize": "50 g", 
-            "calories": "170 kcal", 
-            "proteinContent": "8 g", 
-            "carbohydrateContent": "30 g", 
-            "fiberContent": "7 g" 
+        {
+          "@type": "HowToSupply",
+          "name": "Sal",
+          "requiredQuantity": "a gosto"
         },
-        "suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VeganDiet", "https://schema.org/VegetarianDiet", "https://schema.org/LowCalorieDiet"],
-        "knownAllergen": "Pode conter traços de castanhas.", 
-"recipeIngredient": [
-  {
-    "@type": "HowToSupply",
-    "name": "Mistura para Sopinha da Biza Vó ChefBrico",
-    "requiredQuantity": {
-      "@type": "QuantitativeValue",
-      "value": "1",
-      "unitText": "pacote (105g)"
-    }
-  },
-  {
-    "@type": "HowToSupply",
-    "name": "água fria",
-    "requiredQuantity": {
-      "@type": "QuantitativeValue",
-      "value": "1000",
-      "unitText": "ml (1 litro)"
-    }
-  },
-  {
-    "@type": "HowToSupply",
-    "name": "Sal",
-    "requiredQuantity": "a gosto"
-  },
-  {
-    "@type": "HowToSupply",
-    "name": "1 fio de azeite (opcional)"
-  }
-],
-        "recipeInstructions": [
-          { "@type": "HowToStep", "text": "Em uma panela, adicione o conteúdo do pacote e 1.000ml de água fria. Tempere com sal." },
-          { "@type": "HowToStep", "text": "Cozinhe em fogo baixo, com a panela semi-tampada, por cerca de 15 minutos." },
-          { "@type": "HowToStep", "text": "Sirva bem quente, finalizado com um fio de azeite, se desejar." }
-        ],
-        /* CORREÇÃO E-A-T: Usando o review "Roberta P." que está visível no HTML */
-        "review": {
-            "@type": "Review",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5" }, /* Baseado no texto */
-            "author": { "@type": "Person", "name": "Roberta P." },
-            "reviewBody": "Essa sopinha é um abraço! O sabor é de infância, mas sei que estou comendo algo super nutritivo. Meus filhos amaram o macarrãozinho e comeram todos os legumes sem reclamar. Virou item fixo na despensa!"
+        {
+          "@type": "HowToSupply",
+          "name": "1 fio de azeite (opcional)"
+        }
+      ],
+      "recipeInstructions": [
+        {
+          "@type": "HowToStep",
+          "name": "Preparar",
+          "text": "Em uma panela, adicione o conteúdo do pacote e 1.000ml de água fria. Tempere com sal.",
+          "url": "https://receitas.chefbrico.com/receita-sopa-biza-vo.html#passo1",
+          "image": { "@type": "ImageObject", "url": "https://receitas.chefbrico.com/imagens/passos/cozinhar-generico.png" }
         },
-        "mainEntityOfPage": {
-          "@type": "Product",
-          "name": "Mistura para Sopinha da Biza Vó Funcional",
-          "description": "O aconchego da sopa da avó em uma versão nutritiva e funcional! Nossa mistura com macarrão sem glúten, quinoa e super-ingredientes é 100% natural e pronta em 15 min.",
-          "brand": { "@type": "Brand", "name": "ChefBrico" },
-          "sku": "SOP-BV-002",
-          "image": "/imagens/sopinha-da-biza-vo-chefbrico.png",
-          "keywords": "sopa, para-familia, conforto, kids, sem-gluten, vegano",
-          "knownAllergen": "Pode conter traços de castanhas.",
-          "aggregateRating": {
+        {
+          "@type": "HowToStep",
+          "name": "Cozinhar",
+          "text": "Leve ao fogo médio. Assim que ferver, abaixe o fogo e cozinhe com a panela semi-tampada por aproximadamente 15 minutos.",
+          "url": "https://receitas.chefbrico.com/receita-sopa-biza-vo.html#passo2",
+          "image": { "@type": "ImageObject", "url": "https://receitas.chefbrico.com/imagens/passos/cozinhar-generico.png" }
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Finalizar",
+          "text": "Sirva bem quentinha, finalizado com cheiro-verde ou salsinha fresca.",
+          "url": "https://receitas.chefbrico.com/receita-sopa-biza-vo.html#passo3",
+          "image": { "@type": "ImageObject", "url": "https://receitas.chefbrico.com/imagens/passos/finalizar-generico.png" }
+        }
+      ],
+      "review": {
+        "@type": "Review",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+        "author": { "@type": "Person", "name": "Roberta P." },
+        "reviewBody": "Essa sopinha é um abraço! O sabor é de infância, mas sei que estou comendo algo super nutritivo. Meus filhos amaram o macarrãozinho e comeram todos os legumes sem reclamar. Virou item fixo na despensa!"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.6",
+        "reviewCount": "28"
+      },
+      "video": {
+        "@type": "VideoObject",
+        "name": "Como Fazer a Sopinha da Biza Vó da ChefBrico",
+        "description": "Prepare uma sopinha reconfortante e nutritiva, que as crianças adoram, em apenas 15 minutos. Sabor de casa de verdade!",
+        "thumbnailUrl": "https://receitas.chefbrico.com/URL_DA_IMAGEM_DE_CAPA_DO_VIDEO_BIZAVO.jpg",
+        "contentUrl": "https://www.youtube.com/watch?v=SEU_VIDEO_ID_BIZAVO",
+        "uploadDate": "2025-09-11T09:00:00-03:00",
+        "duration": "PT1M"
+      },
+      "about": {
+        "@type": "Product",
+        "name": "Mistura para Sopinha da Biza Vó Funcional",
+        "description": "O aconchego da sopa da avó em uma versão nutritiva e funcional! Nossa mistura com macarrão sem glúten, quinoa e super-ingredientes é 100% natural e pronta em 15 min.",
+        "brand": { "@type": "Brand", "name": "ChefBrico" },
+        "sku": "SOP-BV-002",
+        "image": "https://receitas.chefbrico.com/imagens/sopinha-da-biza-vo-chefbrico.png",
+        "knownAllergen": "Pode conter traços de castanhas.",
+        "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.6",
             "reviewCount": "28"
-          },
-          "offers": {
-            "@type": "Offer",
-            "url": "https://www.chefbrico.com/sopinha-da-biza-vo-sopa-funcional",
-            "priceCurrency": "BRL",
-            "price": "29.60",
-            "availability": "https://schema.org/InStock",
-            "shippingDetails": {
-              "@type": "OfferShippingDetails",
-              "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "BR" },
-              "deliveryTime": {
-                "@type": "ShippingDeliveryTime",
-                "handlingTime": { "@type": "QuantitativeValue", "minValue": "1", "maxValue": "2", "unitCode": "DAY" },
-                "transitTime": { "@type": "QuantitativeValue", "minValue": "3", "maxValue": "10", "unitCode": "DAY" }
-              },
-              "carrier": { "@type": "Organization", "name": "Correios" }
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.chefbrico.com/sopinha-da-biza-vo-sopa-funcional",
+          "priceCurrency": "BRL",
+          "price": "29.60",
+          "priceValidUntil": "2026-12-31",
+          "availability": "https://schema.org/InStock",
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingDestination": {
+              "@type": "DefinedRegion",
+              "addressCountry": "BR"
+            },
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": { "@type": "QuantitativeValue", "minValue": "1", "maxValue": "2", "unitCode": "DAY" },
+              "transitTime": { "@type": "QuantitativeValue", "minValue": "3", "maxValue": "10", "unitCode": "DAY" }
             }
+          },
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "url": "https://www.chefbrico.com/trocas-e-devolucoes",
+            "applicableCountry": "BR",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 7
           }
         }
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "@id": "https://receitas.chefbrico.com/#person-maria", 
-        "name": "Maria Conceição",
-        "jobTitle": "Fundadora e Chef de Criação",
-        "description": "Empreendedora e autora de todas as receitas autorais da ChefBrico.",
-        "url": "https://receitas.chefbrico.com/nossa-filosofia.html",
-        "sameAs": [
-          "https://wa.me/5561996659880",
-          "https://www.instagram.com/chefbrico/"
-        ],
-        "funderOf": {
-          "@type": "FoodEstablishment",
-          "name": "ChefBrico",
-          "url": "https://www.chefbrico.com"
-        }
       }
-    ]
-    </script>
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://receitas.chefbrico.com/#organization"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://receitas.chefbrico.com/#person-maria-conceicao"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
