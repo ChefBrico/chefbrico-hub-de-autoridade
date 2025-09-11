@@ -27,132 +27,166 @@
       gtag('config', 'G-K58FN8J2VC');
     </script>
     
-    <script type="application/ld+json">
-    [
-      {
-        "@context": "https://schema.org/",
-        "@type": "Recipe",
-        "name": "Receita Rápida: Canja Vegana Funcional ChefBrico",
-        "author": {
-          "@id": "https://receitas.chefbrico.com/#person-maria"
+   <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Recipe",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://receitas.chefbrico.com/receita-canja-vegana.html"
+      },
+      "name": "Receita Rápida: Canja Vegana Funcional ChefBrico",
+      "author": {
+        "@id": "https://receitas.chefbrico.com/#person-maria-conceicao"
+      },
+      "publisher": {
+         "@id": "https://receitas.chefbrico.com/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://receitas.chefbrico.com/sopas-funcionais.html"
+      },
+      "recipeCategory": "Sopa",
+      "datePublished": "2025-08-20T09:00:00-03:00",
+      "dateModified": "2025-09-11T09:00:00-03:00",
+      "description": "Aprenda a fazer a Canja Vegana Funcional da ChefBrico. Uma receita 100% natural, vegana, sem glúten, rica em proteína e reconfortante.",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://receitas.chefbrico.com/imagens/canja-vegana.png"
+      },
+      "keywords": "sopa, canja, vegano, sem-gluten, conforto, kids, para-familia, proteico, funcional",
+      "prepTime": "PT1M",
+      "cookTime": "PT15M",
+      "totalTime": "PT16M",
+      "recipeYield": "3 porções (1 litro)",
+      "recipeCuisine": "Funcional, Brasileira",
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "servingSize": "47 g",
+        "calories": "190 kcal",
+        "proteinContent": "10 g",
+        "carbohydrateContent": "35 g",
+        "fiberContent": "8 g"
+      },
+      "suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VeganDiet", "https://schema.org/VegetarianDiet", "https://schema.org/LowCalorieDiet"],
+      "recipeIngredient": [
+        {
+          "@type": "HowToSupply",
+          "name": "Mistura para Canja Vegana ChefBrico",
+          "requiredQuantity": { "@type": "QuantitativeValue", "value": "1", "unitText": "pacote (140g)" }
         },
-        "isPartOf": {
-          "@id": "https://receitas.chefbrico.com/sopas-funcionais.html" /* Link do Silo Nível 1 */
+        {
+          "@type": "HowToSupply",
+          "name": "água fria",
+          "requiredQuantity": { "@type": "QuantitativeValue", "value": "1000", "unitText": "ml (1 litro)" }
         },
-        "datePublished": "2025-08-20",
-        "description": "Aprenda a fazer a Canja Vegana Funcional da ChefBrico. Uma receita 100% natural, vegana, sem glúten, rica em proteína e reconfortante.",
-        "image": "/imagens/canja-vegana.png",
-        "keywords": "sopa, canja, vegano, sem-gluten, conforto, kids, para-familia, proteico, funcional",
-        "prepTime": "PT1M",
-        "cookTime": "PT15M",
-        "totalTime": "PT16M",
-        "recipeYield": "3 porções (1 litro)",
-        "recipeCuisine": "Funcional, Brasileira",
-        "nutrition": { 
-            "@type": "NutritionInformation", 
-            "servingSize": "47 g", 
-            "calories": "190 kcal", 
-            "proteinContent": "10 g", 
-            "carbohydrateContent": "35 g", 
-            "fiberContent": "8 g" 
+        {
+          "@type": "HowToSupply",
+          "name": "Sal",
+          "requiredQuantity": "a gosto"
         },
-        "suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VeganDiet", "https://schema.org/VegetarianDiet", "https://schema.org/LowCalorieDiet"],
-        "knownAllergen": "Pode conter traços de castanhas.", 
-
-        "recipeIngredient": [
-  {
-    "@type": "HowToSupply",
-    "name": "Mistura para Canja Vegana ChefBrico",
-    "requiredQuantity": {
-      "@type": "QuantitativeValue",
-      "value": "1",
-      "unitText": "pacote (140g)"
-    }
-  },
-  {
-    "@type": "HowToSupply",
-    "name": "água fria",
-    "requiredQuantity": {
-      "@type": "QuantitativeValue",
-      "value": "1000",
-      "unitText": "ml (1 litro)"
-    }
-  },
-  {
-    "@type": "HowToSupply",
-    "name": "Sal",
-    "requiredQuantity": "a gosto"
-  },
-  {
-    "@type": "HowToSupply",
-    "name": "1 fio de azeite (opcional)"
-  }
-],
-        "recipeInstructions": [
-          { "@type": "HowToStep", "text": "Em uma panela, coloque o conteúdo do pacote, 1 litro de água fria e sal." },
-          { "@type": "HowToStep", "text": "Leve ao fogo médio. Assim que ferver, abaixe o fogo e cozinhe com a panela semi-tampada por aproximadamente 15 minutos." },
-          { "@type": "HowToStep", "text": "Sirva bem quentinha, finalizada com cheiro-verde ou salsinha fresca." }
-        ],
-        /* CORREÇÃO E-A-T: Usando o review "Sofia M." que está visível no HTML */
-        "review": {
-            "@type": "Review",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5" }, /* Baseado no texto */
-            "author": { "@type": "Person", "name": "Sofia M." },
-            "reviewBody": "Essa canja é simplesmente perfeita. Leve, saborosa e me sinto super bem depois de comer. Ótima para um jantar leve ou depois de um treino. Recomendo muito!"
+        {
+          "@type": "HowToSupply",
+          "name": "1 fio de azeite (opcional)"
+        }
+      ],
+      "recipeInstructions": [
+        {
+          "@type": "HowToStep",
+          "name": "Preparar",
+          "text": "Em uma panela, coloque o conteúdo do pacote, 1 litro de água fria e sal.",
+          "url": "https://receitas.chefbrico.com/receita-canja-vegana.html#passo1",
+          "image": { "@type": "ImageObject", "url": "https://receitas.chefbrico.com/imagens/passos/cozinhar-generico.png" }
         },
-        "mainEntityOfPage": {
-          "@type": "Product",
-          "name": "Mistura para Canja Vegana Funcional",
-          "description": "Uma canja vegana nutritiva e reconfortante, pronta em 16 min! Nossa mistura com arroz basmati e lentilha vermelha é 100% natural, rica em proteína e sem glúten.",
-          "brand": { "@type": "Brand", "name": "ChefBrico" },
-          "sku": "SOP-CAN-007",
-          "image": "/imagens/canja-vegana.png",
-          "keywords": "sopa, vegano, sem-gluten, conforto, kids",
-          "knownAllergen": "Pode conter traços de castanhas.",
-          "aggregateRating": {
+        {
+          "@type": "HowToStep",
+          "name": "Cozinhar",
+          "text": "Leve ao fogo médio. Assim que ferver, abaixe o fogo e cozinhe com a panela semi-tampada por aproximadamente 15 minutos.",
+          "url": "https://receitas.chefbrico.com/receita-canja-vegana.html#passo2",
+          "image": { "@type": "ImageObject", "url": "https://receitas.chefbrico.com/imagens/passos/cozinhar-generico.png" }
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Finalizar",
+          "text": "Sirva bem quentinha, finalizada com cheiro-verde ou salsinha fresca.",
+          "url": "https://receitas.chefbrico.com/receita-canja-vegana.html#passo3",
+          "image": { "@type": "ImageObject", "url": "https://receitas.chefbrico.com/imagens/passos/finalizar-generico.png" }
+        }
+      ],
+      "review": {
+        "@type": "Review",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+        "author": { "@type": "Person", "name": "Sofia M." },
+        "reviewBody": "Essa canja é simplesmente perfeita. Leve, saborosa e me sinto super bem depois de comer. Ótima para um jantar leve ou depois de um treino. Recomendo muito!"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "16"
+      },
+      "video": {
+        "@type": "VideoObject",
+        "name": "Como Fazer a Canja Vegana Funcional da ChefBrico",
+        "description": "Prepare uma canja reconfortante, vegana e rica em proteína em menos de 20 minutos. A refeição perfeita para um dia frio ou para cuidar da saúde.",
+        "thumbnailUrl": "https://receitas.chefbrico.com/URL_DA_IMAGEM_DE_CAPA_DO_VIDEO_CANJA.jpg",
+        "contentUrl": "https://www.youtube.com/watch?v=SEU_VIDEO_ID_CANJA",
+        "uploadDate": "2025-09-11T09:00:00-03:00",
+        "duration": "PT1M"
+      },
+      "about": {
+        "@type": "Product",
+        "name": "Mistura para Canja Vegana Funcional",
+        "description": "Uma canja vegana nutritiva e reconfortante, pronta em 16 min! Nossa mistura com arroz basmati e lentilha vermelha é 100% natural, rica em proteína e sem glúten.",
+        "brand": { "@type": "Brand", "name": "ChefBrico" },
+        "sku": "SOP-CAN-007",
+        "image": "https://receitas.chefbrico.com/imagens/canja-vegana.png",
+        "knownAllergen": "Pode conter traços de castanhas.",
+        "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.9",
             "reviewCount": "16"
-          },
-          "offers": {
-            "@type": "Offer",
-            "url": "https://www.chefbrico.com/canja-opcao-vegana",
-            "priceCurrency": "BRL",
-            "price": "29.60",
-            "availability": "https://schema.org/InStock",
-            "shippingDetails": {
-              "@type": "OfferShippingDetails",
-              "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "BR" },
-              "deliveryTime": {
-                "@type": "ShippingDeliveryTime",
-                "handlingTime": { "@type": "QuantitativeValue", "minValue": "1", "maxValue": "2", "unitCode": "DAY" },
-                "transitTime": { "@type": "QuantitativeValue", "minValue": "3", "maxValue": "10", "unitCode": "DAY" }
-              },
-              "carrier": { "@type": "Organization", "name": "Correios" }
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.chefbrico.com/canja-opcao-vegana",
+          "priceCurrency": "BRL",
+          "price": "29.60",
+          "priceValidUntil": "2026-12-31",
+          "availability": "https://schema.org/InStock",
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingDestination": {
+              "@type": "DefinedRegion",
+              "addressCountry": "BR"
+            },
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": { "@type": "QuantitativeValue", "minValue": "1", "maxValue": "2", "unitCode": "DAY" },
+              "transitTime": { "@type": "QuantitativeValue", "minValue": "3", "maxValue": "10", "unitCode": "DAY" }
             }
+          },
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "url": "https://www.chefbrico.com/trocas-e-devolucoes",
+            "applicableCountry": "BR",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 7
           }
         }
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "@id": "https://receitas.chefbrico.com/#person-maria", 
-        "name": "Maria Conceição",
-        "jobTitle": "Fundadora e Chef de Criação",
-        "description": "Empreendedora e autora de todas as receitas autorais da ChefBrico.",
-        "url": "https://receitas.chefbrico.com/nossa-filosofia.html",
-        "sameAs": [
-          "https://wa.me/5561996659880",
-          "https://www.instagram.com/chefbrico/"
-        ],
-        "funderOf": {
-          "@type": "FoodEstablishment",
-          "name": "ChefBrico",
-          "url": "https://www.chefbrico.com"
-        }
       }
-    ]
-    </script>
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://receitas.chefbrico.com/#organization"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://receitas.chefbrico.com/#person-maria-conceicao"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
