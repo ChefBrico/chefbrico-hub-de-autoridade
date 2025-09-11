@@ -28,132 +28,169 @@
     </script>
     
     <script type="application/ld+json">
-    [
-      {
-        "@context": "https://schema.org/",
-        "@type": "Recipe",
-        "name": "Receita Rápida: Risoto de Zucchini e Alho-Poró ChefBrico",
-        "author": {
-          "@id": "https://receitas.chefbrico.com/#person-maria"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Recipe",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://receitas.chefbrico.com/receita-risoto-zucchini.html"
+      },
+      "name": "Receita Rápida: Risoto de Zucchini e Alho-Poró ChefBrico",
+      "author": {
+        "@id": "https://receitas.chefbrico.com/#person-maria-conceicao"
+      },
+      "publisher": {
+         "@id": "https://receitas.chefbrico.com/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://receitas.chefbrico.com/risotos.html"
+      },
+      "recipeCategory": "Prato Principal",
+      "datePublished": "2025-08-29T09:00:00-03:00",
+      "dateModified": "2025-09-11T09:00:00-03:00",
+      "description": "Aprenda o passo a passo para preparar o Risoto de Zucchini e Alho-Poró da ChefBrico. Uma receita leve, refrescante, 100% natural, vegana e sem glúten.",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://receitas.chefbrico.com/imagens/chefbrico-risoto-zucchini-arboreo(1080x566px).png"
+      },
+      "keywords": "risoto, vegano, sem-gluten, leveza, refrescante, marmita-inteligente, jantar-rapido, zucchini, alho-poro, curcuma",
+      "prepTime": "PT1M",
+      "cookTime": "PT18M",
+      "totalTime": "PT19M",
+      "recipeYield": "2 porções",
+      "recipeCuisine": "Italiana",
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "servingSize": "90 g",
+        "calories": "340 kcal",
+        "proteinContent": "9 g",
+        "carbohydrateContent": "70 g",
+        "fiberContent": "8 g"
+      },
+      "suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VeganDiet", "https://schema.org/VegetarianDiet", "https://schema.org/LowFatDiet"],
+      "recipeIngredient": [
+        {
+          "@type": "HowToSupply",
+          "name": "Mistura para Risoto de Zucchini e Alho-Poró ChefBrico",
+          "requiredQuantity": { "@type": "QuantitativeValue", "value": "1", "unitText": "pacote (180g)" }
         },
-        "isPartOf": {
-          "@id": "https://receitas.chefbrico.com/risotos.html"
+        {
+          "@type": "HowToSupply",
+          "name": "água fria",
+          "requiredQuantity": { "@type": "QuantitativeValue", "value": "720", "unitText": "ml" }
         },
-        "datePublished": "2025-08-29",
-        "description": "Aprenda o passo a passo para preparar o Risoto de Zucchini e Alho-Poró da ChefBrico. Uma receita leve, refrescante, 100% natural, vegana e sem glúten.",
-        "image": "/imagens/chefbrico-risoto-zucchini-arboreo(1080x566px).png",
-        "keywords": "risoto, vegano, sem-gluten, leveza, refrescante, marmita-inteligente, jantar-rapido, zucchini, alho-poro, curcuma",
-        "prepTime": "PT1M",
-        "cookTime": "PT18M",
-        "totalTime": "PT19M",
-        "recipeYield": "2 porções",
-        "recipeCuisine": "Italiana",
-        "nutrition": { 
-            "@type": "NutritionInformation", 
-            "servingSize": "90 g", 
-            "calories": "340 kcal", 
-            "proteinContent": "9 g", 
-            "carbohydrateContent": "70 g", 
-            "fiberContent": "8 g" 
+        {
+          "@type": "HowToSupply",
+          "name": "azeite",
+          "requiredQuantity": "1 fio"
         },
-        "suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VeganDiet", "https://schema.org/VegetarianDiet", "https://schema.org/LowFatDiet"],
-       "recipeIngredient": [
-  {
-    "@type": "HowToSupply",
-    "name": "Mistura para Risoto de Zucchini e Alho-Poró ChefBrico",
-    "requiredQuantity": {
-      "@type": "QuantitativeValue",
-      "value": "1",
-      "unitText": "pacote (180g)"
-    }
-  },
-  {
-    "@type": "HowToSupply",
-    "name": "água fria",
-    "requiredQuantity": {
-      "@type": "QuantitativeValue",
-      "value": "720",
-      "unitText": "ml"
-    }
-  },
-  {
-    "@type": "HowToSupply",
-    "name": "azeite",
-    "requiredQuantity": "1 fio"
-  },
-  {
-    "@type": "HowToSupply",
-    "name": "Sal",
-    "requiredQuantity": "a gosto"
-  },
-  {
-    "@type": "HowToSupply",
-    "name": "Raspas de limão siciliano (opcional)"
-  }
-],
-        "recipeInstructions": [
-          { "@type": "HowToStep", "text": "Aqueça um fio de azeite e refogue o conteúdo do pacote por 1 minuto para liberar os aromas suaves." },
-          { "@type": "HowToStep", "text": "Adicione 720ml de água fria e sal a gosto. Cozinhe em fogo baixo por cerca de 18 minutos, mexendo ocasionalmente." },
-          { "@type": "HowToStep", "text": "Finalize com um fio de azeite extra virgem e raspas de limão siciliano (opcional) para realçar o frescor." }
-        ],
-        "review": {
-            "@type": "Review",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-            "author": { "@type": "Person", "name": "Gabriela B." },
-            "reviewBody": "O risoto mais leve e gostoso que já provei! O sabor do alho-poró é suave e a cor que a cúrcuma dá é linda. Virou meu almoço favorito da semana."
+        {
+          "@type": "HowToSupply",
+          "name": "Sal",
+          "requiredQuantity": "a gosto"
         },
-        "mainEntityOfPage": {
-          "@type": "Product",
-          "name": "Mistura para Risoto de Zucchini e Alho-Poró",
-          "description": "Uma refeição leve e saudável em 18 minutos! Nossa mistura artesanal para Risoto de Zucchini (abobrinha) e Alho-Poró é 100% natural, vegana e sem glúten.",
-          "brand": { "@type": "Brand", "name": "ChefBrico" },
-          "sku": "RIS-ZUC-003",
-          "image": "/imagens/risoto-zucchini-arboreo-chefbrico.png",
-          "keywords": "risoto, vegano, sem-gluten, leveza, marmita-inteligente, jantar-rapido",
-          "aggregateRating": {
+        {
+          "@type": "HowToSupply",
+          "name": "Raspas de limão siciliano (opcional)"
+        }
+      ],
+      "recipeInstructions": [
+        {
+          "@type": "HowToStep",
+          "name": "Refogar",
+          "text": "Aqueça um fio de azeite e refogue o conteúdo do pacote por 1 minuto para liberar os aromas suaves.",
+          "url": "https://receitas.chefbrico.com/receita-risoto-zucchini.html#passo1",
+          "image": { "@type": "ImageObject", "url": "https://receitas.chefbrico.com/imagens/passos/refogar-generico.png" }
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Cozinhar",
+          "text": "Adicione 720ml de água fria e sal a gosto. Cozinhe em fogo baixo por cerca de 18 minutos, mexendo ocasionalmente.",
+          "url": "https://receitas.chefbrico.com/receita-risoto-zucchini.html#passo2",
+          "image": { "@type": "ImageObject", "url": "https://receitas.chefbrico.com/imagens/passos/cozinhar-generico.png" }
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Finalizar",
+          "text": "Finalize com um fio de azeite extra virgem e raspas de limão siciliano (opcional) para realçar o frescor.",
+          "url": "https://receitas.chefbrico.com/receita-risoto-zucchini.html#passo3",
+          "image": { "@type": "ImageObject", "url": "https://receitas.chefbrico.com/imagens/passos/finalizar-generico.png" }
+        }
+      ],
+      "review": {
+        "@type": "Review",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+        "author": { "@type": "Person", "name": "Gabriela B." },
+        "reviewBody": "O risoto mais leve e gostoso que já provei! O sabor do alho-poró é suave e a cor que a cúrcuma dá é linda. Virou meu almoço favorito da semana."
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "26"
+      },
+      "video": {
+        "@type": "VideoObject",
+        "name": "Como Fazer o Risoto de Zucchini e Alho-Poró da ChefBrico",
+        "description": "Aprenda a fazer um risoto leve, refrescante e saudável em minutos. Perfeito para uma refeição rápida e deliciosa.",
+        "thumbnailUrl": "https://receitas.chefbrico.com/URL_DA_IMAGEM_DE_CAPA_DO_VIDEO_ZUCCHINI.jpg",
+        "contentUrl": "https://www.youtube.com/watch?v=SEU_VIDEO_ID_ZUCCHINI",
+        "uploadDate": "2025-09-11T09:00:00-03:00",
+        "duration": "PT1M"
+      },
+      "about": {
+        "@type": "Product",
+        "name": "Mistura para Risoto de Zucchini e Alho-Poró",
+        "description": "Uma refeição leve e saudável em 18 minutos! Nossa mistura artesanal para Risoto de Zucchini (abobrinha) e Alho-Poró é 100% natural, vegana e sem glúten.",
+        "brand": { "@type": "Brand", "name": "ChefBrico" },
+        "sku": "RIS-ZUC-003",
+        "image": "https://receitas.chefbrico.com/imagens/risoto-zucchini-arboreo-chefbrico.png",
+        "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.9",
             "reviewCount": "26"
-          },
-          "offers": {
-            "@type": "Offer",
-            "url": "https://www.chefbrico.com/risoto-de-zucchini-e-alho-poro",
-            "priceCurrency": "BRL",
-            "price": "34.80",
-            "availability": "https://schema.org/InStock",
-            "shippingDetails": {
-              "@type": "OfferShippingDetails",
-              "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "BR" },
-              "deliveryTime": {
-                "@type": "ShippingDeliveryTime",
-                "handlingTime": { "@type": "QuantitativeValue", "minValue": "1", "maxValue": "2", "unitCode": "DAY" },
-                "transitTime": { "@type": "QuantitativeValue", "minValue": "3", "maxValue": "10", "unitCode": "DAY" }
-              },
-              "carrier": { "@type": "Organization", "name": "Correios" }
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.chefbrico.com/risoto-de-zucchini-e-alho-poro",
+          "priceCurrency": "BRL",
+          "price": "34.80",
+          "priceValidUntil": "2026-12-31",
+          "availability": "https://schema.org/InStock",
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingDestination": {
+              "@type": "DefinedRegion",
+              "addressCountry": "BR"
+            },
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": { "@type": "QuantitativeValue", "minValue": "1", "maxValue": "2", "unitCode": "DAY" },
+              "transitTime": { "@type": "QuantitativeValue", "minValue": "3", "maxValue": "10", "unitCode": "DAY" }
             }
+          },
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "url": "https://www.chefbrico.com/trocas-e-devolucoes",
+            "applicableCountry": "BR",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 7
           }
         }
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "@id": "https://receitas.chefbrico.com/#person-maria", 
-        "name": "Maria Conceição",
-        "jobTitle": "Fundadora e Chef de Criação",
-        "description": "Empreendedora e autora de todas as receitas autorais da ChefBrico.",
-        "url": "https://receitas.chefbrico.com/nossa-filosofia.html",
-        "sameAs": [
-          "https://wa.me/5561996659880",
-          "https://www.instagram.com/chefbrico/"
-        ],
-        "funderOf": {
-          "@type": "FoodEstablishment",
-          "name": "ChefBrico",
-          "url": "https://www.chefbrico.com"
-        }
       }
-    ]
-    </script>
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://receitas.chefbrico.com/#organization"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://receitas.chefbrico.com/#person-maria-conceicao"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
