@@ -27,7 +27,7 @@
       gtag('config', 'G-K58FN8J2VC');
     </script>
     
-  <script type="application/ld+json">
+ <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -48,15 +48,21 @@
         "@id": "https://receitas.chefbrico.com/refeicoes-praticas.html"
       },
       "datePublished": "2025-08-12",
-      "dateModified": "2025-09-10",
+      "dateModified": "2025-09-11",
       "description": "Aprenda a fazer a Refeição com Arroz Negro e Funghi da ChefBrico. Uma receita 100% natural, vegana, sem glúten, nutritiva e sofisticada.",
-      "image": "https://receitas.chefbrico.com/refeicoes-praticas/Refeicao-arroz-negro-funghi-chefbrico.png",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://receitas.chefbrico.com/refeicoes-praticas/Refeicao-arroz-negro-funghi-chefbrico.png",
+        "width": 1080,
+        "height": 566
+      },
       "keywords": "refeicao, vegano, sem-gluten, marmita-inteligente, momento-especial, jantar-romantico, gourmet-pratico, arroz negro, funghi",
       "prepTime": "PT1M",
       "cookTime": "PT35M",
       "totalTime": "PT36M",
       "recipeYield": "2 porções",
       "recipeCuisine": "Contemporânea",
+      "recipeCategory": "Refeição Principal",
       "nutrition": {
         "@type": "NutritionInformation",
         "servingSize": "90 g",
@@ -70,20 +76,12 @@
         {
           "@type": "HowToSupply",
           "name": "Mistura para Refeição com Arroz Negro e Funghi ChefBrico",
-          "requiredQuantity": {
-            "@type": "QuantitativeValue",
-            "value": "1",
-            "unitText": "pacote (180g)"
-          }
+          "requiredQuantity": { "@type": "QuantitativeValue", "value": "1", "unitText": "pacote (180g)" }
         },
         {
           "@type": "HowToSupply",
           "name": "água fria",
-          "requiredQuantity": {
-            "@type": "QuantitativeValue",
-            "value": "800",
-            "unitText": "ml"
-          }
+          "requiredQuantity": { "@type": "QuantitativeValue", "value": "800", "unitText": "ml" }
         },
         {
           "@type": "HowToSupply",
@@ -94,12 +92,43 @@
           "@type": "HowToSupply",
           "name": "Sal",
           "requiredQuantity": "a gosto"
+        },
+        {
+          "@type": "HowToSupply",
+          "name": "Nozes ou amêndoas picadas (opcional, para finalizar)"
         }
       ],
       "recipeInstructions": [
-        { "@type": "HowToStep", "name": "Refogar", "text": "Aqueça um fio de azeite e refogue o conteúdo do pacote por 1 minuto." },
-        { "@type": "HowToStep", "name": "Cozinhar", "text": "Adicione 800ml de água fria e sal a gosto. Cozinhe em fogo baixo, com a panela semi-tampada, por cerca de 30-35 minutos." },
-        { "@type": "HowToStep", "name": "Finalizar", "text": "Finalize com um fio de azeite de boa qualidade e, se desejar, nozes picadas." }
+        {
+          "@type": "HowToStep",
+          "name": "Refogar",
+          "text": "Aqueça um fio de azeite e refogue o conteúdo do pacote por 1 minuto para liberar o perfume terroso do cogumelo.",
+          "url": "https://receitas.chefbrico.com/receita-arroz-negro-funghi.html#passo1",
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://receitas.chefbrico.com/imagens/passos/refogar-generico.png"
+          }
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Cozinhar",
+          "text": "Adicione 800ml de água fria e sal a gosto. Cozinhe em fogo baixo, com a panela semi-tampada, por cerca de 30-35 minutos.",
+          "url": "https://receitas.chefbrico.com/receita-arroz-negro-funghi.html#passo2",
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://receitas.chefbrico.com/imagens/passos/cozinhar-generico.png"
+          }
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Finalizar",
+          "text": "Sirva com um fio de azeite de boa qualidade e, se desejar, nozes ou amêndoas picadas.",
+          "url": "https://receitas.chefbrico.com/receita-arroz-negro-funghi.html#passo3",
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://receitas.chefbrico.com/imagens/passos/finalizar-generico.png"
+          }
+        }
       ],
       "review": {
         "@type": "Review",
@@ -112,28 +141,29 @@
         "ratingValue": "4.9",
         "reviewCount": "20"
       },
+      "video": {
+        "@type": "VideoObject",
+        "name": "Como Fazer Arroz Negro com Funghi da ChefBrico",
+        "description": "Veja o passo a passo completo para preparar esta refeição sofisticada e nutritiva em apenas 35 minutos.",
+        "thumbnailUrl": "https://receitas.chefbrico.com/URL_DA_IMAGEM_DE_CAPA_DO_VIDEO.jpg",
+        "contentUrl": "https://www.youtube.com/watch?v=SEU_VIDEO_ID",
+        "uploadDate": "2025-09-11",
+        "duration": "PT1M15S",
+        "transcript": "Olá, sou a Maria Conceição! Hoje vamos fazer nosso Arroz Negro com Funghi. Primeiro, refogue o conteúdo do pacote por um minuto. Adicione água e sal, e cozinhe por 35 minutos. Para finalizar, um fio de azeite e nozes picadas. Simples assim!"
+      },
       "about": {
         "@type": "Product",
         "name": "Mistura para Refeição com Arroz Negro e Funghi",
         "description": "Uma refeição sofisticada e nutritiva para preparar em casa. Nossa mistura 100% natural combina o sabor amendoado do arroz negro integral com a intensidade do cogumelo Funghi Secchi.",
-        "brand": { "@id": "https://receitas.chefbrico.com/#organization" },
+        "brand": { "@type": "Brand", "name": "ChefBrico" },
         "sku": "REF-ARN-180",
         "image": "https://receitas.chefbrico.com/refeicoes-praticas/Refeicao-arroz-negro-funghi-chefbrico.png",
-        "knownAllergen": "Pode conter traços de castanhas e amendoim.",
-        
-        /* --- MELHORIAS FINAIS ADICIONADAS AO PRODUTO --- */
-        "review": {
-            "@type": "Review",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-            "author": { "@type": "Person", "name": "Mariana L." },
-            "reviewBody": "Fiz o Arroz Negro para receber amigos e todos ficaram impressionados! Ninguém acreditou que era tão prático. Sabor incrível e super saudável."
-        },
+        "knownAllergen": "Pode conter traços de castanhas.",
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.9",
             "reviewCount": "20"
         },
-
         "offers": {
           "@type": "Offer",
           "url": "https://www.chefbrico.com/refeicao-arroz-negro-funghi",
