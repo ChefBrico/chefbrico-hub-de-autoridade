@@ -47,10 +47,16 @@
       "isPartOf": {
         "@id": "https://receitas.chefbrico.com/refeicoes-praticas.html"
       },
-      "datePublished": "2025-08-10",
-      "dateModified": "2025-09-10",
+      "recipeCategory": "Refeição Principal",
+      "datePublished": "2025-08-10T09:00:00-03:00",
+      "dateModified": "2025-09-11T09:00:00-03:00",
       "description": "Aprenda a fazer o Baião de Dois Integral da ChefBrico. Uma releitura saudável, vegana, sem glúten e 100% natural do clássico brasileiro, com toque defumado de shiitake.",
-      "image": "https://receitas.chefbrico.com/imagens/chefbrico-Refeic%CC%A7a%CC%83o-baiao-2%20(1080%20x%20566%20px).png",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://receitas.chefbrico.com/imagens/chefbrico-Refeic%CC%A7a%CC%83o-baiao-2%20(1080%20x%20566%20px).png",
+        "width": 1080,
+        "height": 566
+      },
       "keywords": "refeicao, baiao de dois, vegano, sem-gluten, para-familia, dia-a-dia, marmita-inteligente, brasileiro, integral",
       "prepTime": "PT1M",
       "cookTime": "PT45M",
@@ -70,20 +76,12 @@
         {
           "@type": "HowToSupply",
           "name": "Mistura para Baião de Dois Integral ChefBrico",
-          "requiredQuantity": {
-            "@type": "QuantitativeValue",
-            "value": "1",
-            "unitText": "pacote (180g)"
-          }
+          "requiredQuantity": { "@type": "QuantitativeValue", "value": "1", "unitText": "pacote (180g)" }
         },
         {
           "@type": "HowToSupply",
           "name": "água fria",
-          "requiredQuantity": {
-            "@type": "QuantitativeValue",
-            "value": "1000",
-            "unitText": "ml (1 litro)"
-          }
+          "requiredQuantity": { "@type": "QuantitativeValue", "value": "1000", "unitText": "ml (1 litro)" }
         },
         {
           "@type": "HowToSupply",
@@ -101,9 +99,36 @@
         }
       ],
       "recipeInstructions": [
-        { "@type": "HowToStep", "name": "Refogar", "text": "Aqueça um fio de azeite e refogue o conteúdo do pacote por 1 minuto para liberar os aromas." },
-        { "@type": "HowToStep", "name": "Cozinhar", "text": "Adicione 1 litro de água fria e sal a gosto. Cozinhe em fogo baixo, com a panela semi-tampada, por cerca de 45 minutos." },
-        { "@type": "HowToStep", "name": "Finalizar", "text": "Finalize com coentro ou cheiro-verde fresco picado e, se desejar, umas gotas de pimenta." }
+        {
+          "@type": "HowToStep",
+          "name": "Refogar",
+          "text": "Aqueça um fio de azeite e refogue o conteúdo do pacote por 1 minuto para liberar os aromas.",
+          "url": "https://receitas.chefbrico.com/receita-baiao-de-dois.html#passo1",
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://receitas.chefbrico.com/imagens/passos/refogar-generico.png"
+          }
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Cozinhar",
+          "text": "Adicione 1 litro de água fria e sal a gosto. Cozinhe em fogo baixo, com a panela semi-tampada, por cerca de 45 minutos.",
+          "url": "https://receitas.chefbrico.com/receita-baiao-de-dois.html#passo2",
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://receitas.chefbrico.com/imagens/passos/cozinhar-generico.png"
+          }
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Finalizar",
+          "text": "Finalize com coentro ou cheiro-verde fresco picado e, se desejar, umas gotas de pimenta.",
+          "url": "https://receitas.chefbrico.com/receita-baiao-de-dois.html#passo3",
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://receitas.chefbrico.com/imagens/passos/finalizar-generico.png"
+          }
+        }
       ],
       "review": {
         "@type": "Review",
@@ -116,20 +141,23 @@
         "ratingValue": "4.9",
         "reviewCount": "12"
       },
+      "video": {
+        "@type": "VideoObject",
+        "name": "Como Fazer Baião de Dois Integral e Vegano da ChefBrico",
+        "description": "Veja o passo a passo para preparar o clássico brasileiro em uma versão saudável, integral e 100% natural em menos de 1 minuto.",
+        "thumbnailUrl": "https://receitas.chefbrico.com/URL_DA_IMAGEM_DE_CAPA_DO_VIDEO_BAIAO.jpg",
+        "contentUrl": "https://www.youtube.com/watch?v=SEU_VIDEO_ID_BAIAO",
+        "uploadDate": "2025-09-11T09:00:00-03:00",
+        "duration": "PT1M"
+      },
       "about": {
         "@type": "Product",
         "name": "Mistura para Baião de Dois com Grãos Integrais",
         "description": "O clássico Baião de Dois em uma versão integral, vegana e saudável! Nossa mistura prática com um toque defumado de shiitake é 100% natural e cheia de sabor.",
-        "brand": { "@id": "https://receitas.chefbrico.com/#organization" },
+        "brand": { "@type": "Brand", "name": "ChefBrico" },
         "sku": "REF-BAI-002",
         "image": "https://receitas.chefbrico.com/refeicoes-praticas/baiao-de-2-refeicao-pratica-chefbrico.png",
         "knownAllergen": "Pode conter traços de castanhas.",
-        "review": {
-            "@type": "Review",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-            "author": { "@type": "Person", "name": "Fernanda R." },
-            "reviewBody": "Esse Baião de Dois virou o coringa aqui em casa. As crianças amam e eu fico tranquila por saber que é super nutritivo. Salvação para a rotina da família!"
-        },
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.9",
@@ -140,12 +168,18 @@
           "url": "https://www.chefbrico.com/baiao-de-2-graos-integrais",
           "priceCurrency": "BRL",
           "price": "34.80",
+          "priceValidUntil": "2026-12-31",
           "availability": "https://schema.org/InStock",
           "shippingDetails": {
             "@type": "OfferShippingDetails",
             "shippingDestination": {
               "@type": "DefinedRegion",
               "addressCountry": "BR"
+            },
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": { "@type": "QuantitativeValue", "minValue": "1", "maxValue": "2", "unitCode": "DAY" },
+              "transitTime": { "@type": "QuantitativeValue", "minValue": "3", "maxValue": "10", "unitCode": "DAY" }
             }
           },
           "hasMerchantReturnPolicy": {
@@ -181,14 +215,11 @@
     },
     {
       "@type": "Organization",
-      "@id": "https://receitas.chefbrico.com/#organization",
-      "name": "ChefBrico",
-      "founder": { "@id": "https://receitas.chefbrico.com/#person-maria-conceicao" }
+      "@id": "https://receitas.chefbrico.com/#organization"
     },
     {
       "@type": "Person",
-      "@id": "https://receitas.chefbrico.com/#person-maria-conceicao",
-      "name": "Maria Conceição"
+      "@id": "https://receitas.chefbrico.com/#person-maria-conceicao"
     }
   ]
 }
