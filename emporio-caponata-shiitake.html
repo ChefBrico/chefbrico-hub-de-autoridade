@@ -26,88 +26,91 @@
       gtag('js', new Date());
       gtag('config', 'G-K58FN8J2VC');
     </script>
-    
     <script type="application/ld+json">
-    [
-      {
-        "@context": "https://schema.org/",
-        "@type": "Product",
-        "name": "Caponata com Shiitake Grelhado",
-        "url": "https://receitas.chefbrico.com/emporio-caponata-shiitake.html",
-        "image": [
-          "https://receitas.chefbrico.com/emporio/caponata-shiitake-vegetais-chefbrico.png"
-        ],
-        "description": "Uma releitura sofisticada de um clássico siciliano. Nossa Caponata artesanal une o tradicional sabor agridoce dos vegetais cozidos lentamente na técnica confit com o toque surpreendente e umami do cogumelo shiitake grelhado.",
-        "brand": {
-          "@type": "Brand",
-          "name": "ChefBrico"
-        },
-        "sku": "ANT-CAP-003",
-        "manufacturer": {
-           "@id": "https://receitas.chefbrico.com/#person-maria"
-        },
-        "isPartOf": {
-          "@id": "https://receitas.chefbrico.com/emporio-da-chef.html"
-        },
-        "keywords": "antepasto, caponata, vegano, sem-gluten, momento-especial, gourmet-pratico, shiitake, agridoce",
-        "suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VeganDiet", "https://schema.org/VegetarianDiet"],
-        "knownAllergen": "Livre de Glúten. Livre de Lactose. (Produzido em ambiente que pode conter traços de castanhas).",
-        
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "5",
-          "reviewCount": "15"
-        },
-        /* Review do JSON antigo mantido, mas idealmente alinhar com o HTML */
-        "review": {
-          "@type": "Review",
-          "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-          "author": { "@type": "Person", "name": "Joana F." },
-          "reviewBody": "Simplesmente divina! A melhor caponata que já provei. O shiitake dá um toque super especial. Perfeita com torradas e um bom vinho."
-        },
-        "offers": {
-          "@type": "Offer",
-          "price": "29.80",
-          "priceCurrency": "BRL",
-          "url": "https://www.chefbrico.com/caponata-com-shiitake-grelhado",
-          "availability": "https://schema.org/InStock",
-          "seller": {
-            "@type": "Organization",
-            "name": "ChefBrico",
-            "url": "https://www.chefbrico.com"
-          },
-           "shippingDetails": {
-             "@type": "OfferShippingDetails",
-             "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "BR" },
-             "deliveryTime": {
-                "@type": "ShippingDeliveryTime",
-                "handlingTime": { "@type": "QuantitativeValue", "minValue": "1", "maxValue": "2", "unitCode": "DAY" },
-                "transitTime": { "@type": "QuantitativeValue", "minValue": "3", "maxValue": "10", "unitCode": "DAY" }
-              },
-             "carrier": { "@type": "Organization", "name": "Correios" }
-          }
-        }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://receitas.chefbrico.com/emporio-caponata-shiitake.html"
       },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "@id": "https://receitas.chefbrico.com/#person-maria", 
-        "name": "Maria Conceição",
-        "jobTitle": "Fundadora e Chef de Criação",
-        "description": "Empreendedora e autora de todas as receitas autorais da ChefBrico.",
-        "url": "https://receitas.chefbrico.com/nossa-filosofia.html",
-        "sameAs": [
-          "https://wa.me/5561996659880",
-          "https://www.instagram.com/chefbrico/"
-        ],
-        "funderOf": {
-          "@type": "FoodEstablishment",
-          "name": "ChefBrico",
-          "url": "https://www.chefbrico.com"
+      "name": "Antepasto: Caponata com Shiitake Grelhado",
+      "url": "https://receitas.chefbrico.com/emporio-caponata-shiitake.html",
+      "image": [
+        "https://receitas.chefbrico.com/imagens/emporio/caponata-shiitake-vegetais-chefbrico.png"
+      ],
+      "description": "Uma releitura sofisticada de um clássico siciliano. Nossa Caponata artesanal une o tradicional sabor agridoce dos vegetais cozidos lentamente na técnica confit com o toque surpreendente e umami do cogumelo shiitake grelhado.",
+      "brand": {
+        "@id": "https://receitas.chefbrico.com/#organization"
+      },
+      "sku": "ANT-CAP-003",
+      "manufacturer": {
+        "@id": "https://receitas.chefbrico.com/#person-maria-conceicao"
+      },
+      "isPartOf": {
+        "@id": "https://receitas.chefbrico.com/emporio-da-chef.html"
+      },
+      "keywords": "antepasto, caponata, vegano, sem-gluten, momento-especial, gourmet-pratico, shiitake, agridoce",
+      "suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VeganDiet", "https://schema.org/VegetarianDiet"],
+      "knownAllergen": "Livre de Glúten e Lactose. Produzido em ambiente que pode conter traços de castanhas.",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "15"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+        "author": { "@type": "Person", "name": "Joana F." },
+        "reviewBody": "Simplesmente divina! A melhor caponata que já provei. O shiitake dá um toque super especial. Perfeita com torradas e um bom vinho."
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "29.80",
+        "priceCurrency": "BRL",
+        "priceValidUntil": "2026-12-31",
+        "url": "https://www.chefbrico.com/caponata-com-shiitake-grelhado",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@id": "https://receitas.chefbrico.com/#organization"
+        },
+        "shippingDetails": {
+           "@type": "OfferShippingDetails",
+           "shippingDestination": {
+             "@type": "DefinedRegion",
+             "addressCountry": "BR"
+           },
+           "deliveryTime": {
+             "@type": "ShippingDeliveryTime",
+             "handlingTime": { "@type": "QuantitativeValue", "minValue": "1", "maxValue": "2", "unitCode": "DAY" },
+             "transitTime": { "@type": "QuantitativeValue", "minValue": "3", "maxValue": "10", "unitCode": "DAY" }
+           }
+        },
+        "hasMerchantReturnPolicy": {
+           "@type": "MerchantReturnPolicy",
+           "url": "https://www.chefbrico.com/trocas-e-devolucoes",
+           "applicableCountry": "BR",
+           "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+           "merchantReturnDays": 7
         }
       }
-    ]
-    </script>
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://receitas.chefbrico.com/#organization",
+      "name": "ChefBrico",
+      "founder": { "@id": "https://receitas.chefbrico.com/#person-maria-conceicao" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://receitas.chefbrico.com/#person-maria-conceicao",
+      "name": "Maria Conceição"
+    }
+  ]
+}
+</script>
 </head>
 <body>
     {% include "cabecalho.html" %}
