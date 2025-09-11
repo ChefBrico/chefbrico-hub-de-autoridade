@@ -29,140 +29,174 @@
     </script>
     
     <script type="application/ld+json">
-    [
-      {
-        "@context": "https://schema.org/",
-        "@type": "Recipe",
-        "name": "Receita Rápida: Risoto Agridoce de Morango ChefBrico",
-        "author": {
-          "@id": "https://receitas.chefbrico.com/#person-maria"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Recipe",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://receitas.chefbrico.com/receita-risoto-morango.html"
+      },
+      "name": "Receita Rápida: Risoto Agridoce de Morango ChefBrico",
+      "author": {
+        "@id": "https://receitas.chefbrico.com/#person-maria-conceicao"
+      },
+      "publisher": {
+         "@id": "https://receitas.chefbrico.com/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://receitas.chefbrico.com/risotos.html"
+      },
+      "recipeCategory": "Prato Principal",
+      "datePublished": "2025-08-22T09:00:00-03:00",
+      "dateModified": "2025-09-11T09:00:00-03:00",
+      "description": "Aprenda a fazer o Risoto Agridoce de Morango da ChefBrico. Uma receita 100% natural, vegana, sem glúten e uma experiência gourmet sofisticada.",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://receitas.chefbrico.com/imagens/chefbrico-risoto-morango-agridoce-fruta%20(1080%20x%20566%20px).png"
+      },
+      "keywords": "risoto, vegano, sem-gluten, momento-especial, agridoce, divertido, morango",
+      "prepTime": "PT1M",
+      "cookTime": "PT18M",
+      "totalTime": "PT19M",
+      "recipeYield": "2 porções",
+      "recipeCuisine": "Contemporânea",
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "servingSize": "90 g",
+        "calories": "380 kcal",
+        "proteinContent": "8 g",
+        "carbohydrateContent": "78 g",
+        "fiberContent": "6 g"
+      },
+      "suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VeganDiet", "https://schema.org/VegetarianDiet"],
+      "recipeIngredient": [
+        {
+          "@type": "HowToSupply",
+          "name": "Mistura para Risoto Agridoce de Morango ChefBrico",
+          "requiredQuantity": { "@type": "QuantitativeValue", "value": "1", "unitText": "pacote (180g)" }
         },
-        "isPartOf": {
-          "@id": "https://receitas.chefbrico.com/risotos.html"
+        {
+          "@type": "HowToSupply",
+          "name": "água fria",
+          "requiredQuantity": { "@type": "QuantitativeValue", "value": "720", "unitText": "ml" }
         },
-        "datePublished": "2025-08-22",
-        "description": "Aprenda a fazer o Risoto Agridoce de Morango da ChefBrico. Uma receita 100% natural, vegana, sem glúten e uma experiência gourmet sofisticada.",
-        "image": "/imagens/chefbrico-risoto-morango-agridoce-fruta%20(1080%20x%20566%20px).png",
-        "keywords": "risoto, vegano, sem-gluten, momento-especial, agridoce, divertido, morango",
-        "prepTime": "PT1M",
-        "cookTime": "PT18M",
-        "totalTime": "PT19M",
-        "recipeYield": "2 porções",
-        "recipeCuisine": "Contemporânea",
-        "nutrition": { 
-            "@type": "NutritionInformation", 
-            "servingSize": "90 g", 
-            "calories": "380 kcal", 
-            "proteinContent": "8 g", 
-            "carbohydrateContent": "78 g", 
-            "fiberContent": "6 g" 
+        {
+          "@type": "HowToSupply",
+          "name": "azeite",
+          "requiredQuantity": "1 fio"
         },
-        "suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VeganDiet", "https://schema.org/VegetarianDiet"],
-        "knownAllergen": "Pode conter traços de castanhas.", 
-
-       "recipeIngredient": [
-  {
-    "@type": "HowToSupply",
-    "name": "Mistura para Risoto Agridoce de Morango ChefBrico",
-    "requiredQuantity": {
-      "@type": "QuantitativeValue",
-      "value": "1",
-      "unitText": "pacote (180g)"
-    }
-  },
-  {
-    "@type": "HowToSupply",
-    "name": "água fria",
-    "requiredQuantity": {
-      "@type": "QuantitativeValue",
-      "value": "720",
-      "unitText": "ml"
-    }
-  },
-  {
-    "@type": "HowToSupply",
-    "name": "azeite",
-    "requiredQuantity": "1 fio"
-  },
-  {
-    "@type": "HowToSupply",
-    "name": "Sal",
-    "requiredQuantity": "a gosto"
-  },
-  {
-    "@type": "HowToSupply",
-    "name": "Requeijão de castanhas (opcional)"
-  },
-  {
-    "@type": "HowToSupply",
-    "name": "Lascas de amêndoas (opcional)"
-  }
-],
-        "recipeInstructions": [
-          { "@type": "HowToStep", "text": "Aqueça um fio de azeite e refogue o conteúdo do pacote por 1 minuto para 'acordar' os aromas." },
-          { "@type": "HowToStep", "text": "Adicione 720ml de água fria e sal a gosto. Cozinhe em fogo baixo por cerca de 18 minutos, mexendo ocasionalmente." },
-          { "@type": "HowToStep", "text": "Para uma experiência 100% vegetal, finalize com uma colher de requeijão de castanhas e lascas de amêndoas." }
-        ],
-        /* CORREÇÃO E-A-T: Usando o review "Camila P." que está visível no HTML */
-        "review": {
-            "@type": "Review",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5" }, /* Baseado no texto */
-            "author": { "@type": "Person", "name": "Camila P." },
-            "reviewBody": "Eu estava curiosa e resolvi arriscar. Que surpresa maravilhosa! O risoto de morango é delicioso, diferente de tudo que já provei. Super cremoso e com um equilíbrio perfeito de doce e salgado. Virei fã!"
+        {
+          "@type": "HowToSupply",
+          "name": "Sal",
+          "requiredQuantity": "a gosto"
         },
-        "mainEntityOfPage": {
-          "@type": "Product",
-          "name": "Mistura para Risoto Agridoce de Morango",
-          "description": "Uma experiência gourmet agridoce e sofisticada! Nossa mistura artesanal para Risoto de Morango é 100% natural, vegana e sem glúten.",
-          "brand": { "@type": "Brand", "name": "ChefBrico" },
-          "sku": "RIS-MOR-006",
-          "image": "/imagens/risoto-agridoce-morango-raspas-limao-siciliano-chefbrico.png",
-          "keywords": "risoto, vegano, sem-gluten, momento-especial, agridoce, morango",
-          "knownAllergen": "Pode conter traços de castanhas.",
-          "aggregateRating": {
+        {
+          "@type": "HowToSupply",
+          "name": "Requeijão de castanhas (opcional)"
+        },
+        {
+          "@type": "HowToSupply",
+          "name": "Lascas de amêndoas (opcional)"
+        }
+      ],
+      "recipeInstructions": [
+        {
+          "@type": "HowToStep",
+          "name": "Refogar",
+          "text": "Aqueça um fio de azeite e refogue o conteúdo do pacote por 1 minuto para 'acordar' os aromas.",
+          "url": "https://receitas.chefbrico.com/receita-risoto-morango.html#passo1",
+          "image": { "@type": "ImageObject", "url": "https://receitas.chefbrico.com/imagens/passos/refogar-generico.png" }
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Cozinhar",
+          "text": "Adicione 720ml de água fria e sal a gosto. Cozinhe em fogo baixo por cerca de 18 minutos, mexendo ocasionalmente.",
+          "url": "https://receitas.chefbrico.com/receita-risoto-morango.html#passo2",
+          "image": { "@type": "ImageObject", "url": "https://receitas.chefbrico.com/imagens/passos/cozinhar-generico.png" }
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Finalizar",
+          "text": "Para uma experiência 100% vegetal, finalize com uma colher de requeijão de castanhas e lascas de amêndoas.",
+          "url": "https://receitas.chefbrico.com/receita-risoto-morango.html#passo3",
+          "image": { "@type": "ImageObject", "url": "https://receitas.chefbrico.com/imagens/passos/finalizar-generico.png" }
+        }
+      ],
+      "review": {
+        "@type": "Review",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+        "author": { "@type": "Person", "name": "Camila P." },
+        "reviewBody": "Eu estava curiosa e resolvi arriscar. Que surpresa maravilhosa! O risoto de morango é delicioso, diferente de tudo que já provei. Super cremoso e com um equilíbrio perfeito de doce e salgado. Virei fã!"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "26"
+      },
+      "video": {
+        "@type": "VideoObject",
+        "name": "Como Fazer o Risoto Agridoce de Morango da ChefBrico",
+        "description": "Descubra como preparar um prato gourmet e surpreendente. O Risoto Agridoce de Morango da ChefBrico é sofisticado, prático e delicioso.",
+        "thumbnailUrl": "https://receitas.chefbrico.com/URL_DA_IMAGEM_DE_CAPA_DO_VIDEO_MORANGO.jpg",
+        "contentUrl": "https://www.youtube.com/watch?v=SEU_VIDEO_ID_MORANGO",
+        "uploadDate": "2025-09-11T09:00:00-03:00",
+        "duration": "PT1M"
+      },
+      "about": {
+        "@type": "Product",
+        "name": "Mistura para Risoto Agridoce de Morango",
+        "description": "Uma experiência gourmet agridoce e sofisticada! Nossa mistura artesanal para Risoto de Morango é 100% natural, vegana e sem glúten.",
+        "brand": { "@type": "Brand", "name": "ChefBrico" },
+        "sku": "RIS-MOR-006",
+        "image": "https://receitas.chefbrico.com/imagens/risoto-agridoce-morango-raspas-limao-siciliano-chefbrico.png",
+        "knownAllergen": "Pode conter traços de castanhas.",
+        "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.7",
             "reviewCount": "26"
-          },
-          "offers": {
-            "@type": "Offer",
-            "url": "https://www.chefbrico.com/risoto-agridoce-morango",
-            "priceCurrency": "BRL",
-            "price": "34.80",
-            "availability": "https://schema.org/InStock",
-            "shippingDetails": {
-              "@type": "OfferShippingDetails",
-              "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "BR" },
-              "deliveryTime": {
-                "@type": "ShippingDeliveryTime",
-                "handlingTime": { "@type": "QuantitativeValue", "minValue": "1", "maxValue": "2", "unitCode": "DAY" },
-                "transitTime": { "@type": "QuantitativeValue", "minValue": "3", "maxValue": "10", "unitCode": "DAY" }
-              },
-              "carrier": { "@type": "Organization", "name": "Correios" }
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.chefbrico.com/risoto-agridoce-morango",
+          "priceCurrency": "BRL",
+          "price": "34.80",
+          "priceValidUntil": "2026-12-31",
+          "availability": "https://schema.org/InStock",
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingDestination": {
+              "@type": "DefinedRegion",
+              "addressCountry": "BR"
+            },
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": { "@type": "QuantitativeValue", "minValue": "1", "maxValue": "2", "unitCode": "DAY" },
+              "transitTime": { "@type": "QuantitativeValue", "minValue": "3", "maxValue": "10", "unitCode": "DAY" }
             }
+          },
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "url": "https://www.chefbrico.com/trocas-e-devolucoes",
+            "applicableCountry": "BR",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 7
           }
         }
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "@id": "https://receitas.chefbrico.com/#person-maria", 
-        "name": "Maria Conceição",
-        "jobTitle": "Fundadora e Chef de Criação",
-        "description": "Empreendedora e autora de todas as receitas autorais da ChefBrico.",
-        "url": "https://receitas.chefbrico.com/nossa-filosofia.html",
-        "sameAs": [
-          "https://wa.me/5561996659880",
-          "https://www.instagram.com/chefbrico/"
-        ],
-        "funderOf": {
-          "@type": "FoodEstablishment",
-          "name": "ChefBrico",
-          "url": "https://www.chefbrico.com"
-        }
       }
-    ]
-    </script>
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://receitas.chefbrico.com/#organization"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://receitas.chefbrico.com/#person-maria-conceicao"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
