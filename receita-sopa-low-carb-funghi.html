@@ -27,133 +27,166 @@
       gtag('config', 'G-K58FN8J2VC');
     </script>
     
-    <script type="application/ld+json">
-    [
-      {
-        "@context": "https://schema.org/",
-        "@type": "Recipe",
-        "name": "Receita Rápida: Sopa Low Carb de Funghi ChefBrico",
-        "author": {
-          "@id": "https://receitas.chefbrico.com/#person-maria"
+   <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Recipe",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://receitas.chefbrico.com/receita-sopa-low-carb-funghi.html"
+      },
+      "name": "Receita Rápida: Sopa Low Carb de Funghi ChefBrico",
+      "author": {
+        "@id": "https://receitas.chefbrico.com/#person-maria-conceicao"
+      },
+      "publisher": {
+         "@id": "https://receitas.chefbrico.com/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://receitas.chefbrico.com/sopas-funcionais.html"
+      },
+      "recipeCategory": "Sopa",
+      "datePublished": "2025-08-15T09:00:00-03:00",
+      "dateModified": "2025-09-11T09:00:00-03:00",
+      "description": "Aprenda a fazer a Sopa Low Carb de Funghi da ChefBrico. Uma refeição ideal para dietas cetogênicas, com lentilha beluga, vegana e sem glúten.",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://receitas.chefbrico.com/imagens/low-carb-funghi-lentilha-negra-chefbrico.png"
+      },
+      "keywords": "sopa, vegano, sem-gluten, performance, low-carb, funghi, lentilha beluga, cetogenica",
+      "prepTime": "PT1M",
+      "cookTime": "PT25M",
+      "totalTime": "PT26M",
+      "recipeYield": "3 porções (1 litro)",
+      "recipeCuisine": "Funcional",
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "servingSize": "50 g",
+        "calories": "195 kcal",
+        "proteinContent": "12 g",
+        "carbohydrateContent": "22 g",
+        "fiberContent": "11 g"
+      },
+      "suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VeganDiet", "https://schema.org/VegetarianDiet", "https://schema.org/LowCalorieDiet", "https://schema.org/LowCarbDiet"],
+      "recipeIngredient": [
+        {
+          "@type": "HowToSupply",
+          "name": "Mistura para Sopa Low Carb de Funghi ChefBrico",
+          "requiredQuantity": { "@type": "QuantitativeValue", "value": "1", "unitText": "pacote (150g)" }
         },
-        "isPartOf": {
-          "@id": "https://receitas.chefbrico.com/sopas-funcionais.html"
+        {
+          "@type": "HowToSupply",
+          "name": "água fria",
+          "requiredQuantity": { "@type": "QuantitativeValue", "value": "1000", "unitText": "ml (1 litro)" }
         },
-        "datePublished": "2025-08-15",
-        "description": "Aprenda a fazer a Sopa Low Carb de Funghi da ChefBrico. Uma refeição ideal para dietas cetogênicas, com lentilha beluga, vegana e sem glúten.",
-        "image": "/imagens/low-carb-funghi-lentilha-negra-chefbrico.png",
-        "keywords": "sopa, vegano, sem-gluten, performance, low-carb, funghi, lentilha beluga, cetogenica",
-        "prepTime": "PT1M",
-        "cookTime": "PT25M",
-        "totalTime": "PT26M",
-        "recipeYield": "3 porções (1 litro)",
-        "recipeCuisine": "Funcional",
-        "nutrition": { 
-            "@type": "NutritionInformation", 
-            "servingSize": "50 g", 
-            "calories": "195 kcal", 
-            "proteinContent": "12 g", 
-            "carbohydrateContent": "22 g", 
-            "fiberContent": "11 g" 
+        {
+          "@type": "HowToSupply",
+          "name": "Sal",
+          "requiredQuantity": "a gosto"
         },
-        /* Dados Ricos: 5 Tipos de Dieta */
-        "suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VeganDiet", "https://schema.org/VegetarianDiet", "https://schema.org/LowCalorieDiet", "https://schema.org/LowCarbDiet"],
-        "knownAllergen": "Pode conter traços de castanhas.", 
-
-     "recipeIngredient": [
-  {
-    "@type": "HowToSupply",
-    "name": "Mistura para Sopa Low Carb de Funghi ChefBrico",
-    "requiredQuantity": {
-      "@type": "QuantitativeValue",
-      "value": "1",
-      "unitText": "pacote (150g)"
-    }
-  },
-  {
-    "@type": "HowToSupply",
-    "name": "água fria",
-    "requiredQuantity": {
-      "@type": "QuantitativeValue",
-      "value": "1000",
-      "unitText": "ml (1 litro)"
-    }
-  },
-  {
-    "@type": "HowToSupply",
-    "name": "Sal",
-    "requiredQuantity": "a gosto"
-  },
-  {
-    "@type": "HowToSupply",
-    "name": "1 fio de azeite (opcional)"
-  }
-],
-        "recipeInstructions": [
-          { "@type": "HowToStep", "text": "Em uma panela, coloque o conteúdo do pacote, 1 litro de água fria e sal." },
-          { "@type": "HowToStep", "text": "Leve ao fogo médio. Assim que ferver, abaixe o fogo e cozinhe por aproximadamente 25 minutos." },
-          { "@type": "HowToStep", "text": "Sirva bem quentinha, finalizada com um fio de azeite de qualidade e pimenta do reino moída na hora." }
-        ],
-        /* CORREÇÃO E-A-T: Usando o review "Vanessa P." que está visível no HTML */
-        "review": {
-            "@type": "Review",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5" }, /* Baseado no texto */
-            "author": { "@type": "Person", "name": "Vanessa P." },
-            "reviewBody": "Essa sopa é sensacional! Sabor de prato de restaurante, mas super levinha e low carb. Me ajuda a manter o foco na dieta sem sofrimento. Recomendo demais!"
+        {
+          "@type": "HowToSupply",
+          "name": "1 fio de azeite (opcional)"
+        }
+      ],
+      "recipeInstructions": [
+        {
+          "@type": "HowToStep",
+          "name": "Preparar",
+          "text": "Em uma panela, coloque o conteúdo do pacote, 1 litro de água fria e sal.",
+          "url": "https://receitas.chefbrico.com/receita-sopa-low-carb-funghi.html#passo1",
+          "image": { "@type": "ImageObject", "url": "https://receitas.chefbrico.com/imagens/passos/cozinhar-generico.png" }
         },
-        "mainEntityOfPage": {
-          "@type": "Product",
-          "name": "Mistura para Sopa Low Carb de Funghi e Lentilha Beluga",
-          "description": "Sua sopa low carb, rica em sabor e proteína! Nossa refeição prática com Funghi Silvestre e Lentilha Beluga é 100% natural, vegana e sem glúten.",
-          "brand": { "@type": "Brand", "name": "ChefBrico" },
-          "sku": "SOP-LCF-003",
-          "image": "/imagens/sopa-low-carb-funghi-chefbrico.png",
-          "keywords": "sopa, vegano, sem-gluten, performance, low-carb, funghi",
-          "knownAllergen": "Pode conter traços de castanhas.",
-          "aggregateRating": {
+        {
+          "@type": "HowToStep",
+          "name": "Cozinhar",
+          "text": "Leve ao fogo médio. Assim que ferver, abaixe o fogo e cozinhe por aproximadamente 25 minutos.",
+          "url": "https://receitas.chefbrico.com/receita-sopa-low-carb-funghi.html#passo2",
+          "image": { "@type": "ImageObject", "url": "https://receitas.chefbrico.com/imagens/passos/cozinhar-generico.png" }
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Finalizar",
+          "text": "Sirva bem quentinha, finalizada com um fio de azeite de qualidade e pimenta do reino moída na hora.",
+          "url": "https://receitas.chefbrico.com/receita-sopa-low-carb-funghi.html#passo3",
+          "image": { "@type": "ImageObject", "url": "https://receitas.chefbrico.com/imagens/passos/finalizar-generico.png" }
+        }
+      ],
+      "review": {
+        "@type": "Review",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+        "author": { "@type": "Person", "name": "Vanessa P." },
+        "reviewBody": "Essa sopa é sensacional! Sabor de prato de restaurante, mas super levinha e low carb. Me ajuda a manter o foco na dieta sem sofrimento. Recomendo demais!"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "16"
+      },
+      "video": {
+        "@type": "VideoObject",
+        "name": "Como Fazer a Sopa Low Carb de Funghi da ChefBrico",
+        "description": "Prepare uma sopa low carb, cetogênica e deliciosa em minutos. Sabor gourmet para a sua dieta, com a praticidade ChefBrico.",
+        "thumbnailUrl": "https://receitas.chefbrico.com/URL_DA_IMAGEM_DE_CAPA_DO_VIDEO_SOPALCF.jpg",
+        "contentUrl": "https://www.youtube.com/watch?v=SEU_VIDEO_ID_SOPALCF",
+        "uploadDate": "2025-09-11T09:00:00-03:00",
+        "duration": "PT1M"
+      },
+      "about": {
+        "@type": "Product",
+        "name": "Mistura para Sopa Low Carb de Funghi e Lentilha Beluga",
+        "description": "Sua sopa low carb, rica em sabor e proteína! Nossa refeição prática com Funghi Silvestre e Lentilha Beluga é 100% natural, vegana e sem glúten.",
+        "brand": { "@type": "Brand", "name": "ChefBrico" },
+        "sku": "SOP-LCF-003",
+        "image": "https://receitas.chefbrico.com/imagens/sopa-low-carb-funghi-chefbrico.png",
+        "knownAllergen": "Pode conter traços de castanhas.",
+        "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.9",
             "reviewCount": "16"
-          },
-          "offers": {
-            "@type": "Offer",
-            "url": "https://www.chefbrico.com/sopa-low-carb-funghi",
-            "priceCurrency": "BRL",
-            "price": "29.60",
-            "availability": "https://schema.org/InStock",
-            "shippingDetails": {
-              "@type": "OfferShippingDetails",
-              "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "BR" },
-              "deliveryTime": {
-                "@type": "ShippingDeliveryTime",
-                "handlingTime": { "@type": "QuantitativeValue", "minValue": "1", "maxValue": "2", "unitCode": "DAY" },
-                "transitTime": { "@type": "QuantitativeValue", "minValue": "3", "maxValue": "10", "unitCode": "DAY" }
-              },
-              "carrier": { "@type": "Organization", "name": "Correios" }
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.chefbrico.com/sopa-low-carb-funghi",
+          "priceCurrency": "BRL",
+          "price": "29.60",
+          "priceValidUntil": "2026-12-31",
+          "availability": "https://schema.org/InStock",
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingDestination": {
+              "@type": "DefinedRegion",
+              "addressCountry": "BR"
+            },
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": { "@type": "QuantitativeValue", "minValue": "1", "maxValue": "2", "unitCode": "DAY" },
+              "transitTime": { "@type": "QuantitativeValue", "minValue": "3", "maxValue": "10", "unitCode": "DAY" }
             }
+          },
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "url": "https://www.chefbrico.com/trocas-e-devolucoes",
+            "applicableCountry": "BR",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 7
           }
         }
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "@id": "https://receitas.chefbrico.com/#person-maria", 
-        "name": "Maria Conceição",
-        "jobTitle": "Fundadora e Chef de Criação",
-        "description": "Empreendedora e autora de todas as receitas autorais da ChefBrico.",
-        "url": "https://receitas.chefbrico.com/nossa-filosofia.html",
-        "sameAs": [
-          "https://wa.me/5561996659880",
-          "https://www.instagram.com/chefbrico/"
-        ],
-        "funderOf": {
-          "@type": "FoodEstablishment",
-          "name": "ChefBrico",
-          "url": "https://www.chefbrico.com"
-        }
       }
-    ]
-    </script>
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://receitas.chefbrico.com/#organization"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://receitas.chefbrico.com/#person-maria-conceicao"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
