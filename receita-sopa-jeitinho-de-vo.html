@@ -28,131 +28,165 @@
     </script>
     
     <script type="application/ld+json">
-    [
-      {
-        "@context": "https://schema.org/",
-        "@type": "Recipe",
-        "name": "Receita Rápida: Sopa Funcional Jeitinho de Vó com Lentilha",
-        "author": {
-          "@id": "https://receitas.chefbrico.com/#person-maria"
-        },
-        "isPartOf": {
-          "@id": "https://receitas.chefbrico.com/sopas-funcionais.html"
-        },
-        "datePublished": "2025-08-16",
-        "description": "Aprenda a fazer a Sopa Jeitinho de Vó. O aconchego da infância numa versão funcional, vegana, sem glúten e com macarrão de banana verde.",
-        "image": "/imagens/sopa-jeitinho-de-vo-chefbrico.png",
-        "keywords": "sopa, vegano, sem-gluten, para-familia, conforto, dia-a-dia, kids, lentilha",
-        "prepTime": "PT1M",
-        "cookTime": "PT15M",
-        "totalTime": "PT16M",
-        "recipeYield": "3 porções (1 litro)",
-        "recipeCuisine": "Funcional, Brasileira",
-        "nutrition": { 
-            "@type": "NutritionInformation", 
-            "servingSize": "47 g", 
-            "calories": "180 kcal", 
-            "proteinContent": "9 g", 
-            "carbohydrateContent": "32 g", 
-            "fiberContent": "8 g" 
-        },
-        "suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VeganDiet", "https://schema.org/VegetarianDiet", "https://schema.org/LowCalorieDiet"],
-        "knownAllergen": "Pode conter traços de castanhas.", 
-
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Recipe",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://receitas.chefbrico.com/receita-sopa-jeitinho-de-vo.html"
+      },
+      "name": "Receita Rápida: Sopa Funcional Jeitinho de Vó com Lentilha",
+      "author": {
+        "@id": "https://receitas.chefbrico.com/#person-maria-conceicao"
+      },
+      "publisher": {
+         "@id": "https://receitas.chefbrico.com/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://receitas.chefbrico.com/sopas-funcionais.html"
+      },
+      "recipeCategory": "Sopa",
+      "datePublished": "2025-08-16T09:00:00-03:00",
+      "dateModified": "2025-09-11T09:00:00-03:00",
+      "description": "Aprenda a fazer a Sopa Jeitinho de Vó. O aconchego da infância numa versão funcional, vegana, sem glúten e com macarrão de banana verde.",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://receitas.chefbrico.com/imagens/sopa-jeitinho-de-vo-chefbrico.png"
+      },
+      "keywords": "sopa, vegano, sem-gluten, para-familia, conforto, dia-a-dia, kids, lentilha",
+      "prepTime": "PT1M",
+      "cookTime": "PT15M",
+      "totalTime": "PT16M",
+      "recipeYield": "3 porções (1 litro)",
+      "recipeCuisine": "Funcional, Brasileira",
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "servingSize": "47 g",
+        "calories": "180 kcal",
+        "proteinContent": "9 g",
+        "carbohydrateContent": "32 g",
+        "fiberContent": "8 g"
+      },
+      "suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VeganDiet", "https://schema.org/VegetarianDiet", "https://schema.org/LowCalorieDiet"],
       "recipeIngredient": [
-  {
-    "@type": "HowToSupply",
-    "name": "Mistura para Sopa Jeitinho de Vó ChefBrico",
-    "requiredQuantity": {
-      "@type": "QuantitativeValue",
-      "value": "1",
-      "unitText": "pacote (140g)"
-    }
-  },
-  {
-    "@type": "HowToSupply",
-    "name": "água fria",
-    "requiredQuantity": {
-      "@type": "QuantitativeValue",
-      "value": "1000",
-      "unitText": "ml (1 litro)"
-    }
-  },
-  {
-    "@type": "HowToSupply",
-    "name": "Sal",
-    "requiredQuantity": "a gosto"
-  },
-  {
-    "@type": "HowToSupply",
-    "name": "1 fio de azeite (opcional)"
-  }
-],
-        "recipeInstructions": [
-          { "@type": "HowToStep", "text": "Em uma panela, coloque o conteúdo do pacote, 1 litro de água fria e sal." },
-          { "@type": "HowToStep", "text": "Leve ao fogo médio. Assim que ferver, abaixe o fogo e cozinhe por aproximadamente 15 minutos." },
-          { "@type": "HowToStep", "text": "Sirva bem quentinha, finalizada com cheiro-verde fresco, se desejar." }
-        ],
-        /* CORREÇÃO E-A-T: Usando o review "Ana Paula" que está visível no HTML */
-        "review": {
-            "@type": "Review",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5" }, /* Baseado no texto */
-            "author": { "@type": "Person", "name": "Ana Paula" },
-            "reviewBody": "Essa sopa tem o verdadeiro gostinho de casa de vó! É a minha salvação nos dias corridos. Fica pronta super rápido e me sinto nutrida e abraçada. Deliciosa!"
+        {
+          "@type": "HowToSupply",
+          "name": "Mistura para Sopa Jeitinho de Vó ChefBrico",
+          "requiredQuantity": { "@type": "QuantitativeValue", "value": "1", "unitText": "pacote (140g)" }
         },
-        "mainEntityOfPage": {
-          "@type": "Product",
-          "name": "Mistura para Sopa Funcional Jeitinho de Vó com Lentilha",
-          "description": "Sabor de vó em 15 minutos! Nossa mistura para Sopa de Lentilha com macarrãozinho sem glúten é 100% natural, vegana e reconfortante.",
-          "brand": { "@type": "Brand", "name": "ChefBrico" },
-          "sku": "SOP-JVL-001",
-          "image": "/imagens/sopa-jeitinho-de-vo-chefbrico.png",
-          "keywords": "sopa, vegano, sem-gluten, para-familia, conforto, kids",
-          "knownAllergen": "Pode conter traços de castanhas.",
-          "aggregateRating": {
+        {
+          "@type": "HowToSupply",
+          "name": "água fria",
+          "requiredQuantity": { "@type": "QuantitativeValue", "value": "1000", "unitText": "ml (1 litro)" }
+        },
+        {
+          "@type": "HowToSupply",
+          "name": "Sal",
+          "requiredQuantity": "a gosto"
+        },
+        {
+          "@type": "HowToSupply",
+          "name": "1 fio de azeite (opcional)"
+        }
+      ],
+      "recipeInstructions": [
+        {
+          "@type": "HowToStep",
+          "name": "Preparar",
+          "text": "Em uma panela, coloque o conteúdo do pacote, 1 litro de água fria e sal.",
+          "url": "https://receitas.chefbrico.com/receita-sopa-jeitinho-de-vo.html#passo1",
+          "image": { "@type": "ImageObject", "url": "https://receitas.chefbrico.com/imagens/passos/cozinhar-generico.png" }
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Cozinhar",
+          "text": "Leve ao fogo médio. Assim que ferver, abaixe o fogo e cozinhe por aproximadamente 15 minutos.",
+          "url": "https://receitas.chefbrico.com/receita-sopa-jeitinho-de-vo.html#passo2",
+          "image": { "@type": "ImageObject", "url": "https://receitas.chefbrico.com/imagens/passos/cozinhar-generico.png" }
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Finalizar",
+          "text": "Sirva bem quentinha, finalizada com cheiro-verde fresco, se desejar.",
+          "url": "https://receitas.chefbrico.com/receita-sopa-jeitinho-de-vo.html#passo3",
+          "image": { "@type": "ImageObject", "url": "https://receitas.chefbrico.com/imagens/passos/finalizar-generico.png" }
+        }
+      ],
+      "review": {
+        "@type": "Review",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+        "author": { "@type": "Person", "name": "Ana Paula" },
+        "reviewBody": "Essa sopa tem o verdadeiro gostinho de casa de vó! É a minha salvação nos dias corridos. Fica pronta super rápido e me sinto nutrida e abraçada. Deliciosa!"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "19"
+      },
+      "video": {
+        "@type": "VideoObject",
+        "name": "Como Fazer a Sopa Jeitinho de Vó da ChefBrico",
+        "description": "Prepare uma sopa com sabor de infância, nutritiva e funcional. A Sopa Jeitinho de Vó é perfeita para toda a família.",
+        "thumbnailUrl": "https://receitas.chefbrico.com/URL_DA_IMAGEM_DE_CAPA_DO_VIDEO_JEITINHODEVO.jpg",
+        "contentUrl": "https://www.youtube.com/watch?v=SEU_VIDEO_ID_JEITINHODEVO",
+        "uploadDate": "2025-09-11T09:00:00-03:00",
+        "duration": "PT1M"
+      },
+      "about": {
+        "@type": "Product",
+        "name": "Mistura para Sopa Funcional Jeitinho de Vó com Lentilha",
+        "description": "Sabor de vó em 15 minutos! Nossa mistura para Sopa de Lentilha com macarrãozinho sem glúten é 100% natural, vegana e reconfortante.",
+        "brand": { "@type": "Brand", "name": "ChefBrico" },
+        "sku": "SOP-JVL-001",
+        "image": "https://receitas.chefbrico.com/imagens/sopa-jeitinho-de-vo-chefbrico.png",
+        "knownAllergen": "Pode conter traços de castanhas.",
+        "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.7",
             "reviewCount": "19"
-          },
-          "offers": {
-            "@type": "Offer",
-            "url": "https://www.chefbrico.com/jeitinho-de-vo-lentilha-sopa-caseira",
-            "priceCurrency": "BRL",
-            "price": "29.60",
-            "availability": "https://schema.org/InStock",
-            "shippingDetails": {
-              "@type": "OfferShippingDetails",
-              "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "BR" },
-              "deliveryTime": {
-                "@type": "ShippingDeliveryTime",
-                "handlingTime": { "@type": "QuantitativeValue", "minValue": "1", "maxValue": "2", "unitCode": "DAY" },
-                "transitTime": { "@type": "QuantitativeValue", "minValue": "3", "maxValue": "10", "unitCode": "DAY" }
-              },
-              "carrier": { "@type": "Organization", "name": "Correios" }
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.chefbrico.com/jeitinho-de-vo-lentilha-sopa-caseira",
+          "priceCurrency": "BRL",
+          "price": "29.60",
+          "priceValidUntil": "2026-12-31",
+          "availability": "https://schema.org/InStock",
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingDestination": {
+              "@type": "DefinedRegion",
+              "addressCountry": "BR"
+            },
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": { "@type": "QuantitativeValue", "minValue": "1", "maxValue": "2", "unitCode": "DAY" },
+              "transitTime": { "@type": "QuantitativeValue", "minValue": "3", "maxValue": "10", "unitCode": "DAY" }
             }
+          },
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "url": "https://www.chefbrico.com/trocas-e-devolucoes",
+            "applicableCountry": "BR",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 7
           }
         }
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "@id": "https://receitas.chefbrico.com/#person-maria", 
-        "name": "Maria Conceição",
-        "jobTitle": "Fundadora e Chef de Criação",
-        "description": "Empreendedora e autora de todas as receitas autorais da ChefBrico.",
-        "url": "https://receitas.chefbrico.com/nossa-filosofia.html",
-        "sameAs": [
-          "https://wa.me/5561996659880",
-          "https://www.instagram.com/chefbrico/"
-        ],
-        "funderOf": {
-          "@type": "FoodEstablishment",
-          "name": "ChefBrico",
-          "url": "https://www.chefbrico.com"
-        }
       }
-    ]
-    </script>
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://receitas.chefbrico.com/#organization"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://receitas.chefbrico.com/#person-maria-conceicao"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
