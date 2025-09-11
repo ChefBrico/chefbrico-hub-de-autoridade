@@ -28,134 +28,166 @@
     </script>
     
     <script type="application/ld+json">
-    [
-      {
-        "@context": "https://schema.org/",
-        "@type": "Recipe",
-        "name": "Receita Rápida: Risoto de Pesto e Alho-Poró ChefBrico",
-        "author": {
-          "@id": "https://receitas.chefbrico.com/#person-maria"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Recipe",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://receitas.chefbrico.com/receita-risoto-pesto-alho-poro.html"
+      },
+      "name": "Receita Rápida: Risoto de Pesto e Alho-Poró ChefBrico",
+      "author": {
+        "@id": "https://receitas.chefbrico.com/#person-maria-conceicao"
+      },
+      "publisher": {
+         "@id": "https://receitas.chefbrico.com/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://receitas.chefbrico.com/risotos.html"
+      },
+      "recipeCategory": "Prato Principal",
+      "datePublished": "2025-08-25T09:00:00-03:00",
+      "dateModified": "2025-09-11T09:00:00-03:00",
+      "description": "Aprenda a fazer o Risoto de Pesto e Alho-Poró da ChefBrico. Uma receita 100% natural, vegana, sem glúten, cremosa e com o frescor do manjericão.",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://receitas.chefbrico.com/imagens/chefbrico-risoto-alho-poro-pesto%20(1080%20x%20566%20px).png"
+      },
+      "keywords": "risoto, vegano, sem-gluten, gourmet-pratico, pesto, alho-poro, manjericão, castanha de caju",
+      "prepTime": "PT1M",
+      "cookTime": "PT18M",
+      "totalTime": "PT19M",
+      "recipeYield": "2 porções",
+      "recipeCuisine": "Italiana",
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "servingSize": "90 g",
+        "calories": "380 kcal",
+        "proteinContent": "10 g",
+        "carbohydrateContent": "73 g",
+        "fiberContent": "7 g"
+      },
+      "suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VeganDiet", "https://schema.org/VegetarianDiet"],
+      "recipeIngredient": [
+        {
+          "@type": "HowToSupply",
+          "name": "Mistura para Risoto de Pesto e Alho-Poró ChefBrico",
+          "requiredQuantity": { "@type": "QuantitativeValue", "value": "1", "unitText": "pacote (180g)" }
         },
-        "isPartOf": {
-          "@id": "https://receitas.chefbrico.com/risotos.html"
+        {
+          "@type": "HowToSupply",
+          "name": "água fria",
+          "requiredQuantity": { "@type": "QuantitativeValue", "value": "720", "unitText": "ml" }
         },
-        "datePublished": "2025-08-25",
-        "description": "Aprenda a fazer o Risoto de Pesto e Alho-Poró da ChefBrico. Uma receita 100% natural, vegana, sem glúten, cremosa e com o frescor do manjericão.",
-        "image": "/imagens/chefbrico-risoto-alho-poro-pesto%20(1080%20x%20566%20px).png",
-        "keywords": "risoto, vegano, sem-gluten, gourmet-pratico, pesto, alho-poro, manjericão, castanha de caju",
-        "prepTime": "PT1M",
-        "cookTime": "PT18M",
-        "totalTime": "PT19M",
-        "recipeYield": "2 porções",
-        "recipeCuisine": "Italiana",
-        "nutrition": { 
-            "@type": "NutritionInformation", 
-            "servingSize": "90 g", 
-            "calories": "380 kcal", 
-            "proteinContent": "10 g", 
-            "carbohydrateContent": "73 g", 
-            "fiberContent": "7 g" 
+        {
+          "@type": "HowToSupply",
+          "name": "azeite",
+          "requiredQuantity": "1 fio"
         },
-        "suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VeganDiet", "https://schema.org/VegetarianDiet"],
-        
-        /* MELHORIA YMYL (v1.2): Adicionando o alergênico ao schema */
-        "knownAllergen": "Contém Castanha de Caju", 
-
-        "recipeIngredient": [
-  {
-    "@type": "HowToSupply",
-    "name": "Mistura para Risoto de Pesto e Alho-Poró ChefBrico",
-    "requiredQuantity": {
-      "@type": "QuantitativeValue",
-      "value": "1",
-      "unitText": "pacote (180g)"
-    }
-  },
-  {
-    "@type": "HowToSupply",
-    "name": "água fria",
-    "requiredQuantity": {
-      "@type": "QuantitativeValue",
-      "value": "720",
-      "unitText": "ml"
-    }
-  },
-  {
-    "@type": "HowToSupply",
-    "name": "azeite",
-    "requiredQuantity": "1 fio"
-  },
-  {
-    "@type": "HowToSupply",
-    "name": "Sal",
-    "requiredQuantity": "a gosto"
-  }
-],
-        "recipeInstructions": [
-          { "@type": "HowToStep", "text": "Aqueça um fio de azeite e refogue o conteúdo do pacote por 1 minuto para liberar os aromas incríveis." },
-          { "@type": "HowToStep", "text": "Adicione 720ml de água fria e sal a gosto. Cozinhe em fogo baixo por cerca de 18 minutos, mexendo ocasionalmente." },
-          { "@type": "HowToStep", "text": "Sirva com folhas de manjericão fresco e um fio de azeite extra virgem." }
-        ],
-        /* CORREÇÃO E-A-T: Usando o review "Patrícia M." que está visível no HTML */
-        "review": {
-            "@type": "Review",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-            "author": { "@type": "Person", "name": "Patrícia M." },
-            "reviewBody": "O risoto de pesto mais fácil e um dos mais gostosos que já comi! A cremosidade é incrível e o sabor é super fresco. Parece que colhi o manjericão na hora. Virou um clássico aqui em casa."
+        {
+          "@type": "HowToSupply",
+          "name": "Sal",
+          "requiredQuantity": "a gosto"
+        }
+      ],
+      "recipeInstructions": [
+        {
+          "@type": "HowToStep",
+          "name": "Refogar",
+          "text": "Aqueça um fio de azeite e refogue o conteúdo do pacote por 1 minuto para liberar os aromas incríveis.",
+          "url": "https://receitas.chefbrico.com/receita-risoto-pesto-alho-poro.html#passo1",
+          "image": { "@type": "ImageObject", "url": "https://receitas.chefbrico.com/imagens/passos/refogar-generico.png" }
         },
-        "mainEntityOfPage": {
-          "@type": "Product",
-          "name": "Mistura para Risoto de Pesto e Alho-Poró",
-          "description": "Um risoto cremoso e sofisticado em 18 minutos! Nossa mistura artesanal de Alho-Poró com pesto vegano de manjericão é 100% natural, vegana e sem glúten.",
-          "brand": { "@type": "Brand", "name": "ChefBrico" },
-          "sku": "RIS-PES-009",
-          "image": "/imagens/risoto-alho-poro-pesto-chefbrico.png",
-          "keywords": "risoto, vegano, sem-gluten, gourmet-pratico, pesto",
-          "knownAllergen": "Contém Castanha de Caju",
-          "aggregateRating": {
+        {
+          "@type": "HowToStep",
+          "name": "Cozinhar",
+          "text": "Adicione 720ml de água fria e sal a gosto. Cozinhe em fogo baixo por cerca de 18 minutos, mexendo ocasionalmente.",
+          "url": "https://receitas.chefbrico.com/receita-risoto-pesto-alho-poro.html#passo2",
+          "image": { "@type": "ImageObject", "url": "https://receitas.chefbrico.com/imagens/passos/cozinhar-generico.png" }
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Finalizar",
+          "text": "Sirva com folhas de manjericão fresco e um fio de azeite extra virgem.",
+          "url": "https://receitas.chefbrico.com/receita-risoto-pesto-alho-poro.html#passo3",
+          "image": { "@type": "ImageObject", "url": "https://receitas.chefbrico.com/imagens/passos/finalizar-generico.png" }
+        }
+      ],
+      "review": {
+        "@type": "Review",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+        "author": { "@type": "Person", "name": "Patrícia M." },
+        "reviewBody": "O risoto de pesto mais fácil e um dos mais gostosos que já comi! A cremosidade é incrível e o sabor é super fresco. Parece que colhi o manjericão na hora. Virou um clássico aqui em casa."
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "32"
+      },
+      "video": {
+        "@type": "VideoObject",
+        "name": "Como Fazer o Risoto de Pesto e Alho-Poró da ChefBrico",
+        "description": "Descubra como preparar um risoto cremoso, com o frescor do manjericão e a suavidade do alho-poró, em minutos.",
+        "thumbnailUrl": "https://receitas.chefbrico.com/URL_DA_IMAGEM_DE_CAPA_DO_VIDEO_PESTO.jpg",
+        "contentUrl": "https://www.youtube.com/watch?v=SEU_VIDEO_ID_PESTO",
+        "uploadDate": "2025-09-11T09:00:00-03:00",
+        "duration": "PT1M"
+      },
+      "about": {
+        "@type": "Product",
+        "name": "Mistura para Risoto de Pesto e Alho-Poró",
+        "description": "Um risoto cremoso e sofisticado em 18 minutos! Nossa mistura artesanal de Alho-Poró com pesto vegano de manjericão é 100% natural, vegana e sem glúten.",
+        "brand": { "@type": "Brand", "name": "ChefBrico" },
+        "sku": "RIS-PES-009",
+        "image": "https://receitas.chefbrico.com/imagens/risoto-alho-poro-pesto-chefbrico.png",
+        "knownAllergen": "Contém Castanha de Caju",
+        "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.9",
             "reviewCount": "32"
-          },
-          "offers": {
-            "@type": "Offer",
-            "url": "https://www.chefbrico.com/risoto-pesto-e-alho-poro",
-            "priceCurrency": "BRL",
-            "price": "34.80",
-            "availability": "https://schema.org/InStock",
-            "shippingDetails": {
-              "@type": "OfferShippingDetails",
-              "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "BR" },
-              "deliveryTime": {
-                "@type": "ShippingDeliveryTime",
-                "handlingTime": { "@type": "QuantitativeValue", "minValue": "1", "maxValue": "2", "unitCode": "DAY" },
-                "transitTime": { "@type": "QuantitativeValue", "minValue": "3", "maxValue": "10", "unitCode": "DAY" }
-              },
-              "carrier": { "@type": "Organization", "name": "Correios" }
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.chefbrico.com/risoto-pesto-e-alho-poro",
+          "priceCurrency": "BRL",
+          "price": "34.80",
+          "priceValidUntil": "2026-12-31",
+          "availability": "https://schema.org/InStock",
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingDestination": {
+              "@type": "DefinedRegion",
+              "addressCountry": "BR"
+            },
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": { "@type": "QuantitativeValue", "minValue": "1", "maxValue": "2", "unitCode": "DAY" },
+              "transitTime": { "@type": "QuantitativeValue", "minValue": "3", "maxValue": "10", "unitCode": "DAY" }
             }
+          },
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "url": "https://www.chefbrico.com/trocas-e-devolucoes",
+            "applicableCountry": "BR",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 7
           }
         }
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "@id": "https://receitas.chefbrico.com/#person-maria", 
-        "name": "Maria Conceição",
-        "jobTitle": "Fundadora e Chef de Criação",
-        "description": "Empreendedora e autora de todas as receitas autorais da ChefBrico.",
-        "url": "https://receitas.chefbrico.com/nossa-filosofia.html",
-        "sameAs": [
-          "https://wa.me/5561996659880",
-          "https://www.instagram.com/chefbrico/"
-        ],
-        "funderOf": {
-          "@type": "FoodEstablishment",
-          "name": "ChefBrico",
-          "url": "https://www.chefbrico.com"
-        }
       }
-    ]
-    </script>
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://receitas.chefbrico.com/#organization"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://receitas.chefbrico.com/#person-maria-conceicao"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
