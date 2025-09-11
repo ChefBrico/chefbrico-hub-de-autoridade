@@ -28,127 +28,163 @@
     </script>
     
     <script type="application/ld+json">
-    [
-      {
-        "@context": "https://schema.org/",
-        "@type": "Recipe",
-        "name": "Receita Rápida: Risoto Mix Funghi (3 Cogumelos) ChefBrico",
-        "author": {
-          "@id": "https://receitas.chefbrico.com/#person-maria"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Recipe",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://receitas.chefbrico.com/receita-risoto-mix-funghi.html"
+      },
+      "name": "Receita Rápida: Risoto Mix Funghi (3 Cogumelos) ChefBrico",
+      "author": {
+        "@id": "https://receitas.chefbrico.com/#person-maria-conceicao"
+      },
+      "publisher": {
+         "@id": "https://receitas.chefbrico.com/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://receitas.chefbrico.com/risotos.html"
+      },
+      "recipeCategory": "Prato Principal",
+      "datePublished": "2025-08-27T09:00:00-03:00",
+      "dateModified": "2025-09-11T09:00:00-03:00",
+      "description": "Aprenda o passo a passo para preparar o Risoto Mix Funghi da ChefBrico. Uma receita 100% natural, vegana, sem glúten e a experiência definitiva para apaixonados por cogumelos.",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://receitas.chefbrico.com/imagens/risoto-mix-funghi-chefbrico.png"
+      },
+      "keywords": "risoto, vegano, sem-gluten, momento-especial, gourmet-pratico, terroso, umami, funghi, shiitake, cogumelos",
+      "prepTime": "PT1M",
+      "cookTime": "PT18M",
+      "totalTime": "PT19M",
+      "recipeYield": "2 porções",
+      "recipeCuisine": "Contemporânea",
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "servingSize": "90 g",
+        "calories": "370 kcal",
+        "proteinContent": "11 g"
+      },
+      "suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VeganDiet", "https://schema.org/VegetarianDiet"],
+      "recipeIngredient": [
+        {
+          "@type": "HowToSupply",
+          "name": "Mistura para Risoto Mix Funghi ChefBrico",
+          "requiredQuantity": { "@type": "QuantitativeValue", "value": "1", "unitText": "pacote (180g)" }
         },
-        "isPartOf": {
-          "@id": "https://receitas.chefbrico.com/risotos.html"
+        {
+          "@type": "HowToSupply",
+          "name": "água fria",
+          "requiredQuantity": { "@type": "QuantitativeValue", "value": "720", "unitText": "ml" }
         },
-        "datePublished": "2025-08-27",
-        "description": "Aprenda o passo a passo para preparar o Risoto Mix Funghi da ChefBrico. Uma receita 100% natural, vegana, sem glúten e a experiência definitiva para apaixonados por cogumelos.",
-        "image": "/imagens/risoto-mix-funghi-chefbrico.png",
-        "keywords": "risoto, vegano, sem-gluten, momento-especial, gourmet-pratico, terroso, umami, funghi, shiitake, cogumelos",
-        "prepTime": "PT1M",
-        "cookTime": "PT18M",
-        "totalTime": "PT19M",
-        "recipeYield": "2 porções",
-        "recipeCuisine": "Contemporânea",
-        "nutrition": { 
-            "@type": "NutritionInformation", 
-            "servingSize": "90 g", 
-            "calories": "370 kcal", 
-            "proteinContent": "11 g" 
+        {
+          "@type": "HowToSupply",
+          "name": "azeite",
+          "requiredQuantity": "1 fio"
         },
-        "suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VeganDiet", "https://schema.org/VegetarianDiet"],
-       "recipeIngredient": [
-  {
-    "@type": "HowToSupply",
-    "name": "Mistura para Risoto Mix Funghi ChefBrico",
-    "requiredQuantity": {
-      "@type": "QuantitativeValue",
-      "value": "1",
-      "unitText": "pacote (180g)"
-    }
-  },
-  {
-    "@type": "HowToSupply",
-    "name": "água fria",
-    "requiredQuantity": {
-      "@type": "QuantitativeValue",
-      "value": "720",
-      "unitText": "ml"
-    }
-  },
-  {
-    "@type": "HowToSupply",
-    "name": "azeite",
-    "requiredQuantity": "1 fio"
-  },
-  {
-    "@type": "HowToSupply",
-    "name": "Sal",
-    "requiredQuantity": "a gosto"
-  }
-],
-        "recipeInstructions": [
-          { "@type": "HowToStep", "text": "Aqueça um fio de azeite e refogue o conteúdo do pacote por 1 minuto para liberar o perfume intenso dos cogumelos." },
-          { "@type": "HowToStep", "text": "Adicione 720ml de água fria e sal a gosto. Cozinhe em fogo baixo por cerca de 18 minutos." },
-          { "@type": "HowToStep", "text": "Finalize com salsinha fresca picada e um fio de azeite extra virgem." }
-        ],
-        /* CORREÇÃO E-A-T: Usando o review "André M." que está visível no HTML */
-        "review": {
-            "@type": "Review",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-            "author": { "@type": "Person", "name": "André M." },
-            "reviewBody": "O melhor risoto de cogumelos que já comi, sem exageros. Dá pra sentir o sabor de cada tipo de cogumelo. É muito rico e complexo. Para quem ama funghi, não tem erro!"
+        {
+          "@type": "HowToSupply",
+          "name": "Sal",
+          "requiredQuantity": "a gosto"
+        }
+      ],
+      "recipeInstructions": [
+        {
+          "@type": "HowToStep",
+          "name": "Refogar",
+          "text": "Aqueça um fio de azeite e refogue o conteúdo do pacote por 1 minuto para liberar o perfume intenso dos cogumelos.",
+          "url": "https://receitas.chefbrico.com/receita-risoto-mix-funghi.html#passo1",
+          "image": { "@type": "ImageObject", "url": "https://receitas.chefbrico.com/imagens/passos/refogar-generico.png" }
         },
-        "mainEntityOfPage": {
-          "@type": "Product",
-          "name": "Mistura para Risoto Mix Funghi (3 Cogumelos)",
-          "description": "A experiência definitiva para apaixonados por cogumelos! Nossa mistura artesanal combina Funghi Secchi, Shiimeji e Shiitake para uma riqueza incomparável de sabor umami.",
-          "brand": { "@type": "Brand", "name": "ChefBrico" },
-          "sku": "RIS-MIX-007",
-          "image": "/imagens/risoto-mix-funghi-chefbrico.png",
-          "keywords": "risoto, vegano, sem-gluten, gourmet-pratico, funghi, shiitake, umami",
-          "aggregateRating": {
+        {
+          "@type": "HowToStep",
+          "name": "Cozinhar",
+          "text": "Adicione 720ml de água fria e sal a gosto. Cozinhe em fogo baixo por cerca de 18 minutos.",
+          "url": "https://receitas.chefbrico.com/receita-risoto-mix-funghi.html#passo2",
+          "image": { "@type": "ImageObject", "url": "https://receitas.chefbrico.com/imagens/passos/cozinhar-generico.png" }
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Finalizar",
+          "text": "Finalize com salsinha fresca picada e um fio de azeite extra virgem.",
+          "url": "https://receitas.chefbrico.com/receita-risoto-mix-funghi.html#passo3",
+          "image": { "@type": "ImageObject", "url": "https://receitas.chefbrico.com/imagens/passos/finalizar-generico.png" }
+        }
+      ],
+      "review": {
+        "@type": "Review",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+        "author": { "@type": "Person", "name": "André M." },
+        "reviewBody": "O melhor risoto de cogumelos que já comi, sem exageros. Dá pra sentir o sabor de cada tipo de cogumelo. É muito rico e complexo. Para quem ama funghi, não tem erro!"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "22"
+      },
+      "video": {
+        "@type": "VideoObject",
+        "name": "Como Fazer o Risoto Mix Funghi da ChefBrico",
+        "description": "Descubra como preparar a experiência definitiva em risoto de cogumelos, combinando Funghi, Shiitake e Shimeji.",
+        "thumbnailUrl": "https://receitas.chefbrico.com/URL_DA_IMAGEM_DE_CAPA_DO_VIDEO_MIXFUNGHI.jpg",
+        "contentUrl": "https://www.youtube.com/watch?v=SEU_VIDEO_ID_MIXFUNGHI",
+        "uploadDate": "2025-09-11T09:00:00-03:00",
+        "duration": "PT1M"
+      },
+      "about": {
+        "@type": "Product",
+        "name": "Mistura para Risoto Mix Funghi (3 Cogumelos)",
+        "description": "A experiência definitiva para apaixonados por cogumelos! Nossa mistura artesanal combina Funghi Secchi, Shiimeji e Shiitake para uma riqueza incomparável de sabor umami.",
+        "brand": { "@type": "Brand", "name": "ChefBrico" },
+        "sku": "RIS-MIX-007",
+        "image": "https://receitas.chefbrico.com/imagens/risoto-mix-funghi-chefbrico.png",
+        "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.8",
             "reviewCount": "22"
-          },
-          "offers": {
-            "@type": "Offer",
-            "url": "https://www.chefbrico.com/risoto-mix-funghi-para-amantes-de-cogumelos",
-            "priceCurrency": "BRL",
-            "price": "34.80",
-            "availability": "https://schema.org/InStock",
-            "shippingDetails": {
-              "@type": "OfferShippingDetails",
-              "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "BR" },
-              "deliveryTime": {
-                "@type": "ShippingDeliveryTime",
-                "handlingTime": { "@type": "QuantitativeValue", "minValue": "1", "maxValue": "2", "unitCode": "DAY" },
-                "transitTime": { "@type": "QuantitativeValue", "minValue": "3", "maxValue": "10", "unitCode": "DAY" }
-              },
-              "carrier": { "@type": "Organization", "name": "Correios" }
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.chefbrico.com/risoto-mix-funghi-para-amantes-de-cogumelos",
+          "priceCurrency": "BRL",
+          "price": "34.80",
+          "priceValidUntil": "2026-12-31",
+          "availability": "https://schema.org/InStock",
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingDestination": {
+              "@type": "DefinedRegion",
+              "addressCountry": "BR"
+            },
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": { "@type": "QuantitativeValue", "minValue": "1", "maxValue": "2", "unitCode": "DAY" },
+              "transitTime": { "@type": "QuantitativeValue", "minValue": "3", "maxValue": "10", "unitCode": "DAY" }
             }
+          },
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "url": "https://www.chefbrico.com/trocas-e-devolucoes",
+            "applicableCountry": "BR",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 7
           }
         }
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "@id": "https://receitas.chefbrico.com/#person-maria", 
-        "name": "Maria Conceição",
-        "jobTitle": "Fundadora e Chef de Criação",
-        "description": "Empreendedora e autora de todas as receitas autorais da ChefBrico.",
-        "url": "https://receitas.chefbrico.com/nossa-filosofia.html",
-        "sameAs": [
-          "https://wa.me/5561996659880",
-          "https://www.instagram.com/chefbrico/"
-        ],
-        "funderOf": {
-          "@type": "FoodEstablishment",
-          "name": "ChefBrico",
-          "url": "https://www.chefbrico.com"
-        }
       }
-    ]
-    </script>
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://receitas.chefbrico.com/#organization"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://receitas.chefbrico.com/#person-maria-conceicao"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
