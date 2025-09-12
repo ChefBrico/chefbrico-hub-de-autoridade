@@ -59,75 +59,71 @@
         }
     </style>
 
-    <script type="application/ld+json">
-    [
-      {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "ChefBrico em Águas Claras e Arniqueiras: Comida Prática com muito sabor!",
-        "url": "https://receitas.chefbrico.com/onde-encontrar/aguas-claras-arniqueiras.html",
-        "description": "A ChefBrico atende Águas Claras e Arniqueiras com delivery e parceiros locais. Encontre refeições funcionais, veganas e pós-treino.",
-        "isPartOf": {
-          "@id": "https://receitas.chefbrico.com/onde-encontrar.html"
+   <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "Serviço de Delivery ChefBrico para Águas Claras e Arniqueiras",
+      "description": "A ChefBrico atende Águas Claras e Arniqueiras com nosso serviço de delivery exclusivo, oferecendo refeições funcionais, veganas e pós-treino. Destaques da região incluem a Sopa Creme Fit Vegana e as Sopas Funcionais Detox. Peça online ou fale com a Conceição!",
+      "image": "https://receitas.chefbrico.com/imagens/creme-fit-sopinha-chefbrico.png",
+      "brand": { "@type": "Brand", "name": "ChefBrico" },
+      "category": "Entrega de Alimentos Gourmet",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://www.chefbrico.com",
+        "priceCurrency": "BRL",
+        "availability": "https://schema.org/InStock",
+        "price": "29.60", 
+        "seller": { "@type": "Organization", "name": "ChefBrico" },
+        "areaServed": { "@type": "Place", "name": "Águas Claras e Arniqueiras, Brasília, DF" },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "BRL",
+          "minPrice": "29.60",
+          "maxPrice": "34.80"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": { "@type": "QuantitativeValue", "minValue": "1", "maxValue": "2", "unitCode": "DAY" },
+            "transitTime": { "@type": "QuantitativeValue", "minValue": "0", "maxValue": "1", "unitCode": "DAY" }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "url": "https://www.chefbrico.com/trocas-e-devolucoes",
+          "applicableCountry": "BR",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 7
         }
       },
-      {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "serviceType": "DeliveryService",
-        "name": "Delivery ChefBrico para Águas Claras e Arniqueiras",
-        "areaServed": [
-          { "@type": "Place", "name": "Águas Claras, Brasília, DF" },
-          { "@type": "Place", "name": "Arniqueiras, Brasília, DF" }
-        ],
-        "provider": {
-          "@type": "FoodEstablishment",
-          "name": "ChefBrico",
-          "url": "https://www.chefbrico.com"
+      "review": {
+        "@type": "Review",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+        "reviewBody": "[PLACEHOLDER: Substitua por um depoimento real de um cliente da região]",
+        "author": { "@type": "Person", "name": "Cliente de Águas Claras" }
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "A ChefBrico faz entregas em Águas Claras e Arniqueiras?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sim, temos um serviço de delivery rápido e prático para atender todos os bairros de Águas Claras e Arniqueiras. Peça pelo nosso e-commerce ou diretamente pelo WhatsApp!" }
         },
-        "review": [
-          {
-            "@type": "Review",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-            "reviewBody": "[PLACEHOLDER: Depoimento da Cliente 1]",
-            "author": {"@type": "Person", "name": "Cliente de Águas Claras"}
-          },
-          {
-            "@type": "Review",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-            "reviewBody": "[PLACEHOLDER: Depoimento da Cliente 2]",
-            "author": {"@type": "Person", "name": "Cliente de Arniqueiras"}
-          },
-          {
-            "@type": "Review",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-            "reviewBody": "[PLACEHOLDER: Depoimento da Cliente 3]",
-            "author": {"@type": "Person", "name": "Fã da ChefBrico"}
-          }
-        ],
-        "offers": [
-          {
-            "@type": "Product",
-            "name": "Sopa Creme Fit Vegana",
-            "image": "https://receitas.chefbrico.com/imagens/creme-fit-sopinha-chefbrico.png"
-          },
-          {
-            "@type": "Product",
-            "name": "Sopas Funcionais Detox",
-            "image": "https://receitas.chefbrico.com/imagens/low-carb-vegetais-sopa-chefbrico.png"
-          },
-          {
-            "@type": "Product",
-            "name": "Refeição Mediterrânea",
-            "image": "https://receitas.chefbrico.com/refeicoes-praticas/refeicao-mediterranea-chefbrico.png"
-          },
-          {
-            "@type": "Product",
-            "name": "[PLACEHOLDER QUARTO PRODUTO]",
-            "image": "https://receitas.chefbrico.com/imagens/food-porn/regiao-produto-4.jpg"
-          }
-        ]
-      },
+        {
+          "@type": "Question",
+          "name": "Existem parceiros ou pontos de venda da ChefBrico em Águas Claras?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sim! Em Águas Claras, você também pode encontrar nossos produtos no nosso Empório & Mercearia no Edifício Águas de Manaíra - R. 24 Norte, 04." }
+        }
+      ]
+    }
+  ]
+}
       {
         "@context": "https://schema.org",
         "@type": "Person",
