@@ -59,57 +59,52 @@
         }
     </style>
 
-    <script type="application/ld+json">
+   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "WebPage",
-      "name": "ChefBrico na Esplanada dos Ministérios: Delivery de Comida Saudável",
-      "url": "https://receitas.chefbrico.com/onde-encontrar/esplanada-dos-ministerios.html",
-      "description": "Trabalha na Esplanada dos Ministérios? A ChefBrico entrega sua refeição saudável e prática no seu trabalho. Planeje sua semana e peça online.",
-      "isPartOf": {
-        "@id": "https://receitas.chefbrico.com/onde-encontrar.html"
-      },
-      "publisher": {
-         "@id": "https://receitas.chefbrico.com/#organization"
-      }
-    },
-    {
-      "@type": "Service",
-      "mainEntityOfPage": {
-        "@id": "https://receitas.chefbrico.com/onde-encontrar/esplanada-dos-ministerios.html"
-      },
-      "name": "Delivery ChefBrico para a Esplanada dos Ministérios",
-      "serviceType": "Entrega de Refeições Práticas para Escritório",
-      "areaServed": {
-        "@type": "Place",
-        "name": "Esplanada dos Ministérios, Brasília, DF"
-      },
-      "provider": {
-        "@id": "https://receitas.chefbrico.com/#organization"
+      "@type": "Product",
+      "name": "Serviço de Delivery ChefBrico para a Esplanada dos Ministérios",
+      "description": "Trabalha na Esplanada dos Ministérios? A ChefBrico entrega sua refeição saudável e prática no seu trabalho. Destaques para a rotina no escritório incluem a Refeição Mediterrânea e nossas Sopas Funcionais. Planeje sua semana e peça online!",
+      "image": "https://receitas.chefbrico.com/imagens/refeicoes-praticas/refeicao-mediterranea-chefbrico.png",
+      "brand": { "@type": "Brand", "name": "ChefBrico" },
+      "category": "Entrega de Alimentos Gourmet",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://www.chefbrico.com",
+        "priceCurrency": "BRL",
+        "availability": "https://schema.org/InStock",
+        "price": "29.60", 
+        "seller": { "@id": "#organization" },
+        "areaServed": { "@type": "Place", "name": "Esplanada dos Ministérios, Brasília, DF" },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "BRL",
+          "minPrice": "29.60",
+          "maxPrice": "34.80"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": { "@type": "QuantitativeValue", "minValue": "1", "maxValue": "2", "unitCode": "DAY" },
+            "transitTime": { "@type": "QuantitativeValue", "minValue": "0", "maxValue": "1", "unitCode": "DAY" }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "url": "https://www.chefbrico.com/trocas-e-devolucoes",
+          "applicableCountry": "BR",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 7
+        }
       },
       "review": {
         "@type": "Review",
         "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-        "reviewBody": "[PLACEHOLDER: A ChefBrico salvou meus almoços! Chega tudo certinho aqui no ministério, e a comida é deliciosa e de verdade.]",
-        "author": {"@type": "Person", "name": "Servidor(a) Público(a)"}
-      },
-      "offers": {
-        "@type": "Offer",
-        "name": "Favoritos para a Rotina na Esplanada",
-        "itemOffered": [
-          {
-            "@type": "Product",
-            "name": "Refeição Mediterrânea",
-            "image": "https://receitas.chefbrico.com/imagens/refeicoes-praticas/refeicao-mediterranea-chefbrico.png"
-          },
-          {
-            "@type": "Product",
-            "name": "Sopas Funcionais",
-            "image": "https://receitas.chefbrico.com/imagens/low-carb-vegetais-sopa-chefbrico.png"
-          }
-        ]
+        "reviewBody": "A ChefBrico salvou meus almoços! Chega tudo certinho aqui no ministério, e a comida é deliciosa e de verdade.",
+        "author": { "@type":": "Person", "name": "Servidor(a) Público(a)" }
       }
     },
     {
@@ -117,26 +112,33 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "A ChefBrico tem lojas físicas perto da Esplanada dos Ministérios?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Não temos pontos de venda parceiros na própria Esplanada, mas oferecemos um serviço de delivery expresso para toda a região. Além disso, temos parceiros em diversos bairros próximos para sua conveniência no caminho de casa, como na Asa Norte e Asa Sul. Confira nosso mapa completo para ver todos os locais."
-          }
+          "name": "Como a ChefBrico entrega na Esplanada dos Ministérios?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oferecemos um serviço de delivery expresso e programado para toda a Esplanada. Peça online e receba sua refeição saudável e prática diretamente no seu trabalho." }
+        },
+        {
+          "@type": "Question",
+          "name": "A ChefBrico tem lojas físicas perto da Esplanada?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Não temos parceiros na própria Esplanada, mas você encontra nossos produtos em lojas na Asa Sul e Asa Norte, perfeitas para pegar no caminho de casa. Confira nosso mapa para ver todos os locais." }
         }
       ]
     },
     {
-      "@type": "Organization",
-      "@id": "https://receitas.chefbrico.com/#organization",
+      "@type": "FoodEstablishment",
+      "@id": "#organization",
       "name": "ChefBrico",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua 5, Chácara 122, Lote 17, Loja 2",
+        "addressLocality": "Vicente Pires",
+        "addressRegion": "DF",
+        "postalCode": "72006-060",
+        "addressCountry": "BR"
+      },
       "founder": {
-        "@id": "https://receitas.chefbrico.com/#person-maria-conceicao"
+        "@type": "Person",
+        "name": "Maria Conceição",
+        "jobTitle": "Fundadora e Chef"
       }
-    },
-    {
-      "@type": "Person",
-      "@id": "https://receitas.chefbrico.com/#person-maria-conceicao",
-      "name": "Maria Conceição"
     }
   ]
 }
