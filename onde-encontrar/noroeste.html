@@ -59,7 +59,7 @@
         }
     </style>
 
- <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -75,7 +75,7 @@
         "url": "https://www.chefbrico.com",
         "priceCurrency": "BRL",
         "availability": "https://schema.org/InStock",
-        "price": "29.60", 
+        "price": "29.60",
         "seller": { "@type": "Organization", "name": "ChefBrico" },
         "areaServed": { "@type": "Place", "name": "Noroeste, Brasília, DF" },
         "priceSpecification": {
@@ -83,6 +83,21 @@
           "priceCurrency": "BRL",
           "minPrice": "29.60",
           "maxPrice": "34.80"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": { "@type": "QuantitativeValue", "minValue": "1", "maxValue": "2", "unitCode": "DAY" },
+            "transitTime": { "@type": "QuantitativeValue", "minValue": "0", "maxValue": "1", "unitCode": "DAY" }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "url": "https://www.chefbrico.com/trocas-e-devolucoes",
+          "applicableCountry": "BR",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 7
         }
       },
       "review": {
