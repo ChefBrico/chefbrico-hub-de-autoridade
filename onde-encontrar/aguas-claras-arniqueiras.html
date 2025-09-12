@@ -59,7 +59,7 @@
         }
     </style>
 
-   <script type="application/ld+json">
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -76,7 +76,7 @@
         "priceCurrency": "BRL",
         "availability": "https://schema.org/InStock",
         "price": "29.60", 
-        "seller": { "@type": "Organization", "name": "ChefBrico" },
+        "seller": { "@id": "#organization" },
         "areaServed": { "@type": "Place", "name": "Águas Claras e Arniqueiras, Brasília, DF" },
         "priceSpecification": {
           "@type": "PriceSpecification",
@@ -121,28 +121,20 @@
           "acceptedAnswer": { "@type": "Answer", "text": "Sim! Em Águas Claras, você também pode encontrar nossos produtos no nosso Empório & Mercearia no Edifício Águas de Manaíra - R. 24 Norte, 04." }
         }
       ]
+    },
+    {
+      "@type": "FoodEstablishment",
+      "@id": "#organization",
+      "name": "ChefBrico",
+      "founder": {
+        "@type": "Person",
+        "name": "Maria Conceição",
+        "jobTitle": "Fundadora e Chef"
+      }
     }
   ]
 }
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Maria Conceição",
-        "jobTitle": "Fundadora e Chef",
-        "description": "Empreendedora e autora das receitas da ChefBrico.",
-        "url": "https://receitas.chefbrico.com/onde-encontrar.html",
-        "sameAs": [
-          "https://wa.me/5561996659880",
-          "https://www.instagram.com/chefbrico/"
-        ],
-        "funderOf": {
-          "@type": "FoodEstablishment",
-          "name": "ChefBrico",
-          "url": "https://www.chefbrico.com"
-        }
-      }
-    ]
-    </script>
+</script>
 </head>
 <body>
 
