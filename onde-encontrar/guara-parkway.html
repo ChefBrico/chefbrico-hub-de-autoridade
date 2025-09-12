@@ -64,85 +64,81 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "WebPage",
-      "name": "ChefBrico no Guará e Parkway: Comida de Verdade para sua Família",
-      "url": "https://receitas.chefbrico.com/onde-encontrar/guara-parkway.html",
-      "description": "A ChefBrico entrega no Guará e Parkway. Peça online nossas refeições práticas, saudáveis e com sabor de casa para simplificar a rotina da sua família.",
-      "isPartOf": {
-        "@id": "https://receitas.chefbrico.com/onde-encontrar.html"
-      },
-      "publisher": {
-         "@id": "https://receitas.chefbrico.com/#organization"
-      }
-    },
-    {
-      "@type": "Service",
-      "mainEntityOfPage": {
-        "@id": "https://receitas.chefbrico.com/onde-encontrar/guara-parkway.html"
-      },
-      "name": "Delivery ChefBrico para Guará e Parkway",
-      "serviceType": "Entrega de Refeições para Família",
-      "areaServed": [
-        {
-            "@type": "Place",
-            "name": "Guará, Brasília, DF"
-        },
-        {
-            "@type": "Place",
-            "name": "Parkway, Brasília, DF"
-        }
-      ],
-      "provider": {
-        "@id": "https://receitas.chefbrico.com/#organization"
-      },
-      "review": [
-        {
-          "@type": "Review",
-          "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-          "reviewBody": "[PLACEHOLDER: A ChefBrico facilitou os jantares da minha família aqui no Guará. Comida saudável que as crianças adoram!]",
-          "author": {"@type": "Person", "name": "[NOME DA CLIENTE 1]"}
-        },
-        {
-          "@type": "Review",
-          "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-          "reviewBody": "[PLACEHOLDER: Receber a ChefBox no Parkway é a melhor parte da minha semana. Qualidade e praticidade incríveis.]",
-          "author": {"@type": "Person", "name": "[NOME DA CLIENTE 2]"}
-        }
-      ],
+      "@type": "Product",
+      "name": "Serviço de Delivery ChefBrico para Guará e Parkway",
+      "description": "A ChefBrico entrega no Guará e Parkway. Peça online nossas refeições práticas e saudáveis com sabor de casa, como o Baião de Dois Vegano e as Sopas Funcionais, para simplificar a rotina da sua família!",
+      "image": "https://receitas.chefbrico.com/imagens/refeicoes-praticas/refeicao-baiao-dois-chefbrico.png",
+      "brand": { "@type": "Brand", "name": "ChefBrico" },
+      "category": "Entrega de Alimentos Gourmet",
       "offers": {
         "@type": "Offer",
-        "name": "Produtos Favoritos das Famílias do Guará e Parkway",
-        "itemOffered": [
-          {
-            "@type": "Product",
-            "name": "Baião de Dois Vegano",
-            "image": "https://receitas.chefbrico.com/imagens/refeicoes-praticas/refeicao-baiao-dois-chefbrico.png"
-          },
-          {
-            "@type": "Product",
-            "name": "Sopas Funcionais",
-            "image": "https://receitas.chefbrico.com/imagens/low-carb-vegetais-sopa-chefbrico.png"
-          },
-          {
-            "@type": "Product",
-            "name": "Risotos Práticos",
-            "image": "https://receitas.chefbrico.com/imagens/risotos/risoto-pomodori-pesto-tijela-chefbrico.png"
+        "url": "https://www.chefbrico.com",
+        "priceCurrency": "BRL",
+        "availability": "https://schema.org/InStock",
+        "price": "29.60", 
+        "seller": { "@id": "#organization" },
+        "areaServed": { "@type": "Place", "name": "Guará e Parkway, Brasília, DF" },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "BRL",
+          "minPrice": "29.60",
+          "maxPrice": "34.80"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": { "@type": "QuantitativeValue", "minValue": "1", "maxValue": "2", "unitCode": "DAY" },
+            "transitTime": { "@type": "QuantitativeValue", "minValue": "0", "maxValue": "1", "unitCode": "DAY" }
           }
-        ]
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "url": "https://www.chefbrico.com/trocas-e-devolucoes",
+          "applicableCountry": "BR",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 7
+        }
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+        "reviewBody": "A ChefBrico facilitou os jantares da minha família aqui no Guará. Comida saudável que as crianças adoram!",
+        "author": { "@type": "Person", "name": "Cliente do Guará" }
       }
     },
     {
-      "@type": "Organization",
-      "@id": "https://receitas.chefbrico.com/#organization",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "A ChefBrico faz entregas no Guará e no Park Way?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sim, nosso serviço de delivery atende toda a região do Guará I, Guará II e Park Way. Faça seu pedido online e receba em casa com toda a praticidade." }
+        },
+        {
+          "@type": "Question",
+          "name": "Existem parceiros da ChefBrico no Guará?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No momento, nosso foco para o Guará e Parkway é o serviço de delivery direto, garantindo que os produtos cheguem frescos em sua casa. Você pode encontrar parceiros em regiões próximas, como Sudoeste e Asa Sul." }
+        }
+      ]
+    },
+    {
+      "@type": "FoodEstablishment",
+      "@id": "#organization",
       "name": "ChefBrico",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua 5, Chácara 122, Lote 17, Loja 2",
+        "addressLocality": "Vicente Pires",
+        "addressRegion": "DF",
+        "postalCode": "72006-060",
+        "addressCountry": "BR"
+      },
       "founder": {
-        "@id": "https://receitas.chefbrico.com/#person-maria-conceicao"
+        "@type": "Person",
+        "name": "Maria Conceição",
+        "jobTitle": "Fundadora e Chef"
       }
-    },
-    {
-      "@type": "Person",
-      "@id": "https://receitas.chefbrico.com/#person-maria-conceicao",
-      "name": "Maria Conceição"
     }
   ]
 }
