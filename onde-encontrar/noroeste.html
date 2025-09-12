@@ -59,7 +59,7 @@
         }
     </style>
 
-   <script type="application/ld+json">
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -77,26 +77,6 @@
       "publisher": {
         "@id": "https://receitas.chefbrico.com/#organization"
       },
-      "isRelatedTo": [
-        {
-          "@type": "Product",
-          "name": "Confit de Shiitake",
-          "url": "https://www.chefbrico.com/produtos/confit-de-shiitake",
-          "image": "https://receitas.chefbrico.com/imagens/emporio/confit-shiitake-chefbrico.png"
-        },
-        {
-          "@type": "Product",
-          "name": "Risoto Pomodori & Pesto",
-          "url": "https://www.chefbrico.com/produtos/risoto-pomodori-pesto",
-          "image": "https://receitas.chefbrico.com/imagens/risotos/risoto-pomodori-pesto-tijela-chefbrico.png"
-        },
-        {
-          "@type": "Product",
-          "name": "Refeição Mediterrânea",
-          "url": "https://www.chefbrico.com/produtos/refeicao-mediterranea",
-          "image": "https://receitas.chefbrico.com/imagens/refeicoes-praticas/refeicao-mediterranea-chefbrico.png"
-        }
-      ],
       "offers": {
         "@type": "Offer",
         "url": "https://www.chefbrico.com",
@@ -119,29 +99,58 @@
       }
     },
     {
+      "@type": "Product",
+      "name": "Confit de Shiitake",
+      "url": "https://www.chefbrico.com/produtos/confit-de-shiitake",
+      "image": "https://receitas.chefbrico.com/imagens/emporio/confit-shiitake-chefbrico.png",
+      "offers": {
+        "@type": "Offer",
+        "price": "[PREÇO DO CONFIT, ex: 34.80]",
+        "priceCurrency": "BRL",
+        "url": "https://www.chefbrico.com/produtos/confit-de-shiitake",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "Risoto Pomodori & Pesto",
+      "url": "https://www.chefbrico.com/produtos/risoto-pomodori-pesto",
+      "image": "https://receitas.chefbrico.com/imagens/risotos/risoto-pomodori-pesto-tijela-chefbrico.png",
+      "offers": {
+        "@type": "Offer",
+        "price": "[PREÇO DO RISOTO, ex: 29.60]",
+        "priceCurrency": "BRL",
+        "url": "https://www.chefbrico.com/produtos/risoto-pomodori-pesto",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "Refeição Mediterrânea",
+      "url": "https://www.chefbrico.com/produtos/refeicao-mediterranea",
+      "image": "https://receitas.chefbrico.com/imagens/refeicoes-praticas/refeicao-mediterranea-chefbrico.png",
+      "offers": {
+        "@type": "Offer",
+        "price": "[PREÇO DA REFEIÇÃO, ex: 32.00]",
+        "priceCurrency": "BRL",
+        "url": "https://www.chefbrico.com/produtos/refeicao-mediterranea",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
       "@type": "FAQPage",
       "mainEntity": [
         {
           "@type": "Question",
           "name": "Existem pontos de venda da ChefBrico no Noroeste?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Atualmente, o nosso foco para o Noroeste é o serviço de delivery exclusivo, garantindo a máxima conveniência. Para compras em lojas físicas, temos parceiros selecionados em regiões próximas, como a Asa Norte." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Atualmente, o nosso foco para o Noroeste é o serviço de delivery exclusivo." }
         },
         {
           "@type": "Question",
           "name": "Quais os parceiros ChefBrico mais próximos do Noroeste?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Os parceiros mais próximos do Noroeste encontram-se na Asa Norte. Você pode encontrar nossos produtos na Quitandas da Vó Maria (SHIN), Mercearia Colaborativa (CLN 412), A Casa do Manjericão (CLN 215), Ravioli e Cia (CLN 214) e no Mercado Malunga (CLN 315)." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Os parceiros mais próximos do Noroeste encontram-se na Asa Norte, como a Mercearia Colaborativa (CLN 412) e o Mercado Malunga (CLN 315)." }
         }
       ]
-    },
-    {
-        "@type": "Organization",
-        "@id": "https://receitas.chefbrico.com/#organization",
-        "name": "ChefBrico"
-    },
-    {
-        "@type": "Person",
-        "@id": "https://receitas.chefbrico.com/#person-maria-conceicao",
-        "name": "Maria Conceição"
     }
   ]
 }
