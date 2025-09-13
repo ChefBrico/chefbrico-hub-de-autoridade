@@ -64,65 +64,85 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "WebPage",
-      "name": "ChefBrico no Lago Sul: Sofisticação e Praticidade para sua Casa",
-      "url": "https://receitas.chefbrico.com/onde-encontrar/lago-sul.html",
-      "description": "Descubra a presença da ChefBrico no Lago Sul, Brasília. Peça online para delivery ou encontre-nos em nosso parceiro na região, o Mercado Malunga.",
-      "isPartOf": {
-        "@id": "https://receitas.chefbrico.com/onde-encontrar.html"
+      "@type": "Product",
+      "name": "Serviço de Delivery ChefBrico para o Lago Sul",
+      "description": "Descubra a sofisticação e praticidade da ChefBrico no Lago Sul, Brasília. Peça online para delivery rápido de destaques como nosso Confit de Shiitake, ou encontre-nos em nosso parceiro na região!",
+      "image": "https://receitas.chefbrico.com/imagens/emporio/confit-shiitake-chefbrico.png",
+      "brand": { "@type": "Brand", "name": "ChefBrico" },
+      "category": "Entrega de Alimentos Gourmet",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://www.chefbrico.com",
+        "priceCurrency": "BRL",
+        "availability": "https://schema.org/InStock",
+        "price": "29.60", 
+        "seller": { "@id": "#organization" },
+        "areaServed": { "@type": "Place", "name": "Lago Sul, Brasília, DF" },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "BRL",
+          "minPrice": "29.60",
+          "maxPrice": "34.80"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": { "@type": "QuantitativeValue", "minValue": "1", "maxValue": "2", "unitCode": "DAY" },
+            "transitTime": { "@type": "QuantitativeValue", "minValue": "0", "maxValue": "1", "unitCode": "DAY" }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "url": "https://www.chefbrico.com/trocas-e-devolucoes",
+          "applicableCountry": "BR",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 7
+        }
       },
-      "publisher": {
-         "@id": "https://receitas.chefbrico.com/#organization"
+      "review": {
+        "@type": "Review",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+        "reviewBody": "A ChefBrico é a minha solução para jantares rápidos e elegantes aqui no Lago Sul. Qualidade impecável!",
+        "author": { "@type": "Person", "name": "Cliente do Lago Sul" }
       }
     },
     {
-      "@type": "FoodEstablishment",
-      "mainEntityOfPage": {
-        "@id": "https://receitas.chefbrico.com/onde-encontrar/lago-sul.html"
-      },
-      "name": "ChefBrico - Ponto de Venda e Delivery para o Lago Sul",
-      "parentOrganization": {
-        "@id": "https://receitas.chefbrico.com/#organization"
-      },
-      "areaServed": {
-        "@type": "Place",
-        "name": "Lago Sul, Brasília, DF"
-      },
-      "department": [
+      "@type": "FAQPage",
+      "mainEntity": [
         {
-          "@type": "FoodEstablishment",
-          "name": "Mercado Malunga (Lago Sul)",
-          "address": "Shop Gilberto Salomão SHIS quadra 05 Bloco F CC Sobreloja, 09 - Lago Sul, Brasília - DF"
+          "@type": "Question",
+          "name": "A ChefBrico faz entregas no Lago Sul?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sim, nosso serviço de delivery atende toda a região do Lago Sul. Faça seu pedido online e receba em casa com toda a sofisticação e praticidade." }
+        },
+        {
+          "@type": "Question",
+          "name": "Onde posso comprar produtos ChefBrico no Lago Sul?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Você encontra nossos produtos no Mercado Malunga, localizado no Shopping Gilberto Salomão (SHIS QI 5)." }
         }
       ]
     },
     {
-      "@type": "Service",
-      "serviceType": "DeliveryService",
-      "name": "Delivery ChefBrico para Lago Sul",
-      "areaServed": {
-        "@type": "Place",
-        "name": "Lago Sul, Brasília, DF"
+      "@type": "FoodEstablishment",
+      "@id": "#organization",
+      "name": "ChefBrico",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua 5, Chácara 122, Lote 17, Loja 2",
+        "addressLocality": "Vicente Pires",
+        "addressRegion": "DF",
+        "postalCode": "72006-060",
+        "addressCountry": "BR"
       },
-      "provider": {
-        "@id": "https://receitas.chefbrico.com/#organization"
-      },
-      "review": [
-        {
-          "@type": "Review",
-          "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-          "reviewBody": "[PLACEHOLDER: A ChefBrico é a minha solução para jantares rápidos e elegantes aqui no Lago Sul. Qualidade impecável!]",
-          "author": {"@type": "Person", "name": "[NOME DA CLIENTE 1]"}
-        }
-      ],
-      "offers": {
-        "@type": "Offer",
-        "name": "Produtos Favoritos do Lago Sul",
-        "itemOffered": [
-          {
-            "@type": "Product",
-            "name": "Confit de Shiitake",
-            "image": "https://receitas.chefbrico.com/imagens/emporio/confit-shiitake-chefbrico.
+      "founder": {
+        "@type": "Person",
+        "name": "Maria Conceição",
+        "jobTitle": "Fundadora e Chef"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
