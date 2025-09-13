@@ -64,71 +64,81 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "WebPage",
-      "name": "ChefBrico no SIA: Delivery Rápido de Comida Prática para o Trabalho",
-      "url": "https://receitas.chefbrico.com/onde-encontrar/sia.html",
-      "description": "Delivery da ChefBrico no SIA. Peça online refeições saudáveis e práticas para sua rotina de trabalho. Simplifique seu dia e receba no seu endereço.",
-      "isPartOf": {
-        "@id": "https://receitas.chefbrico.com/onde-encontrar.html"
-      },
-      "publisher": {
-         "@id": "https://receitas.chefbrico.com/#organization"
-      }
-    },
-    {
-      "@type": "Service",
-      "mainEntityOfPage": {
-        "@id": "https://receitas.chefbrico.com/onde-encontrar/sia.html"
-      },
-      "name": "Delivery ChefBrico para o SIA",
-      "serviceType": "Entrega de Refeições para Empresas e Escritórios",
-      "areaServed": {
-        "@type": "Place",
-        "name": "SIA - Setor de Indústria e Abastecimento, Brasília, DF"
-      },
-      "provider": {
-        "@id": "https://receitas.chefbrico.com/#organization"
+      "@type": "Product",
+      "name": "Serviço de Delivery ChefBrico para o SIA",
+      "description": "A ChefBrico atende o SIA (Setor de Indústria e Abastecimento) com delivery de refeições saudáveis e práticas, perfeitas para a rotina de trabalho. Destaques incluem a Refeição Mediterrânea e nossas Sopas Detox. Peça online e receba na sua empresa!",
+      "image": "https://receitas.chefbrico.com/imagens/refeicoes-praticas/refeicao-mediterranea-chefbrico.png",
+      "brand": { "@type": "Brand", "name": "ChefBrico" },
+      "category": "Entrega de Alimentos Gourmet",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://www.chefbrico.com",
+        "priceCurrency": "BRL",
+        "availability": "https://schema.org/InStock",
+        "price": "29.60", 
+        "seller": { "@id": "#organization" },
+        "areaServed": { "@type": "Place", "name": "SIA (Setor de Indústria e Abastecimento), Brasília, DF" },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "BRL",
+          "minPrice": "29.60",
+          "maxPrice": "34.80"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": { "@type": "QuantitativeValue", "minValue": "1", "maxValue": "2", "unitCode": "DAY" },
+            "transitTime": { "@type": "QuantitativeValue", "minValue": "0", "maxValue": "1", "unitCode": "DAY" }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "url": "https://www.chefbrico.com/trocas-e-devolucoes",
+          "applicableCountry": "BR",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 7
+        }
       },
       "review": {
         "@type": "Review",
         "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-        "reviewBody": "[PLACEHOLDER: A ChefBrico salvou a hora do almoço na minha empresa aqui no SIA. Comida de verdade, rápida e que dá energia para o resto do dia!]",
-        "author": {"@type": "Person", "name": "Empresário(a) do SIA"}
-      },
-      "offers": {
-        "@type": "Offer",
-        "name": "Favoritos para a Rotina de Trabalho no SIA",
-        "itemOffered": [
-          {
-            "@type": "Product",
-            "name": "Refeição Mediterrânea",
-            "image": "https://receitas.chefbrico.com/imagens/refeicoes-praticas/refeicao-mediterranea-chefbrico.png"
-          },
-          {
-            "@type": "Product",
-            "name": "Sopa Detox",
-            "image": "https://receitas.chefbrico.com/imagens/sopas-funcionais/sopa-detox-chefbrico.png"
-          },
-          {
-            "@type": "Product",
-            "name": "Arrozes Especiais",
-            "image": "https://receitas.chefbrico.com/imagens/refeicoes-praticas/Refeicao-arroz-negro-funghi-chefbrico.png"
-          }
-        ]
+        "reviewBody": "A ChefBrico salvou a hora do almoço na minha empresa aqui no SIA. Comida de verdade, rápida e que dá energia para o resto do dia!",
+        "author": { "@type": "Person", "name": "Empresário(a) do SIA" }
       }
     },
     {
-      "@type": "Organization",
-      "@id": "https://receitas.chefbrico.com/#organization",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "A ChefBrico faz entregas para empresas no SIA?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sim, nosso serviço de delivery é ideal para a rotina de trabalho no SIA. Atendemos toda a região, entregando refeições práticas e saudáveis diretamente no seu endereço." }
+        },
+        {
+          "@type": "Question",
+          "name": "Existem parceiros da ChefBrico no SIA?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No momento, nosso foco para o SIA é o serviço de delivery direto para empresas e escritórios. Os parceiros mais próximos se encontram no Sudoeste." }
+        }
+      ]
+    },
+    {
+      "@type": "FoodEstablishment",
+      "@id": "#organization",
       "name": "ChefBrico",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua 5, Chácara 122, Lote 17, Loja 2",
+        "addressLocality": "Vicente Pires",
+        "addressRegion": "DF",
+        "postalCode": "72006-060",
+        "addressCountry": "BR"
+      },
       "founder": {
-        "@id": "https://receitas.chefbrico.com/#person-maria-conceicao"
+        "@type": "Person",
+        "name": "Maria Conceição",
+        "jobTitle": "Fundadora e Chef"
       }
-    },
-    {
-      "@type": "Person",
-      "@id": "https://receitas.chefbrico.com/#person-maria-conceicao",
-      "name": "Maria Conceição"
     }
   ]
 }
