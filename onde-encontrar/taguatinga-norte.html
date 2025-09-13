@@ -60,70 +60,90 @@
         }
     </style>
 
-   <script type="application/ld+json">
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "WebPage",
-      "name": "ChefBrico em Taguatinga Norte: Delivery de Comida Caseira e Prática",
-      "url": "https://receitas.chefbrico.com/onde-encontrar/taguatinga-norte.html",
-      "description": "A ChefBrico entrega em Taguatinga Norte! Peça online nossas refeições com sabor de casa, práticas e saudáveis, e receba na sua porta.",
-      "isPartOf": {
-        "@id": "https://receitas.chefbrico.com/onde-encontrar.html"
-      },
-      "publisher": {
-         "@id": "https://receitas.chefbrico.com/#organization"
-      }
-    },
-    {
-      "@type": "Service",
-      "mainEntityOfPage": {
-        "@id": "https://receitas.chefbrico.com/onde-encontrar/taguatinga-norte.html"
-      },
-      "name": "Delivery ChefBrico para Taguatinga Norte",
-      "serviceType": "Entrega de Refeições para Família",
-      "areaServed": {
-        "@type": "Place",
-        "name": "Taguatinga Norte, Taguatinga, DF"
-      },
-      "provider": {
-        "@id": "https://receitas.chefbrico.com/#organization"
+      "@type": "Product",
+      "name": "Serviço de Delivery ChefBrico para Taguatinga Norte",
+      "description": "A ChefBrico entrega em Taguatinga Norte! Peça online nossas refeições com sabor de casa, como o Baião de Dois Vegano e as Sopas Funcionais, e receba na sua porta.",
+      "image": "https://receitas.chefbrico.com/imagens/refeicoes-praticas/refeicao-baiao-dois-chefbrico.png",
+      "brand": { "@type": "Brand", "name": "ChefBrico" },
+      "category": "Entrega de Alimentos Gourmet",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://www.chefbrico.com",
+        "priceCurrency": "BRL",
+        "availability": "https://schema.org/InStock",
+        "price": "29.60", 
+        "seller": { "@id": "#organization" },
+        "areaServed": { "@type": "Place", "name": "Taguatinga Norte, Brasília, DF" },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "BRL",
+          "minPrice": "29.60",
+          "maxPrice": "34.80"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": { "@type": "QuantitativeValue", "minValue": "1", "maxValue": "2", "unitCode": "DAY" },
+            "transitTime": { "@type": "QuantitativeValue", "minValue": "0", "maxValue": "1", "unitCode": "DAY" }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "url": "https://www.chefbrico.com/trocas-e-devolucoes",
+          "applicableCountry": "BR",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 7
+        }
       },
       "review": {
         "@type": "Review",
         "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-        "reviewBody": "[PLACEHOLDER: Finalmente uma opção de comida prática e realmente saudável em Taguatinga Norte. Minha família adorou o Baião de Dois!]",
-        "author": {"@type": "Person", "name": "[NOME DA CLIENTE 1]"}
-      },
-      "offers": {
-        "@type": "Offer",
-        "name": "Produtos Favoritos das Famílias de Taguatinga Norte",
-        "itemOffered": [
-          {
-            "@type": "Product",
-            "name": "Baião de Dois Vegano",
-            "image": "https://receitas.chefbrico.com/imagens/refeicoes-praticas/refeicao-baiao-dois-chefbrico.png"
-          },
-          {
-            "@type": "Product",
-            "name": "Sopas Funcionais",
-            "image": "https://receitas.chefbrico.com/imagens/low-carb-vegetais-sopa-chefbrico.png"
-          },
-          {
-            "@type": "Product",
-            "name": "Risotos Práticos",
-            "image": "https://receitas.chefbrico.com/imagens/risotos/risoto-pomodori-pesto-tijela-chefbrico.png"
-          }
-        ]
+        "reviewBody": "Finalmente uma opção de comida prática e realmente saudável em Taguatinga Norte. Minha família adorou o Baião de Dois!",
+        "author": { "@type": "Person", "name": "Cliente de Taguatinga Norte" }
       }
     },
     {
-      "@type": "Organization",
-      "@id": "https://receitas.chefbrico.com/#organization",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "A ChefBrico faz entregas em Taguatinga Norte?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sim, nosso serviço de delivery atende toda a região de Taguatinga Norte. Faça seu pedido em nosso e-commerce e receba em casa." }
+        },
+        {
+          "@type": "Question",
+          "name": "Existem parceiros da ChefBrico em Taguatinga?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No momento, nosso foco para Taguatinga Norte é o serviço de delivery direto, para garantir a máxima conveniência. Os parceiros mais próximos se encontram em Águas Claras." }
+        }
+      ]
+    },
+    {
+      "@type": "FoodEstablishment",
+      "@id": "#organization",
       "name": "ChefBrico",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua 5, Chácara 122, Lote 17, Loja 2",
+        "addressLocality": "Vicente Pires",
+        "addressRegion": "DF",
+        "postalCode": "72006-060",
+        "addressCountry": "BR"
+      },
       "founder": {
-        "@id": "https://receitas.chefbrico.
+        "@type": "Person",
+        "name": "Maria Conceição",
+        "jobTitle": "Fundadora e Chef"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
