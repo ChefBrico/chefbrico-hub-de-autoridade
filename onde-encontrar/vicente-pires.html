@@ -57,95 +57,90 @@
         }
     </style>
 
-    <script type="application/ld+json">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebPage",
-          "name": "ChefBrico em Vicente Pires: A Nossa Cozinha Central e Delivery",
-          "url": "https://receitas.chefbrico.com/onde-encontrar/vicente-pires.html",
-          "description": "Conheça a cozinha central da ChefBrico em Vicente Pires. Oferecemos delivery expresso para toda a região com refeições práticas, saudáveis e com sabor de casa.",
-          "isPartOf": {
-            "@id": "https://receitas.chefbrico.com/onde-encontrar.html"
-          },
-          "publisher": {
-             "@id": "https://receitas.chefbrico.com/#organization"
+      "@type": "Product",
+      "name": "Serviço de Delivery ChefBrico para Vicente Pires",
+      "description": "Direto da nossa cozinha central em Vicente Pires para a sua casa! Oferecemos delivery expresso com todo o nosso cardápio, incluindo o Kit ChefBox Personalizado e o Baião de Dois Vegano.",
+      "image": "https://receitas.chefbrico.com/imagens/a-verdade-sobre-a-chefbox-banner.png",
+      "brand": { "@type": "Brand", "name": "ChefBrico" },
+      "category": "Entrega de Alimentos Gourmet",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://www.chefbrico.com",
+        "priceCurrency": "BRL",
+        "availability": "https://schema.org/InStock",
+        "price": "29.60", 
+        "seller": { "@id": "#organization" },
+        "areaServed": { "@type": "Place", "name": "Vicente Pires, Brasília, DF" },
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "BRL",
+          "minPrice": "29.60",
+          "maxPrice": "34.80"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": { "@type": "QuantitativeValue", "minValue": "1", "maxValue": "2", "unitCode": "DAY" },
+            "transitTime": { "@type": "QuantitativeValue", "minValue": "0", "maxValue": "1", "unitCode": "DAY" }
           }
         },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "url": "https://www.chefbrico.com/trocas-e-devolucoes",
+          "applicableCountry": "BR",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 7
+        }
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+        "reviewBody": "Ter a ChefBrico como vizinha aqui em Vicente Pires é um privilégio! Faço meu pedido e chega super rápido. A qualidade e o sabor são incomparáveis.",
+        "author": { "@type": "Person", "name": "Fernanda L. (Vicente Pires)" }
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
         {
-          "@type": "FoodEstablishment",
-          "mainEntityOfPage": {
-            "@id": "https://receitas.chefbrico.com/onde-encontrar/vicente-pires.html"
-          },
-          "name": "Cozinha Central ChefBrico",
-          "parentOrganization": {
-            "@id": "https://receitas.chefbrico.com/#organization"
-          },
-          "areaServed": {
-            "@type": "Place",
-            "name": "Vicente Pires, Brasília, DF"
-          },
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Rua 5, Chácara 122, Lote 17, Loja 2",
-            "addressLocality": "Vicente Pires",
-            "addressRegion": "DF",
-            "postalCode": "72006-060",
-            "addressCountry": "BR"
-          },
-          "telephone": "+5561996659880"
+          "@type": "Question",
+          "name": "A ChefBrico faz entregas em Vicente Pires?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sim! Por estarmos baseados em Vicente Pires, oferecemos um serviço de delivery expresso para toda a região. Peça online e receba seus produtos com agilidade." }
         },
         {
-          "@type": "Service",
-          "serviceType": "DeliveryService",
-          "name": "Delivery Expresso ChefBrico para Vicente Pires",
-          "areaServed": {
-            "@type": "Place",
-            "name": "Vicente Pires, Brasília, DF"
-          },
-          "provider": {
-            "@id": "https://receitas.chefbrico.com/#organization"
-          },
-          "review": {
-            "@type": "Review",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-            "reviewBody": "Ter a ChefBrico como vizinha aqui em Vicente Pires é um privilégio! Faço meu pedido e chega super rápido. A qualidade e o sabor são incomparáveis.",
-            "author": {"@type": "Person", "name": "Fernanda L."}
-          },
-          "offers": {
-            "@type": "Offer",
-            "name": "Favoritos dos Nossos Vizinhos em Vicente Pires",
-            "itemOffered": [
-              {
-                "@type": "Product",
-                "name": "Kit ChefBox Personalizado",
-                "image": "https://receitas.chefbrico.com/imagens/a-verdade-sobre-a-chefbox-banner.png"
-              },
-              {
-                "@type": "Product",
-                "name": "Baião de Dois Vegano",
-                "image": "https://receitas.chefbrico.com/imagens/refeicoes-praticas/refeicao-baiao-dois-chefbrico.png"
-              }
-            ]
-          }
-        },
-        {
-          "@type": "Organization",
-          "@id": "https://receitas.chefbrico.com/#organization",
-          "name": "ChefBrico",
-          "founder": {
-            "@id": "https://receitas.chefbrico.com/#person-maria-conceicao"
-          }
-        },
-        {
-          "@type": "Person",
-          "@id": "https://receitas.chefbrico.com/#person-maria-conceicao",
-          "name": "Maria Conceição"
+          "@type": "Question",
+          "name": "Posso comprar ou retirar produtos na cozinha central em Vicente Pires?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Nossa cozinha em Vicente Pires é o nosso centro de produção e de onde partem todas as entregas. Não temos atendimento de balcão ou loja física no local, mas garantimos a entrega mais rápida da cidade para nossos vizinhos!" }
         }
       ]
+    },
+    {
+      "@type": "FoodEstablishment",
+      "@id": "#organization",
+      "name": "ChefBrico",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua 5, Chácara 122, Lote 17, Loja 2",
+        "addressLocality": "Vicente Pires",
+        "addressRegion": "DF",
+        "postalCode": "72006-060",
+        "addressCountry": "BR"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Maria Conceição",
+        "jobTitle": "Fundadora e Chef"
+      }
     }
-    </script>
+  ]
+}
+</script>
 </head>
 <body>
 
