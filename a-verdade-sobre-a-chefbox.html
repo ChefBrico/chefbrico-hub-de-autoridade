@@ -24,7 +24,7 @@
       gtag('config', 'G-K58FN8J2VC');
     </script>
     
-  <script type="application/ld+json">
+ <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -34,26 +34,43 @@
         "@type": "WebPage",
         "@id": "https://receitas.chefbrico.com/a-verdade-sobre-a-chefbox.html"
       },
-      "name": "ChefBox ChefBrico",
+      "name": "ChefBox ChefBrico: Monte o seu Kit 4+1",
       "description": "Monte sua ChefBox personalizada com 4 sabores à sua escolha e receba o 5º como um presente da Chef. Uma experiência que une economia, criatividade e a celebração do quinto sabor.",
       "image": "https://receitas.chefbrico.com/imagens/uma-mazinha-icone-chefbrico.png",
-      "brand": {
-        "@id": "https://receitas.chefbrico.com/#organization"
-      },
+      "brand": { "@id": "#organization" },
       "offers": {
-        "@type": "SpecialOffer",
-        "name": "Monte sua ChefBox: Compre 4, Leve 5",
+        "@type": "Offer",
+        "name": "Oferta Especial: Compre 4, Leve o 5º de Presente",
         "url": "https://www.chefbrico.com/chefbox",
-        "description": "Escolha 4 produtos ChefBrico para montar sua caixa e o 5º sabor é um presente nosso para você, representando um desconto de 20%.",
-        "price": "0", // O preço da oferta em si é o benefício
         "priceCurrency": "BRL",
-        "availability": "https://schema.org/InStock"
+        "price": "118.40",
+        "availability": "https://schema.org/InStock",
+        "seller": { "@id": "#organization" }
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+        "reviewBody": "Quando criei a ChefBox, eu não queria apenas montar um 'kit'. Meu sonho era criar uma experiência, um convite para que vocês entrassem na minha filosofia.",
+        "author": { "@type": "Person", "name": "Maria Conceição, Fundadora" }
       }
     },
     {
-      "@type": "Organization",
-      "@id": "https://receitas.chefbrico.com/#organization",
-      "name": "ChefBrico"
+      "@type": "FoodEstablishment",
+      "@id": "#organization",
+      "name": "ChefBrico",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua 5, Chácara 122, Lote 17, Loja 2",
+        "addressLocality": "Vicente Pires",
+        "addressRegion": "DF",
+        "postalCode": "72006-060",
+        "addressCountry": "BR"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Maria Conceição",
+        "jobTitle": "Fundadora e Chef"
+      }
     }
   ]
 }
