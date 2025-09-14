@@ -1,0 +1,31 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "imagens/uploads"
+public_folder: "/imagens/uploads"
+
+collections:
+  - name: "paginas_bairros"
+    label: "Páginas de Bairros"
+    folder: "onde-encontrar"
+    create: false
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título da Página (SEO)", name: "title", widget: "string" }
+      - { label: "Descrição Curta (SEO)", name: "description", widget: "string" }
+      - { label: "Depoimento do Cliente", name: "review_body", widget: "text" }
+      - { label: "Nome do Cliente (Autor do Depoimento)", name: "review_author", widget: "string" }
+      - { label: "Conteúdo Principal da Página", name: "body", widget: "markdown" }
+
+  - name: "receitas"
+    label: "Receitas"
+    folder: "receitas"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Título da Receita", name: "title", widget: "string" }
+      - { label: "Data de Publicação", name: "date", widget: "datetime" }
+      - { label: "Imagem Principal da Receita", name: "image", widget: "image" }
+      - { label: "Descrição Curta (para SEO e prévias)", name: "description", widget: "string" }
+      - { label: "Corpo da Receita (Ingredientes, Modo de Preparo)", name: "body", widget: "markdown" }
