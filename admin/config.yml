@@ -1,15 +1,16 @@
 backend:
   name: git-gateway
-  branch: main
+  branch: desenvolvimento # Ou o nome do seu ramo principal, ex: master
 
-media_folder: "imagens/uploads"
-public_folder: "/imagens/uploads"
+media_folder: "imagens/uploads" # Pasta onde as novas imagens serão guardadas
+public_folder: "/imagens/uploads" # Como aceder a essas imagens no site
 
 collections:
+  # Coleção para editar as páginas de Micro-Região (Bairros)
   - name: "paginas_bairros"
     label: "Páginas de Bairros"
-    folder: "onde-encontrar"
-    create: false
+    folder: "onde-encontrar" # IMPORTANTE: Confirme se esta é a pasta onde estão os ficheiros dos bairros
+    create: false # Impede a criação de novas páginas de bairro, permite apenas editar
     slug: "{{slug}}"
     fields:
       - { label: "Título da Página (SEO)", name: "title", widget: "string" }
@@ -18,10 +19,11 @@ collections:
       - { label: "Nome do Cliente (Autor do Depoimento)", name: "review_author", widget: "string" }
       - { label: "Conteúdo Principal da Página", name: "body", widget: "markdown" }
 
+  # Coleção para CRIAR e EDITAR Receitas
   - name: "receitas"
     label: "Receitas"
-    folder: "receitas"
-    create: true
+    folder: "receitas" # IMPORTANTE: Confirme se esta é a pasta onde ficam os ficheiros das receitas
+    create: true # Permite que a Maria Conceição crie novas receitas
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - { label: "Título da Receita", name: "title", widget: "string" }
