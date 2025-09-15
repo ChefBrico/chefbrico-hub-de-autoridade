@@ -1,9 +1,83 @@
-# --- Redirecionamento do URL Padrão Netlify para o seu Domínio ---
-# Substitua 'seu-projeto' pelo nome real do seu site na Netlify
+
+
+# === REDIRECIONAMENTOS FINAIS - PROJETO DOMINAÇÃO TOTAL v1.2 ===
+
+# --- Redirecionamento do Domínio Padrão Netlify para o Domínio Principal ---
 https://chefbrico-blog.netlify.app/* https://receitas.chefbrico.com/:splat    301!
 
-# --- Exemplo de Redirecionamento de um Post Antigo para um Novo ---
-# /caminho/do/post-antigo        /caminho/novo/do-post       301
-/receitas/minha-receita-antiga/   /receitas/minha-receita-nova/   301
+# --- Páginas Institucionais para a Nova Estrutura ---
+/onde-encontrar.html                /onde-encontrar/            301
+/chefbrico-club.html                /clube/                     301
+/faq.html                           /faq/                       301
+/comunidade.html                    /comunidade/                301
 
+# --- Secção Estratégica "Comida de Verdade" (E-E-A-T da Fundadora) --- 
+/nossa-filosofia.html               /comida-de-verdade/         301
+/da-psicologia-ao-prato-nossa-filosofia.html  /comida-de-verdade/psicologia-ao-prato/  301
+/despensa-inteligente.html                    /comida-de-verdade/despensa-inteligente/   301
+/panela-unica.html                            /comida-de-verdade/panela-unica/           301
+/cozinha-criativa.html                        /comida-de-verdade/cozinha-criativa/     301
+/segredo-da-desidratacao.html                 /comida-de-verdade/segredo-da-desidratacao/ 301
 
+# --- Nova Secção Estratégica "ChefBox" ---
+/a-verdade-sobre-a-chefbox.html     /chefbox/                   301
+
+# --- Outros Artigos do Blog ---
+/guia-flexitariano.html             /blog/guia-flexitariano/      301
+/guia-dos-arrozes.html              /blog/guia-dos-arrozes/       301
+/miojo-do-bem.html                  /blog/miojo-do-bem/           301
+/o-que-levar-para-comer-na-trilha.html /blog/o-que-levar-para-comer-na-trilha/ 301
+/o-segredo-do-desidratado.html      /blog/o-segredo-do-desidratado/   301
+
+# --- Fusão de Cardápio + Receitas na NOVA SUPER PÁGINA "RECEITAS" ---
+/cardapio.html                      /receitas/                  301
+/receitas.html                      /receitas/                  301
+
+# --- Páginas de "Soluções" (agora dentro de Receitas) ---
+/solucao-jantar-rapido.html         /receitas/solucoes/jantar-rapido/     301
+/solucao-marmita-saudavel.html      /receitas/solucoes/marmita-saudavel/  301
+/solucao-momento-a-dois.html        /receitas/solucoes/momento-a-dois/    301
+/solucao-para-criancas.html         /receitas/solucoes/para-criancas/     301
+/solucao-dieta-performance.html     /receitas/solucoes/dieta-performance/ 301
+/solucao-trilha-viagem.html         /receitas/solucoes/trilha-viagem/     301
+
+# --- Páginas de Categoria de Receitas (agora dentro de Receitas) ---
+/risotos.html                       /receitas/risotos/                301
+/sopas-funcionais.html              /receitas/sopas-funcionais/       301
+/refeicoes-praticas.html            /receitas/refeicoes-integrais/    301
+/emporio-da-chef.html               /receitas/emporio-da-chef/        301
+
+# --- Receitas Individuais (Lista Completa e Corrigida) ---
+# Formato: /<nome-antigo>.html    /receitas/<categoria>/<nome-novo>/    301
+
+# Empório da Chef
+/emporio-caponata-shiitake.html     /receitas/emporio-da-chef/caponata-shiitake/  301
+/emporio-funghi-confit.html         /receitas/emporio-da-chef/funghi-confit/      301
+/emporio-pesto-manjericao.html      /receitas/emporio-da-chef/pesto-manjericao/   301
+
+# Refeições Integrais
+/receita-arroz-negro-funghi.html    /receitas/refeicoes-integrais/arroz-negro-funghi/ 301
+/receita-baiao-de-dois.html         /receitas/refeicoes-integrais/baiao-de-dois/  301
+/receita-refeicao-mediterranea.html /receitas/refeicoes-integrais/mediterranea/   301
+
+# Sopas Funcionais
+/receita-canja-vegana.html          /receitas/sopas-funcionais/canja-veg/         301
+/receita-sopa-biza-vo.html          /receitas/sopas-funcionais/sopa-biza-vo/      301
+/receita-sopa-creme-fit.html        /receitas/sopas-funcionais/creme-fit/         301
+/receita-sopa-detox.html            /receitas/sopas-funcionais/detox/             301
+/receita-sopa-jeitinho-de-vo.html   /receitas/sopas-funcionais/jeitinho-de-vo/    301
+/receita-sopa-low-carb-funghi.html  /receitas/sopas-funcionais/low-carb-funghi/   301
+/receita-sopa-low-carb-horta.html   /receitas/sopas-funcionais/low-carb-horta/    301
+
+# Risotos
+/receita-paella-veg.html            /receitas/risotos/paella-veg/         301
+/receita-risoto-funghi.html         /receitas/risotos/funghi/             301
+/receita-risoto-mediterraneo.html   /receitas/risotos/mediterraneo/       301
+/receita-risoto-mix-funghi.html     /receitas/risotos/mix-funghi/         301
+/receita-risoto-morango.html        /receitas/risotos/morango/            301
+/receita-risoto-pera-gorgonzola.html /receitas/risotos/pera-gorgonzola/    301
+/receita-risoto-pesto-alho-poro.html /receitas/risotos/alho-poro/          301
+/receita-risoto-pomodori.html       /receitas/risotos/pomodori/           301
+/receita-risoto-shiimeji.html       /receitas/risotos/shiimeji/           301
+/receita-risoto-tomate-manjericao.html /receitas/risotos/tomate-manjericao/  301
+/receita-risoto-zucchini.html       /receitas/risotos/zucchini/           301
