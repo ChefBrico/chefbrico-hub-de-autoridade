@@ -1,51 +1,64 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jantar Rápido para a Semana: Soluções em até 20 Minutos | ChefBrico</title>
-    <meta name="description" content="Acabe com o estresse do jantar! Descubra uma seleção de refeições 100% naturais da ChefBrico que ficam prontas em menos de 20 minutos.">
-   <link rel="stylesheet" href="/css/style.css">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://receitas.chefbrico.com/solucao-jantar-rapido.html" },
-      "headline": "Soluções para um Jantar Rápido e Saudável Durante a Semana",
-      "description": "Um guia da Chef Conceição com uma seleção curada de risotos e sopas 100% naturais, ideais para resolver a correria do jantar da semana em menos de 20 minutos.",
-      "author": { "@type": "Person", "@id": "https://receitas.chefbrico.com/nossa-filosofia.html#maria-conceicao" },
-      "publisher": { "@type": "Organization", "@id": "https://www.chefbrico.com/#organization" },
-      "image": "https://receitas.chefbrico.com/images/solucao-jantar-rapido-banner.png"
-    }
-    </script>
-</head>
-<body>
-     {% include "cabecalho.html" %}
-    <main class="container">
-        <div class="page-header-local">
-            <h1>Jantar Resolvido: Refeições de Verdade em Minutos</h1>
-            <p class="recipe-subtitle">Acabe com o estresse do jantar da semana! A Chef Conceição selecionou os pratos 100% naturais mais rápidos e práticos para nutrir sua família sem complicação.</p>
+---
+layout: base.njk
+permalink: /receitas/solucoes/jantar-rapido/
+title: "Jantar Rápido para a Semana: Soluções em até 20 Minutos | ChefBrico"
+description: "Acabe com o estresse do jantar! Descubra uma seleção de refeições 100% naturais da ChefBrico que ficam prontas em menos de 20 minutos."
+schema:
+  "@context": https://schema.org
+  "@type": Article
+  mainEntityOfPage":
+    "@type": WebPage
+    "@id": https://receitas.chefbrico.com/receitas/solucoes/jantar-rapido/
+  headline: "Soluções para um Jantar Rápido e Saudável Durante a Semana"
+  description: "Um guia da Chef Conceição com uma seleção curada de risotos e sopas 100% naturais, ideais para resolver a correria do jantar da semana em menos de 20 minutos."
+  author":
+    "@id": https://receitas.chefbrico.com/#person-maria
+  publisher":
+    "@id": https://receitas.chefbrico.com/#organization
+  image: https://receitas.chefbrico.com/images/solucao-jantar-rapido-banner.png
+---
+<main class="container">
+    <div class="page-header-local">
+        <h1>Jantar Resolvido: Refeições de Verdade em Minutos</h1>
+        <p class="recipe-subtitle">Acabe com o estresse do jantar da semana! A Chef Conceição selecionou os pratos 100% naturais mais rápidos e práticos para nutrir sua família sem complicação.</p>
+    </div>
+    <div id="voz-da-chef-box" class="author-box">
+        <img src="/imagens/maria-conceicao-pra-voce.png" alt="Retrato de Maria Conceição" class="author-image">
+        <div class="author-info">
+            <h4>Uma mensagem da Maria Conceição</h4>
+            <p>Sei como a rotina pode ser exaustiva. Criei esta seleção para que você possa ter a paz de espírito de um jantar delicioso e saudável na mesa em menos de 20 minutos. Você merece esse cuidado.</p>
         </div>
-        <div id="voz-da-chef-box" class="author-box">
-            <img src="/imagens/maria-conceicao-pra-voce.png" alt="Retrato de Maria Conceição" class="author-image">
-            <div class="author-info">
-                <h4>Uma mensagem da Maria Conceição</h4>
-                <p>Sei como a rotina pode ser exaustiva. Criei esta seleção para que você possa ter a paz de espírito de um jantar delicioso e saudável na mesa em menos de 20 minutos. Você merece esse cuidado.</p>
-            </div>
+    </div>
+    <div class="post-content">
+        <h2 style="text-align: center; margin-top: 50px;">Opção 1: Risotos Gourmet em 18 Minutos</h2>
+        <div class="post-grid" style="margin-top: 30px;">
+            <a href="/receitas/risotos/pomodori/" class="card">
+                <img src="/imagens/risoto-pomodori-pesto-tijela-chefbrico.png" alt="Risoto Pomodori & Pesto" class="card-image">
+                <div class="card-content"><span class="card-category">Receita</span><h3>Risoto Pomodori & Pesto</h3></div>
+            </a>
+            <a href="/receitas/risotos/funghi/" class="card">
+                <img src="/imagens/risoto-funghi-arboreo-chefbrico.png" alt="Risoto Funghi Secchi" class="card-image">
+                <div class="card-content"><span class="card-category">Receita</span><h3>Risoto Funghi Secchi</h3></div>
+            </a>
+            <a href="/receitas/risotos/pera-gorgonzola/" class="card">
+                <img src="/imagens/risoto-agridoce-pera-gorgonzola-veg-chefbrico.png" alt="Risoto de Pêra e Gorgonzola Vegano" class="card-image">
+                <div class="card-content"><span class="card-category">Receita</span><h3>Risoto de Pêra e Gorgonzola</h3></div>
+            </a>
         </div>
-        <div class="post-content">
-            <h2 style="text-align: center; margin-top: 50px;">Opção 1: Risotos Gourmet em 18 Minutos</h2>
-            <div class="product-grid" style="margin-top: 30px;">
-                </div>
-            <h2 style="text-align: center; margin-top: 50px;">Opção 2: Sopas Reconfortantes em 15 Minutos</h2>
-            <div class="product-grid" style="margin-top: 30px;">
-                </div>
+        <h2 style="text-align: center; margin-top: 50px;">Opção 2: Sopas Reconfortantes em 15 Minutos</h2>
+        <div class="post-grid" style="margin-top: 30px;">
+            <a href="/receitas/sopas-funcionais/jeitinho-de-vo/" class="card">
+                <img src="/imagens/jeitinh-vo-sopa-chefbrico.png" alt="Sopa Jeitinho de Vó Lentilha" class="card-image">
+                <div class="card-content"><span class="card-category">Receita</span><h3>Sopa Jeitinho de Vó</h3></div>
+            </a>
+            <a href="/receitas/sopas-funcionais/sopa-biza-vo/" class="card">
+                <img src="/imagens/sopinha-da-biza-vo-chefbrico.png" alt="Sopinha da Biza Vó" class="card-image">
+                <div class="card-content"><span class="card-category">Receita</span><h3>Sopinha da Biza Vó</h3></div>
+            </a>
+            <a href="/receitas/sopas-funcionais/canja-veg/" class="card">
+                <img src="/imagens/Canja-Veg-bowl-marrom.png" alt="Canja Vegana" class="card-image">
+                <div class="card-content"><span class="card-category">Receita</span><h3>Canja Vegana Funcional</h3></div>
+            </a>
         </div>
-     </main>
-
-    {% include "rodape.html" %}
-
-    <script src="/js/script.js"></script>
-
-</body>
-</html>
+    </div>
+ </main>
