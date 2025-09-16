@@ -1,136 +1,101 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empório da Chef: Antepastos, Confits e Mais | ChefBrico</title>
-    <link rel="canonical" href="https://receitas.chefbrico.com/emporio-da-chef.html" />
-    <meta name="description" content="O toque final de sabor com nossos antepastos, confits e produtos gourmet artesanais. Explore dicas e receitas da ChefBrico.">
+---
+layout: base.njk
+permalink: /receitas/emporio-da-chef/
+title: "Empório da Chef: Antepastos, Confits e Mais | ChefBrico"
+description: "O toque final de sabor com nossos antepastos, confits e produtos gourmet artesanais. Explore dicas e receitas da ChefBrico."
+schema:
+- "@context": https://schema.org/
+  "@type": Product
+  name: "Caponata com Shiitake Grelhado"
+  url": https://receitas.chefbrico.com/receitas/emporio-da-chef/caponata-shiitake/
+  image":
+  - https://receitas.chefbrico.com/emporio/caponata-shiitake-vegetais-chefbrico.png
+  description: "Uma releitura sofisticada de um clássico siciliano. Nossa Caponata artesanal une o tradicional sabor agridoce dos vegetais cozidos lentamente na técnica confit com o toque surpreendente e umami do cogumelo shiitake grelhado."
+  brand":
+    "@type": Brand
+    name: ChefBrico
+  sku: "ANT-CAP-003"
+  manufacturer":
+    "@id": https://receitas.chefbrico.com/#person-maria
+  isPartOf":
+    "@id": https://receitas.chefbrico.com/receitas/emporio-da-chef/
+  keywords: "antepasto, caponata, vegano, sem-gluten, momento-especial, gourmet-pratico, shiitake, agridoce"
+  suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VeganDiet", "https://schema.org/VegetarianDiet"]
+  knownAllergen": "Livre de Glúten. Livre de Lactose. (Produzido em ambiente que pode conter traços de castanhas)."
+  aggregateRating":
+    "@type": AggregateRating
+    ratingValue: '5'
+    reviewCount: '15'
+  review":
+    "@type": Review
+    reviewRating":
+      "@type": Rating
+      ratingValue: '5'
+    author:
+      "@type": Person
+      name: "Joana F."
+    reviewBody: "Simplesmente divina! A melhor caponata que já provei. O shiitake dá um toque super especial. Perfeita com torradas e um bom vinho."
+  offers":
+    "@type": Offer
+    price: '29.80'
+    priceCurrency: BRL
+    url": https://www.chefbrico.com/caponata-com-shiitake-grelhado
+    availability: https://schema.org/InStock
+    seller:
+      "@type": Organization
+      name: ChefBrico
+      url": https://www.chefbrico.com
+    shippingDetails":
+      "@type": OfferShippingDetails
+      shippingDestination":
+        "@type": DefinedRegion
+        addressCountry: BR
+      deliveryTime:
+        "@type": ShippingDeliveryTime
+        handlingTime":
+          "@type": QuantitativeValue
+          minValue: '1'
+          maxValue: '2'
+          unitCode: DAY
+        transitTime":
+          "@type": QuantitativeValue
+          minValue: '3'
+          maxValue: '10'
+          unitCode: DAY
+      carrier":
+        "@type": Organization
+        name: Correios
+- "@context": https://schema.org
+  "@type": Person
+  "@id": https://receitas.chefbrico.com/#person-maria
+  name: "Maria Conceição"
+  jobTitle: "Fundadora e Chef de Criação"
+  description: "Empreendedora e autora de todas as receitas autorais da ChefBrico."
+  url": https://receitas.chefbrico.com/comida-de-verdade/
+  sameAs":
+  - https://wa.me/5561996659880
+  - https://www.instagram.com/chefbrico/
+  funderOf":
+    "@type": FoodEstablishment
+    name: ChefBrico
+    url": https://www.chefbrico.com
+---
+<main class="container">
+    <h1>Empório da Chef: O Toque Final de Sabor</h1>
+    <p>Nosso espaço dedicado aos segredos que transformam uma boa refeição em uma experiência gourmet. Dicas e usos para nossos antepastos e confits.</p>
     
-    <link rel="stylesheet" href="/css/style.css">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K58FN8J2VC"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-K58FN8J2VC');
-    </script>
-    
-    <script type="application/ld+json">
-    [
-      {
-        "@context": "https://schema.org/",
-        "@type": "Product",
-        "name": "Caponata com Shiitake Grelhado",
-        "url": "https://receitas.chefbrico.com/emporio-caponata-shiitake.html",
-        "image": [
-          "https://receitas.chefbrico.com/emporio/caponata-shiitake-vegetais-chefbrico.png"
-        ],
-        "description": "Uma releitura sofisticada de um clássico siciliano. Nossa Caponata artesanal une o tradicional sabor agridoce dos vegetais cozidos lentamente na técnica confit com o toque surpreendente e umami do cogumelo shiitake grelhado.",
-        "brand": {
-          "@type": "Brand",
-          "name": "ChefBrico"
-        },
-        "sku": "ANT-CAP-003",
-        "manufacturer": {
-           "@id": "https://receitas.chefbrico.com/#person-maria"
-        },
-        "isPartOf": {
-          "@id": "https://receitas.chefbrico.com/emporio-da-chef.html"
-        },
-        "keywords": "antepasto, caponata, vegano, sem-gluten, momento-especial, gourmet-pratico, shiitake, agridoce",
-        "suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VeganDiet", "https://schema.org/VegetarianDiet"],
-        "knownAllergen": "Livre de Glúten. Livre de Lactose. (Produzido em ambiente que pode conter traços de castanhas).",
-        
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "5",
-          "reviewCount": "15"
-        },
-        "review": {
-          "@type": "Review",
-          "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-          "author": { "@type": "Person", "name": "Joana F." },
-          "reviewBody": "Simplesmente divina! A melhor caponata que já provei. O shiitake dá um toque super especial. Perfeita com torradas e um bom vinho."
-        },
-        "offers": {
-          "@type": "Offer",
-          "price": "29.80",
-          "priceCurrency": "BRL",
-          "url": "https://www.chefbrico.com/caponata-com-shiitake-grelhado",
-          "availability": "https://schema.org/InStock",
-          "seller": {
-            "@type": "Organization",
-            "name": "ChefBrico",
-            "url": "https://www.chefbrico.com"
-          },
-           "shippingDetails": {
-             "@type": "OfferShippingDetails",
-             "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "BR" },
-             "deliveryTime": {
-                "@type": "ShippingDeliveryTime",
-                "handlingTime": { "@type": "QuantitativeValue", "minValue": "1", "maxValue": "2", "unitCode": "DAY" },
-                "transitTime": { "@type": "QuantitativeValue", "minValue": "3", "maxValue": "10", "unitCode": "DAY" }
-              },
-             "carrier": { "@type": "Organization", "name": "Correios" }
-          }
-        }
-      },
-      // (Nota: Os schemas dos outros 2 produtos, Pesto e Confit, estão em suas respectivas páginas)
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "@id": "https://receitas.chefbrico.com/#person-maria", 
-        "name": "Maria Conceição",
-        "jobTitle": "Fundadora e Chef de Criação",
-        "description": "Empreendedora e autora de todas as receitas autorais da ChefBrico.",
-        "url": "https://receitas.chefbrico.com/nossa-filosofia.html",
-        "sameAs": [
-          "https://wa.me/5561996659880",
-          "https://www.instagram.com/chefbrico/"
-        ],
-        "funderOf": {
-          "@type": "FoodEstablishment",
-          "name": "ChefBrico",
-          "url": "https://www.chefbrico.com"
-        }
-      }
-    ]
-    </script>
-</head>
-<body>
-    {% include "cabecalho.html" %}
-
-    <main class="container">
-        <h1>Empório da Chef: O Toque Final de Sabor</h1>
-        <p>Nosso espaço dedicado aos segredos que transformam uma boa refeição em uma experiência gourmet. Dicas e usos para nossos antepastos e confits.</p>
-        
-        <div class="post-grid" style="margin-top: 40px;">
-            <a href="/emporio-caponata-shiitake.html" class="card"> <img src="/imagens/caponata-shiitake-vegetais-chefbrico.png" alt="Antepasto de Caponata com Shiitake" class="card-image">
-                <div class="card-content"><span class="card-category">Produto</span><h3>Caponata com Shiitake Grelhado</h3></div>
-            </a>
-            <a href="/emporio-funghi-confit.html" class="card"> <img src="/imagens/confitado-shiitake-chefbrico.png" alt="Funghi Confitado no Azeite" class="card-image">
-                <div class="card-content"><span class="card-category">Produto</span><h3>Funghi Confitado no Azeite</h3></div>
-            </a>
-            <a href="/emporio-pesto-manjericao.html" class="card"> <img src="/imagens/icone-pesto-manjericao-chefbrico.png" alt="Pesto de Manjericão com Castanha-do-Pará" class="card-image">
-                <div class="card-content"><span class="card-category">Produto</span><h3>Pesto de Manjericão</h3></div>
-            </a>
-        </div>
-   </main>
-
-    {% include "rodape.html" %}
-
-    <script src="/js/script.js"></script>
-
-</body>
-</html>
+    <div class="post-grid" style="margin-top: 40px;">
+        <a href="/receitas/emporio-da-chef/caponata-shiitake/" class="card">
+            <img src="/imagens/caponata-shiitake-vegetais-chefbrico.png" alt="Antepasto de Caponata com Shiitake" class="card-image">
+            <div class="card-content"><span class="card-category">Produto</span><h3>Caponata com Shiitake Grelhado</h3></div>
+        </a>
+        <a href="/receitas/emporio-da-chef/funghi-confit/" class="card">
+            <img src="/imagens/confitado-shiitake-chefbrico.png" alt="Funghi Confitado no Azeite" class="card-image">
+            <div class="card-content"><span class="card-category">Produto</span><h3>Funghi Confitado no Azeite</h3></div>
+        </a>
+        <a href="/receitas/emporio-da-chef/pesto-manjericao/" class="card">
+            <img src="/imagens/icone-pesto-manjericao-chefbrico.png" alt="Pesto de Manjericão com Castanha-do-Pará" class="card-image">
+            <div class="card-content"><span class="card-category">Produto</span><h3>Pesto de Manjericão</h3></div>
+        </a>
+    </div>
+</main>
