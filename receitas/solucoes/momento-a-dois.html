@@ -1,51 +1,64 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cardápio para Jantar Romântico e Prático a Dois | ChefBrico</title>
-    <meta name="description" content="Crie um momento inesquecível. Explore nossa seleção de risotos gourmet e antepastos para um jantar a dois cheio de sabor e afeto.">
-    <link rel="stylesheet" href="/css/style.css">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://receitas.chefbrico.com/solucao-momento-a-dois.html" },
-      "headline": "Como Criar um Jantar Romântico em Casa sem Complicação",
-      "description": "Um guia da Chef Conceição para um jantar a dois perfeito, com uma seleção de pratos gourmet práticos e dicas de harmonização.",
-      "author": { "@type": "Person", "@id": "https://receitas.chefbrico.com/nossa-filosofia.html#maria-conceicao" },
-      "publisher": { "@type": "Organization", "@id": "https://www.chefbrico.com/#organization" },
-      "image": "https://receitas.chefbrico.com/images/solucao-romantico-banner.png"
-    }
-    </script>
-</head>
-<body>
- {% include "cabecalho.html" %}
-    <main class="container">
-        <div class="page-header-local">
-            <h1>O Cenário Perfeito para um Momento a Dois</h1>
-            <p class="recipe-subtitle">Cozinhar junto é um ato de amor. A ChefBrico cuida da parte prática para que vocês possam focar no mais importante: a companhia.</p>
+---
+layout: base.njk
+permalink: /receitas/solucoes/momento-a-dois/
+title: "Cardápio para Jantar Romântico e Prático a Dois | ChefBrico"
+description: "Crie um momento inesquecível. Explore nossa seleção de risotos gourmet e antepastos para um jantar a dois cheio de sabor e afeto."
+schema:
+  "@context": https://schema.org
+  "@type": Article
+  mainEntityOfPage":
+    "@type": WebPage
+    "@id": https://receitas.chefbrico.com/receitas/solucoes/momento-a-dois/
+  headline: "Como Criar um Jantar Romântico em Casa sem Complicação"
+  description: "Um guia da Chef Conceição para um jantar a dois perfeito, com uma seleção de pratos gourmet práticos e dicas de harmonização."
+  author":
+    "@id": https://receitas.chefbrico.com/#person-maria
+  publisher":
+    "@id": https://receitas.chefbrico.com/#organization
+  image: https://receitas.chefbrico.com/images/solucao-romantico-banner.png
+---
+<main class="container">
+    <div class="page-header-local">
+        <h1>O Cenário Perfeito para um Momento a Dois</h1>
+        <p class="recipe-subtitle">Cozinhar junto é um ato de amor. A ChefBrico cuida da parte prática para que vocês possam focar no mais importante: a companhia.</p>
+    </div>
+    <div id="voz-da-chef-box" class="author-box">
+         <img src="/imagens/maria-conceicao-pra-voce.png" alt="Retrato de Maria Conceição" class="author-image">
+        <div class="author-info">
+            <h4>Uma mensagem da Maria Conceição</h4>
+            <p>A cozinha é o coração da casa e o cenário de muitas histórias de amor. Selecionei aqui os pratos que criam a atmosfera perfeita para uma noite especial, com muito sabor e sem estresse.</p>
         </div>
-        <div id="voz-da-chef-box" class="author-box">
-             <img src="/imagens/maria-conceicao-pra-voce.png" alt="Retrato de Maria Conceição" class="author-image">
-            <div class="author-info">
-                <h4>Uma mensagem da Maria Conceição</h4>
-                <p>A cozinha é o coração da casa e o cenário de muitas histórias de amor. Selecionei aqui os pratos que criam a atmosfera perfeita para uma noite especial, com muito sabor e sem estresse.</p>
-            </div>
+    </div>
+    <div class="post-content">
+        <h2 style="text-align: center; margin-top: 50px;">O Prato Principal: Risotos que Encantam</h2>
+        <div class="post-grid" style="margin-top: 30px;">
+            <a href="/receitas/risotos/pera-gorgonzola/" class="card">
+                <img src="/imagens/risoto-agridoce-pera-gorgonzola-veg-chefbrico.png" alt="Risoto de Pêra e Gorgonzola Vegano" class="card-image">
+                <div class="card-content"><span class="card-category">Receita</span><h3>Risoto de Pêra e Gorgonzola</h3></div>
+            </a>
+            <a href="/receitas/risotos/mix-funghi/" class="card">
+                <img src="/imagens/risoto-mix-funghi-chefbrico.png" alt="Risoto Mix Funghi" class="card-image">
+                <div class="card-content"><span class="card-category">Receita</span><h3>Risoto Mix Funghi (3 Cogumelos)</h3></div>
+            </a>
+            <a href="/receitas/risotos/morango/" class="card">
+                <img src="/imagens/risoto-agridoce-morango-raspas-limao-siciliano-chefbrico.png" alt="Risoto Agridoce de Morango" class="card-image">
+                <div class="card-content"><span class="card-category">Receita</span><h3>Risoto Agridoce de Morango</h3></div>
+            </a>
         </div>
-        <div class="post-content">
-            <h2 style="text-align: center; margin-top: 50px;">O Prato Principal: Risotos que Encantam</h2>
-            <div class="product-grid" style="margin-top: 30px;">
-                </div>
-            <h2 style="text-align: center; margin-top: 50px;">A Entrada: O Toque do Chef</h2>
-            <div class="product-grid" style="margin-top: 30px;">
-                </div>
+        <h2 style="text-align: center; margin-top: 50px;">A Entrada: O Toque do Chef</h2>
+        <div class="post-grid" style="margin-top: 30px;">
+            <a href="/receitas/emporio-da-chef/funghi-confit/" class="card">
+                <img src="/imagens/confitado-shiitake-chefbrico.png" alt="Funghi Confitado no Azeite" class="card-image">
+                <div class="card-content"><span class="card-category">Produto</span><h3>Funghi Confitado no Azeite</h3></div>
+            </a>
+            <a href="/receitas/emporio-da-chef/caponata-shiitake/" class="card">
+                <img src="/imagens/caponata-shiitake-vegetais-chefbrico.png" alt="Antepasto de Caponata com Shiitake" class="card-image">
+                <div class="card-content"><span class="card-category">Produto</span><h3>Caponata com Shiitake</h3></div>
+            </a>
+            <a href="/receitas/emporio-da-chef/pesto-manjericao/" class="card">
+                <img src="/imagens/icone-pesto-manjericao-chefbrico.png" alt="Pesto de Manjericão com Castanha-do-Pará" class="card-image">
+                <div class="card-content"><span class="card-category">Produto</span><h3>Pesto de Manjericão</h3></div>
+            </a>
         </div>
-     </main>
-
-    {% include "rodape.html" %}
-
-    <script src="/js/script.js"></script>
-
-</body>
-</html>
+    </div>
+ </main>
