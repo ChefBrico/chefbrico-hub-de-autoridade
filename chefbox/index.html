@@ -1,127 +1,88 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Verdade sobre a ChefBox: Compre 4, Leve 5 e Descubra o 5º Sabor</title>
-    <link rel="canonical" href="https://receitas.chefbrico.com/a-verdade-sobre-a-chefbox.html" />
-    <meta name="description" content="É mais que um desconto. Entenda a filosofia por trás da nossa ChefBox: um presente real, um convite à criatividade e a celebração do Umami, o quinto sabor.">
+---
+layout: base.njk
+permalink: /chefbox/
+title: "A Verdade sobre a ChefBox: Compre 4, Leve 5 e Descubra o 5º Sabor"
+description: "É mais que um desconto. Entenda a filosofia por trás da nossa ChefBox: um presente real, um convite à criatividade e a celebração do Umami, o quinto sabor."
+schema:
+  "@context": https://schema.org
+  "@graph":
+  - "@type": Product
+    mainEntityOfPage:
+      "@type": WebPage
+      "@id": https://receitas.chefbrico.com/chefbox/
+    name: "ChefBox ChefBrico: Monte o seu Kit 4+1"
+    description: "Monte sua ChefBox personalizada com 4 sabores à sua escolha e receba o 5º como um presente da Chef. Uma experiência que une economia, criatividade e a celebração do quinto sabor."
+    image: https://receitas.chefbrico.com/imagens/uma-mazinha-icone-chefbrico.png
+    brand":
+      "@id": "#organization"
+    offers":
+      "@type": Offer
+      name: "Oferta Especial: Compre 4, Leve o 5º de Presente"
+      url": https://www.chefbrico.com/chefbox
+      priceCurrency: BRL
+      price: '118.40'
+      availability: https://schema.org/InStock
+      seller:
+        "@id": "#organization"
+    review":
+      "@type": Review
+      reviewRating":
+        "@type": Rating
+        ratingValue: '5'
+      reviewBody: "Quando criei a ChefBox, eu não queria apenas montar um 'kit'. Meu sonho era criar uma experiência, um convite para que vocês entrassem na minha filosofia."
+      author:
+        "@type": Person
+        name: "Maria Conceição, Fundadora"
+  - "@type": FoodEstablishment
+    "@id": "#organization"
+    name: ChefBrico
+    address:
+      "@type": PostalAddress
+      streetAddress: "Rua 5, Chácara 122, Lote 17, Loja 2"
+      addressLocality: "Vicente Pires"
+      addressRegion: DF
+      postalCode: "72006-060"
+      addressCountry: BR
+    founder:
+      "@type": Person
+      name: "Maria Conceição"
+      jobTitle: "Fundadora e Chef"
+---
+<main class="container">
+    <div class="recipe-title-container" style="text-align:center;">
+        <h1>A Verdade Sobre a ChefBox</h1>
+        <p class="recipe-subtitle">Você já viu a nossa oferta: compre 4 sabores e leve o 5º de presente. Mas qual é a filosofia por trás disso? A Chef Conceição revela as 4 verdades que transformam uma simples compra em uma experiência completa.</p>
+    </div>
 
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K58FN8J2VC"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-K58FN8J2VC');
-    </script>
-    
- <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Product",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://receitas.chefbrico.com/a-verdade-sobre-a-chefbox.html"
-      },
-      "name": "ChefBox ChefBrico: Monte o seu Kit 4+1",
-      "description": "Monte sua ChefBox personalizada com 4 sabores à sua escolha e receba o 5º como um presente da Chef. Uma experiência que une economia, criatividade e a celebração do quinto sabor.",
-      "image": "https://receitas.chefbrico.com/imagens/uma-mazinha-icone-chefbrico.png",
-      "brand": { "@id": "#organization" },
-      "offers": {
-        "@type": "Offer",
-        "name": "Oferta Especial: Compre 4, Leve o 5º de Presente",
-        "url": "https://www.chefbrico.com/chefbox",
-        "priceCurrency": "BRL",
-        "price": "118.40",
-        "availability": "https://schema.org/InStock",
-        "seller": { "@id": "#organization" }
-      },
-      "review": {
-        "@type": "Review",
-        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-        "reviewBody": "Quando criei a ChefBox, eu não queria apenas montar um 'kit'. Meu sonho era criar uma experiência, um convite para que vocês entrassem na minha filosofia.",
-        "author": { "@type": "Person", "name": "Maria Conceição, Fundadora" }
-      }
-    },
-    {
-      "@type": "FoodEstablishment",
-      "@id": "#organization",
-      "name": "ChefBrico",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Rua 5, Chácara 122, Lote 17, Loja 2",
-        "addressLocality": "Vicente Pires",
-        "addressRegion": "DF",
-        "postalCode": "72006-060",
-        "addressCountry": "BR"
-      },
-      "founder": {
-        "@type": "Person",
-        "name": "Maria Conceição",
-        "jobTitle": "Fundadora e Chef"
-      }
-    }
-  ]
-}
-</script>
-</head>
-<body>
+    <div class="hero-card">
+        <img src="/imagens/uma-mazinha-icone-chefbrico.png" alt="Uma caixa ChefBox aberta, com 5 embalagens de produtos diferentes, cercada de ingredientes frescos.">
+    </div>
 
-    {% include "cabecalho.html" %}
-
-    <main class="container">
-        <div class="recipe-title-container" style="text-align:center;">
-            <h1>A Verdade Sobre a ChefBox</h1>
-            <p class="recipe-subtitle">Você já viu a nossa oferta: compre 4 sabores e leve o 5º de presente. Mas qual é a filosofia por trás disso? A Chef Conceição revela as 4 verdades que transformam uma simples compra em uma experiência completa.</p>
-        </div>
-
-        <div class="hero-card">
-            <img src="/imagens/uma-mazinha-icone-chefbrico.png" alt="Uma caixa ChefBox aberta, com 5 embalagens de produtos diferentes, cercada de ingredientes frescos.">
-        </div>
-
-        <div class="post-content">
-            <div id="voz-da-chef-box" class="author-box">
-                <img src="/imagens/maria-conceicao-pra-voce.png" alt="Retrato de Maria Conceição" class="author-image">
-                <div class="author-info">
-                    <h4>Uma mensagem da Maria Conceição</h4>
-                    <p>Quando criei a ChefBox, eu não queria apenas montar um 'kit'. Meu sonho era criar uma experiência, um convite para que vocês entrassem na minha filosofia. A oferta 'Compre 4 e Leve 5' é a porta de entrada para esse universo, e ela carrega quatro segredos que quero compartilhar.</p>
-                </div>
-            </div>
-
-            <h2 style="margin-top: 50px;">#1 - Sim, é um Presente (e a Matemática não Mente)</h2>
-            <p>Vamos direto ao ponto: sim, é um presente real. Ao escolher 4 sabores, nós adicionamos o 5º por nossa conta. Na prática, isso representa um <strong>desconto real de 20%</strong> no valor total do seu kit (1 produto grátis em 5). É a nossa forma mais direta de dizer "obrigado" por confiar no nosso trabalho e de tornar a comida de verdade ainda mais acessível.</p>
-
-            <h2>#2 - Um Presente de Verdade, para Você ou para Quem Você Ama</h2>
-            <p>Um presente tem um poder emocional único. O quinto sabor não é um 'brinde', é um presente nosso para você. Use esse sabor extra para <strong>experimentar algo novo</strong> sem risco, ou para <strong>presentear um amigo</strong> que precisa de uma 'mãozinha na rotina'. É um presente que gera conexão e leva o carinho da ChefBrico para novas cozinhas.</p>
-
-            <h2>#3 - O Convite à Sua "Bricolage" Criativa</h2>
-            <p>A ChefBrico nasceu do conceito de 'bricolage' – a arte de criar. O quinto sabor é o seu convite para a nossa <a href="/cozinha-criativa.html">Cozinha Criativa</a>. Use essa base de presente para fazer uma 'releitura da sua releitura', adicionando ingredientes que você tem em casa. É a sua 'tela em branco' para brincar e se tornar o chef.</p>
-
-            <h2>#4 - A Celebração do Quinto Sabor: O Umami</h2>
-            <p>E aqui, o segredo que conecta tudo. Por que o <strong>quinto</strong> sabor? Porque a alma da ChefBrico está no <strong>UMAMI</strong>, o quinto sabor básico do paladar. É aquele gosto profundo e satisfatório que você sente em nossos cogumelos e tomates desidratados. A oferta do 'quinto sabor' é uma homenagem a essa busca pelo sabor verdadeiro que define cada uma de nossas receitas.</p>
-            
-            <div class="capture-block" style="margin-top:50px; text-align: center; background-color: var(--cor-fundo-card); padding: 30px; border-radius: 16px; border: 1px solid var(--cor-borda-suave);">
-                <h2>Pronto para Viver a Experiência Completa?</h2>
-                <p>Agora que você conhece a verdade, a ChefBox se torna muito mais do que uma compra. É um plano de refeições, um presente, um convite à criatividade e uma aula de gastronomia. Monte já a sua!</p>
-                <a href="https://www.chefbrico.com/chefbox" target="_blank" rel="noopener noreferrer" class="cta-button" style="margin-top:20px; font-size:1.2em;">MONTAR MINHA CHEFBOX 4+1 AGORA</a>
+    <div class="post-content">
+        <div id="voz-da-chef-box" class="author-box">
+            <img src="/imagens/maria-conceicao-pra-voce.png" alt="Retrato de Maria Conceição" class="author-image">
+            <div class="author-info">
+                <h4>Uma mensagem da Maria Conceição</h4>
+                <p>Quando criei a ChefBox, eu não queria apenas montar um 'kit'. Meu sonho era criar uma experiência, um convite para que vocês entrassem na minha filosofia. A oferta 'Compre 4 e Leve 5' é a porta de entrada para esse universo, e ela carrega quatro segredos que quero compartilhar.</p>
             </div>
         </div>
-    </main>
 
-    {% include "rodape.html" %}
+        <h2 style="margin-top: 50px;">#1 - Sim, é um Presente (e a Matemática não Mente)</h2>
+        <p>Vamos direto ao ponto: sim, é um presente real. Ao escolher 4 sabores, nós adicionamos o 5º por nossa conta. Na prática, isso representa um <strong>desconto real de 20%</strong> no valor total do seu kit (1 produto grátis em 5). É a nossa forma mais direta de dizer "obrigado" por confiar no nosso trabalho e de tornar a comida de verdade ainda mais acessível.</p>
 
-    <script src="/js/script.js"></script>
+        <h2>#2 - Um Presente de Verdade, para Você ou para Quem Você Ama</h2>
+        <p>Um presente tem um poder emocional único. O quinto sabor não é um 'brinde', é um presente nosso para você. Use esse sabor extra para <strong>experimentar algo novo</strong> sem risco, ou para <strong>presentear um amigo</strong> que precisa de uma 'mãozinha na rotina'. É um presente que gera conexão e leva o carinho da ChefBrico para novas cozinhas.</p>
 
-</body>
-</html>
+        <h2>#3 - O Convite à Sua "Bricolage" Criativa</h2>
+        <p>A ChefBrico nasceu do conceito de 'bricolage' – a arte de criar. O quinto sabor é o seu convite para a nossa <a href="/comida-de-verdade/cozinha-criativa/">Cozinha Criativa</a>. Use essa base de presente para fazer uma 'releitura da sua releitura', adicionando ingredientes que você tem em casa. É a sua 'tela em branco' para brincar e se tornar o chef.</p>
+
+        <h2>#4 - A Celebração do Quinto Sabor: O Umami</h2>
+        <p>E aqui, o segredo que conecta tudo. Por que o <strong>quinto</strong> sabor? Porque a alma da ChefBrico está no <strong>UMAMI</strong>, o quinto sabor básico do paladar. É aquele gosto profundo e satisfatório que você sente em nossos cogumelos e tomates desidratados. A oferta do 'quinto sabor' é uma homenagem a essa busca pelo sabor verdadeiro que define cada uma de nossas receitas.</p>
+        
+        <div class="capture-block" style="margin-top:50px; text-align: center; background-color: var(--cor-fundo-card); padding: 30px; border-radius: 16px; border: 1px solid var(--cor-borda-suave);">
+            <h2>Pronto para Viver a Experiência Completa?</h2>
+            <p>Agora que você conhece a verdade, a ChefBox se torna muito mais do que uma compra. É um plano de refeições, um presente, um convite à criatividade e uma aula de gastronomia. Monte já a sua!</p>
+            <a href="https://www.chefbrico.com/chefbox" target="_blank" rel="noopener noreferrer" class="cta-button" style="margin-top:20px; font-size:1.2em;">MONTAR MINHA CHEFBOX 4+1 AGORA</a>
+        </div>
+    </div>
+</main>
