@@ -1,197 +1,150 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Receitas de Risotos e Arrozes do Mundo | ChefBrico</title>
-    <link rel="canonical" href="https://receitas.chefbrico.com/risotos.html" />
-    <meta name="description" content="Explore o catálogo completo de risotos artesanais da ChefBrico. Encontre opções veganas, sem glúten, gourmet e práticas para seu jantar.">
+---
+layout: base.njk
+permalink: /receitas/risotos/
+title: "Receitas de Risotos e Arrozes do Mundo | ChefBrico"
+description: "Explore o catálogo completo de risotos artesanais da ChefBrico. Encontre opções veganas, sem glúten, gourmet e práticas para seu jantar."
+schema:
+- "@context": https://schema.org
+  "@type": CollectionPage
+  name: "Catálogo de Risotos e Arrozes do Mundo da ChefBrico"
+  url": https://receitas.chefbrico.com/receitas/risotos/
+  description: "Explore nosso acervo completo de artigos e receitas sobre risotos, paellas e outros pratos cremosos."
+  isPartOf":
+    "@id": https://receitas.chefbrico.com/receitas/
+  mainEntity":
+    "@type": ItemList
+    name: "Catálogo de Risotos"
+    numberOfItems": 11
+    itemListElement":
+    - "@type": Product
+      name: "Risoto Funghi Secchi"
+      url": https://receitas.chefbrico.com/receitas/risotos/funghi/
+      image: https://receitas.chefbrico.com/imagens/cardapio-risoto-cremoso-funghi-tijela-chefbrico.png
+      category: Risoto
+      keywords: "risoto, vegano, sem-gluten, momento-especial, gourmet-pratico, terroso, umami, funghi"
+    - "@type": Product
+      name: "Risoto Pomodori & Pesto"
+      url": https://receitas.chefbrico.com/receitas/risotos/pomodori/
+      image: https://receitas.chefbrico.com/imagens/cardapio-risoto-cremoso-pomodori-pesto-chefbrico.png
+      category: Risoto
+      keywords: "risoto, vegano, sem-gluten, jantar-rapido, momento-especial, gourmet-pratico, classico, italiano"
+    - "@type": Product
+      name: "Risoto de Zucchini e Alho-Poró"
+      url": https://receitas.chefbrico.com/receitas/risotos/zucchini/
+      image: https://receitas.chefbrico.com/imagens/cardapio-chefbrico-risoto-zucchini.png
+      category: Risoto
+      keywords: "risoto, sem-gluten, leveza, refrescante, marmita-inteligente, jantar-rapido, zucchini, alho-poro"
+    - "@type": Product
+      name: "Risoto Paella Veg."
+      url": https://receitas.chefbrico.com/receitas/risotos/paella-veg/
+      image: https://receitas.chefbrico.com/imagens/cardapio-chefbrico-risoto-espanhol-paella.png
+      category: Risoto
+      keywords: "risoto, vegano, sem-gluten, momento-especial, gourmet-pratico, espanhol, paella"
+    - "@type": Product
+      name: "Risoto de Pêra e Gorgonzola Veg."
+      url": https://receitas.chefbrico.com/receitas/risotos/pera-gorgonzola/
+      image: https://receitas.chefbrico.com/imagens/cardapio-chefbrico-risoto-pera-e-lima%CC%83o-siciliano.png
+      category: Risoto
+      keywords: "risoto, vegano, sem-gluten, momento-especial, jantar-romantico, gourmet-pratico, agridoce, divertido, pera"
+    - "@type": Product
+      name: "Risoto Agridoce de Morango"
+      url": https://receitas.chefbrico.com/receitas/risotos/morango/
+      image: https://receitas.chefbrico.com/imagens/cardapio-chefbrico-risoto-morango-agridoce.png
+      category: Risoto
+      keywords: "risoto, vegano, sem-gluten, momento-especial, agridoce, divertido, morango"
+    - "@type": Product
+      name: "Risoto Mix Funghi"
+      url": https://receitas.chefbrico.com/receitas/risotos/mix-funghi/
+      image: https://receitas.chefbrico.com/imagens/cardapio-chefbrico-risoto-mix-funghi.png
+      category: Risoto
+      keywords: "risoto, vegano, sem-gluten, momento-especial, gourmet-pratico, terroso, umami, funghi, cogumelos"
+    - "@type": Product
+      name: "Risoto de Shiimeji e Alho-Poró"
+      url": https://receitas.chefbrico.com/receitas/risotos/shiimeji/
+      image: https://receitas.chefbrico.com/imagens/cardapio-chefbrico-risoto-shiimeji-na%20tijela.png
+      category: Risoto
+      keywords: "risoto, vegano, sem-gluten, gourmet-pratico, terroso, umami, shiimeji, alho-poro"
+    - "@type": Product
+      name: "Risoto de Pesto e Alho-Poró"
+      url": https://receitas.chefbrico.com/receitas/risotos/alho-poro/
+      image: https://receitas.chefbrico.com/imagens/cardapio-chefbrico-risoto-alho-poro.png
+      category: Risoto
+      keywords: "risoto, vegano, sem-gluten, gourmet-pratico, pesto, alho-poro"
+    - "@type": Product
+      name: "Risoto Mediterrâneo"
+      url": https://receitas.chefbrico.com/receitas/risotos/mediterraneo/
+      image: https://receitas.chefbrico.com/imagens/cardapio-chefbrico-risoto-mediterraneo-tijela.png
+      category: Risoto
+      keywords: "risoto, leveza, refrescante, mediterraneo"
+    - "@type": Product
+      name: "Risoto de Tomate e Manjericão"
+      url": https://receitas.chefbrico.com/receitas/risotos/tomate-manjericao/
+      image: https://receitas.chefbrico.com/imagens/cardapio-chefbrico-risoto-tomate-tijela.png
+      category: Risoto
+      keywords: "risoto, vegano, sem-gluten, classico, italiano, jantar-rapido, para-familia, tomate"
+- "@context": https://schema.org
+  "@type": Person
+  "@id": https://receitas.chefbrico.com/#person-maria
+  name: "Maria Conceição"
+  jobTitle: "Fundadora e Chef de Criação"
+  description: "Empreendedora e autora de todas as receitas autorais da ChefBrico."
+  url": https://receitas.chefbrico.com/comida-de-verdade/
+  sameAs":
+  - https://wa.me/5561996659880
+  - https://www.instagram.com/chefbrico/
+  funderOf":
+    "@type": FoodEstablishment
+    name: ChefBrico
+    url": https://www.chefbrico.com
+---
+<main class="container">
+    <h1>Arrozes do Mundo</h1>
+    <p>Explore nosso acervo completo de artigos e receitas sobre risotos, paellas e outros pratos cremosos. Dicas, cultura e sabores do mundo.</p>
     
-    <link rel="stylesheet" href="/css/style.css">
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K58FN8J2VC"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-K58FN8J2VC');
-    </script>
-
-    <script type="application/ld+json">
-    [
-      {
-        "@context": "https://schema.org",
-        "@type": "CollectionPage",
-        "name": "Catálogo de Risotos e Arrozes do Mundo da ChefBrico",
-        "url": "https://receitas.chefbrico.com/risotos.html",
-        "description": "Explore nosso acervo completo de artigos e receitas sobre risotos, paellas e outros pratos cremosos.",
-        "isPartOf": {
-          "@id": "https://receitas.chefbrico.com/receitas.html"
-        },
-        "mainEntity": {
-          "@type": "ItemList",
-          "name": "Catálogo de Risotos",
-          "numberOfItems": 11,
-          "itemListElement": [
-            {
-              "@type": "Product",
-              "name": "Risoto Funghi Secchi",
-              "url": "https://receitas.chefbrico.com/receita-risoto-funghi.html", /* <-- CORRIGIDO */
-              "image": "https://receitas.chefbrico.com/imagens/cardapio-risoto-cremoso-funghi-tijela-chefbrico.png",
-              "category": "Risoto",
-              "keywords": "risoto, vegano, sem-gluten, momento-especial, gourmet-pratico, terroso, umami, funghi"
-            },
-            {
-              "@type": "Product",
-              "name": "Risoto Pomodori & Pesto",
-              "url": "https://receitas.chefbrico.com/receita-risoto-pomodori.html", /* <-- CORRIGIDO */
-              "image": "https://receitas.chefbrico.com/imagens/cardapio-risoto-cremoso-pomodori-pesto-chefbrico.png",
-              "category": "Risoto",
-              "keywords": "risoto, vegano, sem-gluten, jantar-rapido, momento-especial, gourmet-pratico, classico, italiano"
-            },
-            {
-              "@type": "Product",
-              "name": "Risoto de Zucchini e Alho-Poró",
-              "url": "https://receitas.chefbrico.com/receita-risoto-zucchini.html", /* <-- CORRIGIDO */
-              "image": "https://receitas.chefbrico.com/imagens/cardapio-chefbrico-risoto-zucchini.png",
-              "category": "Risoto",
-              "keywords": "risoto, sem-gluten, leveza, refrescante, marmita-inteligente, jantar-rapido, zucchini, alho-poro"
-            },
-            {
-              "@type": "Product",
-              "name": "Risoto Paella Veg.",
-              "url": "https://receitas.chefbrico.com/receita-paella-veg.html", /* <-- CORRIGIDO */
-              "image": "https://receitas.chefbrico.com/imagens/cardapio-chefbrico-risoto-espanhol-paella.png",
-              "category": "Risoto",
-              "keywords": "risoto, vegano, sem-gluten, momento-especial, gourmet-pratico, espanhol, paella"
-            },
-            {
-              "@type": "Product",
-              "name": "Risoto de Pêra e Gorgonzola Veg.",
-              "url": "https://receitas.chefbrico.com/receita-risoto-pera-gorgonzola.html", /* <-- CORRIGIDO */
-              "image": "https://receitas.chefbrico.com/imagens/cardapio-chefbrico-risoto-pera-e-lima%CC%83o-siciliano.png",
-              "category": "Risoto",
-              "keywords": "risoto, vegano, sem-gluten, momento-especial, jantar-romantico, gourmet-pratico, agridoce, divertido, pera"
-            },
-            {
-              "@type": "Product",
-              "name": "Risoto Agridoce de Morango",
-              "url": "https://receitas.chefbrico.com/receita-risoto-morango.html", /* <-- CORRIGIDO */
-              "image": "https://receitas.chefbrico.com/imagens/cardapio-chefbrico-risoto-morango-agridoce.png",
-              "category": "Risoto",
-              "keywords": "risoto, vegano, sem-gluten, momento-especial, agridoce, divertido, morango"
-            },
-            {
-              "@type": "Product",
-              "name": "Risoto Mix Funghi",
-              "url": "https://receitas.chefbrico.com/receita-risoto-mix-funghi.html", /* <-- CORRIGIDO */
-              "image": "https://receitas.chefbrico.com/imagens/cardapio-chefbrico-risoto-mix-funghi.png",
-              "category": "Risoto",
-              "keywords": "risoto, vegano, sem-gluten, momento-especial, gourmet-pratico, terroso, umami, funghi, cogumelos"
-            },
-            {
-              "@type": "Product",
-              "name": "Risoto de Shiimeji e Alho-Poró",
-              "url": "https://receitas.chefbrico.com/receita-risoto-shiimeji.html", /* <-- CORRIGIDO */
-              "image": "https://receitas.chefbrico.com/imagens/cardapio-chefbrico-risoto-shiimeji-na%20tijela.png",
-              "category": "Risoto",
-              "keywords": "risoto, vegano, sem-gluten, gourmet-pratico, terroso, umami, shiimeji, alho-poro"
-            },
-            {
-              "@type": "Product",
-              "name": "Risoto de Pesto e Alho-Poró",
-              "url": "https://receitas.chefbrico.com/receita-risoto-pesto-alho-poro.html", /* <-- CORRIGIDO */
-              "image": "https://receitas.chefbrico.com/imagens/cardapio-chefbrico-risoto-alho-poro.png",
-              "category": "Risoto",
-              "keywords": "risoto, vegano, sem-gluten, gourmet-pratico, pesto, alho-poro"
-            },
-            {
-              "@type": "Product",
-              "name": "Risoto Mediterrâneo",
-              "url": "https://receitas.chefbrico.com/receita-risoto-mediterraneo.html", /* <-- CORRIGIDO */
-              "image": "https://receitas.chefbrico.com/imagens/cardapio-chefbrico-risoto-mediterraneo-tijela.png",
-              "category": "Risoto",
-              "keywords": "risoto, leveza, refrescante, mediterraneo"
-            },
-            {
-              "@type": "Product",
-              "name": "Risoto de Tomate e Manjericão",
-              "url": "https://receitas.chefbrico.com/receita-risoto-tomate-manjericao.html", /* <-- CORRIGIDO */
-              "image": "https://receitas.chefbrico.com/imagens/cardapio-chefbrico-risoto-tomate-tijela.png",
-              "category": "Risoto",
-              "keywords": "risoto, vegano, sem-gluten, classico, italiano, jantar-rapido, para-familia, tomate"
-            }
-          ]
-        }
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "@id": "https://receitas.chefbrico.com/#person-maria", 
-        "name": "Maria Conceição",
-        "jobTitle": "Fundadora e Chef de Criação",
-        "description": "Empreendedora e autora de todas as receitas autorais da ChefBrico.",
-        "url": "https://receitas.chefbrico.com/nossa-filosofia.html",
-        "sameAs": [
-          "https://wa.me/5561996659880",
-          "https://www.instagram.com/chefbrico/"
-        ],
-        "funderOf": {
-          "@type": "FoodEstablishment",
-          "name": "ChefBrico",
-          "url": "https://www.chefbrico.com"
-        }
-      }
-    ]
-    </script>
-</head>
-<body>
- {% include "cabecalho.html" %}
-    <main class="container">
-        <h1>Arrozes do Mundo</h1>
-        <p>Explore nosso acervo completo de artigos e receitas sobre risotos, paellas e outros pratos cremosos. Dicas, cultura e sabores do mundo.</p>
-        
-        <div class="post-grid" style="margin-top: 40px;">
-            <a href="/receita-risoto-funghi.html" class="card"> <img src="/imagens/risoto-funghi-arboreo-chefbrico.png" alt="Risoto Funghi Secchi" class="card-image">
-                <div class="card-content"><span class="card-category">Receita</span><h3>Risoto Funghi Secchi</h3></div>
-            </a>
-            <a href="/receita-risoto-pomodori.html" class="card"> <img src="/imagens/risoto-pomodori-pesto-tijela-chefbrico.png" alt="Risoto Pomodori & Pesto" class="card-image">
-                <div class="card-content"><span class="card-category">Receita</span><h3>Risoto Pomodori & Pesto</h3></div>
-            </a>
-            <a href="/receita-risoto-zucchini.html" class="card"> <img src="/imagens/risoto-zucchini-arboreo-chefbrico.png" alt="Risoto de Zucchini e Alho-Poró" class="card-image">
-                <div class="card-content"><span class="card-category">Receita</span><h3>Risoto de Zucchini e Alho-Poró</h3></div>   
-            </a>
-            <a href="/receita-paella-veg.html" class="card"> <img src="/imagens/risoto-paella-veg-viagem-espenha-chefbrico.png" alt="Risoto Paella Veg. Inspiração da Espanha"
- class="card-image">
-                <div class="card-content"><span class="card-category">Receita</span><h3>Risoto Paella Veg. Inspiração da Espanha</h3></div>
-            </a>
-            <a href="/receita-risoto-mediterraneo.html" class="card"> <img src="/imagens/risoto-mediterraneo-chefbrico.png" alt="Risoto com tok mediterraneo" class="card-image">
-                <div class="card-content"><span class="card-category">Receita</span><h3>Risoto Mediterranêo Pura Inspiração</h3></div>
-            </a>
-             <a href="/receita-risoto-pesto-alho-poro.html" class="card"> <img src="/imagens/risoto-alho-poro-pesto-chefbrico.png" alt="Risoto de Pesto e Alho-Poró" class="card-image">
-                <div class="card-content"><span class="card-category">Receita</span><h3>Risoto de Pesto e Alho-Poró</h3></div>
-            </a>
-            <a href="/receita-risoto-shiimeji.html" class="card"> <img src="/imagens/risoto-shiimeji-alho-poro-chefbrico.png" alt="Risoto de Shiimeji e Alho-poró" class="card-image">
-                <div class="card-content"><span class="card-category">Receita</span><h3>Risoto de Shiimeji e Alho-poró</h3></div>
-            </a>
-            <a href="/receita-risoto-mix-funghi.html" class="card"> <img src="/imagens/risoto-mix-funghi-chefbrico.png" alt="Risoto Mix Funghi" class="card-image">
-                <div class="card-content"><span class="card-category">Receita</span><h3>Risoto Mix Funghi</h3></div>
-            </a>
-            <a href="/receita-risoto-tomate-manjericao.html" class="card"> <img src="/imagens/risoto-tomate-manjericao-chefbrico.png" alt="Risoto de Tomate e Manjericão" class="card-image">
-                <div class="card-content"><span class="card-category">Receita</span><h3>Risoto de Tomate e Manjericão</h3></div>
-             </a>    
-            <a href="/receita-risoto-pera-gorgonzola.html" class="card"> <img src="/imagens/risoto-agridoce-pera-gorgonzola-veg-chefbrico.png" alt="Risoto de Pêra e Gorgonzola Vegano" class="card-image">
-                <div class="card-content"><span class="card-category">Receita</span><h3>Risoto de Pêra e Gorgonzola Vegano</h3></div>
-            </a>
-            <a href="/receita-risoto-morango.html" class="card"> <img src="/imagens/risoto-agridoce-morango-raspas-limao-siciliano-chefbrico.png" alt="Risoto Agridoce de Morango" class="card-image">
-                <div class="card-content"><span class="card-category">Receita</span><h3>Risoto Agridoce de Morango</h3></div>
-            </a>
-        </div>
-     </main>
-
-    {% include "rodape.html" %}
-
-    <script src="/js/script.js"></script>
-
-</body>
-</html>
+    <div class="post-grid" style="margin-top: 40px;">
+        <a href="/receitas/risotos/funghi/" class="card">
+            <img src="/imagens/risoto-funghi-arboreo-chefbrico.png" alt="Risoto Funghi Secchi" class="card-image">
+            <div class="card-content"><span class="card-category">Receita</span><h3>Risoto Funghi Secchi</h3></div>
+        </a>
+        <a href="/receitas/risotos/pomodori/" class="card">
+            <img src="/imagens/risoto-pomodori-pesto-tijela-chefbrico.png" alt="Risoto Pomodori & Pesto" class="card-image">
+            <div class="card-content"><span class="card-category">Receita</span><h3>Risoto Pomodori & Pesto</h3></div>
+        </a>
+        <a href="/receitas/risotos/zucchini/" class="card">
+            <img src="/imagens/risoto-zucchini-arboreo-chefbrico.png" alt="Risoto de Zucchini e Alho-Poró" class="card-image">
+            <div class="card-content"><span class="card-category">Receita</span><h3>Risoto de Zucchini e Alho-Poró</h3></div>   
+        </a>
+        <a href="/receitas/risotos/paella-veg/" class="card">
+            <img src="/imagens/risoto-paella-veg-viagem-espenha-chefbrico.png" alt="Risoto Paella Veg. Inspiração da Espanha" class="card-image">
+            <div class="card-content"><span class="card-category">Receita</span><h3>Risoto Paella Veg. Inspiração da Espanha</h3></div>
+        </a>
+        <a href="/receitas/risotos/mediterraneo/" class="card">
+            <img src="/imagens/risoto-mediterraneo-chefbrico.png" alt="Risoto com tok mediterraneo" class="card-image">
+            <div class="card-content"><span class="card-category">Receita</span><h3>Risoto Mediterranêo Pura Inspiração</h3></div>
+        </a>
+         <a href="/receitas/risotos/alho-poro/" class="card">
+            <img src="/imagens/risoto-alho-poro-pesto-chefbrico.png" alt="Risoto de Pesto e Alho-Poró" class="card-image">
+            <div class="card-content"><span class="card-category">Receita</span><h3>Risoto de Pesto e Alho-Poró</h3></div>
+        </a>
+        <a href="/receitas/risotos/shiimeji/" class="card">
+            <img src="/imagens/risoto-shiimeji-alho-poro-chefbrico.png" alt="Risoto de Shiimeji e Alho-poró" class="card-image">
+            <div class="card-content"><span class="card-category">Receita</span><h3>Risoto de Shiimeji e Alho-poró</h3></div>
+        </a>
+        <a href="/receitas/risotos/mix-funghi/" class="card">
+            <img src="/imagens/risoto-mix-funghi-chefbrico.png" alt="Risoto Mix Funghi" class="card-image">
+            <div class="card-content"><span class="card-category">Receita</span><h3>Risoto Mix Funghi</h3></div>
+        </a>
+        <a href="/receitas/risotos/tomate-manjericao/" class="card">
+            <img src="/imagens/risoto-tomate-manjericao-chefbrico.png" alt="Risoto de Tomate e Manjericão" class="card-image">
+            <div class="card-content"><span class="card-category">Receita</span><h3>Risoto de Tomate e Manjericão</h3></div>
+         </a>   
+        <a href="/receitas/risotos/pera-gorgonzola/" class="card">
+            <img src="/imagens/risoto-agridoce-pera-gorgonzola-veg-chefbrico.png" alt="Risoto de Pêra e Gorgonzola Vegano" class="card-image">
+            <div class="card-content"><span class="card-category">Receita</span><h3>Risoto de Pêra e Gorgonzola Vegano</h3></div>
+        </a>
+        <a href="/receitas/risotos/morango/" class="card">
+            <img src="/imagens/risoto-agridoce-morango-raspas-limao-siciliano-chefbrico.png" alt="Risoto Agridoce de Morango" class="card-image">
+            <div class="card-content"><span class="card-category">Receita</span><h3>Risoto Agridoce de Morango</h3></div>
+        </a>
+    </div>
+ </main>
