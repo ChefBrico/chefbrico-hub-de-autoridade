@@ -1,214 +1,171 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Funghi Confitado em Azeite: O Segredo dos Chefs | ChefBrico</title>
-    <link rel="canonical" href="https://receitas.chefbrico.com/emporio-funghi-confit.html" />
-    <meta name="description" content="Descubra o Funghi Confitado da ChefBrico. Um finalizador gourmet 100% natural para elevar suas massas, risotos e bruschettas, criado pela Chef Maria Conceição.">
-    
-    <link rel="stylesheet" href="/css/style.css">
+---
+layout: base.njk
+permalink: /receitas/emporio-da-chef/funghi-confit/
+title: "Funghi Confitado em Azeite: O Segredo dos Chefs | ChefBrico"
+description: "Descubra o Funghi Confitado da ChefBrico. Um finalizador gourmet 100% natural para elevar suas massas, risotos e bruschettas, criado pela Chef Maria Conceição."
+schema:
+  "@context": https://schema.org
+  "@graph":
+  - "@type": Product
+    mainEntityOfPage:
+      "@type": WebPage
+      "@id": https://receitas.chefbrico.com/receitas/emporio-da-chef/funghi-confit/
+    name: "Antepasto de Funghi Confitado em Azeite"
+    url": https://receitas.chefbrico.com/receitas/emporio-da-chef/funghi-confit/
+    image": https://www.chefbrico.com/funghi-confitado-lentamente-no-azeite
+    description: "Uma iguaria artesanal onde cogumelos Shiitake frescos são cozidos lentamente na técnica francesa 'confit', mergulhados em azeite extra virgem, alho e tomilho. O resultado é uma textura macia e uma profundidade de sabor umami incomparáveis."
+    brand":
+      "@id": https://receitas.chefbrico.com/#organization
+    sku: "ANT-CON-001"
+    manufacturer":
+      "@id": https://receitas.chefbrico.com/#person-maria-conceicao
+    isPartOf":
+      "@id": https://receitas.chefbrico.com/receitas/emporio-da-chef/
+    keywords: "antepasto, confit, funghi, shiitake, vegano, sem-gluten, momento-especial, gourmet-pratico, umami"
+    suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VeganDiet", "https://schema.org/VegetarianDiet"]
+    knownAllergen": "Livre de Glúten. Livre de Lactose."
+    aggregateRating":
+      "@type": AggregateRating
+      ratingValue: '5'
+      reviewCount: '20'
+    review":
+      "@type": Review
+      reviewRating":
+        "@type": Rating
+        ratingValue: '5'
+      author:
+        "@type": Person
+        name: "Joana F."
+      reviewBody: "O shiitake confitado dá um toque especial. Perfeita para salada, com torradas e um bom vinho."
+    offers":
+      "@type": Offer
+      price: '29.80'
+      priceCurrency: BRL
+      priceValidUntil: '2026-12-31'
+      url": https://www.chefbrico.com/funghi-confitado-lentamente-no-azeite
+      availability: https://schema.org/InStock
+      seller:
+        "@id": https://receitas.chefbrico.com/#organization
+      shippingDetails":
+        "@type": OfferShippingDetails
+        shippingDestination":
+          "@type": DefinedRegion
+          addressCountry: BR
+        deliveryTime:
+          "@type": ShippingDeliveryTime
+          handlingTime":
+            "@type": QuantitativeValue
+            minValue: '1'
+            maxValue: '2'
+            unitCode: DAY
+          transitTime":
+            "@type": QuantitativeValue
+            minValue: '3'
+            maxValue: '10'
+            unitCode: DAY
+      hasMerchantReturnPolicy":
+        "@type": MerchantReturnPolicy
+        url": https://www.chefbrico.com/trocas-e-devolucoes
+        applicableCountry: BR
+        returnPolicyCategory: https://schema.org/MerchantReturnFiniteReturnWindow
+        merchantReturnDays: 7
+  - "@type": Organization
+    "@id": https://receitas.chefbrico.com/#organization
+    name: ChefBrico
+    founder":
+      "@id": https://receitas.chefbrico.com/#person-maria-conceicao
+  - "@type": Person
+    "@id": https://receitas.chefbrico.com/#person-maria-conceicao
+    name: "Maria Conceição"
+---
+<main>
+    <article class="container">
+        <div class="recipe-title-container" style="text-align:center;">
+            <h1>Antepasto de Funghi Confitado em Azeite</h1>
+            <p class="recipe-subtitle">O Segredo dos Chefs, Agora na sua Cozinha!</p>
+            <p class="author-byline">Criado por <strong>Maria Conceição</strong>, Fundadora e Chef da ChefBrico</p>
+        </div>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+       <div class="hero-card">
+            <img src="/imagens/confitado-shiitake-chefbrico.png" alt="Pote de Funghi Confitado em Azeite da ChefBrico, com azeite dourado e ervas.">
+        </div>
+        <div class="post-content">
+            <p>Descubra o segredo dos grandes chefs para um sabor inesquecível. Nosso Confit de Funghi é uma iguaria artesanal, onde cogumelos Shiitake frescos são cozidos lentamente na nobre técnica francesa 'confit', mergulhados em azeite extra virgem, alho e tomilho fresco. Este processo não apenas cozinha, mas preserva e concentra o sabor umami dos cogumelos, resultando em uma textura macia e uma profundidade de sabor incomparáveis.</p>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K58FN8J2VC"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-K58FN8J2VC');
-    </script>
-    
-   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Product",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://www.chefbrico.com/funghi-confitado-lentamente-no-azeite"
-      },
-      "name": "Antepasto de Funghi Confitado em Azeite",
-      "url": "https://receitas.chefbrico.com/emporio-funghi-confit.html",
-      "image": "https://www.chefbrico.com/funghi-confitado-lentamente-no-azeite",
-      "description": "Uma iguaria artesanal onde cogumelos Shiitake frescos são cozidos lentamente na técnica francesa 'confit', mergulhados em azeite extra virgem, alho e tomilho. O resultado é uma textura macia e uma profundidade de sabor umami incomparáveis.",
-      "brand": {
-        "@id": "https://receitas.chefbrico.com/#organization"
-      },
-      "sku": "ANT-CON-001",
-      "manufacturer": {
-        "@id": "https://receitas.chefbrico.com/#person-maria-conceicao"
-      },
-      "isPartOf": {
-        "@id": "https://receitas.chefbrico.com/emporio-da-chef.html"
-      },
-      "keywords": "antepasto, confit, funghi, shiitake, vegano, sem-gluten, momento-especial, gourmet-pratico, umami",
-      "suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VeganDiet", "https://schema.org/VegetarianDiet"],
-      "knownAllergen": "Livre de Glúten. Livre de Lactose.",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5",
-        "reviewCount": "20"
-      },
-      "review": {
-        "@type": "Review",
-        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-        "author": { "@type": "Person", "name": "Joana F." },
-        "reviewBody": "O shiitake confitado dá um toque especial. Perfeita para salada, com torradas e um bom vinho."
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "29.80",
-        "priceCurrency": "BRL",
-        "priceValidUntil": "2026-12-31",
-        "url": "https://www.chefbrico.com/funghi-confitado-lentamente-no-azeite",
-        "availability": "https://schema.org/InStock",
-        "seller": {
-          "@id": "https://receitas.chefbrico.com/#organization"
-        },
-        "shippingDetails": {
-           "@type": "OfferShippingDetails",
-           "shippingDestination": {
-             "@type": "DefinedRegion",
-             "addressCountry": "BR"
-           },
-           "deliveryTime": {
-             "@type": "ShippingDeliveryTime",
-             "handlingTime": { "@type": "QuantitativeValue", "minValue": "1", "maxValue": "2", "unitCode": "DAY" },
-             "transitTime": { "@type": "QuantitativeValue", "minValue": "3", "maxValue": "10", "unitCode": "DAY" }
-           }
-        },
-        "hasMerchantReturnPolicy": {
-           "@type": "MerchantReturnPolicy",
-           "url": "https://www.chefbrico.com/trocas-e-devolucoes",
-           "applicableCountry": "BR",
-           "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-           "merchantReturnDays": 7
-        }
-      }
-    },
-    {
-      "@type": "Organization",
-      "@id": "https://receitas.chefbrico.com/#organization",
-      "name": "ChefBrico",
-      "founder": { "@id": "https://receitas.chefbrico.com/#person-maria-conceicao" }
-    },
-    {
-      "@type": "Person",
-      "@id": "https://receitas.chefbrico.com/#person-maria-conceicao",
-      "name": "Maria Conceição"
-    }
-  ]
-}
-</script>
-</head>
-<body>
-
-    {% include "cabecalho.html" %}
-
-    <main>
-        <article class="container">
-            <div class="recipe-title-container" style="text-align:center;">
-                <h1>Antepasto de Funghi Confitado em Azeite</h1>
-                <p class="recipe-subtitle">O Segredo dos Chefs, Agora na sua Cozinha!</p>
-                <p class="author-byline">Criado por <strong>Maria Conceição</strong>, Fundadora e Chef da ChefBrico</p>
-            </div>
-
-           <div class="hero-card">
-                <img src="/imagens/confitado-shiitake-chefbrico.png" alt="Pote de Funghi Confitado em Azeite da ChefBrico, com azeite dourado e ervas.">
-            </div>
-            <div class="post-content">
-                <p>Descubra o segredo dos grandes chefs para um sabor inesquecível. Nosso Confit de Funghi é uma iguaria artesanal, onde cogumelos Shiitake frescos são cozidos lentamente na nobre técnica francesa 'confit', mergulhados em azeite extra virgem, alho e tomilho fresco. Este processo não apenas cozinha, mas preserva e concentra o sabor umami dos cogumelos, resultando em uma textura macia e uma profundidade de sabor incomparáveis.</p>
-
-               <div class="card-modelo-autora">
-                   <img class="card-modelo-autora-image" src="/imagens/maria-conceicao-especialista-cogunelos-granel-chefbrico.png" alt="Embalagem do Funghi Confitado em Azeite da ChefBrico"> <div class="card-modelo-autora-content">
-                       <h3>Compre este Produto Autoral</h3>
-                       <p>A base para elevar suas criações é o nosso <strong>Funghi Confitado em Azeite</strong>. O toque de mestre para elevar qualquer prato!</p>
-                       <a href="https://www.chefbrico.com/funghi-confitado-lentamente-no-azeite" target="_blank" rel="noopener noreferrer" class="cta-button">Ver na Loja Agora</a>
-                   </div>
+           <div class="card-modelo-autora">
+               <img class="card-modelo-autora-image" src="/imagens/maria-conceicao-especialista-cogunelos-granel-chefbrico.png" alt="Embalagem do Funghi Confitado em Azeite da ChefBrico">
+               <div class="card-modelo-autora-content">
+                    <h3>Compre este Produto Autoral</h3>
+                    <p>A base para elevar suas criações é o nosso <strong>Funghi Confitado em Azeite</strong>. O toque de mestre para elevar qualquer prato!</p>
+                    <a href="https://www.chefbrico.com/funghi-confitado-lentamente-no-azeite" target="_blank" rel="noopener noreferrer" class="cta-button">Ver na Loja Agora</a>
                </div>
+           </div>
 
-                <h2>Por que Você Vai Amar este Tesouro da Culinária</h2>
-                <ul>
-                    <li>✅ <strong>A Arte da Técnica Confit:</strong> Um item de alta culinária que garante uma textura e sabor que não se consegue em preparos rápidos.</li>
-                    <li>✅ <strong>Concentração Máxima de Sabor Umami:</strong> O processo confit intensifica o sabor natural do Shiitake, transformando-o numa "bomba" de sabor.</li>
-                    <li>✅ <strong>O Finalizador de Luxo:</strong> O ingrediente secreto para transformar pratos simples em criações gourmet instantaneamente.</li>
-                </ul>
+            <h2>Por que Você Vai Amar este Tesouro da Culinária</h2>
+            <ul>
+                <li>✅ <strong>A Arte da Técnica Confit:</strong> Um item de alta culinária que garante uma textura e sabor que não se consegue em preparos rápidos.</li>
+                <li>✅ <strong>Concentração Máxima de Sabor Umami:</strong> O processo confit intensifica o sabor natural do Shiitake, transformando-o numa "bomba" de sabor.</li>
+                <li>✅ <strong>O Finalizador de Luxo:</strong> O ingrediente secreto para transformar pratos simples em criações gourmet instantaneamente.</li>
+            </ul>
 
-                <div class="testimonial-box">
-                    <blockquote><p>"O shiitake confitado dá um toque especial. Perfeita para salada, com torradas e um bom vinho."</p></blockquote>
-                    <cite>&mdash; Joana F., Cliente ChefBrico</cite>
-                </div>
+            <div class="testimonial-box">
+                <blockquote><p>"O shiitake confitado dá um toque especial. Perfeita para salada, com torradas e um bom vinho."</p></blockquote>
+                <cite>&mdash; Joana F., Cliente ChefBrico</cite>
+            </div>
 
-                <h2>O Que Vem no Pote</h2>
-                <p>Cogumelo Shiitake fresco, azeite extra virgem, alho fresco, tomilho fresco, sal marinho. Ingredientes puros, técnica apurada. E nada mais.</p>
+            <h2>O Que Vem no Pote</h2>
+            <p>Cogumelo Shiitake fresco, azeite extra virgem, alho fresco, tomilho fresco, sal marinho. Ingredientes puros, técnica apurada. E nada mais.</p>
 
-                <h2>Como Usar: Dicas da Chef</h2>
-                <p>Este produto é um "finalizador", pronto para usar. Aqui ficam algumas inspirações:</p>
-                <ul class="modo-preparo-lista" style="list-style-type: '💡'; padding-left: 25px;">
-                    <li><strong>Bruschettas Perfeitas:</strong> Sirva sobre fatias de pão artesanal tostado.</li>
-                    <li><strong>Massas e Risotos:</strong> Adicione colheradas (com o azeite!) ao seu prato na finalização para um 'boost' de sabor.</li>
-                    <li><strong>Ovos Sofisticados:</strong> Coroe ovos mexidos cremosos ou uma omelete para um brunch inesquecível.</li>
-                    <li><strong>Carnes e Grelhados:</strong> Use como cobertura para um steak, um filé de frango ou peixe grelhado.</li>
-                </ul>
-                <p class="modo-preparo-final">e muito mais!</p>
+            <h2>Como Usar: Dicas da Chef</h2>
+            <p>Este produto é um "finalizador", pronto para usar. Aqui ficam algumas inspirações:</p>
+            <ul class="modo-preparo-lista" style="list-style-type: '💡'; padding-left: 25px;">
+                <li><strong>Bruschettas Perfeitas:</strong> Sirva sobre fatias de pão artesanal tostado.</li>
+                <li><strong>Massas e Risotos:</strong> Adicione colheradas (com o azeite!) ao seu prato na finalização para um 'boost' de sabor.</li>
+                <li><strong>Ovos Sofisticados:</strong> Coroe ovos mexidos cremosos ou uma omelete para um brunch inesquecível.</li>
+                <li><strong>Carnes e Grelhados:</strong> Use como cobertura para um steak, um filé de frango ou peixe grelhado.</li>
+            </ul>
+            <p class="modo-preparo-final">e muito mais!</p>
 
-                <h2>O Toque da ChefBrico</h2>
-                <p><em>"A técnica confit é uma forma de respeito ao ingrediente. É sobre ter paciência e deixar o tempo e o azeite fazerem sua mágica. Criei este confit para que as pessoas pudessem ter em casa um 'curinga' de luxo, aquele toque final que transforma uma refeição comum em um momento especial."</em></p>
-                
-                <h2>Informações Adicionais</h2>
-                <ul>
-                    <li><strong>Peso Líquido:</strong> 90g</li>
-                    <li><strong>Validade:</strong> 3 meses (fechado). Após aberto, consumir em até 7 dias e manter refrigerado.</li>
-                    <li><strong>Dieta e Alergénicos:</strong> 100% Plant-Based. Sem Glúten. Sem Lactose.</li>
-                    <li><strong>Origem:</strong> Produzido Artesanalmente em Brasília-DF pela ChefBrico.</li>
-                </ul>
+            <h2>O Toque da ChefBrico</h2>
+            <p><em>"A técnica confit é uma forma de respeito ao ingrediente. É sobre ter paciência e deixar o tempo e o azeite fazerem sua mágica. Criei este confit para que as pessoas pudessem ter em casa um 'curinga' de luxo, aquele toque final que transforma uma refeição comum em um momento especial."</em></p>
+            
+            <h2>Informações Adicionais</h2>
+            <ul>
+                <li><strong>Peso Líquido:</strong> 90g</li>
+                <li><strong>Validade:</strong> 3 meses (fechado). Após aberto, consumir em até 7 dias e manter refrigerado.</li>
+                <li><strong>Dieta e Alergénicos:</strong> 100% Plant-Based. Sem Glúten. Sem Lactose.</li>
+                <li><strong>Origem:</strong> Produzido Artesanalmente em Brasília-DF pela ChefBrico.</li>
+            </ul>
 
-                <div class="faq-section">
-                    <h2>Dúvidas Frequentes</h2>
-                    <div class="faq-item-accordion">
-                        <button class="accordion-header"><h3>Preciso aquecer o confit antes de usar?</h3></button>
-                        <div class="accordion-content">
-                            <p>Não é necessário! Ele é delicioso em temperatura ambiente, especialmente em saladas e bruschettas. Se for usar para finalizar um prato quente como uma massa, o próprio calor da refeição irá aquecê-lo e libertar ainda mais os seus aromas.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item-accordion">
-                        <button class="accordion-header"><h3>O azeite do pote pode ser usado?</h3></button>
-                        <div class="accordion-content">
-                            <p>Com certeza! O azeite está infusionado com todo o sabor do shiitake, alho e tomilho. É um tesouro culinário! Use-o para temperar saladas, finalizar sopas, regar pães ou até mesmo para refogar outros pratos. Não desperdice uma gota!</p>
-                        </div>
-                    </div>
-                    <div class="faq-item-accordion">
-                        <button class="accordion-header"><h3>Qual a diferença entre o confit e cogumelos em conserva comuns?</h3></button>
-                        <div class="accordion-content">
-                            <p>A diferença é total. Conservas comuns geralmente usam vinagre e altas temperaturas, o que altera a textura e o sabor. O 'confit' é uma técnica de cozimento lento em gordura (no nosso caso, azeite), que preserva a integridade do ingrediente, resultando numa textura macia e num sabor muito mais profundo e complexo.</p>
-                        </div>
+            <div class="faq-section">
+                <h2>Dúvidas Frequentes</h2>
+                <div class="faq-item-accordion">
+                    <button class="accordion-header"><h3>Preciso aquecer o confit antes de usar?</h3></button>
+                    <div class="accordion-content">
+                        <p>Não é necessário! Ele é delicioso em temperatura ambiente, especialmente em saladas e bruschettas. Se for usar para finalizar um prato quente como uma massa, o próprio calor da refeição irá aquecê-lo e libertar ainda mais os seus aromas.</p>
                     </div>
                 </div>
-
-                <div class="author-box">
-                    <img src="/imagens/maria-conceicao-pra-voce.png" alt="Retrato de Maria Conceição, fundadora da ChefBrico" class="author-image">
-                    <div class="author-info">
-                        <h4>Sobre a Autora</h4>
-                        <p>Maria Conceição é a mente e a alma por trás da ChefBrico. Psicóloga por formação, ela une a paixão pela comida de verdade com o desejo de simplificar a rotina na cozinha. <a href="/nossa-filosofia.html">Conheça mais sobre sua filosofia aqui</a>.</p>
+                <div class="faq-item-accordion">
+                    <button class="accordion-header"><h3>O azeite do pote pode ser usado?</h3></button>
+                    <div class="accordion-content">
+                        <p>Com certeza! O azeite está infusionado com todo o sabor do shiitake, alho e tomilho. É um tesouro culinário! Use-o para temperar saladas, finalizar sopas, regar pães ou até mesmo para refogar outros pratos. Não desperdice uma gota!</p>
+                    </div>
+                </div>
+                <div class="faq-item-accordion">
+                    <button class="accordion-header"><h3>Qual a diferença entre o confit e cogumelos em conserva comuns?</h3></button>
+                    <div class="accordion-content">
+                        <p>A diferença é total. Conservas comuns geralmente usam vinagre e altas temperaturas, o que altera a textura e o sabor. O 'confit' é uma técnica de cozimento lento em gordura (no nosso caso, azeite), que preserva a integridade do ingrediente, resultando numa textura macia e num sabor muito mais profundo e complexo.</p>
                     </div>
                 </div>
             </div>
-        </article>
-    </main>
 
-    {% include "rodape.html" %}
-
-    <script src="/js/script.js"></script>
-
-</body>
-</html>
+            <div class="author-box">
+                <img src="/imagens/maria-conceicao-pra-voce.png" alt="Retrato de Maria Conceição, fundadora da ChefBrico" class="author-image">
+                <div class="author-info">
+                    <h4>Sobre a Autora</h4>
+                    <p>Maria Conceição é a mente e a alma por trás da ChefBrico. Psicóloga por formação, ela une a paixão pela comida de verdade com o desejo de simplificar a rotina na cozinha. <a href="/comida-de-verdade/">Conheça mais sobre sua filosofia aqui</a>.</p>
+                </div>
+            </div>
+        </div>
+    </article>
+</main>
