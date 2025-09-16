@@ -1,234 +1,180 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Revista Digital ChefBrico | Comida de Verdade, Sem Confusão</title>
-    <link rel="canonical" href="https://receitas.chefbrico.com/index.html" />
-    <meta name="description" content="Bem-vindo à Revista Digital da ChefBrico. Receitas, dicas, produtos e a filosofia 'Comida de Verdade' para uma rotina mais prática e saudável.">
-
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K58FN8J2VC"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-K58FN8J2VC');
-    </script>
-<script type="application/ld+json">
-[
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Revista Digital da ChefBrico",
-    "url": "https://receitas.chefbrico.com/",
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "Comida de Verdade"
-      },
-      {
-        "@type": "Thing",
-        "name": "Cozinha Prática"
-      },
-      {
-        "@type": "Thing",
-        "name": "Receitas Saudáveis"
-      },
-      {
-        "@type": "Thing",
-        "name": "Filosofia de Alimentação"
-      }
-    ],
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": "https://receitas.chefbrico.com/search?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "FoodEstablishment",
-    "@id": "https://receitas.chefbrico.com/#organization",
-    "name": "ChefBrico",
-    "url": "https://www.chefbrico.com",
-    "logo": "https://receitas.chefbrico.com/imagens/flamula-chefbrico.png",
-    
-    /* --- MELHORIAS FINAIS ADICIONADAS --- */
-    "image": "https://receitas.chefbrico.com/imagens/flamula-chefbrico.png",
-    "telephone": "+5561996659880",
-    "servesCuisine": "Brasileira, Italiana, Comida Saudável",
-    "priceRange": "$$",
-    
-    "sameAs": [
-      "https://www.instagram.com/chefbrico",
-      "https://br.pinterest.com/chefbrico/",
-      "https://www.facebook.com/chefbrico",
-      "https://www.google.com/search?kgmid=/g/11g140fcnw"
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Rua 5, Chácara 122, Lote 17, Loja 2",
-      "addressLocality": "Vicente Pires",
-      "addressRegion": "DF",
-      "postalCode": "72006-060",
-      "addressCountry": "BR"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+5561996659880",
-      "contactType": "customer service"
-    }
-  }
-]
-</script>
-<body>
-
-    {% include "cabecalho.html" %}
-
-    <main>
-        <section class="hero-section-with-image-and-text">
-            <div class="hero-image-container-circular">
-                <img src="/imagens/maria-conceicao-empreendedora-feira-tematica.png" alt="Maria Conceição, fundadora da ChefBrico, sorrindo e apresentando produtos ChefBrico." class="circular-image">
-            </div>
-            <div class="hero-content-text">
-                <h1 class="hero-title">Comida de Verdade;<br>Sem confusão na cozinha!</h1>
-                <p class="hero-subtitle">Uma revolução no sabor e na sua rotina. Descubra refeições práticas, 100% naturais e com o afeto da nossa cozinha.</p>
-                <p class="hero-message">Dividi minhas criações em quatro universos de sabor para te ajudar a encontrar exatamente o que sua rotina precisa. Cada categoria é uma porta de entrada para um mundo de praticidade e comida de verdade. Explore com carinho!</p>
-                <a href="/receitas.html" class="cta-button-small">Explore Nossas Receitas <span aria-hidden="true">»</span></a>
-            </div>
-        </section>
-
-        <div class="container">
-            <h2 style="margin-top: 60px;">Comece por Aqui: Entenda a Revolução ChefBrico</h2>
-            <div class="carousel-container">
-                <a href="/nossa-filosofia.html" class="card">
-                    <img src="/imagens/icone-maria-conceicao-agrovillage-caminho-chefbrico.png" alt="Maria Conceição, fundadora da ChefBrico" class="card-image">
-                    <div class="card-content">
-                        <span class="card-category">Nossa Filosofia</span>
-                        <h3>Da Psicologia ao Prato</h3>
-                        <p>Descubra a jornada de Maria Conceição e como a paixão pela comida de verdade se tornou a alma da ChefBrico.</p>
-                    </div>
-                </a>
-                <a href="/despensa-inteligente.html" class="card">
-                    <img src="/imagens/icone-despensa-inteligente-chefbrico.png" alt="ChefBox da ChefBrico com variedade de produtos" class="card-image">
-                    <div class="card-content">
-                        <span class="card-category">Estratégia de Cozinha</span>
-                        <h3>A Despensa Inteligente</h3>
-                        <p>O método para ter paz de espírito na cozinha. Compras inteligentes, zero desperdício e refeições sempre à mão.</p>
-                    </div>
-                </a>
-                <a href="/panela-unica.html" class="card">
-                    <img src="/imagens/icone-panela-unica-chefbrico.png" alt="Panela única com refeição saudável" class="card-image">
-                    <div class="card-content">
-                        <span class="card-category">Dicas & Técnicas</span>
-                        <h3>Panela Única, Sabor Máximo</h3>
-                        <p>Otimize seu tempo, reduza a louça e maximize o sabor com a nossa filosofia de preparo mais eficiente.</p>
-                    </div>
-                </a>
-                <a href="/o-segredo-do-desidratado.html" class="card">
-                    <img src="/imagens/icone-vegetais-alho-poro-desidratado-chefbrico.png" alt="Vegetais frescos preparados para desidratação" class="card-image">
-                    <div class="card-content">
-                        <span class="card-category">Nosso Processo</span>
-                        <h3>O Segredo do Desidratado</h3>
-                        <p>Entenda como nossa técnica 100% natural preserva os nutrientes e concentra o sabor da comida de verdade.</p>
-                    </div>
-                </a>
-            </div>
-
-            <h2 style="margin-top: 50px;">Novidades na Revista</h2>
-            <div class="carousel-container">
-                <a href="/guia-flexitariano.html" class="card">
-                    <img src="/imagens/icone-vegetais-flexitariano-chefbrico.png" alt="Prato balanceado com vegetais" class="card-image">
-                    <div class="card-content">
-                        <span class="card-category">Estilo de Vida</span>
-                        <h3>Guia para o Flexitariano</h3>
-                        <p>Descubra como a dieta flexitariana pode ser deliciosa e prática com as soluções da ChefBrico.</p>
-                    </div>
-                </a>
-                <a href="/guia-arrozes-cremosos.html" class="card">
-                    <img src="/imagens/icone-arrozes-mundo-negro-chefbrico.png" alt="Prato de arroz negro com cogumelos" class="card-image">
-                    <div class="card-content">
-                        <span class="card-category">Arrozes do Mundo</span>
-                        <h3>O Guia dos Arrozes Cremosos</h3>
-                        <p>Descubra a diferença entre risoto e paella e como ter esse sabor em casa de forma prática.</p>
-                    </div>
-                </a>
-                <a href="/cozinha-criativa.html" class="card">
-                    <img src="/imagens/icone-maozinha-na-rotina-chefbrico.png" alt="Mesa com várias preparações criativas" class="card-image">
-                    <div class="card-content">
-                        <span class="card-category">Inspiração & Dicas</span>
-                        <h3>Cozinha Criativa ChefBrico</h3>
-                        <p>Explore dicas que vão além do básico e mostram a versatilidade dos nossos produtos.</p>
-                    </div>
-                </a>
-                <a href="/chefbrico-club.html" class="card">
-                    <img src="/imagens/icone-comunidade-chefbrico.png" alt="Mosaico de fotos de pratos feitos por clientes" class="card-image">
-                    <div class="card-content">
-                        <span class="card-category">Comunidade</span>
-                        <h3>#ChefBricoEmCasa</h3>
-                        <p>Veja o que nossos clientes estão a criar! Uma galeria de pratos reais que celebram a comida de verdade.</p>
-                    </div>
-                </a>
-            </div>
-
-            <div class="cta-section-article" style="text-align: center; margin: 40px 0; padding: 20px; background-color: var(--cor-fundo-card); border-radius: 8px;">
-                <p style="margin: 0 0 15px 0;">Curioso para mais dicas que simplificam sua vida na cozinha?</p>
-                <a href="/receitas.html" class="link-destaque" style="font-size: 1.1em;">Todas as Matérias e Dicas ≫</a> 
-            </div>
-
-            <h2 style="margin-top: 50px;">Receitas em Destaque</h2>
-            <div class="carousel-container">
-                <a href="/receita-risoto-pomodori.html" class="card">
-                    <img src="/imagens/risoto-pomodori-pesto-chefbrico-580px.png" alt="Risoto Gourmet italianissimo pomodori e pesto" class="card-image">
-                    <div class="card-content">
-                        <span class="card-category">Campeão de Vendas</span>
-                        <h3>Risoto Pomodori & Pesto</h3>
-                        <p>O sabor autêntico da Itália, cremoso e reconfortante, pronto em 18 minutos.</p>
-                    </div>
-                </a>
-                <a href="/receita-risoto-morango.html" class="card">
-                    <img src="/imagens/risoto-morango-agridoce-fruta-chefbrico-580px.png" alt="Tigela de Risoto Agridoce divertida e gourmet" class="card-image">
-                    <div class="card-content">
-                        <span class="card-category">Culinária Criativa</span>
-                        <h3>Risoto Agridoce de Morango</h3>
-                        <p>A combinação perfeita da praticidade e sabor para sua vida agitada.</p>
-                    </div>
-                </a>
-                <a href="/receita-arroz-negro-funghi.html" class="card">
-                    <img src="/imagens/refeicao-nutritiva-integral-arroz-negro-chefbrico-80%20px.png" alt="Prato de Arroz Negro com Funghi, rústico e sofisticado" class="card-image">
-                    <div class="card-content">
-                        <span class="card-category">Nutrição Gourmet</span>
-                        <h3>Arroz Negro com Funghi</h3>
-                        <p>A combinação sofisticada e nutritiva do arroz negro com o umami intenso do funghi.</p>
-                    </div>
-                </a>
-                <a href="/receita-sopa-creme-fit.html" class="card">
-                    <img src="/imagens/chefbrico-creme-fit-sopinha-chefbrico-580%20px.png" alt="Tigela de sopa nutritiva" class="card-image">
-                    <div class="card-content">
-                        <span class="card-category">Performance e Sabor</span>
-                        <h3>Sopa Creme Fit Vegana</h3>
-                        <p>A combinação perfeita de proteína e conforto para sua rotina de treinos.</p>
-                    </div>
-                </a>
-            </div>
+---
+layout: base.njk
+permalink: /
+title: "Revista Digital ChefBrico | Comida de Verdade, Sem Confusão"
+description: "Bem-vindo à Revista Digital da ChefBrico. Receitas, dicas, produtos e a filosofia 'Comida de Verdade' para uma rotina mais prática e saudável."
+schema:
+- "@context": https://schema.org
+  "@type": WebSite
+  name: "Revista Digital da ChefBrico"
+  url": https://receitas.chefbrico.com/
+  about":
+  - "@type": Thing
+    name: "Comida de Verdade"
+  - "@type": Thing
+    name: "Cozinha Prática"
+  - "@type": Thing
+    name: "Receitas Saudáveis"
+  - "@type": Thing
+    name: "Filosofia de Alimentação"
+  potentialAction":
+    "@type": SearchAction
+    target":
+      "@type": EntryPoint
+      urlTemplate": "https://receitas.chefbrico.com/search?q={search_term_string}"
+      query-input": "required name=search_term_string"
+- "@context": https://schema.org
+  "@type": FoodEstablishment
+  "@id": https://receitas.chefbrico.com/#organization
+  name: ChefBrico
+  url": https://www.chefbrico.com
+  logo: https://receitas.chefbrico.com/imagens/flamula-chefbrico.png
+  image: https://receitas.chefbrico.com/imagens/flamula-chefbrico.png
+  telephone: "+5561996659880"
+  servesCuisine": "Brasileira, Italiana, Comida Saudável"
+  priceRange": "$$"
+  sameAs":
+  - https://www.instagram.com/chefbrico
+  - https://br.pinterest.com/chefbrico/
+  - https://www.facebook.com/chefbrico
+  - https://www.google.com/search?kgmid=/g/11g140fcnw
+  address:
+    "@type": PostalAddress
+    streetAddress: "Rua 5, Chácara 122, Lote 17, Loja 2"
+    addressLocality: "Vicente Pires"
+    addressRegion: DF
+    postalCode: "72006-060"
+    addressCountry: BR
+  contactPoint:
+    "@type": ContactPoint
+    telephone: "+5561996659880"
+    contactType: "customer service"
+---
+<main>
+    <section class="hero-section-with-image-and-text">
+        <div class="hero-image-container-circular">
+            <img src="/imagens/maria-conceicao-empreendedora-feira-tematica.png" alt="Maria Conceição, fundadora da ChefBrico, sorrindo e apresentando produtos ChefBrico." class="circular-image">
         </div>
-    </main>
+        <div class="hero-content-text">
+            <h1 class="hero-title">Comida de Verdade;<br>Sem confusão na cozinha!</h1>
+            <p class="hero-subtitle">Uma revolução no sabor e na sua rotina. Descubra refeições práticas, 100% naturais e com o afeto da nossa cozinha.</p>
+            <p class="hero-message">Dividi minhas criações em quatro universos de sabor para te ajudar a encontrar exatamente o que sua rotina precisa. Cada categoria é uma porta de entrada para um mundo de praticidade e comida de verdade. Explore com carinho!</p>
+            <a href="/receitas/" class="cta-button-small">Explore Nossas Receitas <span aria-hidden="true">»</span></a>
+        </div>
+    </section>
 
-    {% include "rodape.html" %}
+    <div class="container">
+        <h2 style="margin-top: 60px;">Comece por Aqui: Entenda a Revolução ChefBrico</h2>
+        <div class="carousel-container">
+            <a href="/comida-de-verdade/" class="card">
+                <img src="/imagens/icone-maria-conceicao-agrovillage-caminho-chefbrico.png" alt="Maria Conceição, fundadora da ChefBrico" class="card-image">
+                <div class="card-content">
+                    <span class="card-category">Nossa Filosofia</span>
+                    <h3>Da Psicologia ao Prato</h3>
+                    <p>Descubra a jornada de Maria Conceição e como a paixão pela comida de verdade se tornou a alma da ChefBrico.</p>
+                </div>
+            </a>
+            <a href="/comida-de-verdade/despensa-inteligente/" class="card">
+                <img src="/imagens/icone-despensa-inteligente-chefbrico.png" alt="ChefBox da ChefBrico com variedade de produtos" class="card-image">
+                <div class="card-content">
+                    <span class="card-category">Estratégia de Cozinha</span>
+                    <h3>A Despensa Inteligente</h3>
+                    <p>O método para ter paz de espírito na cozinha. Compras inteligentes, zero desperdício e refeições sempre à mão.</p>
+                </div>
+            </a>
+            <a href="/comida-de-verdade/panela-unica/" class="card">
+                <img src="/imagens/icone-panela-unica-chefbrico.png" alt="Panela única com refeição saudável" class="card-image">
+                <div class="card-content">
+                    <span class="card-category">Dicas & Técnicas</span>
+                    <h3>Panela Única, Sabor Máximo</h3>
+                    <p>Otimize seu tempo, reduza a louça e maximize o sabor com a nossa filosofia de preparo mais eficiente.</p>
+                </div>
+            </a>
+            <a href="/blog/o-segredo-do-desidratado/" class="card">
+                <img src="/imagens/icone-vegetais-alho-poro-desidratado-chefbrico.png" alt="Vegetais frescos preparados para desidratação" class="card-image">
+                <div class="card-content">
+                    <span class="card-category">Nosso Processo</span>
+                    <h3>O Segredo do Desidratado</h3>
+                    <p>Entenda como nossa técnica 100% natural preserva os nutrientes e concentra o sabor da comida de verdade.</p>
+                </div>
+            </a>
+        </div>
 
-    <script src="/js/script.js"></script>
+        <h2 style="margin-top: 50px;">Novidades na Revista</h2>
+        <div class="carousel-container">
+            <a href="/blog/guia-flexitariano/" class="card">
+                <img src="/imagens/icone-vegetais-flexitariano-chefbrico.png" alt="Prato balanceado com vegetais" class="card-image">
+                <div class="card-content">
+                    <span class="card-category">Estilo de Vida</span>
+                    <h3>Guia para o Flexitariano</h3>
+                    <p>Descubra como a dieta flexitariana pode ser deliciosa e prática com as soluções da ChefBrico.</p>
+                </div>
+            </a>
+            <a href="/blog/guia-dos-arrozes/" class="card">
+                <img src="/imagens/icone-arrozes-mundo-negro-chefbrico.png" alt="Prato de arroz negro com cogumelos" class="card-image">
+                <div class="card-content">
+                    <span class="card-category">Arrozes do Mundo</span>
+                    <h3>O Guia dos Arrozes Cremosos</h3>
+                    <p>Descubra a diferença entre risoto e paella e como ter esse sabor em casa de forma prática.</p>
+                </div>
+            </a>
+            <a href="/comida-de-verdade/cozinha-criativa/" class="card">
+                <img src="/imagens/icone-maozinha-na-rotina-chefbrico.png" alt="Mesa com várias preparações criativas" class="card-image">
+                <div class="card-content">
+                    <span class="card-category">Inspiração & Dicas</span>
+                    <h3>Cozinha Criativa ChefBrico</h3>
+                    <p>Explore dicas que vão além do básico e mostram a versatilidade dos nossos produtos.</p>
+                </div>
+            </a>
+            <a href="/clube/" class="card">
+                <img src="/imagens/icone-comunidade-chefbrico.png" alt="Mosaico de fotos de pratos feitos por clientes" class="card-image">
+                <div class="card-content">
+                    <span class="card-category">Comunidade</span>
+                    <h3>#ChefBricoEmCasa</h3>
+                    <p>Veja o que nossos clientes estão a criar! Uma galeria de pratos reais que celebram a comida de verdade.</p>
+                </div>
+            </a>
+        </div>
 
-</body>
-</html>
+        <div class="cta-section-article" style="text-align: center; margin: 40px 0; padding: 20px; background-color: var(--cor-fundo-card); border-radius: 8px;">
+            <p style="margin: 0 0 15px 0;">Curioso para mais dicas que simplificam sua vida na cozinha?</p>
+            <a href="/receitas/" class="link-destaque" style="font-size: 1.1em;">Todas as Matérias e Dicas ≫</a> 
+        </div>
+
+        <h2 style="margin-top: 50px;">Receitas em Destaque</h2>
+        <div class="carousel-container">
+            <a href="/receitas/risotos/pomodori/" class="card">
+                <img src="/imagens/risoto-pomodori-pesto-chefbrico-580px.png" alt="Risoto Gourmet italianissimo pomodori e pesto" class="card-image">
+                <div class="card-content">
+                    <span class="card-category">Campeão de Vendas</span>
+                    <h3>Risoto Pomodori & Pesto</h3>
+                    <p>O sabor autêntico da Itália, cremoso e reconfortante, pronto em 18 minutos.</p>
+                </div>
+            </a>
+            <a href="/receitas/risotos/morango/" class="card">
+                <img src="/imagens/risoto-morango-agridoce-fruta-chefbrico-580px.png" alt="Tigela de Risoto Agridoce divertida e gourmet" class="card-image">
+                <div class="card-content">
+                    <span class="card-category">Culinária Criativa</span>
+                    <h3>Risoto Agridoce de Morango</h3>
+                    <p>A combinação perfeita da praticidade e sabor para sua vida agitada.</p>
+                </div>
+            </a>
+            <a href="/receitas/refeicoes-integrais/arroz-negro-funghi/" class="card">
+                <img src="/imagens/refeicao-nutritiva-integral-arroz-negro-chefbrico-80%20px.png" alt="Prato de Arroz Negro com Funghi, rústico e sofisticado" class="card-image">
+                <div class="card-content">
+                    <span class="card-category">Nutrição Gourmet</span>
+                    <h3>Arroz Negro com Funghi</h3>
+                    <p>A combinação sofisticada e nutritiva do arroz negro com o umami intenso do funghi.</p>
+                </div>
+            </a>
+            <a href="/receitas/sopas-funcionais/creme-fit/" class="card">
+                <img src="/imagens/chefbrico-creme-fit-sopinha-chefbrico-580%20px.png" alt="Tigela de sopa nutritiva" class="card-image">
+                <div class="card-content">
+                    <span class="card-category">Performance e Sabor</span>
+                    <h3>Sopa Creme Fit Vegana</h3>
+                    <p>A combinação perfeita de proteína e conforto para sua rotina de treinos.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</main>
