@@ -1,146 +1,86 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cozinha Criativa: Dicas e Inspirações | ChefBrico</title>
-    <link rel="canonical" href="https://receitas.chefbrico.com/cozinha-criativa.html" />
-    <meta name="description" content="Explore dicas e truques para usar os produtos ChefBrico de formas criativas. Transforme seus risotos, sopas e antepastos em pratos ainda mais incríveis." />
+---
+layout: base.njk
+permalink: /comida-de-verdade/cozinha-criativa/
+title: "Cozinha Criativa: Dicas e Inspirações | ChefBrico"
+description: "Explore dicas e truques para usar os produtos ChefBrico de formas criativas. Transforme seus risotos, sopas e antepastos em pratos ainda mais incríveis."
+schema:
+  "@context": https://schema.org
+  "@graph":
+  - "@type": ItemList
+    mainEntityOfPage:
+      "@type": WebPage
+      "@id": https://receitas.chefbrico.com/comida-de-verdade/cozinha-criativa/
+    name: "Cozinha Criativa: Dicas e Truques para Elevar seus Pratos ChefBrico"
+    author:
+      "@id": https://receitas.chefbrico.com/#person-maria
+    publisher:
+      "@id": https://receitas.chefbrico.com/#organization
+    image: https://receitas.chefbrico.com/imagens/graos-aveia-integral-vegetais-bowl.png
+    datePublished: '2025-08-12T09:00:00-03:00'
+    dateModified: '2025-09-10T11:32:00-03:00'
+    description: "Descubra como ir além do básico com os produtos ChefBrico. Dicas de finalização, harmonização e receitas criativas para risotos, sopas e produtos do nosso empório."
+    itemListElement":
+    - "@type": HowToTip
+      text: "Sobrou risoto? Faça bolinhas, passe em farinha de rosca e asse na airfryer para criar deliciosos Arancini."
+    - "@type": HowToTip
+      text: "Para risotos com cogumelos, finalize com raspas de limão siciliano para elevar o sabor."
+    - "@type": HowToTip
+      text: "Para um risoto extra cremoso e vegano, adicione uma colher de sopa de 'requeijão' de castanha de caju no final do cozimento."
+    - "@type": HowToTip
+      text: "Crie croutons aromáticos para suas sopas assando pão amanhecido com azeite e ervas."
+    - "@type": HowToTip
+      text: "Adicione um boost de proteína às suas sopas com um ovo cozido picado ou grão-de-bico tostado."
+    - "@type": HowToTip
+      text: "Nunca descarte o azeite do Funghi Confitado! Use-o para temperar saladas e finalizar pratos."
+    - "@type": HowToTip
+      text: "Use a Caponata com Shiitake como um molho rústico e instantâneo para massas."
+  - "@type": Person
+    "@id": https://receitas.chefbrico.com/#person-maria
+    name: "Maria Conceição"
+  - "@type": Organization
+    "@id": https://receitas.chefbrico.com/#organization
+    name: ChefBrico
+---
+<main class="container">
+    <div class="recipe-title-container" style="text-align:center;">
+        <span class="article-category" style="font-size: 0.8em; text-transform: uppercase; color: #999; font-weight: bold;">Inspiração & Dicas</span>
+        <h1>Cozinha Criativa ChefBrico</h1>
+        <p class="recipe-subtitle">Nossos produtos são a base perfeita e prática. Mas a verdadeira mágica acontece quando você adiciona o seu toque! Explore nossas dicas e transforme cada prato em uma experiência única.</p>
+    </div>
 
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K58FN8J2VC"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-K58FN8J2VC');
-    </script>
-    
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "ItemList",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://receitas.chefbrico.com/cozinha-criativa.html"
-      },
-      "name": "Cozinha Criativa: Dicas e Truques para Elevar seus Pratos ChefBrico",
-      "author": {
-        "@id": "https://receitas.chefbrico.com/#person-maria"
-      },
-      "publisher": {
-         "@id": "https://receitas.chefbrico.com/#organization"
-      },
-      "image": "https://receitas.chefbrico.com/imagens/graos-aveia-integral-vegetais-bowl.png",
-      "datePublished": "2025-08-12T09:00:00-03:00",
-      "dateModified": "2025-09-10T11:32:00-03:00", // Data atualizada
-      "description": "Descubra como ir além do básico com os produtos ChefBrico. Dicas de finalização, harmonização e receitas criativas para risotos, sopas e produtos do nosso empório.",
-      "itemListElement": [
-        {
-          "@type": "HowToTip",
-          "text": "Sobrou risoto? Faça bolinhas, passe em farinha de rosca e asse na airfryer para criar deliciosos Arancini."
-        },
-        {
-          "@type": "HowToTip",
-          "text": "Para risotos com cogumelos, finalize com raspas de limão siciliano para elevar o sabor."
-        },
-        {
-          "@type": "HowToTip",
-          "text": "Para um risoto extra cremoso e vegano, adicione uma colher de sopa de 'requeijão' de castanha de caju no final do cozimento."
-        },
-        {
-          "@type": "HowToTip",
-          "text": "Crie croutons aromáticos para suas sopas assando pão amanhecido com azeite e ervas."
-        },
-        {
-          "@type": "HowToTip",
-          "text": "Adicione um boost de proteína às suas sopas com um ovo cozido picado ou grão-de-bico tostado."
-        },
-        {
-          "@type": "HowToTip",
-          "text": "Nunca descarte o azeite do Funghi Confitado! Use-o para temperar saladas e finalizar pratos."
-        },
-        {
-          "@type": "HowToTip",
-          "text": "Use a Caponata com Shiitake como um molho rústico e instantâneo para massas."
-        }
-      ]
-    },
-    {
-      "@type": "Person",
-      "@id": "https://receitas.chefbrico.com/#person-maria",
-      "name": "Maria Conceição"
-    },
-    {
-      "@type": "Organization",
-      "@id": "https://receitas.chefbrico.com/#organization",
-      "name": "ChefBrico"
-    }
-  ]
-}
-</script>
-</head>
-<body>
+    <div class="hero-card">
+        <img src="/imagens/graos-aveia-integral-vegetais-bowl.png" alt="Bowl de grãos, aveia integral e vegetais, simbolizando uma cozinha criativa e saudável.">
+    </div>
 
-    {% include "cabecalho.html" %}
+    <div class="post-content">
+        <p class="author-byline" style="text-align:center;">Por <strong>Maria Conceição</strong>, Fundadora e chef de criação</p>
 
-    <main class="container">
-        <div class="recipe-title-container" style="text-align:center;">
-            <span class="article-category" style="font-size: 0.8em; text-transform: uppercase; color: #999; font-weight: bold;">Inspiração & Dicas</span>
-            <h1>Cozinha Criativa ChefBrico</h1>
-            <p class="recipe-subtitle">Nossos produtos são a base perfeita e prática. Mas a verdadeira mágica acontece quando você adiciona o seu toque! Explore nossas dicas e transforme cada prato em uma experiência única.</p>
-        </div>
+        <h2>Elevando seus Risotos</h2>
+        <ul>
+            <li><strong>Arancini no Dia Seguinte:</strong> Sobrou risoto? Faça bolinhas, passe em farinha de rosca e asse na airfryer para criar deliciosos Arancini.</li>
+            <li><strong>O Toque Cítrico:</strong> Para risotos com cogumelos, finalize com raspas de limão siciliano. O frescor traz a riqueza do prato e eleva o sabor.</li>
+            <li><strong>A "Finalização" um toque Veg.:</strong> Para um risoto extra cremoso, adicione uma colher de sopa de "requeijão" de castanha de caju no final do cozimento.</li>
+        </ul>
 
-        <div class="hero-card">
-            <img src="/imagens/graos-aveia-integral-vegetais-bowl.png" alt="Bowl de grãos, aveia integral e vegetais, simbolizando uma cozinha criativa e saudável.">
-        </div>
+        <h2>Turbinando suas Sopas Funcionais</h2>
+        <ul>
+            <li><strong>Croutons Aromáticos:</strong> Pique pão amanhecido, regue com azeite e ervas, e asse até dourar. É a finalização crocante perfeita para a <a href="/receitas/sopas-funcionais/">Sopa Creme Fit</a>.</li>
+            <li><strong>Boost de Proteína:</strong> Adicione um ovo cozido picado ou grão-de-bico tostado à sua <a href="/receitas/sopas-funcionais/">Sopa Low Carb</a> para uma refeição ainda mais completa.</li>
+            <li><strong>Pesto para Finalizar:</strong> Uma colher do nosso <a href="https://www.chefbrico.com/emporio-da-chef" target="_blank" rel="noopener noreferrer">Pesto de Manjericão</a> sobre a Sopa Jeitinho de Vó adiciona uma explosão de frescor.</li>
+        </ul>
 
-        <div class="post-content">
-            <p class="author-byline" style="text-align:center;">Por <strong>Maria Conceição</strong>, Fundadora e chef de criação</p>
+        <h2>A Versatilidade do Empório da Chef</h2>
+        <ul>
+            <li><strong>O Azeite Mágico:</strong> Nunca descarte o azeite do nosso <a href="https://www.chefbrico.com/emporio-da-chef" target="_blank" rel="noopener noreferrer">Funghi Confitado</a>! Use-o para temperar saladas, finalizar sopas ou para refogar outros pratos. É ouro líquido!</li>
+            <li><strong>Molho Rústico para Massas:</strong> Aqueça levemente a nossa <a href="https://www.chefbrico.com/emporio-da-chef" target="_blank" rel="noopener noreferrer">Caponata com Shiitake</a> e misture com a sua massa favorita para um molho instantâneo, rústico e cheio de sabor.</li>
+        </ul>
 
-            <h2>Elevando seus Risotos</h2>
-            <ul>
-                <li><strong>Arancini no Dia Seguinte:</strong> Sobrou risoto? Faça bolinhas, passe em farinha de rosca e asse na airfryer para criar deliciosos Arancini.</li>
-                <li><strong>O Toque Cítrico:</strong> Para risotos com cogumelos, finalize com raspas de limão siciliano. O frescor traz a riqueza do prato e eleva o sabor.</li>
-                <li><strong>A "Finalização" um toque Veg.:</strong> Para um risoto extra cremoso, adicione uma colher de sopa de "requeijão" de castanha de caju no final do cozimento.</li>
-            </ul>
-
-            <h2>Turbinando suas Sopas Funcionais</h2>
-            <ul>
-                <li><strong>Croutons Aromáticos:</strong> Pique pão amanhecido, regue com azeite e ervas, e asse até dourar. É a finalização crocante perfeita para a <a href="/sopas-funcionais.html">Sopa Creme Fit</a>.</li>
-                <li><strong>Boost de Proteína:</strong> Adicione um ovo cozido picado ou grão-de-bico tostado à sua <a href="/sopas-funcionais.html">Sopa Low Carb</a> para uma refeição ainda mais completa.</li>
-                <li><strong>Pesto para Finalizar:</strong> Uma colher do nosso <a href="https://www.chefbrico.com/emporio-da-chef" target="_blank" rel="noopener noreferrer">Pesto de Manjericão</a> sobre a Sopa Jeitinho de Vó adiciona uma explosão de frescor.</li>
-            </ul>
-
-            <h2>A Versatilidade do Empório da Chef</h2>
-            <ul>
-                <li><strong>O Azeite Mágico:</strong> Nunca descarte o azeite do nosso <a href="https://www.chefbrico.com/emporio-da-chef" target="_blank" rel="noopener noreferrer">Funghi Confitado</a>! Use-o para temperar saladas, finalizar sopas ou para refogar outros pratos. É ouro líquido!</li>
-                <li><strong>Molho Rústico para Massas:</strong> Aqueça levemente a nossa <a href="https://www.chefbrico.com/emporio-da-chef" target="_blank" rel="noopener noreferrer">Caponata com Shiitake</a> e misture com a sua massa favorita para um molho instantâneo, rústico e cheio de sabor.</li>
-            </ul>
-
-            <div class="author-box">
-                <img src="/imagens/maria-conceicao-pra-voce.png" alt="Retrato de Maria Conceição, fundadora da ChefBrico" class="author-image">
-                <div class="author-info">
-                    <h4>Uma mensagem da Maria Conceição</h4>
-                    <p>A cozinha é um laboratório de afeto. Divirta-se, experimente e não tenha medo de adicionar seu toque pessoal. É assim que a comida de verdade ganha a sua alma.</p>
-                </div>
+        <div class="author-box">
+            <img src="/imagens/maria-conceicao-pra-voce.png" alt="Retrato de Maria Conceição, fundadora da ChefBrico" class="author-image">
+            <div class="author-info">
+                <h4>Uma mensagem da Maria Conceição</h4>
+                <p>A cozinha é um laboratório de afeto. Divirta-se, experimente e não tenha medo de adicionar seu toque pessoal. É assim que a comida de verdade ganha a sua alma.</p>
             </div>
         </div>
-    </main>
-
-    {% include "rodape.html" %}
-
-    <script src="/js/script.js"></script>
-
-</body>
-</html>
+    </div>
+</main>
