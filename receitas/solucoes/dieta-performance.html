@@ -1,42 +1,61 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cardápio para Dieta e Performance (Fit, Detox, Low Carb) | ChefBrico</title>
-    <meta name="description" content="Encontre a refeição funcional perfeita para seus objetivos. Sopas proteicas para pós-treino, detox e opções low carb. 100% natural e prático.">
-    <link rel="stylesheet" href="/css/style.css">
-    </head>
-<body>
- {% include "cabecalho.html" %}
-    <main class="container">
-        <div class="page-header-local">
-            <h1>O Cardápio Inteligente para sua Performance</h1>
-            <p class="recipe-subtitle">Comida é combustível. Descubra as soluções da ChefBrico criadas com ingredientes funcionais para te ajudar a alcançar seus objetivos de saúde e bem-estar.</p>
+---
+layout: base.njk
+permalink: /receitas/solucoes/dieta-performance/
+title: "Cardápio para Dieta e Performance (Fit, Detox, Low Carb) | ChefBrico"
+description: "Encontre a refeição funcional perfeita para seus objetivos. Sopas proteicas para pós-treino, detox e opções low carb. 100% natural e prático."
+---
+<main class="container">
+    <div class="page-header-local">
+        <h1>O Cardápio Inteligente para sua Performance</h1>
+        <p class="recipe-subtitle">Comida é combustível. Descubra as soluções da ChefBrico criadas com ingredientes funcionais para te ajudar a alcançar seus objetivos de saúde e bem-estar.</p>
+    </div>
+    <div id="voz-da-chef-box" class="author-box">
+         <img src="/imagens/maria-conceicao-pra-voce.png" alt="Retrato de Maria Conceição" class="author-image">
+        <div class="author-info">
+            <h4>Uma mensagem da Maria Conceição</h4>
+            <p>Acredito na comida com propósito. Cada ingrediente desta seleção foi escolhido por seus benefícios funcionais. São pratos para nutrir seus músculos, dar leveza ao seu corpo e foco para sua mente. Conte comigo na sua jornada!</p>
         </div>
-        <div id="voz-da-chef-box" class="author-box">
-             <img src="/imagens/maria-conceicao-pra-voce.png" alt="Retrato de Maria Conceição" class="author-image">
-            <div class="author-info">
-                <h4>Uma mensagem da Maria Conceição</h4>
-                <p>Acredito na comida com propósito. Cada ingrediente desta seleção foi escolhido por seus benefícios funcionais. São pratos para nutrir seus músculos, dar leveza ao seu corpo e foco para sua mente. Conte comigo na sua jornada!</p>
-            </div>
+    </div>
+    <div class="post-content">
+        <h2 style="text-align: center; margin-top: 50px;">Para Performance e Pós-Treino</h2>
+        <p style="text-align: center;">Refeições ricas em proteína vegetal para ajudar na recuperação e construção muscular.</p>
+        <div class="post-grid" style="margin-top: 30px;">
+            <a href="/receitas/sopas-funcionais/creme-fit/" class="card">
+                <img src="/imagens/creme-fit-sopinha-chefbrico.png" alt="Sopa Creme Fit" class="card-image">
+                <div class="card-content"><span class="card-category">Receita</span><h3>Sopa Creme Fit (Proteica)</h3></div>
+            </a>
+            <a href="/receitas/sopas-funcionais/canja-veg/" class="card">
+                <img src="/imagens/Canja-Veg-bowl-marrom.png" alt="Canja Vegana" class="card-image">
+                <div class="card-content"><span class="card-category">Receita</span><h3>Canja Vegana Funcional</h3></div>
+            </a>
         </div>
-        <div class="post-content">
-            <h2 style="text-align: center; margin-top: 50px;">Para Performance e Pós-Treino</h2>
-            <div class="product-grid" style="margin-top: 30px;">
-                </div>
-            <h2 style="text-align: center; margin-top: 50px;">Para Leveza e Detox</h2>
-            <div class="product-grid" style="margin-top: 30px;">
-                </div>
-            <h2 style="text-align: center; margin-top: 50px;">Para Foco na Dieta Low Carb</h2>
-            <div class="product-grid" style="margin-top: 30px;">
-                </div>
+        <h2 style="text-align: center; margin-top: 50px;">Para Leveza e Detox</h2>
+        <p style="text-align: center;">Pratos leves e com ingredientes funcionais para um "reset verde" no seu organismo.</p>
+        <div class="post-grid" style="margin-top: 30px;">
+            <a href="/receitas/sopas-funcionais/detox/" class="card">
+                <img src="/imagens/sopinha-detox-chefbrico%20(1).png" alt="Sopa Detox" class="card-image">
+                <div class="card-content"><span class="card-category">Receita</span><h3>Sopa Detox com Ora-pro-nóbis</h3></div>
+            </a>
+            <a href="/receitas/risotos/zucchini/" class="card">
+                <img src="/imagens/risoto-zucchini-arboreo-chefbrico.png" alt="Risoto de Zucchini e Alho-Poró" class="card-image">
+                <div class="card-content"><span class="card-category">Receita</span><h3>Risoto de Zucchini e Alho-Poró</h3></div>   
+            </a>
+            <a href="/receitas/risotos/mediterraneo/" class="card">
+                <img src="/imagens/risoto-mediterraneo-chefbrico.png" alt="Risoto com tok mediterraneo" class="card-image">
+                <div class="card-content"><span class="card-category">Receita</span><h3>Risoto Mediterrâneo</h3></div>
+            </a>
         </div>
-    </main>
-
-    {% include "rodape.html" %}
-
-    <script src="/js/script.js"></script>
-
-</body>
-</html>
+        <h2 style="text-align: center; margin-top: 50px;">Para Foco na Dieta Low Carb</h2>
+        <p style="text-align: center;">Refeições com baixo teor de carboidratos, mas ricas em sabor, para manter o foco sem sacrifícios.</p>
+        <div class="post-grid" style="margin-top: 30px;">
+            <a href="/receitas/sopas-funcionais/low-carb-horta/" class="card">
+                <img src="/imagens/low-carb-vegetais-sopa-chefbrico.png" alt="Sopa Low Carb da Horta" class="card-image">
+                <div class="card-content"><span class="card-category">Receita</span><h3>Sopa Low Carb da Horta</h3></div>
+            </a>
+            <a href="/receitas/sopas-funcionais/low-carb-funghi/" class="card">
+                <img src="/imagens/low-carb-funghi-lentilha-negra-chefbrico.png" alt="Sopa Low Carb Funghi" class="card-image">
+                <div class="card-content"><span class="card-category">Receita</span><h3>Sopa Low Carb Funghi</h3></div>
+            </a>
+        </div>
+    </div>
+</main>
