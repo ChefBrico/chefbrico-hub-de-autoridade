@@ -1,214 +1,172 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Caponata com Shiitake Grelhado: O Antepasto Gourmet | ChefBrico</title>
-    <link rel="canonical" href="https://receitas.chefbrico.com/emporio-caponata-shiitake.html" />
-    <meta name="description" content="Descubra a Caponata com Shiitake Grelhado da ChefBrico. Um antepasto gourmet 100% natural para elevar suas massas, saladas e bruschettas.">
-    
-    <link rel="stylesheet" href="/css/style.css">
+---
+layout: base.njk
+permalink: /receitas/emporio-da-chef/caponata-shiitake/
+title: "Caponata com Shiitake Grelhado: O Antepasto Gourmet | ChefBrico"
+description: "Descubra a Caponata com Shiitake Grelhado da ChefBrico. Um antepasto gourmet 100% natural para elevar suas massas, saladas e bruschettas."
+schema:
+  "@context": https://schema.org
+  "@graph":
+  - "@type": Product
+    mainEntityOfPage:
+      "@type": WebPage
+      "@id": https://receitas.chefbrico.com/receitas/emporio-da-chef/caponata-shiitake/
+    name: "Antepasto: Caponata com Shiitake Grelhado"
+    url": https://receitas.chefbrico.com/receitas/emporio-da-chef/caponata-shiitake/
+    image":
+    - https://receitas.chefbrico.com/imagens/emporio/caponata-shiitake-vegetais-chefbrico.png
+    description: "Uma releitura sofisticada de um clássico siciliano. Nossa Caponata artesanal une o tradicional sabor agridoce dos vegetais cozidos lentamente na técnica confit com o toque surpreendente e umami do cogumelo shiitake grelhado."
+    brand":
+      "@id": https://receitas.chefbrico.com/#organization
+    sku: "ANT-CAP-003"
+    manufacturer":
+      "@id": https://receitas.chefbrico.com/#person-maria-conceicao
+    isPartOf":
+      "@id": https://receitas.chefbrico.com/receitas/emporio-da-chef/
+    keywords: "antepasto, caponata, vegano, sem-gluten, momento-especial, gourmet-pratico, shiitake, agridoce"
+    suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VeganDiet", "https://schema.org/VegetarianDiet"]
+    knownAllergen": "Livre de Glúten e Lactose. Produzido em ambiente que pode conter traços de castanhas."
+    aggregateRating":
+      "@type": AggregateRating
+      ratingValue: '5'
+      reviewCount: '15'
+    review":
+      "@type": Review
+      reviewRating":
+        "@type": Rating
+        ratingValue: '5'
+      author:
+        "@type": Person
+        name: "Joana F."
+      reviewBody: "Simplesmente divina! A melhor caponata que já provei. O shiitake dá um toque super especial. Perfeita com torradas e um bom vinho."
+    offers":
+      "@type": Offer
+      price: '29.80'
+      priceCurrency: BRL
+      priceValidUntil: '2026-12-31'
+      url": https://www.chefbrico.com/caponata-com-shiitake-grelhado
+      availability: https://schema.org/InStock
+      seller:
+        "@id": https://receitas.chefbrico.com/#organization
+      shippingDetails":
+        "@type": OfferShippingDetails
+        shippingDestination":
+          "@type": DefinedRegion
+          addressCountry: BR
+        deliveryTime:
+          "@type": ShippingDeliveryTime
+          handlingTime":
+            "@type": QuantitativeValue
+            minValue: '1'
+            maxValue: '2'
+            unitCode: DAY
+          transitTime":
+            "@type": QuantitativeValue
+            minValue: '3'
+            maxValue: '10'
+            unitCode: DAY
+      hasMerchantReturnPolicy":
+        "@type": MerchantReturnPolicy
+        url": https://www.chefbrico.com/trocas-e-devolucoes
+        applicableCountry: BR
+        returnPolicyCategory: https://schema.org/MerchantReturnFiniteReturnWindow
+        merchantReturnDays: 7
+  - "@type": Organization
+    "@id": https://receitas.chefbrico.com/#organization
+    name: ChefBrico
+    founder":
+      "@id": https://receitas.chefbrico.com/#person-maria-conceicao
+  - "@type": Person
+    "@id": https://receitas.chefbrico.com/#person-maria-conceicao
+    name: "Maria Conceição"
+---
+<main>
+    <article class="container">
+        <div class="recipe-title-container" style="text-align:center;">
+            <h1>Caponata com Shiitake Grelhado</h1>
+            <p class="recipe-subtitle">A Tradição Siciliana com um Toque Surpreendente!</p>
+            <p class="author-byline">Criado por <strong>Maria Conceição</strong>, Fundadora e Chef da ChefBrico</p>
+        </div>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+       <div class="hero-card">
+            <img src="/imagens/caponata-shiitake-vegetais-chefbrico.png" alt="Pote de Caponata com Shiitake Grelhado da ChefBrico, com vegetais coloridos.">
+        </div>
+        <div class="post-content">
+            <p>Uma releitura sofisticada de um clássico siciliano. Nossa Caponata artesanal une o tradicional sabor agridoce dos vegetais cozidos lentamente na técnica confit com o toque surpreendente e umami do cogumelo shiitake grelhado. É o sabor da horta em sua forma mais elegante, um antepasto versátil que transforma qualquer ocasião em um momento gourmet.</p>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K58FN8J2VC"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-K58FN8J2VC');
-    </script>
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Product",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://receitas.chefbrico.com/emporio-caponata-shiitake.html"
-      },
-      "name": "Antepasto: Caponata com Shiitake Grelhado",
-      "url": "https://receitas.chefbrico.com/emporio-caponata-shiitake.html",
-      "image": [
-        "https://receitas.chefbrico.com/imagens/emporio/caponata-shiitake-vegetais-chefbrico.png"
-      ],
-      "description": "Uma releitura sofisticada de um clássico siciliano. Nossa Caponata artesanal une o tradicional sabor agridoce dos vegetais cozidos lentamente na técnica confit com o toque surpreendente e umami do cogumelo shiitake grelhado.",
-      "brand": {
-        "@id": "https://receitas.chefbrico.com/#organization"
-      },
-      "sku": "ANT-CAP-003",
-      "manufacturer": {
-        "@id": "https://receitas.chefbrico.com/#person-maria-conceicao"
-      },
-      "isPartOf": {
-        "@id": "https://receitas.chefbrico.com/emporio-da-chef.html"
-      },
-      "keywords": "antepasto, caponata, vegano, sem-gluten, momento-especial, gourmet-pratico, shiitake, agridoce",
-      "suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VeganDiet", "https://schema.org/VegetarianDiet"],
-      "knownAllergen": "Livre de Glúten e Lactose. Produzido em ambiente que pode conter traços de castanhas.",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5",
-        "reviewCount": "15"
-      },
-      "review": {
-        "@type": "Review",
-        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-        "author": { "@type": "Person", "name": "Joana F." },
-        "reviewBody": "Simplesmente divina! A melhor caponata que já provei. O shiitake dá um toque super especial. Perfeita com torradas e um bom vinho."
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "29.80",
-        "priceCurrency": "BRL",
-        "priceValidUntil": "2026-12-31",
-        "url": "https://www.chefbrico.com/caponata-com-shiitake-grelhado",
-        "availability": "https://schema.org/InStock",
-        "seller": {
-          "@id": "https://receitas.chefbrico.com/#organization"
-        },
-        "shippingDetails": {
-           "@type": "OfferShippingDetails",
-           "shippingDestination": {
-             "@type": "DefinedRegion",
-             "addressCountry": "BR"
-           },
-           "deliveryTime": {
-             "@type": "ShippingDeliveryTime",
-             "handlingTime": { "@type": "QuantitativeValue", "minValue": "1", "maxValue": "2", "unitCode": "DAY" },
-             "transitTime": { "@type": "QuantitativeValue", "minValue": "3", "maxValue": "10", "unitCode": "DAY" }
-           }
-        },
-        "hasMerchantReturnPolicy": {
-           "@type": "MerchantReturnPolicy",
-           "url": "https://www.chefbrico.com/trocas-e-devolucoes",
-           "applicableCountry": "BR",
-           "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-           "merchantReturnDays": 7
-        }
-      }
-    },
-    {
-      "@type": "Organization",
-      "@id": "https://receitas.chefbrico.com/#organization",
-      "name": "ChefBrico",
-      "founder": { "@id": "https://receitas.chefbrico.com/#person-maria-conceicao" }
-    },
-    {
-      "@type": "Person",
-      "@id": "https://receitas.chefbrico.com/#person-maria-conceicao",
-      "name": "Maria Conceição"
-    }
-  ]
-}
-</script>
-</head>
-<body>
-    {% include "cabecalho.html" %}
-
-    <main>
-        <article class="container">
-            <div class="recipe-title-container" style="text-align:center;">
-                <h1>Caponata com Shiitake Grelhado</h1>
-                <p class="recipe-subtitle">A Tradição Siciliana com um Toque Surpreendente!</p>
-                <p class="author-byline">Criado por <strong>Maria Conceição</strong>, Fundadora e Chef da ChefBrico</p>
-            </div>
-
-           <div class="hero-card">
-                <img src="/imagens/caponata-shiitake-vegetais-chefbrico.png" alt="Pote de Caponata com Shiitake Grelhado da ChefBrico, com vegetais coloridos.">
-            </div>
-            <div class="post-content">
-                <p>Uma releitura sofisticada de um clássico siciliano. Nossa Caponata artesanal une o tradicional sabor agridoce dos vegetais cozidos lentamente na técnica confit com o toque surpreendente e umami do cogumelo shiitake grelhado. É o sabor da horta em sua forma mais elegante, um antepasto versátil que transforma qualquer ocasião em um momento gourmet.</p>
-
-               <div class="card-modelo-autora">
-                   <img class="card-modelo-autora-image" src="/imagens/maria-conceicao-agrovillage-caminho-chefbrico.png" alt="Embalagem da Caponata com Shiitake Grelhado da ChefBrico"> <div class="card-modelo-autora-content">
-                       <h3>Compre este Produto Autoral</h3>
-                       <p>A base para elevar suas criações é a nossa <strong>Caponata com Shiitake Grelhado</strong>. O curinga gourmet que faltava na sua despensa!</p>
-                       <a href="https://www.chefbrico.com/caponata-com-shiitake-grelhado" target="_blank" rel="noopener noreferrer" class="cta-button">Ver na Loja Agora</a>
-                   </div>
+           <div class="card-modelo-autora">
+               <img class="card-modelo-autora-image" src="/imagens/maria-conceicao-agrovillage-caminho-chefbrico.png" alt="Embalagem da Caponata com Shiitake Grelhado da ChefBrico">
+               <div class="card-modelo-autora-content">
+                    <h3>Compre este Produto Autoral</h3>
+                    <p>A base para elevar suas criações é a nossa <strong>Caponata com Shiitake Grelhado</strong>. O curinga gourmet que faltava na sua despensa!</p>
+                    <a href="https://www.chefbrico.com/caponata-com-shiitake-grelhado" target="_blank" rel="noopener noreferrer" class="cta-button">Ver na Loja Agora</a>
                </div>
+           </div>
 
-                <h2>Por que Você Vai Amar este Sabor da Horta no Pote</h2>
-                <ul>
-                    <li>✅ <strong>Sabor Complexo e Único:</strong> A combinação do agridoce clássico da caponata com o sabor profundo e defumado do shiitake grelhado.</li>
-                    <li>✅ <strong>Versatilidade Surpreendente:</strong> Perfeito como aperitivo com torradas, molho para massas ou acompanhamento para carnes e saladas.</li>
-                    <li>✅ <strong>Feito Artesanalmente (Técnica Confit):</strong> Cozinhamos lentamente os vegetais em azeite, garantindo uma textura macia e uma profundidade de sabor incomparáveis.</li>
-                </ul>
+            <h2>Por que Você Vai Amar este Sabor da Horta no Pote</h2>
+            <ul>
+                <li>✅ <strong>Sabor Complexo e Único:</strong> A combinação do agridoce clássico da caponata com o sabor profundo e defumado do shiitake grelhado.</li>
+                <li>✅ <strong>Versatilidade Surpreendente:</strong> Perfeito como aperitivo com torradas, molho para massas ou acompanhamento para carnes e saladas.</li>
+                <li>✅ <strong>Feito Artesanalmente (Técnica Confit):</strong> Cozinhamos lentamente os vegetais em azeite, garantindo uma textura macia e uma profundidade de sabor incomparáveis.</li>
+            </ul>
 
-                <div class="testimonial-box">
-                    <blockquote><p>"Simplesmente divina! A melhor caponata que já provei. O shiitake dá um toque super especial. Perfeita com torradas e um bom vinho."</p></blockquote>
-                    <cite>&mdash; Joana F., Cliente ChefBrico </cite>
-                </div>
+            <div class="testimonial-box">
+                <blockquote><p>"Simplesmente divina! A melhor caponata que já provei. O shiitake dá um toque super especial. Perfeita com torradas e um bom vinho."</p></blockquote>
+                <cite>&mdash; Joana F., Cliente ChefBrico </cite>
+            </div>
 
-                <h2>O Que Vem no Pote</h2>
-                <p>Berinjela, pimentão doce, tomate, cebola, alho, tomilho, shiitake grelhado, azeite de oliva extra virgem, vinagre de maçã, gergelim, pimenta do reino preta, za'atar e sal. Ingredientes puros, técnica apurada. E nada mais.</p>
+            <h2>O Que Vem no Pote</h2>
+            <p>Berinjela, pimentão doce, tomate, cebola, alho, tomilho, shiitake grelhado, azeite de oliva extra virgem, vinagre de maçã, gergelim, pimenta do reino preta, za'atar e sal. Ingredientes puros, técnica apurada. E nada mais.</p>
 
-                <h2>Como Usar: Dicas da Chef</h2>
-                <p>Este produto é um "curinga", pronto para usar. Aqui ficam algumas inspirações:</p>
-                <ul class="modo-preparo-lista" style="list-style-type: '💡'; padding-left: 25px;">
-                    <li><strong>Como Bruschetta:</strong> Sobre fatias de pão italiano tostado com um fio de azeite.</li>
-                    <li><strong>Com Massas:</strong> Misture com seu macarrão favorito para um molho rústico e instantâneo.</li>
-                    <li><strong>Em Saladas:</strong> Adicione colheradas sobre uma salada de folhas verdes para um toque gourmet.</li>
-                    <li><strong>Acompanhamento:</strong> Sirva junto com queijos, grelhados ou como parte de uma tábua de frios.</li>
-                </ul>
-                <p class="modo-preparo-final">e muito mais!</p>
+            <h2>Como Usar: Dicas da Chef</h2>
+            <p>Este produto é um "curinga", pronto para usar. Aqui ficam algumas inspirações:</p>
+            <ul class="modo-preparo-lista" style="list-style-type: '💡'; padding-left: 25px;">
+                <li><strong>Como Bruschetta:</strong> Sobre fatias de pão italiano tostado com um fio de azeite.</li>
+                <li><strong>Com Massas:</strong> Misture com seu macarrão favorito para um molho rústico e instantâneo.</li>
+                <li><strong>Em Saladas:</strong> Adicione colheradas sobre uma salada de folhas verdes para um toque gourmet.</li>
+                <li><strong>Acompanhamento:</strong> Sirva junto com queijos, grelhados ou como parte de uma tábua de frios.</li>
+            </ul>
+            <p class="modo-preparo-final">e muito mais!</p>
 
-                <h2>O Toque da ChefBrico</h2>
-                <p><em>"Eu amo a caponata clássica, mas queria dar a ela uma assinatura ChefBrico. O shiitake grelhado traz uma camada de sabor umami e uma sofisticação que eleva o prato. É a minha receita para quem quer um antepasto que seja ao mesmo tempo familiar e surpreendente."</em></p>
-                
-                <h2>Informações Adicionais</h2>
-                <ul>
-                    <li><strong>Peso Líquido:</strong> 180g</li>
-                    <li><strong>Validade:</strong> 3 meses (fechado). Após aberto, consumir em até 7 dias e manter refrigerado.</li>
-                    <li><strong>Dieta e Alergénicos:</strong> 100% Plant-Based. Sem Glúten. Sem Lactose.</li>
-                    <li><strong>Origem:</strong> Produzido Artesanalmente em Brasília-DF pela ChefBrico.</li>
-                </ul>
+            <h2>O Toque da ChefBrico</h2>
+            <p><em>"Eu amo a caponata clássica, mas queria dar a ela uma assinatura ChefBrico. O shiitake grelhado traz uma camada de sabor umami e uma sofisticação que eleva o prato. É a minha receita para quem quer um antepasto que seja ao mesmo tempo familiar e surpreendente."</em></p>
+            
+            <h2>Informações Adicionais</h2>
+            <ul>
+                <li><strong>Peso Líquido:</strong> 180g</li>
+                <li><strong>Validade:</strong> 3 meses (fechado). Após aberto, consumir em até 7 dias e manter refrigerado.</li>
+                <li><strong>Dieta e Alergénicos:</strong> 100% Plant-Based. Sem Glúten. Sem Lactose.</li>
+                <li><strong>Origem:</strong> Produzido Artesanalmente em Brasília-DF pela ChefBrico.</li>
+            </ul>
 
-                <div class="faq-section">
-                    <h2>Dúvidas Frequentes</h2>
-                    <div class="faq-item-accordion">
-                        <button class="accordion-header"><h3>Este antepasto é muito ácido por causa do vinagre?</h3></button>
-                        <div class="accordion-content">
-                            <p>Não, o sabor é perfeitamente equilibrado. A técnica confit de cozinhar lentamente os vegetais no azeite suaviza a acidez do vinagre de maçã, resultando num sabor agridoce complexo e muito agradável, onde nenhum ingrediente se sobrepõe ao outro.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item-accordion">
-                        <button class="accordion-header"><h3>O que é "za'atar"?</h3></button>
-                        <div class="accordion-content">
-                            <p>É uma mistura de especiarias tradicional do Médio Oriente, que geralmente inclui tomilho, gergelim torrado e sumagre. Ele adiciona uma nota herbal, cítrica e levemente tostada que complementa maravilhosamente os vegetais e o shiitake.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item-accordion">
-                        <button class="accordion-header"><h3>A textura dos vegetais é muito mole?</h3></button>
-                        <div class="accordion-content">
-                            <p>A textura é macia e aveludada, mas não desmancha. O cozimento lento na técnica confit amacia os vegetais na medida certa, preservando a sua integridade e criando uma experiência deliciosa na boca, perfeita para espalhar em torradas.</p>
-                        </div>
+            <div class="faq-section">
+                <h2>Dúvidas Frequentes</h2>
+                <div class="faq-item-accordion">
+                    <button class="accordion-header"><h3>Este antepasto é muito ácido por causa do vinagre?</h3></button>
+                    <div class="accordion-content">
+                        <p>Não, o sabor é perfeitamente equilibrado. A técnica confit de cozinhar lentamente os vegetais no azeite suaviza a acidez do vinagre de maçã, resultando num sabor agridoce complexo e muito agradável, onde nenhum ingrediente se sobrepõe ao outro.</p>
                     </div>
                 </div>
-
-                <div class="author-box">
-                    <img src="/imagens/maria-conceicao-pra-voce.png" alt="Retrato de Maria Conceição, fundadora da ChefBrico" class="author-image">
-                    <div class="author-info">
-                        <h4>Sobre a Autora</h4>
-                        <p>Maria Conceição é a mente e a alma por trás da ChefBrico... <a href="/nossa-filosofia.html">Conheça mais sobre sua filosofia aqui</a>.</p>
+                <div class="faq-item-accordion">
+                    <button class="accordion-header"><h3>O que é "za'atar"?</h3></button>
+                    <div class="accordion-content">
+                        <p>É uma mistura de especiarias tradicional do Médio Oriente, que geralmente inclui tomilho, gergelim torrado e sumagre. Ele adiciona uma nota herbal, cítrica e levemente tostada que complementa maravilhosamente os vegetais e o shiitake.</p>
+                    </div>
+                </div>
+                <div class="faq-item-accordion">
+                    <button class="accordion-header"><h3>A textura dos vegetais é muito mole?</h3></button>
+                    <div class="accordion-content">
+                        <p>A textura é macia e aveludada, mas não desmancha. O cozimento lento na técnica confit amacia os vegetais na medida certa, preservando a sua integridade e criando uma experiência deliciosa na boca, perfeita para espalhar em torradas.</p>
                     </div>
                 </div>
             </div>
-        </article>
-    </main>
 
-    {% include "rodape.html" %}
-
-    <script src="/js/script.js"></script>
-
-</body>
-</html>
+            <div class="author-box">
+                <img src="/imagens/maria-conceicao-pra-voce.png" alt="Retrato de Maria Conceição, fundadora da ChefBrico" class="author-image">
+                <div class="author-info">
+                    <h4>Sobre a Autora</h4>
+                    <p>Maria Conceição é a mente e a alma por trás da ChefBrico... <a href="/comida-de-verdade/">Conheça mais sobre sua filosofia aqui</a>.</p>
+                </div>
+            </div>
+        </div>
+    </article>
+</main>
