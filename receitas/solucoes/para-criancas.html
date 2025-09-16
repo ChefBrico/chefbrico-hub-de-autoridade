@@ -1,39 +1,64 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Opções de Comida Saudável para Crianças | ChefBrico</title>
-    <meta name="description" content="Refeições práticas, 100% naturais e com sabor de casa que as crianças amam. Conheça nossas sopinhas e pratos aprovados pelos pequenos.">
-    <link rel="stylesheet" href="/css/style.css">
-    </head>
-<body>
- {% include "cabecalho.html" %}
-    <main class="container">
-        <div class="page-header-local">
-            <h1>Nutrição com Sabor de Abraço para seus Filhos</h1>
-            <p class="recipe-subtitle">Sabemos que a alimentação dos pequenos é uma prioridade. Conheça as opções da ChefBrico que unem o sabor que eles amam com os nutrientes que eles precisam.</p>
+---
+layout: base.njk
+permalink: /receitas/solucoes/para-criancas/
+title: "Opções de Comida Saudável para Crianças | ChefBrico"
+description: "Refeições práticas, 100% naturais e com sabor de casa que as crianças amam. Conheça nossas sopinhas e pratos aprovados pelos pequenos."
+schema:
+  "@context": https://schema.org
+  "@type": Article
+  mainEntityOfPage":
+    "@type": WebPage
+    "@id": https://receitas.chefbrico.com/receitas/solucoes/para-criancas/
+  headline: "O Guia da Comida Saudável e Prática para Crianças"
+  description: "Um guia da Chef Conceição com as melhores refeições para os pequenos, garantindo um prato prático, delicioso, 100% natural e aprovado por eles."
+  author":
+    "@id": https://receitas.chefbrico.com/#person-maria
+  publisher":
+    "@id": https://receitas.chefbrico.com/#organization
+  image: https://receitas.chefbrico.com/imagens/solucao-criancas-banner.png
+---
+<main class="container">
+    <div class="page-header-local">
+        <h1>Nutrição com Sabor de Abraço para seus Filhos</h1>
+        <p class="recipe-subtitle">Sabemos que a alimentação dos pequenos é uma prioridade. Conheça as opções da ChefBrico que unem o sabor que eles amam com os nutrientes que eles precisam.</p>
+    </div>
+    <div id="voz-da-chef-box" class="author-box">
+        <img src="/imagens/maria-conceicao-pra-voce.png" alt="Retrato de Maria Conceição" class="author-image">
+        <div class="author-info">
+            <h4>Uma mensagem da Maria Conceição (e mãe)</h4>
+            <p>Como mãe, sei da nossa busca por uma alimentação infantil que seja saudável e, ao mesmo tempo, deliciosa. Criei e testei cada um destes pratos com meus filhos. São receitas com sabor de infância, 100% naturais e aprovadas pelos paladares mais exigentes!</p>
         </div>
-        <div id="voz-da-chef-box" class="author-box">
-             <img src="/imagens/maria-conceicao-pra-voce.png" alt="Retrato de Maria Conceição" class="author-image">
-            <div class="author-info">
-                <h4>Uma mensagem da Maria Conceição (e mãe)</h4>
-                <p>Como mãe, sei da nossa busca por uma alimentação infantil que seja saudável e, ao mesmo tempo, deliciosa. Criei e testei cada um destes pratos com meus filhos. São receitas com sabor de infância, 100% naturais e aprovadas pelos paladares mais exigentes!</p>
-            </div>
+    </div>
+    <div class="post-content">
+        <h2 style="text-align: center; margin-top: 50px;">As Sopas Favoritas da Criançada</h2>
+        <div class="post-grid" style="margin-top: 30px;">
+            <a href="/receitas/sopas-funcionais/sopa-biza-vo/" class="card">
+                <img src="/imagens/sopinha-da-biza-vo-chefbrico.png" alt="Sopinha da Biza Vó" class="card-image">
+                <div class="card-content"><span class="card-category">Receita</span><h3>Sopinha da Biza Vó</h3></div>
+            </a>
+            <a href="/receitas/sopas-funcionais/jeitinho-de-vo/" class="card">
+                <img src="/imagens/jeitinh-vo-sopa-chefbrico.png" alt="Sopa Jeitinho de Vó Lentilha" class="card-image">
+                <div class="card-content"><span class="card-category">Receita</span><h3>Sopa Jeitinho de Vó</h3></div>
+            </a>
+            <a href="/receitas/sopas-funcionais/canja-veg/" class="card">
+                <img src="/imagens/Canja-Veg-bowl-marrom.png" alt="Canja Vegana" class="card-image">
+                <div class="card-content"><span class="card-category">Receita</span><h3>Canja Vegana Funcional</h3></div>
+            </a>
         </div>
-        <div class="post-content">
-            <h2 style="text-align: center; margin-top: 50px;">As Sopas Favoritas da Criançada</h2>
-            <div class="product-grid" style="margin-top: 30px;">
-                </div>
-            <h2 style="text-align: center; margin-top: 50px;">Pratinhos que Eles Pedem Bis</h2>
-            <div class="product-grid" style="margin-top: 30px;">
-                </div>
+        <h2 style="text-align: center; margin-top: 50px;">Pratinhos que Eles Pedem Bis</h2>
+        <div class="post-grid" style="margin-top: 30px;">
+            <a href="/receitas/risotos/tomate-manjericao/" class="card">
+                <img src="/imagens/risoto-tomate-manjericao-chefbrico.png" alt="Risoto de Tomate e Manjericão" class="card-image">
+                <div class="card-content"><span class="card-category">Receita</span><h3>Risoto de Tomate e Manjericão</h3></div>
+             </a>
+            <a href="/receitas/risotos/zucchini/" class="card">
+                <img src="/imagens/risoto-zucchini-arboreo-chefbrico.png" alt="Risoto de Zucchini e Alho-Poró" class="card-image">
+                <div class="card-content"><span class="card-category">Receita</span><h3>Risoto de Zucchini e Alho-Poró</h3></div>   
+            </a>
+            <a href="/receitas/refeicoes-integrais/baiao-de-dois/" class="card">
+                <img src="/imagens/baiao-de-2-refeicao-pratica-chefbrico.png" alt="Baião de Dois de Grãos Integrais" class="card-image">
+                <div class="card-content"><span class="card-category">Receita</span><h3>Baião de Dois Integral</h3></div>
+            </a>
         </div>
-     </main>
-
-    {% include "rodape.html" %}
-
-    <script src="/js/script.js"></script>
-
-</body>
-</html>
+    </div>
+</main>
