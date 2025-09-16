@@ -1,51 +1,64 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marmita Saudável e Prática: Otimize sua Semana | ChefBrico</title>
-    <meta name="description" content="Planeje o almoço da semana sem esforço. Conheça nossas refeições com grãos integrais e sopas nutritivas, perfeitas para a marmita.">
-    <link rel="stylesheet" href="/css/style.css">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://receitas.chefbrico.com/solucao-marmita-saudavel.html" },
-      "headline": "O Guia da Marmita Inteligente e Saudável",
-      "description": "Um guia da Chef Conceição com as melhores refeições para levar ao trabalho, garantindo um almoço prático, delicioso e 100% natural.",
-      "author": { "@type": "Person", "@id": "https://receitas.chefbrico.com/nossa-filosofia.html#maria-conceicao" },
-      "publisher": { "@type": "Organization", "@id": "https://www.chefbrico.com/#organization" },
-      "image": "https://receitas.chefbrico.com/images/solucao-marmita-banner.png"
-    }
-    </script>
-</head>
-<body>
- {% include "cabecalho.html" %}
-    <main class="container">
-        <div class="page-header-local">
-            <h1>A Revolução da Marmita Saudável</h1>
-            <p class="recipe-subtitle">Chega de almoços sem graça ou caros. Descubra como as soluções ChefBrico podem transformar a sua marmita em um momento de prazer e nutrição.</p>
+---
+layout: base.njk
+permalink: /receitas/solucoes/marmita-saudavel/
+title: "Marmita Saudável e Prática: Otimize sua Semana | ChefBrico"
+description: "Planeje o almoço da semana sem esforço. Conheça nossas refeições com grãos integrais e sopas nutritivas, perfeitas para a marmita."
+schema:
+  "@context": https://schema.org
+  "@type": Article
+  mainEntityOfPage":
+    "@type": WebPage
+    "@id": https://receitas.chefbrico.com/receitas/solucoes/marmita-saudavel/
+  headline: "O Guia da Marmita Inteligente e Saudável"
+  description: "Um guia da Chef Conceição com as melhores refeições para levar ao trabalho, garantindo um almoço prático, delicioso e 100% natural."
+  author":
+    "@id": https://receitas.chefbrico.com/#person-maria
+  publisher":
+    "@id": https://receitas.chefbrico.com/#organization
+  image: https://receitas.chefbrico.com/images/solucao-marmita-banner.png
+---
+<main class="container">
+    <div class="page-header-local">
+        <h1>A Revolução da Marmita Saudável</h1>
+        <p class="recipe-subtitle">Chega de almoços sem graça ou caros. Descubra como as soluções ChefBrico podem transformar a sua marmita em um momento de prazer e nutrição.</p>
+    </div>
+    <div id="voz-da-chef-box" class="author-box">
+        <img src="/imagens/maria-conceicao-pra-voce.png" alt="Retrato de Maria Conceição" class="author-image">
+        <div class="author-info">
+            <h4>Uma mensagem da Maria Conceição</h4>
+            <p>A marmita é um ato de autocuidado. É a garantia de uma refeição nutritiva no meio da correria. Selecionei aqui os pratos que são meus companheiros de jornada, fáceis de preparar e deliciosos para reaquecer.</p>
         </div>
-        <div id="voz-da-chef-box" class="author-box">
-            <img src="/imagens/maria-conceicao-pra-voce.png" alt="Retrato de Maria Conceição" class="author-image">
-            <div class="author-info">
-                <h4>Uma mensagem da Maria Conceição</h4>
-                <p>A marmita é um ato de autocuidado. É a garantia de uma refeição nutritiva no meio da correria. Selecionei aqui os pratos que são meus companheiros de jornada, fáceis de preparar e deliciosos para reaquecer.</p>
-            </div>
+    </div>
+    <div class="post-content">
+        <h2 style="text-align: center; margin-top: 50px;">Refeições Completas que Surpreendem</h2>
+        <div class="post-grid" style="margin-top: 30px;">
+            <a href="/receitas/refeicoes-integrais/baiao-de-dois/" class="card">
+                <img src="/imagens/baiao-de-2-refeicao-pratica-chefbrico.png" alt="Baião de Dois de Grãos Integrais" class="card-image">
+                <div class="card-content"><span class="card-category">Receita</span><h3>Baião de Dois Integral</h3></div>
+            </a>
+            <a href="/receitas/refeicoes-integrais/mediterranea/" class="card">
+                <img src="/imagens/Refeic%CC%A7a%CC%83o-gra%CC%83o-de-bico-arroz-vermelho-integral-chefbrico.png" alt="Refeição Mediterrânea" class="card-image">
+                <div class="card-content"><span class="card-category">Receita</span><h3>Refeição Mediterrânea</h3></div>
+            </a>
+             <a href="/receitas/refeicoes-integrais/arroz-negro-funghi/" class="card">
+                <img src="/imagens/Refeicao-arroz-negro-integral-funghi-chefbrico.png" alt="Arroz Negro com Funghi" class="card-image">
+                <div class="card-content"><span class="card-category">Receita</span><h3>Arroz Negro com Funghi</h3></div>
+            </a>
         </div>
-        <div class="post-content">
-            <h2 style="text-align: center; margin-top: 50px;">Refeições Completas que Surpreendem</h2>
-            <div class="product-grid" style="margin-top: 30px;">
-                </div>
-            <h2 style="text-align: center; margin-top: 50px;">Sopas que Saciam e Nutrem</h2>
-            <div class="product-grid" style="margin-top: 30px;">
-                </div>
+        <h2 style="text-align: center; margin-top: 50px;">Sopas que Saciam e Nutrem</h2>
+        <div class="post-grid" style="margin-top: 30px;">
+            <a href="/receitas/sopas-funcionais/creme-fit/" class="card">
+                <img src="/imagens/creme-fit-sopinha-chefbrico.png" alt="Sopa Creme Fit" class="card-image">
+                <div class="card-content"><span class="card-category">Receita</span><h3>Sopa Creme Fit (Proteica)</h3></div>
+            </a>
+            <a href="/receitas/sopas-funcionais/low-carb-funghi/" class="card">
+                <img src="/imagens/low-carb-funghi-lentilha-negra-chefbrico.png" alt="Sopa Low Carb Funghi" class="card-image">
+                <div class="card-content"><span class="card-category">Receita</span><h3>Sopa Low Carb Funghi</h3></div>
+            </a>
+            <a href="/receitas/sopas-funcionais/canja-veg/" class="card">
+                <img src="/imagens/Canja-Veg-bowl-marrom.png" alt="Canja Vegana" class="card-image">
+                <div class="card-content"><span class="card-category">Receita</span><h3>Canja Vegana Funcional</h3></div>
+            </a>
         </div>
-    </main>
-
-    {% include "rodape.html" %}
-
-    <script src="/js/script.js"></script>
-
-</body>
-</html>
+    </div>
+</main>
