@@ -1,101 +1,133 @@
-# Backend: Ligação direta com o GitHub
+# ===================================================================
+# PAINEL DE COMANDO v2.0 - REVISTA DIGITAL CHEFBRICO
+# Estruturado para máxima usabilidade e performance de SEO.
+# ===================================================================
+
+# --- Configuração do Backend e Mídia ---
 backend:
   name: github
-  repo: ChefBrico/chefbrico-hub-de-autoridade # O seu repositório
-  branch: desenvolvimento # O seu ramo
+  repo: ChefBrico/chefbrico-hub-de-autoridade
+  branch: desenvolvimento
+  use_graphql: true
 
-# Media e Coleções continuam iguais
-media_folder: "imagens/uploads"
-public_folder: "/imagens/uploads"
+# --- Configurações da Interface do Painel ---
+locale: 'pt'                             # Traduz a interface do painel para o Português.
+publish_mode: editorial_workflow         # Habilita um fluxo de trabalho com Rascunho > Em Revisão > Pronto. Essencial para equipes.
+media_folder: "imagens/uploads"          # Onde as imagens enviadas pelo painel serão salvas.
+public_folder: "/imagens/uploads"        # Como o site irá referenciar essas imagens.
 
+# ===================================================================
+# COLEÇÕES DE CONTEÚDO
+# O coração do site, organizado de forma intuitiva.
+# ===================================================================
 collections:
-  - name: "paginas_principais"
-    label: "Páginas Principais"
-    files:
-      - file: "index.html"
-        label: "Página Inicial (Homepage)"
-        name: "homepage"
-        fields:
-          - { label: "Título (SEO)", name: "title", widget: "string" }
-          - { label: "Descrição (SEO)", name: "description", widget: "string" }
-          - { label: "Conteúdo da Página", name: "body", widget: "markdown" }
-      - file: "comida-de-verdade/index.html"
-        label: "Página 'Comida de Verdade'"
-        name: "comida_de_verdade"
-        fields:
-          - { label: "Título (SEO)", name: "title", widget: "string" }
-          - { label: "Descrição (SEO)", name: "description", widget: "string" }
-          - { label: "Conteúdo da Página", name: "body", widget: "markdown" }
-      - file: "onde-encontrar/index.html"
-        label: "Página Principal 'Onde Encontrar'"
-        name: "onde_encontrar_hub"
-        fields:
-          - { label: "Título (SEO)", name: "title", widget: "string" }
-          - { label: "Descrição (SEO)", name: "description", widget: "string" }
-          - { label: "Conteúdo da Página", name: "body", widget: "markdown" }
-      - file: "receitas/index.html"
-        label: "Página do Catálogo de Receitas"
-        name: "catalogo_receitas"
-        fields:
-          - { label: "Título (SEO)", name: "title", widget: "string" }
-          - { label: "Descrição (SEO)", name: "description", widget: "string" }
-          - { label: "Conteúdo da Página", name: "body", widget: "markdown" }
 
+  # --- A coleção mais importante: Receitas ---
+  - name: "receitas"
+    label: "🍳 Receitas"
+    label_singular: "Nova Receita"
+    folder: "receitas"
+    create: true
+    slug: "{{slug}}"
+    path: "{{folder}}/{{category}}/{{slug}}" # Salva o arquivo na subpasta correta baseado na categoria!
+    summary: "{{title}} | Categoria: {{category}}" # Melhora a visualização da lista de receitas.
+    fields:
+      - { label: "Título da Receita", name: "title", widget: "string", hint: "O nome principal do prato. Ex: Risoto de Funghi Secchi." }
+      - { label: "Data de Publicação", name: "date", widget: "datetime" }
+      - { label: "Imagem de Destaque", name: "image", widget: "image" }
+      - { label: "Categoria", name: "category", widget: "select", options: ["risotos", "sopas-funcionais", "refeicoes-integrais", "emporio-da-chef", "solucoes"], hint: "Escolha a qual grupo esta receita pertence." }
+      - { label: "Descrição Curta", name: "summary", widget: "text", hint: "Um resumo de 1-2 frases sobre o prato. Ótimo para SEO e prévias." }
+      
+      - label: "Detalhes do Prato"
+        name: "details"
+        widget: "object"
+        hint: "Informações essenciais para o Schema de Receita do Google."
+        fields:
+          - { label: "Serve (Nº de Pessoas)", name: "servings", widget: "number", min: 1, default: 1 }
+          - { label: "Tempo de Preparo (Formato ISO)", name: "prepTime", widget: "string", hint: "Ex: PT30M para 30 minutos, PT1H para 1 hora." }
+          - { label: "Tempo de Cozimento (Formato ISO)", name: "cookTime", widget: "string", hint: "Ex: PT45M para 45 minutos." }
+
+      - label: "Ingredientes"
+        name: "ingredients"
+        widget: "list"
+        fields:
+          - { label: "Quantidade", name: "quantity", widget: "string", hint: "Ex: 100g, 1 xícara, 2 unidades" }
+          - { label: "Ingrediente", name: "item", widget: "string", hint: "Ex: Arroz Arbóreo" }
+
+      - label: "Modo de Preparo"
+        name: "instructions"
+        widget: "list"
+        hint: "Adicione cada passo do preparo separadamente."
+        field: { label: "Passo", name: "step", widget: "markdown" }
+  
+  # --- Blog para E-E-A-T e autoridade ---
   - name: "blog"
-    label: "Blog"
+    label: "✍️ Blog"
+    label_singular: "Novo Artigo"
     folder: "blog"
     create: true
     slug: "{{slug}}"
+    summary: "{{title}} | {{date}}"
     fields:
       - { label: "Título do Artigo", name: "title", widget: "string" }
-      - { label: "Descrição (SEO)", name: "description", widget: "string" }
-      - { label: "Conteúdo do Artigo", name: "body", widget: "markdown" }
+      - { label: "Data de Publicação", name: "date", widget: "datetime" }
+      - { label: "Autor", name: "author", widget: "string", default: "Chef Maria Conceição" }
+      - { label: "Imagem de Destaque", name: "image", widget: "image" }
+      - { label: "Resumo do Artigo", name: "summary", widget: "text", hint: "Um parágrafo curto que aparece nas listagens do blog." }
+      - { label: "Conteúdo Principal", name: "body", widget: "markdown" }
 
-  - name: "risotos"
-    label: "Receitas - Risotos"
-    folder: "receitas/risotos"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Título da Receita", name: "title", widget: "string" }
-      - { label: "Descrição (SEO)", name: "description", widget: "string" }
-      - { label: "Conteúdo da Página da Receita", name: "body", widget: "markdown" }
-
-  - name: "sopas"
-    label: "Receitas - Sopas Funcionais"
-    folder: "receitas/sopas-funcionais"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Título da Sopa", name: "title", widget: "string" }
-      - { label: "Descrição (SEO)", name: "description", widget: "string" }
-      - { label: "Conteúdo da Página da Sopa", name: "body", widget: "markdown" }
-
-  - name: "refeicoes"
-    label: "Receitas - Refeições Integrais"
-    folder: "receitas/refeicoes-integrais"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Título da Refeição", name: "title", widget: "string" }
-      - { label: "Descrição (SEO)", name: "description", widget: "string" }
-      - { label: "Conteúdo da Página da Refeição", name: "body", widget: "markdown" }
-
-  - name: "emporio"
-    label: "Receitas - Empório da Chef"
-    folder: "receitas/emporio-da-chef"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Título do Produto", name: "title", widget: "string" }
-      - { label: "Descrição (SEO)", name: "description", widget: "string" }
-      - { label: "Conteúdo da Página do Produto", name: "body", widget: "markdown" }
-
-  - name: "bairros"
-    label: "Páginas de Bairros"
+  # --- Páginas de SEO Local ---
+  - name: "locais"
+    label: "📍 Onde Encontrar (SEO Local)"
+    label_singular: "Novo Local"
     folder: "onde-encontrar"
-    create: false
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}}"
     fields:
-      - { label: "Título da Página (SEO)", name: "title", widget: "string" }
-      - { label: "Descrição (SEO)", name: "description", widget: "string" }
-      - { label: "Conteúdo da Página", name: "body", widget: "markdown" }
+      - { label: "Nome da Região/Bairro", name: "title", widget: "string", hint: "Ex: Asa Sul, Brasília - DF" }
+      - { label: "Endereço Físico (se aplicável)", name: "address", widget: "string", required: false }
+      - { label: "Telefone de Contato (se aplicável)", name: "phone", widget: "string", required: false }
+      - { label: "Link para o Google Maps (se aplicável)", name: "map_link", widget: "string", required: false }
+      - { label: "Conteúdo da Página", name: "body", widget: "markdown", hint: "Descreva os parceiros, pontos de venda ou a relação da ChefBrico com esta localidade." }
+
+  # --- Páginas fixas do site ---
+  - name: "paginas"
+    label: "📄 Páginas do Site"
+    files:
+      - label: "Página Inicial"
+        name: "home"
+        file: "index.md" # Assumindo que suas páginas usam markdown
+        fields:
+          - { label: "Título Principal (H1)", name: "title", widget: "string" }
+          - { label: "Conteúdo", name: "body", widget: "markdown" }
+          - { label: "Título para SEO", name: "seo_title", widget: "string" }
+          - { label: "Descrição para SEO", name: "seo_description", widget: "text" }
+      - label: "Sobre (Comida de Verdade)"
+        name: "sobre"
+        file: "comida-de-verdade/index.md"
+        fields:
+          - { label: "Título da Página", name: "title", widget: "string" }
+          - { label: "Conteúdo", name: "body", widget: "markdown" }
+          - { label: "Título para SEO", name: "seo_title", widget: "string" }
+          - { label: "Descrição para SEO", name: "seo_description", widget: "text" }
+
+  # --- Configurações globais do site (O Diferencial) ---
+  - name: "settings"
+    label: "⚙️ Configurações Gerais"
+    editor:
+      preview: false
+    files:
+      - label: "Dados do Site"
+        name: "site_settings"
+        file: "_data/settings.yml" # Salva os dados em um arquivo que o Eleventy pode usar globalmente.
+        fields:
+          - { label: "Nome do Site", name: "site_name", widget: "string", default: "Revista Digital ChefBrico" }
+          - { label: "E-mail de Contato Principal", name: "contact_email", widget: "string" }
+          - label: "Redes Sociais"
+            name: "social"
+            widget: "object"
+            fields:
+              - { label: "Link do Instagram", name: "instagram", widget: "string", required: false }
+              - { label: "Link do Facebook", name: "facebook", widget: "string", required: false }
+              - { label: "Link do YouTube", name: "youtube", widget: "string", required: false }
