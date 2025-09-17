@@ -1,9 +1,9 @@
-# Backend: Como o CMS se conecta ao seu GitHub
 backend:
   name: github
   repo: ChefBrico/chefbrico-hub-de-autoridade # IMPORTANTE: Confirme se este é o caminho certo do seu repositório
   branch: desenvolvimento
-  auth_type: pkce # <-- A NOSSA NOVA SOLUÇÃO
+  auth_type: pkce # <-- ESTA É A MUDANÇA CRUCIAL
+  app_id: InsiraAquiOSeuClientID #Ov23lijlwvDqTjqEnXSe <-- ADICIONE O SEU CLIENT ID AQUI
 
 # URL do site para pré-visualização e links
 display_url: https://receitas.chefbrico.com
