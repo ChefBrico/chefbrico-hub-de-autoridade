@@ -1,7 +1,9 @@
 # Backend: Como o CMS se conecta ao seu GitHub
 backend:
-  name: git-gateway
-  branch: desenvolvimento # Ramo principal do seu trabalho
+  name: github
+  repo: ChefBrico/chefbrico-hub-de-autoridade # IMPORTANTE: Confirme se este é o caminho certo do seu repositório
+  branch: desenvolvimento
+  auth_type: pkce # <-- A NOSSA NOVA SOLUÇÃO
 
 # URL do site para pré-visualização e links
 display_url: https://receitas.chefbrico.com
