@@ -3,6 +3,11 @@ backend:
   name: git-gateway
   branch: desenvolvimento # Ramo principal do seu trabalho
 
+# URL do site para pré-visualização e links
+display_url: https://receitas.chefbrico.com
+# Logo que aparecerá no canto superior esquerdo do painel
+logo_url: https://receitas.chefbrico.com/imagens/flamula-logo-chefbrico.png
+
 # Media: Onde as imagens enviadas pelo painel serão guardadas
 media_folder: "imagens/uploads" # Pasta no repositório
 public_folder: "/imagens/uploads" # Como o site acede à pasta
@@ -63,8 +68,6 @@ collections:
       - { label: "Título da Receita", name: "title", widget: "string" }
       - { label: "Descrição (SEO)", name: "description", widget: "string" }
       - { label: "Conteúdo da Página da Receita", name: "body", widget: "markdown" }
-      # NOTA: Os campos do Schema (ingredientes, tempo, etc.) são muito complexos
-      # para editar um a um. A melhor abordagem é editar o conteúdo principal no campo "body" acima.
 
   - name: "sopas"
     label: "Receitas - Sopas Funcionais"
