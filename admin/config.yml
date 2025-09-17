@@ -1,33 +1,107 @@
+# Backend: Como o CMS se conecta ao seu GitHub
 backend:
   name: git-gateway
-  branch: desenvolvimento # Ou o nome do seu ramo principal, ex: master
+  branch: desenvolvimento # Ramo principal do seu trabalho
 
-media_folder: "imagens/uploads" # Pasta onde as novas imagens serão guardadas
-public_folder: "/imagens/uploads" # Como aceder a essas imagens no site
+# Media: Onde as imagens enviadas pelo painel serão guardadas
+media_folder: "imagens/uploads" # Pasta no repositório
+public_folder: "/imagens/uploads" # Como o site acede à pasta
 
+# Coleções: A organização do seu conteúdo editável
 collections:
-  # Coleção para editar as páginas de Micro-Região (Bairros)
-  - name: "paginas_bairros"
-    label: "Páginas de Bairros"
-    folder: "onde-encontrar" # IMPORTANTE: Confirme se esta é a pasta onde estão os ficheiros dos bairros
-    create: false # Impede a criação de novas páginas de bairro, permite apenas editar
+  # Coleção para editar as páginas principais e únicas do site
+  - name: "paginas_principais"
+    label: "Páginas Principais"
+    files:
+      - file: "index.html"
+        label: "Página Inicial (Homepage)"
+        name: "homepage"
+        fields:
+          - { label: "Título (SEO)", name: "title", widget: "string" }
+          - { label: "Descrição (SEO)", name: "description", widget: "string" }
+          - { label: "Conteúdo da Página", name: "body", widget: "markdown" }
+      - file: "comida-de-verdade/index.html"
+        label: "Página 'Comida de Verdade'"
+        name: "comida_de_verdade"
+        fields:
+          - { label: "Título (SEO)", name: "title", widget: "string" }
+          - { label: "Descrição (SEO)", name: "description", widget: "string" }
+          - { label: "Conteúdo da Página", name: "body", widget: "markdown" }
+      - file: "onde-encontrar/index.html"
+        label: "Página Principal 'Onde Encontrar'"
+        name: "onde_encontrar_hub"
+        fields:
+          - { label: "Título (SEO)", name: "title", widget: "string" }
+          - { label: "Descrição (SEO)", name: "description", widget: "string" }
+          - { label: "Conteúdo da Página", name: "body", widget: "markdown" }
+      - file: "receitas/index.html"
+        label: "Página do Catálogo de Receitas"
+        name: "catalogo_receitas"
+        fields:
+          - { label: "Título (SEO)", name: "title", widget: "string" }
+          - { label: "Descrição (SEO)", name: "description", widget: "string" }
+          - { label: "Conteúdo da Página", name: "body", widget: "markdown" }
+
+  # Coleção para os artigos do Blog
+  - name: "blog"
+    label: "Blog"
+    folder: "blog"
+    create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Título da Página (SEO)", name: "title", widget: "string" }
-      - { label: "Descrição Curta (SEO)", name: "description", widget: "string" }
-      - { label: "Depoimento do Cliente", name: "review_body", widget: "text" }
-      - { label: "Nome do Cliente (Autor do Depoimento)", name: "review_author", widget: "string" }
-      - { label: "Conteúdo Principal da Página", name: "body", widget: "markdown" }
+      - { label: "Título do Artigo", name: "title", widget: "string" }
+      - { label: "Descrição (SEO)", name: "description", widget: "string" }
+      - { label: "Conteúdo do Artigo", name: "body", widget: "markdown" }
 
-  # Coleção para CRIAR e EDITAR Receitas
-  - name: "receitas"
-    label: "Receitas"
-    folder: "receitas" # IMPORTANTE: Confirme se esta é a pasta onde ficam os ficheiros das receitas
-    create: true # Permite que a Maria Conceição crie novas receitas
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+  # --- COLEÇÕES DE RECEITAS (SEPARADAS POR CATEGORIA) ---
+  - name: "risotos"
+    label: "Receitas - Risotos"
+    folder: "receitas/risotos"
+    create: true
+    slug: "{{slug}}"
     fields:
       - { label: "Título da Receita", name: "title", widget: "string" }
-      - { label: "Data de Publicação", name: "date", widget: "datetime" }
-      - { label: "Imagem Principal da Receita", name: "image", widget: "image" }
-      - { label: "Descrição Curta (para SEO e prévias)", name: "description", widget: "string" }
-      - { label: "Corpo da Receita (Ingredientes, Modo de Preparo)", name: "body", widget: "markdown" }
+      - { label: "Descrição (SEO)", name: "description", widget: "string" }
+      - { label: "Conteúdo da Página da Receita", name: "body", widget: "markdown" }
+      # NOTA: Os campos do Schema (ingredientes, tempo, etc.) são muito complexos
+      # para editar um a um. A melhor abordagem é editar o conteúdo principal no campo "body" acima.
+
+  - name: "sopas"
+    label: "Receitas - Sopas Funcionais"
+    folder: "receitas/sopas-funcionais"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título da Sopa", name: "title", widget: "string" }
+      - { label: "Descrição (SEO)", name: "description", widget: "string" }
+      - { label: "Conteúdo da Página da Sopa", name: "body", widget: "markdown" }
+
+  - name: "refeicoes"
+    label: "Receitas - Refeições Integrais"
+    folder: "receitas/refeicoes-integrais"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título da Refeição", name: "title", widget: "string" }
+      - { label: "Descrição (SEO)", name: "description", widget: "string" }
+      - { label: "Conteúdo da Página da Refeição", name: "body", widget: "markdown" }
+
+  - name: "emporio"
+    label: "Receitas - Empório da Chef"
+    folder: "receitas/emporio-da-chef"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título do Produto", name: "title", widget: "string" }
+      - { label: "Descrição (SEO)", name: "description", widget: "string" }
+      - { label: "Conteúdo da Página do Produto", name: "body", widget: "markdown" }
+
+  # Coleção para editar as 17 páginas de Micro-Região (Bairros)
+  - name: "bairros"
+    label: "Páginas de Bairros"
+    folder: "onde-encontrar"
+    create: false # Impede a criação de novas páginas, permite apenas editar as existentes
+    fields:
+      - { label: "Título da Página (SEO)", name: "title", widget: "string" }
+      - { label: "Descrição (SEO)", name: "description", widget: "string" }
+      - { label: "Conteúdo da Página", name: "body", widget: "markdown" }
