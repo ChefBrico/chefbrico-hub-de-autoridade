@@ -1,22 +1,14 @@
+# Backend: Ligação direta com o GitHub
 backend:
   name: github
-  repo: ChefBrico/chefbrico-hub-de-autoridade # IMPORTANTE: Confirme se este é o caminho certo do seu repositório
-  branch: desenvolvimento
-  auth_type: pkce # <-- ESTA É A MUDANÇA CRUCIAL
-  app_id: InsiraAquiOSeuClientID #Ov23lijlwvDqTjqEnXSe <-- ADICIONE O SEU CLIENT ID AQUI
+  repo: ChefBrico/chefbrico-hub-de-autoridade # O seu repositório
+  branch: desenvolvimento # O seu ramo
 
-# URL do site para pré-visualização e links
-display_url: https://receitas.chefbrico.com
-# Logo que aparecerá no canto superior esquerdo do painel
-logo_url: https://receitas.chefbrico.com/imagens/flamula-logo-chefbrico.png
+# Media e Coleções continuam iguais
+media_folder: "imagens/uploads"
+public_folder: "/imagens/uploads"
 
-# Media: Onde as imagens enviadas pelo painel serão guardadas
-media_folder: "imagens/uploads" # Pasta no repositório
-public_folder: "/imagens/uploads" # Como o site acede à pasta
-
-# Coleções: A organização do seu conteúdo editável
 collections:
-  # Coleção para editar as páginas principais e únicas do site
   - name: "paginas_principais"
     label: "Páginas Principais"
     files:
@@ -49,7 +41,6 @@ collections:
           - { label: "Descrição (SEO)", name: "description", widget: "string" }
           - { label: "Conteúdo da Página", name: "body", widget: "markdown" }
 
-  # Coleção para os artigos do Blog
   - name: "blog"
     label: "Blog"
     folder: "blog"
@@ -60,7 +51,6 @@ collections:
       - { label: "Descrição (SEO)", name: "description", widget: "string" }
       - { label: "Conteúdo do Artigo", name: "body", widget: "markdown" }
 
-  # --- COLEÇÕES DE RECEITAS (SEPARADAS POR CATEGORIA) ---
   - name: "risotos"
     label: "Receitas - Risotos"
     folder: "receitas/risotos"
@@ -101,11 +91,10 @@ collections:
       - { label: "Descrição (SEO)", name: "description", widget: "string" }
       - { label: "Conteúdo da Página do Produto", name: "body", widget: "markdown" }
 
-  # Coleção para editar as 17 páginas de Micro-Região (Bairros)
   - name: "bairros"
     label: "Páginas de Bairros"
     folder: "onde-encontrar"
-    create: false # Impede a criação de novas páginas, permite apenas editar as existentes
+    create: false
     fields:
       - { label: "Título da Página (SEO)", name: "title", widget: "string" }
       - { label: "Descrição (SEO)", name: "description", widget: "string" }
