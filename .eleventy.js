@@ -1,4 +1,4 @@
-// A primeira linha importa  o plugin que vai gerar o sitemap.
+// A primeira linha importa o plugin que vai gerar o sitemap.
 const sitemap = require("@quasibit/eleventy-plugin-sitemap");
 
 module.exports = function(eleventyConfig) {
@@ -15,6 +15,11 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./css");
   eleventyConfig.addPassthroughCopy("./js");
   eleventyConfig.addPassthroughCopy("./imagens");
+
+  // ===================================================================
+  // A ORDEM FINAL QUE FALTAVA: Copia a pasta /admin para o site final.
+  eleventyConfig.addPassthroughCopy("admin");
+  // ===================================================================
 
   // Copia também os arquivos individuais da raiz do projeto.
   eleventyConfig.addPassthroughCopy("./apple-touch-icon.png");
