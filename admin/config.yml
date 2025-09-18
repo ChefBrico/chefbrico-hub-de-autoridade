@@ -1,132 +1,81 @@
 # ===================================================================
-# PAINEL DE COMANDO v2.0 - REVISTA DIGITAL CHEFBRICO
-# Estruturado para máxima usabilidade e performance de SEO.
+# PAINEL DE COMANDO v3.0 - REVISTA DIGITAL CHEFBRICO
+# Arquiteto de Conteúdo para a Chef Maria Conceição
 # ===================================================================
 
-# --- Configuração do Backend e Mídia ---
-# --- Configuração do Backend e Mídia ---
+# --- Conexão Segura com o Repositório ---
+# Utiliza o sistema da Netlify para autenticação e acesso ao GitHub.
 backend:
-  name: git-gateway # <--- ESTA É A CORREÇÃO.
-  branch: desenvolvimento # Certifique-se que 'desenvolvimento' é o seu branch principal de trabalho.
+  name: git-gateway
+  branch: desenvolvimento # O branch de trabalho principal do projeto.
 
-# --- Configurações da Interface do Painel ---
-locale: 'pt'                             # Traduz a interface do painel para o Português.
-publish_mode: editorial_workflow         # Habilita um fluxo de trabalho com Rascunho > Em Revisão > Pronto. Essencial para equipes.
-media_folder: "imagens/uploads"          # Onde as imagens enviadas pelo painel serão salvas.
-public_folder: "/imagens/uploads"        # Como o site irá referenciar essas imagens.
+# --- Gestão de Mídia ---
+# Define onde as imagens e ficheiros enviados pelo painel serão guardados.
+media_folder: "imagens/uploads"
+public_folder: "/imagens/uploads"
+
+# --- Interface e Fluxo de Trabalho ---
+# Traduz a interface e habilita um fluxo de revisão de conteúdo.
+locale: 'pt'
+publish_mode: editorial_workflow
 
 # ===================================================================
-# COLEÇÕES DE CONTEÚDO
-# O coração do site, organizado de forma intuitiva.
+# COLEÇÕES DE CONTEÚDO (O Coração do Painel)
+# Mapeamento direto da arquitetura do site.
 # ===================================================================
 collections:
 
-  # --- A coleção mais importante: Receitas ---
-  - name: "receitas"
-    label: "🍳 Receitas"
-    label_singular: "Nova Receita"
-    folder: "receitas"
+  # --- Coleção Principal: O Cardápio ---
+  - name: "cardapio"
+    label: "🍲 Cardápio Completo"
+    label_singular: "Novo Prato"
+    folder: "cardapio-completo"
     create: true
     slug: "{{slug}}"
-    path: "{{folder}}/{{category}}/{{slug}}" # Salva o arquivo na subpasta correta baseado na categoria!
-    summary: "{{title}} | Categoria: {{category}}" # Melhora a visualização da lista de receitas.
+    # Estratégia de caminho: Salva o ficheiro na subpasta correta baseado na categoria!
+    path: "{{folder}}/{{category}}/{{slug}}"
+    summary: "{{title}} | Categoria: {{category}}"
     fields:
-      - { label: "Título da Receita", name: "title", widget: "string", hint: "O nome principal do prato. Ex: Risoto de Funghi Secchi." }
+      - { label: "Nome do Prato", name: "title", widget: "string" }
       - { label: "Data de Publicação", name: "date", widget: "datetime" }
+      - { label: "Categoria do Prato", name: "category", widget: "select", options: ["risotos", "solucoes", "sopas-funcionais", "refeicoes-integrais"] }
       - { label: "Imagem de Destaque", name: "image", widget: "image" }
-      - { label: "Categoria", name: "category", widget: "select", options: ["risotos", "sopas-funcionais", "refeicoes-integrais", "emporio-da-chef", "solucoes"], hint: "Escolha a qual grupo esta receita pertence." }
-      - { label: "Descrição Curta", name: "summary", widget: "text", hint: "Um resumo de 1-2 frases sobre o prato. Ótimo para SEO e prévias." }
-      
-      - label: "Detalhes do Prato"
-        name: "details"
+      - { label: "Resumo (para SEO e prévias)", name: "summary", widget: "text" }
+      - { label: "Conteúdo Principal (Modo de Preparo, etc.)", name: "body", widget: "markdown" }
+      # Campos Adicionais para Schema.org (SEO Avançado)
+      - label: "Detalhes para SEO (Google Rich Results)"
+        name: "recipe_details"
         widget: "object"
-        hint: "Informações essenciais para o Schema de Receita do Google."
         fields:
-          - { label: "Serve (Nº de Pessoas)", name: "servings", widget: "number", min: 1, default: 1 }
-          - { label: "Tempo de Preparo (Formato ISO)", name: "prepTime", widget: "string", hint: "Ex: PT30M para 30 minutos, PT1H para 1 hora." }
-          - { label: "Tempo de Cozimento (Formato ISO)", name: "cookTime", widget: "string", hint: "Ex: PT45M para 45 minutos." }
+          - { label: "Serve (Nº de Pessoas)", name: "servings", widget: "number", min: 1, default: 2 }
+          - { label: "Tempo de Preparo (Ex: 30M)", name: "prepTime", widget: "string", hint: "Formato: 15M para 15 minutos, 1H para 1 hora, 1H30M para 1h30m." }
+          - { label: "Tempo de Cozimento (Ex: 45M)", name: "cookTime", widget: "string" }
 
-      - label: "Ingredientes"
-        name: "ingredients"
-        widget: "list"
-        fields:
-          - { label: "Quantidade", name: "quantity", widget: "string", hint: "Ex: 100g, 1 xícara, 2 unidades" }
-          - { label: "Ingrediente", name: "item", widget: "string", hint: "Ex: Arroz Arbóreo" }
-
-      - label: "Modo de Preparo"
-        name: "instructions"
-        widget: "list"
-        hint: "Adicione cada passo do preparo separadamente."
-        field: { label: "Passo", name: "step", widget: "markdown" }
-  
-  # --- Blog para E-E-A-T e autoridade ---
+  # --- Coleção para o Blog (Autoridade E-E-A-T) ---
   - name: "blog"
     label: "✍️ Blog"
     label_singular: "Novo Artigo"
     folder: "blog"
     create: true
     slug: "{{slug}}"
+    path: "{{folder}}/{{slug}}/index" # Cria cada post numa subpasta com um index
     summary: "{{title}} | {{date}}"
     fields:
       - { label: "Título do Artigo", name: "title", widget: "string" }
       - { label: "Data de Publicação", name: "date", widget: "datetime" }
       - { label: "Autor", name: "author", widget: "string", default: "Chef Maria Conceição" }
       - { label: "Imagem de Destaque", name: "image", widget: "image" }
-      - { label: "Resumo do Artigo", name: "summary", widget: "text", hint: "Um parágrafo curto que aparece nas listagens do blog." }
+      - { label: "Resumo do Artigo", name: "summary", widget: "text" }
       - { label: "Conteúdo Principal", name: "body", widget: "markdown" }
 
-  # --- Páginas de SEO Local ---
+  # --- Coleção para SEO Local ---
   - name: "locais"
     label: "📍 Onde Encontrar (SEO Local)"
-    label_singular: "Novo Local"
+    label_singular: "Novo Bairro/Local"
     folder: "onde-encontrar"
     create: true
     slug: "{{slug}}"
     summary: "{{title}}"
     fields:
-      - { label: "Nome da Região/Bairro", name: "title", widget: "string", hint: "Ex: Asa Sul, Brasília - DF" }
-      - { label: "Endereço Físico (se aplicável)", name: "address", widget: "string", required: false }
-      - { label: "Telefone de Contato (se aplicável)", name: "phone", widget: "string", required: false }
-      - { label: "Link para o Google Maps (se aplicável)", name: "map_link", widget: "string", required: false }
+      - { label: "Nome da Região/Bairro", name: "title", widget: "string" }
       - { label: "Conteúdo da Página", name: "body", widget: "markdown", hint: "Descreva os parceiros, pontos de venda ou a relação da ChefBrico com esta localidade." }
-
-  # --- Páginas fixas do site ---
-  - name: "paginas"
-    label: "📄 Páginas do Site"
-    files:
-      - label: "Página Inicial"
-        name: "home"
-        file: "index.md" # Assumindo que suas páginas usam markdown
-        fields:
-          - { label: "Título Principal (H1)", name: "title", widget: "string" }
-          - { label: "Conteúdo", name: "body", widget: "markdown" }
-          - { label: "Título para SEO", name: "seo_title", widget: "string" }
-          - { label: "Descrição para SEO", name: "seo_description", widget: "text" }
-      - label: "Sobre (Comida de Verdade)"
-        name: "sobre"
-        file: "comida-de-verdade/index.md"
-        fields:
-          - { label: "Título da Página", name: "title", widget: "string" }
-          - { label: "Conteúdo", name: "body", widget: "markdown" }
-          - { label: "Título para SEO", name: "seo_title", widget: "string" }
-          - { label: "Descrição para SEO", name: "seo_description", widget: "text" }
-
-  # --- Configurações globais do site (O Diferencial) ---
-  - name: "settings"
-    label: "⚙️ Configurações Gerais"
-    editor:
-      preview: false
-    files:
-      - label: "Dados do Site"
-        name: "site_settings"
-        file: "_data/settings.yml" # Salva os dados em um arquivo que o Eleventy pode usar globalmente.
-        fields:
-          - { label: "Nome do Site", name: "site_name", widget: "string", default: "Revista Digital ChefBrico" }
-          - { label: "E-mail de Contato Principal", name: "contact_email", widget: "string" }
-          - label: "Redes Sociais"
-            name: "social"
-            widget: "object"
-            fields:
-              - { label: "Link do Instagram", name: "instagram", widget: "string", required: false }
-              - { label: "Link do Facebook", name: "facebook", widget: "string", required: false }
-              - { label: "Link do YouTube", name: "youtube", widget: "string", required: false }
