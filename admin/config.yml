@@ -26,12 +26,13 @@ publish_mode: editorial_workflow
 collections:
 
   # --- Coleção Principal: O Cardápio ---
-  - name: "cardapio"
-    label: "🍲 Cardápio Completo"
-    label_singular: "Novo Prato"
-    folder: "cardapio-completo"
-    create: true
-    slug: "{{slug}}"
+  CONFIGURAÇÃO VALIDADA CONFORME NOVA DIRETRIZ
+- name: "receitas"
+  label: "🍳 Receitas"
+  folder: "receitas" # <-- CORRETO
+  create: true
+  slug: "{{slug}}"
+  path: "{{folder}}/{{category}}/{{slug}}"
     # Estratégia de caminho: Salva o ficheiro na subpasta correta baseado na categoria!
     path: "{{folder}}/{{category}}/{{slug}}"
     summary: "{{title}} | Categoria: {{category}}"
