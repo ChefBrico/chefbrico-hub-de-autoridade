@@ -4,11 +4,10 @@
 # ===================================================================
 
 # --- Configuração do Backend e Mídia ---
+# --- Configuração do Backend e Mídia ---
 backend:
-  name: github
-  repo: ChefBrico/chefbrico-hub-de-autoridade
-  branch: desenvolvimento
-  use_graphql: true
+  name: git-gateway # <--- ESTA É A CORREÇÃO.
+  branch: desenvolvimento # Certifique-se que 'desenvolvimento' é o seu branch principal de trabalho.
 
 # --- Configurações da Interface do Painel ---
 locale: 'pt'                             # Traduz a interface do painel para o Português.
