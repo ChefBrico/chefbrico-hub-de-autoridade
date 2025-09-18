@@ -1,80 +1,115 @@
 # ===================================================================
-# PAINEL DE COMANDO v3.0 - REVISTA DIGITAL CHEFBRICO
-# Arquiteto de Conteúdo para a Chef Maria Conceição
+# PAINEL DE COMANDO v4.0 - INTUITIVO PARA A CHEF
+# Um verdadeiro espelho da Revista Digital ChefBrico
 # ===================================================================
 
-# --- Conexão Segura com o Repositório ---
-# Utiliza o sistema da Netlify para autenticação e acesso ao GitHub.
+# --- Conexão e Configurações Base ---
 backend:
   name: git-gateway
   branch: desenvolvimento
 
-# --- Gestão de Mídia ---
-# Define onde as imagens e ficheiros enviados pelo painel serão guardados.
 media_folder: "imagens/uploads"
 public_folder: "/imagens/uploads"
-
-# --- Interface e Fluxo de Trabalho ---
-# Traduz a interface e habilita um fluxo de revisão de conteúdo.
 locale: 'pt'
 publish_mode: editorial_workflow
 
 # ===================================================================
 # COLEÇÕES DE CONTEÚDO (O Coração do Painel)
-# Mapeamento direto da arquitetura do site.
 # ===================================================================
 collections:
-  # --- Coleção Principal: O Cardápio ---
-  # CONFIGURAÇÃO VALIDADA CONFORME NOVA DIRETRIZ
+  # --- Coleção para editar as páginas principais do site ---
+  - name: "paginas"
+    label: "📄 Páginas Principais do Site"
+    description: "Altere aqui os textos da Página Inicial, página 'Comida de Verdade', etc."
+    files:
+      - label: "Página Inicial"
+        name: "home"
+        file: "index.md" # ATENÇÃO: Verifique se sua página inicial é index.md ou index.html
+        fields:
+          - { label: "Título Principal", name: "titulo_principal", widget: "string", hint: "O texto grande que aparece no topo da página inicial." }
+          - { label: "Subtítulo", name: "subtitulo", widget: "text", hint: "O texto de apoio que aparece logo abaixo do título principal." }
+          - { label: "Conteúdo da Página", name: "body", widget: "markdown", hint: "Restante do texto e conteúdo da página inicial." }
+      - label: "Página 'Comida de Verdade' (Sobre)"
+        name: "sobre"
+        file: "comida-de-verdade/index.md" # ATENÇÃO: Verifique o caminho correto deste ficheiro
+        fields:
+          - { label: "Título da Página", name: "title", widget: "string", hint: "O título principal desta página." }
+          - { label: "Conteúdo da Página", name: "body", widget: "markdown", hint: "Todo o texto e imagens da página 'Comida de Verdade'." }
+
+  # --- Coleção Principal: As Receitas ---
   - name: "receitas"
-    label: "🍳 Receitas"
-    folder: "receitas" # <-- CORRETO
+    label: "🍳 Receitas do Cardápio"
+    label_singular: "Nova Receita"
+    description: "Adicione ou edite aqui todas as receitas da ChefBrico."
+    folder: "receitas"
     create: true
     slug: "{{slug}}"
-    # Estratégia de caminho: Salva o ficheiro na subpasta correta baseado na categoria!
     path: "{{folder}}/{{category}}/{{slug}}"
     summary: "{{title}} | Categoria: {{category}}"
     fields:
-      - { label: "Nome do Prato", name: "title", widget: "string" }
-      - { label: "Data de Publicação", name: "date", widget: "datetime" }
-      - { label: "Categoria do Prato", name: "category", widget: "select", options: ["risotos", "solucoes", "sopas-funcionais", "refeicoes-integrais"] }
-      - { label: "Imagem de Destaque", name: "image", widget: "image" }
-      - { label: "Resumo (para SEO e prévias)", name: "summary", widget: "text" }
-      - { label: "Conteúdo Principal (Modo de Preparo, etc.)", name: "body", widget: "markdown" }
-      # Campos Adicionais para Schema.org (SEO Avançado)
-      - label: "Detalhes para SEO (Google Rich Results)"
+      - { label: "Nome do Prato", name: "title", widget: "string", hint: "Este é o título principal da receita, visível em todo o site." }
+      - { label: "Data de Publicação", name: "date", widget: "datetime", hint: "Pode agendar para uma data futura ou usar a data atual." }
+      - { label: "Categoria do Prato", name: "category", widget: "select", options: ["risotos", "solucoes", "sopas-funcionais", "refeicoes-integrais"], hint: "Escolha o grupo ao qual este prato pertence. Isto organiza o site." }
+      - { label: "Imagem de Destaque", name: "image", widget: "image", hint: "A foto principal do prato. Use imagens de alta qualidade!" }
+      - { label: "Resumo Atrativo", name: "summary", widget: "text", hint: "Este texto curto (1-2 frases) aparecerá nas listagens e nos resultados do Google. Seja convidativo!" }
+      - { label: "Ingredientes e Modo de Preparo", name: "body", widget: "markdown", hint: "Aqui vai o coração da receita. Use títulos, listas e negrito para organizar." }
+      - label: "🔍 Otimização para Google (SEO)"
         name: "recipe_details"
         widget: "object"
+        description: "Estes campos ajudam o Google a entender melhor a sua receita e mostrá-la de forma destacada nos resultados de busca."
         fields:
-          - { label: "Serve (Nº de Pessoas)", name: "servings", widget: "number", min: 1, default: 2 }
-          - { label: "Tempo de Preparo (Ex: 30M)", name: "prepTime", widget: "string", hint: "Formato: 15M para 15 minutos, 1H para 1 hora, 1H30M para 1h30m." }
-          - { label: "Tempo de Cozimento (Ex: 45M)", name: "cookTime", widget: "string" }
+          - { label: "Serve (Nº de Pessoas)", name: "servings", widget: "number", min: 1, default: 2, hint: "Exemplo: 4" }
+          - { label: "Tempo de Preparo", name: "prepTime", widget: "string", hint: "Exemplo: 15M (para 15 minutos), 1H (para 1 hora)." }
+          - { label: "Tempo de Cozimento", name: "cookTime", widget: "string", hint: "Exemplo: 45M (para 45 minutos)." }
 
-  # --- Coleção para o Blog (Autoridade E-E-A-T) ---
+  # --- Coleção para o Blog ---
   - name: "blog"
-    label: "✍️ Blog"
+    label: "✍️ Blog da Chef"
     label_singular: "Novo Artigo"
+    description: "Crie artigos para reforçar a autoridade da marca e melhorar o SEO."
     folder: "blog"
     create: true
     slug: "{{slug}}"
-    path: "{{folder}}/{{slug}}/index" # Cria cada post numa subpasta com um index
-    summary: "{{title}} | {{date}}"
+    path: "{{folder}}/{{slug}}/index"
+    summary: "{{title}} | Publicado em {{date}}"
     fields:
       - { label: "Título do Artigo", name: "title", widget: "string" }
       - { label: "Data de Publicação", name: "date", widget: "datetime" }
-      - { label: "Autor", name: "author", widget: "string", default: "Chef Maria Conceição" }
-      - { label: "Imagem de Destaque", name: "image", widget: "image" }
-      - { label: "Resumo do Artigo", name: "summary", widget: "text" }
-      - { label: "Conteúdo Principal", name: "body", widget: "markdown" }
+      - { label: "Autor do Artigo", name: "author", widget: "string", default: "Chef Maria Conceição" }
+      - { label: "Imagem Principal", name: "image", widget: "image" }
+      - { label: "Resumo do Artigo", name: "summary", widget: "text", hint: "Um parágrafo curto que aparece nas listagens do blog e no Google." }
+      - { label: "Conteúdo Completo do Artigo", name: "body", widget: "markdown" }
 
   # --- Coleção para SEO Local ---
   - name: "locais"
-    label: "📍 Onde Encontrar (SEO Local)"
+    label: "📍 Pontos de Venda (Onde Encontrar)"
     label_singular: "Novo Bairro/Local"
+    description: "Adicione ou edite as páginas de cada bairro ou ponto de venda."
     folder: "onde-encontrar"
     create: true
     slug: "{{slug}}"
     summary: "{{title}}"
     fields:
-      - { label: "Nome da Região/Bairro", name: "title", widget: "string" }
-      - { label: "Conteúdo da Página", name: "body", widget: "markdown", hint: "Descreva os parceiros, pontos de venda ou a relação da ChefBrico com esta localidade." }
+      - { label: "Nome do Bairro ou Região", name: "title", widget: "string", hint: "Exemplo: Asa Sul, Brasília - DF" }
+      - { label: "Conteúdo da Página", name: "body", widget: "markdown", hint: "Descreva os parceiros, pontos de venda e a relação da ChefBrico com esta localidade." }
+
+  # --- Coleção para informações que aparecem em todo o site ---
+  - name: "settings"
+    label: "⚙️ Configurações Gerais do Site"
+    description: "Altere aqui informações globais como redes sociais, email de contato, etc."
+    editor:
+      preview: false
+    files:
+      - label: "Informações de Contato e Rodapé"
+        name: "site_data"
+        file: "_data/site_settings.yml" # Este ficheiro poderá ser usado em todo o site
+        fields:
+          - { label: "Nome do Site", name: "site_name", widget: "string", default: "Revista Digital ChefBrico" }
+          - { label: "E-mail Principal de Contato", name: "contact_email", widget: "string" }
+          - { label: "Telefone Principal de Contato", name: "contact_phone", widget: "string", required: false }
+          - label: "Links das Redes Sociais"
+            name: "social"
+            widget: "object"
+            fields:
+              - { label: "Link Completo do Instagram", name: "instagram", widget: "string", required: false }
+              - { label: "Link Completo do Facebook", name: "facebook", widget: "string", required: false }
