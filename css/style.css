@@ -421,32 +421,34 @@ footer { padding: 30px 20px; margin-top: 40px; border-top: 1px solid var(--cor-b
   transform: scale(1.05) rotateZ(2deg);
   box-shadow: 0px 15px 30px rgba(0,0,0,0.2);
 }
-/* ============================================= */
-/* --- BLOCO DE CORREÇÃO PARA A SECÇÃO HERO --- */
-/* Data: 18 de Setembro de 2025                  */
-/* ============================================= */
+/* ========================================================= */
+/* --- CORREÇÃO FINAL E DEFINITIVA: CONTRASTE E VISIBILIDADE --- */
+/* Data: 18 de Setembro de 2025                                */
+/* ========================================================= */
 
-/* Garante que todos os parágrafos (incluindo o hero-message) 
-   dentro do bloco de texto sejam sempre visíveis e bem espaçados. */
-.hero-content-text p {
-  opacity: 1;
-  visibility: visible;
-  display: block;
-  margin-bottom: 1.5rem; /* Garante um bom espaçamento entre os textos */
+/* A MISSÃO: Forçar uma cor de texto escura e legível para o subtítulo
+  e a mensagem, garantindo que se destaquem contra o fundo branco.
+*/
+.hero-content-text .hero-subtitle,
+.hero-content-text .hero-message {
+  color: #444; /* Um cinzento escuro de alta legibilidade. Ajuste se necessário. */
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
 }
 
-/* Garante que o botão esteja sempre visível por defeito */
+/* A MISSÃO 2: Garantir que o botão esteja sempre visível 
+  e com o efeito de interação premium.
+*/
 .hero-content-text .cta-button-small {
-  opacity: 1;
-  visibility: visible;
-  display: inline-block; /* Garante que o botão ocupe o seu espaço corretamente */
-  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* Animação suave para o novo efeito */
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: inline-block !important;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
 }
 
-/* EFEITO DE HOVER MELHORADO: 
-   O botão agora reage ao rato com um efeito de elevação, em vez de aparecer do nada. */
 .hero-content-text .cta-button-small:hover,
 .hero-content-text .cta-button-small:focus {
-  transform: translateY(-3px); /* Eleva o botão ligeiramente */
-  box-shadow: 0px 10px 20px rgba(0,0,0,0.15); /* Adiciona uma sombra para dar profundidade */
+  transform: translateY(-3px);
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.15);
 }
