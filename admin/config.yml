@@ -7,7 +7,7 @@
 # Utiliza o sistema da Netlify para autenticação e acesso ao GitHub.
 backend:
   name: git-gateway
-  branch: desenvolvimento # O branch de trabalho principal do projeto.
+  branch: desenvolvimento
 
 # --- Gestão de Mídia ---
 # Define onde as imagens e ficheiros enviados pelo painel serão guardados.
@@ -24,15 +24,13 @@ publish_mode: editorial_workflow
 # Mapeamento direto da arquitetura do site.
 # ===================================================================
 collections:
-
   # --- Coleção Principal: O Cardápio ---
-  CONFIGURAÇÃO VALIDADA CONFORME NOVA DIRETRIZ
-- name: "receitas"
-  label: "🍳 Receitas"
-  folder: "receitas" # <-- CORRETO
-  create: true
-  slug: "{{slug}}"
-  path: "{{folder}}/{{category}}/{{slug}}"
+  # CONFIGURAÇÃO VALIDADA CONFORME NOVA DIRETRIZ
+  - name: "receitas"
+    label: "🍳 Receitas"
+    folder: "receitas" # <-- CORRETO
+    create: true
+    slug: "{{slug}}"
     # Estratégia de caminho: Salva o ficheiro na subpasta correta baseado na categoria!
     path: "{{folder}}/{{category}}/{{slug}}"
     summary: "{{title}} | Categoria: {{category}}"
