@@ -405,3 +405,19 @@ footer { padding: 30px 20px; margin-top: 40px; border-top: 1px solid var(--cor-b
 .cta-button-small:hover {
     background-color: var(--cor-bordo-secundaria);
 }
+/* --- Efeito de Interação Premium para Imagens --- */
+
+/* O estado inicial da imagem: um pouco menor e rotacionada */
+.imagem-interativa-premium {
+  transition: transform 0.3s ease-out; /* A animação suave */
+  /* A sombra e o raio são opcionais, mas dão um toque premium */
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+  border-radius: 50%;
+}
+
+/* O estado final QUANDO o utilizador interage */
+.imagem-interativa-premium:hover,
+.imagem-interativa-premium:focus {
+  transform: scale(1.05) rotateZ(2deg);
+  box-shadow: 0px 15px 30px rgba(0,0,0,0.2);
+}
