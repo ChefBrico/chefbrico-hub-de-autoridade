@@ -54,10 +54,10 @@ if (accordionHeaders.length > 0) {
 
             const curatorshipContent = {
                 'jantar-rapido': { title: "Para um Jantar Rápido e Delicioso", text: "Selecionei aqui os pratos que resolvem sua noite em menos de 20 minutos, com muito sabor e zero complicação." },
-                'marmita-inteligente': { title: "Para uma Marmita Saudável e Prática", text: "Estas são as minhas soluções favoritas para um almoço nutritivo no trabalho. Fáceis de preparar e deliciosas para reaquecer." },
-                'momento-especial': { title: "Para um Momento Especial a Dois", text: "Crie uma noite inesquecível com estes pratos gourmet. A praticidade fica por minha conta, o romance por conta de vocês!" },
-                'para-familia': { title: "Aprovados pela Família (e pelas Crianças!)", text: "Estes são os pratos que fazem sucesso com todos em casa, unindo o sabor que as crianças amam com a nutrição que os pais procuram." },
-                'performance': { title: "Para sua Performance e Dieta", text: "Comida como combustível. Aqui estão as opções com foco em proteína, leveza e baixo carboidrato para te ajudar a alcançar seus objetivos." },
+                'marmita-saudavel': { title: "Para uma Marmita Saudável e Prática", text: "Estas são as minhas soluções favoritas para um almoço nutritivo no trabalho. Fáceis de preparar e deliciosas para reaquecer." },
+                'momento-a-dois': { title: "Para um Momento Especial a Dois", text: "Crie uma noite inesquecível com estes pratos gourmet. A praticidade fica por minha conta, o romance por conta de vocês!" },
+                'para-criancas': { title: "Aprovados pela Família (e pelas Crianças!)", text: "Estes são os pratos que fazem sucesso com todos em casa, unindo o sabor que as crianças amam com a nutrição que os pais procuram." },
+                'dieta-performance': { title: "Para sua Performance e Dieta", text: "Comida como combustível. Aqui estão as opções com foco em proteína, leveza e baixo carboidrato para te ajudar a alcançar seus objetivos." },
                 'trilha-viagem': { title: "O Sabor que Te Acompanha em Qualquer Aventura", text: "Para o Trilheiro do Cerrado ou o Viajante Airbnb: comida de verdade que não pesa na mochila, não precisa de refrigeração e garante sua nutrição longe de casa." }
             };
 
