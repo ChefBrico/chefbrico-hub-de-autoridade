@@ -1,0 +1,6 @@
+# Permitir acesso total a todos os robôs amigáveis.
+User-agent: *
+Disallow:
+
+# Indicar a localização do mapa completo do site.
+Sitemap: https://receitas.chefbrico.com/sitemap.xml
