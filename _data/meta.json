@@ -1,0 +1,29 @@
+{
+  "domain": "https://www.chefbrico.com",
+  "recipesDomain": "https://receitas.chefbrico.com",
+  "organization": {
+    "id": "https://www.chefbrico.com/#organization",
+    "name": "ChefBrico",
+    "url": "https://www.chefbrico.com",
+    "logo": "https://receitas.chefbrico.com/imagens/flamula-chefbrico.png",
+    "telephone": "+5561996659880",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua 5, Chácara 122, Lote 17, Loja 2",
+      "addressLocality": "Vicente Pires", Brasília
+      "addressRegion": "DF",
+      "postalCode": "72006-060",
+      "addressCountry": "BR"
+    },
+    "sameAs": [
+      "https://www.instagram.com/chefbrico/",
+      "https://br.pinterest.com/chefbrico/",
+      "https://www.google.com/search?kgmid=/g/11g140fcnw"
+    ]
+  },
+  "person": {
+    "id": "https://www.chefbrico.com/#person-maria-conceicao",
+    "name": "Maria Conceição",
+    "jobTitle": "Fundadora da ChefBrico"
+  }
+}
