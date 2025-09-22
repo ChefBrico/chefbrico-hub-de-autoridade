@@ -1,24 +1,37 @@
+// Arquivo: _data/meta.json
+
 {
   "domain": "https://www.chefbrico.com",
   "recipesDomain": "https://receitas.chefbrico.com",
   "organization": {
     "id": "https://www.chefbrico.com/#organization",
     "name": "ChefBrico",
+    "cnpj": "36.014.833/0001-59", // <-- ADICIONADO: Centralizando o CNPJ
     "url": "https://www.chefbrico.com",
     "logo": "https://receitas.chefbrico.com/imagens/flamula-chefbrico.png",
     "telephone": "+5561996659880",
+    "whatsapp": "https://wa.me/5561996659880", // <-- ADICIONADO: Link do WhatsApp
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Rua 5, Chácara 122, Lote 17, Loja 2",
-      "addressLocality": "Vicente Pires, Brasília"
+      "addressLocality": "Vicente Pires",
       "addressRegion": "DF",
       "postalCode": "72006-060",
       "addressCountry": "BR"
     },
-    "sameAs": [
-      "https://www.instagram.com/chefbrico/",
-      "https://br.pinterest.com/chefbrico/",
-      "https://www.google.com/search?kgmid=/g/11g140fcnw"
+    "sameAs": [ // <-- MELHORADO: Para gerar links automaticamente
+      {
+        "name": "Instagram",
+        "url": "https://www.instagram.com/chefbrico/"
+      },
+      {
+        "name": "Pinterest",
+        "url": "https://br.pinterest.com/chefbrico/"
+      },
+      {
+        "name": "Google",
+        "url": "https://www.google.com/search?kgmid=/g/11g140fcnw"
+      }
     ]
   },
   "person": {
