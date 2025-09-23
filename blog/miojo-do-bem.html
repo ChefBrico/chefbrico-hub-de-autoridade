@@ -1,41 +1,82 @@
----
-layout: base.njk
-permalink: /blog/miojo-do-bem/
-title: "O 'Miojo do Bem': Praticidade com Nutrição | Blog ChefBrico"
-description: "Descubra como substituir o macarrão instantâneo por uma opção saudável, prática e deliciosa com as sopas funcionais da ChefBrico."
-schema:
-  "@context": https://schema.org
-  "@graph":
-  - "@type": Article
-    mainEntityOfPage:
-      "@type": WebPage
-      "@id": https://receitas.chefbrico.com/blog/miojo-do-bem/
-    headline: "O 'Miojo do Bem': Como Ter a Praticidade do Macarrão Instantâneo com Nutrição de Verdade"
-    author:
-      "@id": https://receitas.chefbrico.com/#person-maria
-    publisher:
-      "@id": https://receitas.chefbrico.com/#organization
-    image:
-      "@type": ImageObject
-      url": /imagens/creme-fit-sopinha-chefbrico.png
-      width: 1200
-      height: 675
-    datePublished: '2025-07-19T09:00:00-03:00'
-    dateModified: '2025-09-05T19:00:00-03:00'
-    description: "Descubra como substituir o macarrão instantâneo por uma opção saudável, prática e deliciosa com as sopas funcionais da ChefBrico, uma solução com comida de verdade."
-  - "@context": https://schema.org
-    "@type": FAQPage
-    mainEntity":
-    - "@type": Question
-      name: "As sopas da ChefBrico são realmente tão rápidas quanto o macarrão instantâneo?"
-      acceptedAnswer":
-        "@type": Answer
-        text: "Elas levam cerca de 15 minutos para cozinhar, um pouco mais que os 3 minutos do industrializado. A grande diferença é que, nestes 15 minutos, você está a cozinhar ingredientes de verdade, como lentilhas, quinoa e vegetais, que precisam de tempo para hidratar e libertar o seu sabor e nutrientes. É a combinação perfeita de rapidez e qualidade nutricional."
-    - "@type": Question
-      name: "O que é o 'macarrão funcional' usado nas sopas?"
-      acceptedAnswer":
-        "@type": Answer
-        text: "É um macarrão especial sem glúten, feito com uma mistura de farinha de banana verde, farinha de arroz e fécula de mandioca. A banana verde é rica em amido resistente, um tipo de fibra que alimenta as bactérias boas do intestino e ajuda a promover a saciedade, tornando a sua refeição muito mais nutritiva."
+---json
+{
+  "layout": "base.njk",
+  "permalink": "/blog/miojo-do-bem/",
+  "title": "O 'Miojo do Bem': Praticidade com Nutrição | Blog ChefBrico",
+  "description": "Descubra como substituir o macarrão instantâneo por uma opção saudável, prática e deliciosa com as sopas funcionais da ChefBrico.",
+  "schema": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://receitas.chefbrico.com/blog/miojo-do-bem/"
+        },
+        "headline": "O 'Miojo do Bem': Como Ter a Praticidade do Macarrão Instantâneo com Nutrição de Verdade",
+        "author": {
+          "@id": "https://www.chefbrico.com/#person-maria"
+        },
+        "publisher": {
+          "@id": "https://www.chefbrico.com/#organization"
+        },
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://receitas.chefbrico.com/imagens/creme-fit-sopinha-chefbrico.png",
+          "width": 1200,
+          "height": 675
+        },
+        "datePublished": "2025-07-19T09:00:00-03:00",
+        "dateModified": "2025-09-05T19:00:00-03:00",
+        "description": "Descubra como substituir o macarrão instantâneo por uma opção saudável, prática e deliciosa com as sopas funcionais da ChefBrico, uma solução com comida de verdade."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Início",
+            "item": "https://receitas.chefbrico.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://receitas.chefbrico.com/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "O 'Miojo do Bem'",
+            "item": "https://receitas.chefbrico.com/blog/miojo-do-bem/"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "As sopas da ChefBrico são realmente tão rápidas quanto o macarrão instantâneo?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Elas levam cerca de 15 minutos para cozinhar, um pouco mais que os 3 minutos do industrializado. A grande diferença é que, nestes 15 minutos, você está a cozinhar ingredientes de verdade, como lentilhas, quinoa e vegetais, que precisam de tempo para hidratar e libertar o seu sabor e nutrientes. É a combinação perfeita de rapidez e qualidade nutricional."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "O que é o 'macarrão funcional' usado nas sopas?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "É um macarrão especial sem glúten, feito com uma mistura de farinha de banana verde, farinha de arroz e fécula de mandioca. A banana verde é rica em amido resistente, um tipo de fibra que alimenta as bactérias boas do intestino e ajuda a promover a saciedade, tornando a sua refeição muito mais nutritiva."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
 ---
 <main class="container">
     <div class="recipe-title-container" style="text-align:center;">
