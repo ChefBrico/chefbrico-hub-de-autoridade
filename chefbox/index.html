@@ -1,52 +1,80 @@
----
-layout: base.njk
-permalink: /chefbox/
-title: "A Verdade sobre a ChefBox: Compre 4, Leve 5 e Descubra o 5º Sabor"
-description: "É mais que um desconto. Entenda a filosofia por trás da nossa ChefBox: um presente real, um convite à criatividade e a celebração do Umami, o quinto sabor."
-schema:
-  "@context": https://schema.org
-  "@graph":
-  - "@type": Product
-    mainEntityOfPage:
-      "@type": WebPage
-      "@id": https://receitas.chefbrico.com/chefbox/
-    name: "ChefBox ChefBrico: Monte o seu Kit 4+1"
-    description: "Monte sua ChefBox personalizada com 4 sabores à sua escolha e receba o 5º como um presente da Chef. Uma experiência que une economia, criatividade e a celebração do quinto sabor."
-    image: https://receitas.chefbrico.com/imagens/uma-mazinha-icone-chefbrico.png
-    brand":
-      "@id": "#organization"
-    offers":
-      "@type": Offer
-      name: "Oferta Especial: Compre 4, Leve o 5º de Presente"
-      url": https://www.chefbrico.com/chefbox
-      priceCurrency: BRL
-      price: '118.40'
-      availability: https://schema.org/InStock
-      seller:
-        "@id": "#organization"
-    review":
-      "@type": Review
-      reviewRating":
-        "@type": Rating
-        ratingValue: '5'
-      reviewBody: "Quando criei a ChefBox, eu não queria apenas montar um 'kit'. Meu sonho era criar uma experiência, um convite para que vocês entrassem na minha filosofia."
-      author:
-        "@type": Person
-        name: "Maria Conceição, Fundadora"
-  - "@type": FoodEstablishment
-    "@id": "#organization"
-    name: ChefBrico
-    address:
-      "@type": PostalAddress
-      streetAddress: "Rua 5, Chácara 122, Lote 17, Loja 2"
-      addressLocality: "Vicente Pires"
-      addressRegion: DF
-      postalCode: "72006-060"
-      addressCountry: BR
-    founder:
-      "@type": Person
-      name: "Maria Conceição"
-      jobTitle: "Fundadora e Chef"
+---json
+{
+  "layout": "base.njk",
+  "permalink": "/chefbox/",
+  "title": "A Verdade sobre a ChefBox: Compre 4, Leve 5 e Descubra o 5º Sabor",
+  "description": "É mais que um desconto. Entenda a filosofia por trás da nossa ChefBox: um presente real, um convite à criatividade e a celebração do Umami, o quinto sabor.",
+  "schema": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://receitas.chefbrico.com/chefbox/"
+        },
+        "name": "ChefBox ChefBrico: Monte o seu Kit 4+1",
+        "description": "Monte sua ChefBox personalizada com 4 sabores à sua escolha e receba o 5º como um presente da Chef. Uma experiência que une economia, criatividade e a celebração do quinto sabor.",
+        "image": [
+          "https://receitas.chefbrico.com/imagens/uma-mazinha-icone-chefbrico.png"
+        ],
+        "brand": {
+          "@id": "https://www.chefbrico.com/#organization"
+        },
+        "sku": "CHEFBOX-4MAIS1",
+        "offers": {
+          "@type": "Offer",
+          "name": "Oferta Especial: Compre 4, Leve o 5º de Presente",
+          "url": "https://www.chefbrico.com/chefbox",
+          "priceCurrency": "BRL",
+          "price": "118.40",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@id": "https://www.chefbrico.com/#organization"
+          }
+        },
+        "review": {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5"
+          },
+          "reviewBody": "Quando criei a ChefBox, eu não queria apenas montar um 'kit'. Meu sonho era criar uma experiência, um convite para que vocês entrassem na minha filosofia.",
+          "author": {
+            "@id": "https://www.chefbrico.com/#person-maria"
+          }
+        }
+      },
+      {
+        "@type": "WebPage",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://receitas.chefbrico.com/chefbox/"
+        },
+        "about": {
+          "@id": "https://www.chefbrico.com/#organization"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Início",
+            "item": "https://receitas.chefbrico.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "ChefBox",
+            "item": "https://receitas.chefbrico.com/chefbox/"
+          }
+        ]
+      }
+    ]
+  }
+}
 ---
 <main class="container">
     <div class="recipe-title-container" style="text-align:center;">
