@@ -1,86 +1,86 @@
----
-layout: base.njk
-permalink: /onde-encontrar/esplanada-dos-ministerios/
-title: "ChefBrico na Esplanada: Delivery de Comida de Verdade para sua Rotina"
-description: "Trabalha na Esplanada dos Ministérios? A ChefBrico entrega sua refeição saudável e prática. Peça online ou fale conosco pelo WhatsApp."
-schema:
-  "@context": https://schema.org
-  "@graph":
-  - "@type": Product
-    name: "Serviço de Delivery ChefBrico para a Esplanada dos Ministérios"
-    mainEntityOfPage":
-        "@type": "WebPage"
-        "@id": "https://receitas.chefbrico.com/onde-encontrar/esplanada-dos-ministerios/"
-    description: "Trabalha na Esplanada dos Ministérios? A ChefBrico entrega sua refeição saudável e prática no seu trabalho. Destaques para a rotina no escritório incluem a Refeição Mediterrânea e nossas Sopas Funcionais. Planeje sua semana e peça online!"
-    image: https://receitas.chefbrico.com/imagens/refeicoes-praticas/refeicao-mediterranea-chefbrico.png
-    brand":
-      "@type": Brand
-      name: ChefBrico
-    category: "Entrega de Alimentos Gourmet"
-    offers":
-      "@type": Offer
-      url": https://www.chefbrico.com
-      priceCurrency: BRL
-      availability: https://schema.org/InStock
-      price: '29.60'
-      seller:
-        "@id": "#organization"
-      areaServed":
-        "@type": Place
-        name: "Esplanada dos Ministérios, Brasília, DF"
-      priceSpecification":
-        "@type": PriceSpecification
-        priceCurrency: BRL
-        minPrice: '29.60'
-        maxPrice: '34.80'
-      shippingDetails":
-        "@type": OfferShippingDetails
-        deliveryTime:
-          "@type": ShippingDeliveryTime
-          handlingTime":
-            "@type": QuantitativeValue
-            minValue: '1'
-            maxValue: '2'
-            unitCode: DAY
-          transitTime":
-            "@type": QuantitativeValue
-            minValue: '0'
-            maxValue: '1'
-            unitCode: DAY
-      hasMerchantReturnPolicy":
-        "@type": MerchantReturnPolicy
-        url": https://www.chefbrico.com/trocas-e-devolucoes
-        applicableCountry: BR
-        returnPolicyCategory: https://schema.org/MerchantReturnFiniteReturnWindow
-        merchantReturnDays: 7
-    review":
-      "@type": Review
-      reviewRating":
-        "@type": Rating
-        ratingValue: '4.9'
-      reviewBody: "A ChefBrico salvou meus Jantares! Chega tudo certinho aqui no ministério, e a comida é deliciosa e de verdade."
-      author:
-        "@type": Person
-        name: "Carla V. cliente da ChefBrico"
-  - "@type": FAQPage
-    mainEntity":
-    - "@type": Question
-      name: "Como a ChefBrico entrega na Esplanada dos Ministérios?"
-      acceptedAnswer":
-        "@type": Answer
-        text: "Oferecemos um serviço de delivery expresso e programado para toda a Esplanada. Peça online e receba sua refeição saudável e prática diretamente no seu trabalho."
-    - "@type": Question
-      name: "A ChefBrico tem lojas físicas perto da Esplanada?"
-      acceptedAnswer":
-        "@type": Answer
-        text: "Não temos parceiros na própria Esplanada, mas você encontra nossos produtos em lojas na Asa Sul e Asa Norte, perfeitas para pegar no caminho de casa. Confira nosso mapa para ver todos os locais."
-  - "@type": FoodEstablishment
-    "@id": "#organization"
-    name: ChefBrico
-    founder":
-      "@type": Person
-      name: "Maria Conceição"
-      jobTitle: "Fundadora e Chef"
+---json
+{
+  "layout": "base.njk",
+  "permalink": "/onde-encontrar/esplanada-dos-ministerios/",
+  "title": "ChefBrico na Esplanada: Delivery de Comida de Verdade para sua Rotina",
+  "description": "Trabalha na Esplanada dos Ministérios? A ChefBrico entrega sua refeição saudável e prática. Peça online ou fale conosco pelo WhatsApp.",
+  "schema": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://receitas.chefbrico.com/onde-encontrar/esplanada-dos-ministerios/"
+        },
+        "name": "ChefBrico na Esplanada dos Ministérios: Delivery de Comida de Verdade",
+        "description": "Trabalha na Esplanada dos Ministérios? A ChefBrico entrega sua refeição saudável e prática no seu trabalho. Destaques para a rotina no escritório incluem a Refeição Mediterrânea e nossas Sopas Funcionais.",
+        "publisher": {
+          "@id": "https://www.chefbrico.com/#organization"
+        },
+        "about": {
+          "@id": "https://www.chefbrico.com/#organization"
+        }
+      },
+      {
+        "@type": "Service",
+        "serviceType": "Entrega de Refeições Práticas para Escritórios",
+        "provider": {
+          "@id": "https://www.chefbrico.com/#organization"
+        },
+        "areaServed": {
+          "@type": "AdministrativeArea",
+          "name": "Esplanada dos Ministérios"
+        },
+        "name": "Delivery ChefBrico para a Esplanada dos Ministérios"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Início",
+            "item": "https://receitas.chefbrico.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Onde Encontrar",
+            "item": "https://receitas.chefbrico.com/onde-encontrar/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Esplanada dos Ministérios",
+            "item": "https://receitas.chefbrico.com/onde-encontrar/esplanada-dos-ministerios/"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Como a ChefBrico entrega na Esplanada dos Ministérios?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oferecemos um serviço de delivery expresso e programado para toda a Esplanada. Peça online e receba sua refeição saudável e prática diretamente no seu trabalho."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "A ChefBrico tem lojas físicas perto da Esplanada?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Não temos parceiros na própria Esplanada, mas você encontra nossos produtos em lojas na Asa Sul e Asa Norte, perfeitas para pegar no caminho de casa. Confira nosso mapa para ver todos os locais."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
 ---
 {% block head %}
 <style>
@@ -98,12 +98,6 @@ schema:
     .depoimento-card .quote { font-style: italic; color: #555; }
     .depoimento-card .author { font-weight: bold; color: var(--cor-primaria); margin-top: 15px; display: block; }
     .food-porn-section { background-color: #fdfcf7; border-top: 2px solid #f0ead6; padding: 50px 20px; margin-top: 60px; }
-    .estacao-card { border: 1px solid #eee; border-radius: 8px; overflow: hidden; background-color: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-    .estacao-postcard { width: 100%; height: 220px; background-color: #f0f0f0; }
-    .estacao-postcard img { width: 100%; height: 100%; object-fit: cover; }
-    .estacao-content { padding: 20px; text-align: center; }
-    .estacao-content h3 { color: var(--cor-primaria); margin-top: 0; font-size: 1.1em; text-transform: uppercase; }
-    .estacao-content h4 { color: var(--cor-titulos); font-size: 1.5em; margin-top: 5px; margin-bottom: 10px; }
     .review-cta-section-v2 { background-color: #fdfcf7; border: 1px solid #f0ead6; border-radius: 8px; margin-top: 60px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
     .review-banner-image img { width: 100%; height: auto; display: block; }
     .review-cta-content { padding: 40px 25px; text-align: center !important; }
