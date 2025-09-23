@@ -1,41 +1,82 @@
----
-layout: base.njk
-permalink: /blog/guia-dos-arrozes/
-title: "O Guia dos Arrozes do Mundo: Risotos, Paellas e Mais | ChefBrico"
-description: "Descubra a diferença entre risoto e paella. Aprenda como a ChefBrico oferece refeições práticas com sabor de ocasião especial, com dicas da Chef Maria Conceição."
-schema:
-  "@context": https://schema.org
-  "@graph":
-  - "@type": Article
-    mainEntityOfPage:
-      "@type": WebPage
-      "@id": https://receitas.chefbrico.com/blog/guia-dos-arrozes/
-    headline: "O Guia Definitivo dos Arrozes do Mundo: Da Itália ao Brasil com ChefBrico"
-    author:
-      "@id": https://receitas.chefbrico.com/#person-maria
-    publisher:
-      "@id": https://receitas.chefbrico.com/#organization
-    image:
-      "@type": ImageObject
-      url": /imagens/risoto-arroz-negro-integral-chefbrico.png
-      width: 1200
-      height: 675
-    datePublished: '2025-07-19T09:00:00-03:00'
-    dateModified: '2025-09-05T17:00:00-03:00'
-    description: "Descubra a diferença entre risoto e paella e explore a riqueza dos arrozes do mundo. Aprenda como a ChefBrico oferece refeições práticas com sabor de ocasião especial, com dicas da Chef Maria Conceição."
-  - "@context": https://schema.org
-    "@type": FAQPage
-    mainEntity":
-    - "@type": Question
-      name: "Qual a principal diferença entre o preparo do risoto e da paella?"
-      acceptedAnswer":
-        "@type": Answer
-        text: "A grande diferença está no ato de mexer. O risoto é mexido constantemente para que o grão de arroz libere seu amido, criando a textura cremosa. Já a paella não deve ser mexida após a adição do líquido, pois o objetivo é que os grãos cozinhem por absorção e formem uma crosta dourada e saborosa no fundo da panela, o famoso socarrat."
-    - "@type": Question
-      name: "Por que os produtos da ChefBrico usam diferentes tipos de arroz?"
-      acceptedAnswer":
-        "@type": Answer
-        text: "Cada tipo de arroz tem uma função! Usamos o Arbóreo ou Cateto nos risotos pela sua alta capacidade de liberar amido e criar cremosidade. Já o Arroz Negro e o Vermelho são escolhidos para refeições integrais, como o nosso prato com Funghi, por sua textura firme, sabor amendoado e altíssimo valor nutricional."
+---json
+{
+  "layout": "base.njk",
+  "permalink": "/blog/guia-dos-arrozes/",
+  "title": "O Guia dos Arrozes do Mundo: Risotos, Paellas e Mais | ChefBrico",
+  "description": "Descubra a diferença entre risoto e paella. Aprenda como a ChefBrico oferece refeições práticas com sabor de ocasião especial, com dicas da Chef Maria Conceição.",
+  "schema": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://receitas.chefbrico.com/blog/guia-dos-arrozes/"
+        },
+        "headline": "O Guia Definitivo dos Arrozes do Mundo: Da Itália ao Brasil com ChefBrico",
+        "author": {
+          "@id": "https://www.chefbrico.com/#person-maria"
+        },
+        "publisher": {
+          "@id": "https://www.chefbrico.com/#organization"
+        },
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://receitas.chefbrico.com/imagens/risoto-arroz-negro-integral-chefbrico.png",
+          "width": 1200,
+          "height": 675
+        },
+        "datePublished": "2025-07-19T09:00:00-03:00",
+        "dateModified": "2025-09-05T17:00:00-03:00",
+        "description": "Descubra a diferença entre risoto e paella e explore a riqueza dos arrozes do mundo. Aprenda como a ChefBrico oferece refeições práticas com sabor de ocasião especial, com dicas da Chef Maria Conceição."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Início",
+            "item": "https://receitas.chefbrico.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://receitas.chefbrico.com/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "O Guia dos Arrozes do Mundo",
+            "item": "https://receitas.chefbrico.com/blog/guia-dos-arrozes/"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Qual a principal diferença entre o preparo do risoto e da paella?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A grande diferença está no ato de mexer. O risoto é mexido constantemente para que o grão de arroz libere seu amido, criando a textura cremosa. Já a paella não deve ser mexida após a adição do líquido, pois o objetivo é que os grãos cozinhem por absorção e formem uma crosta dourada e saborosa no fundo da panela, o famoso socarrat."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Por que os produtos da ChefBrico usam diferentes tipos de arroz?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Cada tipo de arroz tem uma função! Usamos o Arbóreo ou Cateto nos risotos pela sua alta capacidade de liberar amido e criar cremosidade. Já o Arroz Negro e o Vermelho são escolhidos para refeições integrais, como o nosso prato com Funghi, por sua textura firme, sabor amendoado e altíssimo valor nutricional."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
 ---
 <main class="container">
     <div class="recipe-title-container" style="text-align:center;">
