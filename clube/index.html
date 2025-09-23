@@ -1,35 +1,62 @@
----
-layout: base.njk
-permalink: /clube/
-title: "ChefBrico Club | Cupons, Novidades e Comunidade #ChefBricoEmCasa"
-description: "Entre para o ChefBrico Club e receba cupons exclusivos! Faça parte da nossa comunidade #ChefBricoEmCasa, veja pratos reais de clientes e inspire-se."
-schema:
-  "@context": https://schema.org
-  "@type": ["WebPage", "CommunityPage", "CollectionPage"]
-  name: "ChefBrico Club: Vantagens Exclusivas e Comunidade #ChefBricoEmCasa"
-  url": https://receitas.chefbrico.com/clube/
-  description: "Página de inscrição para o ChefBrico Club. Membros recebem cupons, novidades e podem participar da galeria da comunidade #ChefBricoEmCasa."
-  image:
-    "@type": ImageObject
-    url": /imagens/chef-brico-club-banner.png
-    width: 1200
-    height: 675
-  publisher:
-    "@type": Organization
-    name: ChefBrico
-    logo:
-      "@type": ImageObject
-      url": /imagens/flamula-logo-chefbrico.png
-  mainEntity":
-    "@type": WebSite
-    name: ChefBrico
-    url": https://receitas.chefbrico.com/
-  potentialAction":
-    "@type": RegisterAction
-    target:
-      "@type": EntryPoint
-      urlTemplate": "[URL_DA_SUA_FERRAMENTA_DE_EMAIL_AQUI]"
-    description: "Inscrição no ChefBrico Club para receber cupons e novidades."
+---json
+{
+  "layout": "base.njk",
+  "permalink": "/clube/",
+  "title": "ChefBrico Club | Cupons, Novidades e Comunidade #ChefBricoEmCasa",
+  "description": "Entre para o ChefBrico Club e receba cupons exclusivos! Faça parte da nossa comunidade #ChefBricoEmCasa, veja pratos reais de clientes e inspire-se.",
+  "schema": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://receitas.chefbrico.com/clube/"
+        },
+        "name": "ChefBrico Club: Vantagens Exclusivas e Comunidade #ChefBricoEmCasa",
+        "description": "Página de inscrição para o ChefBrico Club. Membros recebem cupons, novidades e podem participar da galeria da comunidade #ChefBricoEmCasa.",
+        "image": "https://receitas.chefbrico.com/imagens/chefbrico-fullbanner-Pinterest1.png",
+        "publisher": {
+          "@id": "https://www.chefbrico.com/#organization"
+        },
+        "mainEntity": {
+          "@type": "Offer",
+          "name": "Cupons de Boas-Vindas ao ChefBrico Club",
+          "description": "Inscreva-se e receba 10% de desconto na sua primeira compra (PRIMEIRA10) e 10% de desconto em toda a linha vegana (VEG10).",
+          "offeredBy": {
+            "@id": "https://www.chefbrico.com/#organization"
+          }
+        },
+        "potentialAction": {
+          "@type": "RegisterAction",
+          "name": "Inscrever-se no ChefBrico Club",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "[URL_DA_SUA_FERRAMENTA_DE_EMAIL_AQUI]",
+            "description": "Formulário de inscrição no ChefBrico Club para receber cupons e novidades."
+          }
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Início",
+            "item": "https://receitas.chefbrico.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "ChefBrico Club",
+            "item": "https://receitas.chefbrico.com/clube/"
+          }
+        ]
+      }
+    ]
+  }
+}
 ---
 
 {% block head %}
@@ -137,34 +164,34 @@ schema:
         </div>
         
         <div class="carousel-container"> <div class="card">
-                <img src="/imagens/cliente-feliz-risoto.jpg" alt="Risoto de Pêra e Gorgonzola por um cliente" class="card-image">
-                <div class="card-content">
-                    <p class="card-description">"Simplesmente divino! O Risoto de Pêra e Gorgonzola virou o meu prato favorito para um jantar especial."</p>
-                    <span class="card-category" style="text-align: right; margin-top: 10px;">- @cliente.feliz</span>
-                </div>
-            </div>
-            <div class="card">
-                <img src="/imagens/cliente-feliz-sopa.jpg" alt="Sopa Detox por um cliente" class="card-image">
-                <div class="card-content">
-                    <p class="card-description">"Começando a semana com o 'reset verde' da Sopa Detox. Leve, saborosa e me sinto cheia de energia!"</p>
-                    <span class="card-category" style="text-align: right; margin-top: 10px;">- @vida.saudavel</span>
-                </div>
-            </div>
-            <div class="card">
-                <img src="/imagens/cliente-feliz-baiao.jpg" alt="Baião de Dois por um cliente" class="card-image">
-                <div class="card-content">
-                    <p class="card-description">"Até as crianças repetiram! Virou o favorito aqui de casa. Salvação para a rotina da família!"</p>
-                    <span class="card-category" style="text-align: right; margin-top: 10px;">- @mae_na_cozinha</span>
-                </div>
-            </div>
-            <div class="card">
-                <img src="/imagens/cliente-feliz-salada.jpg" alt="Salada com molho ChefBrico por um cliente" class="card-image">
-                <div class="card-content">
-                    <p class="card-description">"Minhas saladas nunca mais foram as mesmas depois do molho ChefBrico! Praticidade e sabor juntos."</p>
-                    <span class="card-category" style="text-align: right; margin-top: 10px;">- @cozinha_rapida</span>
-                </div>
+            <img src="/imagens/cliente-feliz-risoto.jpg" alt="Risoto de Pêra e Gorgonzola por um cliente" class="card-image">
+            <div class="card-content">
+                <p class="card-description">"Simplesmente divino! O Risoto de Pêra e Gorgonzola virou o meu prato favorito para um jantar especial."</p>
+                <span class="card-category" style="text-align: right; margin-top: 10px;">- @cliente.feliz</span>
             </div>
         </div>
+        <div class="card">
+            <img src="/imagens/cliente-feliz-sopa.jpg" alt="Sopa Detox por um cliente" class="card-image">
+            <div class="card-content">
+                <p class="card-description">"Começando a semana com o 'reset verde' da Sopa Detox. Leve, saborosa e me sinto cheia de energia!"</p>
+                <span class="card-category" style="text-align: right; margin-top: 10px;">- @vida.saudavel</span>
+            </div>
+        </div>
+        <div class="card">
+            <img src="/imagens/cliente-feliz-baiao.jpg" alt="Baião de Dois por um cliente" class="card-image">
+            <div class="card-content">
+                <p class="card-description">"Até as crianças repetiram! Virou o favorito aqui de casa. Salvação para a rotina da família!"</p>
+                <span class="card-category" style="text-align: right; margin-top: 10px;">- @mae_na_cozinha</span>
+            </div>
+        </div>
+        <div class="card">
+            <img src="/imagens/cliente-feliz-salada.jpg" alt="Salada com molho ChefBrico por um cliente" class="card-image">
+            <div class="card-content">
+                <p class="card-description">"Minhas saladas nunca mais foram as mesmas depois do molho ChefBrico! Praticidade e sabor juntos."</p>
+                <span class="card-category" style="text-align: right; margin-top: 10px;">- @cozinha_rapida</span>
+            </div>
+        </div>
+    </div>
 
         <div class="author-box" style="margin-top: 60px;">
             <img src="/imagens/maria-conceicao-pra-voce.png" alt="Retrato de Maria Conceição, fundadora da ChefBrico" class="author-image">
