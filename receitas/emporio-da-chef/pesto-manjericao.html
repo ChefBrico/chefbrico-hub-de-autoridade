@@ -1,82 +1,121 @@
----
-layout: base.njk
-permalink: /receitas/emporio-da-chef/pesto-manjericao/
-title: "Pesto de Manjericão com Castanha-do-Pará | ChefBrico"
-description: "Descubra o Pesto Genovês da ChefBrico com o toque brasileiro da Castanha-do-Pará. O molho gourmet para suas massas, saladas e bruschettas."
-schema:
-  "@context": https://schema.org
-  "@graph":
-  - "@type": Product
-    mainEntityOfPage:
-      "@type": WebPage
-      "@id": https://receitas.chefbrico.com/receitas/emporio-da-chef/pesto-manjericao/
-    name: "Pesto de Manjericão com Castanha-do-Pará"
-    url": https://receitas.chefbrico.com/receitas/emporio-da-chef/pesto-manjericao/
-    image": https://receitas.chefbrico.com/imagens/emporio/pesto-manjericao-chefbrico.png
-    description: "Feito como manda a tradição italiana, nosso Pesto Genovês é uma celebração ao sabor autêntico, com o toque de brasilidade da Castanha-do-Pará, que confere uma cremosidade incomparável."
-    brand":
-      "@id": https://receitas.chefbrico.com/#organization
-    sku: "ANT-PES-002"
-    manufacturer":
-      "@id": https://receitas.chefbrico.com/#person-maria-conceicao
-    isPartOf":
-      "@id": https://receitas.chefbrico.com/receitas/emporio-da-chef/
-    keywords: "antepasto, pesto, sem-gluten, momento-especial, gourmet-pratico, italiano, manjericão"
-    suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VegetarianDiet"]
-    knownAllergen": "Contém Leite (Queijo Parmesão), Contém Castanha-do-Pará."
-    aggregateRating":
-      "@type": AggregateRating
-      ratingValue: '5'
-      reviewCount: '25'
-    review":
-      "@type": Review
-      reviewRating":
-        "@type": Rating
-        ratingValue: '5'
-      author:
-        "@type": Person
-        name: "Joana F."
-      reviewBody: "Simplesmente divino! O melhor pesto que já provei. Perfeito com meu queijo preferido e um bom vinho."
-    offers":
-      "@type": Offer
-      price: '29.80'
-      priceCurrency: BRL
-      priceValidUntil: '2026-12-31'
-      url": https://www.chefbrico.com/pesto-manjericao-com-castanha-do-para
-      availability: https://schema.org/InStock
-      seller:
-        "@id": https://receitas.chefbrico.com/#organization
-      shippingDetails":
-        "@type": OfferShippingDetails
-        shippingDestination":
-          "@type": DefinedRegion
-          addressCountry: BR
-        deliveryTime:
-          "@type": ShippingDeliveryTime
-          handlingTime":
-            "@type": QuantitativeValue
-            minValue: '1'
-            maxValue: '2'
-            unitCode: DAY
-          transitTime":
-            "@type": QuantitativeValue
-            minValue: '3'
-            maxValue: '10'
-            unitCode: DAY
-      hasMerchantReturnPolicy":
-        "@type": MerchantReturnPolicy
-        url": https://www.chefbrico.com/trocas-e-devolucoes
-        applicableCountry: BR
-        returnPolicyCategory: https://schema.org/MerchantReturnFiniteReturnWindow
-        merchantReturnDays: 7
-  - "@type": Organization
-    "@id": https://receitas.chefbrico.com/#organization
-    name: ChefBrico
-    founder":
-      "@id": https://receitas.chefbrico.com/#person-maria-conceicao
-  - "@type": Person
-    "@id": https://receitas.chefbrico.com/#person-maria-conceicao
-    name: "Maria Conceição"
+---json
+{
+  "layout": "base.njk",
+  "permalink": "/receitas/emporio-da-chef/pesto-manjericao/",
+  "title": "Pesto de Manjericão com Castanha-do-Pará | ChefBrico",
+  "description": "Descubra o Pesto Genovês da ChefBrico com o toque brasileiro da Castanha-do-Pará. O molho gourmet para suas massas, saladas e bruschettas.",
+  "schema": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://receitas.chefbrico.com/receitas/emporio-da-chef/pesto-manjericao/"
+        },
+        "name": "Pesto de Manjericão com Castanha-do-Pará",
+        "url": "https://receitas.chefbrico.com/receitas/emporio-da-chef/pesto-manjericao/",
+        "image": [
+          "https://receitas.chefbrico.com/imagens/emporio/pesto-manjericao-chefbrico.png"
+        ],
+        "description": "Feito como manda a tradição italiana, nosso Pesto Genovês é uma celebração ao sabor autêntico, com o toque de brasilidade da Castanha-do-Pará, que confere uma cremosidade incomparável.",
+        "brand": {
+          "@id": "https://www.chefbrico.com/#organization"
+        },
+        "sku": "ANT-PES-002",
+        "manufacturer": {
+          "@id": "https://www.chefbrico.com/#person-maria"
+        },
+        "keywords": "antepasto, pesto, sem-gluten, momento-especial, gourmet-pratico, italiano, manjericão",
+        "suitableForDiet": [
+          "https://schema.org/GlutenFreeDiet",
+          "https://schema.org/VegetarianDiet"
+        ],
+        "knownAllergen": "Contém Leite (Queijo Parmesão), Contém Castanha-do-Pará.",
+        "review": {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Joana F."
+          },
+          "reviewBody": "Simplesmente divino! O melhor pesto que já provei. Perfeito com meu queijo preferido e um bom vinho."
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "reviewCount": "25"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "29.80",
+          "priceCurrency": "BRL",
+          "priceValidUntil": "2026-12-31",
+          "url": "https://www.chefbrico.com/pesto-manjericao-com-castanha-do-para",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@id": "https://www.chefbrico.com/#organization"
+          }
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Início",
+            "item": "https://receitas.chefbrico.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Empório da Chef",
+            "item": "https://receitas.chefbrico.com/receitas/emporio-da-chef/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Pesto de Manjericão com Castanha-do-Pará",
+            "item": "https://receitas.chefbrico.com/receitas/emporio-da-chef/pesto-manjericao/"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Por que usar Castanha-do-Pará em vez de pinoli?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A Castanha-do-Pará é o nosso toque de brasilidade! Ela confere uma cremosidade e uma textura aveludada incríveis ao pesto, além de ser um superalimento rico em selénio. É a nossa forma de homenagear os ingredientes do nosso país num clássico mundial."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Este pesto é vegano?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Este é o nosso único produto que não é vegano, pois seguimos a receita clássica do Pesto Genovês, que leva queijo Parmesão. Fazemos questão de usar o queijo de alta qualidade para garantir o sabor autêntico da tradição italiana."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Como devo armazenar o pesto depois de aberto?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Após aberto, conserve o pote no frigorífico. Uma dica da Chef para aumentar a durabilidade é sempre cobrir a superfície do pesto com um fio de azeite antes de fechar o pote. Isso ajuda a evitar a oxidação e a manter o frescor do manjericão."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
 ---
 <main>
     <article class="container">
@@ -95,9 +134,9 @@ schema:
            <div class="card-modelo-autora">
                <img class="card-modelo-autora-image" src="/imagens/maria-conceicao-pesto-chefbrico.png" alt="Embalagem do Pesto de Manjericão da ChefBrico">
                <div class="card-modelo-autora-content">
-                    <h3>Compre este Produto Autoral</h3>
-                    <p>A base para elevar suas criações é o nosso <strong>Pesto de Manjericão</strong>. O segredo para uma refeição perfeita!</p>
-                    <a href="https://www.chefbrico.com/pesto-manjericao-com-castanha-do-para" target="_blank" rel="noopener noreferrer" class="cta-button">Ver na Loja Agora</a>
+                   <h3>Compre este Produto Autoral</h3>
+                   <p>A base para elevar suas criações é o nosso <strong>Pesto de Manjericão</strong>. O segredo para uma refeição perfeita!</p>
+                   <a href="https://www.chefbrico.com/pesto-manjericao-com-castanha-do-para" target="_blank" rel="noopener noreferrer" class="cta-button">Ver na Loja Agora</a>
                </div>
            </div>
 
@@ -132,7 +171,7 @@ schema:
             <ul>
                 <li><strong>Peso Líquido:</strong> 90g</li>
                 <li><strong>Validade:</strong> 3 meses (fechado). Após aberto, consumir em até 7 dias e manter refrigerado.</li>
-                <li><strong>Dieta e Alergênicos:</strong> Atenção: Contém Leite e Castanha-do-Pará. Este é único produto que não é vegano.</li>
+                <li><strong>Dieta e Alergénicos:</strong> Atenção: Contém Leite e Castanha-do-Pará. Este é único produto que não é vegano.</li>
                 <li><strong>Origem:</strong> Produzido Artesanalmente em Brasília-DF pela ChefBrico.</li>
             </ul>
 
