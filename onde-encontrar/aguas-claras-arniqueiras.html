@@ -1,93 +1,78 @@
----
-layout: base.njk
-permalink: /onde-encontrar/aguas-claras-arniqueiras/
-title: "ChefBrico em Águas Claras e Arniqueiras: Comida Prática com muito sabor!"
-description: "A ChefBrico atende Águas Claras e Arniqueiras com delivery e parceiros locais. Encontre refeições funcionais, veganas e pós-treino."
-schema:
-  "@context": https://schema.org
-  "@graph":
-  - "@type": Product
-    name: "Serviço de Delivery ChefBrico para Águas Claras e Arniqueiras"
-    mainEntityOfPage":
-        "@type": "WebPage"
-        "@id": "https://receitas.chefbrico.com/onde-encontrar/aguas-claras-arniqueiras/"
-    description: "A ChefBrico atende Águas Claras e Arniqueiras com nosso serviço de delivery exclusivo, oferecendo refeições funcionais, veganas e pós-treino. Destaques da região incluem a Sopa Creme Fit Vegana e as Sopas Funcionais Detox. Peça online ou fale com a Conceição!"
-    image: https://receitas.chefbrico.com/imagens/creme-fit-sopinha-chefbrico.png
-    brand":
-      "@type": Brand
-      name: ChefBrico
-    category: "Entrega de Alimentos Gourmet"
-    offers":
-      "@type": Offer
-      url": https://www.chefbrico.com
-      priceCurrency: BRL
-      availability: https://schema.org/InStock
-      price: '29.60'
-      seller:
-        "@id": "#organization"
-      areaServed":
-        "@type": Place
-        name: "Águas Claras e Arniqueiras, Brasília, DF"
-      priceSpecification":
-        "@type": PriceSpecification
-        priceCurrency: BRL
-        minPrice: '29.60'
-        maxPrice: '34.80'
-      shippingDetails":
-        "@type": OfferShippingDetails
-        deliveryTime:
-          "@type": ShippingDeliveryTime
-          handlingTime":
-            "@type": QuantitativeValue
-            minValue: '1'
-            maxValue: '2'
-            unitCode: DAY
-          transitTime":
-            "@type": QuantitativeValue
-            minValue: '0'
-            maxValue: '1'
-            unitCode: DAY
-      hasMerchantReturnPolicy":
-        "@type": MerchantReturnPolicy
-        url": https://www.chefbrico.com/trocas-e-devolucoes
-        applicableCountry: BR
-        returnPolicyCategory: https://schema.org/MerchantReturnFiniteReturnWindow
-        merchantReturnDays: 7
-    review":
-      "@type": Review
-      reviewRating":
-        "@type": Rating
-        ratingValue: '5'
-      reviewBody: "Entrega como informado, sabor e praticidade excelente, grato oportunidade"
-      author:
-        "@type": Person
-        name: "Andrea M. cliente de Águas Claras"
-  - "@type": FAQPage
-    mainEntity":
-    - "@type": Question
-      name: "A ChefBrico faz entregas em Águas Claras e Arniqueiras?"
-      acceptedAnswer":
-        "@type": Answer
-        text: "Sim, temos um serviço de delivery rápido e prático para atender todos os bairros de Águas Claras e Arniqueiras. Peça pelo nosso e-commerce ou diretamente pelo WhatsApp!"
-    - "@type": Question
-      name: "Existem parceiros ou pontos de venda da ChefBrico em Águas Claras?"
-      acceptedAnswer":
-        "@type": Answer
-        text: "Sim! Em Águas Claras, você também pode encontrar nossos produtos no nosso Empório & Mercearia no Edifício Águas de Manaíra - R. 24 Norte, 04."
-  - "@type": FoodEstablishment
-    "@id": "#organization"
-    name: ChefBrico
-    address:
-      "@type": PostalAddress
-      streetAddress: "Rua 5, Chácara 122, Lote 17, Loja 2"
-      addressLocality: "Vicente Pires"
-      addressRegion: DF
-      postalCode: "72006-060"
-      addressCountry: BR
-    founder:
-      "@type": Person
-      name: "Maria Conceição"
-      jobTitle: "Fundadora e Chef"
+---json
+{
+  "layout": "base.njk",
+  "permalink": "/onde-encontrar/aguas-claras-arniqueiras/",
+  "title": "ChefBrico em Águas Claras e Arniqueiras: Comida Prática com muito sabor!",
+  "description": "A ChefBrico atende Águas Claras e Arniqueiras com delivery e parceiros locais. Encontre refeições funcionais, veganas e pós-treino.",
+  "schema": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://receitas.chefbrico.com/onde-encontrar/aguas-claras-arniqueiras/"
+        },
+        "name": "ChefBrico em Águas Claras e Arniqueiras: Comida Prática com muito sabor!",
+        "description": "A ChefBrico atende Águas Claras e Arniqueiras com nosso serviço de delivery exclusivo, oferecendo refeições funcionais, veganas e pós-treino.",
+        "publisher": {
+          "@id": "https://www.chefbrico.com/#organization"
+        },
+        "about": {
+          "@id": "https://www.chefbrico.com/#organization"
+        }
+      },
+      {
+        "@type": "Service",
+        "serviceType": "Entrega de Refeições Práticas",
+        "provider": {
+          "@id": "https://www.chefbrico.com/#organization"
+        },
+        "areaServed": {
+          "@type": "AdministrativeArea",
+          "name": "Águas Claras e Arniqueiras"
+        },
+        "name": "Delivery ChefBrico para Águas Claras e Arniqueiras"
+      },
+      {
+        "@type": "FoodEstablishment",
+        "name": "Ponto de Venda ChefBrico em Águas Claras",
+        "parentOrganization": {
+          "@id": "https://www.chefbrico.com/#organization"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Rua 24 Norte, 04, Edifício Águas de Manaíra",
+          "addressLocality": "Águas Claras",
+          "addressRegion": "DF"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Início",
+            "item": "https://receitas.chefbrico.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Onde Encontrar",
+            "item": "https://receitas.chefbrico.com/onde-encontrar/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Águas Claras e Arniqueiras",
+            "item": "https://receitas.chefbrico.com/onde-encontrar/aguas-claras-arniqueiras/"
+          }
+        ]
+      }
+    ]
+  }
+}
 ---
 {% block head %}
 <style>
@@ -105,12 +90,6 @@ schema:
     .depoimento-card .quote { font-style: italic; color: #555; }
     .depoimento-card .author { font-weight: bold; color: var(--cor-primaria); margin-top: 15px; display: block; }
     .food-porn-section { background-color: #fdfcf7; border-top: 2px solid #f0ead6; padding: 50px 20px; margin-top: 60px; }
-    .estacao-card { border: 1px solid #eee; border-radius: 8px; overflow: hidden; background-color: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-    .estacao-postcard { width: 100%; height: 220px; background-color: #f0f0f0; }
-    .estacao-postcard img { width: 100%; height: 100%; object-fit: cover; }
-    .estacao-content { padding: 20px; text-align: center; }
-    .estacao-content h3 { color: var(--cor-primaria); margin-top: 0; font-size: 1.1em; text-transform: uppercase; }
-    .estacao-content h4 { color: var(--cor-titulos); font-size: 1.5em; margin-top: 5px; margin-bottom: 10px; }
     .review-cta-section-v2 { background-color: #fdfcf7; border: 1px solid #f0ead6; border-radius: 8px; margin-top: 60px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
     .review-banner-image img { width: 100%; height: auto; display: block; }
     .review-cta-content { padding: 40px 25px; text-align: center !important; }
@@ -149,7 +128,7 @@ schema:
     </div>
 
     <div id="todos-parceiros" class="post-content content-centered" style="margin-top: 40px; padding-top: 40px; border-top: 1px solid #eee;">
-        <h2 style="text-align: center;">Ponto de Referência em Águas Claras e Arniqueira</h2>
+        <h2 style="text-align: center;">Ponto de Referência em Águas Claras e Arniqueiras</h2>
         <p style="text-align: center; max-width: 700px; margin: 15px auto 40px auto; font-size: 1.1em; color: #555;">
             Para sua conveniência, além do nosso delivery, você também pode encontrar uma seleção de nossos produtos em nosso parceiro local:
         </p>
