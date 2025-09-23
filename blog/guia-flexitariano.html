@@ -1,41 +1,82 @@
----
-layout: base.njk
-permalink: /blog/guia-flexitariano/
-title: "Guia para o Flexitariano: Comida Vegetariana Fácil | ChefBrico"
-description: "Quer comer melhor mas não é vegano? Descubra como as refeições práticas da ChefBrico são a solução perfeita para um estilo de vida flexitariano."
-schema:
-  "@context": https://schema.org
-  "@graph":
-  - "@type": Article
-    mainEntityOfPage:
-      "@type": WebPage
-      "@id": https://receitas.chefbrico.com/blog/guia-flexitariano/
-    headline: "\"Não sou Vegano, mas quero comer melhor\": Um Guia para o Flexitariano Moderno com ChefBrico"
-    author:
-      "@id": https://receitas.chefbrico.com/#person-maria
-    publisher:
-      "@id": https://receitas.chefbrico.com/#organization
-    image:
-      "@type": ImageObject
-      url": /imagens/graos-aveia-integral-vegetais-bowl.png
-      width: 1200
-      height: 675
-    datePublished: '2025-07-19T09:00:00-03:00'
-    dateModified: '2025-09-05T18:00:00-03:00'
-    description: "Quer comer melhor, mas não é vegano? Descubra como as refeições práticas e deliciosas da ChefBrico são a solução perfeita para um estilo de vida flexitariano, com dicas da Chef Maria Conceição."
-  - "@context": https://schema.org
-    "@type": FAQPage
-    mainEntity":
-    - "@type": Question
-      name: "Ser flexitariano significa que nunca mais posso comer carne?"
-      acceptedAnswer":
-        "@type": Answer
-        text: "De forma alguma! A beleza do flexitarianismo está na flexibilidade. O objetivo é aumentar a proporção de refeições à base de plantas na sua rotina, mas sem a pressão de eliminar completamente os produtos de origem animal. Você pode, por exemplo, adotar a 'Segunda-Feira Sem Carne' ou priorizar pratos vegetarianos durante a semana."
-    - "@type": Question
-      name: "As refeições da ChefBrico são suficientes para me saciar sem carne?"
-      acceptedAnswer":
-        "@type": Answer
-        text: "Com certeza! Nossas refeições são desenhadas para serem completas. Usamos ingredientes como lentilhas, grão-de-bico e quinoa, que são ricos em proteína vegetal e fibras, garantindo uma refeição que nutre e sacia de verdade. Você sentirá prazer e satisfação, sem sentir falta da carne."
+---json
+{
+  "layout": "base.njk",
+  "permalink": "/blog/guia-flexitariano/",
+  "title": "Guia para o Flexitariano: Comida Vegetariana Fácil | ChefBrico",
+  "description": "Quer comer melhor mas não é vegano? Descubra como as refeições práticas da ChefBrico são a solução perfeita para um estilo de vida flexitariano.",
+  "schema": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://receitas.chefbrico.com/blog/guia-flexitariano/"
+        },
+        "headline": "\"Não sou Vegano, mas quero comer melhor\": Um Guia para o Flexitariano Moderno com ChefBrico",
+        "author": {
+          "@id": "https://www.chefbrico.com/#person-maria"
+        },
+        "publisher": {
+          "@id": "https://www.chefbrico.com/#organization"
+        },
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://receitas.chefbrico.com/imagens/graos-aveia-integral-vegetais-bowl.png",
+          "width": 1200,
+          "height": 675
+        },
+        "datePublished": "2025-07-19T09:00:00-03:00",
+        "dateModified": "2025-09-05T18:00:00-03:00",
+        "description": "Quer comer melhor, mas não é vegano? Descubra como as refeições práticas e deliciosas da ChefBrico são a solução perfeita para um estilo de vida flexitariano, com dicas da Chef Maria Conceição."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Início",
+            "item": "https://receitas.chefbrico.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://receitas.chefbrico.com/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Guia para o Flexitariano",
+            "item": "https://receitas.chefbrico.com/blog/guia-flexitariano/"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Ser flexitariano significa que nunca mais posso comer carne?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "De forma alguma! A beleza do flexitarianismo está na flexibilidade. O objetivo é aumentar a proporção de refeições à base de plantas na sua rotina, mas sem a pressão de eliminar completamente os produtos de origem animal. Você pode, por exemplo, adotar a 'Segunda-Feira Sem Carne' ou priorizar pratos vegetarianos durante a semana."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "As refeições da ChefBrico são suficientes para me saciar sem carne?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Com certeza! Nossas refeições são desenhadas para serem completas. Usamos ingredientes como lentilhas, grão-de-bico e quinoa, que são ricos em proteína vegetal e fibras, garantindo uma refeição que nutre e sacia de verdade. Você sentirá prazer e satisfação, sem sentir falta da carne."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
 ---
 <main class="container">
     <div class="recipe-title-container" style="text-align:center;">
