@@ -1,86 +1,86 @@
----
-layout: base.njk
-permalink: /onde-encontrar/riacho-fundo/
-title: "ChefBrico no Riacho Fundo: Delivery de Comida Prática"
-description: "A ChefBrico atende toda a região do Riacho Fundo com delivery de refeições saudáveis e com sabor de casa. Peça online e simplifique sua rotina."
-schema:
-  "@context": https://schema.org
-  "@graph":
-  - "@type": Product
-    name: "Serviço de Delivery ChefBrico para o Riacho Fundo"
-    mainEntityOfPage":
-        "@type": "WebPage"
-        "@id": "https://receitas.chefbrico.com/onde-encontrar/riacho-fundo/"
-    description: "A ChefBrico atende toda a região do Riacho Fundo (I e II) com delivery de refeições saudáveis com sabor de casa, como o Baião de Dois Vegano e Sopas Funcionais. Peça online e simplifique a rotina da sua família!"
-    image: https://receitas.chefbrico.com/imagens/refeicoes-praticas/refeicao-baiao-dois-chefbrico.png
-    brand":
-      "@type": Brand
-      name: ChefBrico
-    category: "Entrega de Alimentos Gourmet"
-    offers":
-      "@type": Offer
-      url": https://www.chefbrico.com
-      priceCurrency: BRL
-      availability: https://schema.org/InStock
-      price: '29.60'
-      seller:
-        "@id": "#organization"
-      areaServed":
-        "@type": Place
-        name: "Riacho Fundo, Brasília, DF"
-      priceSpecification":
-        "@type": PriceSpecification
-        priceCurrency: BRL
-        minPrice: '29.60'
-        maxPrice: '34.80'
-      shippingDetails":
-        "@type": OfferShippingDetails
-        deliveryTime:
-          "@type": ShippingDeliveryTime
-          handlingTime":
-            "@type": QuantitativeValue
-            minValue: '1'
-            maxValue: '2'
-            unitCode: DAY
-          transitTime":
-            "@type": QuantitativeValue
-            minValue: '0'
-            maxValue: '1'
-            unitCode: DAY
-      hasMerchantReturnPolicy":
-        "@type": MerchantReturnPolicy
-        url": https://www.chefbrico.com/trocas-e-devolucoes
-        applicableCountry: BR
-        returnPolicyCategory: https://schema.org/MerchantReturnFiniteReturnWindow
-        merchantReturnDays: 7
-    review":
-      "@type": Review
-      reviewRating":
-        "@type": Rating
-        ratingValue: '4.8'
-      reviewBody: "A descoberta da ChefBrico mudou a nossa semana aqui no Riacho Fundo. Jantares deliciosos e sem stress!"
-      author:
-        "@type": Person
-        name: "Familia Feliz cliente do Riacho Fundo"
-  - "@type": FAQPage
-    mainEntity":
-    - "@type": Question
-      name: "A ChefBrico entrega no Riacho Fundo I e II?"
-      acceptedAnswer":
-        "@type": Answer
-        text: "Sim, nosso serviço de delivery atende toda a região do Riacho Fundo I e Riacho Fundo II. Faça seu pedido em nosso e-commerce e receba em casa."
-    - "@type": Question
-      name: "Existem parceiros da ChefBrico no Riacho Fundo?"
-      acceptedAnswer":
-        "@type": Answer
-        text: "No momento, nosso foco para o Riacho Fundo é o serviço de delivery direto, para garantir a máxima conveniência. Os parceiros mais próximos se encontram em Águas Claras e no Guará."
-  - "@type": FoodEstablishment
-    "@id": "#organization"
-    name: ChefBrico
-    founder":
-      "@type": Person
-      name: "Maria Conceição"
-      jobTitle: "Fundadora e Chef"
+---json
+{
+  "layout": "base.njk",
+  "permalink": "/onde-encontrar/riacho-fundo/",
+  "title": "ChefBrico no Riacho Fundo: Delivery de Comida Prática",
+  "description": "A ChefBrico atende toda a região do Riacho Fundo com delivery de refeições saudáveis e com sabor de casa. Peça online e simplifique sua rotina.",
+  "schema": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://receitas.chefbrico.com/onde-encontrar/riacho-fundo/"
+        },
+        "name": "ChefBrico no Riacho Fundo: Delivery de Comida Prática",
+        "description": "A ChefBrico atende toda a região do Riacho Fundo (I e II) com delivery de refeições saudáveis com sabor de casa, como o Baião de Dois Vegano e Sopas Funcionais.",
+        "publisher": {
+          "@id": "https://www.chefbrico.com/#organization"
+        },
+        "about": {
+          "@id": "https://www.chefbrico.com/#organization"
+        }
+      },
+      {
+        "@type": "Service",
+        "serviceType": "Entrega de Refeições Práticas",
+        "provider": {
+          "@id": "https://www.chefbrico.com/#organization"
+        },
+        "areaServed": {
+          "@type": "AdministrativeArea",
+          "name": "Riacho Fundo"
+        },
+        "name": "Delivery ChefBrico para o Riacho Fundo"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Início",
+            "item": "https://receitas.chefbrico.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Onde Encontrar",
+            "item": "https://receitas.chefbrico.com/onde-encontrar/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Riacho Fundo",
+            "item": "https://receitas.chefbrico.com/onde-encontrar/riacho-fundo/"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "A ChefBrico entrega no Riacho Fundo I e II?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim, nosso serviço de delivery atende toda a região do Riacho Fundo I e Riacho Fundo II. Faça seu pedido em nosso e-commerce e receba em casa."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Existem parceiros da ChefBrico no Riacho Fundo?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No momento, nosso foco para o Riacho Fundo é o serviço de delivery direto, para garantir a máxima conveniência. Os parceiros mais próximos se encontram em Águas Claras e no Guará."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
 ---
 {% block head %}
 <style>
@@ -98,12 +98,6 @@ schema:
     .depoimento-card .quote { font-style: italic; color: #555; }
     .depoimento-card .author { font-weight: bold; color: var(--cor-primaria); margin-top: 15px; display: block; }
     .food-porn-section { background-color: #fdfcf7; border-top: 2px solid #f0ead6; padding: 50px 20px; margin-top: 60px; }
-    .estacao-card { border: 1px solid #eee; border-radius: 8px; overflow: hidden; background-color: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-    .estacao-postcard { width: 100%; height: 220px; background-color: #f0f0f0; }
-    .estacao-postcard img { width: 100%; height: 100%; object-fit: cover; }
-    .estacao-content { padding: 20px; text-align: center; }
-    .estacao-content h3 { color: var(--cor-primaria); margin-top: 0; font-size: 1.1em; text-transform: uppercase; }
-    .estacao-content h4 { color: var(--cor-titulos); font-size: 1.5em; margin-top: 5px; margin-bottom: 10px; }
     .review-cta-section-v2 { background-color: #fdfcf7; border: 1px solid #f0ead6; border-radius: 8px; margin-top: 60px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
     .review-banner-image img { width: 100%; height: auto; display: block; }
     .review-cta-content { padding: 40px 25px; text-align: center !important; }
