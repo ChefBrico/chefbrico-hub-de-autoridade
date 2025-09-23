@@ -1,55 +1,99 @@
----
-layout: base.njk
-permalink: /comida-de-verdade/despensa-inteligente/
-title: "O Guia da Despensa Inteligente: A Solução da ChefBrico"
-description: "Aprenda a montar sua Despensa Inteligente com a ChefBrico. Uma estratégia de compras e organização para economizar tempo, reduzir o desperdício e ter sempre uma refeição saudável à mão."
-schema:
-  "@context": https://schema.org
-  "@graph":
-  - "@type": HowTo
-    mainEntityOfPage:
-      "@type": WebPage
-      "@id": https://receitas.chefbrico.com/comida-de-verdade/despensa-inteligente/
-    name: "O Guia Definitivo da Despensa Inteligente"
-    author:
-      "@id": https://receitas.chefbrico.com/#person-maria
-    publisher:
-      "@id": https://receitas.chefbrico.com/#organization
-    image:
-      "@type": ImageObject
-      url": https://receitas.chefbrico.com/imagens/chefbrico-chefbox.png
-      width: 1200
-      height: 675
-    datePublished: '2025-08-15T09:00:00-03:00'
-    dateModified: '2025-09-10T11:20:00-03:00'
-    description: "Aprenda a montar sua Despensa Inteligente com a ChefBrico. Uma estratégia de 3 pilares para economizar tempo, reduzir o desperdício e ter sempre uma refeição saudável à mão."
-    step":
-    - "@type": HowToStep
-      name: "Pilar 1: Compras Inteligentes"
-      text: "Uma Despensa Inteligente começa com uma compra inteligente e estratégica. Em vez de compras diárias reativas, você faz uma compra que resolve as refeições de dias ou semanas, como com as ChefBoxes da ChefBrico."
-    - "@type": HowToStep
-      name: "Pilar 2: O Poder do Armazenamento (Sem Desperdício)"
-      text: "Use produtos com longa validade e sem conservantes, como os desidratados artesanais da ChefBrico. Isto permite estocar comida de verdade sem o risco de a ver estragar na geladeira."
-      url": https://receitas.chefbrico.com/blog/o-segredo-do-desidratado/
-    - "@type": HowToStep
-      name: "Pilar 3: Execução em Minutos com a Panela Única"
-      text: "Com a despensa bem abastecida, a execução de uma refeição torna-se fácil. Use misturas projetadas para a filosofia da Panela Única para cozinhar tudo junto, reduzindo a louça e o tempo no fogão."
-      url": https://receitas.chefbrico.com/comida-de-verdade/panela-unica/
-    supply":
-    - "@type": HowToSupply
-      name: "Misturas para Risotos ChefBrico"
-    - "@type": HowToSupply
-      name: "Misturas para Sopas Funcionais ChefBrico"
-    - "@type": HowToSupply
-      name: "Misturas para Refeições Práticas ChefBrico"
-    - "@type": HowToSupply
-      name: "Produtos do Empório da Chef (confits e pestos)"
-  - "@type": Person
-    "@id": https://receitas.chefbrico.com/#person-maria
-    name: "Maria Conceição"
-  - "@type": Organization
-    "@id": https://receitas.chefbrico.com/#organization
-    name: ChefBrico
+---json
+{
+  "layout": "base.njk",
+  "permalink": "/comida-de-verdade/despensa-inteligente/",
+  "title": "O Guia da Despensa Inteligente: A Solução da ChefBrico",
+  "description": "Aprenda a montar sua Despensa Inteligente com a ChefBrico. Uma estratégia de compras e organização para economizar tempo, reduzir o desperdício e ter sempre uma refeição saudável à mão.",
+  "schema": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HowTo",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://receitas.chefbrico.com/comida-de-verdade/despensa-inteligente/"
+        },
+        "name": "Como Montar uma Despensa Inteligente com a ChefBrico",
+        "author": {
+          "@id": "https://www.chefbrico.com/#person-maria"
+        },
+        "publisher": {
+          "@id": "https://www.chefbrico.com/#organization"
+        },
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://receitas.chefbrico.com/imagens/chefbrico-chefbox.png",
+          "width": 1200,
+          "height": 675
+        },
+        "datePublished": "2025-08-15T09:00:00-03:00",
+        "dateModified": "2025-09-10T11:20:00-03:00",
+        "description": "Aprenda a montar sua Despensa Inteligente com a ChefBrico. Uma estratégia de 3 pilares para economizar tempo, reduzir o desperdício e ter sempre uma refeição saudável à mão.",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Pilar 1: Compras Inteligentes",
+            "text": "Uma Despensa Inteligente começa com uma compra inteligente e estratégica. Em vez de compras diárias reativas, você faz uma compra que resolve as refeições de dias ou semanas, como com as ChefBoxes da ChefBrico.",
+            "url": "https://receitas.chefbrico.com/chefbox/"
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Pilar 2: O Poder do Armazenamento (Sem Desperdício)",
+            "text": "Use produtos com longa validade e sem conservantes, como os desidratados artesanais da ChefBrico. Isto permite estocar comida de verdade sem o risco de a ver estragar na geladeira.",
+            "url": "https://receitas.chefbrico.com/blog/o-segredo-do-desidratado/"
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Pilar 3: Execução em Minutos com a Panela Única",
+            "text": "Com a despensa bem abastecida, a execução de uma refeição torna-se fácil. Use misturas projetadas para a filosofia da Panela Única para cozinhar tudo junto, reduzindo a louça e o tempo no fogão.",
+            "url": "https://receitas.chefbrico.com/comida-de-verdade/panela-unica/"
+          }
+        ],
+        "supply": [
+          {
+            "@type": "HowToSupply",
+            "name": "Misturas para Risotos ChefBrico"
+          },
+          {
+            "@type": "HowToSupply",
+            "name": "Misturas para Sopas Funcionais ChefBrico"
+          },
+          {
+            "@type": "HowToSupply",
+            "name": "Misturas para Refeições Integrais ChefBrico"
+          },
+          {
+            "@type": "HowToSupply",
+            "name": "Produtos do Empório da Chef (confits e pestos)"
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Início",
+            "item": "https://receitas.chefbrico.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Nossa Filosofia",
+            "item": "https://receitas.chefbrico.com/comida-de-verdade/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "O Guia da Despensa Inteligente",
+            "item": "https://receitas.chefbrico.com/comida-de-verdade/despensa-inteligente/"
+          }
+        ]
+      }
+    ]
+  }
+}
 ---
 <main class="container">
     <div class="recipe-title-container" style="text-align:center;">
@@ -68,7 +112,7 @@ schema:
         <p>O verdadeiro vilão da rotina moderna não é a falta de tempo, mas a falta de um sistema. A "Despensa Inteligente" é o nosso sistema para combater o caos. É uma filosofia de compras e organização que garante que você <strong>sempre</strong> tenha uma resposta deliciosa e saudável para a pergunta "o que vamos jantar?", sem estresse e sem desperdício.</p>
 
         <h2>Pilar 1: Compras Inteligentes</h2>
-        <p>Uma Despensa Inteligente começa com uma compra inteligente. Em vez de compras diárias reativas, você faz uma compra estratégica que resolve as refeições de dias ou semanas. Nossas <strong>ChefBoxes</strong> são o coração desta etapa: combos com variedade e preço com desconto, que abastecem sua base de uma só vez.</p>
+        <p>Uma Despensa Inteligente começa com uma compra inteligente. Em vez de compras diárias reativas, você faz uma compra estratégica que resolve as refeições de dias ou semanas. Nossas <strong><a href="/chefbox/">ChefBoxes</a></strong> são o coração desta etapa: combos com variedade e preço com desconto, que abastecem sua base de uma só vez.</p>
         
         <h2>Pilar 2: O Poder do Armazenamento (Sem Desperdício)</h2>
         <p>O segredo para uma despensa que dura é a nossa técnica de desidratação artesanal. Ao remover a água, preservamos os nutrientes e o sabor por <strong>mais de 6 meses</strong>, sem nenhum conservante. Isso significa que você pode estocar comida de verdade sem o risco de vê-la estragar na geladeira. É a base da sustentabilidade na sua cozinha. <a href="/blog/o-segredo-do-desidratado/">Conheça mais sobre nosso processo aqui</a>.</p>
