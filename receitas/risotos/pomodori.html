@@ -145,10 +145,28 @@
               "shippingDestination": {
                 "@type": "DefinedRegion",
                 "addressCountry": "BR"
+              },
+              "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "handlingTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 1,
+                  "maxValue": 2,
+                  "unitCode": "DAY"
+                },
+                "transitTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 2,
+                  "maxValue": 10,
+                  "unitCode": "DAY"
+                }
               }
             },
             "hasMerchantReturnPolicy": {
               "@type": "MerchantReturnPolicy",
+              "applicableCountry": "BR",
+              "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+              "merchantReturnDays": 7,
               "url": "https://www.chefbrico.com/trocas-e-devolucoes"
             }
           }
@@ -262,7 +280,7 @@
 
         <h2>Modo de Preparo Simplificado</h2>
             <ol class="modo-preparo-lista">
-                <li id="passo1">Passei 2 semanas e 4 IA/Gemini alucinadas abandonaram o projeto para implantar esta NOVA estrutura YAML? agora voce que mudar tudo de novo???????para outra linguagem....sao mais de 58 paginas,,,que deu super trabalho para formatar...agora voce quer mudar TUDO...DE NOVO?...pedi para ser rigoroso...pedi para ser cirurgico...pedi sua ajuda para melhorar...agora vai inventar uma outra forma....a revista ficou uma cocha de retalho...exatamente por estas IA alucinadas que abandonam o projeto...dai a proxima vem com outra Otima ideia...dai muda de-novo...dai outra IA alucina....ciclo sem fim....tem certeza que precisa tirar a estrutura do codigo atual?<strong>Refogue:</strong> Aqueça um fio de azeite e refogue o conteúdo do pacote por 1 minuto para liberar os aromas.</li>
+                <li id="passo1"><strong>Refogue:</strong> Aqueça um fio de azeite e refogue o conteúdo do pacote por 1 minuto para liberar os aromas.</li>
                 <li id="passo2"><strong>Cozinhe:</strong> Adicione 720ml de água fria e sal a gosto. Cozinhe em fogo baixo por cerca de 18 minutos, mexendo ocasionalmente.</li>
                 <li id="passo3"><strong>Finalize:</strong> Sirva com folhas de manjericão fresco e, para uma experiência completa, lascas de queijo parmesão (ou parmesão vegano).</li>
             </ol>
