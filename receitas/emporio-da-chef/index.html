@@ -1,84 +1,76 @@
----
-layout: base.njk
-permalink: /receitas/emporio-da-chef/
-title: "Empório da Chef: Antepastos, Confits e Mais | ChefBrico"
-description: "O toque final de sabor com nossos antepastos, confits e produtos gourmet artesanais. Explore dicas e receitas da ChefBrico."
-schema:
-- "@context": https://schema.org/
-  "@type": Product
-  name: "Caponata com Shiitake Grelhado"
-  url": https://receitas.chefbrico.com/receitas/emporio-da-chef/caponata-shiitake/
-  image":
-  - https://receitas.chefbrico.com/emporio/caponata-shiitake-vegetais-chefbrico.png
-  description: "Uma releitura sofisticada de um clássico siciliano. Nossa Caponata artesanal une o tradicional sabor agridoce dos vegetais cozidos lentamente na técnica confit com o toque surpreendente e umami do cogumelo shiitake grelhado."
-  brand":
-    "@type": Brand
-    name: ChefBrico
-  sku: "ANT-CAP-003"
-  manufacturer":
-    "@id": https://receitas.chefbrico.com/#person-maria
-  isPartOf":
-    "@id": https://receitas.chefbrico.com/receitas/emporio-da-chef/
-  keywords: "antepasto, caponata, vegano, sem-gluten, momento-especial, gourmet-pratico, shiitake, agridoce"
-  suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VeganDiet", "https://schema.org/VegetarianDiet"]
-  knownAllergen": "Livre de Glúten. Livre de Lactose. (Produzido em ambiente que pode conter traços de castanhas)."
-  aggregateRating":
-    "@type": AggregateRating
-    ratingValue: '5'
-    reviewCount: '15'
-  review":
-    "@type": Review
-    reviewRating":
-      "@type": Rating
-      ratingValue: '5'
-    author:
-      "@type": Person
-      name: "Joana F."
-    reviewBody: "Simplesmente divina! A melhor caponata que já provei. O shiitake dá um toque super especial. Perfeita com torradas e um bom vinho."
-  offers":
-    "@type": Offer
-    price: '29.80'
-    priceCurrency: BRL
-    url": https://www.chefbrico.com/caponata-com-shiitake-grelhado
-    availability: https://schema.org/InStock
-    seller:
-      "@type": Organization
-      name: ChefBrico
-      url": https://www.chefbrico.com
-    shippingDetails":
-      "@type": OfferShippingDetails
-      shippingDestination":
-        "@type": DefinedRegion
-        addressCountry: BR
-      deliveryTime:
-        "@type": ShippingDeliveryTime
-        handlingTime":
-          "@type": QuantitativeValue
-          minValue: '1'
-          maxValue: '2'
-          unitCode: DAY
-        transitTime":
-          "@type": QuantitativeValue
-          minValue: '3'
-          maxValue: '10'
-          unitCode: DAY
-      carrier":
-        "@type": Organization
-        name: Correios
-- "@context": https://schema.org
-  "@type": Person
-  "@id": https://receitas.chefbrico.com/#person-maria
-  name: "Maria Conceição"
-  jobTitle: "Fundadora e Chef de Criação"
-  description: "Empreendedora e autora de todas as receitas autorais da ChefBrico."
-  url": https://receitas.chefbrico.com/comida-de-verdade/
-  sameAs":
-  - https://wa.me/5561996659880
-  - https://www.instagram.com/chefbrico/
-  funderOf":
-    "@type": FoodEstablishment
-    name: ChefBrico
-    url": https://www.chefbrico.com
+---json
+{
+  "layout": "base.njk",
+  "permalink": "/receitas/emporio-da-chef/",
+  "title": "Empório da Chef: Antepastos, Confits e Mais | ChefBrico",
+  "description": "O toque final de sabor com nossos antepastos, confits e produtos gourmet artesanais. Explore dicas e receitas da ChefBrico.",
+  "schema": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://receitas.chefbrico.com/receitas/emporio-da-chef/"
+        },
+        "name": "Empório da Chef: Antepastos, Confits e Produtos Gourmet Artesanais",
+        "description": "Descubra a linha de produtos autorais e artesanais da Chef Maria Conceição, criados para dar um toque final de sabor às suas refeições.",
+        "publisher": {
+          "@id": "https://www.chefbrico.com/#organization"
+        },
+        "about": {
+          "@id": "https://www.chefbrico.com/#organization"
+        },
+        "mainEntity": {
+          "@type": "ItemList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Caponata com Shiitake Grelhado",
+              "url": "https://receitas.chefbrico.com/receitas/emporio-da-chef/caponata-shiitake/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Funghi Confitado em Azeite",
+              "url": "https://receitas.chefbrico.com/receitas/emporio-da-chef/funghi-confit/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Pesto de Manjericão com Castanha-do-Pará",
+              "url": "https://receitas.chefbrico.com/receitas/emporio-da-chef/pesto-manjericao/"
+            }
+          ]
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Início",
+            "item": "https://receitas.chefbrico.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Receitas",
+            "item": "https://receitas.chefbrico.com/receitas/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Empório da Chef",
+            "item": "https://receitas.chefbrico.com/receitas/emporio-da-chef/"
+          }
+        ]
+      }
+    ]
+  }
+}
 ---
 <main class="container">
     <h1>Empório da Chef: O Toque Final de Sabor</h1>
