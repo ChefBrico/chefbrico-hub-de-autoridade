@@ -1,86 +1,95 @@
----
-layout: base.njk
-permalink: /onde-encontrar/asa-norte/
-title: "ChefBrico na Asa Norte: Peça Online ou Fale Conosco"
-description: "Encontre os produtos ChefBrico na Asa Norte, Brasília. Peça online, fale conosco via WhatsApp ou descubra as receitas favoritas da vizinhança."
-schema:
-  "@context": https://schema.org
-  "@graph":
-  - "@type": Product
-    name: "Serviço de Delivery ChefBrico para a Asa Norte"
-    mainEntityOfPage":
-        "@type": "WebPage"
-        "@id": "https://receitas.chefbrico.com/onde-encontrar/asa-norte/"
-    description: "Encontre os produtos ChefBrico na Asa Norte, Brasília. Oferecemos delivery rápido para toda a região. Peça online ou fale com a Conceição! Destaques na Asa Norte incluem o Risoto Pomodori & Pesto e o Confit de Shiitake."
-    image: https://receitas.chefbrico.com/imagens/risotos/risoto-pomodori-pesto-tijela-chefbrico.png
-    brand":
-      "@type": Brand
-      name: ChefBrico
-    category: "Entrega de Alimentos Gourmet"
-    offers":
-      "@type": Offer
-      url": https://www.chefbrico.com
-      priceCurrency: BRL
-      availability: https://schema.org/InStock
-      price: '29.60'
-      seller:
-        "@id": "#organization"
-      areaServed":
-        "@type": Place
-        name: "Asa Norte, Brasília, DF"
-      priceSpecification":
-        "@type": PriceSpecification
-        priceCurrency: BRL
-        minPrice: '29.60'
-        maxPrice: '34.80'
-      shippingDetails":
-        "@type": OfferShippingDetails
-        deliveryTime:
-          "@type": ShippingDeliveryTime
-          handlingTime":
-            "@type": QuantitativeValue
-            minValue: '1'
-            maxValue: '2'
-            unitCode: DAY
-          transitTime":
-            "@type": QuantitativeValue
-            minValue: '0'
-            maxValue: '1'
-            unitCode: DAY
-      hasMerchantReturnPolicy":
-        "@type": MerchantReturnPolicy
-        url": https://www.chefbrico.com/trocas-e-devolucoes
-        applicableCountry: BR
-        returnPolicyCategory: https://schema.org/MerchantReturnFiniteReturnWindow
-        merchantReturnDays: 7
-    review":
-      "@type": Review
-      reviewRating":
-        "@type": Rating
-        ratingValue: '5'
-      reviewBody: "Muito Saboroso, quebra um galho enorme aqui em casa"
-      author:
-        "@type": Person
-        name: "Maria Cecilia liente da Asa Norte"
-  - "@type": FAQPage
-    mainEntity":
-    - "@type": Question
-      name: "A ChefBrico faz entregas na Asa Norte?"
-      acceptedAnswer":
-        "@type": Answer
-        text: "Sim! Temos um serviço de delivery rápido e conveniente para toda a Asa Norte. Peça pelo nosso e-commerce para receber em casa com toda a praticidade."
-    - "@type": Question
-      name: "Onde posso comprar produtos ChefBrico em lojas físicas na Asa Norte?"
-      acceptedAnswer":
-        "@type": Answer
-        text: "Você encontra nossos produtos em vários parceiros selecionados na Asa Norte, incluindo a Mercearia Colaborativa (CLN 412), Quitandas da Vó Maria (SHIN), A Casa do Manjericão (CLN 215), Ravioli e Cia (CLN 214) e no Mercado Malunga (CLN 315)."
-  - "@type": FoodEstablishment
-    "@id": "#organization"
-    name: ChefBrico
-    founder":
-      "@type": Person
-      name: "Maria Conceição"
-      jobTitle: "Fundadora e Chef"
+---json
+{
+  "layout": "base.njk",
+  "permalink": "/onde-encontrar/asa-norte/",
+  "title": "ChefBrico na Asa Norte: Peça Online ou Fale Conosco",
+  "description": "Encontre os produtos ChefBrico na Asa Norte, Brasília. Peça online, fale conosco via WhatsApp ou descubra as receitas favoritas da vizinhança.",
+  "schema": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://receitas.chefbrico.com/onde-encontrar/asa-norte/"
+        },
+        "name": "ChefBrico na Asa Norte: Delivery e Pontos de Venda",
+        "description": "Encontre os produtos ChefBrico na Asa Norte, Brasília. Oferecemos delivery rápido para toda a região e temos diversos parceiros locais. Peça online ou fale com a Conceição!",
+        "publisher": {
+          "@id": "https://www.chefbrico.com/#organization"
+        },
+        "about": {
+          "@id": "https://www.chefbrico.com/#organization"
+        }
+      },
+      {
+        "@type": "Service",
+        "serviceType": "Entrega de Refeições Práticas",
+        "provider": {
+          "@id": "https://www.chefbrico.com/#organization"
+        },
+        "areaServed": {
+          "@type": "AdministrativeArea",
+          "name": "Asa Norte"
+        },
+        "name": "Delivery ChefBrico para a Asa Norte"
+      },
+      {
+        "@type": "FoodEstablishment",
+        "name": "Ponto de Venda ChefBrico em Quitandas da Vó Maria (Asa Norte)",
+        "parentOrganization": { "@id": "https://www.chefbrico.com/#organization" },
+        "address": { "@type": "PostalAddress", "streetAddress": "SHIN área especial 03 loja 02", "addressLocality": "Asa Norte", "addressRegion": "DF" }
+      },
+      {
+        "@type": "FoodEstablishment",
+        "name": "Ponto de Venda ChefBrico em Mercearia Colaborativa (Asa Norte)",
+        "parentOrganization": { "@id": "https://www.chefbrico.com/#organization" },
+        "address": { "@type": "PostalAddress", "streetAddress": "Asa Norte CLN 412 BL E LOJA 4, 6, 10", "addressLocality": "Asa Norte", "addressRegion": "DF" }
+      },
+      {
+        "@type": "FoodEstablishment",
+        "name": "Ponto de Venda ChefBrico em A Casa do Manjericão (Asa Norte)",
+        "parentOrganization": { "@id": "https://www.chefbrico.com/#organization" },
+        "address": { "@type": "PostalAddress", "streetAddress": "Asa Norte CLN 215 BL B Loja 9", "addressLocality": "Asa Norte", "addressRegion": "DF" }
+      },
+      {
+        "@type": "FoodEstablishment",
+        "name": "Ponto de Venda ChefBrico em Ravioli e Cia (Asa Norte)",
+        "parentOrganization": { "@id": "https://www.chefbrico.com/#organization" },
+        "address": { "@type": "PostalAddress", "streetAddress": "CLN 214, bloco D, lojas 05 e 07", "addressLocality": "Asa Norte", "addressRegion": "DF" }
+      },
+      {
+        "@type": "FoodEstablishment",
+        "name": "Ponto de Venda ChefBrico em Mercado Malunga (Asa Norte)",
+        "parentOrganization": { "@id": "https://www.chefbrico.com/#organization" },
+        "address": { "@type": "PostalAddress", "streetAddress": "Asa Norte Comércio Local Norte 315 BL E loja 04", "addressLocality": "Asa Norte", "addressRegion": "DF" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Início",
+            "item": "https://receitas.chefbrico.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Onde Encontrar",
+            "item": "https://receitas.chefbrico.com/onde-encontrar/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Asa Norte",
+            "item": "https://receitas.chefbrico.com/onde-encontrar/asa-norte/"
+          }
+        ]
+      }
+    ]
+  }
+}
 ---
 {% block head %}
 <style>
@@ -98,12 +107,6 @@ schema:
     .depoimento-card .quote { font-style: italic; color: #555; }
     .depoimento-card .author { font-weight: bold; color: var(--cor-primaria); margin-top: 15px; display: block; }
     .food-porn-section { background-color: #fdfcf7; border-top: 2px solid #f0ead6; padding: 50px 20px; margin-top: 60px; }
-    .estacao-card { border: 1px solid #eee; border-radius: 8px; overflow: hidden; background-color: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-    .estacao-postcard { width: 100%; height: 220px; background-color: #f0f0f0; }
-    .estacao-postcard img { width: 100%; height: 100%; object-fit: cover; }
-    .estacao-content { padding: 20px; text-align: center; }
-    .estacao-content h3 { color: var(--cor-primaria); margin-top: 0; font-size: 1.1em; text-transform: uppercase; }
-    .estacao-content h4 { color: var(--cor-titulos); font-size: 1.5em; margin-top: 5px; margin-bottom: 10px; }
     .review-cta-section-v2 { background-color: #fdfcf7; border: 1px solid #f0ead6; border-radius: 8px; margin-top: 60px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
     .review-banner-image img { width: 100%; height: auto; display: block; }
     .review-cta-content { padding: 40px 25px; text-align: center !important; }
