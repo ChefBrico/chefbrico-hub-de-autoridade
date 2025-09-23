@@ -6,131 +6,149 @@ description: "Aprenda o passo a passo para preparar o Risoto Pomodori & Pesto da
 schema:
   "@context": https://schema.org
   "@graph":
-    - "@type": Recipe
-      mainEntityOfPage:
-        "@type": WebPage
-        "@id": "https://receitas.chefbrico.com/receitas/risotos/pomodori/"
-      name: "Receita Rápida: Risoto Pomodori & Pesto ChefBrico"
-      author:
-        - "@type": Person
-          name: "Maria Conceição"
-          url: "https://receitas.chefbrico.com/comida-de-verdade/psicologia-ao-prato/"
-      publisher:
-        "@id": "https://www.chefbrico.com/#organization"
-      recipeCategory: Prato Principal
-      datePublished: '2025-08-31T09:00:00-03:00'
-      dateModified: '2025-09-11T09:00:00-03:00'
-      description: "Descubra como transformar a mistura artesanal da ChefBrico no autêntico Risoto Pomodori & Pesto italiano em apenas 18 minutos. Uma refeição gourmet, prática, 100% natural e vegana."
+  - "@type": Recipe
+    mainEntityOfPage:
+      "@type": WebPage
+      "@id": https://receitas.chefbrico.com/receitas/risotos/pomodori/
+    name: "Receita Rápida: Risoto Pomodori & Pesto ChefBrico"
+    author:
+      "@id": https://receitas.chefbrico.com/#person-maria-conceicao
+    publisher:
+      "@id": https://receitas.chefbrico.com/#organization
+    isPartOf:
+      "@id": https://receitas.chefbrico.com/receitas/risotos/
+    recipeCategory: Prato Principal
+    datePublished: '2025-08-31T09:00:00-03:00'
+    dateModified: '2025-09-11T09:00:00-03:00'
+    description: "Descubra como transformar a mistura artesanal da ChefBrico no autêntico Risoto Pomodori & Pesto italiano em apenas 18 minutos. Uma refeição gourmet, prática, 100% natural e vegana."
+    image:
+      "@type": ImageObject
+      url: https://receitas.chefbrico.com/imagens/risoto-pomodori-pesto-tijela-chefbrico.png
+    keywords: "risoto, vegano, sem-gluten, jantar-rapido, momento-especial, gourmet-pratico, classico, italiano, pomodori, pesto"
+    prepTime: PT1M
+    cookTime: PT18M
+    totalTime: PT19M
+    recipeYield: "2 porções"
+    recipeCuisine: Italiana
+    nutrition:
+      "@type": NutritionInformation
+      servingSize: 90 g
+      calories: 370 kcal
+      proteinContent: 10 g
+    suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/VeganDiet", "https://schema.org/VegetarianDiet"]
+    recipeIngredient":
+    - "@type": HowToSupply
+      name: "Mistura para Risoto Pomodori & Pesto ChefBrico"
+      requiredQuantity":
+        "@type": QuantitativeValue
+        value: '1'
+        unitText: "pacote (180g)"
+    - "@type": HowToSupply
+      name: "água fria"
+      requiredQuantity":
+        "@type": QuantitativeValue
+        value: '720'
+        unitText: ml
+    - "@type": HowToSupply
+      name: azeite
+      requiredQuantity: 1 fio
+    - "@type": HowToSupply
+      name: Sal
+      requiredQuantity: a gosto
+    - "@type": HowToSupply
+      name: "Folhas de manjericão fresco (opcional)"
+    - "@type": HowToSupply
+      name: "Lascas de parmesão ou parmesão vegano (opcional)"
+    recipeInstructions:
+    - "@type": HowToStep
+      name: Refogar
+      text: "Aqueça um fio de azeite e refogue o conteúdo do pacote por 1 minuto para liberar os aromas."
+      url: https://receitas.chefbrico.com/receitas/risotos/pomodori/#passo1
       image:
-        - "https://receitas.chefbrico.com/imagens/risoto-pomodori-pesto-tijela-chefbrico.png"
-      keywords: "risoto, vegano, sem-gluten, jantar-rapido, momento-especial, gourmet-pratico, classico, italiano, pomodori, pesto"
-      prepTime: PT1M
-      cookTime: PT18M
-      totalTime: PT19M
-      recipeYield: 
-        - "2 porções"
-      recipeCuisine: Italiana
-      nutrition:
-        "@type": NutritionInformation
-        servingSize: 90 g
-        calories: 370 kcal
-        proteinContent: 10 g
-      suitableForDiet: 
-        - https://schema.org/GlutenFreeDiet
-        - https://schema.org/VeganDiet
-        - https://schema.org/VegetarianDiet
-      recipeIngredient:
-        - "Mistura para Risoto Pomodori & Pesto ChefBrico (1 pacote de 180g)"
-        - "720 ml de água fria"
-        - "1 fio de azeite"
-        - "Sal a gosto"
-        - "Folhas de manjericão fresco (opcional)"
-        - "Lascas de parmesão ou parmesão vegano (opcional)"
-      recipeInstructions:
-        - "@type": HowToStep
-          name: Refogar
-          text: "Aqueça um fio de azeite e refogue o conteúdo do pacote por 1 minuto para liberar os aromas."
-          url: "https://receitas.chefbrico.com/receitas/risotos/pomodori/#passo1"
-        - "@type": HowToStep
-          name: Cozinhar
-          text: "Adicione 720ml de água fria e sal a gosto. Cozinhe em fogo baixo por cerca de 18 minutos, mexendo ocasionalmente."
-          url: "https://receitas.chefbrico.com/receitas/risotos/pomodori/#passo2"
-        - "@type": HowToStep
-          name: Finalizar
-          text: "Finalize com folhas de manjericão fresco e, para uma experiência completa, lascas de queijo parmesão."
-          url: "https://receitas.chefbrico.com/receitas/risotos/pomodori/#passo3"
-      review:
-        "@type": Review
-        reviewRating":
-          "@type": Rating
-          ratingValue: '5'
-        author:
-          "@type": Person
-          name: "Roberta G."
-        reviewBody: "Esse é o risoto que peço em restaurante, mas feito em casa em menos de 20 minutos. O sabor do tomate seco é incrível e é super cremoso. Já comprei 3 vezes!"
+        "@type": ImageObject
+        url: https://receitas.chefbrico.com/imagens/passos/refogar-generico.png
+    - "@type": HowToStep
+      name: Cozinhar
+      text: "Adicione 720ml de água fria e sal a gosto. Cozinhe em fogo baixo por cerca de 18 minutos, mexendo ocasionalmente."
+      url: https://receitas.chefbrico.com/receitas/risotos/pomodori/#passo2
+      image:
+        "@type": ImageObject
+        url: https://receitas.chefbrico.com/imagens/passos/cozinhar-generico.png
+    - "@type": HowToStep
+      name: Finalizar
+      text: "Finalize com folhas de manjericão fresco e, para uma experiência completa, lascas de queijo parmesão."
+      url: https://receitas.chefbrico.com/receitas/risotos/pomodori/#passo3
+      image:
+        "@type": ImageObject
+        url: https://receitas.chefbrico.com/imagens/passos/finalizar-generico.png
+    review:
+      "@type": Review
+      reviewRating":
+        "@type": Rating
+        ratingValue: '5'
+      author:
+        "@type": Person
+        name: "Roberta G."
+      reviewBody: "Esse é o risoto que peço em restaurante, mas feito em casa em menos de 20 minutos. O sabor do tomate seco é incrível e é super cremoso. Já comprei 3 vezes!"
+    aggregateRating:
+      "@type": AggregateRating
+      ratingValue: '4.9'
+      reviewCount: '29'
+    video:
+      "@type": VideoObject
+      name: "Como Fazer o Risoto Pomodori & Pesto da ChefBrico"
+      description: "Aprenda a fazer o clássico italiano em sua versão mais prática e saborosa. O Risoto Pomodori & Pesto da ChefBrico pronto em 18 minutos."
+      thumbnailUrl": https://receitas.chefbrico.com/URL_DA_IMAGEM_DE_CAPA_DO_VIDEO_POMODORI.jpg
+      contentUrl": https://www.youtube.com/watch?v=SEU_VIDEO_ID_POMODORI
+      uploadDate": '2025-09-11T09:00:00-03:00'
+      duration: PT1M
+    about:
+      "@type": Product
+      name: "Mistura para Risoto Pomodori & Pesto"
+      description: "O sabor autêntico da Itália em 18 minutos! Nossa mistura artesanal para Risoto Pomodori & Pesto é 100% natural, vegana e sem glúten."
+      brand":
+        "@type": Brand
+        name: ChefBrico
+      sku: RIS-POM-002
+      image: https://receitas.chefbrico.com/imagens/risoto-pomodori-pesto-tijela-chefbrico.png
       aggregateRating:
         "@type": AggregateRating
         ratingValue: '4.9'
         reviewCount: '29'
-      video:
-        "@type": VideoObject
-        name: "Como Fazer o Risoto Pomodori & Pesto da ChefBrico"
-        description: "Aprenda a fazer o clássico italiano em sua versão mais prática e saborosa. O Risoto Pomodori & Pesto da ChefBrico pronto em 18 minutos."
-        thumbnailUrl: 
-          - "https://receitas.chefbrico.com/imagens/risoto-pomodori-pesto-tijela-chefbrico.png"
-        contentUrl: "https://www.youtube.com/watch?v=SEU_VIDEO_ID_POMODORI" # ATENÇÃO: Substituir pelo link do vídeo
-        uploadDate: '2025-09-11T09:00:00-03:00'
-        duration: PT1M
-      about:
-        "@type": Product
-        name: "Mistura para Risoto Pomodori & Pesto"
-        description: "O sabor autêntico da Itália em 18 minutos! Nossa mistura artesanal para Risoto Pomodori & Pesto é 100% natural, vegana e sem glúten."
-        brand:
-          "@type": Brand
-          name: ChefBrico
-        sku: RIS-POM-002
-        image: "https://receitas.chefbrico.com/imagens/risoto-pomodori-pesto-tijela-chefbrico.png"
-        aggregateRating:
-          "@type": AggregateRating
-          ratingValue: '4.9'
-          reviewCount: '29'
-        offers:
-          "@type": Offer
-          url: "https://www.chefbrico.com/risoto-pomodori-amp-pesto"
-          priceCurrency: BRL
-          price: '34.80'
-          priceValidUntil: '2026-12-31'
-          availability: https://schema.org/InStock
-    - "@type": BreadcrumbList
-      itemListElement":
-        - "@type": ListItem
-          position: 1
-          name: "Início"
-          item: "https://receitas.chefbrico.com/"
-        - "@type": ListItem
-          position: 2
-          name: "Receitas"
-          item: "https://receitas.chefbrico.com/receitas/"
-        - "@type": ListItem
-          position: 3
-          name: "Risotos"
-          item: "https://receitas.chefbrico.com/receitas/risotos/"
-        - "@type": ListItem
-          position: 4
-          name: "Risoto Pomodori & Pesto"
-          item: "https://receitas.chefbrico.com/receitas/risotos/pomodori/" # <-- item adicionado
-    - "@type": FAQPage
-      mainEntity":
-        - "@type": Question
-          name: "O risoto é vegano?"
-          acceptedAnswer":
-            "@type": Answer
-            text: "Sim, 100% vegano! Não utilizamos nenhum ingrediente de origem animal. A cremosidade vem do próprio amido do arroz e do nosso caldo de vegetais, e o leve sabor manjericão."
-        - "@type": Question
-          name: "O sabor do tomate é muito forte?"
-          acceptedAnswer":
-            "@type": Answer
-            text: "Não, é um sabor adocicado e equilibrado. Nosso processo de desidratação concentra a doçura natural do tomate, resultando em um prato suave e muito saboroso, que agrada inclusive o paladar infantil."
+      offers:
+        "@type": Offer
+        url: https://www.chefbrico.com/risoto-pomodori-amp-pesto
+        priceCurrency: BRL
+        price: '34.80'
+        priceValidUntil: '2026-12-31'
+        availability: https://schema.org/InStock
+        shippingDetails:
+          "@type": OfferShippingDetails
+          shippingDestination":
+            "@type": DefinedRegion
+            addressCountry: BR
+          deliveryTime:
+            "@type": ShippingDeliveryTime
+            handlingTime":
+              "@type": QuantitativeValue
+              minValue: '1'
+              maxValue: '2'
+              unitCode: DAY
+            transitTime":
+              "@type": QuantitativeValue
+              minValue: '3'
+              maxValue: '10'
+              unitCode: DAY
+        hasMerchantReturnPolicy:
+          "@type": MerchantReturnPolicy
+          url: https://www.chefbrico.com/trocas-e-devolucoes
+          applicableCountry: BR
+          returnPolicyCategory: https://schema.org/MerchantReturnFiniteReturnWindow
+          merchantReturnDays: 7
+  - "@type": Organization
+    "@id": https://receitas.chefbrico.com/#organization
+  - "@type": Person
+    "@id": https://receitas.chefbrico.com/#person-maria-conceicao
 ---
 <main>
     <article class="container">
@@ -155,9 +173,9 @@ schema:
            <div class="card-modelo-autora">
                <img class="card-modelo-autora-image" src="/imagens/cardapio-risoto-cremoso-pomodori-pesto-chefbrico.png" alt="Embalagem do Risoto Pomodori & Pesto da ChefBrico" loading="lazy">
                <div class="card-modelo-autora-content">
-                   <h3>Compre esta Receita Autoral</h3>
-                   <p>A base para este clássico é a nossa Mistura para Risoto Pomodori & Pesto. Garanta a sua e sinta o sabor da Itália em minutos!</p>
-                   <a href="https://www.chefbrico.com/risoto-pomodori-amp-pesto" target="_blank" rel="noopener noreferrer" class="cta-button">Ver na Loja Agora</a>
+                    <h3>Compre esta Receita Autoral</h3>
+                    <p>A base para este clássico é a nossa Mistura para Risoto Pomodori & Pesto. Garanta a sua e sinta o sabor da Itália em minutos!</p>
+                    <a href="https://www.chefbrico.com/risoto-pomodori-amp-pesto" target="_blank" rel="noopener noreferrer" class="cta-button">Ver na Loja Agora</a>
                </div>
            </div>
 
