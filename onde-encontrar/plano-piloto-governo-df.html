@@ -1,86 +1,96 @@
----
-layout: base.njk
-permalink: /onde-encontrar/plano-piloto-governo-df/
-title: "ChefBrico para GDF, SMU e Cruzeiro: Delivery Prático e Saudável"
-description: "A ChefBrico atende a região do Governo do DF, Setor Militar Urbano e Cruzeiro com delivery de refeições. Peça online e simplifique sua rotina."
-schema:
-  "@context": https://schema.org
-  "@graph":
-  - "@type": Product
-    name: "Serviço de Delivery para a Área Governamental (GDF, SMU) e Cruzeiro"
-    mainEntityOfPage":
-        "@type": "WebPage"
-        "@id": "https://receitas.chefbrico.com/onde-encontrar/plano-piloto-governo-df/"
-    description: "A ChefBrico atende a região do Governo do DF (GDF), Setor Militar Urbano (SMU) e Cruzeiro com delivery de refeições saudáveis e práticas, como a Refeição Mediterrânea e a Sopa Detox. Peça online e simplifique sua rotina!"
-    image: https://receitas.chefbrico.com/imagens/refeicoes-praticas/refeicao-mediterranea-chefbrico.png
-    brand":
-      "@type": Brand
-      name: ChefBrico
-    category: "Entrega de Alimentos Gourmet"
-    offers":
-      "@type": Offer
-      url": https://www.chefbrico.com
-      priceCurrency: BRL
-      availability: https://schema.org/InStock
-      price: '29.60'
-      seller:
-        "@id": "#organization"
-      areaServed":
-        "@type": Place
-        name: "Área Governamental (GDF, SMU) e Cruzeiro, Brasília, DF"
-      priceSpecification":
-        "@type": PriceSpecification
-        priceCurrency: BRL
-        minPrice: '29.60'
-        maxPrice: '34.80'
-      shippingDetails":
-        "@type": OfferShippingDetails
-        deliveryTime:
-          "@type": ShippingDeliveryTime
-          handlingTime":
-            "@type": QuantitativeValue
-            minValue: '1'
-            maxValue: '2'
-            unitCode: DAY
-          transitTime":
-            "@type": QuantitativeValue
-            minValue: '0'
-            maxValue: '1'
-            unitCode: DAY
-      hasMerchantReturnPolicy":
-        "@type": MerchantReturnPolicy
-        url": https://www.chefbrico.com/trocas-e-devolucoes
-        applicableCountry: BR
-        returnPolicyCategory: https://schema.org/MerchantReturnFiniteReturnWindow
-        merchantReturnDays: 7
-    review":
-      "@type": Review
-      reviewRating":
-        "@type": Rating
-        ratingValue: '5'
-      reviewBody: "A melhor solução para almoço em casa! A entrega foi rápida e a comida é deliciosa."
-      author:
-        "@type": Person
-        name: "Joana P. cliente da Chefbrico"
-  - "@type": FAQPage
-    mainEntity":
-    - "@type": Question
-      name: "A ChefBrico entrega na região do GDF, SMU e Cruzeiro?"
-      acceptedAnswer":
-        "@type": Answer
-        text: "Sim, nosso serviço de delivery atende toda a área governamental, o Setor Militar Urbano e o Cruzeiro (Novo, Velho e Octogonal). Peça online e receba no seu trabalho ou residência."
-    - "@type": Question
-      name: "Existem parceiros da ChefBrico nesta região?"
-      acceptedAnswer":
-        "@type": Answer
-        text: "Não temos parceiros físicos nesta área específica, mas você encontra nossos produtos em lojas na Asa Sul e Asa Norte, perfeitas para pegar no caminho de casa. Confira nosso mapa para ver todos os locais."
-  - "@type": FoodEstablishment
-    "@id": "#organization"
-    name: ChefBrico
-    founder":
-      "@type": Person
-      name: "Maria Conceição"
-      jobTitle: "Fundadora e Chef"
+---json
+{
+  "layout": "base.njk",
+  "permalink": "/onde-encontrar/plano-piloto-governo-df/",
+  "title": "ChefBrico para GDF, SMU e Cruzeiro: Delivery Prático e Saudável",
+  "description": "A ChefBrico atende a região do Governo do DF, Setor Militar Urbano e Cruzeiro com delivery de refeições. Peça online e simplifique sua rotina.",
+  "schema": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://receitas.chefbrico.com/onde-encontrar/plano-piloto-governo-df/"
+        },
+        "name": "ChefBrico para GDF, SMU e Cruzeiro: Delivery Prático e Saudável",
+        "description": "A ChefBrico atende a região do Governo do DF (GDF), Setor Militar Urbano (SMU) e Cruzeiro com delivery de refeições saudáveis e práticas.",
+        "publisher": {
+          "@id": "https://www.chefbrico.com/#organization"
+        },
+        "about": {
+          "@id": "https://www.chefbrico.com/#organization"
+        }
+      },
+      {
+        "@type": "Service",
+        "serviceType": "Entrega de Refeições Práticas para Escritórios e Residências",
+        "provider": {
+          "@id": "https://www.chefbrico.com/#organization"
+        },
+        "areaServed": [
+          {
+            "@type": "AdministrativeArea",
+            "name": "Plano Piloto"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Setor Militar Urbano (SMU)"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Cruzeiro"
+          }
+        ],
+        "name": "Delivery ChefBrico para GDF, SMU e Cruzeiro"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Início",
+            "item": "https://receitas.chefbrico.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Onde Encontrar",
+            "item": "https://receitas.chefbrico.com/onde-encontrar/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "GDF, SMU e Cruzeiro",
+            "item": "https://receitas.chefbrico.com/onde-encontrar/plano-piloto-governo-df/"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "A ChefBrico entrega na região do GDF, SMU e Cruzeiro?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim, nosso serviço de delivery atende toda a área governamental, o Setor Militar Urbano e o Cruzeiro (Novo, Velho e Octogonal). Peça online e receba no seu trabalho ou residência."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Existem parceiros da ChefBrico nesta região?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Não temos parceiros físicos nesta área específica, mas você encontra nossos produtos em lojas na Asa Sul e Asa Norte, perfeitas para pegar no caminho de casa. Confira nosso mapa para ver todos os locais."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
 ---
 {% block head %}
 <style>
@@ -98,12 +108,6 @@ schema:
     .depoimento-card .quote { font-style: italic; color: #555; }
     .depoimento-card .author { font-weight: bold; color: var(--cor-primaria); margin-top: 15px; display: block; }
     .food-porn-section { background-color: #fdfcf7; border-top: 2px solid #f0ead6; padding: 50px 20px; margin-top: 60px; }
-    .estacao-card { border: 1px solid #eee; border-radius: 8px; overflow: hidden; background-color: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-    .estacao-postcard { width: 100%; height: 220px; background-color: #f0f0f0; }
-    .estacao-postcard img { width: 100%; height: 100%; object-fit: cover; }
-    .estacao-content { padding: 20px; text-align: center; }
-    .estacao-content h3 { color: var(--cor-primaria); margin-top: 0; font-size: 1.1em; text-transform: uppercase; }
-    .estacao-content h4 { color: var(--cor-titulos); font-size: 1.5em; margin-top: 5px; margin-bottom: 10px; }
     .review-cta-section-v2 { background-color: #fdfcf7; border: 1px solid #f0ead6; border-radius: 8px; margin-top: 60px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
     .review-banner-image img { width: 100%; height: auto; display: block; }
     .review-cta-content { padding: 40px 25px; text-align: center !important; }
@@ -145,7 +149,7 @@ schema:
     <div id="todos-parceiros" class="post-content content-centered" style="margin-top: 40px; padding-top: 40px; border-top: 1px solid #eee;">
         <h2 style="text-align: center;">Parceiros em Brasília</h2>
         <p style="text-align: center; max-width: 700px; margin: 15px auto 40px auto; font-size: 1.1em; color: #555;">
-            Trabalha no Plano Piloto, mas mora em outra região? Para sua conveniência, aqui está a lista completa de onde você pode encontrar os produtos ChefBrico perto da sua casa.
+             Trabalha no Plano Piloto, mas mora em outra região? Para sua conveniência, aqui está a lista completa de onde você pode encontrar os produtos ChefBrico perto da sua casa.
         </p>
         
         <div class="faq-section" style="margin-top: 40px;">
@@ -177,7 +181,7 @@ schema:
                     </p>
                 </div>
             </div>
-        </div>
+            </div>
     </div>
 
 
