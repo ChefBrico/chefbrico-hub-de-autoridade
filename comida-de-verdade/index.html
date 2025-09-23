@@ -1,62 +1,78 @@
----
-layout: base.njk
-permalink: /comida-de-verdade/
-title: "A Trilha da ChefBrico: Nossa Filosofia de Comida de Verdade"
-description: "Explore a história completa da ChefBrico. Da psicologia ao prato, da EU Empresa artesanal ao Prêmio Sebrae, esta é a nossa jornada de 6 anos nutrindo Brasília."
-schema:
-  "@context": https://schema.org
-  "@graph":
-  - "@type": Article
-    mainEntityOfPage:
-      "@type": WebPage
-      "@id": https://receitas.chefbrico.com/comida-de-verdade/
-    headline: "A Trilha da ChefBrico: A História e Filosofia por Trás da Comida de Verdade"
-    image: https://receitas.chefbrico.com/imagens/maria-conceicao-premio-sebrae-2023-chefbrico.jpg
-    datePublished: '2017-04-01T08:00:00-03:00'
-    dateModified: '2025-09-10T18:25:00-03:00'
-    author:
-      "@id": https://receitas.chefbrico.com/#person-maria-conceicao
-    publisher:
-      "@id": https://receitas.chefbrico.com/#organization
-    description: "A jornada de 6 anos da empreendedora Maria Conceição. Descubra como a ChefBrico evoluiu de uma pequena produção de cogumelos para uma referência em alimentação prática e saudável em Brasília, culminando no Prêmio Sebrae Mulher de Negócios."
-  - "@type": Person
-    "@id": https://receitas.chefbrico.com/#person-maria-conceicao
-    name: "Maria Conceição"
-    jobTitle: "Fundadora e Chef de Criação"
-    image: https://receitas.chefbrico.com/imagens/maria-conceicao-pra-voce.png
-    worksFor:
-      "@id": https://receitas.chefbrico.com/#organization
-    sameAs":
-    - https://www.instagram.com/chefbrico
-    - https://br.pinterest.com/chefbrico/
-    - https://www.facebook.com/chefbrico
-    - https://www.google.com/search?kgmid=/g/11g140fcnw
-    award: "Prêmio Sebrae Mulher de Negócios DF 2023"
-  - "@type": FoodEstablishment
-    "@id": https://receitas.chefbrico.com/#organization
-    name: ChefBrico
-    url": https://www.chefbrico.com
-    logo: https://receitas.chefbrico.com/imagens/flamula-chefbrico.png
-    image: https://receitas.chefbrico.com/imagens/flamula-chefbrico.png
-    telephone: "+5561996659880"
-    servesCuisine": "Brasileira, Italiana, Comida Saudável"
-    priceRange": "$$"
-    sameAs":
-    - https://www.instagram.com/chefbrico
-    - https://br.pinterest.com/chefbrico/
-    - https://www.facebook.com/chefbrico
-    - https://www.google.com/search?kgmid=/g/11g140fcnw
-    address:
-      "@type": PostalAddress
-      streetAddress: "Rua 5, Chácara 122, Lote 17, Loja 2"
-      addressLocality: "Vicente Pires"
-      addressRegion: DF
-      postalCode: "72006-060"
-      addressCountry: BR
-    contactPoint:
-      "@type": ContactPoint
-      telephone: "+5561996659880"
-      contactType: "customer service"
+---json
+{
+  "layout": "base.njk",
+  "permalink": "/comida-de-verdade/",
+  "title": "A Trilha da ChefBrico: Nossa Filosofia de Comida de Verdade",
+  "description": "Explore a história completa da ChefBrico. Da psicologia ao prato, da EU Empresa artesanal ao Prêmio Sebrae, esta é a nossa jornada de 6 anos nutrindo Brasília.",
+  "schema": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "AboutPage",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://receitas.chefbrico.com/comida-de-verdade/"
+        },
+        "name": "A Trilha da ChefBrico: A História e Filosofia por Trás da Comida de Verdade",
+        "description": "A jornada de 6 anos da empreendedora Maria Conceição. Descubra como a ChefBrico evoluiu de uma pequena produção de cogumelos para uma referência em alimentação prática e saudável em Brasília, culminando no Prêmio Sebrae Mulher de Negócios.",
+        "publisher": {
+          "@id": "https://www.chefbrico.com/#organization"
+        },
+        "mainEntity": {
+          "@id": "https://www.chefbrico.com/#person-maria"
+        },
+        "mentions": [
+          {
+            "@type": "Organization",
+            "name": "Sebrae"
+          },
+          {
+            "@type": "Organization",
+            "name": "Emater"
+          },
+          {
+            "@type": "Organization",
+            "name": "Senar"
+          }
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.chefbrico.com/#person-maria",
+        "name": "Maria Conceição",
+        "jobTitle": "Fundadora e Chef de Criação",
+        "image": "https://receitas.chefbrico.com/imagens/maria-conceicao-pra-voce.png",
+        "worksFor": {
+          "@id": "https://www.chefbrico.com/#organization"
+        },
+        "award": "Prêmio Sebrae Mulher de Negócios DF 2023",
+        "sameAs": [
+          "https://www.instagram.com/chefbrico",
+          "https://br.pinterest.com/chefbrico/",
+          "https://www.facebook.com/chefbrico",
+          "https://www.google.com/search?kgmid=/g/11g140fcnw"
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Início",
+            "item": "https://receitas.chefbrico.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Nossa Filosofia",
+            "item": "https://receitas.chefbrico.com/comida-de-verdade/"
+          }
+        ]
+      }
+    ]
+  }
+}
 ---
 <main class="container">
     <div class="author-box" style="align-items: flex-start; margin: 40px 0;">
