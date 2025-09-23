@@ -4,68 +4,67 @@ permalink: /
 title: "Revista Digital ChefBrico | Comida de Verdade, Sem Confusão"
 description: "Bem-vindo à Revista Digital da ChefBrico. Receitas, dicas, produtos e a filosofia 'Comida de Verdade' para uma rotina mais prática e saudável."
 schema:
-- "@context": https://schema.org
-  "@type": WebSite
-  name: "Revista Digital da ChefBrico"
-  url": https://receitas.chefbrico.com/
-  about":
-  - "@type": Thing
-    name: "Comida de Verdade"
-  - "@type": Thing
-    name: "Cozinha Prática"
-  - "@type": Thing
-    name: "Receitas Saudáveis"
-  - "@type": Thing
-    name: "Filosofia de Alimentação"
-  potentialAction":
-    "@type": SearchAction
-    target":
-      "@type": EntryPoint
-      urlTemplate": "https://receitas.chefbrico.com/search?q={search_term_string}"
-      query-input": "required name=search_term_string"
----
-"@context": https://schema.org
-"@type": FoodEstablishment
-"@id": https://receitas.chefbrico.com/#organization
-name: ChefBrico
-url: https://www.chefbrico.com
-logo: https://receitas.chefbrico.com/imagens/flamula-chefbrico.png
-image: https://receitas.chefbrico.com/imagens/flamula-chefbrico.png
-telephone: "+5561996659880"
-servesCuisine: "Brasileira, Italiana, Comida Saudável"
-priceRange: "$$"
-sameAs:
-  - https://www.instagram.com/chefbrico
-  - https://br.pinterest.com/chefbrico/
-  - https://www.facebook.com/chefbrico
-  - https://www.google.com/search?kgmid=/g/11g140fcnw
-address:
-  "@type": PostalAddress
-  streetAddress: "Rua 5, Chácara 122, Lote 17, Loja 2"
-  addressLocality: "Vicente Pires, Brasília"
-  addressRegion: DF
-  postalCode: "72006-060"
-  addressCountry: BR
-contactPoint:
-  "@type": ContactPoint
-  telephone: "+5561996659880"
-  contactType: "customer service"
+  "@context": https://schema.org
+  "@graph":
+    - "@type": WebSite
+      name: "Revista Digital da ChefBrico"
+      url: https://receitas.chefbrico.com/
+      about:
+        - "@type": Thing
+          name: "Comida de Verdade"
+        - "@type": Thing
+          name: "Cozinha Prática"
+        - "@type": Thing
+          name: "Receitas Saudáveis"
+        - "@type": Thing
+          name: "Filosofia de Alimentação"
+      potentialAction":
+        "@type": SearchAction
+        target":
+          "@type": EntryPoint
+          urlTemplate: "https://receitas.chefbrico.com/search?q={search_term_string}"
+          query-input": "required name=search_term_string"
+    - "@type": FoodEstablishment
+      "@id": "https://receitas.chefbrico.com/#organization"
+      name: ChefBrico
+      url: https://www.chefbrico.com
+      logo: https://receitas.chefbrico.com/imagens/flamula-chefbrico.png
+      image: https://receitas.chefbrico.com/imagens/flamula-chefbrico.png
+      telephone: "+5561996659880"
+      servesCuisine": "Brasileira, Italiana, Comida Saudável"
+      priceRange": "$$"
+      sameAs":
+        - https://www.instagram.com/chefbrico
+        - https://br.pinterest.com/chefbrico/
+        - https://www.facebook.com/chefbrico
+        - https://www.google.com/search?kgmid=/g/11g140fcnw
+      address":
+        "@type": PostalAddress
+        streetAddress: "Rua 5, Chácara 122, Lote 17, Loja 2"
+        addressLocality: "Vicente Pires, Brasília"
+        addressRegion": DF
+        postalCode: "72006-060"
+        addressCountry": BR
+      contactPoint":
+        "@type": ContactPoint
+        telephone: "+5561996659880"
+        contactType: "customer service"
 ---
 <main>
-   <section class="hero-section-with-image-and-text">
-    <div class="hero-image-container-circular">
-        
-        <img src="/imagens/maria-conceicao-empreendedora-feira-tematica.png" 
-             alt="Maria Conceição, fundadora da ChefBrico, sorrindo e apresentando produtos ChefBrico." 
-             class="circular-image imagem-interativa-premium">
+    <section class="hero-section-with-image-and-text">
+     <div class="hero-image-container-circular">
+         
+         <img src="/imagens/maria-conceicao-empreendedora-feira-tematica.png" 
+              alt="Maria Conceição, fundadora da ChefBrico, sorrindo e apresentando produtos ChefBrico." 
+              class="circular-image imagem-interativa-premium">
 
-    </div>
-    <div class="hero-content-text">
-        <h1 class="hero-title">Comida de Verdade;<br>Sem confusão na cozinha!</h1>
-        <p class="hero-subtitle">Uma revolução no sabor e na sua rotina. Descubra refeições práticas, 100% naturais e com o afeto da nossa cozinha.</p>
-        <p class="hero-message">Dividi minhas criações em quatro universos de sabor para te ajudar a encontrar exatamente o que sua rotina precisa. Cada categoria é uma porta de entrada para um mundo de praticidade e comida de verdade. Explore com carinho!</p>
-        <a href="/receitas/" class="cta-button-small">Explore Nossas Receitas <span aria-hidden="true">»</span></a>
-    </div>
+     </div>
+     <div class="hero-content-text">
+         <h1 class="hero-title">Comida de Verdade;<br>Sem confusão na cozinha!</h1>
+         <p class="hero-subtitle">Uma revolução no sabor e na sua rotina. Descubra refeições práticas, 100% naturais e com o afeto da nossa cozinha.</p>
+         <p class="hero-message">Dividi minhas criações em quatro universos de sabor para te ajudar a encontrar exatamente o que sua rotina precisa. Cada categoria é uma porta de entrada para um mundo de praticidade e comida de verdade. Explore com carinho!</p>
+         <a href="/receitas/" class="cta-button-small">Explore Nossas Receitas <span aria-hidden="true">»</span></a>
+     </div>
 </section>
 
     <div class="container">
@@ -131,8 +130,8 @@ contactPoint:
                     <p>Explore dicas que vão além do básico e mostram a versatilidade dos nossos produtos.</p>
                 </div>
             </a>
-            <a href="blog/miojo-do-bem.html" class="card">
-                <img src="https:/imagens/low-carb-vegetais-sopa-chefbrico.png" alt="Tijela suculenta com graos e vegetais" class="card-image">
+            <a href="/blog/miojo-do-bem.html" class="card">
+                <img src="/imagens/low-carb-vegetais-sopa-chefbrico.png" alt="Tijela suculenta com graos e vegetais" class="card-image">
                 <div class="card-content">
                     <span class="card-category">Comunidade</span>
                     <h3>Miojo do Bem</h3>
@@ -148,7 +147,7 @@ contactPoint:
 
         <h2 style="margin-top: 50px;">Quatro Universos do Sabor para ajudar a encontrar exatamente o que sua rotina precisa. | ChefBrico</h2>
         <div class="carousel-container">
-            <a href="receitas/risotos/index.html" class="card">
+            <a href="/receitas/risotos/index.html" class="card">
                 <img src="/imagens/risoto-pomodori-pesto-chefbrico-580px.png" alt="Risoto Gourmet italianissimo pomodori e pesto" class="card-image">
                 <div class="card-content">
                     <span class="card-category">Risotos e Arrozes do Mundo</span>
@@ -156,7 +155,7 @@ contactPoint:
                     <p>O sabor autêntico da Itália, cremoso e reconfortante, pronto em 18 minutos.</p>
                 </div>
             </a>
-            <a href="receitas/sopas-funcionais/index.html" class="card">
+            <a href="/receitas/sopas-funcionais/index.html" class="card">
                 <img src="/imagens/chefbrico-creme-fit-sopinha-chefbrico-580%20px.png" alt="Tigela de sopa nutritiva" class="card-image">
                 <div class="card-content">
                     <span class="card-category">Sopas Funcionais</span>
@@ -164,7 +163,7 @@ contactPoint:
                     <p>A combinação perfeita da praticidade e sabor para sua vida agitada.</p>
                 </div>
             </a>
-            <a href="receitas/refeicoes-integrais/index.html" class="card">
+            <a href="/receitas/refeicoes-integrais/index.html" class="card">
                 <img src="/imagens/refeicao-nutritiva-integral-arroz-negro-chefbrico-80%20px.png" alt="Prato de Arroz Negro com Funghi, rústico e sofisticado" class="card-image">
                 <div class="card-content">
                     <span class="card-category">Refeição Integral com muito Sabor</span>
@@ -172,7 +171,7 @@ contactPoint:
                     <p>A combinação sofisticada e nutritiva do arroz negro com o umami intenso do funghi.</p>
                 </div>
             </a>
-            <a href="receitas/emporio-da-chef/index.html" class="card">
+            <a href="/receitas/emporio-da-chef/index.html" class="card">
                 <img src="/imagens/confitado-shiitake-chefbrico.png" alt="Pote Confit Shiitake" class="card-image">
                 <div class="card-content">
                     <span class="card-category">Empório da Chef</span>
