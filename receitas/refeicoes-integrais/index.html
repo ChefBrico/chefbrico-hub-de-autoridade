@@ -1,53 +1,73 @@
----
-layout: base.njk
-permalink: /receitas/refeicoes-integrais/
-title: "Refeições Integrais com muito Sabor e Praticidade ('Uma Mãozinha na Rotina') | ChefBrico"
-description: "Nossa coleção de soluções completas para os dias mais corridos. Pratos que nutrem, encantam e simplificam sua vida na cozinha."
-schema:
-- "@context": https://schema.org
-  "@type": CollectionPage
-  name: "Catálogo de Refeições Práticas da ChefBrico"
-  url": https://receitas.chefbrico.com/receitas/refeicoes-integrais/
-  description: "Nossa coleção de soluções completas para os dias mais corridos. Pratos que nutrem, encantam e simplificam sua vida na cozinha."
-  isPartOf":
-    "@id": https://receitas.chefbrico.com/receitas/
-  mainEntity":
-    "@type": ItemList
-    name: "Catálogo de Refeições Práticas"
-    numberOfItems": 3
-    itemListElement":
-    - "@type": Product
-      name: "Baião de Dois de Grãos Integrais"
-      url": https://receitas.chefbrico.com/receitas/refeicoes-integrais/baiao-de-dois/
-      image: https://receitas.chefbrico.com/imagens/baiao-de-2-refeicao-pratica-chefbrico.png
-      category: "Refeição Prática"
-      keywords: "refeicao, vegano, sem-gluten, para-familia, dia-a-dia, marmita-inteligente, brasileiro, baiao de dois"
-    - "@type": Product
-      name: "Refeição Mediterrânea"
-      url": https://receitas.chefbrico.com/receitas/refeicoes-integrais/mediterranea/
-      image: https://receitas.chefbrico.com/imagens/Refeic%CC%A7a%CC%83o-gra%CC%83o-de-bico-arroz-vermelho-integral-chefbrico.png
-      category: "Refeição Prática"
-      keywords: "refeicao, vegano, sem-gluten, marmita-inteligente, mediterraneo, leveza"
-    - "@type": Product
-      name: "Arroz Negro com Funghi Secchi"
-      url": https://receitas.chefbrico.com/receitas/refeicoes-integrais/arroz-negro-funghi/
-      image: https://receitas.chefbrico.com/imagens/Refeicao-arroz-negro-integral-funghi-chefbrico.png
-      category: "Refeição Prática"
-      keywords: "refeicao, vegano, sem-gluten, marmita-inteligente, momento-especial, jantar-romantico, gourmet-pratico, arroz negro, funghi"
-- "@context": https://schema.org
-  "@type": Person
-  "@id": https://receitas.chefbrico.com/#person-maria
-  name: "Maria Conceição"
-  jobTitle: "Fundadora e Chef de Criação"
-  description: "Empreendedora e autora de todas as receitas autorais da ChefBrico."
-  url": https://receitas.chefbrico.com/comida-de-verdade/
-  sameAs":
-  - https://wa.me/5561996659880
-  - https://www.instagram.com/chefbrico/
-  funderOf":
-    "@type": FoodEstablishment
-    name: ChefBrico
-    url": https://www.chefbrico.com
+---json
+{
+  "layout": "base.njk",
+  "permalink": "/receitas/refeicoes-integrais/",
+  "title": "Refeições Integrais com muito Sabor e Praticidade ('Uma Mãozinha na Rotina') | ChefBrico",
+  "description": "Nossa coleção de soluções completas para os dias mais corridos. Pratos que nutrem, encantam e simplificam sua vida na cozinha.",
+  "schema": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://receitas.chefbrico.com/receitas/refeicoes-integrais/"
+        },
+        "name": "Refeições Integrais com muito Sabor e Praticidade",
+        "description": "Nossa coleção de soluções completas para os dias mais corridos. Pratos que nutrem, encantam e simplificam sua vida na cozinha.",
+        "publisher": {
+          "@id": "https://www.chefbrico.com/#organization"
+        },
+        "mainEntity": {
+          "@type": "ItemList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Baião de Dois Integral e Vegano",
+              "url": "https://receitas.chefbrico.com/receitas/refeicoes-integrais/baiao-de-dois/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Refeição Mediterrânea Vegana",
+              "url": "https://receitas.chefbrico.com/receitas/refeicoes-integrais/mediterranea/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Arroz Negro com Funghi",
+              "url": "https://receitas.chefbrico.com/receitas/refeicoes-integrais/arroz-negro-funghi/"
+            }
+          ]
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Início",
+            "item": "https://receitas.chefbrico.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Receitas",
+            "item": "https://receitas.chefbrico.com/receitas/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Refeições Integrais",
+            "item": "https://receitas.chefbrico.com/receitas/refeicoes-integrais/"
+          }
+        ]
+      }
+    ]
+  }
+}
 ---
 <main class="container">
     <h1>Refeições Integrais com muito Sabor e Praticidade: "Uma Mãozinha na Rotina"</h1>
