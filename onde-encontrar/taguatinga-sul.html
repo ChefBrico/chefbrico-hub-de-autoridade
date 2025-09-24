@@ -1,86 +1,86 @@
----
-layout: base.njk
-permalink: /onde-encontrar/taguatinga-sul/
-title: "ChefBrico em Taguatinga Sul: Delivery de Comida Caseira e Prática"
-description: "A ChefBrico entrega em Taguatinga Sul! Peça online nossas refeições com sabor de casa, práticas e saudáveis, e receba na sua porta."
-schema:
-  "@context": https://schema.org
-  "@graph":
-  - "@type": Product
-    name: "Serviço de Delivery ChefBrico para Taguatinga Sul"
-    mainEntityOfPage":
-        "@type": "WebPage"
-        "@id": "https://receitas.chefbrico.com/onde-encontrar/taguatinga-sul/"
-    description: "A ChefBrico entrega em Taguatinga Sul! Peça online nossas refeições com sabor de casa, como o Baião de Dois Vegano e as Sopas Funcionais, e receba na sua porta."
-    image: https://receitas.chefbrico.com/imagens/refeicoes-praticas/refeicao-baiao-dois-chefbrico.png
-    brand":
-      "@type": Brand
-      name: ChefBrico
-    category: "Entrega de Alimentos Gourmet"
-    offers":
-      "@type": Offer
-      url": https://www.chefbrico.com
-      priceCurrency: BRL
-      availability: https://schema.org/InStock
-      price: '29.60'
-      seller:
-        "@id": "#organization"
-      areaServed":
-        "@type": Place
-        name: "Taguatinga Sul, Brasília, DF"
-      priceSpecification":
-        "@type": PriceSpecification
-        priceCurrency: BRL
-        minPrice: '29.60'
-        maxPrice: '34.80'
-      shippingDetails":
-        "@type": OfferShippingDetails
-        deliveryTime:
-          "@type": ShippingDeliveryTime
-          handlingTime":
-            "@type": QuantitativeValue
-            minValue: '1'
-            maxValue: '2'
-            unitCode: DAY
-          transitTime":
-            "@type": QuantitativeValue
-            minValue: '0'
-            maxValue: '1'
-            unitCode: DAY
-      hasMerchantReturnPolicy":
-        "@type": MerchantReturnPolicy
-        url": https://www.chefbrico.com/trocas-e-devolucoes
-        applicableCountry: BR
-        returnPolicyCategory: https://schema.org/MerchantReturnFiniteReturnWindow
-        merchantReturnDays: 7
-    review":
-      "@type": Review
-      reviewRating":
-        "@type": Rating
-        ratingValue: '4.7'
-      reviewBody: "A melhor descoberta para a nossa família em Taguatinga Sul! As sopas são deliciosas e o Baião de Dois é sucesso garantido no almoço de domingo."
-      author:
-        "@type": Person
-        name: "Zenaide Andrade S. cliente de Taguatinga Sul"
-  - "@type": FAQPage
-    mainEntity":
-    - "@type": Question
-      name: "A ChefBrico faz entregas em Taguatinga Sul?"
-      acceptedAnswer":
-        "@type": Answer
-        text: "Sim, nosso serviço de delivery atende toda a região de Taguatinga Sul. Faça seu pedido em nosso e-commerce e receba em casa."
-    - "@type": Question
-      name: "Existem parceiros da ChefBrico em Taguatinga?"
-      acceptedAnswer":
-        "@type": Answer
-        text: "No momento, nosso foco para Taguatinga Sul é o serviço de delivery direto, para garantir a máxima conveniência. Os parceiros mais próximos se encontram em Águas Claras."
-  - "@type": FoodEstablishment
-    "@id": "#organization"
-    name: ChefBrico
-    founder":
-      "@type": Person
-      name: "Maria Conceição"
-      jobTitle: "Fundadora e Chef"
+---json
+{
+  "layout": "base.njk",
+  "permalink": "/onde-encontrar/taguatinga-sul/",
+  "title": "ChefBrico em Taguatinga Sul: Delivery de Comida Caseira e Prática",
+  "description": "A ChefBrico entrega em Taguatinga Sul! Peça online nossas refeições com sabor de casa, práticas e saudáveis, e receba na sua porta.",
+  "schema": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://receitas.chefbrico.com/onde-encontrar/taguatinga-sul/"
+        },
+        "name": "ChefBrico em Taguatinga Sul: Delivery de Comida Caseira e Prática",
+        "description": "A ChefBrico entrega em Taguatinga Sul! Peça online nossas refeições com sabor de casa, como o Baião de Dois Vegano e as Sopas Funcionais, e receba na sua porta.",
+        "publisher": {
+          "@id": "https://www.chefbrico.com/#organization"
+        },
+        "about": {
+          "@id": "https://www.chefbrico.com/#organization"
+        }
+      },
+      {
+        "@type": "Service",
+        "serviceType": "Entrega de Refeições Práticas",
+        "provider": {
+          "@id": "https://www.chefbrico.com/#organization"
+        },
+        "areaServed": {
+          "@type": "AdministrativeArea",
+          "name": "Taguatinga Sul"
+        },
+        "name": "Delivery ChefBrico para Taguatinga Sul"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Início",
+            "item": "https://receitas.chefbrico.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Onde Encontrar",
+            "item": "https://receitas.chefbrico.com/onde-encontrar/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Taguatinga Sul",
+            "item": "https://receitas.chefbrico.com/onde-encontrar/taguatinga-sul/"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "A ChefBrico faz entregas em Taguatinga Sul?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim, nosso serviço de delivery atende toda a região de Taguatinga Sul. Faça seu pedido em nosso e-commerce e receba em casa."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Existem parceiros da ChefBrico em Taguatinga?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No momento, nosso foco para Taguatinga Sul é o serviço de delivery direto, para garantir a máxima conveniência. Os parceiros mais próximos se encontram em Águas Claras."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
 ---
 {% block head %}
 <style>
@@ -98,12 +98,6 @@ schema:
     .depoimento-card .quote { font-style: italic; color: #555; }
     .depoimento-card .author { font-weight: bold; color: var(--cor-primaria); margin-top: 15px; display: block; }
     .food-porn-section { background-color: #fdfcf7; border-top: 2px solid #f0ead6; padding: 50px 20px; margin-top: 60px; }
-    .estacao-card { border: 1px solid #eee; border-radius: 8px; overflow: hidden; background-color: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-    .estacao-postcard { width: 100%; height: 220px; background-color: #f0f0f0; }
-    .estacao-postcard img { width: 100%; height: 100%; object-fit: cover; }
-    .estacao-content { padding: 20px; text-align: center; }
-    .estacao-content h3 { color: var(--cor-primaria); margin-top: 0; font-size: 1.1em; text-transform: uppercase; }
-    .estacao-content h4 { color: var(--cor-titulos); font-size: 1.5em; margin-top: 5px; margin-bottom: 10px; }
     .review-cta-section-v2 { background-color: #fdfcf7; border: 1px solid #f0ead6; border-radius: 8px; margin-top: 60px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
     .review-banner-image img { width: 100%; height: auto; display: block; }
     .review-cta-content { padding: 40px 25px; text-align: center !important; }
