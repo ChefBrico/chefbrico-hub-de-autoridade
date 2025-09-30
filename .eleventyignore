@@ -1,2 +1,7 @@
-# Ignorar arquivos e pastas de configuração/desenvolvimento
+# Arquivos e pastas que o Eleventy deve ignorar completamente durante a construção do site.
+# Isso impede que eles apareçam em qualquer coleção, incluindo o sitemap.
+
+
 README.md
+admin/
+catalogo.html
