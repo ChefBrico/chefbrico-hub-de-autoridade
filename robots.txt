@@ -1,6 +1,13 @@
-# Permitir acesso total a todos os robôs amigáveis.
+# Regras para todos os robôs
 User-agent: *
-Disallow:
 
-# Indicar a localização do mapa completo do site.
+# Proibir o acesso a áreas administrativas e de desenvolvimento
+Disallow: /admin/
+Disallow: /README/
+Disallow: /catalogo.html
+
+# Permitir todo o resto
+Allow: /
+
+# Indicar a localização do mapa completo do site
 Sitemap: https://receitas.chefbrico.com/sitemap.xml
