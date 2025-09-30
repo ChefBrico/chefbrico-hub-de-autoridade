@@ -1,7 +1,6 @@
-# Arquivos e pastas que o Eleventy deve ignorar completamente durante a construção do site.
-# Isso impede que eles apareçam em qualquer coleção, incluindo o sitemap.
-
-
+# Arquivos e pastas que o Eleventy deve ignorar ao criar coleções de páginas.
+# Isso impede que eles apareçam no sitemap.xml.
 README.md
 admin/
 catalogo.html
+node_modules/
