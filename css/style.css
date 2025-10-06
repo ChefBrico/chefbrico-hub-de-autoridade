@@ -452,3 +452,21 @@ footer { padding: 30px 20px; margin-top: 40px; border-top: 1px solid var(--cor-b
   transform: translateY(-3px);
   box-shadow: 0px 10px 20px rgba(0,0,0,0.15);
 }
+
+/* --- Estilo 'Padrão Ouro' para a Caixa de Resposta Direta (AEO) --- */
+.direct-answer-box {
+  max-width: 800px;         /* Limita a largura máxima para alinhar com o conteúdo */
+  width: 90%;               /* Garante que a caixa se ajuste bem em telas menores */
+  margin: 2em auto 3em auto;/* Centra a caixa e adiciona espaço vertical (em cima e em baixo) */
+  padding: 1.5em;           /* Adiciona um espaçamento interno generoso para o texto respirar */
+  background-color: #f9f7f3; /* Um fundo creme/bege muito suave para destacar sutilmente */
+  border-left: 4px solid #006400; /* Uma borda verde escura à esquerda para dar um toque de autoridade e cor da marca */
+  border-radius: 8px;         /* Arredonda os cantos para um visual moderno e suave */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Uma sombra muito leve para dar profundidade */
+}
+
+.direct-answer-box p {
+  font-size: 1.1em;      /* Aumenta ligeiramente o tamanho da fonte para melhor legibilidade */
+  line-height: 1.6;      /* Melhora o espaçamento entre as linhas */
+  margin: 0;             /* Remove qualquer margem padrão do parágrafo dentro da caixa */
+}
