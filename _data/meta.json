@@ -30,15 +30,15 @@
                 "name": "Google",
                 "url": "https://www.google.com/search?kgmid=/g/11g140fcnw"
             }
- ],
-
-"person": { 
-    "id": "https://www.chefbrico.com/#person-maria-conceicao", 
-    "name": "Maria Conceição", 
-    "jobTitle": "Fundadora da ChefBrico",
-    "worksFor": { 
-        "@type": "Organization",
-        "@id": "https://www.chefbrico.com/#organization" 
-     }
-  }
-}
+            
+ },
+  "person": {
+    "@id": "https://www.chefbrico.com/#person-maria-conceicao",
+    "name": "Maria Conceição",
+    "jobTitle": "Fundadora da ChefBrico",
+    "worksFor": {
+      "@type": "Organization",
+      "@id": "https://www.chefbrico.com/#organization"
+    } 
+  } 
+} 
