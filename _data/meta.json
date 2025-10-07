@@ -32,9 +32,12 @@
             }
         ]
     },
-    "person": {
-        "id": "https://www.chefbrico.com/#person-maria-conceicao",
-        "name": "Maria Conceição",
-        "jobTitle": "Fundadora da ChefBrico"
+    "person": { 
+        "id": "https://www.chefbrico.com/#person-maria-conceicao", 
+        "name": "Maria Conceição", 
+        "jobTitle": "Fundadora da ChefBrico",
+        "worksFor": {
+            "@type": "Organization",
+            "@id": "https://www.chefbrico.com/#organization" 
     }
 }
