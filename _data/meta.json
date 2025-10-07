@@ -39,6 +39,6 @@
     "worksFor": {
       "@type": "Organization",
       "@id": "https://www.chefbrico.com/#organization"
-    } // Chave de fechamento do worksFor
-  } // Chave de fechamento do person. Não coloque vírgula aqui.
-} // Chave de fechamento do objeto principal
+    } 
+  } 
+} 
