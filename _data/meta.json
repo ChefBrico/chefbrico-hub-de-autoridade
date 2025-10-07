@@ -32,11 +32,11 @@
               }
            ],
            "person": {
-           "id": "https://www.chefbrico.com/#person-maria-conceicao",
-           "name": "Maria Conceição",
-           "jobTitle": "Fundadora da ChefBrico",
-           "worksFor": {
-           "@type": "Organization",
-           "@id": "https://www.chefbrico.com/#organization"
-            }
-          }
+  "id": "https://www.chefbrico.com/#person-maria-conceicao",
+  "name": "Maria Conceição",
+  "jobTitle": "Fundadora da ChefBrico", // <--- V
+  "worksFor": {
+    "@type": "Organization",
+    "@id": "https://www.chefbrico.com/#organization"
+  } // <--- Fechamento. Se não houver mais itens no 'person', NÃO COLOQUE VÍRGULA.
+}
