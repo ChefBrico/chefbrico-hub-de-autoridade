@@ -17,24 +17,26 @@
             "postalCode": "72006-060",
             "addressCountry": "BR"
         },
-        "sameAs": [
-            {
-                "name": "Instagram",
-                "url": "https://www.instagram.com/chefbrico/"
-            },
-            {
-                "name": "Pinterest",
-                "url": "https://br.pinterest.com/chefbrico/"
-            },
-            {
-                "name": "Google",
-                "url": "https://www.google.com/search?kgmid=/g/11g140fcnw"
-              }
-           ],
-          
-    "person": {
-        "id": "https://www.chefbrico.com/#person-maria-conceicao",
-        "name": "Maria Conceição",
-        "jobTitle": "Fundadora da ChefBrico"
-    }
+"sameAs": [
+  {
+    "name": "Instagram",
+    "url": "https://www.instagram.com/chefbrico/"
+  },
+  {
+    "name": "Pinterest",
+    "url": "https://br.pinterest.com/chefbrico/"
+  },
+  {
+    "name": "Google",
+    "url": "https://www.google.com/search?kgmid=/g/11g140fcnw"
+  }
+],
+"person": {
+  "id": "https://www.chefbrico.com/#person-maria-conceicao",
+  "name": "Maria Conceição",
+  "jobTitle": "Fundadora da ChefBrico",
+  "worksFor": {
+    "@type": "Organization",
+    "@id": "https://www.chefbrico.com/#organization"
+  }
 }
