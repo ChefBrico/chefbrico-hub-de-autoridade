@@ -6,7 +6,7 @@
         "name": "ChefBrico",
         "cnpj": "36.014.833/0001-59",
         "url": "https://www.chefbrico.com",
-        "logo":"https://www.chefbrico.com/imagens/flamula-chefbrico.png",
+        "logo":"https://receitas.chefbrico.com/imagens/flamula-chefbrico.png",
         "telephone": "+5561996659880",
         "whatsapp": "https://wa.me/5561996659880",
         "address": {
@@ -31,14 +31,9 @@
                 "url": "https://www.google.com/search?kgmid=/g/11g140fcnw"
             }
         ],
-        "person": {
-            "id": "https://www.chefbrico.com/#person-maria-conceicao",
-            "name": "Maria Conceição",
-            "jobTitle": "Fundadora da ChefBrico",
-            "worksFor": {
-                "@type": "Organization",
-                "@id": "https://www.chefbrico.com/#organization"
-            }
+      "founder": {
+            "@type": "Person",
+            "@id": "https://www.chefbrico.com/#person-maria-conceicao"
         }
     }
 }
