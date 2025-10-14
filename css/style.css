@@ -470,10 +470,21 @@ footer { padding: 30px 20px; margin-top: 40px; border-top: 1px solid var(--cor-b
   line-height: 1.6;      /* Melhora o espaçamento entre as linhas */
   margin: 0;             /* Remove qualquer margem padrão do parágrafo dentro da caixa */
 }
-/* ============================================================= */
-/* === CORREÇÃO FINAL PARA O CÍRCULO DO CARROSSEL DE NOVIDADES === */
-/* ============================================================= */
-#novidades-carousel .card .card-image {
+/* ================================================================= */
+/* === CORREÇÃO DEFINITIVA PARA O CARROSSEL "NOVIDADES NA REVISTA" === */
+/* ================================================================= */
+#novidades-carousel-final .card .card-image {
+  /* 1. Define o tamanho e o formato de círculo perfeito */
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
-  object-fit: cover;
+  object-fit: cover; /* Preenche o círculo sem distorcer */
+  
+  /* 2. Garante o alinhamento central correto */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+  /* 3. Adiciona um espaço abaixo da imagem */
+  margin-bottom: 25px;
 }
