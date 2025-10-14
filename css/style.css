@@ -470,3 +470,19 @@ footer { padding: 30px 20px; margin-top: 40px; border-top: 1px solid var(--cor-b
   line-height: 1.6;      /* Melhora o espaçamento entre as linhas */
   margin: 0;             /* Remove qualquer margem padrão do parágrafo dentro da caixa */
 }
+/* ================================================================= */
+/* === CORREÇÃO DEFINITIVA PARA O CARROSSEL DE NOVIDADES === */
+/* ================================================================= */
+.carousel-container .card .card-image {
+  /* --- Define o tamanho e o formato --- */
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; /* A mágica do círculo */
+  object-fit: cover; /* Preenche o círculo sem distorcer */
+  
+  /* --- Corrige o alinhamento --- */
+  display: block; /* Trata a imagem como um bloco para centralizar */
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px; /* Espaço entre a imagem e o texto */
+}
