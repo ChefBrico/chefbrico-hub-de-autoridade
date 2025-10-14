@@ -1,0 +1,245 @@
+---json
+{
+  "layout": "base.njk",
+  "permalink": "/onde-encontrar/park-sul/",
+  "title": "ChefBrico no Park Sul: Experimente o Sabor Gourmet Prático, Entrega Exclusiva",
+  "description": "A ChefBrico atende o bairro do Park Sul com um serviço de delivery. Peça online refeições práticas de preparar com muito sabor",
+  "schema": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://receitas.chefbrico.com/onde-encontrar/park-sul/"
+        },
+        "name": "ChefBrico no Park Sul: Experimente o Sabor Gourmet Prático da ChefBrico",
+        "description": "A ChefBrico oferece um serviço de delivery exclusivo para o setor Park Sul/ SQPS com o nosso catálogo completo de refeições práticas de preparar em casa.",
+        "publisher": {
+          "@id": "https://www.chefbrico.com/#organization"
+        },
+        "about": {
+          "@id": "https://www.chefbrico.com/#organization"
+        }
+      },
+      {
+        "@type": "Service",
+        "serviceType": "Entrega de Refeições Práticas",
+        "provider": {
+          "@id": "https://www.chefbrico.com/#organization"
+        },
+        "areaServed": {
+          "@type": "AdministrativeArea",
+          "name": "Noroeste"
+        },
+        "name": "Delivery ChefBrico para o Park Sul"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Início",
+            "item": "https://receitas.chefbrico.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Onde Encontrar",
+            "item": "https://receitas.chefbrico.com/onde-encontrar/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Noroeste",
+            "item": "https://receitas.chefbrico.com/onde-encontrar/park-sul/"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Existem pontos de venda da ChefBrico no Park Sul?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Atualmente, realizamos entregas no park Sul/ SQPS com serviço de serviço de delivery exclusivo, garantindo a máxima conveniência. Para compras em lojas físicas, temos parceiros selecionados em regiões próximas, como a Asa Norte/ Asa Sul."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quais os parceiros ChefBrico mais próximos do Park Sul?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Os parceiros mais próximos do Park Sul encontram-se na Asa Sul e Asa Norte, como a Mercearia Colaborativa (CLN 412) e o Mercado Malunga (CLN 315), tambem entregamos no sistema delivery."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
+---
+{% block head %}
+<style>
+    .page-header-local h1 { font-size: 2.8em; margin-bottom: 15px; text-align: center; color: #5a3a30; }
+    .page-header-local .subtitle { font-size: 1.3em; text-align: center; color: #666; max-width: 700px; margin: 0 auto 40px auto; }
+    .back-to-hub-container { text-align: center; margin: 30px 0 40px 0; }
+    .back-to-hub-button { background-color: #f0ead6; color: #333; padding: 10px 25px; border-radius: 20px; text-decoration: none; font-size: 1.0em; font-weight: bold; transition: background-color 0.2s; display: inline-block; }
+    .back-to-hub-button:hover { background-color: #e0d8c4; }
+    .hybrid-cta-container { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 40px 0; }
+    .cta-box { border: 1px solid #eee; border-radius: 8px; padding: 30px 25px; background-color: #fdfcf7; text-align: center; }
+    .cta-box h2 { margin-top: 0; font-size: 1.6em; margin-bottom: 15px; }
+    .cta-box p { max-width: 320px; margin: 0 auto 25px auto; line-height: 1.6; min-height: 80px; }
+    .depoimento-card { background-color: #fff; border: 1px solid #eee; padding: 25px; border-radius: 8px; text-align: center; }
+    .depoimento-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
+    .depoimento-card .quote { font-style: italic; color: #555; }
+    .depoimento-card .author { font-weight: bold; color: var(--cor-primaria); margin-top: 15px; display: block; }
+    .food-porn-section { background-color: #fdfcf7; border-top: 2px solid #f0ead6; padding: 50px 20px; margin-top: 60px; }
+    .review-cta-section-v2 { background-color: #fdfcf7; border: 1px solid #f0ead6; border-radius: 8px; margin-top: 60px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    .review-banner-image img { width: 100%; height: auto; display: block; }
+    .review-cta-content { padding: 40px 25px; text-align: center !important; }
+    .review-cta-content h2 { color: var(--cor-titulos); font-size: 2.5em; margin: 0 auto 15px auto; max-width: 700px; }
+    .review-cta-content .review-text { font-size: 1.1em; max-width: 700px; margin: 0 auto 20px auto; line-height: 1.7; }
+    .review-cta-content .review-stars { color: #FFC107; font-size: 2.8em; margin-bottom: 20px; letter-spacing: 5px; display: block; }
+    .review-cta-content .gbp-specific-button { background-color: #4285F4 !important; padding: 15px 30px; font-size: 1.1em; border-radius: 8px; color: white; text-decoration: none; font-weight: bold; display: inline-block; letter-spacing: 0.5px; border: none; cursor: pointer; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; }
+    .review-cta-content .gbp-specific-button:hover { background-color: #3a7bd5 !important; transform: scale(1.03) translateY(-2px); box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); }
+    @media (max-width: 768px) {
+        .hybrid-cta-container { grid-template-columns: 1fr; }
+        .page-header-local h1 { font-size: 2.2em; }
+    }
+</style>
+{% endblock %}
+<main class="container">
+
+    <div class="page-header-local">
+        <h1>Comida de Verdade no Park Sul</h1>
+        <p class="subtitle">A solução inteligente e sofisticada para o seu estilo de vida. Receba o sabor artesanal da ChefBrico diretamente na sua porta.</p>
+    </div>
+    
+    <div class="back-to-hub-container">
+        <a href="/onde-encontrar/" class="back-to-hub-button">&larr; Voltar ao Mapa de Todas as Regiões</a>
+    </div>
+
+    <div class="hybrid-cta-container">
+        <div class="cta-box">
+            <h2>Opção A: Loja Online</h2>
+            <p>Explore nosso cardápio premium e monte sua Despensa Inteligente. A forma mais elegante de planejar suas refeições.</p>
+            <a href="https://www.chefbrico.com" target="_blank" rel="noopener noreferrer" class="cta-button"><strong>EXPLORAR CARDÁPIO</strong></a>
+        </div>
+        <div class="cta-box">
+            <h2>Opção B: Fale com a Conceição</h2>
+            <p>Para um atendimento exclusivo e personalizado, fale diretamente comigo e descubra a solução perfeita para você.</p>
+            <a href="https://wa.me/5561996659880" target="_blank" rel="noopener noreferrer" class="cta-button cta-button-secondary"><strong>FALAR NO WHATSAPP</strong></a>
+        </div>
+    </div>
+
+    <div id="parceiros-park-sul" class="post-content content-centered" style="margin-top: 40px; padding-top: 40px; border-top: 1px solid #eee;">
+        <h2 style="text-align: center;">Pontos de Referência próximo ao Park Sul</h2>
+        <p style="text-align: center; max-width: 700px; margin: 15px auto 40px auto; font-size: 1.1em; color: #555;">
+             Para garantir a melhor experiência de compra, nossas vendas são focadas nos canais diretos. Você também pode encontrar nossos produtos nestes excelentes estabelecimentos, que selecionamos a dedo por compartilharem nossa paixão pela qualidade.
+        </p>
+        
+        <div class="faq-section" style="margin-top: 40px;">
+            
+            <div class="faq-item-accordion">
+                <button class="accordion-header"><h3>Quitandas da Vó Maria</h3><span class="icon">▼</span></button>
+                <div class="accordion-content"><p><strong>Endereço:</strong> SHIN área especial 03 loja 02 - Polo Verde, Brasília - DF.</p></div>
+            </div>
+            <div class="faq-item-accordion">
+                <button class="accordion-header"><h3>Mercearia Colaborativa</h3><span class="icon">▼</span></button>
+                <div class="accordion-content"><p><strong>Endereço:</strong> Asa Norte CLN 412 BL E LOJA 4, 6, 10 - Brasília - DF.</p></div>
+            </div>
+            <div class="faq-item-accordion">
+                <button class="accordion-header"><h3>A Casa do Manjericão</h3><span class="icon">▼</span></button>
+                <div class="accordion-content"><p><strong>Endereço:</strong> Asa Norte CLN 215 BL B Loja 9 - Asa Norte, Brasília - DF.</p></div>
+            </div>
+            <div class="faq-item-accordion">
+                <button class="accordion-header"><h3>Ravioli e Cia</h3><span class="icon">▼</span></button>
+                <div class="accordion-content"><p><strong>Endereço:</strong> CLN 214, bloco D, lojas 05 e 07 - Asa Norte, Brasília - DF.</p></div>
+            </div>
+            <div class="faq-item-accordion">
+                <button class="accordion-header"><h3>Mercado Malunga</h3><span class="icon">▼</span></button>
+                <div class="accordion-content"><p><strong>Endereço:</strong> Asa Norte Comércio Local Norte 315 BL E loja 04 - Asa Norte, Brasília - DF.</p></div>
+            </div>
+
+        </div>
+    </div>
+
+
+   <section class="depoimentos-section py-5" style="background-color: #fff; padding-top: 50px; margin-top: 40px; border-top: 1px solid #eee;">
+    <div class="container">
+        <h2 class="text-center mb-4">O que nossas fãs da região dizem</h2>
+        <div class="carousel-container" style="justify-content: center;">
+            
+            <div class="carousel-card depoimento-card" style="border: 2px dashed var(--cor-primaria); background-color: #fdfcf7;">
+                <h3 style="font-size: 1.5em; color: var(--cor-titulos); margin-top: 0;">Seja o Próximo Destaque!</h3>
+                <p class="quote" style="min-height: auto; margin-bottom: 25px;">A sua experiência com a ChefBrico pode inspirar outras pessoas na sua vizinhança. Adoraríamos ouvir a sua história ou sugestão!</p>
+                <a href="https://wa.me/5561996659880?text=Ol%C3%A1%2C%20gostaria%20de%20deixar%20um%20depoimento%20sobre%20a%20ChefBrico%21" target="_blank" rel="noopener noreferrer" class="cta-button"><strong>Fale Comigo no WhatsApp</strong></a>
+            </div>
+
+            </div>
+    </div>
+</section>
+
+    <section class="food-porn-section">
+    <div class="container">
+        <h2 style="text-align: center; font-size: 2.5em; color: var(--cor-primaria); margin-bottom: 15px;">Explore Nossas Categorias de Sabores</h2>
+        <p style="text-align: center; font-size: 1.2em; max-width: 600px; margin: 0 auto 50px auto; color: #555;">
+            Tudo o que você precisa para uma rotina mais prática, saudável e cheia de sabor, da entrada à refeição principal.
+        </p>
+
+        <div class="post-grid" style="margin-top: 40px;">
+            
+            <a href="/receitas/risotos/" class="card">
+                <img src="/imagens/risoto-pomodori-pesto-tijela-chefbrico.png" alt="Um prato de arroz do mundo, rico e aromático" class="card-image">
+                <div class="card-content">
+                    <span class="card-category">Categoria</span>
+                    <h3>Arrozes do Mundo</h3>
+                    <p class="card-description">Uma viagem de sabores que explora arrozes cremosos, caldosos e tenros, da Itália ao Brasil.</p>
+                </div>
+            </a>
+
+            <a href="/receitas/sopas-funcionais/" class="card">
+                <img src="/imagens/chefbrico-creme-fit-sopinha-chefbrico-580%20px.png" alt="Tigela de sopa funcional e nutritiva" class="card-image">
+                <div class="card-content">
+                    <span class="card-category">Categoria</span>
+                    <h3>Sopas Funcionais</h3>
+                    <p class="card-description">Descubra como nossas sopas podem revolucionar sua dieta com saúde e praticidade.</p>
+                </div>
+            </a>
+
+            <a href="/receitas/refeicoes-integrais/" class="card">
+                <img src="/imagens/refeicao-grao-bico-chefbrico.png" alt="Refeição prática preparar, saborosa e nutritiva" class="card-image">
+                <div class="card-content">
+                    <span class="card-category">Categoria</span>
+                    <h3>Refeições Integrais com muito Sabor</h3>
+                    <p class="card-description">Soluções completas para os dias mais corridos.</p>
+                </div>
+            </a>
+
+            <a href="/receitas/emporio-da-chef/" class="card">
+                <img src="/imagens/confit-shiitake-chefbrico.png" alt="Potes de antepastos e confits artesanais" class="card-image">
+                <div class="card-content">
+                    <span class="card-category">Categoria</span>
+                    <h3>Empório da Chef</h3>
+                    <p class="card-description">O toque final de sabor com nossos antepastos, confits e produtos gourmet.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+    <section class="review-cta-section-v2">
+        <div class="review-banner-image">
+            <img src="/imagens/uma-maozinha-chefbrico-1.png" alt="Maria Conceição, fundadora da ChefBrico">
+        </div>
+        <div class="review-cta-content">
+            <h2>Conte sua Experiência!</h2>
+            <p class="review-text">Seu feedback é essencial para continuarmos a transformar a rotina na cozinha. Sua opinião ajuda-nos a crescer!</p>
+            <div class="review-stars">★★★★★</div>
+            <a href="https://g.page/r/CWIKRViCYBCDEAI/review" target="_blank" rel="noopener noreferrer" class="gbp-specific-button">Deixe Sua Avaliação no Google!</a>
+        </div>
+    </section>
+</main>
