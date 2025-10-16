@@ -488,3 +488,22 @@ footer { padding: 30px 20px; margin-top: 40px; border-top: 1px solid var(--cor-b
   /* 3. Adiciona um espaço abaixo da imagem */
   margin-bottom: 25px;
 }
+
+/* Estilos para alinhar ícone e texto nos pilares da receita */
+
+.pilar {
+  display: flex; /* Ativa o modo Flexbox para alinhar os itens lado a lado */
+  align-items: center; /* Alinha verticalmente o ícone e o texto ao centro */
+  margin-bottom: 25px; /* Adiciona um espaço abaixo de cada pilar */
+  gap: 15px; /* Cria um espaço de 15px entre o ícone e o bloco de texto */
+}
+
+.pilar img {
+  width: 50px; /* Define uma largura fixa para o ícone */
+  height: auto; /* Mantém a proporção da imagem */
+  flex-shrink: 0; /* Impede que a imagem encolha se não houver espaço */
+}
+
+.pilar .pilar-texto h3 {
+  margin-top: 0; /* Remove a margem de cima do título para melhor alinhamento */
+}
