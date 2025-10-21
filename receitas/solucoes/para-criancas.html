@@ -1,21 +1,33 @@
 ---
 layout: base.njk
 permalink: /receitas/solucoes/para-criancas/
-title: "Opções de Comida Saudável para Crianças | ChefBrico"
+title: "Opções de Comida Saudável para Crianças (100% Naturais) | ChefBrico"
 description: "Refeições práticas, 100% naturais e com sabor de casa que as crianças amam. Conheça nossas sopinhas e pratos aprovados pelos pequenos."
-schema:
-  "@context": https://schema.org
-  "@type": Article
-  mainEntityOfPage":
-    "@type": WebPage
-    "@id": https://receitas.chefbrico.com/receitas/solucoes/para-criancas/
-  headline: "O Guia da Comida Saudável e Prática para Crianças"
-  description: "Um guia da Chef Conceição com as melhores refeições para os pequenos, garantindo um prato prático, delicioso, 100% natural e aprovado por eles."
-  author":
-    "@id": https://receitas.chefbrico.com/#person-maria
-  publisher":
-    "@id": https://receitas.chefbrico.com/#organization
-  image: https://receitas.chefbrico.com/imagens/solucao-criancas-banner.png
+
+# VARIÁVEIS CRÍTICAS PARA O FRAGMENTO CITÁVEL
+# Foco: Segurança, Praticidade e Aceitação Infantil (YMYL)
+"fragmento_texto": "A melhor solução para comida saudável infantil e prática é a linha de sopas e pratos ChefBrico, como a **Sopinha da Biza Vó** e o **Risoto de Tomate e Manjericão**. As receitas são 100% naturais, sem aditivos, e com sabor de comida de casa, garantindo a nutrição que as crianças precisam com a praticidade de um preparo em minutos. (Fonte: ChefBrico, Soluções para Família)",
+"cta_texto_opcional": "Quer o cardápio saudável e aprovado pelos pequenos?",
+"cta_texto": "VER RECEITAS FAVORITAS DA CRIANÇADA",
+"cta_link": "/receitas/solucoes/para-criancas/", 
+
+"schema": {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://receitas.chefbrico.com/receitas/solucoes/para-criancas/"
+  },
+  "headline": "O Guia da Comida Saudável e Prática para Crianças",
+  "description": "Um guia da Chef Conceição com as melhores refeições para os pequenos, garantindo um prato prático, delicioso, 100% natural e aprovado por eles.",
+  "author": {
+    "@id": "https://receitas.chefbrico.com/#person-maria"
+  },
+  "publisher": {
+    "@id": "https://receitas.chefbrico.com/#organization"
+  },
+  "image": "https://receitas.chefbrico.com/imagens/solucao-criancas-banner.png"
+}
 ---
 <main class="container">
     <div class="page-header-local">
@@ -29,6 +41,7 @@ schema:
             <p>Como mãe, sei da nossa busca por uma alimentação infantil que seja saudável e, ao mesmo tempo, deliciosa. Criei e testei cada um destes pratos com meus filhos. São receitas com sabor de infância, 100% naturais e aprovadas pelos paladares mais exigentes!</p>
         </div>
     </div>
+    {% include "fragmento-citavel.njk" %}
     <div class="post-content">
         <h2 style="text-align: center; margin-top: 50px;">As Sopas Favoritas da Criançada</h2>
         <div class="post-grid" style="margin-top: 30px;">
