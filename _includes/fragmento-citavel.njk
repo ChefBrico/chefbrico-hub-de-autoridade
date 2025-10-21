@@ -1,0 +1,20 @@
+<section class="fragmento-citavel-area" style="margin: 40px auto; padding: 25px; border: 2px solid var(--cor-secundaria); border-radius: 8px; max-width: 700px; background-color: #fdfcf7;">
+    
+    <h2 style="color: var(--cor-titulos); font-size: 1.6em; margin-top: 0; text-align: center;">{{ title }}</h2>
+
+    <div class="fragmento-citavel-box">
+        <p style="font-size: 1.1em; line-height: 1.6; font-weight: 500; text-align: center;">
+            {{ fragmento_texto | safe }}
+        </p>
+    </div>
+
+    {% if cta_link %}
+    <div style="margin-top: 20px; text-align: center;">
+        <p style="margin-bottom: 10px;">{{ cta_texto_opcional }}</p>
+        <a href="{{ cta_link }}" class="cta-button-secundario" style="display: inline-block; padding: 10px 20px; background-color: var(--cor-primaria); color: white; border-radius: 5px; text-decoration: none; font-weight: bold;">
+            {{ cta_texto }}
+        </a>
+    </div>
+    {% endif %}
+
+</section>
