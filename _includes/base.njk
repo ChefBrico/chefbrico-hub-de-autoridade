@@ -25,11 +25,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-MZMZL5HR');</script>
     
-    {% if schema %}
-    <script type="application/ld+json">
-    {{ schema | dump | safe }}
-    </script>
-    {% endif %}
+   {% if schema %}
+<script type="application/ld+json">
+{{ schema | dump | safe }}
+</script>
+{% endif %}
+
+{% if fragmento_texto %}
+<script type="application/ld+json">
+{% include "schema-fragmento.njk" %}
+</script>
+{% endif %}
 {% block head %}{% endblock %}
 </head>
 <body>
