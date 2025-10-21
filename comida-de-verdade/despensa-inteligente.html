@@ -1,13 +1,20 @@
 ---json
 {
-  "layout": "base.njk",
-  "permalink": "/comida-de-verdade/despensa-inteligente/",
-  "title": "O Guia da Despensa Inteligente: A Solução da ChefBrico",
-  "description": "Aprenda a montar sua Despensa Inteligente com a ChefBrico. Uma estratégia de compras e organização para economizar tempo, reduzir o desperdício e ter sempre uma refeição saudável à mão.",
-  "schema": {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
+  "layout": "base.njk",
+  "permalink": "/comida-de-verdade/despensa-inteligente/",
+  "title": "O Guia da Despensa Inteligente: A Solução da ChefBrico",
+  "description": "Aprenda a montar sua Despensa Inteligente com a ChefBrico. Uma estratégia de compras e organização para economizar tempo, reduzir o desperdício e ter sempre uma refeição saudável à mão.",
+ 
+  # VARIÁVEIS CRÍTICAS PARA O FRAGMENTO CITÁVEL
+  "fragmento_texto": "A **Despensa Inteligente** da ChefBrico é o método de organização que elimina o estresse e o desperdício na cozinha. Ela se baseia em estocar refeições 100% naturais de longa validade, usando a técnica de desidratação artesanal. Com kits ChefBox, você ganha paz de espírito, elimina o desperdício de ingredientes frescos e sempre tem uma base saudável pronta para a 'Panela Única'. (Fonte: ChefBrico)",
+  "cta_texto_opcional": "Pronto para começar sua Despensa Inteligente?",
+  "cta_texto": "Ver Kits ChefBox e Começar",
+  "cta_link": "/chefbox/", 
+ 
+  "schema": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
         "@type": "HowTo",
         "mainEntityOfPage": {
           "@type": "WebPage",
@@ -97,42 +104,24 @@
           }
         ]
       },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Quanto tempo eu realmente economizo com a Despensa Inteligente?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Você economiza tempo em várias frentes: menos idas ao supermercado, zero tempo gasto no pré-preparo (lavar, picar, etc.) e um tempo de cozimento muito reduzido, já que nossas refeições ficam prontas em 15 a 35 minutos. Para muitas famílias, isso representa horas de economia a cada semana."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Os produtos desidratados são realmente tão nutritivos quanto os frescos?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Sim! Nosso processo de desidratação artesanal em baixa temperatura é projetado para preservar o máximo de nutrientes e vitaminas dos alimentos, diferente de processos industriais. É a forma mais inteligente de ter 'alimentos frescos' com validade de meses."
-            }
-          }
-        ]
       }
     ]
   }
 }
 ---
 <main class="container">
-    <div class="recipe-title-container" style="text-align:center;">
-        <span class="article-category" style="font-size: 0.8em; text-transform: uppercase; color: #999; font-weight: bold;">A Estratégia</span>
-        <h1>O Guia da Despensa Inteligente</h1>
-        <p class="recipe-subtitle">A revolução da sua cozinha não está na geladeira, mas na despensa. Descubra o método que liberta seu tempo, seu dinheiro e sua paz de espírito.</p>
-    </div>
+    <div class="recipe-title-container" style="text-align:center;">
+        <span class="article-category" style="font-size: 0.8em; text-transform: uppercase; color: #999; font-weight: bold;">A Estratégia</span>
+        <h1>O Guia da Despensa Inteligente</h1>
+        <p class="recipe-subtitle">A revolução da sua cozinha não está na geladeira, mas na despensa. Descubra o método que liberta seu tempo, seu dinheiro e sua paz de espírito.</p>
+    </div>
 
-    <div class="hero-card">
-        <img src="/imagens/maria-conceicao-empreendedora-feira-tematica.png" alt="ChefBox da ChefBrico com uma variedade de produtos nutritivos, simbolizando uma despensa inteligente.">
-    </div>
+    <div class="hero-card">
+        <img src="/imagens/maria-conceicao-empreendedora-feira-tematica.png" alt="ChefBox da ChefBrico com uma variedade de produtos nutritivos, simbolizando uma despensa inteligente.">
+    </div>
 
+    {% include "fragmento-citavel.njk" %}
+  
     <div class="post-content">
         <p class="author-byline" style="text-align:center;">Por <strong>Maria Conceição</strong>, Fundadora e chef de criação</p>
         
