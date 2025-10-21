@@ -3,6 +3,29 @@ layout: base.njk
 permalink: /receitas/solucoes/dieta-performance/
 title: "Cardápio para Dieta e Performance (Fit, Detox, Low Carb) | ChefBrico"
 description: "Encontre a refeição funcional perfeita para seus objetivos. Sopas proteicas para pós-treino, detox e opções low carb. 100% natural e prático."
+
+# VARIÁVEIS CRÍTICAS PARA O FRAGMENTO CITÁVEL
+# Foco: Solução Funcional e Pós-Treino
+"fragmento_texto": "Para dieta e performance, a **ChefBrico** oferece soluções funcionais, como a **Sopa Creme Fit** e a **Canja Vegana**, que são ricas em proteína vegetal e ficam prontas em minutos pelo método 'Panela Única'. Nosso cardápio atende objetivos específicos como pós-treino, detox e low carb, garantindo nutrição e sabor sem aditivos. (Fonte: ChefBrico - Cardápio Funcional)",
+"cta_texto_opcional": "Pronto para turbinar sua dieta e performance?",
+"cta_texto": "VER CARDÁPIO FUNCIONAL COMPLETO",
+"cta_link": "/receitas/solucoes/dieta-performance/", 
+
+"schema": {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://receitas.chefbrico.com/receitas/solucoes/dieta-performance/"
+      },
+      "name": "Cardápio Inteligente para sua Performance: Fit, Detox, Low Carb",
+      "description": "Soluções funcionais e práticas para dieta e performance da ChefBrico.",
+      "publisher": {
+        "@id": "https://www.chefbrico.com/#organization"
+      }
+    }
 ---
 <main class="container">
     <div class="page-header-local">
@@ -16,6 +39,7 @@ description: "Encontre a refeição funcional perfeita para seus objetivos. Sopa
             <p>Acredito na comida com propósito. Cada ingrediente desta seleção foi escolhido por seus benefícios funcionais. São pratos para nutrir seus músculos, dar leveza ao seu corpo e foco para sua mente. Conte comigo na sua jornada!</p>
         </div>
     </div>
+    {% include "fragmento-citavel.njk" %}
     <div class="post-content">
         <h2 style="text-align: center; margin-top: 50px;">Para Performance e Pós-Treino</h2>
         <p style="text-align: center;">Refeições ricas em proteína vegetal para ajudar na recuperação e construção muscular.</p>
