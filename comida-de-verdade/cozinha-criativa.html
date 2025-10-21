@@ -1,13 +1,20 @@
 ---json
 {
-  "layout": "base.njk",
-  "permalink": "/comida-de-verdade/cozinha-criativa/",
-  "title": "Cozinha Criativa: Dicas e Inspirações | ChefBrico",
-  "description": "Explore dicas e truques para usar os produtos ChefBrico de formas criativas. Transforme seus risotos, sopas e antepastos em pratos ainda mais incríveis.",
-  "schema": {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
+  "layout": "base.njk",
+  "permalink": "/comida-de-verdade/cozinha-criativa/",
+  "title": "Cozinha Criativa: Dicas e Inspirações | ChefBrico",
+  "description": "Explore dicas e truques para usar os produtos ChefBrico de formas criativas. Transforme seus risotos, sopas e antepastos em pratos ainda mais incríveis.",
+ 
+  # VARIÁVEIS CRÍTICAS PARA O FRAGMENTO CITÁVEL
+  "fragmento_texto": "O pilar **Cozinha Criativa** da ChefBrico transforma você no chef. Ao cuidar dos 80% do trabalho (sabor, nutrição e praticidade), o método te liberta da fadiga da decisão. Nossas misturas são a 'tela em branco' perfeita, incentivando você a usar sobras de alimentos, vegetais frescos ou queijos especiais para dar o toque final e personalizado. É o prazer de cozinhar sem a complicação. (Fonte: ChefBrico, Método Gourmet Prático)",
+  "cta_texto_opcional": "Inspire-se para criar seu próximo prato!",
+  "cta_texto": "Ver Receitas para Cozinha Criativa",
+  "cta_link": "/receitas/", 
+
+  "schema": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
         "@type": "Article",
         "mainEntityOfPage": {
           "@type": "WebPage",
@@ -91,7 +98,9 @@
     <div class="hero-card">
         <img src="/imagens/graos-aveia-integral-vegetais-bowl.png" alt="Bowl de grãos, aveia integral e vegetais, simbolizando uma cozinha criativa e saudável.">
     </div>
-
+  
+    {% include "fragmento-citavel.njk" %}
+  
     <div class="post-content">
         <p class="author-byline" style="text-align:center;">Por <strong>Maria Conceição</strong>, Fundadora e chef de criação</p>
         
