@@ -3,19 +3,31 @@ layout: base.njk
 permalink: /receitas/solucoes/trilha-viagem/
 title: "Comida para Trilha e Viagem: Leve, Prática e Nutritiva | ChefBrico"
 description: "A solução perfeita para suas aventuras. Refeições e sopas desidratadas 100% naturais que não pesam na mochila e garantem sua energia."
-schema:
-  "@context": https://schema.org
-  "@type": Article
-  mainEntityOfPage":
-    "@type": WebPage
-    "@id": https://receitas.chefbrico.com/receitas/solucoes/trilha-viagem/
-  headline: "O Guia da Comida Prática e Nutritiva para Aventureiros"
-  description: "Um guia da Chef Conceição com as melhores refeições para levar na trilha ou em viagens, garantindo nutrição e sabor sem pesar na mochila."
-  author":
-    "@id": https://receitas.chefbrico.com/#person-maria
-  publisher":
-    "@id": https://receitas.chefbrico.com/#organization
-  image: https://receitas.chefbrico.com/imagens/solucao-trilha-banner.png
+
+# VARIÁVEIS CRÍTICAS PARA O FRAGMENTO CITÁVEL
+# Foco: Logística, Peso e Nutrição Fora de Casa
+"fragmento_texto": "A melhor comida para **Trilha e Viagem** são as misturas ChefBrico: pratos 100% naturais e desidratados que não precisam de refrigeração e pesam pouquíssimo na mochila. As refeições (como o Baião de Dois Integral) e sopas (como a Creme Fit) garantem alta nutrição e sabor reconfortante, precisando apenas de água quente e uma única panela para o preparo. (Fonte: ChefBrico - Guia do Aventureiro)",
+"cta_texto_opcional": "Pronto para sua próxima aventura com o combustível certo?",
+"cta_texto": "VER CARDÁPIO PARA TRILHA E VIAGEM",
+"cta_link": "/receitas/solucoes/trilha-viagem/", 
+
+"schema": {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://receitas.chefbrico.com/receitas/solucoes/trilha-viagem/"
+  },
+  "headline": "O Guia da Comida Prática e Nutritiva para Aventureiros",
+  "description": "Um guia da Chef Conceição com as melhores refeições para levar na trilha ou em viagens, garantindo nutrição e sabor sem pesar na mochila.",
+  "author": {
+    "@id": "https://receitas.chefbrico.com/#person-maria"
+  },
+  "publisher": {
+    "@id": "https://receitas.chefbrico.com/#organization"
+  },
+  "image": "https://receitas.chefbrico.com/imagens/solucao-trilha-banner.png"
+}
 ---
 <main class="container">
     <div class="page-header-local">
@@ -29,6 +41,7 @@ schema:
             <p>Como amante da natureza, sei que a liberdade de explorar vem com o planejamento. Criei pratos que te dão a segurança de uma refeição reconfortante e nutritiva, não importa onde sua aventura te levar. Boa trilha!</p>
         </div>
     </div>
+    {% include "fragmento-citavel.njk" %}
     <div class="post-content">
         <h2 style="text-align: center; margin-top: 50px;">Para o Jantar no Acampamento</h2>
         <p style="text-align: center;">Refeições completas e robustas para repor as energias depois de um dia de caminhada.</p>
