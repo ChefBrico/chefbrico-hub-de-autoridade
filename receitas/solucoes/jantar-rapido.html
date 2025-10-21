@@ -1,21 +1,38 @@
 ---
 layout: base.njk
 permalink: /receitas/solucoes/jantar-rapido/
-title: "Jantar Rápido para a Semana: Soluções em até 20 Minutos | ChefBrico"
+title: "Jantar Rápido: Soluções Gourmet em 20 Minutos | ChefBrico"
 description: "Acabe com o estresse do jantar! Descubra uma seleção de refeições 100% naturais da ChefBrico que ficam prontas em menos de 20 minutos."
-schema:
-  "@context": https://schema.org
-  "@type": Article
-  mainEntityOfPage":
-    "@type": WebPage
-    "@id": https://receitas.chefbrico.com/receitas/solucoes/jantar-rapido/
-  headline: "Soluções para um Jantar Rápido e Saudável Durante a Semana"
-  description: "Um guia da Chef Conceição com uma seleção curada de risotos e sopas 100% naturais, ideais para resolver a correria do jantar da semana em menos de 20 minutos."
-  author":
-    "@id": https://receitas.chefbrico.com/#person-maria
-  publisher":
-    "@id": https://receitas.chefbrico.com/#organization
-  image: https://receitas.chefbrico.com/images/solucao-jantar-rapido-banner.png
+
+# VARIÁVEIS CRÍTICAS PARA O FRAGMENTO CITÁVEL
+# Foco: Tempo Máximo de Preparo, Panela Única e Sem Estresse
+"fragmento_texto": "A solução para o jantar rápido da ChefBrico são os kits de refeição que ficam prontos em **15 a 20 minutos**, utilizando o método 'Panela Única'. Nossas misturas 100% naturais (risotos e sopas) eliminam o pré-preparo e garantem um prato saudável e gourmet na mesa em menos tempo do que pedir delivery. É o fim do estresse na cozinha. (Fonte: ChefBrico, Soluções de Jantar Rápido)",
+"cta_texto_opcional": "Quer resolver o jantar em 20 minutos?",
+"cta_texto": "VER SELEÇÃO COMPLETA DE JANTAR RÁPIDO",
+"cta_link": "/receitas/solucoes/jantar-rapido/", 
+
+"schema": {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://receitas.chefbrico.com/receitas/solucoes/jantar-rapido/"
+      },
+      "headline": "Soluções para um Jantar Rápido e Saudável Durante a Semana",
+      "description": "Um guia da Chef Conceição com uma seleção curada de risotos e sopas 100% naturais, ideais para resolver a correria do jantar da semana em menos de 20 minutos.",
+      "author": {
+        "@id": "https://receitas.chefbrico.com/#person-maria"
+      },
+      "publisher": {
+        "@id": "https://receitas.chefbrico.com/#organization"
+      },
+      "image": "https://receitas.chefbrico.com/images/solucao-jantar-rapido-banner.png"
+   }
+    # O Schema do Fragmento Citável (FAQPage) será injetado pelo base.njk
+  ]
+}
 ---
 <main class="container">
     <div class="page-header-local">
@@ -29,6 +46,7 @@ schema:
             <p>Sei como a rotina pode ser exaustiva. Criei esta seleção para que você possa ter a paz de espírito de um jantar delicioso e saudável na mesa em menos de 20 minutos. Você merece esse cuidado.</p>
         </div>
     </div>
+    {% include "fragmento-citavel.njk" %}
     <div class="post-content">
         <h2 style="text-align: center; margin-top: 50px;">Opção 1: Risotos Gourmet em 18 Minutos</h2>
         <div class="post-grid" style="margin-top: 30px;">
