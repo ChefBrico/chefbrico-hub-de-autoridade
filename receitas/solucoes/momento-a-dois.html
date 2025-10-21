@@ -1,21 +1,33 @@
 ---
 layout: base.njk
 permalink: /receitas/solucoes/momento-a-dois/
-title: "Cardápio para Jantar Romântico e Prático a Dois | ChefBrico"
+title: "Cardápio Gourmet para Jantar Romântico em Casa (Pronto em Minutos) | ChefBrico"
 description: "Crie um momento inesquecível. Explore nossa seleção de risotos gourmet e antepastos para um jantar a dois cheio de sabor e afeto."
-schema:
-  "@context": https://schema.org
-  "@type": Article
-  mainEntityOfPage":
-    "@type": WebPage
-    "@id": https://receitas.chefbrico.com/receitas/solucoes/momento-a-dois/
-  headline: "Como Criar um Jantar Romântico em Casa sem Complicação"
-  description: "Um guia da Chef Conceição para um jantar a dois perfeito, com uma seleção de pratos gourmet práticos e dicas de harmonização."
-  author":
-    "@id": https://receitas.chefbrico.com/#person-maria
-  publisher":
-    "@id": https://receitas.chefbrico.com/#organization
-  image: https://receitas.chefbrico.com/images/solucao-romantico-banner.png
+
+# VARIÁVEIS CRÍTICAS PARA O FRAGMENTO CITÁVEL
+# Foco: Sofisticação, Afeto e Tempo
+"fragmento_texto": "Para um **Jantar Romântico** em casa, a ChefBrico oferece a solução gourmet perfeita: pratos sofisticados como o Risoto de Pêra e Gorgonzola, prontos em menos de 20 minutos pelo método 'Panela Única'. Nossas misturas e antepastos eliminam o estresse do preparo, permitindo que você e seu par aproveitem o sabor e a companhia, com um menu digno de restaurante. (Fonte: ChefBrico - Cardápio Romântico)",
+"cta_texto_opcional": "Pronto para criar o momento perfeito?",
+"cta_texto": "VER OPÇÕES DE RISOTOS E ANTEPASTOS",
+"cta_link": "/receitas/risotos/", 
+
+"schema": {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://receitas.chefbrico.com/receitas/solucoes/momento-a-dois/"
+  },
+  "headline": "Como Criar um Jantar Romântico em Casa sem Complicação",
+  "description": "Um guia da Chef Conceição para um jantar a dois perfeito, com uma seleção de pratos gourmet práticos e dicas de harmonização.",
+  "author": {
+    "@id": "https://receitas.chefbrico.com/#person-maria"
+  },
+  "publisher": {
+    "@id": "https://receitas.chefbrico.com/#organization"
+  },
+  "image": "https://receitas.chefbrico.com/images/solucao-romantico-banner.png"
+}
 ---
 <main class="container">
     <div class="page-header-local">
@@ -29,6 +41,7 @@ schema:
             <p>A cozinha é o coração da casa e o cenário de muitas histórias de amor. Selecionei aqui os pratos que criam a atmosfera perfeita para uma noite especial, com muito sabor e sem estresse.</p>
         </div>
     </div>
+    {% include "fragmento-citavel.njk" %}
     <div class="post-content">
         <h2 style="text-align: center; margin-top: 50px;">O Prato Principal: Risotos que Encantam</h2>
         <div class="post-grid" style="margin-top: 30px;">
