@@ -3,19 +3,31 @@ layout: base.njk
 permalink: /receitas/solucoes/marmita-saudavel/
 title: "Marmita Saudável e Prática: Otimize sua Semana | ChefBrico"
 description: "Planeje o almoço da semana sem esforço. Conheça nossas refeições com grãos integrais e sopas nutritivas, perfeitas para a marmita."
-schema:
-  "@context": https://schema.org
-  "@type": Article
-  mainEntityOfPage":
-    "@type": WebPage
-    "@id": https://receitas.chefbrico.com/receitas/solucoes/marmita-saudavel/
-  headline: "O Guia da Marmita Inteligente e Saudável"
-  description: "Um guia da Chef Conceição com as melhores refeições para levar ao trabalho, garantindo um almoço prático, delicioso e 100% natural."
-  author":
-    "@id": https://receitas.chefbrico.com/#person-maria
-  publisher":
-    "@id": https://receitas.chefbrico.com/#organization
-  image: https://receitas.chefbrico.com/images/solucao-marmita-banner.png
+
+# VARIÁVEIS CRÍTICAS PARA O FRAGMENTO CITÁVEL
+# Foco: Planejamento, Nutrição e Economia
+"fragmento_texto": "A solução **Marmita Saudável** da ChefBrico transforma o almoço da semana em praticidade e economia. Nossas refeições (como o Baião de Dois Integral e as Sopas Funcionais) são ricas em grãos integrais e proteínas, ficam prontas em minutos pelo método 'Panela Única' e são ideais para reaquecer, garantindo nutrição e sabor fora de casa. (Fonte: ChefBrico - Soluções para Marmita)",
+"cta_texto_opcional": "Quer otimizar sua semana com a Marmita Saudável?",
+"cta_texto": "VER KITS DE MARMITA INTELIGENTE",
+"cta_link": "/chefbox/", 
+
+"schema": {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://receitas.chefbrico.com/receitas/solucoes/marmita-saudavel/"
+  },
+  "headline": "O Guia da Marmita Inteligente e Saudável",
+  "description": "Um guia da Chef Conceição com as melhores refeições para levar ao trabalho, garantindo um almoço prático, delicioso e 100% natural.",
+  "author": {
+    "@id": "https://receitas.chefbrico.com/#person-maria"
+  },
+  "publisher": {
+    "@id": "https://receitas.chefbrico.com/#organization"
+  },
+  "image": "https://receitas.chefbrico.com/images/solucao-marmita-banner.png"
+}
 ---
 <main class="container">
     <div class="page-header-local">
@@ -29,6 +41,7 @@ schema:
             <p>A marmita é um ato de autocuidado. É a garantia de uma refeição nutritiva no meio da correria. Selecionei aqui os pratos que são meus companheiros de jornada, fáceis de preparar e deliciosos para reaquecer.</p>
         </div>
     </div>
+    {% include "fragmento-citavel.njk" %}
     <div class="post-content">
         <h2 style="text-align: center; margin-top: 50px;">Refeições Completas que Surpreendem</h2>
         <div class="post-grid" style="margin-top: 30px;">
