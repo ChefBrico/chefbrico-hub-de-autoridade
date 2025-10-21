@@ -1,0 +1,13 @@
+{
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "{{ title | replace('?', '') | replace('Gourmet Prático:', '') }}?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ fragmento_texto | striptags | escape }}" 
+      }
+    }
+  ]
+}
