@@ -1,0 +1,23 @@
+{# Este é o "molde" principal para uma página de Fragmento Citável #}
+{% extends "layouts/base.njk" %} {# Ele usa o seu design base (cabeçalho/rodapé) #}
+
+{# --- Seção do HEAD (Onde a Mágica do Schema Acontece) --- #}
+{% block head_scripts %}
+  <script type="application/ld+json">
+  {# 1. Puxa o "motor" do schema que vamos melhorar no próximo passo #}
+  {% include "schema-fragmento.njk" %}
+  </script>
+{% endblock %}
+
+{# --- Seção do Conteúdo (O que o usuário vê) --- #}
+{% block content %}
+  <main>
+    {# 2. O Título (H1) da página (será a pergunta, ex: "Risoto é vegano?") #}
+    <h1 style="text-align: center; margin-top: 40px; margin-bottom: 20px; font-size: 2.2em;">
+      {{ title }}
+    </h1>
+
+    {# 3. Puxa o "Box de Resposta" (o include que você já tem) #}
+    {% include "fragmento-citavel.njk" %}
+  </main>
+{% endblock %}
