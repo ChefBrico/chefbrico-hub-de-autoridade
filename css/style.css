@@ -507,3 +507,67 @@ footer { padding: 30px 20px; margin-top: 40px; border-top: 1px solid var(--cor-b
 .pilar .pilar-texto h3 {
   margin-top: 0; /* Remove a margem de cima do título para melhor alinhamento */
 }
+/* ========================================
+   ESTILO DO MOTOR DE FRAGMENTO CITÁVEL
+   ======================================== */
+
+/* O H1 (Título da Pergunta) na página de fragmento */
+.titulo-fragmento {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 2.2em;
+    /* Adicione mais estilos do seu H1 aqui se precisar */
+}
+
+/* A Área do Box de Resposta */
+.fragmento-citavel-area {
+    margin: 40px auto;
+    padding: 25px;
+    border: 2px solid var(--cor-secundaria); /* Usa suas cores */
+    border-radius: 8px;
+    max-width: 700px;
+    background-color: #fdfcf7; 
+    text-align: center;
+}
+
+/* O Texto da Resposta */
+.fragmento-citavel-box p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+/* A "Assinatura de Autoridade" (A Venda) */
+.fragmento-citavel-box p.assinatura-autoridade {
+    font-size: 1.0em;
+    font-weight: bold;
+    color: var(--cor-primaria); /* Cor da sua marca */
+    margin-top: 20px;
+}
+
+/* O CTA (Link para o Pilar) */
+.fragmento-cta {
+    margin-top: 20px;
+    text-align: center;
+}
+.fragmento-cta p {
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+/* Estilo do Botão (copie do seu botão principal se for diferente) */
+.fragmento-cta .cta-button-secundario {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--cor-primaria);
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.fragmento-cta .cta-button-secundario:hover {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+}
