@@ -3,10 +3,25 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "{{ title | replace('?', '') | replace('Gourmet Prático:', '') }}?",
+      "name": "{{ title }}",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "{{ fragmento_texto | striptags | escape }}" 
+        "text": "{{ fragmento_texto | striptags | escape }}",
+        
+        // --- A MÁGICA (E-E-A-T EXTREMO) COMEÇA AQUI ---
+        // Dizemos à IA "Quem" respondeu a esta pergunta.
+        "author": {
+          "@type": "Person",
+          "name": "{{ author_name }}",  {# Puxa o NOME do frontmatter #}
+          "url": "{{ author_page }}",   {# Puxa a PÁGINA DE BIO do frontmatter #}
+          "jobTitle": "{{ author_title }}", {# Puxa o CARGO do frontmatter #}
+          "worksFor": {
+            "@type": "Organization",
+            "name": "ChefBrico",
+            "url": "https://www.chefbrico.com/"
+          }
+        }
+        // --- FIM DA MÁGICA ---
       }
     }
   ]
