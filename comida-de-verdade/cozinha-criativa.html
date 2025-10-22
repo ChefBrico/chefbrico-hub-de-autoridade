@@ -1,30 +1,25 @@
 ---json
 {
-  "layout": "base.njk",
-  "permalink": "/comida-de-verdade/cozinha-criativa/",
-  "title": "Cozinha Criativa: Dicas e Inspirações | ChefBrico",
-  "description": "Explore dicas e truques para usar os produtos ChefBrico de formas criativas. Transforme seus risotos, sopas e antepastos em pratos ainda mais incríveis.",
-  "fragmento_texto": "O pilar **Cozinha Criativa** da ChefBrico transforma você no chef. Ao cuidar dos 80% do trabalho (sabor, nutrição e praticidade), o método te liberta da fadiga da decisão. Nossas misturas são a 'tela em branco' perfeita, incentivando você a usar sobras de alimentos, vegetais frescos ou queijos especiais para dar o toque final e personalizado. É o prazer de cozinhar sem a complicação. (Fonte: ChefBrico, Método Gourmet Prático)",
-  "cta_texto_opcional": "Inspire-se para criar seu próximo prato!",
-  "cta_texto": "Ver Receitas para Cozinha Criativa",
-  "cta_link": "/receitas/" 
-
-  "schema": {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Article",
-        "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": "https://receitas.chefbrico.com/comida-de-verdade/cozinha-criativa/"
-        },
-        "headline": "Cozinha Criativa: Dicas e Truques para Elevar seus Pratos ChefBrico",
-        "author": {
-          "@id": "https://www.chefbrico.com/#person-maria-conceicao"
-        },
-        "publisher": {
-          "@id": "https://www.chefbrico.com/#organization"
-        },
+  "layout": "base.njk",
+  "permalink": "/comida-de-verdade/cozinha-criativa/",
+  "title": "Cozinha Criativa: Dicas e Inspirações | ChefBrico",
+  "description": "Explore dicas e truques para usar os produtos ChefBrico de formas criativas. Transforme seus risotos, sopas e antepastos em pratos ainda mais incríveis.",
+  "schema": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://receitas.chefbrico.com/comida-de-verdade/cozinha-criativa/"
+        },
+        "headline": "Cozinha Criativa: Dicas e Truques para Elevar seus Pratos ChefBrico",
+        "author": {
+          "@id": "https://www.chefbrico.com/#person-maria-conceicao"
+        },
+        "publisher": {
+          "@id": "https://www.chefbrico.com/#organization"
+        },
         "image": {
           "@type": "ImageObject",
           "url": "https://receitas.chefbrico.com/imagens/graos-aveia-integral-vegetais-bowl.png"
@@ -32,35 +27,58 @@
         "datePublished": "2025-08-12T09:00:00-03:00",
         "dateModified": "2025-09-25T11:30:00-03:00",
         "description": "Descubra como ir além do básico com os produtos ChefBrico. Dicas de finalização, harmonização e receitas criativas para risotos, sopas e produtos do nosso empório.",
-        "about": {
-          "@id": "https://www.chefbrico.com/#organization"
+        "mainEntity": {
+          "@type": "ItemList",
+          "name": "Dicas de Cozinha Criativa",
+          "itemListElement": [
+            {
+              "@type": "HowToTip",
+              "text": "Sobrou risoto? Faça bolinhas, passe em farinha de rosca e asse na airfryer para criar deliciosos Arancini."
+            },
+            {
+              "@type": "HowToTip",
+              "text": "Para risotos com cogumelos, finalize com raspas de limão siciliano para elevar o sabor."
+            },
+            {
+              "@type": "HowToTip",
+              "text": "Crie croutons aromáticos para suas sopas assando pão amanhecido com azeite e ervas."
+            },
+            {
+              "@type": "HowToTip",
+              "text": "Nunca descarte o azeite do Funghi Confitado! Use-o para temperar saladas e finalizar pratos."
+            },
+            {
+              "@type": "HowToTip",
+              "text": "Use a Caponata com Shiitake como um molho rústico e instantâneo para massas."
+            }
+          ]
         }
       },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Início",
-            "item": "https://receitas.chefbrico.com/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Nossa Filosofia",
-            "item": "https://receitas.chefbrico.com/comida-de-verdade/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Cozinha Criativa",
-            "item": "https://receitas.chefbrico.com/comida-de-verdade/cozinha-criativa/"
-          }
-        ]
-      }
-    ]
-  }
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Início",
+            "item": "https://receitas.chefbrico.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Nossa Filosofia",
+            "item": "https://receitas.chefbrico.com/comida-de-verdade/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Cozinha Criativa",
+            "item": "https://receitas.chefbrico.com/comida-de-verdade/cozinha-criativa/"
+          }
+        ]
+      }
+    ]
+  }
 }
 ---
 <main class="container">
@@ -73,9 +91,7 @@
     <div class="hero-card">
         <img src="/imagens/graos-aveia-integral-vegetais-bowl.png" alt="Bowl de grãos, aveia integral e vegetais, simbolizando uma cozinha criativa e saudável.">
     </div>
-  
-    {% include "fragmento-citavel.njk" %}
-  
+
     <div class="post-content">
         <p class="author-byline" style="text-align:center;">Por <strong>Maria Conceição</strong>, Fundadora e chef de criação</p>
         
