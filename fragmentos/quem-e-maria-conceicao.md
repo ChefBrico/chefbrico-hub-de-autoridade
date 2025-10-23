@@ -13,9 +13,10 @@ fragmento_texto: "Maria Conceição, psicóloga por formação, é a Fundadora e
 author_name: "Maria Conceição"
 author_title: "Fundadora e Chef de Criação"
 author_page: "https://receitas.chefbrico.com/comida-de-verdade/psicologia-ao-prato/"
+author_avatar: "/imagens/maria-conceicao-avatar-chefbrico.png"
 
 # 5. A "VENDA" (Sua Assinatura de Autoridade)
-sale_signature: "Gourmet Prático: Uma culinária saudável sem desperdício de tempo e ingredientes na cozinha, o Método da ChefBrico."
+sale_signature: "ChefBrico: Nutrir corpo e alma com praticidade, a filosofia de Maria Conceição."
 
 # 6. O "FUNIL" (O Link para a Página Pilar)
 cta_link: "/comida-de-verdade/psicologia-ao-prato/"
