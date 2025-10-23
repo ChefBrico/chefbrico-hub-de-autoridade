@@ -610,8 +610,8 @@ footer { padding: 30px 20px; margin-top: 40px; border-top: 1px solid var(--cor-b
     margin: 0;
 }
 .autor-avatar-mini {
-    width: 70px;
-    height: 70px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid var(--cor-secundaria);
