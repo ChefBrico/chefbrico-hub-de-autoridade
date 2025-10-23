@@ -571,3 +571,79 @@ footer { padding: 30px 20px; margin-top: 40px; border-top: 1px solid var(--cor-b
     background-color: var(--cor-secundaria);
     color: var(--cor-primaria);
 }
+/* ========================================
+   ESTILO V2 DO FRAGMENTO CITÁVEL (PERSUASIVO)
+   ======================================== */
+
+.fragmento-citavel-area-v2 {
+    margin: 40px auto;
+    padding: 30px; /* Mais respiro */
+    border: 1px solid #e0d8c4; /* Borda sutil da marca */
+    border-radius: 12px; /* Cantos mais arredondados */
+    max-width: 700px;
+    background-color: #ffffff; /* Fundo branco limpo */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07); /* Sombra suave */
+    text-align: center;
+}
+
+/* --- 1. A Resposta --- */
+.fragmento-resposta p {
+    font-size: 1.15em; /* Levemente maior */
+    line-height: 1.7; /* Mais espaçado */
+    color: #333; /* Cor principal de texto */
+    margin-bottom: 25px; /* Separar da assinatura */
+}
+
+/* --- 2. A Assinatura --- */
+.fragmento-assinatura {
+    border-top: 1px dashed #e0d8c4; /* Linha tracejada sutil */
+    padding-top: 20px;
+    margin-bottom: 25px; /* Separar do CTA */
+}
+.fragmento-assinatura p {
+    font-size: 0.95em;
+    color: var(--cor-primaria); /* Cor da marca */
+    display: flex; /* Para alinhar avatar e texto */
+    align-items: center;
+    justify-content: center; /* Centralizar se não houver avatar */
+    gap: 10px; /* Espaço entre avatar e texto */
+    margin: 0;
+}
+.autor-avatar-mini {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--cor-secundaria);
+}
+
+/* --- 3. O CTA --- */
+.fragmento-cta-v2 {
+    background-color: #fdfcf7; /* Fundo levemente diferente */
+    padding: 20px;
+    margin: 0 -30px -30px -30px; /* Preencher a parte inferior */
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-top: 1px solid #e0d8c4;
+}
+.fragmento-cta-v2 .cta-contexto {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+.cta-button-fragmento { /* Estilo do botão */
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: var(--cor-secundaria); /* Ou sua cor de botão principal */
+    color: var(--cor-primaria); /* Ou sua cor de texto de botão */
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s ease-out;
+}
+.cta-button-fragmento:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
