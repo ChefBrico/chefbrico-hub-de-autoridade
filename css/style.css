@@ -602,11 +602,11 @@ footer { padding: 30px 20px; margin-top: 40px; border-top: 1px solid var(--cor-b
 }
 .fragmento-assinatura p {
     font-size: 0.95em;
-    color: var(--cor-primaria); /* Cor da marca */
-    display: flex; /* Para alinhar avatar e texto */
+    color: var(--cor-primaria);
+    display: flex; /* <-- ISSO É CRUCIAL! */
     align-items: center;
-    justify-content: center; /* Centralizar se não houver avatar */
-    gap: 10px; /* Espaço entre avatar e texto */
+    justify-content: center;
+    gap: 10px;
     margin: 0;
 }
 .autor-avatar-mini {
