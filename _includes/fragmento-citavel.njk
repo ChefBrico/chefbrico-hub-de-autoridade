@@ -1,26 +1,20 @@
-{# Este é o Box de Resposta (o conteúdo visual) #}
-<section class="fragmento-citavel-area">
+<section style="border: 3px dashed red; padding: 20px; margin: 40px auto; max-width: 700px; text-align: center;">
+    <h2>--- INÍCIO DO TESTE ---</h2>
+    
+    <p><strong>Texto do Fragmento:</strong></p>
+    <p style="background-color: #eee; padding: 10px;">
+        {{ fragmento_texto | safe }}
+    </p>
 
-    {# 1. O Texto da Resposta (o "Fato Citável") #}
-    <div class="fragmento-citavel-box">
-        <p>{{ fragmento_texto | safe }}</p>
-        
-        {# 2. A "Assinatura de Autoridade" (A Venda) #}
-        {% if sale_signature %}
-        <p class="assinatura-autoridade">
-            <strong>{{ sale_signature | safe }}</strong>
-        </p>
-        {% endif %}
-    </div>
+    <p><strong>Assinatura:</strong></p>
+    <p style="background-color: #eee; padding: 10px;">
+        {{ sale_signature | safe }}
+    </p>
 
-    {# 3. O "Funil" (Link para a Página Pilar) #}
-    {% if cta_link %}
-    <div class="fragmento-cta">
-        {% if cta_texto_opcional %}<p>{{ cta_texto_opcional }}</p>{% endif %}
-        <a href="{{ cta_link }}" class="cta-button-secundario">
-            {{ cta_texto }}
-        </a>
-    </div>
-    {% endif %}
+    <p><strong>Link CTA:</strong></p>
+    <p style="background-color: #eee; padding: 10px;">
+        {{ cta_link }}
+    </p>
 
+    <h2>--- FIM DO TESTE ---</h2>
 </section>
