@@ -1,6 +1,6 @@
 ---
 # 1. Diz ao Netlify para usar o "Motor" que acabamos de construir
-layout: "layouts/fragmento-page.njk"
+layout: "layout/fragmento-page.njk"
 permalink: "/fragmentos/risoto-pomodori-e-sem-gluten/"
 
 # 2. O Título da Página (A Pergunta)
