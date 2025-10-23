@@ -1,24 +1,43 @@
-{# Este é o Box de Resposta (o conteúdo visual) #}
-<section class="fragmento-citavel-area">
+{# Este é o Box de Resposta V2 (Mais Persuasivo) #}
+<section class="fragmento-citavel-area-v2">
 
-    {# 1. O Texto da Resposta (o "Fato Citável") #}
-    <div class="fragmento-citavel-box">
+    {# 1. A Resposta Direta (Foco Principal) #}
+    <div class="fragmento-resposta">
         <p>{{ fragmento_texto | safe }}</p>
-
-        {# 2. A "Assinatura de Autoridade" (A Venda) #}
-        {% if sale_signature %}
-        <p class="assinatura-autoridade">
-            <strong>{{ sale_signature | safe }}</strong>
-        </p>
-        {% endif %}
     </div>
 
-    {# 3. O "Funil" (Link para a Página Pilar) #}
+    {# 2. A Assinatura de Autoridade (Destacada) #}
+    {% if sale_signature or author_name %}
+    <div class="fragmento-assinatura">
+        <p>
+            {# Adiciona a imagem da Maria (se existir no frontmatter) #}
+            {% if author_avatar %} 
+            <img src="{{ author_avatar }}" alt="Avatar de {{ author_name }}" class="autor-avatar-mini">
+            {% endif %}
+
+            {# Usa a sale_signature OU monta uma assinatura padrão #}
+            {% if sale_signature %}
+                <strong>{{ sale_signature | safe }}</strong>
+            {% else %}
+                <strong>Uma resposta da ChefBrico, por {{ author_name }}.</strong>
+            {% endif %}
+        </p>
+    </div>
+    {% endif %}
+
+    {# 3. O Funil (CTA Contextualizado) #}
     {% if cta_link %}
-    <div class="fragmento-cta">
-        {% if cta_texto_opcional %}<p>{{ cta_texto_opcional }}</p>{% endif %}
-        <a href="{{ cta_link }}" class="cta-button-secundario">
-            {{ cta_texto }}
+    <div class="fragmento-cta-v2">
+        {# Usa o cta_texto_opcional OU cria um texto padrão "Saiba mais..." #}
+        <p class="cta-contexto">
+          {% if cta_texto_opcional %}
+            {{ cta_texto_opcional }}
+          {% else %}
+            Saiba mais sobre {{ title | lower | replace('?', '') }}: 
+          {% endif %}
+        </p>
+        <a href="{{ cta_link }}" class="cta-button-fragmento">
+            {{ cta_texto if cta_texto else "Veja a Página Completa" }}
         </a>
     </div>
     {% endif %}
