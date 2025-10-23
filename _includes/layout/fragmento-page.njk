@@ -4,20 +4,26 @@
 {# --- Seção do HEAD (Onde a Mágica do Schema Acontece) --- #}
 {% block head_scripts %}
   <script type="application/ld+json">
-  {# 1. Puxa o "motor" do schema que vamos melhorar no próximo passo #}
+  {# Puxa o "motor" do schema #}
   {% include "schema-fragmento.njk" %}
   </script>
 {% endblock %}
 
-{# --- Seção do Conteúdo (O que o usuário vê) --- #}
+{# --- Seção do Conteúdo (TESTE DIRETO) --- #}
 {% block content %}
-  <main>
-    {# 2. O Título (H1) da página (será a pergunta, ex: "Risoto é vegano?") #}
-    <h1 style="text-align: center; margin-top: 40px; margin-bottom: 20px; font-size: 2.2em;">
-      {{ title }}
-    </h1>
+  <main style="border: 5px solid blue; padding: 30px; margin: 20px;">
+    <h2>--- TESTE DIRETO NO LAYOUT ---</h2>
+    
+    <p>Este texto ESTÁ DENTRO do layout fragmento-page.</p>
+    
+    <p>O Título (da variável 'title') é:</p>
+    <h1 style="background-color: yellow;">{{ title }}</h1> 
+    
+    <p>O Texto do Fragmento (da variável 'fragmento_texto') é:</p>
+    <div style="background-color: lightgreen; padding: 15px;">
+        {{ fragmento_texto | safe }}
+    </div>
 
-    {# 3. Puxa o "Box de Resposta" (o include que você já tem) #}
-    {% include "fragmento-citavel.njk" %}
+    <h2>--- FIM DO TESTE DIRETO ---</h2>
   </main>
 {% endblock %}
