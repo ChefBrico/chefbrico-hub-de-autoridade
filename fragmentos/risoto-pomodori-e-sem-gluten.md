@@ -13,6 +13,7 @@ fragmento_texto: "Sim, 100%. O Risoto Pomodori é naturalmente sem glúten. Usam
 author_name: "Maria Conceição"
 author_title: "Fundadora e Chef de Criação"
 author_page: "https://receitas.chefbrico.com/comida-de-verdade/psicologia-ao-prato/"
+author_avatar: "/imagens/maria-conceicao-avatar-chefbrico.png" # Adicionei o avatar aqui também!
 
 # 5. A "Venda" (Sua Assinatura de Autoridade)
 sale_signature: "ChefBrico é a garantia do 'gourmet prático', 100% natural e inclusivo."
