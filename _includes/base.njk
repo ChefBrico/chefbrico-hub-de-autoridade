@@ -45,7 +45,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     {% include "cabecalho.html" %}
 
-   {% block content %}{% endblock %}
+  {% block content %}
+    {{ content | safe }}
+{% endblock %}
 
     {% include "rodape.html" %}
    
