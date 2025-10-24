@@ -647,3 +647,21 @@ footer { padding: 30px 20px; margin-top: 40px; border-top: 1px solid var(--cor-b
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+/* ========================================
+   ESTILO PARA LINKS DENTRO DO FAQ ACCORDION
+   ======================================== */
+
+.faq-link-fragmento {
+    display: block; /* Faz o link ocupar uma nova linha */
+    margin-top: 15px; /* Espaço acima do link (ajuste se necessário) */
+    margin-bottom: 5px; /* Espaço abaixo do link (ajuste se necessário) */
+    font-weight: bold;
+    font-size: 0.9em;
+    color: var(--cor-secundaria); /* Cor de destaque (marrom mais claro?) */
+    text-decoration: underline;
+    transition: color 0.2s; /* Suaviza a mudança de cor */
+}
+
+.faq-link-fragmento:hover {
+    color: var(--cor-primaria); /* Cor principal ao passar o mouse */
+}
