@@ -48,14 +48,14 @@ collections:
 
       - label: "Página 'Chefbrico Club'"
         name: "club"
-        file: "chefbrico-club/index.md" # ATENÇÃO: Confirme se este é o caminho do ficheiro
+        file: "clube"
         fields:
           - { label: "Título da Página", name: "title", widget: "string" }
           - { label: "Conteúdo da Página", name: "body", widget: "markdown" }
 
       - label: "Página 'Onde Encontrar' (Textos e Títulos)"
         name: "onde_encontrar_main"
-        file: "onde-encontrar/index.md"
+        file: "onde-encontrar/index"
         fields:
           - { label: "Título Principal da Página", name: "title", widget: "string" }
           - { label: "Título da Secção 'Plano Piloto'", name: "titulo_plano_piloto", widget: "string" }
@@ -65,7 +65,7 @@ collections:
           
       - label: "Página de 'Perguntas Frequentes' (FAQ)"
         name: "faq"
-        file: "faq/index.md"
+        file: "faq/index"
         fields:
           - { label: "Título da Página", name: "title", widget: "string", default: "Perguntas Frequentes" }
           - { label: "Subtítulo da Página", name: "subtitle", widget: "text" }
