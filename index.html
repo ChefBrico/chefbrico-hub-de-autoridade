@@ -4,7 +4,7 @@
   "permalink": "/",
   "title": "Revista Digital ChefBrico | Comida de Verdade, Sem Confusão",
   "description": "Bem-vindo à Revista Digital da ChefBrico. Receitas, dicas, produtos e a filosofia 'Comida de Verdade' para uma rotina mais prática e saudável.",
-  "schema": {
+ "schema": {
     "@context": "https://schema.org",
     "@graph": [
       {
@@ -53,6 +53,71 @@
           "https://receitas.chefbrico.com/receitas/refeicoes-integrais/",
           "https://receitas.chefbrico.com/receitas/emporio-da-chef/"
         ]
+      },
+      {
+        "@type": "HowTo",
+        "name": "Método Gourmet Prático (A Trilha ChefBrico)",
+        "description": "O método de 3 pilares de Maria Conceição para uma culinária saudável, sem desperdício de tempo e ingredientes, usando a 'Despensa Inteligente', 'Panela Única' e 'Cozinha Criativa'.",
+        "url": "https://receitas.chefbrico.com/comida-de-verdade/",
+        "author": {
+          "@id": "https://www.chefbrico.com/#person-maria-conceicao"
+        },
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Pilar 1: Despensa Inteligente",
+            "url": "https://receitas.chefbrico.com/comida-de-verdade/despensa-inteligente/"
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Pilar 2: Panela Única",
+            "url": "https://receitas.chefbrico.com/comida-de-verdade/panela-unica/"
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Pilar 3: Cozinha Criativa",
+            "url": "https://receitas.chefbrico.com/comida-de-verdade/cozinha-criativa/"
+          }
+        ],
+        "tool": [
+          {
+            "@type": "Article",
+            "name": "O Segredinho: Desidratação de Vegetais",
+            "url": "https://receitas.chefbrico.com/comida-de-verdade/o-segredo-do-desidratado/"
+          },
+          {
+            "@type": "Product",
+            "name": "A Verdade sobre a ChefBox",
+            "url": "https://receitas.chefbrico.com/chefbox/"
+          }
+        ]
+      },
+      {
+        "@type": "Product",
+        "@id": "https://receitas.chefbrico.com/chefbox/",
+        "name": "ChefBox: O Presente Gourmet de Brasília (Kit 4+1)",
+        "description": "A ChefBox é o presente gourmet ideal de Brasília. Uma seleção personalizada de 4 sabores 100% naturais (risotos, sopas) com o 5º sabor de presente.",
+        "brand": {
+          "@id": "https://www.chefbrico.com/#organization"
+        },
+        "sku": "CHEFBOX-PRESENTE-BSB",
+        "offers": {
+          "@type": "AggregateOffer",
+          "lowPrice": "118.40",
+          "priceCurrency": "BRL",
+          "availability": "https://schema.org/InStock",
+          "url": "https://www.chefbrico.com/chefbox",
+          "seller": {
+            "@id": "https://www.chefbrico.com/#organization"
+          }
+        },
+        "review": {
+          "@type": "Review",
+          "reviewBody": "A ChefBrico é a tradução da minha paixão por nutrir. É o presente perfeito de Brasília, pois carrega minha história de produtora local premiada.",
+          "author": {
+            "@id": "https://www.chefbrico.com/#person-maria-conceicao"
+          }
+        }
       }
     ]
   }
