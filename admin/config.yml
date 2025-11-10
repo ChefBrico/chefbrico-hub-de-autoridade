@@ -41,7 +41,7 @@ collections:
 
       - label: "Página 'ChefBox'"
         name: "chefbox"
-        file: "chefbox/index.md" # ATENÇÃO: Confirme se este é o caminho do ficheiro
+        file: "chefbox"
         fields:
           - { label: "Título da Página", name: "title", widget: "string" }
           - { label: "Conteúdo da Página", name: "body", widget: "markdown" }
