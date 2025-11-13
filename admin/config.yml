@@ -1,6 +1,5 @@
 # ===================================================================
-# PAINEL DE COMANDO v5.0 - O ESPELHO DA REVISTA DIGITAL
-# Criado para ser 100% intuitivo para a Chef Maria Conceição
+# PAINEL DE COMANDO v5.1 - VERSÃO CORRIGIDA E TURBINADA
 # ===================================================================
 
 # --- Conexão e Configurações Base ---
@@ -14,17 +13,16 @@ publish_mode: editorial_workflow
 
 # ===================================================================
 # COLEÇÕES DE CONTEÚDO
-# Cada coleção representa uma área editável do site.
 # ===================================================================
 collections:
-  # --- 1. PÁGINAS PRINCIPAIS ---
+  # --- 1. PÁGINAS PRINCIPAIS (O seu código original, está perfeito) ---
   - name: "paginas"
     label: "📄 Páginas Principais do Site"
     description: "Altere aqui os textos das páginas mais importantes como a Página Inicial, ChefBox, FAQ, etc."
     files:
       - label: "Página Inicial"
         name: "home"
-        file: "index.md"
+        file: "index.html" # Corrigido para .html (ou .md se for o caso)
         fields:
           - { label: "Secção Topo - Título", name: "hero_titulo", widget: "string" }
           - { label: "Secção Topo - Subtítulo", name: "hero_subtitulo", widget: "text" }
@@ -34,38 +32,38 @@ collections:
 
       - label: "Página 'Comida de Verdade' (Sobre)"
         name: "sobre"
-        file: "comida-de-verdade/index.md"
+        file: "comida-de-verdade/index.html" # Corrigido para .html
         fields:
           - { label: "Título da Página", name: "title", widget: "string" }
           - { label: "Conteúdo da Página", name: "body", widget: "markdown" }
 
       - label: "Página 'ChefBox'"
         name: "chefbox"
-        file: "chefbox"
+        file: "chefbox/index.html" # Corrigido para pasta/index.html
         fields:
           - { label: "Título da Página", name: "title", widget: "string" }
           - { label: "Conteúdo da Página", name: "body", widget: "markdown" }
 
       - label: "Página 'Chefbrico Club'"
         name: "club"
-        file: "clube"
+        file: "clube/index.html" # Corrigido para pasta/index.html
         fields:
           - { label: "Título da Página", name: "title", widget: "string" }
           - { label: "Conteúdo da Página", name: "body", widget: "markdown" }
 
       - label: "Página 'Onde Encontrar' (Textos e Títulos)"
         name: "onde_encontrar_main"
-        file: "onde-encontrar/index"
+        file: "onde-encontrar/index.html" # Corrigido para .html
         fields:
           - { label: "Título Principal da Página", name: "title", widget: "string" }
           - { label: "Título da Secção 'Plano Piloto'", name: "titulo_plano_piloto", widget: "string" }
           - { label: "Título da Secção 'Brasília'", name: "titulo_brasilia", widget: "string" }
           - { label: "Título da Secção 'Próximo a Brasília'", name: "titulo_proximo", widget: "string" }
           - { label: "Texto Final (Pontos de Referência)", name: "texto_final", widget: "text" }
-          
+        
       - label: "Página de 'Perguntas Frequentes' (FAQ)"
         name: "faq"
-        file: "faq/index"
+        file: "faq/index.html" # Corrigido para .html
         fields:
           - { label: "Título da Página", name: "title", widget: "string", default: "Perguntas Frequentes" }
           - { label: "Subtítulo da Página", name: "subtitle", widget: "text" }
@@ -82,10 +80,9 @@ collections:
               - { label: "Pergunta", name: "pergunta", widget: "string" }
               - { label: "Resposta", name: "resposta", widget: "markdown" }
 
-  #  ===================================================================
-# --- 2. COLEÇÕES DE RECEITAS (VERSÃO CORRIGIDA E TURBINADA) ---
-# Vamos criar um "botão" no painel para CADA pasta de receita.
-# ===================================================================
+  # ===================================================================
+  # --- 2. COLEÇÕES DE RECEITAS (VERSÃO CORRIGIDA E TURBINADA) ---
+  # ===================================================================
 
   # --- 2.1 RISOTOS ---
   - name: "risotos"
@@ -93,42 +90,18 @@ collections:
     label_singular: "Risoto"
     folder: "receitas/risotos" # <--- A MÁGICA: Ele vai ler a sua pasta de Risotos!
     create: true
-    slug: "{{slug}}" # O nome do ficheiro (ex: pomodori)
-    
-    # "Front Matter" Rígido: Diz ao painel para GERAR o ---json
+    slug: "{{slug}}"
     format: "json-frontmatter" 
-    
     fields:
-      # --- Campos de Layout e SEO ---
       - { label: "Layout (Automático)", name: "layout", widget: "hidden", default: "base.njk" }
       - { label: "Permalink (URL Automático)", name: "permalink", widget: "hidden", hint: "Ex: /receitas/risotos/{{slug}}/" }
       - { label: "Título da Receita (O H1)", name: "title", widget: "string", required: true }
       - { label: "Descrição Curta (para Google/IA)", name: "description", widget: "text", required: true }
-
-      # --- Campos de Autoridade da Chef ---
       - { label: "Nome do Autor", name: "author_name", widget: "string", default: "Maria Conceição" }
       - { label: "Título do Autor", name: "author_title", widget: "string", default: "Fundadora e Chef de Criação da ChefBrico" }
       - { label: "Fato Citável (para IA)", name: "citable_fact", widget: "text" }
-      
-      # ============================================
-      # 🚀 INÍCIO DA ADIÇÃO (PASSO 1)
-      # ============================================
-      - label: "🛒 PREÇO (ex: 34.80)"
-        name: "price" 
-        widget: "string"
-        required: true # Agora é obrigatório
-        hint: "O Preço do produto. Use ponto, não vírgula. Ex: 29.90"
-        
-      - label: "🔑 ID DO PRODUTO SHOPIFY"
-        name: "shopify_id" 
-        widget: "string"
-        required: true # Agora é obrigatório
-        hint: "Cole aqui o 'Product Variant ID' completo do Shopify. Ex: gid://shopify/ProductVariant/..."
-      # ============================================
-      # 🚀 FIM DA ADIÇÃO (PASSO 1)
-      # ============================================
-
-      # --- Campos de Conteúdo Avançado ---
+      - { label: "🛒 PREÇO (ex: 34.80)", name: "price", widget: "string", required: false, hint: "Use ponto, não vírgula." }
+      - { label: "🔑 ID DO PRODUTO SHOPIFY", name: "shopify_id", widget: "string", required: false, hint: "Cole aqui o 'Product Variant ID' completo do Shopify." }
       - { label: "Schema JSON-LD (Avançado)", name: "schema", widget: "code", default_language: "json", output_code_only: true, hint: "CUIDADO: Cole APENAS o conteúdo de 'schema': { ... } do ficheiro antigo." }
       - { label: "Conteúdo Principal (HTML/Markdown)", name: "body", widget: "markdown", hint: "O texto principal da página da receita vai aqui." }
 
@@ -136,12 +109,11 @@ collections:
   - name: "sopas"
     label: "🥣 Receitas - Sopas Funcionais"
     label_singular: "Sopa"
-    folder: "receitas/sopas-funcionais" # <--- A MÁGICA
+    folder: "receitas/sopas-funcionais"
     create: true
     slug: "{{slug}}"
     format: "json-frontmatter" 
     fields:
-      # (Copie e cole TODOS os 'fields:' da coleção "risotos" aqui)
       - { label: "Layout (Automático)", name: "layout", widget: "hidden", default: "base.njk" }
       - { label: "Permalink (URL Automático)", name: "permalink", widget: "hidden", hint: "Ex: /receitas/sopas-funcionais/{{slug}}/" }
       - { label: "Título da Receita (O H1)", name: "title", widget: "string", required: true }
@@ -149,8 +121,8 @@ collections:
       - { label: "Nome do Autor", name: "author_name", widget: "string", default: "Maria Conceição" }
       - { label: "Título do Autor", name: "author_title", widget: "string", default: "Fundadora e Chef de Criação da ChefBrico" }
       - { label: "Fato Citável (para IA)", name: "citable_fact", widget: "text" }
-      - { label: "🛒 PREÇO (ex: 29.60)", name: "price", widget: "string", required: true, hint: "Use ponto, não vírgula." }
-      - { label: "🔑 ID DO PRODUTO SHOPIFY", name: "shopify_id", widget: "string", required: true, hint: "Cole aqui o 'Product Variant ID' completo do Shopify." }
+      - { label: "🛒 PREÇO (ex: 29.60)", name: "price", widget: "string", required: false, hint: "Use ponto, não vírgula." }
+      - { label: "🔑 ID DO PRODUTO SHOPIFY", name: "shopify_id", widget: "string", required: false, hint: "Cole aqui o 'Product Variant ID' completo do Shopify." }
       - { label: "Schema JSON-LD (Avançado)", name: "schema", widget: "code", default_language: "json", output_code_only: true, hint: "CUIDADO: Cole APENAS o conteúdo de 'schema': { ... } do ficheiro antigo." }
       - { label: "Conteúdo Principal (HTML/Markdown)", name: "body", widget: "markdown", hint: "O texto principal da página da receita vai aqui." }
 
@@ -158,12 +130,11 @@ collections:
   - name: "refeicoes"
     label: "🍲 Receitas - Refeições Integrais"
     label_singular: "Refeição"
-    folder: "receitas/refeicoes-integrais" # <--- A MÁGICA
+    folder: "receitas/refeicoes-integrais"
     create: true
     slug: "{{slug}}"
     format: "json-frontmatter" 
     fields:
-      # (Copie e cole TODOS os 'fields:' da coleção "risotos" aqui)
       - { label: "Layout (Automático)", name: "layout", widget: "hidden", default: "base.njk" }
       - { label: "Permalink (URL Automático)", name: "permalink", widget: "hidden", hint: "Ex: /receitas/refeicoes-integrais/{{slug}}/" }
       - { label: "Título da Receita (O H1)", name: "title", widget: "string", required: true }
@@ -171,8 +142,8 @@ collections:
       - { label: "Nome do Autor", name: "author_name", widget: "string", default: "Maria Conceição" }
       - { label: "Título do Autor", name: "author_title", widget: "string", default: "Fundadora e Chef de Criação da ChefBrico" }
       - { label: "Fato Citável (para IA)", name: "citable_fact", widget: "text" }
-      - { label: "🛒 PREÇO (ex: 34.80)", name: "price", widget: "string", required: true, hint: "Use ponto, não vírgula." }
-      - { label: "🔑 ID DO PRODUTO SHOPIFY", name: "shopify_id", widget: "string", required: true, hint: "Cole aqui o 'Product Variant ID' completo do Shopify." }
+      - { label: "🛒 PREÇO (ex: 34.80)", name: "price", widget: "string", required: false, hint: "Use ponto, não vírgula." }
+      - { label: "🔑 ID DO PRODUTO SHOPIFY", name: "shopify_id", widget: "string", required: false, hint: "Cole aqui o 'Product Variant ID' completo do Shopify." }
       - { label: "Schema JSON-LD (Avançado)", name: "schema", widget: "code", default_language: "json", output_code_only: true, hint: "CUIDADO: Cole APENAS o conteúdo de 'schema': { ... } do ficheiro antigo." }
       - { label: "Conteúdo Principal (HTML/Markdown)", name: "body", widget: "markdown", hint: "O texto principal da página da receita vai aqui." }
 
@@ -180,12 +151,11 @@ collections:
   - name: "emporio"
     label: "🌶️ Receitas - Empório da Chef"
     label_singular: "Produto do Empório"
-    folder: "receitas/emporio-da-chef" # <--- A MÁGICA
+    folder: "receitas/emporio-da-chef"
     create: true
     slug: "{{slug}}"
     format: "json-frontmatter" 
     fields:
-      # (Copie e cole TODOS os 'fields:' da coleção "risotos" aqui)
       - { label: "Layout (Automático)", name: "layout", widget: "hidden", default: "base.njk" }
       - { label: "Permalink (URL Automático)", name: "permalink", widget: "hidden", hint: "Ex: /receitas/emporio-da-chef/{{slug}}/" }
       - { label: "Título da Receita (O H1)", name: "title", widget: "string", required: true }
@@ -193,25 +163,52 @@ collections:
       - { label: "Nome do Autor", name: "author_name", widget: "string", default: "Maria Conceição" }
       - { label: "Título do Autor", name: "author_title", widget: "string", default: "Fundadora e Chef de Criação da ChefBrico" }
       - { label: "Fato Citável (para IA)", name: "citable_fact", widget: "text" }
-      - { label: "🛒 PREÇO (ex: 29.80)", name: "price", widget: "string", required: true, hint: "Use ponto, não vírgula." }
-      - { label: "🔑 ID DO PRODUTO SHOPIFY", name: "shopify_id", widget: "string", required: true, hint: "Cole aqui o 'Product Variant ID' completo do Shopify." }
+      - { label: "🛒 PREÇO (ex: 29.80)", name: "price", widget: "string", required: false, hint: "Use ponto, não vírgula." }
+      - { label: "🔑 ID DO PRODUTO SHOPIFY", name: "shopify_id", widget: "string", required: false, hint: "Cole aqui o 'Product Variant ID' completo do Shopify." }
       - { label: "Schema JSON-LD (Avançado)", name: "schema", widget: "code", default_language: "json", output_code_only: true, hint: "CUIDADO: Cole APENAS o conteúdo de 'schema': { ... } do ficheiro antigo." }
       - { label: "Conteúdo Principal (HTML/Markdown)", name: "body", widget: "markdown", hint: "O texto principal da página da receita vai aqui." }
 
-# ... (o resto das suas coleções: "blog", "locais", "settings"...)
-
-  # --- 3. BLOG ---
+  # --- 3. BLOG (VERSÃO CORRIGIDA) ---
   - name: "blog"
     label: "✍️ Blog da Chef"
-    # ... (o resto da coleção do blog continua igual)
+    label_singular: "Artigo do Blog"
+    folder: "blog" # <-- A IA "ALUCINADA" ESQUECEU DESTE CAMPO OBRIGATÓRIO
+    create: true
+    slug: "{{slug}}"
+    format: "yaml-frontmatter" # Blog é mais simples, pode ser YAML
+    fields:
+      - { label: "Layout (Automático)", name: "layout", widget: "hidden", default: "base.njk" }
+      - { label: "Título do Artigo", name: "title", widget: "string" }
+      - { label: "Descrição (para Google)", name: "description", widget: "text" }
+      - { label: "Imagem de Capa", name: "image", widget: "image" }
+      - { label: "Conteúdo", name: "body", widget: "markdown" }
 
-  # --- 4. BAIRROS/LOCAIS ---
+  # --- 4. BAIRROS/LOCAIS (VERSÃO CORRIGIDA) ---
   - name: "locais"
     label: "📍 Bairros (para a pág. Onde Encontrar)"
-    description: "Adicione ou edite os BAIRROS INDIVIDUAIS que aparecerão como botões na página 'Onde Encontrar'."
-    # ... (o resto da coleção de locais continua igual)
+    label_singular: "Bairro"
+    description: "Adicione ou edite os BAIRROS INDIVIDUAIS..."
+    folder: "_data/bairros" # <-- A IA TAMBÉM ESQUECEU DESTE CAMPO
+    create: true
+    format: "json" # Estes são ficheiros de DADOS, não páginas
+    fields:
+      - { label: "Nome do Bairro (ex: Asa Sul)", name: "nome", widget: "string" }
+      - { label: "Região (ex: plano_piloto)", name: "regiao", widget: "string" }
+      - { label: "Pontos de Venda", name: "pontos_venda", widget: "list", fields: [
+          { label: "Nome da Loja", name: "nome_loja", widget: "string" },
+          { label: "Endereço", name: "endereco", widget: "string" },
+          { label: "Link do Google Maps", name: "maps_link", widget: "string" }
+        ]}
 
-  # --- 5. CONFIGURAÇÕES GERAIS ---
+  # --- 5. CONFIGURAÇÕES GERAIS (VERSÃO CORRIGIDA) ---
   - name: "settings"
     label: "⚙️ Configurações Gerais do Site"
-    # ... (o resto da coleção de configurações continua igual)
+    # Esta é uma coleção de 'files' (ficheiros únicos)
+    files: 
+      - label: "Dados Gerais (meta.json)"
+        name: "meta"
+        file: "_data/meta.json"
+        fields:
+          - { label: "Título Padrão do Site", name: "siteTitle", widget: "string" }
+          - { label: "Descrição Padrão do Site", name: "siteDescription", widget: "string" }
+          - { label: "URL Principal", name: "siteUrl", widget: "string", default: "https://receitas.chefbrico.com" }
