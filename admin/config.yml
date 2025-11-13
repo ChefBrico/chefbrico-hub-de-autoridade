@@ -82,7 +82,7 @@ collections:
               - { label: "Pergunta", name: "pergunta", widget: "string" }
               - { label: "Resposta", name: "resposta", widget: "markdown" }
 
-  # ===================================================================
+  #  ===================================================================
 # --- 2. COLEÇÕES DE RECEITAS (VERSÃO CORRIGIDA E TURBINADA) ---
 # Vamos criar um "botão" no painel para CADA pasta de receita.
 # ===================================================================
