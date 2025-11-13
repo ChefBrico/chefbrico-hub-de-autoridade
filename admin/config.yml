@@ -91,6 +91,11 @@ collections:
     folder: "receitas/risotos" # <--- A MÁGICA: Ele vai ler a sua pasta de Risotos!
     create: true
     slug: "{{slug}}"
+    # ============================================
+    # 🚀 A CORREÇÃO ESTÁ AQUI (PASSO 2)
+    # ============================================
+    extension: "html" # <--- Diz ao painel para LER e CRIAR ficheiros .html
+    # ============================================
     format: "json-frontmatter" 
     fields:
       - { label: "Layout (Automático)", name: "layout", widget: "hidden", default: "base.njk" }
@@ -112,6 +117,11 @@ collections:
     folder: "receitas/sopas-funcionais"
     create: true
     slug: "{{slug}}"
+    # ============================================
+    # 🚀 A CORREÇÃO ESTÁ AQUI (PASSO 2)
+    # ============================================
+    extension: "html" # <--- Diz ao painel para LER e CRIAR ficheiros .html
+    # ============================================
     format: "json-frontmatter" 
     fields:
       - { label: "Layout (Automático)", name: "layout", widget: "hidden", default: "base.njk" }
@@ -133,6 +143,11 @@ collections:
     folder: "receitas/refeicoes-integrais"
     create: true
     slug: "{{slug}}"
+    # ============================================
+    # 🚀 A CORREÇÃO ESTÁ AQUI (PASSO 2)
+    # ============================================
+    extension: "html" # <--- Diz ao painel para LER e CRIAR ficheiros .html
+    # ============================================
     format: "json-frontmatter" 
     fields:
       - { label: "Layout (Automático)", name: "layout", widget: "hidden", default: "base.njk" }
@@ -154,6 +169,11 @@ collections:
     folder: "receitas/emporio-da-chef"
     create: true
     slug: "{{slug}}"
+    # ============================================
+    # 🚀 A CORREÇÃO ESTÁ AQUI (PASSO 2)
+    # ============================================
+    extension: "html" # <--- Diz ao painel para LER e CRIAR ficheiros .html
+    # ============================================
     format: "json-frontmatter" 
     fields:
       - { label: "Layout (Automático)", name: "layout", widget: "hidden", default: "base.njk" }
