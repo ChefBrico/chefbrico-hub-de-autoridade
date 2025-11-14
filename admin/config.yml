@@ -1,12 +1,12 @@
 # ===================================================================
-# PAINEL DE COMANDO v5.1 - VERSÃO CORRIGIDA E TURBINADA
+# PAINEL DE COMANDO v5.2 - VERSÃO CORRIGIDA (POR ARQUITETO CONSCIENTE)
 # ===================================================================
 
 # --- Conexão e Configurações Base ---
 backend:
   name: git-gateway
-  branch: desenvolvimento
-media_folder: "imagens/uploads"
+  branch: desenvolvimento # Garanta que este é o branch correto no GitHub
+media_folder: "src/imagens/uploads" # CORRIGIDO: Adicionado "src/"
 public_folder: "/imagens/uploads"
 locale: 'pt'
 publish_mode: editorial_workflow
@@ -15,14 +15,14 @@ publish_mode: editorial_workflow
 # COLEÇÕES DE CONTEÚDO
 # ===================================================================
 collections:
-  # --- 1. PÁGINAS PRINCIPAIS (O seu código original, está perfeito) ---
+  # --- 1. PÁGINAS PRINCIPAIS ---
   - name: "paginas"
     label: "📄 Páginas Principais do Site"
     description: "Altere aqui os textos das páginas mais importantes como a Página Inicial, ChefBox, FAQ, etc."
     files:
       - label: "Página Inicial"
         name: "home"
-        file: "index.html" # Corrigido para .html (ou .md se for o caso)
+        file: "src/index.html" # CORRIGIDO: Adicionado "src/"
         fields:
           - { label: "Secção Topo - Título", name: "hero_titulo", widget: "string" }
           - { label: "Secção Topo - Subtítulo", name: "hero_subtitulo", widget: "text" }
@@ -32,38 +32,38 @@ collections:
 
       - label: "Página 'Comida de Verdade' (Sobre)"
         name: "sobre"
-        file: "comida-de-verdade/index.html" # Corrigido para .html
+        file: "src/comida-de-verdade/index.html" # CORRIGIDO: Adicionado "src/"
         fields:
           - { label: "Título da Página", name: "title", widget: "string" }
           - { label: "Conteúdo da Página", name: "body", widget: "markdown" }
 
       - label: "Página 'ChefBox'"
         name: "chefbox"
-        file: "chefbox/index.html" # Corrigido para pasta/index.html
+        file: "src/chefbox/index.html" # CORRIGIDO: Adicionado "src/"
         fields:
           - { label: "Título da Página", name: "title", widget: "string" }
           - { label: "Conteúdo da Página", name: "body", widget: "markdown" }
 
       - label: "Página 'Chefbrico Club'"
         name: "club"
-        file: "clube/index.html" # Corrigido para pasta/index.html
+        file: "src/clube/index.html" # CORRIGIDO: Adicionado "src/"
         fields:
           - { label: "Título da Página", name: "title", widget: "string" }
           - { label: "Conteúdo da Página", name: "body", widget: "markdown" }
 
       - label: "Página 'Onde Encontrar' (Textos e Títulos)"
         name: "onde_encontrar_main"
-        file: "onde-encontrar/index.html" # Corrigido para .html
+        file: "src/onde-encontrar/index.html" # CORRIGIDO: Adicionado "src/"
         fields:
           - { label: "Título Principal da Página", name: "title", widget: "string" }
           - { label: "Título da Secção 'Plano Piloto'", name: "titulo_plano_piloto", widget: "string" }
           - { label: "Título da Secção 'Brasília'", name: "titulo_brasilia", widget: "string" }
           - { label: "Título da Secção 'Próximo a Brasília'", name: "titulo_proximo", widget: "string" }
           - { label: "Texto Final (Pontos de Referência)", name: "texto_final", widget: "text" }
-        
+      
       - label: "Página de 'Perguntas Frequentes' (FAQ)"
         name: "faq"
-        file: "faq/index.html" # Corrigido para .html
+        file: "src/faq/index.html" # CORRIGIDO: Adicionado "src/"
         fields:
           - { label: "Título da Página", name: "title", widget: "string", default: "Perguntas Frequentes" }
           - { label: "Subtítulo da Página", name: "subtitle", widget: "text" }
@@ -81,22 +81,18 @@ collections:
               - { label: "Resposta", name: "resposta", widget: "markdown" }
 
   # ===================================================================
-  # --- 2. COLEÇÕES DE RECEITAS (VERSÃO CORRIGIDA E TURBINADA) ---
+  # --- 2. COLEÇÕES DE RECEITAS (CAMINHOS E SCHEMA CORRIGIDOS) ---
   # ===================================================================
 
   # --- 2.1 RISOTOS ---
   - name: "risotos"
     label: "🍳 Receitas - Risotos"
     label_singular: "Risoto"
-    folder: "receitas/risotos" # <--- A MÁGICA: Ele vai ler a sua pasta de Risotos!
+    folder: "src/receitas/risotos" # CORRIGIDO: Adicionado "src/"
     create: true
     slug: "{{slug}}"
-    # ============================================
-    # 🚀 A CORREÇÃO ESTÁ AQUI (PASSO 2)
-    # ============================================
-    extension: "html" # <--- Diz ao painel para LER e CRIAR ficheiros .html
-    # ============================================
-    format: "json-frontmatter"
+    extension: "html" # Assumindo que os seus ficheiros são.html (processados pelo Eleventy)
+    format: "json-frontmatter" # Lê o bloco ---json {... } ---
     fields:
       - { label: "Layout (Automático)", name: "layout", widget: "hidden", default: "base.njk" }
       - { label: "Permalink (URL Automático)", name: "permalink", widget: "hidden", hint: "Ex: /receitas/risotos/{{slug}}/" }
@@ -107,21 +103,20 @@ collections:
       - { label: "Fato Citável (para IA)", name: "citable_fact", widget: "text" }
       - { label: "🛒 PREÇO (ex: 34.80)", name: "price", widget: "string", required: false, hint: "Use ponto, não vírgula." }
       - { label: "🔑 ID DO PRODUTO SHOPIFY", name: "shopify_id", widget: "string", required: false, hint: "Cole aqui o 'Product Variant ID' completo do Shopify." }
-      - { label: "Schema JSON-LD (Avançado)", name: "schema", widget: "code", default_language: "json", output_code_only: true, hint: "CUIDADO: Cole APENAS o conteúdo de 'schema': { ... } do ficheiro antigo." }
+      # --- CORREÇÃO CRÍTICA (Problema 2) ---
+      # Oculto para parar de quebrar o painel. O Decap irá ler e preservar o seu schema, mas não tentará exibi-lo.
+      - { label: "Schema JSON-LD (Preservado)", name: "schema", widget: "hidden" }
+      # -------------------------------------
       - { label: "Conteúdo Principal (HTML/Markdown)", name: "body", widget: "markdown", hint: "O texto principal da página da receita vai aqui." }
 
   # --- 2.2 SOPAS FUNCIONAIS ---
   - name: "sopas"
     label: "🥣 Receitas - Sopas Funcionais"
     label_singular: "Sopa"
-    folder: "receitas/sopas-funcionais"
+    folder: "src/receitas/sopas-funcionais" # CORRIGIDO: Adicionado "src/"
     create: true
     slug: "{{slug}}"
-    # ============================================
-    # 🚀 A CORREÇÃO ESTÁ AQUI (PASSO 2)
-    # ============================================
-    extension: "html" # <--- Diz ao painel para LER e CRIAR ficheiros .html
-    # ============================================
+    extension: "html"
     format: "json-frontmatter"
     fields:
       - { label: "Layout (Automático)", name: "layout", widget: "hidden", default: "base.njk" }
@@ -133,21 +128,17 @@ collections:
       - { label: "Fato Citável (para IA)", name: "citable_fact", widget: "text" }
       - { label: "🛒 PREÇO (ex: 29.60)", name: "price", widget: "string", required: false, hint: "Use ponto, não vírgula." }
       - { label: "🔑 ID DO PRODUTO SHOPIFY", name: "shopify_id", widget: "string", required: false, hint: "Cole aqui o 'Product Variant ID' completo do Shopify." }
-      - { label: "Schema JSON-LD (Avançado)", name: "schema", widget: "code", default_language: "json", output_code_only: true, hint: "CUIDADO: Cole APENAS o conteúdo de 'schema': { ... } do ficheiro antigo." }
+      - { label: "Schema JSON-LD (Preservado)", name: "schema", widget: "hidden" } # CORRIGIDO
       - { label: "Conteúdo Principal (HTML/Markdown)", name: "body", widget: "markdown", hint: "O texto principal da página da receita vai aqui." }
 
   # --- 2.3 REFEIÇÕES INTEGRAIS ---
   - name: "refeicoes"
     label: "🍲 Receitas - Refeições Integrais"
     label_singular: "Refeição"
-    folder: "receitas/refeicoes-integrais"
+    folder: "src/receitas/refeicoes-integrais" # CORRIGIDO: Adicionado "src/"
     create: true
     slug: "{{slug}}"
-    # ============================================
-    # 🚀 A CORREÇÃO ESTÁ AQUI (PASSO 2)
-    # ============================================
-    extension: "html" # <--- Diz ao painel para LER e CRIAR ficheiros .html
-    # ============================================
+    extension: "html"
     format: "json-frontmatter"
     fields:
       - { label: "Layout (Automático)", name: "layout", widget: "hidden", default: "base.njk" }
@@ -159,21 +150,17 @@ collections:
       - { label: "Fato Citável (para IA)", name: "citable_fact", widget: "text" }
       - { label: "🛒 PREÇO (ex: 34.80)", name: "price", widget: "string", required: false, hint: "Use ponto, não vírgula." }
       - { label: "🔑 ID DO PRODUTO SHOPIFY", name: "shopify_id", widget: "string", required: false, hint: "Cole aqui o 'Product Variant ID' completo do Shopify." }
-      - { label: "Schema JSON-LD (Avançado)", name: "schema", widget: "code", default_language: "json", output_code_only: true, hint: "CUIDADO: Cole APENAS o conteúdo de 'schema': { ... } do ficheiro antigo." }
+      - { label: "Schema JSON-LD (Preservado)", name: "schema", widget: "hidden" } # CORRIGIDO
       - { label: "Conteúdo Principal (HTML/Markdown)", name: "body", widget: "markdown", hint: "O texto principal da página da receita vai aqui." }
 
   # --- 2.4 EMPÓRIO DA CHEF ---
   - name: "emporio"
     label: "🌶️ Receitas - Empório da Chef"
     label_singular: "Produto do Empório"
-    folder: "receitas/emporio-da-chef"
+    folder: "src/receitas/emporio-da-chef" # CORRIGIDO: Adicionado "src/"
     create: true
     slug: "{{slug}}"
-    # ============================================
-    # 🚀 A CORREÇÃO ESTÁ AQUI (PASSO 2)
-    # ============================================
-    extension: "html" # <--- Diz ao painel para LER e CRIAR ficheiros .html
-    # ============================================
+    extension: "html"
     format: "json-frontmatter"
     fields:
       - { label: "Layout (Automático)", name: "layout", widget: "hidden", default: "base.njk" }
@@ -185,17 +172,17 @@ collections:
       - { label: "Fato Citável (para IA)", name: "citable_fact", widget: "text" }
       - { label: "🛒 PREÇO (ex: 29.80)", name: "price", widget: "string", required: false, hint: "Use ponto, não vírgula." }
       - { label: "🔑 ID DO PRODUTO SHOPIFY", name: "shopify_id", widget: "string", required: false, hint: "Cole aqui o 'Product Variant ID' completo do Shopify." }
-      - { label: "Schema JSON-LD (Avançado)", name: "schema", widget: "code", default_language: "json", output_code_only: true, hint: "CUIDADO: Cole APENAS o conteúdo de 'schema': { ... } do ficheiro antigo." }
+      - { label: "Schema JSON-LD (Preservado)", name: "schema", widget: "hidden" } # CORRIGIDO
       - { label: "Conteúdo Principal (HTML/Markdown)", name: "body", widget: "markdown", hint: "O texto principal da página da receita vai aqui." }
 
-  # --- 3. BLOG (VERSÃO CORRIGIDA) ---
+  # --- 3. BLOG ---
   - name: "blog"
     label: "✍️ Blog da Chef"
     label_singular: "Artigo do Blog"
-    folder: "blog" # <-- A IA "ALUCINADA" ESQUECEU DESTE CAMPO OBRIGATÓRIO
+    folder: "src/blog" # CORRIGIDO: Adicionado "src/"
     create: true
     slug: "{{slug}}"
-    format: "yaml-frontmatter" # Blog é mais simples, pode ser YAML
+    format: "yaml-frontmatter"
     fields:
       - { label: "Layout (Automático)", name: "layout", widget: "hidden", default: "base.njk" }
       - { label: "Título do Artigo", name: "title", widget: "string" }
@@ -203,31 +190,30 @@ collections:
       - { label: "Imagem de Capa", name: "image", widget: "image" }
       - { label: "Conteúdo", name: "body", widget: "markdown" }
 
-  # --- 4. BAIRROS/LOCAIS (VERSÃO CORRIGIDA) ---
+  # --- 4. BAIRROS/LOCAIS ---
   - name: "locais"
     label: "📍 Bairros (para a pág. Onde Encontrar)"
     label_singular: "Bairro"
     description: "Adicione ou edite os BAIRROS INDIVIDUAIS..."
-    folder: "_data/bairros" # <-- A IA TAMBÉM ESQUECEU DESTE CAMPO
+    folder: "_data/bairros" # CORRETO: _data geralmente fica na raiz
     create: true
     format: "json" # Estes são ficheiros de DADOS, não páginas
     fields:
       - { label: "Nome do Bairro (ex: Asa Sul)", name: "nome", widget: "string" }
       - { label: "Região (ex: plano_piloto)", name: "regiao", widget: "string" }
       - { label: "Pontos de Venda", name: "pontos_venda", widget: "list", fields: [
-          { label: "Nome da Loja", name: "nome_loja", widget: "string" },
-          { label: "Endereço", name: "endereco", widget: "string" },
-          { label: "Link do Google Maps", name: "maps_link", widget: "string" }
-        ]}
+            { label: "Nome da Loja", name: "nome_loja", widget: "string" },
+            { label: "Endereço", name: "endereco", widget: "string" },
+            { label: "Link do Google Maps", name: "maps_link", widget: "string" }
+          ]}
 
-  # --- 5. CONFIGURAÇÕES GERAIS (VERSÃO CORRIGIDA) ---
+  # --- 5. CONFIGURAÇÕES GERAIS ---
   - name: "settings"
     label: "⚙️ Configurações Gerais do Site"
-    # Esta é uma coleção de 'files' (ficheiros únicos)
     files: 
       - label: "Dados Gerais (meta.json)"
         name: "meta"
-        file: "_data/meta.json"
+        file: "_data/meta.json" # CORRETO: _data geralmente fica na raiz
         fields:
           - { label: "Título Padrão do Site", name: "siteTitle", widget: "string" }
           - { label: "Descrição Padrão do Site", name: "siteDescription", widget: "string" }
