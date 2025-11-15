@@ -1,5 +1,5 @@
-# ==================================================================
-# PAINEL DE COMANDO v5.2 - VERSÃO CORRIGIDA (POR ARQUITETO CONSCIENTE)
+# ===================================================================
+# PAINEL DE COMANDO v5.2 - VERSÃO CORRIGIDA E VALIDADA
 # ===================================================================
 
 # --- Conexão e Configurações Base ---
@@ -91,7 +91,7 @@ collections:
     folder: "src/receitas/risotos" # CORRIGIDO: Adicionado "src/"
     create: true
     slug: "{{slug}}"
-    extension: "html" # Assumindo que os seus ficheiros são.html (processados pelo Eleventy)
+    extension: "html" # Assumindo que os seus ficheiros são .html (processados pelo Eleventy)
     format: "json-frontmatter" # Lê o bloco ---json {... } ---
     fields:
       - { label: "Layout (Automático)", name: "layout", widget: "hidden", default: "base.njk" }
