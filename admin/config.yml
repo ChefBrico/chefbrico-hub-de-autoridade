@@ -1,10 +1,9 @@
 # ===================================================================
-# PAINEL DE COMANDO v10.0 - A VERSÃO DO "MAPA INTELIGENTE"
+# PAINEL DE COMANDO v11.0 - A VERSÃO "FLEXÍVEL"
 # ===================================================================
-# 1. Exclui os ficheiros "index.html" das coleções de pastas
-#    para impedir que o leitor falhe.
-# 2. Cria uma nova coleção "Páginas de Índice" para
-#    permitir a edição desses ficheiros "index.html".
+# 1. Torna TODOS os campos (exceto o título) opcionais.
+# 2. Isto permite ao painel carregar ficheiros que AINDA NÃO TÊM
+#    campos como 'price' ou 'shopify_id', resolvendo o "Nenhuma Entrada".
 
 backend:
   name: git-gateway
@@ -28,11 +27,11 @@ collections:
         format: "json-frontmatter"
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
-          - { label: "Permalink", name: "permalink", widget: "string" }
-          - { label: "Título da Página", name: "title", widget: "string" }
-          - { label: "Descrição (SEO)", name: "description", widget: "text" }
-          - { label: "Schema (Oculto)", name: "schema", widget: "hidden" }
-          - { label: "Conteúdo da Página (HTML)", name: "body", widget: "markdown" }
+          - { label: "Permalink", name: "permalink", widget: "string", required: false }
+          - { label: "Título da Página", name: "title", widget: "string", required: false }
+          - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
+          - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
+          - { label: "Conteúdo da Página (HTML)", name: "body", widget: "markdown", required: false }
 
       - label: "Página 'ChefBox'"
         name: "chefbox"
@@ -40,11 +39,11 @@ collections:
         format: "json-frontmatter"
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
-          - { label: "Permalink", name: "permalink", widget: "string" }
-          - { label: "Título da Página", name: "title", widget: "string" }
-          - { label: "Descrição (SEO)", name: "description", widget: "text" }
-          - { label: "Schema (Oculto)", name: "schema", widget: "hidden" }
-          - { label: "Conteúdo da Página (HTML)", name: "body", widget: "markdown" }
+          - { label: "Permalink", name: "permalink", widget: "string", required: false }
+          - { label: "Título da Página", name: "title", widget: "string", required: false }
+          - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
+          - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
+          - { label: "Conteúdo da Página (HTML)", name: "body", widget: "markdown", required: false }
 
       - label: "Página 'Chefbrico Club'"
         name: "club"
@@ -52,11 +51,11 @@ collections:
         format: "json-frontmatter"
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
-          - { label: "Permalink", name: "permalink", widget: "string" }
-          - { label: "Título da Página", name: "title", widget: "string" }
-          - { label: "Descrição (SEO)", name: "description", widget: "text" }
-          - { label: "Schema (Oculto)", name: "schema", widget: "hidden" }
-          - { label: "Conteúdo da Página (HTML)", name: "body", widget: "markdown" }
+          - { label: "Permalink", name: "permalink", widget: "string", required: false }
+          - { label: "Título da Página", name: "title", widget: "string", required: false }
+          - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
+          - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
+          - { label: "Conteúdo da Página (HTML)", name: "body", widget: "markdown", required: false }
       
       - label: "Página de 'Perguntas Frequentes' (FAQ)"
         name: "faq"
@@ -64,11 +63,11 @@ collections:
         format: "json-frontmatter"
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
-          - { label: "Permalink", name: "permalink", widget: "string" }
-          - { label: "Título da Página", name: "title", widget: "string" }
-          - { label: "Descrição (SEO)", name: "description", widget: "text" }
-          - { label: "Schema (Oculto)", name: "schema", widget: "hidden" }
-          - { label: "Conteúdo da Página (HTML)", name: "body", widget: "markdown" }
+          - { label: "Permalink", name: "permalink", widget: "string", required: false }
+          - { label: "Título da Página", name: "title", widget: "string", required: false }
+          - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
+          - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
+          - { label: "Conteúdo da Página (HTML)", name: "body", widget: "markdown", required: false }
 
   # --- 2. PÁGINAS DE ÍNDICE (CATEGORIAS) ---
   - name: "paginas_de_indice"
@@ -80,11 +79,11 @@ collections:
         format: "json-frontmatter"
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
-          - { label: "Permalink", name: "permalink", widget: "string" }
-          - { label: "Título", name: "title", widget: "string" }
-          - { label: "Descrição (SEO)", name: "description", widget: "text" }
-          - { label: "Schema (Oculto)", name: "schema", widget: "hidden" }
-          - { label: "Conteúdo (Body)", name: "body", widget: "markdown" }
+          - { label: "Permalink", name: "permalink", widget: "string", required: false }
+          - { label: "Título", name: "title", widget: "string", required: false }
+          - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
+          - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
+          - { label: "Conteúdo (Body)", name: "body", widget: "markdown", required: false }
 
       - label: "Índice de 'Receitas' (Geral)"
         name: "idx_receitas"
@@ -92,11 +91,11 @@ collections:
         format: "json-frontmatter"
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
-          - { label: "Permalink", name: "permalink", widget: "string" }
-          - { label: "Título", name: "title", widget: "string" }
-          - { label: "Descrição (SEO)", name: "description", widget: "text" }
-          - { label: "Schema (Oculto)", name: "schema", widget: "hidden" }
-          - { label: "Conteúdo (Body)", name: "body", widget: "markdown" }
+          - { label: "Permalink", name: "permalink", widget: "string", required: false }
+          - { label: "Título", name: "title", widget: "string", required: false }
+          - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
+          - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
+          - { label: "Conteúdo (Body)", name: "body", widget: "markdown", required: false }
 
       - label: "Índice de 'Risotos'"
         name: "idx_risotos"
@@ -104,11 +103,11 @@ collections:
         format: "json-frontmatter"
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
-          - { label: "Permalink", name: "permalink", widget: "string" }
-          - { label: "Título", name: "title", widget: "string" }
-          - { label: "Descrição (SEO)", name: "description", widget: "text" }
-          - { label: "Schema (Oculto)", name: "schema", widget: "hidden" }
-          - { label: "Conteúdo (Body)", name: "body", widget: "markdown" }
+          - { label: "Permalink", name: "permalink", widget: "string", required: false }
+          - { label: "Título", name: "title", widget: "string", required: false }
+          - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
+          - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
+          - { label: "Conteúdo (Body)", name: "body", widget: "markdown", required: false }
 
       - label: "Índice de 'Sopas'"
         name: "idx_sopas"
@@ -116,11 +115,11 @@ collections:
         format: "json-frontmatter"
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
-          - { label: "Permalink", name: "permalink", widget: "string" }
-          - { label: "Título", name: "title", widget: "string" }
-          - { label: "Descrição (SEO)", name: "description", widget: "text" }
-          - { label: "Schema (Oculto)", name: "schema", widget: "hidden" }
-          - { label: "Conteúdo (Body)", name: "body", widget: "markdown" }
+          - { label: "Permalink", name: "permalink", widget: "string", required: false }
+          - { label: "Título", name: "title", widget: "string", required: false }
+          - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
+          - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
+          - { label: "Conteúdo (Body)", name: "body", widget: "markdown", required: false }
 
       - label: "Índice de 'Refeições'"
         name: "idx_refeicoes"
@@ -128,11 +127,11 @@ collections:
         format: "json-frontmatter"
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
-          - { label: "Permalink", name: "permalink", widget: "string" }
-          - { label: "Título", name: "title", widget: "string" }
-          - { label: "Descrição (SEO)", name: "description", widget: "text" }
-          - { label: "Schema (Oculto)", name: "schema", widget: "hidden" }
-          - { label: "Conteúdo (Body)", name: "body", widget: "markdown" }
+          - { label: "Permalink", name: "permalink", widget: "string", required: false }
+          - { label: "Título", name: "title", widget: "string", required: false }
+          - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
+          - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
+          - { label: "Conteúdo (Body)", name: "body", widget: "markdown", required: false }
 
       - label: "Índice de 'Empório'"
         name: "idx_emporio"
@@ -140,11 +139,11 @@ collections:
         format: "json-frontmatter"
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
-          - { label: "Permalink", name: "permalink", widget: "string" }
-          - { label: "Título", name: "title", widget: "string" }
-          - { label: "Descrição (SEO)", name: "description", widget: "text" }
-          - { label: "Schema (Oculto)", name: "schema", widget: "hidden" }
-          - { label: "Conteúdo (Body)", name: "body", widget: "markdown" }
+          - { label: "Permalink", name: "permalink", widget: "string", required: false }
+          - { label: "Título", name: "title", widget: "string", required: false }
+          - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
+          - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
+          - { label: "Conteúdo (Body)", name: "body", widget: "markdown", required: false }
 
       - label: "Índice de 'Onde Encontrar'"
         name: "idx_onde_encontrar"
@@ -152,144 +151,141 @@ collections:
         format: "json-frontmatter"
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
-          - { label: "Permalink", name: "permalink", widget: "string" }
-          - { label: "Título", name: "title", widget: "string" }
-          - { label: "Descrição (SEO)", name: "description", widget: "text" }
-          - { label: "Schema (Oculto)", name: "schema", widget: "hidden" }
-          - { label: "Conteúdo (Body)", name: "body", widget: "markdown" }
+          - { label: "Permalink", name: "permalink", widget: "string", required: false }
+          - { label: "Título", name: "title", widget: "string", required: false }
+          - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
+          - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
+          - { label: "Conteúdo (Body)", name: "body", widget: "markdown", required: false }
 
   # --- 3. COLEÇÕES DE ITENS (PASTAS .HTML) ---
   - name: "comida_de_verdade_itens"
     label: "🥗 Itens 'Comida de Verdade'"
     folder: "src/comida-de-verdade"
-    exclude: "index.html" # <-- A CORREÇÃO MÁGICA
+    exclude: "index.html"
     extension: "html"
     format: "json-frontmatter"
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
-      - { label: "Permalink", name: "permalink", widget: "string" }
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Descrição (SEO)", name: "description", widget: "text" }
-      - { label: "Schema (Oculto)", name: "schema", widget: "hidden" }
-      - { label: "Conteúdo (Body)", name: "body", widget: "markdown" }
+      - { label: "Permalink", name: "permalink", widget: "string", required: false }
+      - { label: "Título", name: "title", widget: "string" } # Título é o único que deve ser obrigatório
+      - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
+      - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
+      - { label: "Conteúdo (Body)", name: "body", widget: "markdown", required: false }
 
   - name: "risotos"
     label: "🍳 Receitas - Risotos"
     folder: "src/receitas/risotos"
-    exclude: "index.html" # <-- A CORREÇÃO MÁGICA
+    exclude: "index.html"
     extension: "html"
     format: "json-frontmatter"
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
-      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Permalink", name: "permalink", widget: "string", required: false }
       - { label: "Título", name: "title", widget: "string" }
-      - { label: "Descrição (SEO)", name: "description", widget: "text" }
+      - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
       - { label: "Preço", name: "price", widget: "string", required: false }
       - { label: "ID Shopify", name: "shopify_id", widget: "string", required: false }
-      - { label: "Schema (Oculto)", name: "schema", widget: "hidden" }
-      - { label: "Conteúdo (Body)", name: "body", widget: "markdown" }
+      - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
+      - { label: "Conteúdo (Body)", name: "body", widget: "markdown", required: false }
 
   - name: "sopas"
     label: "🥣 Receitas - Sopas Funcionais"
     folder: "src/receitas/sopas-funcionais"
-    exclude: "index.html" # <-- A CORREÇÃO MÁGICA
+    exclude: "index.html"
     extension: "html"
     format: "json-frontmatter"
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
-      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Permalink", name: "permalink", widget: "string", required: false }
       - { label: "Título", name: "title", widget: "string" }
-      - { label: "Descrição (SEO)", name: "description", widget: "text" }
+      - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
       - { label: "Preço", name: "price", widget: "string", required: false }
       - { label: "ID Shopify", name: "shopify_id", widget: "string", required: false }
-      - { label: "Schema (Oculto)", name: "schema", widget: "hidden" }
-      - { label: "Conteúdo (Body)", name: "body", widget: "markdown" }
+      - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
+      - { label: "Conteúdo (Body)", name: "body", widget: "markdown", required: false }
 
   - name: "refeicoes"
     label: "🍲 Receitas - Refeições Integrais"
     folder: "src/receitas/refeicoes-integrais"
-    exclude: "index.html" # <-- A CORREÇÃO MÁGICA
+    exclude: "index.html"
     extension: "html"
     format: "json-frontmatter"
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
-      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Permalink", name: "permalink", widget: "string", required: false }
       - { label: "Título", name: "title", widget: "string" }
-      - { label: "Descrição (SEO)", name: "description", widget: "text" }
+      - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
       - { label: "Preço", name: "price", widget: "string", required: false }
       - { label: "ID Shopify", name: "shopify_id", widget: "string", required: false }
-      - { label: "Schema (Oculto)", name: "schema", widget: "hidden" }
-      - { label: "Conteúdo (Body)", name: "body", widget: "markdown" }
+      - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
+      - { label: "Conteúdo (Body)", name: "body", widget: "markdown", required: false }
 
   - name: "emporio"
     label: "🌶️ Receitas - Empório da Chef"
     folder: "src/receitas/emporio-da-chef"
-    exclude: "index.html" # <-- A CORREÇÃO MÁGICA
+    exclude: "index.html"
     extension: "html"
     format: "json-frontmatter"
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
-      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Permalink", name: "permalink", widget: "string", required: false }
       - { label: "Título", name: "title", widget: "string" }
-      - { label: "Descrição (SEO)", name: "description", widget: "text" }
+      - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
       - { label: "Preço", name: "price", widget: "string", required: false }
       - { label: "ID Shopify", name: "shopify_id", widget: "string", required: false }
-      - { label: "Schema (Oculto)", name: "schema", widget: "hidden" }
-      - { label: "Conteúdo (Body)", name: "body", widget: "markdown" }
+      - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
+      - { label: "Conteúdo (Body)", name: "body", widget: "markdown", required: false }
 
   - name: "solucoes"
     label: "🎯 Receitas - Soluções"
     folder: "src/receitas/solucoes"
-    # Não precisa de "exclude" (não tem index.html na pasta)
     extension: "html"
     format: "json-frontmatter"
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
-      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Permalink", name: "permalink", widget: "string", required: false }
       - { label: "Título", name: "title", widget: "string" }
-      - { label: "Descrição (SEO)", name: "description", widget: "text" }
+      - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
       - { label: "Preço", name: "price", widget: "string", required: false }
       - { label: "ID Shopify", name: "shopify_id", widget: "string", required: false }
-      - { label: "Schema (Oculto)", name: "schema", widget: "hidden" }
-      - { label: "Conteúdo (Body)", name: "body", widget: "markdown" }
+      - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
+      - { label: "Conteúdo (Body)", name: "body", widget: "markdown", required: false }
 
   - name: "blog"
     label: "✍️ Blog da Chef"
     folder: "src/blog"
-    # Não precisa de "exclude" (não tem index.html na pasta)
     extension: "html"
     format: "json-frontmatter"
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
-      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Permalink", name: "permalink", widget: "string", required: false }
       - { label: "Título", name: "title", widget: "string" }
-      - { label: "Descrição (SEO)", name: "description", widget: "text" }
-      - { label: "Schema (Oculto)", name: "schema", widget: "hidden" }
-      - { label: "Conteúdo (Body)", name: "body", widget: "markdown" }
+      - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
+      - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
+      - { label: "Conteúdo (Body)", name: "body", widget: "markdown", required: false }
 
   - name: "bairros"
     label: "📍 Páginas Onde Encontrar"
     folder: "src/onde-encontrar"
-    exclude: "index.html" # <-- A CORREÇÃO MÁGICA
+    exclude: "index.html"
     extension: "html"
     format: "json-frontmatter"
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
-      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Permalink", name: "permalink", widget: "string", required: false }
       - { label: "Título", name: "title", widget: "string" }
-      - { label: "Descrição (SEO)", name: "description", widget: "text" }
-      - { label: "Schema (Oculto)", name: "schema", widget: "hidden" }
-      - { label: "Conteúdo (Body)", name: "body", widget: "markdown" }
+      - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
+      - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
+      - { label: "Conteúdo (Body)", name: "body", widget: "markdown", required: false }
 
   - name: "fragmentos"
     label: "🧩 Fragmentos de Conteúdo (IA)"
     folder: "src/fragmentos"
-    # Não precisa de "exclude" (não tem index.html na pasta)
     extension: "md"
     format: "yaml-frontmatter"
     fields:
       - { label: "Título (Uso Interno)", name: "title", widget: "string" }
-      - { label: "Conteúdo (Markdown)", name: "body", widget: "markdown" }
+      - { label: "Conteúdo (Markdown)", name: "body", widget: "markdown", required: false }
 
   # --- 4. CONFIGURAÇÕES GERAIS ---
   - name: "settings"
@@ -300,6 +296,6 @@ collections:
         file: "_data/meta.json"
         format: "json"
         fields:
-          - { label: "Título Padrão do Site", name: "siteTitle", widget: "string" }
-          - { label: "Descrição Padrão do Site", name: "siteDescription", widget: "string" }
-          - { label: "URL Principal", name: "siteUrl", widget: "string" }
+          - { label: "Título Padrão do Site", name: "siteTitle", widget: "string", required: false }
+          - { label: "Descrição Padrão do Site", name: "siteDescription", widget: "string", required: false }
+          - { label: "URL Principal", name: "siteUrl", widget: "string", required: false }
