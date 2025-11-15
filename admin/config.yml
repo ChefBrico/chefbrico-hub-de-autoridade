@@ -1,16 +1,14 @@
 # ===================================================================
-# PAINEL DE COMANDO v13.0 - O "MAPA REAL"
+# PAINEL DE COMANDO v14.0 - A CORREÇÃO DO "CONFLITO DO BODY"
 # ===================================================================
-# 1. Remove a "alucinação" do "src/".
-# 2. CORRIGE a "alucinação" do "imagens/uploads" para "imagens".
-# 3. Mantém a lógica de separar os "index.html" (v10.0).
-# 4. Mantém a lógica "flexível" (required: false) (v11.0).
+# 1. REMOVE a definição manual de "body" de todas as coleções
+#    de frontmatter, o que estava a quebrar o parser (leitor) do JSON.
 
 backend:
   name: git-gateway
   branch: desenvolvimento
-media_folder: "imagens" # CORRIGIDO: Com base no seu feedback
-public_folder: "/imagens" # CORRIGIDO: Com base no seu feedback
+media_folder: "imagens"
+public_folder: "/imagens"
 locale: 'pt'
 publish_mode: editorial_workflow
 
@@ -32,7 +30,7 @@ collections:
           - { label: "Título da Página", name: "title", widget: "string", required: false }
           - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
           - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-          - { label: "Conteúdo da Página (HTML)", name: "body", widget: "markdown", required: false }
+          # O "body" é automático (implícito) para json-frontmatter
 
       - label: "Página 'ChefBox'"
         name: "chefbox"
@@ -44,7 +42,6 @@ collections:
           - { label: "Título da Página", name: "title", widget: "string", required: false }
           - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
           - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-          - { label: "Conteúdo da Página (HTML)", name: "body", widget: "markdown", required: false }
 
       - label: "Página 'Chefbrico Club'"
         name: "club"
@@ -56,7 +53,6 @@ collections:
           - { label: "Título da Página", name: "title", widget: "string", required: false }
           - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
           - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-          - { label: "Conteúdo da Página (HTML)", name: "body", widget: "markdown", required: false }
       
       - label: "Página de 'Perguntas Frequentes' (FAQ)"
         name: "faq"
@@ -68,7 +64,6 @@ collections:
           - { label: "Título da Página", name: "title", widget: "string", required: false }
           - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
           - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-          - { label: "Conteúdo da Página (HTML)", name: "body", widget: "markdown", required: false }
 
   # --- 2. PÁGINAS DE ÍNDICE (CATEGORIAS) ---
   - name: "paginas_de_indice"
@@ -84,7 +79,6 @@ collections:
           - { label: "Título", name: "title", widget: "string", required: false }
           - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
           - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-          - { label: "Conteúdo (Body)", name: "body", widget: "markdown", required: false }
 
       - label: "Índice de 'Receitas' (Geral)"
         name: "idx_receitas"
@@ -96,7 +90,6 @@ collections:
           - { label: "Título", name: "title", widget: "string", required: false }
           - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
           - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-          - { label: "Conteúdo (Body)", name: "body", widget: "markdown", required: false }
 
       - label: "Índice de 'Risotos'"
         name: "idx_risotos"
@@ -108,7 +101,6 @@ collections:
           - { label: "Título", name: "title", widget: "string", required: false }
           - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
           - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-          - { label: "Conteúdo (Body)", name: "body", widget: "markdown", required: false }
 
       - label: "Índice de 'Sopas'"
         name: "idx_sopas"
@@ -120,7 +112,6 @@ collections:
           - { label: "Título", name: "title", widget: "string", required: false }
           - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
           - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-          - { label: "Conteúdo (Body)", name: "body", widget: "markdown", required: false }
 
       - label: "Índice de 'Refeições'"
         name: "idx_refeicoes"
@@ -132,7 +123,6 @@ collections:
           - { label: "Título", name: "title", widget: "string", required: false }
           - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
           - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-          - { label: "Conteúdo (Body)", name: "body", widget: "markdown", required: false }
 
       - label: "Índice de 'Empório'"
         name: "idx_emporio"
@@ -144,7 +134,6 @@ collections:
           - { label: "Título", name: "title", widget: "string", required: false }
           - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
           - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-          - { label: "Conteúdo (Body)", name: "body", widget: "markdown", required: false }
 
       - label: "Índice de 'Onde Encontrar'"
         name: "idx_onde_encontrar"
@@ -156,7 +145,6 @@ collections:
           - { label: "Título", name: "title", widget: "string", required: false }
           - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
           - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-          - { label: "Conteúdo (Body)", name: "body", widget: "markdown", required: false }
 
   # --- 3. COLEÇÕES DE ITENS (PASTAS .HTML) ---
   - name: "comida_de_verdade_itens"
@@ -171,7 +159,6 @@ collections:
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
       - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-      - { label: "Conteúdo (Body)", name: "body", widget: "markdown", required: false }
 
   - name: "risotos"
     label: "🍳 Receitas - Risotos"
@@ -187,7 +174,6 @@ collections:
       - { label: "Preço", name: "price", widget: "string", required: false }
       - { label: "ID Shopify", name: "shopify_id", widget: "string", required: false }
       - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-      - { label: "Conteúdo (Body)", name: "body", widget: "markdown", required: false }
 
   - name: "sopas"
     label: "🥣 Receitas - Sopas Funcionais"
@@ -203,7 +189,6 @@ collections:
       - { label: "Preço", name: "price", widget: "string", required: false }
       - { label: "ID Shopify", name: "shopify_id", widget: "string", required: false }
       - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-      - { label: "Conteúdo (Body)", name: "body", widget: "markdown", required: false }
 
   - name: "refeicoes"
     label: "🍲 Receitas - Refeições Integrais"
@@ -219,7 +204,6 @@ collections:
       - { label: "Preço", name: "price", widget: "string", required: false }
       - { label: "ID Shopify", name: "shopify_id", widget: "string", required: false }
       - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-      - { label: "Conteúdo (Body)", name: "body", widget: "markdown", required: false }
 
   - name: "emporio"
     label: "🌶️ Receitas - Empório da Chef"
@@ -235,7 +219,6 @@ collections:
       - { label: "Preço", name: "price", widget: "string", required: false }
       - { label: "ID Shopify", name: "shopify_id", widget: "string", required: false }
       - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-      - { label: "Conteúdo (Body)", name: "body", widget: "markdown", required: false }
 
   - name: "solucoes"
     label: "🎯 Receitas - Soluções"
@@ -250,7 +233,6 @@ collections:
       - { label: "Preço", name: "price", widget: "string", required: false }
       - { label: "ID Shopify", name: "shopify_id", widget: "string", required: false }
       - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-      - { label: "Conteúdo (Body)", name: "body", widget: "markdown", required: false }
 
   - name: "blog"
     label: "✍️ Blog da Chef"
@@ -263,7 +245,6 @@ collections:
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
       - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-      - { label: "Conteúdo (Body)", name: "body", widget: "markdown", required: false }
 
   - name: "bairros"
     label: "📍 Páginas Onde Encontrar"
@@ -277,7 +258,6 @@ collections:
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
       - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-      - { label: "Conteúdo (Body)", name: "body", widget: "markdown", required: false }
 
   - name: "fragmentos"
     label: "🧩 Fragmentos de Conteúdo (IA)"
@@ -286,7 +266,7 @@ collections:
     format: "yaml-frontmatter"
     fields:
       - { label: "Título (Uso Interno)", name: "title", widget: "string" }
-      - { label: "Conteúdo (Markdown)", name: "body", widget: "markdown", required: false }
+      # O "body" também é implícito para yaml-frontmatter
 
   # --- 4. CONFIGURAÇÕES GERAIS ---
   - name: "settings"
