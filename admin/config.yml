@@ -1,15 +1,16 @@
 # ===================================================================
-# PAINEL DE COMANDO v12.0 - O FIM DA "ALUCINAÇÃO SRC/"
+# PAINEL DE COMANDO v13.0 - O "MAPA REAL"
 # ===================================================================
-# 1. REMOVE todas as menções à pasta "src/" (que não existe).
-# 2. Aponta para os caminhos corretos na RAIZ do projeto.
-# 3. Mantém a lógica "flexível" (required: false) do v11.0.
+# 1. Remove a "alucinação" do "src/".
+# 2. CORRIGE a "alucinação" do "imagens/uploads" para "imagens".
+# 3. Mantém a lógica de separar os "index.html" (v10.0).
+# 4. Mantém a lógica "flexível" (required: false) (v11.0).
 
 backend:
   name: git-gateway
   branch: desenvolvimento
-media_folder: "imagens/uploads" # CORRIGIDO: Sem "src/"
-public_folder: "/imagens/uploads"
+media_folder: "imagens" # CORRIGIDO: Com base no seu feedback
+public_folder: "/imagens" # CORRIGIDO: Com base no seu feedback
 locale: 'pt'
 publish_mode: editorial_workflow
 
@@ -23,7 +24,7 @@ collections:
     files:
       - label: "Página Inicial (Home)"
         name: "home"
-        file: "index.html" # CORRIGIDO: Sem "src/"
+        file: "index.html"
         format: "json-frontmatter"
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
@@ -35,7 +36,7 @@ collections:
 
       - label: "Página 'ChefBox'"
         name: "chefbox"
-        file: "chefbox/index.html" # CORRIGIDO: Sem "src/"
+        file: "chefbox/index.html"
         format: "json-frontmatter"
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
@@ -47,7 +48,7 @@ collections:
 
       - label: "Página 'Chefbrico Club'"
         name: "club"
-        file: "clube/index.html" # CORRIGIDO: Sem "src/"
+        file: "clube/index.html"
         format: "json-frontmatter"
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
@@ -59,7 +60,7 @@ collections:
       
       - label: "Página de 'Perguntas Frequentes' (FAQ)"
         name: "faq"
-        file: "faq/faq.html" # CORRIGIDO: Sem "src/"
+        file: "faq/faq.html"
         format: "json-frontmatter"
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
@@ -75,7 +76,7 @@ collections:
     files:
       - label: "Índice de 'Comida de Verdade'"
         name: "idx_comida"
-        file: "comida-de-verdade/index.html" # CORRIGIDO: Sem "src/"
+        file: "comida-de-verdade/index.html"
         format: "json-frontmatter"
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
@@ -87,7 +88,7 @@ collections:
 
       - label: "Índice de 'Receitas' (Geral)"
         name: "idx_receitas"
-        file: "receitas/index.html" # CORRIGIDO: Sem "src/"
+        file: "receitas/index.html"
         format: "json-frontmatter"
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
@@ -99,7 +100,7 @@ collections:
 
       - label: "Índice de 'Risotos'"
         name: "idx_risotos"
-        file: "receitas/risotos/index.html" # CORRIGIDO: Sem "src/"
+        file: "receitas/risotos/index.html"
         format: "json-frontmatter"
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
@@ -111,7 +112,7 @@ collections:
 
       - label: "Índice de 'Sopas'"
         name: "idx_sopas"
-        file: "receitas/sopas-funcionais/index.html" # CORRIGIDO: Sem "src/"
+        file: "receitas/sopas-funcionais/index.html"
         format: "json-frontmatter"
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
@@ -123,7 +124,7 @@ collections:
 
       - label: "Índice de 'Refeições'"
         name: "idx_refeicoes"
-        file: "receitas/refeicoes-integrais/index.html" # CORRIGIDO: Sem "src/"
+        file: "receitas/refeicoes-integrais/index.html"
         format: "json-frontmatter"
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
@@ -135,7 +136,7 @@ collections:
 
       - label: "Índice de 'Empório'"
         name: "idx_emporio"
-        file: "receitas/emporio-da-chef/index.html" # CORRIGIDO: Sem "src/"
+        file: "receitas/emporio-da-chef/index.html"
         format: "json-frontmatter"
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
@@ -147,7 +148,7 @@ collections:
 
       - label: "Índice de 'Onde Encontrar'"
         name: "idx_onde_encontrar"
-        file: "onde-encontrar/index.html" # CORRIGIDO: Sem "src/"
+        file: "onde-encontrar/index.html"
         format: "json-frontmatter"
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
@@ -160,7 +161,7 @@ collections:
   # --- 3. COLEÇÕES DE ITENS (PASTAS .HTML) ---
   - name: "comida_de_verdade_itens"
     label: "🥗 Itens 'Comida de Verdade'"
-    folder: "comida-de-verdade" # CORRIGIDO: Sem "src/"
+    folder: "comida-de-verdade"
     exclude: "index.html"
     extension: "html"
     format: "json-frontmatter"
@@ -174,7 +175,7 @@ collections:
 
   - name: "risotos"
     label: "🍳 Receitas - Risotos"
-    folder: "receitas/risotos" # CORRIGIDO: Sem "src/"
+    folder: "receitas/risotos"
     exclude: "index.html"
     extension: "html"
     format: "json-frontmatter"
@@ -190,7 +191,7 @@ collections:
 
   - name: "sopas"
     label: "🥣 Receitas - Sopas Funcionais"
-    folder: "receitas/sopas-funcionais" # CORRIGIDO: Sem "src/"
+    folder: "receitas/sopas-funcionais"
     exclude: "index.html"
     extension: "html"
     format: "json-frontmatter"
@@ -206,7 +207,7 @@ collections:
 
   - name: "refeicoes"
     label: "🍲 Receitas - Refeições Integrais"
-    folder: "receitas/refeicoes-integrais" # CORRIGIDO: Sem "src/"
+    folder: "receitas/refeicoes-integrais"
     exclude: "index.html"
     extension: "html"
     format: "json-frontmatter"
@@ -222,7 +223,7 @@ collections:
 
   - name: "emporio"
     label: "🌶️ Receitas - Empório da Chef"
-    folder: "receitas/emporio-da-chef" # CORRIGIDO: Sem "src/"
+    folder: "receitas/emporio-da-chef"
     exclude: "index.html"
     extension: "html"
     format: "json-frontmatter"
@@ -238,7 +239,7 @@ collections:
 
   - name: "solucoes"
     label: "🎯 Receitas - Soluções"
-    folder: "receitas/solucoes" # CORRIGIDO: Sem "src/"
+    folder: "receitas/solucoes"
     extension: "html"
     format: "json-frontmatter"
     fields:
@@ -253,7 +254,7 @@ collections:
 
   - name: "blog"
     label: "✍️ Blog da Chef"
-    folder: "blog" # CORRIGIDO: Sem "src/"
+    folder: "blog"
     extension: "html"
     format: "json-frontmatter"
     fields:
@@ -266,7 +267,7 @@ collections:
 
   - name: "bairros"
     label: "📍 Páginas Onde Encontrar"
-    folder: "onde-encontrar" # CORRIGIDO: Sem "src/"
+    folder: "onde-encontrar"
     exclude: "index.html"
     extension: "html"
     format: "json-frontmatter"
@@ -280,7 +281,7 @@ collections:
 
   - name: "fragmentos"
     label: "🧩 Fragmentos de Conteúdo (IA)"
-    folder: "fragmentos" # CORRIGIDO: Sem "src/"
+    folder: "fragmentos"
     extension: "md"
     format: "yaml-frontmatter"
     fields:
@@ -293,7 +294,7 @@ collections:
     files: 
       - label: "Dados Gerais (meta.json)"
         name: "meta"
-        file: "_data/meta.json" # Este estava correto (na raiz)
+        file: "_data/meta.json"
         format: "json"
         fields:
           - { label: "Título Padrão do Site", name: "siteTitle", widget: "string", required: false }
