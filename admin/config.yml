@@ -1,12 +1,14 @@
 # ===================================================================
-# PAINEL DE COMANDO v5.2 - VERSÃO CORRIGIDA E VALIDADA
+# PAINEL DE COMANDO v9.0 - A VERSÃO DOS "FACTOS" (SEM ALUCINAÇÕES)
 # ===================================================================
+# Esta config espelha 100% a estrutura de ficheiros (.html) e
+# campos (layout, permalink, title, etc.) provada pelos seus
+# screenshots e exemplos de código.
 
-# --- Conexão e Configurações Base ---
 backend:
   name: git-gateway
-  branch: desenvolvimento # Garanta que este é o branch correto no GitHub
-media_folder: "src/imagens/uploads" # CORRIGIDO: Adicionado "src/"
+  branch: desenvolvimento
+media_folder: "src/imagens/uploads"
 public_folder: "/imagens/uploads"
 locale: 'pt'
 publish_mode: editorial_workflow
@@ -15,206 +17,217 @@ publish_mode: editorial_workflow
 # COLEÇÕES DE CONTEÚDO
 # ===================================================================
 collections:
-  # --- 1. PÁGINAS PRINCIPAIS ---
-  - name: "paginas"
-    label: "📄 Páginas Principais do Site"
-    description: "Altere aqui os textos das páginas mais importantes como a Página Inicial, ChefBox, FAQ, etc."
+  # --- 1. PÁGINAS PRINCIPAIS (FICHEIROS ÚNICOS) ---
+  # Estes são os ficheiros .html únicos na raiz ou em pastas próprias.
+  - name: "paginas_unicas"
+    label: "📄 Páginas Principais (Home, Chefbox, etc.)"
     files:
-      - label: "Página Inicial"
+      - label: "Página Inicial (Home)"
         name: "home"
-        file: "src/index.html" # CORRIGIDO: Adicionado "src/"
+        file: "src/index.html"
+        format: "json-frontmatter"
         fields:
-          - { label: "Secção Topo - Título", name: "hero_titulo", widget: "string" }
-          - { label: "Secção Topo - Subtítulo", name: "hero_subtitulo", widget: "text" }
-          - { label: "Secção Catálogo - Título", name: "catalogo_titulo", widget: "string", default: "Nosso Catálogo Inteligente" }
-          - { label: "Secção Catálogo - Subtítulo", name: "catalogo_subtitulo", widget: "text" }
-          - { label: "Secção Novidades - Título", name: "novidades_titulo", widget: "string", default: "Novidades na Revista" }
-
-      - label: "Página 'Comida de Verdade' (Sobre)"
-        name: "sobre"
-        file: "src/comida-de-verdade/index.html" # CORRIGIDO: Adicionado "src/"
-        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
+          - { label: "Permalink", name: "permalink", widget: "string" }
           - { label: "Título da Página", name: "title", widget: "string" }
-          - { label: "Conteúdo da Página", name: "body", widget: "markdown" }
+          - { label: "Descrição (SEO)", name: "description", widget: "text" }
+          - { label: "Schema (Oculto)", name: "schema", widget: "hidden" }
+          - { label: "Conteúdo da Página (HTML)", name: "body", widget: "markdown" }
 
       - label: "Página 'ChefBox'"
         name: "chefbox"
-        file: "src/chefbox/index.html" # CORRIGIDO: Adicionado "src/"
+        file: "src/chefbox/index.html"
+        format: "json-frontmatter"
         fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
+          - { label: "Permalink", name: "permalink", widget: "string" }
           - { label: "Título da Página", name: "title", widget: "string" }
-          - { label: "Conteúdo da Página", name: "body", widget: "markdown" }
+          - { label: "Descrição (SEO)", name: "description", widget: "text" }
+          - { label: "Schema (Oculto)", name: "schema", widget: "hidden" }
+          - { label: "Conteúdo da Página (HTML)", name: "body", widget: "markdown" }
 
       - label: "Página 'Chefbrico Club'"
         name: "club"
-        file: "src/clube/index.html" # CORRIGIDO: Adicionado "src/"
+        file: "src/clube/index.html"
+        format: "json-frontmatter"
         fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
+          - { label: "Permalink", name: "permalink", widget: "string" }
           - { label: "Título da Página", name: "title", widget: "string" }
-          - { label: "Conteúdo da Página", name: "body", widget: "markdown" }
-
-      - label: "Página 'Onde Encontrar' (Textos e Títulos)"
-        name: "onde_encontrar_main"
-        file: "src/onde-encontrar/index.html" # CORRIGIDO: Adicionado "src/"
-        fields:
-          - { label: "Título Principal da Página", name: "title", widget: "string" }
-          - { label: "Título da Secção 'Plano Piloto'", name: "titulo_plano_piloto", widget: "string" }
-          - { label: "Título da Secção 'Brasília'", name: "titulo_brasilia", widget: "string" }
-          - { label: "Título da Secção 'Próximo a Brasília'", name: "titulo_proximo", widget: "string" }
-          - { label: "Texto Final (Pontos de Referência)", name: "texto_final", widget: "text" }
+          - { label: "Descrição (SEO)", name: "description", widget: "text" }
+          - { label: "Schema (Oculto)", name: "schema", widget: "hidden" }
+          - { label: "Conteúdo da Página (HTML)", name: "body", widget: "markdown" }
       
       - label: "Página de 'Perguntas Frequentes' (FAQ)"
         name: "faq"
-        file: "src/faq/index.html" # CORRIGIDO: Adicionado "src/"
+        file: "src/faq/faq.html" # Baseado no screenshot
+        format: "json-frontmatter"
         fields:
-          - { label: "Título da Página", name: "title", widget: "string", default: "Perguntas Frequentes" }
-          - { label: "Subtítulo da Página", name: "subtitle", widget: "text" }
-          - label: "Grupo de Perguntas: 'Porque Comprar da ChefBrico'"
-            name: "faq_grupo_1"
-            widget: "list"
-            fields:
-              - { label: "Pergunta", name: "pergunta", widget: "string" }
-              - { label: "Resposta", name: "resposta", widget: "markdown" }
-          - label: "Grupo de Perguntas: 'Como Comprar na Loja ChefBrico'"
-            name: "faq_grupo_2"
-            widget: "list"
-            fields:
-              - { label: "Pergunta", name: "pergunta", widget: "string" }
-              - { label: "Resposta", name: "resposta", widget: "markdown" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
+          - { label: "Permalink", name: "permalink", widget: "string" }
+          - { label: "Título da Página", name: "title", widget: "string" }
+          - { label: "Descrição (SEO)", name: "description", widget: "text" }
+          - { label: "Schema (Oculto)", name: "schema", widget: "hidden" }
+          - { label: "Conteúdo da Página (HTML)", name: "body", widget: "markdown" }
 
-  # ===================================================================
-  # --- 2. COLEÇÕES DE RECEITAS (CAMINHOS E SCHEMA CORRIGIDOS) ---
-  # ===================================================================
+  # --- 2. COLEÇÃO "COMIDA DE VERDADE" (PASTA .HTML) ---
+  - name: "comida_de_verdade"
+    label: "🥗 Páginas 'Comida de Verdade'"
+    label_singular: "Página 'Comida de Verdade'"
+    folder: "src/comida-de-verdade"
+    create: true
+    slug: "{{slug}}"
+    extension: "html"
+    format: "json-frontmatter"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Título da Página", name: "title", widget: "string" }
+      - { label: "Descrição (SEO)", name: "description", widget: "text" }
+      - { label: "Schema (Oculto)", name: "schema", widget: "hidden" }
+      - { label: "Conteúdo da Página (HTML)", name: "body", widget: "markdown" }
 
-  # --- 2.1 RISOTOS ---
+  # --- 3. COLEÇÕES DE RECEITAS (PASTAS .HTML) ---
   - name: "risotos"
     label: "🍳 Receitas - Risotos"
     label_singular: "Risoto"
-    folder: "src/receitas/risotos" # CORRIGIDO: Adicionado "src/"
+    folder: "src/receitas/risotos"
     create: true
     slug: "{{slug}}"
-    extension: "html" # Assumindo que os seus ficheiros são .html (processados pelo Eleventy)
-    format: "json-frontmatter" # Lê o bloco ---json {... } ---
+    extension: "html"
+    format: "json-frontmatter"
     fields:
-      - { label: "Layout (Automático)", name: "layout", widget: "hidden", default: "base.njk" }
-      - { label: "Permalink (URL Automático)", name: "permalink", widget: "hidden", hint: "Ex: /receitas/risotos/{{slug}}/" }
-      - { label: "Título da Receita (O H1)", name: "title", widget: "string", required: true }
-      - { label: "Descrição Curta (para Google/IA)", name: "description", widget: "text", required: true }
-      - { label: "Nome do Autor", name: "author_name", widget: "string", default: "Maria Conceição" }
-      - { label: "Título do Autor", name: "author_title", widget: "string", default: "Fundadora e Chef de Criação da ChefBrico" }
-      - { label: "Fato Citável (para IA)", name: "citable_fact", widget: "text" }
-      - { label: "🛒 PREÇO (ex: 34.80)", name: "price", widget: "string", required: false, hint: "Use ponto, não vírgula." }
-      - { label: "🔑 ID DO PRODUTO SHOPIFY", name: "shopify_id", widget: "string", required: false, hint: "Cole aqui o 'Product Variant ID' completo do Shopify." }
-      # --- CORREÇÃO CRÍTICA (Problema 2) ---
-      # Oculto para parar de quebrar o painel. O Decap irá ler e preservar o seu schema, mas não tentará exibi-lo.
-      - { label: "Schema JSON-LD (Preservado)", name: "schema", widget: "hidden" }
-      # -------------------------------------
-      - { label: "Conteúdo Principal (HTML/Markdown)", name: "body", widget: "markdown", hint: "O texto principal da página da receita vai aqui." }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Título da Página", name: "title", widget: "string" }
+      - { label: "Descrição (SEO)", name: "description", widget: "text" }
+      - { label: "🛒 PREÇO (ex: 34.80)", name: "price", widget: "string", required: false }
+      - { label: "🔑 ID SHOPIFY", name: "shopify_id", widget: "string", required: false }
+      - { label: "Schema (Oculto)", name: "schema", widget: "hidden" }
+      - { label: "Conteúdo da Página (HTML)", name: "body", widget: "markdown" }
 
-  # --- 2.2 SOPAS FUNCIONAIS ---
   - name: "sopas"
     label: "🥣 Receitas - Sopas Funcionais"
-    label_singular: "Sopa"
-    folder: "src/receitas/sopas-funcionais" # CORRIGIDO: Adicionado "src/"
+    folder: "src/receitas/sopas-funcionais"
     create: true
     slug: "{{slug}}"
     extension: "html"
     format: "json-frontmatter"
     fields:
-      - { label: "Layout (Automático)", name: "layout", widget: "hidden", default: "base.njk" }
-      - { label: "Permalink (URL Automático)", name: "permalink", widget: "hidden", hint: "Ex: /receitas/sopas-funcionais/{{slug}}/" }
-      - { label: "Título da Receita (O H1)", name: "title", widget: "string", required: true }
-      - { label: "Descrição Curta (para Google/IA)", name: "description", widget: "text", required: true }
-      - { label: "Nome do Autor", name: "author_name", widget: "string", default: "Maria Conceição" }
-      - { label: "Título do Autor", name: "author_title", widget: "string", default: "Fundadora e Chef de Criação da ChefBrico" }
-      - { label: "Fato Citável (para IA)", name: "citable_fact", widget: "text" }
-      - { label: "🛒 PREÇO (ex: 29.60)", name: "price", widget: "string", required: false, hint: "Use ponto, não vírgula." }
-      - { label: "🔑 ID DO PRODUTO SHOPIFY", name: "shopify_id", widget: "string", required: false, hint: "Cole aqui o 'Product Variant ID' completo do Shopify." }
-      - { label: "Schema JSON-LD (Preservado)", name: "schema", widget: "hidden" } # CORRIGIDO
-      - { label: "Conteúdo Principal (HTML/Markdown)", name: "body", widget: "markdown", hint: "O texto principal da página da receita vai aqui." }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Título da Página", name: "title", widget: "string" }
+      - { label: "Descrição (SEO)", name: "description", widget: "text" }
+      - { label: "🛒 PREÇO (ex: 29.60)", name: "price", widget: "string", required: false }
+      - { label: "🔑 ID SHOPIFY", name: "shopify_id", widget: "string", required: false }
+      - { label: "Schema (Oculto)", name: "schema", widget: "hidden" }
+      - { label: "Conteúdo da Página (HTML)", name: "body", widget: "markdown" }
 
-  # --- 2.3 REFEIÇÕES INTEGRAIS ---
   - name: "refeicoes"
     label: "🍲 Receitas - Refeições Integrais"
-    label_singular: "Refeição"
-    folder: "src/receitas/refeicoes-integrais" # CORRIGIDO: Adicionado "src/"
+    folder: "src/receitas/refeicoes-integrais"
     create: true
     slug: "{{slug}}"
     extension: "html"
     format: "json-frontmatter"
     fields:
-      - { label: "Layout (Automático)", name: "layout", widget: "hidden", default: "base.njk" }
-      - { label: "Permalink (URL Automático)", name: "permalink", widget: "hidden", hint: "Ex: /receitas/refeicoes-integrais/{{slug}}/" }
-      - { label: "Título da Receita (O H1)", name: "title", widget: "string", required: true }
-      - { label: "Descrição Curta (para Google/IA)", name: "description", widget: "text", required: true }
-      - { label: "Nome do Autor", name: "author_name", widget: "string", default: "Maria Conceição" }
-      - { label: "Título do Autor", name: "author_title", widget: "string", default: "Fundadora e Chef de Criação da ChefBrico" }
-      - { label: "Fato Citável (para IA)", name: "citable_fact", widget: "text" }
-      - { label: "🛒 PREÇO (ex: 34.80)", name: "price", widget: "string", required: false, hint: "Use ponto, não vírgula." }
-      - { label: "🔑 ID DO PRODUTO SHOPIFY", name: "shopify_id", widget: "string", required: false, hint: "Cole aqui o 'Product Variant ID' completo do Shopify." }
-      - { label: "Schema JSON-LD (Preservado)", name: "schema", widget: "hidden" } # CORRIGIDO
-      - { label: "Conteúdo Principal (HTML/Markdown)", name: "body", widget: "markdown", hint: "O texto principal da página da receita vai aqui." }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Título da Página", name: "title", widget: "string" }
+      - { label: "Descrição (SEO)", name: "description", widget: "text" }
+      - { label: "🛒 PREÇO (ex: 34.80)", name: "price", widget: "string", required: false }
+      - { label: "🔑 ID SHOPIFY", name: "shopify_id", widget: "string", required: false }
+      - { label: "Schema (Oculto)", name: "schema", widget: "hidden" }
+      - { label: "Conteúdo da Página (HTML)", name: "body", widget: "markdown" }
 
-  # --- 2.4 EMPÓRIO DA CHEF ---
   - name: "emporio"
     label: "🌶️ Receitas - Empório da Chef"
-    label_singular: "Produto do Empório"
-    folder: "src/receitas/emporio-da-chef" # CORRIGIDO: Adicionado "src/"
+    folder: "src/receitas/emporio-da-chef"
     create: true
     slug: "{{slug}}"
     extension: "html"
     format: "json-frontmatter"
     fields:
-      - { label: "Layout (Automático)", name: "layout", widget: "hidden", default: "base.njk" }
-      - { label: "Permalink (URL Automático)", name: "permalink", widget: "hidden", hint: "Ex: /receitas/emporio-da-chef/{{slug}}/" }
-      - { label: "Título da Receita (O H1)", name: "title", widget: "string", required: true }
-      - { label: "Descrição Curta (para Google/IA)", name: "description", widget: "text", required: true }
-      - { label: "Nome do Autor", name: "author_name", widget: "string", default: "Maria Conceição" }
-      - { label: "Título do Autor", name: "author_title", widget: "string", default: "Fundadora e Chef de Criação da ChefBrico" }
-      - { label: "Fato Citável (para IA)", name: "citable_fact", widget: "text" }
-      - { label: "🛒 PREÇO (ex: 29.80)", name: "price", widget: "string", required: false, hint: "Use ponto, não vírgula." }
-      - { label: "🔑 ID DO PRODUTO SHOPIFY", name: "shopify_id", widget: "string", required: false, hint: "Cole aqui o 'Product Variant ID' completo do Shopify." }
-      - { label: "Schema JSON-LD (Preservado)", name: "schema", widget: "hidden" } # CORRIGIDO
-      - { label: "Conteúdo Principal (HTML/Markdown)", name: "body", widget: "markdown", hint: "O texto principal da página da receita vai aqui." }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Título da Página", name: "title", widget: "string" }
+      - { label: "Descrição (SEO)", name: "description", widget: "text" }
+      - { label: "🛒 PREÇO (ex: 29.80)", name: "price", widget: "string", required: false }
+      - { label: "🔑 ID SHOPIFY", name: "shopify_id", widget: "string", required: false }
+      - { label: "Schema (Oculto)", name: "schema", widget: "hidden" }
+      - { label: "Conteúdo da Página (HTML)", name: "body", widget: "markdown" }
 
-  # --- 3. BLOG ---
+  - name: "solucoes"
+    label: "🎯 Receitas - Soluções"
+    folder: "src/receitas/solucoes"
+    create: true
+    slug: "{{slug}}"
+    extension: "html"
+    format: "json-frontmatter"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Título da Página", name: "title", widget: "string" }
+      - { label: "Descrição (SEO)", name: "description", widget: "text" }
+      - { label: "🛒 PREÇO", name: "price", widget: "string", required: false }
+      - { label: "🔑 ID SHOPIFY", name: "shopify_id", widget: "string", required: false }
+      - { label: "Schema (Oculto)", name: "schema", widget: "hidden" }
+      - { label: "Conteúdo da Página (HTML)", name: "body", widget: "markdown" }
+
+  # --- 4. BLOG (PASTA .HTML) ---
   - name: "blog"
     label: "✍️ Blog da Chef"
     label_singular: "Artigo do Blog"
-    folder: "src/blog" # CORRIGIDO: Adicionado "src/"
+    folder: "src/blog"
     create: true
     slug: "{{slug}}"
+    extension: "html"
+    format: "json-frontmatter"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Título da Página", name: "title", widget: "string" }
+      - { label: "Descrição (SEO)", name: "description", widget: "text" }
+      - { label: "Schema (Oculto)", name: "schema", widget: "hidden" }
+      - { label: "Conteúdo da Página (HTML)", name: "body", widget: "markdown" }
+
+  # --- 5. PÁGINAS "ONDE ENCONTRAR" (PASTA .HTML) ---
+  - name: "bairros"
+    label: "📍 Páginas Onde Encontrar"
+    label_singular: "Página de Bairro"
+    folder: "src/onde-encontrar"
+    create: true
+    slug: "{{slug}}"
+    extension: "html"
+    format: "json-frontmatter"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Título da Página", name: "title", widget: "string" }
+      - { label: "Descrição (SEO)", name: "description", widget: "text" }
+      - { label: "Schema (Oculto)", name: "schema", widget: "hidden" }
+      - { label: "Conteúdo da Página (HTML)", name: "body", widget: "markdown" }
+
+  # --- 6. FRAGMENTOS (PASTA .MD - A EXCEÇÃO) ---
+  - name: "fragmentos"
+    label: "🧩 Fragmentos de Conteúdo (IA)"
+    label_singular: "Fragmento"
+    folder: "src/fragmentos"
+    extension: "md"
     format: "yaml-frontmatter"
     fields:
-      - { label: "Layout (Automático)", name: "layout", widget: "hidden", default: "base.njk" }
-      - { label: "Título do Artigo", name: "title", widget: "string" }
-      - { label: "Descrição (para Google)", name: "description", widget: "text" }
-      - { label: "Imagem de Capa", name: "image", widget: "image" }
-      - { label: "Conteúdo", name: "body", widget: "markdown" }
+      - { label: "Título (Uso Interno)", name: "title", widget: "string" }
+      - { label: "Conteúdo (Markdown)", name: "body", widget: "markdown" }
 
-  # --- 4. BAIRROS/LOCAIS ---
-  - name: "locais"
-    label: "📍 Bairros (para a pág. Onde Encontrar)"
-    label_singular: "Bairro"
-    description: "Adicione ou edite os BAIRROS INDIVIDUAIS..."
-    folder: "_data/bairros" # CORRETO: _data geralmente fica na raiz
-    create: true
-    format: "json" # Estes são ficheiros de DADOS, não páginas
-    fields:
-      - { label: "Nome do Bairro (ex: Asa Sul)", name: "nome", widget: "string" }
-      - { label: "Região (ex: plano_piloto)", name: "regiao", widget: "string" }
-      - { label: "Pontos de Venda", name: "pontos_venda", widget: "list", fields: [
-            { label: "Nome da Loja", name: "nome_loja", widget: "string" },
-            { label: "Endereço", name: "endereco", widget: "string" },
-            { label: "Link do Google Maps", name: "maps_link", widget: "string" }
-          ]}
-
-  # --- 5. CONFIGURAÇÕES GERAIS ---
+  # --- 7. CONFIGURAÇÕES GERAIS (FICHEIRO ÚNICO) ---
   - name: "settings"
     label: "⚙️ Configurações Gerais do Site"
     files: 
       - label: "Dados Gerais (meta.json)"
         name: "meta"
-        file: "_data/meta.json" # CORRETO: _data geralmente fica na raiz
+        file: "_data/meta.json"
+        format: "json"
         fields:
           - { label: "Título Padrão do Site", name: "siteTitle", widget: "string" }
           - { label: "Descrição Padrão do Site", name: "siteDescription", widget: "string" }
-          - { label: "URL Principal", name: "siteUrl", widget: "string", default: "https://receitas.chefbrico.com" }
+          - { label: "URL Principal", name: "siteUrl", widget: "string" }
