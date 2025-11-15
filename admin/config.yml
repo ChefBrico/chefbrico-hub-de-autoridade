@@ -235,7 +235,7 @@ collections:
     format: "yaml-frontmatter" # FACTO: Isto está a funcionar
     fields:
       # CAMPOS CORRIGIDOS (Baseado no screenshot 17.11.jpeg)
-      - { label: "Layout", name: "layout", widget: "hidden", default: "fragmento-page.njk" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "fragmento-page.njk"}
       - { label: "Permalink", name: "permalink", widget: "string", required: false }
       - { label: "Título (Pergunta)", name: "title", widget: "string" }
       - { label: "Conteúdo (Fragmento)", name: "fragmento_texto", widget: "text" } # A CORREÇÃO-CHAVE
