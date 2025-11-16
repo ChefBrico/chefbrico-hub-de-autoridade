@@ -1,10 +1,12 @@
 # ===================================================================
-# PAINEL DE COMANDO v19.0 - CORREÇÃO CRÍTICA
+# PAINEL DE COMANDO v21.0 - PADRONIZAÇÃO COMPLETA
 # ===================================================================
-# 1. REVERTE o 'format' para "json-frontmatter" (isto corrige o erro fatal).
-# 2. ADICIONA o 'frontmatter_delimiter' (isto corrige os campos vazios).
-# 3. ADICIONA 'modes: ["rich_text"]' ao body (isto corrige o editor "misturado").
-# 4. CORRIGE a Secção 5 para mapear o seu 'meta.json' (isto corrige os campos vazios das Config. Gerais).
+# Todas as coleções de receitas agora têm a mesma estrutura rica:
+# - SEO
+# - Autor
+# - Fato Citável
+# - Schema Seguro (Code Widget)
+# - Conteúdo Rico
 # ===================================================================
 
 backend:
@@ -15,503 +17,238 @@ public_folder: "/imagens"
 locale: 'pt'
 publish_mode: editorial_workflow
 
-# ===================================================================
-# COLEÇÕES DE CONTEÚDO
-# ===================================================================
 collections:
-  # --- 1. PÁGINAS PRINCIPAIS (FICHEIROS ÚNICOS - JSON-FRONTMATTER) ---
+  # --- 1. PÁGINAS PRINCIPAIS ---
   - name: "paginas_unicas"
-    label: "📄 Páginas Principais (Home, Chefbox, etc.)"
+    label: "📄 Páginas Principais"
     files:
       - label: "Página Inicial (Home)"
         name: "home"
         file: "index.html"
-        format: "json-frontmatter" # <-- CORREÇÃO: Revertido para o valor original
-        frontmatter_delimiter: ["---json", "---"] # <-- FIX: Adicionado para parsing correto
+        format: "json-frontmatter"
+        frontmatter_delimiter: ["---json", "---"]
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
-          - { label: "Permalink", name: "permalink", widget: "string", required: false }
           - { label: "Título da Página", name: "title", widget: "string", required: false }
-          - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
-          - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-          - label: "Conteúdo da Página (HTML)" # <-- FIX: Adicionado 'modes'
-            name: "body"
-            widget: "markdown"
-            modes: ["rich_text"]
+          - { label: "Descrição SEO", name: "description", widget: "text", required: false }
+          - { label: "Schema (Técnico)", name: "schema", widget: "code", default: "{}", required: false }
+          - { label: "Conteúdo HTML", name: "body", widget: "markdown", modes: ["rich_text"] }
 
-      - label: "Página 'ChefBox'"
+      - label: "Página ChefBox"
         name: "chefbox"
         file: "chefbox/index.html"
-        format: "json-frontmatter" # <-- CORREÇÃO
-        frontmatter_delimiter: ["---json", "---"] # <-- FIX
+        format: "json-frontmatter"
+        frontmatter_delimiter: ["---json", "---"]
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
-          - { label: "Permalink", name: "permalink", widget: "string", required: false }
-          - { label: "Título da Página", name: "title", widget: "string", required: false }
-          - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
-          - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-          - label: "Conteúdo da Página (HTML)" # <-- FIX
-            name: "body"
-            widget: "markdown"
-            modes: ["rich_text"]
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Conteúdo HTML", name: "body", widget: "markdown", modes: ["rich_text"] }
 
-      - label: "Página 'Chefbrico Club'"
+      - label: "Clube ChefBrico"
         name: "club"
         file: "clube/index.html"
-        format: "json-frontmatter" # <-- CORREÇÃO
-        frontmatter_delimiter: ["---json", "---"] # <-- FIX
+        format: "json-frontmatter"
+        frontmatter_delimiter: ["---json", "---"]
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
-          - { label: "Permalink", name: "permalink", widget: "string", required: false }
-          - { label: "Título da Página", name: "title", widget: "string", required: false }
-          - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
-          - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-          - label: "Conteúdo da Página (HTML)" # <-- FIX
-            name: "body"
-            widget: "markdown"
-            modes: ["rich_text"]
-      
-      - label: "Página de 'Perguntas Frequentes' (FAQ)"
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Conteúdo HTML", name: "body", widget: "markdown", modes: ["rich_text"] }
+
+      - label: "FAQ"
         name: "faq"
         file: "faq/faq.html"
-        format: "json-frontmatter" # <-- CORREÇÃO
-        frontmatter_delimiter: ["---json", "---"] # <-- FIX
+        format: "json-frontmatter"
+        frontmatter_delimiter: ["---json", "---"]
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
-          - { label: "Permalink", name: "permalink", widget: "string", required: false }
-          - { label: "Título da Página", name: "title", widget: "string", required: false }
-          - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
-          - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-          - label: "Conteúdo da Página (HTML)" # <-- FIX
-            name: "body"
-            widget: "markdown"
-            modes: ["rich_text"]
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Conteúdo HTML", name: "body", widget: "markdown", modes: ["rich_text"] }
 
-  # --- 2. PÁGINAS DE ÍNDICE (CATEGORIAS - JSON-FRONTMATTER) ---
+  # --- 2. PÁGINAS DE ÍNDICE ---
   - name: "paginas_de_indice"
-    label: "🗂️ Páginas de Índice (Categorias)"
+    label: "🗂️ Páginas de Índice"
     files:
-      - label: "Índice de 'Comida de Verdade'"
+      - label: "Índice Comida de Verdade"
         name: "idx_comida"
         file: "comida-de-verdade/index.html"
-        format: "json-frontmatter" # <-- CORREÇÃO
-        frontmatter_delimiter: ["---json", "---"] # <-- FIX
+        format: "json-frontmatter"
+        frontmatter_delimiter: ["---json", "---"]
         fields:
-          - { label: "Título", name: "title", widget: "string", required: false }
-          - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
-          - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-          - label: "Conteúdo (Body)" # <-- FIX
-            name: "body"
-            widget: "markdown"
-            modes: ["rich_text"]
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Conteúdo", name: "body", widget: "markdown", modes: ["rich_text"] }
 
-      - label: "Índice de 'Receitas' (Geral)"
+      - label: "Índice Receitas Geral"
         name: "idx_receitas"
         file: "receitas/index.html"
-        format: "json-frontmatter" # <-- CORREÇÃO
-        frontmatter_delimiter: ["---json", "---"] # <-- FIX
+        format: "json-frontmatter"
+        frontmatter_delimiter: ["---json", "---"]
         fields:
-          - { label: "Título", name: "title", widget: "string", required: false }
-          - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
-          - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-          - label: "Conteúdo (Body)" # <-- FIX
-            name: "body"
-            widget: "markdown"
-            modes: ["rich_text"]
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Conteúdo", name: "body", widget: "markdown", modes: ["rich_text"] }
 
-      - label: "Índice de 'Risotos'"
-        name: "idx_risotos"
-        file: "receitas/risotos/index.html"
-        format: "json-frontmatter" # <-- CORREÇÃO
-        frontmatter_delimiter: ["---json", "---"] # <-- FIX
-        fields:
-          - { label: "Título", name: "title", widget: "string", required: false }
-          - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
-          - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-          - label: "Conteúdo (Body)" # <-- FIX
-            name: "body"
-            widget: "markdown"
-            modes: ["rich_text"]
-
-      - label: "Índice de 'Sopas'"
-        name: "idx_sopas"
-        file: "receitas/sopas-funcionais/index.html"
-        format: "json-frontmatter" # <-- CORREÇÃO
-        frontmatter_delimiter: ["---json", "---"] # <-- FIX
-        fields:
-          - { label: "Título", name: "title", widget: "string", required: false }
-          - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
-          - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-          - label: "Conteúdo (Body)" # <-- FIX
-            name: "body"
-            widget: "markdown"
-            modes: ["rich_text"]
-
-      - label: "Índice de 'Refeições'"
-        name: "idx_refeicoes"
-        file: "receitas/refeicoes-integrais/index.html"
-        format: "json-frontmatter" # <-- CORREÇÃO
-        frontmatter_delimiter: ["---json", "---"] # <-- FIX
-        fields:
-          - { label: "Título", name: "title", widget: "string", required: false }
-          - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
-          - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-          - label: "Conteúdo (Body)" # <-- FIX
-            name: "body"
-            widget: "markdown"
-            modes: ["rich_text"]
-
-      - label: "Índice de 'Empório'"
-        name: "idx_emporio"
-        file: "receitas/emporio-da-chef/index.html"
-        format: "json-frontmatter" # <-- CORREÇÃO
-        frontmatter_delimiter: ["---json", "---"] # <-- FIX
-        fields:
-          - { label: "Título", name: "title", widget: "string", required: false }
-          - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
-          - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-          - label: "Conteúdo (Body)" # <-- FIX
-            name: "body"
-            widget: "markdown"
-            modes: ["rich_text"]
-
-      - label: "Índice de 'Onde Encontrar'"
-        name: "idx_onde_encontrar"
-        file: "onde-encontrar/index.html"
-        format: "json-frontmatter" # <-- CORREÇÃO
-        frontmatter_delimiter: ["---json", "---"] # <-- FIX
-        fields:
-          - { label: "Título", name: "title", widget: "string", required: false }
-          - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
-          - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-          - label: "Conteúdo (Body)" # <-- FIX
-            name: "body"
-            widget: "markdown"
-            modes: ["rich_text"]
-
-  # --- 3. COLEÇÕES DE ITENS (PASTAS.HTML - JSON-FRONTMATTER) ---
-  - name: "comida_de_verdade_itens"
-    label: "🥗 Itens 'Comida de Verdade'"
-    folder: "comida-de-verdade"
-    exclude: "index.html"
-    extension: "html"
-    format: "json-frontmatter" # <-- CORREÇÃO
-    frontmatter_delimiter: ["---json", "---"] # <-- FIX
-    fields:
-      - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
-      - { label: "Permalink", name: "permalink", widget: "string", required: false }
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
-      - { label: "Nome do Autor", name: "author_name", widget: "string", required: false }
-      - { label: "Título do Autor", name: "author_title", widget: "string", required: false }
-      - { label: "Página do Autor", name: "author_page", widget: "string", required: false }
-      - { label: "Fato Citável", name: "citable_fact", widget: "string", required: false }
-      - { label: "Assinatura", name: "authority_signature", widget: "string", required: false }
-      - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-      - label: "Conteúdo (Body)" # <-- FIX
-        name: "body"
-        widget: "markdown"
-        modes: ["rich_text"]
-
+  # --- 3. RECEITAS E ITENS (PADRONIZADOS) ---
   - name: "risotos"
     label: "🍳 Receitas - Risotos"
     folder: "receitas/risotos"
     exclude: "index.html"
-  # ESTA É A CORREÇÃO CRÍTICA PARA NÃO MISTURAR CÓDIGO:
     extension: "html"
-    format: "json-frontmatter" 
-    # Força o CMS a entender que começa com ---json e termina com ---
-    
-    fields:
-      - { label: "Layout (Não alterar)", name: "layout", widget: "hidden", default: "base.njk" }
-      - { label: "Permalink", name: "permalink", widget: "string" }
-      - { label: "Título da Receita", name: "title", widget: "string" }
-      - { label: "Descrição (SEO)", name: "description", widget: "text" }
-      
-      # Dados da Autora
-      - { label: "Nome do Autor", name: "author_name", widget: "string", default: "Maria Conceição" }
-      - { label: "Título do Autor", name: "author_title", widget: "string" }
-      - { label: "Página do Autor", name: "author_page", widget: "string" }
-      - { label: "Fato Citável", name: "citable_fact", widget: "string" }
-      - { label: "Assinatura", name: "authority_signature", widget: "string" }
-
-      # Schema (JSON Complexo) - Mantemos oculto para não quebrar o visual, 
-      # mas garantimos que ele não "vaze" para o texto.
-      - label: "Schema Avançado (Técnico)"
-        name: "schema"
-        widget: "object"
-        collapsed: true
-        fields:
-          - { label: "Contexto", name: "@context", widget: "hidden", default: "https://schema.org" }
-          - { label: "Graph (Dados Estruturados)", name: "@graph", widget: "list", allow_add: true, types: [{label: "Objeto", widget: "object", fields: [{name: "raw", widget: "code", default: "{}"}]}] } 
-          # Nota: O Schema é muito complexo para mapear campo a campo sem quebrar o layout atual. 
-          # Melhor manter como está no arquivo, mas isolado do Body.
-
-      # O Corpo do Texto - Onde a Maria escreve
-      - label: "Conteúdo da Receita (Artigo)"
-        name: "body"
-        widget: "markdown"
-        hint: "Escreva aqui o texto da receita e a história."
-
-  - name: "sopas"
-    label: "🥣 Receitas - Sopas Funcionais"
-    folder: "receitas/sopas-funcionais"
-    exclude: "index.html"
-   # ESTA É A CORREÇÃO CRÍTICA PARA NÃO MISTURAR CÓDIGO:
-    extension: "html"
-    format: "json-frontmatter" 
-    # Força o CMS a entender que começa com ---json e termina com ---
-    
-    fields:
-      - { label: "Layout (Não alterar)", name: "layout", widget: "hidden", default: "base.njk" }
-      - { label: "Permalink", name: "permalink", widget: "string" }
-      - { label: "Título da Receita", name: "title", widget: "string" }
-      - { label: "Descrição (SEO)", name: "description", widget: "text" }
-      
-      # Dados da Autora
-      - { label: "Nome do Autor", name: "author_name", widget: "string", default: "Maria Conceição" }
-      - { label: "Título do Autor", name: "author_title", widget: "string" }
-      - { label: "Página do Autor", name: "author_page", widget: "string" }
-      - { label: "Fato Citável", name: "citable_fact", widget: "string" }
-      - { label: "Assinatura", name: "authority_signature", widget: "string" }
-
-      # Schema (JSON Complexo) - Mantemos oculto para não quebrar o visual, 
-      # mas garantimos que ele não "vaze" para o texto.
-      - label: "Schema Avançado (Técnico)"
-        name: "schema"
-        widget: "object"
-        collapsed: true
-        fields:
-          - { label: "Contexto", name: "@context", widget: "hidden", default: "https://schema.org" }
-          - { label: "Graph (Dados Estruturados)", name: "@graph", widget: "list", allow_add: true, types: [{label: "Objeto", widget: "object", fields: [{name: "raw", widget: "code", default: "{}"}]}] } 
-          # Nota: O Schema é muito complexo para mapear campo a campo sem quebrar o layout atual. 
-          # Melhor manter como está no arquivo, mas isolado do Body.
-
-      # O Corpo do Texto - Onde a Maria escreve
-      - label: "Conteúdo da Receita (Artigo)"
-        name: "body"
-        widget: "markdown"
-        hint: "Escreva aqui o texto da receita e a história."
-
-  - name: "refeicoes"
-    label: "🍲 Receitas - Refeições Integrais"
-    folder: "receitas/refeicoes-integrais"
-    exclude: "index.html"
-   # ESTA É A CORREÇÃO CRÍTICA PARA NÃO MISTURAR CÓDIGO:
-    extension: "html"
-    format: "json-frontmatter" 
-    # Força o CMS a entender que começa com ---json e termina com ---
-    
-    fields:
-      - { label: "Layout (Não alterar)", name: "layout", widget: "hidden", default: "base.njk" }
-      - { label: "Permalink", name: "permalink", widget: "string" }
-      - { label: "Título da Receita", name: "title", widget: "string" }
-      - { label: "Descrição (SEO)", name: "description", widget: "text" }
-      
-      # Dados da Autora
-      - { label: "Nome do Autor", name: "author_name", widget: "string", default: "Maria Conceição" }
-      - { label: "Título do Autor", name: "author_title", widget: "string" }
-      - { label: "Página do Autor", name: "author_page", widget: "string" }
-      - { label: "Fato Citável", name: "citable_fact", widget: "string" }
-      - { label: "Assinatura", name: "authority_signature", widget: "string" }
-
-      # Schema (JSON Complexo) - Mantemos oculto para não quebrar o visual, 
-      # mas garantimos que ele não "vaze" para o texto.
-      - label: "Schema Avançado (Técnico)"
-        name: "schema"
-        widget: "object"
-        collapsed: true
-        fields:
-          - { label: "Contexto", name: "@context", widget: "hidden", default: "https://schema.org" }
-          - { label: "Graph (Dados Estruturados)", name: "@graph", widget: "list", allow_add: true, types: [{label: "Objeto", widget: "object", fields: [{name: "raw", widget: "code", default: "{}"}]}] } 
-          # Nota: O Schema é muito complexo para mapear campo a campo sem quebrar o layout atual. 
-          # Melhor manter como está no arquivo, mas isolado do Body.
-
-      # O Corpo do Texto - Onde a Maria escreve
-      - label: "Conteúdo da Receita (Artigo)"
-        name: "body"
-        widget: "markdown"
-        hint: "Escreva aqui o texto da receita e a história."
-        
-  - name: "emporio"
-    label: "🌶️ Receitas - Empório da Chef"
-    folder: "receitas/emporio-da-chef"
-    exclude: "index.html"
-    # ESTA É A CORREÇÃO CRÍTICA PARA NÃO MISTURAR CÓDIGO:
-    extension: "html"
-    format: "json-frontmatter" 
-    # Força o CMS a entender que começa com ---json e termina com ---
-    
-    fields:
-      - { label: "Layout (Não alterar)", name: "layout", widget: "hidden", default: "base.njk" }
-      - { label: "Permalink", name: "permalink", widget: "string" }
-      - { label: "Título da Receita", name: "title", widget: "string" }
-      - { label: "Descrição (SEO)", name: "description", widget: "text" }
-      
-      # Dados da Autora
-      - { label: "Nome do Autor", name: "author_name", widget: "string", default: "Maria Conceição" }
-      - { label: "Título do Autor", name: "author_title", widget: "string" }
-      - { label: "Página do Autor", name: "author_page", widget: "string" }
-      - { label: "Fato Citável", name: "citable_fact", widget: "string" }
-      - { label: "Assinatura", name: "authority_signature", widget: "string" }
-
-      # Schema (JSON Complexo) - Mantemos oculto para não quebrar o visual, 
-      # mas garantimos que ele não "vaze" para o texto.
-      - label: "Schema Avançado (Técnico)"
-        name: "schema"
-        widget: "object"
-        collapsed: true
-        fields:
-          - { label: "Contexto", name: "@context", widget: "hidden", default: "https://schema.org" }
-          - { label: "Graph (Dados Estruturados)", name: "@graph", widget: "list", allow_add: true, types: [{label: "Objeto", widget: "object", fields: [{name: "raw", widget: "code", default: "{}"}]}] } 
-          # Nota: O Schema é muito complexo para mapear campo a campo sem quebrar o layout atual. 
-          # Melhor manter como está no arquivo, mas isolado do Body.
-
-      # O Corpo do Texto - Onde a Maria escreve
-      - label: "Conteúdo da Receita (Artigo)"
-        name: "body"
-        widget: "markdown"
-        hint: "Escreva aqui o texto da receita e a história."
-        
-  - name: "solucoes"
-    label: "🎯 Receitas - Soluções"
-    folder: "receitas/solucoes"
-    extension: "html"
-    format: "json-frontmatter" # <-- CORREÇÃO
-    frontmatter_delimiter: ["---json", "---"] # <-- FIX
+    format: "json-frontmatter"
+    frontmatter_delimiter: ["---json", "---"]
+    create: true
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
-      - { label: "Permalink", name: "permalink", widget: "string", required: false }
+      - { label: "Permalink", name: "permalink", widget: "string" }
       - { label: "Título", name: "title", widget: "string" }
-      - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
-      - { label: "Nome do Autor", name: "author_name", widget: "string", required: false }
-      - { label: "Título do Autor", name: "author_title", widget: "string", required: false }
-      - { label: "Página do Autor", name: "author_page", widget: "string", required: false }
-      - { label: "Fato Citável", name: "citable_fact", widget: "string", required: false }
-      - { label: "Assinatura", name: "authority_signature", widget: "string", required: false }
-      - { label: "Preço", name: "price", widget: "string", required: false }
-      - { label: "ID Shopify", name: "shopify_id", widget: "string", required: false }
-      - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-      - label: "Conteúdo (Body)" # <-- FIX
-        name: "body"
-        widget: "markdown"
-        modes: ["rich_text"]
+      - { label: "Descrição SEO", name: "description", widget: "text" }
+      - { label: "Autor", name: "author_name", widget: "string", default: "Maria Conceição" }
+      - { label: "Fato Citável", name: "citable_fact", widget: "string" }
+      - { label: "Schema JSON", name: "schema", widget: "code", default: "{}", required: false }
+      - { label: "Conteúdo da Receita", name: "body", widget: "markdown", modes: ["rich_text"] }
+
+  - name: "sopas"
+    label: "🥣 Receitas - Sopas"
+    folder: "receitas/sopas-funcionais"
+    exclude: "index.html"
+    extension: "html"
+    format: "json-frontmatter"
+    frontmatter_delimiter: ["---json", "---"]
+    create: true
+    fields: # PADRONIZADO COM RISOTOS
+      - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Descrição SEO", name: "description", widget: "text" }
+      - { label: "Autor", name: "author_name", widget: "string", default: "Maria Conceição" }
+      - { label: "Fato Citável", name: "citable_fact", widget: "string" }
+      - { label: "Schema JSON", name: "schema", widget: "code", default: "{}", required: false }
+      - { label: "Conteúdo da Receita", name: "body", widget: "markdown", modes: ["rich_text"] }
+
+  - name: "refeicoes"
+    label: "🍲 Refeições Integrais"
+    folder: "receitas/refeicoes-integrais"
+    exclude: "index.html"
+    extension: "html"
+    format: "json-frontmatter"
+    frontmatter_delimiter: ["---json", "---"]
+    create: true
+    fields: # PADRONIZADO COM RISOTOS
+      - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Descrição SEO", name: "description", widget: "text" }
+      - { label: "Autor", name: "author_name", widget: "string", default: "Maria Conceição" }
+      - { label: "Fato Citável", name: "citable_fact", widget: "string" }
+      - { label: "Schema JSON", name: "schema", widget: "code", default: "{}", required: false }
+      - { label: "Conteúdo da Receita", name: "body", widget: "markdown", modes: ["rich_text"] }
+
+  - name: "emporio"
+    label: "🌶️ Empório da Chef"
+    folder: "receitas/emporio-da-chef"
+    exclude: "index.html"
+    extension: "html"
+    format: "json-frontmatter"
+    frontmatter_delimiter: ["---json", "---"]
+    create: true
+    fields: # PADRONIZADO COM RISOTOS
+      - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Descrição SEO", name: "description", widget: "text" }
+      - { label: "Autor", name: "author_name", widget: "string", default: "Maria Conceição" }
+      - { label: "Fato Citável", name: "citable_fact", widget: "string" }
+      - { label: "Schema JSON", name: "schema", widget: "code", default: "{}", required: false }
+      - { label: "Conteúdo da Receita", name: "body", widget: "markdown", modes: ["rich_text"] }
+
+  - name: "solucoes"
+    label: "🎯 Soluções"
+    folder: "receitas/solucoes"
+    extension: "html"
+    format: "json-frontmatter"
+    frontmatter_delimiter: ["---json", "---"]
+    create: true
+    fields: # PADRONIZADO COM RISOTOS
+      - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Descrição SEO", name: "description", widget: "text" }
+      - { label: "Autor", name: "author_name", widget: "string", default: "Maria Conceição" }
+      - { label: "Schema JSON", name: "schema", widget: "code", default: "{}", required: false }
+      - { label: "Conteúdo da Receita", name: "body", widget: "markdown", modes: ["rich_text"] }
 
   - name: "blog"
     label: "✍️ Blog da Chef"
     folder: "blog"
     extension: "html"
-    format: "json-frontmatter" # <-- CORREÇÃO
-    frontmatter_delimiter: ["---json", "---"] # <-- FIX
-    fields:
+    format: "json-frontmatter"
+    frontmatter_delimiter: ["---json", "---"]
+    create: true
+    fields: # PADRONIZADO
       - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
-      - { label: "Permalink", name: "permalink", widget: "string", required: false }
+      - { label: "Permalink", name: "permalink", widget: "string" }
       - { label: "Título", name: "title", widget: "string" }
-      - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
-      - { label: "Nome do Autor", name: "author_name", widget: "string", required: false }
-      - { label: "Título do Autor", name: "author_title", widget: "string", required: false }
-      - { label: "Página do Autor", name: "author_page", widget: "string", required: false }
-      - { label: "Fato Citável", name: "citable_fact", widget: "string", required: false }
-      - { label: "Assinatura", name: "authority_signature", widget: "string", required: false }
-      - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-      - label: "Conteúdo (Body)" # <-- FIX
-        name: "body"
-        widget: "markdown"
-        modes: ["rich_text"]
+      - { label: "Descrição SEO", name: "description", widget: "text" }
+      - { label: "Autor", name: "author_name", widget: "string", default: "Maria Conceição" }
+      - { label: "Schema JSON", name: "schema", widget: "code", default: "{}", required: false }
+      - { label: "Conteúdo da Receita", name: "body", widget: "markdown", modes: ["rich_text"] }
 
   - name: "bairros"
-    label: "📍 Páginas Onde Encontrar"
+    label: "📍 Onde Encontrar"
     folder: "onde-encontrar"
     exclude: "index.html"
     extension: "html"
-    format: "json-frontmatter" # <-- CORREÇÃO
-    frontmatter_delimiter: ["---json", "---"] # <-- FIX
+    format: "json-frontmatter"
+    frontmatter_delimiter: ["---json", "---"]
+    create: true
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
-      - { label: "Permalink", name: "permalink", widget: "string", required: false }
       - { label: "Título", name: "title", widget: "string" }
-      - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
-      - { label: "Nome do Autor", name: "author_name", widget: "string", required: false }
-      - { label: "Título do Autor", name: "author_title", widget: "string", required: false }
-      - { label: "Página do Autor", name: "author_page", widget: "string", required: false }
-      - { label: "Fato Citável", name: "citable_fact", widget: "string", required: false }
-      - { label: "Assinatura", name: "authority_signature", widget: "string", required: false }
-      - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-      - label: "Conteúdo (Body)" # <-- FIX
-        name: "body"
-        widget: "markdown"
-        modes: ["rich_text"]
+      - { label: "Descrição SEO", name: "description", widget: "text" }
+      - { label: "Conteúdo", name: "body", widget: "markdown", modes: ["rich_text"] }
 
-  # --- 4. FRAGMENTOS (PASTA.MD - YAML-FRONTMATTER) ---
+  # --- 4. FRAGMENTOS (Sempre funcionou bem) ---
   - name: "fragmentos"
-    label: "🧩 Fragmentos de Conteúdo (IA)"
+    label: "🧩 Fragmentos (IA)"
     folder: "fragmentos"
     extension: "md"
-    format: "yaml-frontmatter" # <-- SEM ALTERAÇÃO. Esta coleção estava correta.
+    format: "yaml-frontmatter"
+    create: true
     fields:
-      - { label: "Layout", name: "layout", widget: "hidden", default: "fragmento-page.njk" }
-      - { label: "Permalink", name: "permalink", widget: "string", required: false }
       - { label: "Título (Pergunta)", name: "title", widget: "string" }
-      - { label: "Conteúdo (Fragmento)", name: "fragmento_texto", widget: "text" }
-      - { label: "Nome do Autor", name: "author_name", widget: "string", required: false }
-      - { label: "Título do Autor", name: "author_title", widget: "string", required: false }
-      - { label: "Avatar do Autor", name: "author_avatar", widget: "image", required: false }
-      - { label: "Página do Autor", name: "author_page", widget: "string", required: false }
-      - { label: "Assinatura (Sala)", name: "sala_signature", widget: "string", required: false }
+      - { label: "Texto", name: "fragmento_texto", widget: "markdown" }
+      - { label: "Autor", name: "author_name", widget: "string", required: false }
       - { label: "Link CTA", name: "cta_link", widget: "string", required: false }
-      - { label: "Texto CTA", name: "cta_texto", widget: "string", required: false }
-      - { label: "Texto Opcional CTA", name: "cta_texto_opcional", widget: "string", required: false }
 
   # --- 5. CONFIGURAÇÕES GERAIS (CORRIGIDO) ---
   - name: "settings"
     label: "⚙️ Configurações Gerais"
-    delete: false # Protege contra exclusão acidental
+    delete: false
     files:
-      - label: "Dados da Empresa e SEO (meta.json)"
+      - label: "Dados da Empresa"
         name: "meta"
         file: "_data/meta.json"
         format: "json"
         fields:
-          - { label: "Domínio Principal", name: "domain", widget: "string" }
+          - { label: "Domínio", name: "domain", widget: "string" }
           - { label: "Domínio Receitas", name: "recipesDomain", widget: "string" }
-          
-          # Organização (Agrupamento dos dados da empresa)
-          - label: "Dados da Organização"
+          - label: "Organização"
             name: "organization"
             widget: "object"
             fields:
-              - { label: "ID (Schema)", name: "id", widget: "string", default: "https://www.chefbrico.com/#organization" }
-              - { label: "Nome da Empresa", name: "name", widget: "string" }
+              - { label: "Nome", name: "name", widget: "string" }
               - { label: "CNPJ", name: "cnpj", widget: "string" }
-              - { label: "URL Oficial", name: "url", widget: "string" }
-              - { label: "Logo URL", name: "logo", widget: "image" }
               - { label: "Telefone", name: "telephone", widget: "string" }
-              - { label: "WhatsApp Link", name: "whatsapp", widget: "string" }
-              
-              # Endereço (Aninhado dentro de Organization)
-              - label: "Endereço Físico"
+              - { label: "WhatsApp", name: "whatsapp", widget: "string" }
+              - label: "Endereço"
                 name: "address"
                 widget: "object"
                 fields:
-                  - { label: "Tipo", name: "@type", widget: "hidden", default: "PostalAddress" }
-                  - { label: "Rua/Logradouro", name: "streetAddress", widget: "string" }
-                  - { label: "Cidade/Bairro", name: "addressLocality", widget: "string" }
-                  - { label: "Estado (UF)", name: "addressRegion", widget: "string" }
-                  - { label: "CEP", name: "postalCode", widget: "string" }
-                  - { label: "País", name: "addressCountry", widget: "string", default: "BR" }
-
-              # Redes Sociais (Lista de Objetos)
-              - label: "Redes Sociais (SameAs)"
+                   - { label: "Rua", name: "streetAddress", widget: "string" }
+                   - { label: "Bairro", name: "addressLocality", widget: "string" }
+                   - { label: "Estado", name: "addressRegion", widget: "string" }
+                   - { label: "CEP", name: "postalCode", widget: "string" }
+              - label: "Redes Sociais"
                 name: "sameAs"
                 widget: "list"
                 fields:
-                  - { label: "Nome da Rede", name: "name", widget: "string" }
-                  - { label: "Link/URL", name: "url", widget: "string" }
-
-              # Fundadora
-              - label: "Fundadora"
-                name: "founder"
-                widget: "object"
-                fields:
-                  - { label: "Tipo", name: "@type", widget: "hidden", default: "Person" }
-                  - { label: "ID da Fundadora", name: "@id", widget: "string" }
+                   - { label: "Nome da Rede", name: "name", widget: "string" }
+                   - { label: "Link URL", name: "url", widget: "string" }
