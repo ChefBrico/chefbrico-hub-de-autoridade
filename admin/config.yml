@@ -1,9 +1,10 @@
 # ===================================================================
-# PAINEL DE COMANDO v16.0 - O "MAPA DOS FACTOS" (HÍBRIDO E CORRETO)
+# PAINEL DE COMANDO v17.0 - O "MAPA DOS FACTOS"
 # ===================================================================
-# 1. Usa os FORMATOS corretos (json-frontmatter e yaml-frontmatter)
+# 1. Usa os NOMES DE CAMPOS corretos (ex: "fragmento_texto")
+#    baseado nos seus screenshots e códigos.
+# 2. Usa os FORMATOS corretos (json-frontmatter e yaml-frontmatter)
 #    baseado nos seus exemplos e nos screenshots do que FUNCIONA.
-# 2. Usa os NOMES DE CAMPOS corretos (ex: "fragmento_texto" em vez de "body").
 # 3. Mantém a lógica de "excluir index.html" e "sem src/".
 
 backend:
@@ -74,13 +75,75 @@ collections:
   - name: "paginas_de_indice"
     label: "🗂️ Páginas de Índice (Categorias)"
     files:
-      - { label: "Índice de 'Comida de Verdade'", name: "idx_comida", file: "comida-de-verdade/index.html", format: "json-frontmatter", fields: [{ label: "Título", name: "title", widget: "string" }, { label: "Descrição (SEO)", name: "description", widget: "text" }, { label: "Schema (Oculto)", name: "schema", widget: "hidden" }, { label: "Conteúdo (Body)", name: "body", widget: "markdown" }] }
-      - { label: "Índice de 'Receitas' (Geral)", name: "idx_receitas", file: "receitas/index.html", format: "json-frontmatter", fields: [{ label: "Título", name: "title", widget: "string" }, { label: "Descrição (SEO)", name: "description", widget: "text" }, { label: "Schema (Oculto)", name: "schema", widget: "hidden" }, { label: "Conteúdo (Body)", name: "body", widget: "markdown" }] }
-      - { label: "Índice de 'Risotos'", name: "idx_risotos", file: "receitas/risotos/index.html", format: "json-frontmatter", fields: [{ label: "Título", name: "title", widget: "string" }, { label: "Descrição (SEO)", name: "description", widget: "text" }, { label: "Schema (Oculto)", name: "schema", widget: "hidden" }, { label: "Conteúdo (Body)", name: "body", widget: "markdown" }] }
-      - { label: "Índice de 'Sopas'", name: "idx_sopas", file: "receitas/sopas-funcionais/index.html", format: "json-frontmatter", fields: [{ label: "Título", name: "title", widget: "string" }, { label: "Descrição (SEO)", name: "description", widget: "text" }, { label: "Schema (Oculto)", name: "schema", widget: "hidden" }, { label: "Conteúdo (Body)", name: "body", widget: "markdown" }] }
-      - { label: "Índice de 'Refeições'", name: "idx_refeicoes", file: "receitas/refeicoes-integrais/index.html", format: "json-frontmatter", fields: [{ label: "Título", name: "title", widget: "string" }, { label: "Descrição (SEO)", name: "description", widget: "text" }, { label: "Schema (Oculto)", name: "schema", widget: "hidden" }, { label: "Conteúdo (Body)", name: "body", widget: "markdown" }] }
-      - { label: "Índice de 'Empório'", name: "idx_emporio", file: "receitas/emporio-da-chef/index.html", format: "json-frontmatter", fields: [{ label: "Título", name: "title", widget: "string" }, { label: "Descrição (SEO)", name: "description", widget: "text" }, { label: "Schema (Oculto)", name: "schema", widget: "hidden" }, { label: "Conteúdo (Body)", name: "body", widget: "markdown" }] }
-      - { label: "Índice de 'Onde Encontrar'", name: "idx_onde_encontrar", file: "onde-encontrar/index.html", format: "json-frontmatter", fields: [{ label: "Título", name: "title", widget: "string" }, { label: "Descrição (SEO)", name: "description", widget: "text" }, { label: "Schema (Oculto)", name: "schema", widget: "hidden" }, { label: "Conteúdo (Body)", name: "body", widget: "markdown" }] }
+      - label: "Índice de 'Comida de Verdade'"
+        name: "idx_comida"
+        file: "comida-de-verdade/index.html"
+        format: "json-frontmatter"
+        fields:
+          - { label: "Título", name: "title", widget: "string", required: false }
+          - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
+          - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
+          - { label: "Conteúdo (Body)", name: "body", widget: "markdown" }
+
+      - label: "Índice de 'Receitas' (Geral)"
+        name: "idx_receitas"
+        file: "receitas/index.html"
+        format: "json-frontmatter"
+        fields:
+          - { label: "Título", name: "title", widget: "string", required: false }
+          - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
+          - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
+          - { label: "Conteúdo (Body)", name: "body", widget: "markdown" }
+
+      - label: "Índice de 'Risotos'"
+        name: "idx_risotos"
+        file: "receitas/risotos/index.html"
+        format: "json-frontmatter"
+        fields:
+          - { label: "Título", name: "title", widget: "string", required: false }
+          - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
+          - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
+          - { label: "Conteúdo (Body)", name: "body", widget: "markdown" }
+
+      - label: "Índice de 'Sopas'"
+        name: "idx_sopas"
+        file: "receitas/sopas-funcionais/index.html"
+        format: "json-frontmatter"
+        fields:
+          - { label: "Título", name: "title", widget: "string", required: false }
+          - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
+          - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
+          - { label: "Conteúdo (Body)", name: "body", widget: "markdown" }
+
+      - label: "Índice de 'Refeições'"
+        name: "idx_refeicoes"
+        file: "receitas/refeicoes-integrais/index.html"
+        format: "json-frontmatter"
+        fields:
+          - { label: "Título", name: "title", widget: "string", required: false }
+          - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
+          - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
+          - { label: "Conteúdo (Body)", name: "body", widget: "markdown" }
+
+      - label: "Índice de 'Empório'"
+        name: "idx_emporio"
+        file: "receitas/emporio-da-chef/index.html"
+        format: "json-frontmatter"
+        fields:
+          - { label: "Título", name: "title", widget: "string", required: false }
+          - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
+          - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
+          - { label: "Conteúdo (Body)", name: "body", widget: "markdown" }
+
+      - label: "Índice de 'Onde Encontrar'"
+        name: "idx_onde_encontrar"
+        file: "onde-encontrar/index.html"
+        format: "json-frontmatter"
+        fields:
+          - { label: "Título", name: "title", widget: "string", required: false }
+          - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
+          - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
+          - { label: "Conteúdo (Body)", name: "body", widget: "markdown" }
 
   # --- 3. COLEÇÕES DE ITENS (PASTAS .HTML - JSON-FRONTMATTER) ---
   - name: "comida_de_verdade_itens"
@@ -88,7 +151,7 @@ collections:
     folder: "comida-de-verdade"
     exclude: "index.html"
     extension: "html"
-    format: "json-frontmatter" # CORRIGIDO (Baseado no pomodori.html)
+    format: "json-frontmatter"
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
       - { label: "Permalink", name: "permalink", widget: "string", required: false }
@@ -96,7 +159,9 @@ collections:
       - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
       - { label: "Nome do Autor", name: "author_name", widget: "string", required: false }
       - { label: "Título do Autor", name: "author_title", widget: "string", required: false }
+      - { label: "Página do Autor", name: "author_page", widget: "string", required: false }
       - { label: "Fato Citável", name: "citable_fact", widget: "string", required: false }
+      - { label: "Assinatura", name: "authority_signature", widget: "string", required: false }
       - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
       - { label: "Conteúdo (Body)", name: "body", widget: "markdown" }
 
@@ -105,7 +170,7 @@ collections:
     folder: "receitas/risotos"
     exclude: "index.html"
     extension: "html"
-    format: "json-frontmatter" # CORRIGIDO (Baseado no pomodori.html)
+    format: "json-frontmatter"
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
       - { label: "Permalink", name: "permalink", widget: "string", required: false }
@@ -113,7 +178,9 @@ collections:
       - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
       - { label: "Nome do Autor", name: "author_name", widget: "string", required: false }
       - { label: "Título do Autor", name: "author_title", widget: "string", required: false }
+      - { label: "Página do Autor", name: "author_page", widget: "string", required: false }
       - { label: "Fato Citável", name: "citable_fact", widget: "string", required: false }
+      - { label: "Assinatura", name: "authority_signature", widget: "string", required: false }
       - { label: "Preço", name: "price", widget: "string", required: false }
       - { label: "ID Shopify", name: "shopify_id", widget: "string", required: false }
       - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
@@ -124,7 +191,7 @@ collections:
     folder: "receitas/sopas-funcionais"
     exclude: "index.html"
     extension: "html"
-    format: "json-frontmatter" # CORRIGIDO (Baseado no pomodori.html)
+    format: "json-frontmatter"
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
       - { label: "Permalink", name: "permalink", widget: "string", required: false }
@@ -132,7 +199,9 @@ collections:
       - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
       - { label: "Nome do Autor", name: "author_name", widget: "string", required: false }
       - { label: "Título do Autor", name: "author_title", widget: "string", required: false }
+      - { label: "Página do Autor", name: "author_page", widget: "string", required: false }
       - { label: "Fato Citável", name: "citable_fact", widget: "string", required: false }
+      - { label: "Assinatura", name: "authority_signature", widget: "string", required: false }
       - { label: "Preço", name: "price", widget: "string", required: false }
       - { label: "ID Shopify", name: "shopify_id", widget: "string", required: false }
       - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
@@ -143,7 +212,7 @@ collections:
     folder: "receitas/refeicoes-integrais"
     exclude: "index.html"
     extension: "html"
-    format: "json-frontmatter" # CORRIGIDO (Baseado no pomodori.html)
+    format: "json-frontmatter"
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
       - { label: "Permalink", name: "permalink", widget: "string", required: false }
@@ -151,7 +220,9 @@ collections:
       - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
       - { label: "Nome do Autor", name: "author_name", widget: "string", required: false }
       - { label: "Título do Autor", name: "author_title", widget: "string", required: false }
+      - { label: "Página do Autor", name: "author_page", widget: "string", required: false }
       - { label: "Fato Citável", name: "citable_fact", widget: "string", required: false }
+      - { label: "Assinatura", name: "authority_signature", widget: "string", required: false }
       - { label: "Preço", name: "price", widget: "string", required: false }
       - { label: "ID Shopify", name: "shopify_id", widget: "string", required: false }
       - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
@@ -162,7 +233,7 @@ collections:
     folder: "receitas/emporio-da-chef"
     exclude: "index.html"
     extension: "html"
-    format: "json-frontmatter" # CORRIGIDO (Baseado no pomodori.html)
+    format: "json-frontmatter"
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
       - { label: "Permalink", name: "permalink", widget: "string", required: false }
@@ -170,7 +241,9 @@ collections:
       - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
       - { label: "Nome do Autor", name: "author_name", widget: "string", required: false }
       - { label: "Título do Autor", name: "author_title", widget: "string", required: false }
+      - { label: "Página do Autor", name: "author_page", widget: "string", required: false }
       - { label: "Fato Citável", name: "citable_fact", widget: "string", required: false }
+      - { label: "Assinatura", name: "authority_signature", widget: "string", required: false }
       - { label: "Preço", name: "price", widget: "string", required: false }
       - { label: "ID Shopify", name: "shopify_id", widget: "string", required: false }
       - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
@@ -180,7 +253,7 @@ collections:
     label: "🎯 Receitas - Soluções"
     folder: "receitas/solucoes"
     extension: "html"
-    format: "json-frontmatter" # CORRIGIDO (Baseado no pomodori.html)
+    format: "json-frontmatter"
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
       - { label: "Permalink", name: "permalink", widget: "string", required: false }
@@ -188,7 +261,9 @@ collections:
       - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
       - { label: "Nome do Autor", name: "author_name", widget: "string", required: false }
       - { label: "Título do Autor", name: "author_title", widget: "string", required: false }
+      - { label: "Página do Autor", name: "author_page", widget: "string", required: false }
       - { label: "Fato Citável", name: "citable_fact", widget: "string", required: false }
+      - { label: "Assinatura", name: "authority_signature", widget: "string", required: false }
       - { label: "Preço", name: "price", widget: "string", required: false }
       - { label: "ID Shopify", name: "shopify_id", widget: "string", required: false }
       - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
@@ -198,7 +273,7 @@ collections:
     label: "✍️ Blog da Chef"
     folder: "blog"
     extension: "html"
-    format: "json-frontmatter" # CORRIGIDO (Baseado no pomodori.html)
+    format: "json-frontmatter"
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
       - { label: "Permalink", name: "permalink", widget: "string", required: false }
@@ -206,7 +281,9 @@ collections:
       - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
       - { label: "Nome do Autor", name: "author_name", widget: "string", required: false }
       - { label: "Título do Autor", name: "author_title", widget: "string", required: false }
+      - { label: "Página do Autor", name: "author_page", widget: "string", required: false }
       - { label: "Fato Citável", name: "citable_fact", widget: "string", required: false }
+      - { label: "Assinatura", name: "authority_signature", widget: "string", required: false }
       - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
       - { label: "Conteúdo (Body)", name: "body", widget: "markdown" }
 
@@ -215,7 +292,7 @@ collections:
     folder: "onde-encontrar"
     exclude: "index.html"
     extension: "html"
-    format: "json-frontmatter" # CORRIGIDO (Baseado no pomodori.html)
+    format: "json-frontmatter"
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
       - { label: "Permalink", name: "permalink", widget: "string", required: false }
@@ -223,7 +300,9 @@ collections:
       - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
       - { label: "Nome do Autor", name: "author_name", widget: "string", required: false }
       - { label: "Título do Autor", name: "author_title", widget: "string", required: false }
+      - { label: "Página do Autor", name: "author_page", widget: "string", required: false }
       - { label: "Fato Citável", name: "citable_fact", widget: "string", required: false }
+      - { label: "Assinatura", name: "authority_signature", widget: "string", required: false }
       - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
       - { label: "Conteúdo (Body)", name: "body", widget: "markdown" }
 
@@ -232,13 +311,13 @@ collections:
     label: "🧩 Fragmentos de Conteúdo (IA)"
     folder: "fragmentos"
     extension: "md"
-    format: "yaml-frontmatter" # FACTO: Isto está a funcionar
+    format: "yaml-frontmatter"
     fields:
       # CAMPOS CORRIGIDOS (Baseado no screenshot 17.11.jpeg)
-      - { label: "Layout", name: "layout", widget: "hidden", default: "fragmento-page.njk"}
+      - { label: "Layout", name: "layout", widget: "hidden", default: "fragmento-page.njk" }
       - { label: "Permalink", name: "permalink", widget: "string", required: false }
       - { label: "Título (Pergunta)", name: "title", widget: "string" }
-      - { label: "Conteúdo (Fragmento)", name: "fragmento_texto", widget: "text" } # A CORREÇÃO-CHAVE
+      - { label: "Conteúdo (Fragmento)", name: "fragmento_texto", widget: "text" }
       - { label: "Nome do Autor", name: "author_name", widget: "string", required: false }
       - { label: "Título do Autor", name: "author_title", widget: "string", required: false }
       - { label: "Avatar do Autor", name: "author_avatar", widget: "image", required: false }
@@ -247,6 +326,7 @@ collections:
       - { label: "Link CTA", name: "cta_link", widget: "string", required: false }
       - { label: "Texto CTA", name: "cta_texto", widget: "string", required: false }
       - { label: "Texto Opcional CTA", name: "cta_texto_opcional", widget: "string", required: false }
+      # O "body" não existe nesta coleção, o texto principal é o "fragmento_texto"
 
   # --- 5. CONFIGURAÇÕES GERAIS ---
   - name: "settings"
