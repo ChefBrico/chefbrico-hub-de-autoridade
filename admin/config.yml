@@ -1,11 +1,9 @@
 # ===================================================================
-# PAINEL DE COMANDO v17.0 - O "MAPA DOS FACTOS"
+# PAINEL DE COMANDO v18.0 - O "MAPA DOS FACTOS"
 # ===================================================================
-# 1. Usa os NOMES DE CAMPOS corretos (ex: "fragmento_texto")
-#    baseado nos seus screenshots e códigos.
-# 2. Usa os FORMATOS corretos (json-frontmatter e yaml-frontmatter)
-#    baseado nos seus exemplos e nos screenshots do que FUNCIONA.
-# 3. Mantém a lógica de "excluir index.html" e "sem src/".
+# CORREÇÃO: Adiciona `frontmatter_delimiter: ["---json", "---"]`
+# a todas as coleções que usam 'format: "json-frontmatter"'.
+# ===================================================================
 
 backend:
   name: git-gateway
@@ -27,6 +25,7 @@ collections:
         name: "home"
         file: "index.html"
         format: "json-frontmatter"
+        frontmatter_delimiter: ["---json", "---"] # <-- CORREÇÃO
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
           - { label: "Permalink", name: "permalink", widget: "string", required: false }
@@ -39,6 +38,7 @@ collections:
         name: "chefbox"
         file: "chefbox/index.html"
         format: "json-frontmatter"
+        frontmatter_delimiter: ["---json", "---"] # <-- CORREÇÃO
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
           - { label: "Permalink", name: "permalink", widget: "string", required: false }
@@ -51,6 +51,7 @@ collections:
         name: "club"
         file: "clube/index.html"
         format: "json-frontmatter"
+        frontmatter_delimiter: ["---json", "---"] # <-- CORREÇÃO
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
           - { label: "Permalink", name: "permalink", widget: "string", required: false }
@@ -63,6 +64,7 @@ collections:
         name: "faq"
         file: "faq/faq.html"
         format: "json-frontmatter"
+        frontmatter_delimiter: ["---json", "---"] # <-- CORREÇÃO
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
           - { label: "Permalink", name: "permalink", widget: "string", required: false }
@@ -79,6 +81,7 @@ collections:
         name: "idx_comida"
         file: "comida-de-verdade/index.html"
         format: "json-frontmatter"
+        frontmatter_delimiter: ["---json", "---"] # <-- CORREÇÃO
         fields:
           - { label: "Título", name: "title", widget: "string", required: false }
           - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
@@ -89,6 +92,7 @@ collections:
         name: "idx_receitas"
         file: "receitas/index.html"
         format: "json-frontmatter"
+        frontmatter_delimiter: ["---json", "---"] # <-- CORREÇÃO
         fields:
           - { label: "Título", name: "title", widget: "string", required: false }
           - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
@@ -99,6 +103,7 @@ collections:
         name: "idx_risotos"
         file: "receitas/risotos/index.html"
         format: "json-frontmatter"
+        frontmatter_delimiter: ["---json", "---"] # <-- CORREÇÃO
         fields:
           - { label: "Título", name: "title", widget: "string", required: false }
           - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
@@ -109,6 +114,7 @@ collections:
         name: "idx_sopas"
         file: "receitas/sopas-funcionais/index.html"
         format: "json-frontmatter"
+        frontmatter_delimiter: ["---json", "---"] # <-- CORREÇÃO
         fields:
           - { label: "Título", name: "title", widget: "string", required: false }
           - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
@@ -119,6 +125,7 @@ collections:
         name: "idx_refeicoes"
         file: "receitas/refeicoes-integrais/index.html"
         format: "json-frontmatter"
+        frontmatter_delimiter: ["---json", "---"] # <-- CORREÇÃO
         fields:
           - { label: "Título", name: "title", widget: "string", required: false }
           - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
@@ -129,6 +136,7 @@ collections:
         name: "idx_emporio"
         file: "receitas/emporio-da-chef/index.html"
         format: "json-frontmatter"
+        frontmatter_delimiter: ["---json", "---"] # <-- CORREÇÃO
         fields:
           - { label: "Título", name: "title", widget: "string", required: false }
           - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
@@ -139,19 +147,21 @@ collections:
         name: "idx_onde_encontrar"
         file: "onde-encontrar/index.html"
         format: "json-frontmatter"
+        frontmatter_delimiter: ["---json", "---"] # <-- CORREÇÃO
         fields:
           - { label: "Título", name: "title", widget: "string", required: false }
           - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
           - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
           - { label: "Conteúdo (Body)", name: "body", widget: "markdown" }
 
-  # --- 3. COLEÇÕES DE ITENS (PASTAS .HTML - JSON-FRONTMATTER) ---
+  # --- 3. COLEÇÕES DE ITENS (PASTAS.HTML - JSON-FRONTMATTER) ---
   - name: "comida_de_verdade_itens"
     label: "🥗 Itens 'Comida de Verdade'"
     folder: "comida-de-verdade"
     exclude: "index.html"
     extension: "html"
     format: "json-frontmatter"
+    frontmatter_delimiter: ["---json", "---"] # <-- CORREÇÃO
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
       - { label: "Permalink", name: "permalink", widget: "string", required: false }
@@ -171,6 +181,7 @@ collections:
     exclude: "index.html"
     extension: "html"
     format: "json-frontmatter"
+    frontmatter_delimiter: ["---json", "---"] # <-- CORREÇÃO
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
       - { label: "Permalink", name: "permalink", widget: "string", required: false }
@@ -192,6 +203,7 @@ collections:
     exclude: "index.html"
     extension: "html"
     format: "json-frontmatter"
+    frontmatter_delimiter: ["---json", "---"] # <-- CORREÇÃO
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
       - { label: "Permalink", name: "permalink", widget: "string", required: false }
@@ -213,6 +225,7 @@ collections:
     exclude: "index.html"
     extension: "html"
     format: "json-frontmatter"
+    frontmatter_delimiter: ["---json", "---"] # <-- CORREÇÃO
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
       - { label: "Permalink", name: "permalink", widget: "string", required: false }
@@ -234,6 +247,7 @@ collections:
     exclude: "index.html"
     extension: "html"
     format: "json-frontmatter"
+    frontmatter_delimiter: ["---json", "---"] # <-- CORREÇÃO
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
       - { label: "Permalink", name: "permalink", widget: "string", required: false }
@@ -254,6 +268,7 @@ collections:
     folder: "receitas/solucoes"
     extension: "html"
     format: "json-frontmatter"
+    frontmatter_delimiter: ["---json", "---"] # <-- CORREÇÃO
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
       - { label: "Permalink", name: "permalink", widget: "string", required: false }
@@ -274,6 +289,7 @@ collections:
     folder: "blog"
     extension: "html"
     format: "json-frontmatter"
+    frontmatter_delimiter: ["---json", "---"] # <-- CORREÇÃO
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
       - { label: "Permalink", name: "permalink", widget: "string", required: false }
@@ -293,6 +309,7 @@ collections:
     exclude: "index.html"
     extension: "html"
     format: "json-frontmatter"
+    frontmatter_delimiter: ["---json", "---"] # <-- CORREÇÃO
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
       - { label: "Permalink", name: "permalink", widget: "string", required: false }
@@ -306,14 +323,13 @@ collections:
       - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
       - { label: "Conteúdo (Body)", name: "body", widget: "markdown" }
 
-  # --- 4. FRAGMENTOS (PASTA .MD - YAML-FRONTMATTER) ---
+  # --- 4. FRAGMENTOS (PASTA.MD - YAML-FRONTMATTER) ---
   - name: "fragmentos"
     label: "🧩 Fragmentos de Conteúdo (IA)"
     folder: "fragmentos"
     extension: "md"
-    format: "yaml-frontmatter"
+    format: "yaml-frontmatter" # <-- SEM ALTERAÇÃO. Esta coleção estava correta.
     fields:
-      # CAMPOS CORRIGIDOS (Baseado no screenshot 17.11.jpeg)
       - { label: "Layout", name: "layout", widget: "hidden", default: "fragmento-page.njk" }
       - { label: "Permalink", name: "permalink", widget: "string", required: false }
       - { label: "Título (Pergunta)", name: "title", widget: "string" }
@@ -331,11 +347,11 @@ collections:
   # --- 5. CONFIGURAÇÕES GERAIS ---
   - name: "settings"
     label: "⚙️ Configurações Gerais do Site"
-    files: 
+    files:
       - label: "Dados Gerais (meta.json)"
         name: "meta"
         file: "_data/meta.json"
-        format: "json"
+        format: "json" # <-- SEM ALTERAÇÃO. 'format: json' refere-se a ficheiros que são *apenas* JSON.
         fields:
           - { label: "Título Padrão do Site", name: "siteTitle", widget: "string", required: false }
           - { label: "Descrição Padrão do Site", name: "siteDescription", widget: "string", required: false }
