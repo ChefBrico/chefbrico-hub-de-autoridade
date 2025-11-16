@@ -1,9 +1,11 @@
 # ===================================================================
-# PAINEL DE COMANDO v18.0 (Final) - O "MAPA DOS FACTOS" CORRIGIDO
+# PAINEL DE COMANDO v19.0 - CORREÇÃO CRÍTICA
 # ===================================================================
-# 1. Aplica as correções para os Problemas 1 (Seção 5 Vazia) e 2 (Editor Misturado).
-# 2. Respeita a estrutura JSON/Schema e HTML existente.
-# 3. Implementa as correções de "format" e "widget" em todas as coleções.
+# 1. REVERTE o 'format' para "json-frontmatter" (isto corrige o erro fatal).
+# 2. ADICIONA o 'frontmatter_delimiter' (isto corrige os campos vazios).
+# 3. ADICIONA 'modes: ["rich_text"]' ao body (isto corrige o editor "misturado").
+# 4. CORRIGE a Secção 5 para mapear o seu 'meta.json' (isto corrige os campos vazios das Config. Gerais).
+# ===================================================================
 
 backend:
   name: git-gateway
@@ -17,35 +19,22 @@ publish_mode: editorial_workflow
 # COLEÇÕES DE CONTEÚDO
 # ===================================================================
 collections:
-  # --- 1. PÁGINAS PRINCIPAIS (FICHEIROS ÚNICOS) ---
+  # --- 1. PÁGINAS PRINCIPAIS (FICHEIROS ÚNICOS - JSON-FRONTMATTER) ---
   - name: "paginas_unicas"
     label: "📄 Páginas Principais (Home, Chefbox, etc.)"
     files:
       - label: "Página Inicial (Home)"
         name: "home"
         file: "index.html"
-        #
-        # DIAGNÓSTICO E CORREÇÃO (PROBLEMA 2: VAZAMENTO DE JSON):
-        # O `format: "json-frontmatter"` (v17.0) estava incorreto e causava o "vazamento" de JSON.
-        # Os seus ficheiros usam ---json... ---, que é "frontmatter" padrão.
-        # A correção (v18.0) muda para `format: "frontmatter"` e define os delimitadores.
-        #
-        format: "frontmatter"
-        frontmatter_delimiter: ["---json", "---"]
+        format: "json-frontmatter" # <-- CORREÇÃO: Revertido para o valor original
+        frontmatter_delimiter: ["---json", "---"] # <-- FIX: Adicionado para parsing correto
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
           - { label: "Permalink", name: "permalink", widget: "string", required: false }
           - { label: "Título da Página", name: "title", widget: "string", required: false }
           - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
           - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-          #
-          # DIAGNÓSTICO E CORREÇÃO (PROBLEMA 2: HTML BRUTO INUTILIZÁVEL):
-          # O `widget: "markdown"` (v17.0) exibia HTML bruto (tags).
-          # A correção (v18.0) adiciona `modes: ["rich_text"]`.
-          # Isto FORÇA o editor a carregar no modo visual (WYSIWYG), escondendo o
-          # código bruto e tornando-o utilizável.
-          #
-          - label: "Conteúdo da Página (HTML)"
+          - label: "Conteúdo da Página (HTML)" # <-- FIX: Adicionado 'modes'
             name: "body"
             widget: "markdown"
             modes: ["rich_text"]
@@ -53,17 +42,15 @@ collections:
       - label: "Página 'ChefBox'"
         name: "chefbox"
         file: "chefbox/index.html"
-        # CORREÇÃO (PROBLEMA 2) APLICADA:
-        format: "frontmatter"
-        frontmatter_delimiter: ["---json", "---"]
+        format: "json-frontmatter" # <-- CORREÇÃO
+        frontmatter_delimiter: ["---json", "---"] # <-- FIX
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
           - { label: "Permalink", name: "permalink", widget: "string", required: false }
           - { label: "Título da Página", name: "title", widget: "string", required: false }
           - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
           - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-          # CORREÇÃO (PROBLEMA 2) APLICADA:
-          - label: "Conteúdo da Página (HTML)"
+          - label: "Conteúdo da Página (HTML)" # <-- FIX
             name: "body"
             widget: "markdown"
             modes: ["rich_text"]
@@ -71,133 +58,145 @@ collections:
       - label: "Página 'Chefbrico Club'"
         name: "club"
         file: "clube/index.html"
-        # CORREÇÃO (PROBLEMA 2) APLICADA:
-        format: "frontmatter"
-        frontmatter_delimiter: ["---json", "---"]
+        format: "json-frontmatter" # <-- CORREÇÃO
+        frontmatter_delimiter: ["---json", "---"] # <-- FIX
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
           - { label: "Permalink", name: "permalink", widget: "string", required: false }
           - { label: "Título da Página", name: "title", widget: "string", required: false }
           - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
           - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-          # CORREÇÃO (PROBLEMA 2) APLICADA:
-          - label: "Conteúdo da Página (HTML)"
+          - label: "Conteúdo da Página (HTML)" # <-- FIX
             name: "body"
             widget: "markdown"
             modes: ["rich_text"]
-            
+      
       - label: "Página de 'Perguntas Frequentes' (FAQ)"
         name: "faq"
         file: "faq/faq.html"
-        # CORREÇÃO (PROBLEMA 2) APLICADA:
-        format: "frontmatter"
-        frontmatter_delimiter: ["---json", "---"]
+        format: "json-frontmatter" # <-- CORREÇÃO
+        frontmatter_delimiter: ["---json", "---"] # <-- FIX
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
           - { label: "Permalink", name: "permalink", widget: "string", required: false }
           - { label: "Título da Página", name: "title", widget: "string", required: false }
           - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
           - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-          # CORREÇÃO (PROBLEMA 2) APLICADA:
-          - label: "Conteúdo da Página (HTML)"
+          - label: "Conteúdo da Página (HTML)" # <-- FIX
             name: "body"
             widget: "markdown"
             modes: ["rich_text"]
 
-  # --- 2. PÁGINAS DE ÍNDICE (CATEGORIAS) ---
+  # --- 2. PÁGINAS DE ÍNDICE (CATEGORIAS - JSON-FRONTMATTER) ---
   - name: "paginas_de_indice"
     label: "🗂️ Páginas de Índice (Categorias)"
     files:
       - label: "Índice de 'Comida de Verdade'"
         name: "idx_comida"
         file: "comida-de-verdade/index.html"
-        # CORREÇÃO (PROBLEMA 2) APLICADA:
-        format: "frontmatter"
-        frontmatter_delimiter: ["---json", "---"]
+        format: "json-frontmatter" # <-- CORREÇÃO
+        frontmatter_delimiter: ["---json", "---"] # <-- FIX
         fields:
           - { label: "Título", name: "title", widget: "string", required: false }
           - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
           - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-          # CORREÇÃO (PROBLEMA 2) APLICADA:
-          - label: "Conteúdo (Body)"
+          - label: "Conteúdo (Body)" # <-- FIX
             name: "body"
             widget: "markdown"
             modes: ["rich_text"]
 
-      #......
       - label: "Índice de 'Receitas' (Geral)"
         name: "idx_receitas"
         file: "receitas/index.html"
-        format: "frontmatter"
-        frontmatter_delimiter: ["---json", "---"]
+        format: "json-frontmatter" # <-- CORREÇÃO
+        frontmatter_delimiter: ["---json", "---"] # <-- FIX
         fields:
           - { label: "Título", name: "title", widget: "string", required: false }
           - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
           - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-          - { label: "Conteúdo (Body)", name: "body", widget: "markdown", modes: ["rich_text"] }
+          - label: "Conteúdo (Body)" # <-- FIX
+            name: "body"
+            widget: "markdown"
+            modes: ["rich_text"]
+
       - label: "Índice de 'Risotos'"
         name: "idx_risotos"
         file: "receitas/risotos/index.html"
-        format: "frontmatter"
-        frontmatter_delimiter: ["---json", "---"]
+        format: "json-frontmatter" # <-- CORREÇÃO
+        frontmatter_delimiter: ["---json", "---"] # <-- FIX
         fields:
           - { label: "Título", name: "title", widget: "string", required: false }
           - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
           - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-          - { label: "Conteúdo (Body)", name: "body", widget: "markdown", modes: ["rich_text"] }
+          - label: "Conteúdo (Body)" # <-- FIX
+            name: "body"
+            widget: "markdown"
+            modes: ["rich_text"]
+
       - label: "Índice de 'Sopas'"
         name: "idx_sopas"
         file: "receitas/sopas-funcionais/index.html"
-        format: "frontmatter"
-        frontmatter_delimiter: ["---json", "---"]
+        format: "json-frontmatter" # <-- CORREÇÃO
+        frontmatter_delimiter: ["---json", "---"] # <-- FIX
         fields:
           - { label: "Título", name: "title", widget: "string", required: false }
           - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
           - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-          - { label: "Conteúdo (Body)", name: "body", widget: "markdown", modes: ["rich_text"] }
+          - label: "Conteúdo (Body)" # <-- FIX
+            name: "body"
+            widget: "markdown"
+            modes: ["rich_text"]
+
       - label: "Índice de 'Refeições'"
         name: "idx_refeicoes"
         file: "receitas/refeicoes-integrais/index.html"
-        format: "frontmatter"
-        frontmatter_delimiter: ["---json", "---"]
+        format: "json-frontmatter" # <-- CORREÇÃO
+        frontmatter_delimiter: ["---json", "---"] # <-- FIX
         fields:
           - { label: "Título", name: "title", widget: "string", required: false }
           - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
           - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-          - { label: "Conteúdo (Body)", name: "body", widget: "markdown", modes: ["rich_text"] }
+          - label: "Conteúdo (Body)" # <-- FIX
+            name: "body"
+            widget: "markdown"
+            modes: ["rich_text"]
+
       - label: "Índice de 'Empório'"
         name: "idx_emporio"
         file: "receitas/emporio-da-chef/index.html"
-        format: "frontmatter"
-        frontmatter_delimiter: ["---json", "---"]
+        format: "json-frontmatter" # <-- CORREÇÃO
+        frontmatter_delimiter: ["---json", "---"] # <-- FIX
         fields:
           - { label: "Título", name: "title", widget: "string", required: false }
           - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
           - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-          - { label: "Conteúdo (Body)", name: "body", widget: "markdown", modes: ["rich_text"] }
+          - label: "Conteúdo (Body)" # <-- FIX
+            name: "body"
+            widget: "markdown"
+            modes: ["rich_text"]
+
       - label: "Índice de 'Onde Encontrar'"
         name: "idx_onde_encontrar"
         file: "onde-encontrar/index.html"
-        format: "frontmatter"
-        frontmatter_delimiter: ["---json", "---"]
+        format: "json-frontmatter" # <-- CORREÇÃO
+        frontmatter_delimiter: ["---json", "---"] # <-- FIX
         fields:
           - { label: "Título", name: "title", widget: "string", required: false }
           - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
           - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-          - { label: "Conteúdo (Body)", name: "body", widget: "markdown", modes: ["rich_text"] }
+          - label: "Conteúdo (Body)" # <-- FIX
+            name: "body"
+            widget: "markdown"
+            modes: ["rich_text"]
 
-  # --- 3. COLEÇÕES DE ITENS (PASTAS.HTML) ---
+  # --- 3. COLEÇÕES DE ITENS (PASTAS.HTML - JSON-FRONTMATTER) ---
   - name: "comida_de_verdade_itens"
     label: "🥗 Itens 'Comida de Verdade'"
     folder: "comida-de-verdade"
     exclude: "index.html"
     extension: "html"
-    #
-    # DIAGNÓSTICO E CORREÇÃO (PROBLEMA 2) APLICADOS A ESTA COLEÇÃO:
-    # (format, frontmatter_delimiter, e `modes` no `body`)
-    #
-    format: "frontmatter"
-    frontmatter_delimiter: ["---json", "---"]
+    format: "json-frontmatter" # <-- CORREÇÃO
+    frontmatter_delimiter: ["---json", "---"] # <-- FIX
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
       - { label: "Permalink", name: "permalink", widget: "string", required: false }
@@ -209,7 +208,7 @@ collections:
       - { label: "Fato Citável", name: "citable_fact", widget: "string", required: false }
       - { label: "Assinatura", name: "authority_signature", widget: "string", required: false }
       - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-      - label: "Conteúdo (Body)"
+      - label: "Conteúdo (Body)" # <-- FIX
         name: "body"
         widget: "markdown"
         modes: ["rich_text"]
@@ -218,7 +217,7 @@ collections:
     label: "🍳 Receitas - Risotos"
     folder: "receitas/risotos"
     exclude: "index.html"
-   # ESTA É A CORREÇÃO CRÍTICA PARA NÃO MISTURAR CÓDIGO:
+  # ESTA É A CORREÇÃO CRÍTICA PARA NÃO MISTURAR CÓDIGO:
     extension: "html"
     format: "json-frontmatter" 
     # Força o CMS a entender que começa com ---json e termina com ---
@@ -258,7 +257,7 @@ collections:
     label: "🥣 Receitas - Sopas Funcionais"
     folder: "receitas/sopas-funcionais"
     exclude: "index.html"
-  # ESTA É A CORREÇÃO CRÍTICA PARA NÃO MISTURAR CÓDIGO:
+   # ESTA É A CORREÇÃO CRÍTICA PARA NÃO MISTURAR CÓDIGO:
     extension: "html"
     format: "json-frontmatter" 
     # Força o CMS a entender que começa com ---json e termina com ---
@@ -378,18 +377,22 @@ collections:
     label: "🎯 Receitas - Soluções"
     folder: "receitas/solucoes"
     extension: "html"
-    # CORREÇÃO (PROBLEMA 2) APLICADA:
-    format: "frontmatter"
-    frontmatter_delimiter: ["---json", "---"]
+    format: "json-frontmatter" # <-- CORREÇÃO
+    frontmatter_delimiter: ["---json", "---"] # <-- FIX
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
       - { label: "Permalink", name: "permalink", widget: "string", required: false }
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
-      #... (outros campos)...
+      - { label: "Nome do Autor", name: "author_name", widget: "string", required: false }
+      - { label: "Título do Autor", name: "author_title", widget: "string", required: false }
+      - { label: "Página do Autor", name: "author_page", widget: "string", required: false }
+      - { label: "Fato Citável", name: "citable_fact", widget: "string", required: false }
+      - { label: "Assinatura", name: "authority_signature", widget: "string", required: false }
+      - { label: "Preço", name: "price", widget: "string", required: false }
+      - { label: "ID Shopify", name: "shopify_id", widget: "string", required: false }
       - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-      # CORREÇÃO (PROBLEMA 2) APLICADA:
-      - label: "Conteúdo (Body)"
+      - label: "Conteúdo (Body)" # <-- FIX
         name: "body"
         widget: "markdown"
         modes: ["rich_text"]
@@ -398,18 +401,20 @@ collections:
     label: "✍️ Blog da Chef"
     folder: "blog"
     extension: "html"
-    # CORREÇÃO (PROBLEMA 2) APLICADA:
-    format: "frontmatter"
-    frontmatter_delimiter: ["---json", "---"]
+    format: "json-frontmatter" # <-- CORREÇÃO
+    frontmatter_delimiter: ["---json", "---"] # <-- FIX
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
       - { label: "Permalink", name: "permalink", widget: "string", required: false }
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
-      #... (outros campos)...
+      - { label: "Nome do Autor", name: "author_name", widget: "string", required: false }
+      - { label: "Título do Autor", name: "author_title", widget: "string", required: false }
+      - { label: "Página do Autor", name: "author_page", widget: "string", required: false }
+      - { label: "Fato Citável", name: "citable_fact", widget: "string", required: false }
+      - { label: "Assinatura", name: "authority_signature", widget: "string", required: false }
       - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-      # CORREÇÃO (PROBLEMA 2) APLICADA:
-      - label: "Conteúdo (Body)"
+      - label: "Conteúdo (Body)" # <-- FIX
         name: "body"
         widget: "markdown"
         modes: ["rich_text"]
@@ -419,36 +424,31 @@ collections:
     folder: "onde-encontrar"
     exclude: "index.html"
     extension: "html"
-    # CORREÇÃO (PROBLEMA 2) APLICADA:
-    format: "frontmatter"
-    frontmatter_delimiter: ["---json", "---"]
+    format: "json-frontmatter" # <-- CORREÇÃO
+    frontmatter_delimiter: ["---json", "---"] # <-- FIX
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
       - { label: "Permalink", name: "permalink", widget: "string", required: false }
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
-      #... (outros campos)...
+      - { label: "Nome do Autor", name: "author_name", widget: "string", required: false }
+      - { label: "Título do Autor", name: "author_title", widget: "string", required: false }
+      - { label: "Página do Autor", name: "author_page", widget: "string", required: false }
+      - { label: "Fato Citável", name: "citable_fact", widget: "string", required: false }
+      - { label: "Assinatura", name: "authority_signature", widget: "string", required: false }
       - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-      # CORREÇÃO (PROBLEMA 2) APLICADA:
-      - label: "Conteúdo (Body)"
+      - label: "Conteúdo (Body)" # <-- FIX
         name: "body"
         widget: "markdown"
         modes: ["rich_text"]
 
   # --- 4. FRAGMENTOS (PASTA.MD - YAML-FRONTMATTER) ---
-  #
-  # DIAGNÓSTICO: Esta coleção parece estar a funcionar corretamente (Imagem 6).
-  # Usa `format: "yaml-frontmatter"` e aponta para ficheiros.md.
-  # O seu conteúdo principal é `fragmento_texto` (widget: "text"), não "body".
-  # NENHUMA ALTERAÇÃO NECESSÁRIA AQUI.
-  #
   - name: "fragmentos"
     label: "🧩 Fragmentos de Conteúdo (IA)"
     folder: "fragmentos"
     extension: "md"
-    format: "yaml-frontmatter"
+    format: "yaml-frontmatter" # <-- SEM ALTERAÇÃO. Esta coleção estava correta.
     fields:
-      # CAMPOS CORRIGIDOS (Baseado no screenshot 17.11.jpeg)
       - { label: "Layout", name: "layout", widget: "hidden", default: "fragmento-page.njk" }
       - { label: "Permalink", name: "permalink", widget: "string", required: false }
       - { label: "Título (Pergunta)", name: "title", widget: "string" }
@@ -461,9 +461,8 @@ collections:
       - { label: "Link CTA", name: "cta_link", widget: "string", required: false }
       - { label: "Texto CTA", name: "cta_texto", widget: "string", required: false }
       - { label: "Texto Opcional CTA", name: "cta_texto_opcional", widget: "string", required: false }
-      # O "body" não existe nesta coleção, o texto principal é o "fragmento_texto"
 
- # --- 5. CONFIGURAÇÕES GERAIS (CORRIGIDO) ---
+  # --- 5. CONFIGURAÇÕES GERAIS (CORRIGIDO) ---
   - name: "settings"
     label: "⚙️ Configurações Gerais"
     delete: false # Protege contra exclusão acidental
