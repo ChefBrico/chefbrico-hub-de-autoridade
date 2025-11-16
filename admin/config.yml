@@ -1,24 +1,27 @@
 # ===================================================================
-# PAINEL DE COMANDO v21.0 - PADRONIZAÇÃO COMPLETA
+# PAINEL V22 - O ATELIÊ DA CHEF (LIMPO E ORGANIZADO)
 # ===================================================================
-# Todas as coleções de receitas agora têm a mesma estrutura rica:
-# - SEO
-# - Autor
-# - Fato Citável
-# - Schema Seguro (Code Widget)
-# - Conteúdo Rico
+# Objetivo: Remover distrações técnicas e permitir foco total na escrita.
+# - Editor visual limpo (sem códigos misturados).
+# - Campos técnicos isolados.
+# - Estrutura robusta que não quebra.
 # ===================================================================
 
 backend:
   name: git-gateway
   branch: desenvolvimento
+
 media_folder: "imagens"
 public_folder: "/imagens"
 locale: 'pt'
 publish_mode: editorial_workflow
 
+# -------------------------------------------------------------------
+# DEFINIÇÃO DAS COLEÇÕES
+# -------------------------------------------------------------------
 collections:
-  # --- 1. PÁGINAS PRINCIPAIS ---
+
+  # --- 1. PÁGINAS PRINCIPAIS (Home, ChefBox, etc.) ---
   - name: "paginas_unicas"
     label: "📄 Páginas Principais"
     files:
@@ -28,11 +31,11 @@ collections:
         format: "json-frontmatter"
         frontmatter_delimiter: ["---json", "---"]
         fields:
-          - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
+          - { label: "Layout Técnico (Não Mexer)", name: "layout", widget: "hidden", default: "base.njk" }
           - { label: "Título da Página", name: "title", widget: "string", required: false }
-          - { label: "Descrição SEO", name: "description", widget: "text", required: false }
-          - { label: "Schema (Técnico)", name: "schema", widget: "code", default: "{}", required: false }
-          - { label: "Conteúdo HTML", name: "body", widget: "markdown", modes: ["rich_text"] }
+          - { label: "Resumo para Google (SEO)", name: "description", widget: "text", required: false }
+          - { label: "Dados Técnicos (Schema - Ignorar)", name: "schema", widget: "code", default: "{}", required: false, collapsed: true }
+          - { label: "📝 Editor Visual (Escreva Aqui)", name: "body", widget: "markdown", modes: ["rich_text"] }
 
       - label: "Página ChefBox"
         name: "chefbox"
@@ -41,8 +44,9 @@ collections:
         frontmatter_delimiter: ["---json", "---"]
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
-          - { label: "Título", name: "title", widget: "string" }
-          - { label: "Conteúdo HTML", name: "body", widget: "markdown", modes: ["rich_text"] }
+          - { label: "Título da Página", name: "title", widget: "string" }
+          - { label: "Dados Técnicos (Schema)", name: "schema", widget: "code", default: "{}", required: false, collapsed: true }
+          - { label: "📝 Editor Visual", name: "body", widget: "markdown", modes: ["rich_text"] }
 
       - label: "Clube ChefBrico"
         name: "club"
@@ -52,9 +56,9 @@ collections:
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
           - { label: "Título", name: "title", widget: "string" }
-          - { label: "Conteúdo HTML", name: "body", widget: "markdown", modes: ["rich_text"] }
+          - { label: "📝 Editor Visual", name: "body", widget: "markdown", modes: ["rich_text"] }
 
-      - label: "FAQ"
+      - label: "Perguntas Frequentes (FAQ)"
         name: "faq"
         file: "faq/faq.html"
         format: "json-frontmatter"
@@ -62,31 +66,35 @@ collections:
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
           - { label: "Título", name: "title", widget: "string" }
-          - { label: "Conteúdo HTML", name: "body", widget: "markdown", modes: ["rich_text"] }
+          - { label: "📝 Editor Visual", name: "body", widget: "markdown", modes: ["rich_text"] }
 
-  # --- 2. PÁGINAS DE ÍNDICE ---
+  # --- 2. PÁGINAS DE ÍNDICE (Categorias) ---
   - name: "paginas_de_indice"
-    label: "🗂️ Páginas de Índice"
+    label: "🗂️ Índices e Categorias"
     files:
-      - label: "Índice Comida de Verdade"
+      - label: "Índice: Comida de Verdade"
         name: "idx_comida"
         file: "comida-de-verdade/index.html"
         format: "json-frontmatter"
         frontmatter_delimiter: ["---json", "---"]
         fields:
-          - { label: "Título", name: "title", widget: "string" }
-          - { label: "Conteúdo", name: "body", widget: "markdown", modes: ["rich_text"] }
+          - { label: "Título da Categoria", name: "title", widget: "string" }
+          - { label: "Resumo SEO", name: "description", widget: "text", required: false }
+          - { label: "📝 Texto de Apresentação", name: "body", widget: "markdown", modes: ["rich_text"] }
 
-      - label: "Índice Receitas Geral"
+      - label: "Índice: Receitas Geral"
         name: "idx_receitas"
         file: "receitas/index.html"
         format: "json-frontmatter"
         frontmatter_delimiter: ["---json", "---"]
         fields:
           - { label: "Título", name: "title", widget: "string" }
-          - { label: "Conteúdo", name: "body", widget: "markdown", modes: ["rich_text"] }
+          - { label: "Resumo SEO", name: "description", widget: "text", required: false }
+          - { label: "📝 Texto de Apresentação", name: "body", widget: "markdown", modes: ["rich_text"] }
 
-  # --- 3. RECEITAS E ITENS (PADRONIZADOS) ---
+  # --- 3. RECEITAS E ARTIGOS (Onde a Mágica Acontece) ---
+  # PADRONIZAÇÃO TOTAL: Todas as receitas têm a mesma estrutura limpa.
+  
   - name: "risotos"
     label: "🍳 Receitas - Risotos"
     folder: "receitas/risotos"
@@ -96,14 +104,21 @@ collections:
     frontmatter_delimiter: ["---json", "---"]
     create: true
     fields:
-      - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
-      - { label: "Permalink", name: "permalink", widget: "string" }
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Descrição SEO", name: "description", widget: "text" }
+      - { label: "Layout (Não Mexer)", name: "layout", widget: "hidden", default: "base.njk" }
+      - { label: "Link Permanente (Slug)", name: "permalink", widget: "string", hint: "Ex: /receitas/risotos/meu-novo-risoto/" }
+      - { label: "Título da Receita", name: "title", widget: "string" }
+      - { label: "Resumo Curto (SEO)", name: "description", widget: "text", hint: "Aparece no Google e no WhatsApp." }
+      
+      # Bloco de Autoridade (EEAT)
       - { label: "Autor", name: "author_name", widget: "string", default: "Maria Conceição" }
-      - { label: "Fato Citável", name: "citable_fact", widget: "string" }
-      - { label: "Schema JSON", name: "schema", widget: "code", default: "{}", required: false }
-      - { label: "Conteúdo da Receita", name: "body", widget: "markdown", modes: ["rich_text"] }
+      - { label: "Cargo/Título", name: "author_title", widget: "string", default: "Fundadora e Chef de Criação" }
+      - { label: "Fato Citável (Curiosidade)", name: "citable_fact", widget: "string", required: false }
+      
+      # Bloco Técnico (Colapsado para não atrapalhar)
+      - { label: "⚙️ Dados Técnicos (Schema JSON)", name: "schema", widget: "code", default: "{}", required: false, collapsed: true, hint: "Área técnica. Só mexa se necessário." }
+      
+      # O Espaço de Criação
+      - { label: "📝 Escreva sua Receita Aqui", name: "body", widget: "markdown", modes: ["rich_text"], hint: "Use este espaço para contar a história e o passo a passo." }
 
   - name: "sopas"
     label: "🥣 Receitas - Sopas"
@@ -113,15 +128,15 @@ collections:
     format: "json-frontmatter"
     frontmatter_delimiter: ["---json", "---"]
     create: true
-    fields: # PADRONIZADO COM RISOTOS
+    fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
-      - { label: "Permalink", name: "permalink", widget: "string" }
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Descrição SEO", name: "description", widget: "text" }
+      - { label: "Link Permanente", name: "permalink", widget: "string" }
+      - { label: "Título da Receita", name: "title", widget: "string" }
+      - { label: "Resumo SEO", name: "description", widget: "text" }
       - { label: "Autor", name: "author_name", widget: "string", default: "Maria Conceição" }
-      - { label: "Fato Citável", name: "citable_fact", widget: "string" }
-      - { label: "Schema JSON", name: "schema", widget: "code", default: "{}", required: false }
-      - { label: "Conteúdo da Receita", name: "body", widget: "markdown", modes: ["rich_text"] }
+      - { label: "Fato Citável", name: "citable_fact", widget: "string", required: false }
+      - { label: "⚙️ Dados Técnicos", name: "schema", widget: "code", default: "{}", required: false, collapsed: true }
+      - { label: "📝 Escreva sua Receita Aqui", name: "body", widget: "markdown", modes: ["rich_text"] }
 
   - name: "refeicoes"
     label: "🍲 Refeições Integrais"
@@ -131,15 +146,12 @@ collections:
     format: "json-frontmatter"
     frontmatter_delimiter: ["---json", "---"]
     create: true
-    fields: # PADRONIZADO COM RISOTOS
-      - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
-      - { label: "Permalink", name: "permalink", widget: "string" }
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Descrição SEO", name: "description", widget: "text" }
+    fields:
+      - { label: "Título da Receita", name: "title", widget: "string" }
+      - { label: "Resumo SEO", name: "description", widget: "text" }
       - { label: "Autor", name: "author_name", widget: "string", default: "Maria Conceição" }
-      - { label: "Fato Citável", name: "citable_fact", widget: "string" }
-      - { label: "Schema JSON", name: "schema", widget: "code", default: "{}", required: false }
-      - { label: "Conteúdo da Receita", name: "body", widget: "markdown", modes: ["rich_text"] }
+      - { label: "⚙️ Dados Técnicos", name: "schema", widget: "code", default: "{}", required: false, collapsed: true }
+      - { label: "📝 Escreva sua Receita Aqui", name: "body", widget: "markdown", modes: ["rich_text"] }
 
   - name: "emporio"
     label: "🌶️ Empório da Chef"
@@ -149,31 +161,26 @@ collections:
     format: "json-frontmatter"
     frontmatter_delimiter: ["---json", "---"]
     create: true
-    fields: # PADRONIZADO COM RISOTOS
-      - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
-      - { label: "Permalink", name: "permalink", widget: "string" }
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Descrição SEO", name: "description", widget: "text" }
+    fields:
+      - { label: "Título do Produto/Receita", name: "title", widget: "string" }
+      - { label: "Resumo SEO", name: "description", widget: "text" }
       - { label: "Autor", name: "author_name", widget: "string", default: "Maria Conceição" }
-      - { label: "Fato Citável", name: "citable_fact", widget: "string" }
-      - { label: "Schema JSON", name: "schema", widget: "code", default: "{}", required: false }
-      - { label: "Conteúdo da Receita", name: "body", widget: "markdown", modes: ["rich_text"] }
+      - { label: "⚙️ Dados Técnicos", name: "schema", widget: "code", default: "{}", required: false, collapsed: true }
+      - { label: "📝 Escreva Aqui", name: "body", widget: "markdown", modes: ["rich_text"] }
 
   - name: "solucoes"
-    label: "🎯 Soluções"
+    label: "🎯 Soluções ChefBrico"
     folder: "receitas/solucoes"
     extension: "html"
     format: "json-frontmatter"
     frontmatter_delimiter: ["---json", "---"]
     create: true
-    fields: # PADRONIZADO COM RISOTOS
-      - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
-      - { label: "Permalink", name: "permalink", widget: "string" }
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Descrição SEO", name: "description", widget: "text" }
+    fields:
+      - { label: "Título da Solução", name: "title", widget: "string" }
+      - { label: "Resumo SEO", name: "description", widget: "text" }
       - { label: "Autor", name: "author_name", widget: "string", default: "Maria Conceição" }
-      - { label: "Schema JSON", name: "schema", widget: "code", default: "{}", required: false }
-      - { label: "Conteúdo da Receita", name: "body", widget: "markdown", modes: ["rich_text"] }
+      - { label: "⚙️ Dados Técnicos", name: "schema", widget: "code", default: "{}", required: false, collapsed: true }
+      - { label: "📝 Escreva Aqui", name: "body", widget: "markdown", modes: ["rich_text"] }
 
   - name: "blog"
     label: "✍️ Blog da Chef"
@@ -182,17 +189,15 @@ collections:
     format: "json-frontmatter"
     frontmatter_delimiter: ["---json", "---"]
     create: true
-    fields: # PADRONIZADO
-      - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
-      - { label: "Permalink", name: "permalink", widget: "string" }
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Descrição SEO", name: "description", widget: "text" }
+    fields:
+      - { label: "Título do Artigo", name: "title", widget: "string" }
+      - { label: "Resumo SEO", name: "description", widget: "text" }
       - { label: "Autor", name: "author_name", widget: "string", default: "Maria Conceição" }
-      - { label: "Schema JSON", name: "schema", widget: "code", default: "{}", required: false }
-      - { label: "Conteúdo da Receita", name: "body", widget: "markdown", modes: ["rich_text"] }
+      - { label: "⚙️ Dados Técnicos", name: "schema", widget: "code", default: "{}", required: false, collapsed: true }
+      - { label: "📝 Escreva seu Artigo Aqui", name: "body", widget: "markdown", modes: ["rich_text"] }
 
   - name: "bairros"
-    label: "📍 Onde Encontrar"
+    label: "📍 Onde Encontrar (Bairros)"
     folder: "onde-encontrar"
     exclude: "index.html"
     extension: "html"
@@ -200,55 +205,54 @@ collections:
     frontmatter_delimiter: ["---json", "---"]
     create: true
     fields:
-      - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Descrição SEO", name: "description", widget: "text" }
-      - { label: "Conteúdo", name: "body", widget: "markdown", modes: ["rich_text"] }
+      - { label: "Título da Página", name: "title", widget: "string" }
+      - { label: "Resumo SEO", name: "description", widget: "text" }
+      - { label: "📝 Conteúdo da Página", name: "body", widget: "markdown", modes: ["rich_text"] }
 
-  # --- 4. FRAGMENTOS (Sempre funcionou bem) ---
+  # --- 4. FRAGMENTOS DE CONTEÚDO (IA) ---
   - name: "fragmentos"
-    label: "🧩 Fragmentos (IA)"
+    label: "🧩 Fragmentos (Perguntas & Respostas)"
     folder: "fragmentos"
     extension: "md"
     format: "yaml-frontmatter"
     create: true
     fields:
-      - { label: "Título (Pergunta)", name: "title", widget: "string" }
-      - { label: "Texto", name: "fragmento_texto", widget: "markdown" }
-      - { label: "Autor", name: "author_name", widget: "string", required: false }
-      - { label: "Link CTA", name: "cta_link", widget: "string", required: false }
+      - { label: "Pergunta (Título)", name: "title", widget: "string" }
+      - { label: "Resposta (Texto)", name: "fragmento_texto", widget: "markdown" }
+      - { label: "Autor da Resposta", name: "author_name", widget: "string", required: false }
+      - { label: "Link para Botão (CTA)", name: "cta_link", widget: "string", required: false }
 
-  # --- 5. CONFIGURAÇÕES GERAIS (CORRIGIDO) ---
+  # --- 5. CONFIGURAÇÕES DA EMPRESA ---
   - name: "settings"
-    label: "⚙️ Configurações Gerais"
+    label: "⚙️ Dados da Empresa"
     delete: false
     files:
-      - label: "Dados da Empresa"
+      - label: "Informações Gerais"
         name: "meta"
         file: "_data/meta.json"
         format: "json"
         fields:
-          - { label: "Domínio", name: "domain", widget: "string" }
-          - { label: "Domínio Receitas", name: "recipesDomain", widget: "string" }
-          - label: "Organização"
+          - { label: "Domínio Principal", name: "domain", widget: "string" }
+          - { label: "Domínio da Revista", name: "recipesDomain", widget: "string" }
+          - label: "Dados da Organização"
             name: "organization"
             widget: "object"
             fields:
-              - { label: "Nome", name: "name", widget: "string" }
+              - { label: "Nome Fantasia", name: "name", widget: "string" }
               - { label: "CNPJ", name: "cnpj", widget: "string" }
               - { label: "Telefone", name: "telephone", widget: "string" }
-              - { label: "WhatsApp", name: "whatsapp", widget: "string" }
-              - label: "Endereço"
+              - { label: "Link do WhatsApp", name: "whatsapp", widget: "string" }
+              - label: "Endereço Completo"
                 name: "address"
                 widget: "object"
                 fields:
-                   - { label: "Rua", name: "streetAddress", widget: "string" }
-                   - { label: "Bairro", name: "addressLocality", widget: "string" }
-                   - { label: "Estado", name: "addressRegion", widget: "string" }
+                   - { label: "Logradouro", name: "streetAddress", widget: "string" }
+                   - { label: "Bairro/Cidade", name: "addressLocality", widget: "string" }
+                   - { label: "UF", name: "addressRegion", widget: "string" }
                    - { label: "CEP", name: "postalCode", widget: "string" }
               - label: "Redes Sociais"
                 name: "sameAs"
                 widget: "list"
                 fields:
                    - { label: "Nome da Rede", name: "name", widget: "string" }
-                   - { label: "Link URL", name: "url", widget: "string" }
+                   - { label: "Link do Perfil", name: "url", widget: "string" }
