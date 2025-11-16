@@ -218,92 +218,162 @@ collections:
     label: "🍳 Receitas - Risotos"
     folder: "receitas/risotos"
     exclude: "index.html"
+   # ESTA É A CORREÇÃO CRÍTICA PARA NÃO MISTURAR CÓDIGO:
     extension: "html"
-    # CORREÇÃO (PROBLEMA 2) APLICADA:
-    format: "frontmatter"
-    frontmatter_delimiter: ["---json", "---"]
+    format: "json-frontmatter" 
+    # Força o CMS a entender que começa com ---json e termina com ---
+    
     fields:
-      - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
-      - { label: "Permalink", name: "permalink", widget: "string", required: false }
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
-      - { label: "Nome do Autor", name: "author_name", widget: "string", required: false }
-      - { label: "Título do Autor", name: "author_title", widget: "string", required: false }
-      - { label: "Página do Autor", name: "author_page", widget: "string", required: false }
-      - { label: "Fato Citável", name: "citable_fact", widget: "string", required: false }
-      - { label: "Assinatura", name: "authority_signature", widget: "string", required: false }
-      - { label: "Preço", name: "price", widget: "string", required: false }
-      - { label: "ID Shopify", name: "shopify_id", widget: "string", required: false }
-      - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-      # CORREÇÃO (PROBLEMA 2) APLICADA:
-      - label: "Conteúdo (Body)"
+      - { label: "Layout (Não alterar)", name: "layout", widget: "hidden", default: "base.njk" }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Título da Receita", name: "title", widget: "string" }
+      - { label: "Descrição (SEO)", name: "description", widget: "text" }
+      
+      # Dados da Autora
+      - { label: "Nome do Autor", name: "author_name", widget: "string", default: "Maria Conceição" }
+      - { label: "Título do Autor", name: "author_title", widget: "string" }
+      - { label: "Página do Autor", name: "author_page", widget: "string" }
+      - { label: "Fato Citável", name: "citable_fact", widget: "string" }
+      - { label: "Assinatura", name: "authority_signature", widget: "string" }
+
+      # Schema (JSON Complexo) - Mantemos oculto para não quebrar o visual, 
+      # mas garantimos que ele não "vaze" para o texto.
+      - label: "Schema Avançado (Técnico)"
+        name: "schema"
+        widget: "object"
+        collapsed: true
+        fields:
+          - { label: "Contexto", name: "@context", widget: "hidden", default: "https://schema.org" }
+          - { label: "Graph (Dados Estruturados)", name: "@graph", widget: "list", allow_add: true, types: [{label: "Objeto", widget: "object", fields: [{name: "raw", widget: "code", default: "{}"}]}] } 
+          # Nota: O Schema é muito complexo para mapear campo a campo sem quebrar o layout atual. 
+          # Melhor manter como está no arquivo, mas isolado do Body.
+
+      # O Corpo do Texto - Onde a Maria escreve
+      - label: "Conteúdo da Receita (Artigo)"
         name: "body"
         widget: "markdown"
-        modes: ["rich_text"]
+        hint: "Escreva aqui o texto da receita e a história."
 
   - name: "sopas"
     label: "🥣 Receitas - Sopas Funcionais"
     folder: "receitas/sopas-funcionais"
     exclude: "index.html"
+  # ESTA É A CORREÇÃO CRÍTICA PARA NÃO MISTURAR CÓDIGO:
     extension: "html"
-    # CORREÇÃO (PROBLEMA 2) APLICADA:
-    format: "frontmatter"
-    frontmatter_delimiter: ["---json", "---"]
+    format: "json-frontmatter" 
+    # Força o CMS a entender que começa com ---json e termina com ---
+    
     fields:
-      - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
-      - { label: "Permalink", name: "permalink", widget: "string", required: false }
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
-      #... (outros campos)...
-      - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-      # CORREÇÃO (PROBLEMA 2) APLICADA:
-      - label: "Conteúdo (Body)"
+      - { label: "Layout (Não alterar)", name: "layout", widget: "hidden", default: "base.njk" }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Título da Receita", name: "title", widget: "string" }
+      - { label: "Descrição (SEO)", name: "description", widget: "text" }
+      
+      # Dados da Autora
+      - { label: "Nome do Autor", name: "author_name", widget: "string", default: "Maria Conceição" }
+      - { label: "Título do Autor", name: "author_title", widget: "string" }
+      - { label: "Página do Autor", name: "author_page", widget: "string" }
+      - { label: "Fato Citável", name: "citable_fact", widget: "string" }
+      - { label: "Assinatura", name: "authority_signature", widget: "string" }
+
+      # Schema (JSON Complexo) - Mantemos oculto para não quebrar o visual, 
+      # mas garantimos que ele não "vaze" para o texto.
+      - label: "Schema Avançado (Técnico)"
+        name: "schema"
+        widget: "object"
+        collapsed: true
+        fields:
+          - { label: "Contexto", name: "@context", widget: "hidden", default: "https://schema.org" }
+          - { label: "Graph (Dados Estruturados)", name: "@graph", widget: "list", allow_add: true, types: [{label: "Objeto", widget: "object", fields: [{name: "raw", widget: "code", default: "{}"}]}] } 
+          # Nota: O Schema é muito complexo para mapear campo a campo sem quebrar o layout atual. 
+          # Melhor manter como está no arquivo, mas isolado do Body.
+
+      # O Corpo do Texto - Onde a Maria escreve
+      - label: "Conteúdo da Receita (Artigo)"
         name: "body"
         widget: "markdown"
-        modes: ["rich_text"]
+        hint: "Escreva aqui o texto da receita e a história."
 
   - name: "refeicoes"
     label: "🍲 Receitas - Refeições Integrais"
     folder: "receitas/refeicoes-integrais"
     exclude: "index.html"
+   # ESTA É A CORREÇÃO CRÍTICA PARA NÃO MISTURAR CÓDIGO:
     extension: "html"
-    # CORREÇÃO (PROBLEMA 2) APLICADA:
-    format: "frontmatter"
-    frontmatter_delimiter: ["---json", "---"]
+    format: "json-frontmatter" 
+    # Força o CMS a entender que começa com ---json e termina com ---
+    
     fields:
-      - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
-      - { label: "Permalink", name: "permalink", widget: "string", required: false }
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
-      #... (outros campos)...
-      - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-      # CORREÇÃO (PROBLEMA 2) APLICADA:
-      - label: "Conteúdo (Body)"
+      - { label: "Layout (Não alterar)", name: "layout", widget: "hidden", default: "base.njk" }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Título da Receita", name: "title", widget: "string" }
+      - { label: "Descrição (SEO)", name: "description", widget: "text" }
+      
+      # Dados da Autora
+      - { label: "Nome do Autor", name: "author_name", widget: "string", default: "Maria Conceição" }
+      - { label: "Título do Autor", name: "author_title", widget: "string" }
+      - { label: "Página do Autor", name: "author_page", widget: "string" }
+      - { label: "Fato Citável", name: "citable_fact", widget: "string" }
+      - { label: "Assinatura", name: "authority_signature", widget: "string" }
+
+      # Schema (JSON Complexo) - Mantemos oculto para não quebrar o visual, 
+      # mas garantimos que ele não "vaze" para o texto.
+      - label: "Schema Avançado (Técnico)"
+        name: "schema"
+        widget: "object"
+        collapsed: true
+        fields:
+          - { label: "Contexto", name: "@context", widget: "hidden", default: "https://schema.org" }
+          - { label: "Graph (Dados Estruturados)", name: "@graph", widget: "list", allow_add: true, types: [{label: "Objeto", widget: "object", fields: [{name: "raw", widget: "code", default: "{}"}]}] } 
+          # Nota: O Schema é muito complexo para mapear campo a campo sem quebrar o layout atual. 
+          # Melhor manter como está no arquivo, mas isolado do Body.
+
+      # O Corpo do Texto - Onde a Maria escreve
+      - label: "Conteúdo da Receita (Artigo)"
         name: "body"
         widget: "markdown"
-        modes: ["rich_text"]
-
+        hint: "Escreva aqui o texto da receita e a história."
+        
   - name: "emporio"
     label: "🌶️ Receitas - Empório da Chef"
     folder: "receitas/emporio-da-chef"
     exclude: "index.html"
+    # ESTA É A CORREÇÃO CRÍTICA PARA NÃO MISTURAR CÓDIGO:
     extension: "html"
-    # CORREÇÃO (PROBLEMA 2) APLICADA:
-    format: "frontmatter"
-    frontmatter_delimiter: ["---json", "---"]
+    format: "json-frontmatter" 
+    # Força o CMS a entender que começa com ---json e termina com ---
+    
     fields:
-      - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
-      - { label: "Permalink", name: "permalink", widget: "string", required: false }
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Descrição (SEO)", name: "description", widget: "text", required: false }
-      #... (outros campos)...
-      - { label: "Schema (Oculto)", name: "schema", widget: "hidden", required: false }
-      # CORREÇÃO (PROBLEMA 2) APLICADA:
-      - label: "Conteúdo (Body)"
+      - { label: "Layout (Não alterar)", name: "layout", widget: "hidden", default: "base.njk" }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Título da Receita", name: "title", widget: "string" }
+      - { label: "Descrição (SEO)", name: "description", widget: "text" }
+      
+      # Dados da Autora
+      - { label: "Nome do Autor", name: "author_name", widget: "string", default: "Maria Conceição" }
+      - { label: "Título do Autor", name: "author_title", widget: "string" }
+      - { label: "Página do Autor", name: "author_page", widget: "string" }
+      - { label: "Fato Citável", name: "citable_fact", widget: "string" }
+      - { label: "Assinatura", name: "authority_signature", widget: "string" }
+
+      # Schema (JSON Complexo) - Mantemos oculto para não quebrar o visual, 
+      # mas garantimos que ele não "vaze" para o texto.
+      - label: "Schema Avançado (Técnico)"
+        name: "schema"
+        widget: "object"
+        collapsed: true
+        fields:
+          - { label: "Contexto", name: "@context", widget: "hidden", default: "https://schema.org" }
+          - { label: "Graph (Dados Estruturados)", name: "@graph", widget: "list", allow_add: true, types: [{label: "Objeto", widget: "object", fields: [{name: "raw", widget: "code", default: "{}"}]}] } 
+          # Nota: O Schema é muito complexo para mapear campo a campo sem quebrar o layout atual. 
+          # Melhor manter como está no arquivo, mas isolado do Body.
+
+      # O Corpo do Texto - Onde a Maria escreve
+      - label: "Conteúdo da Receita (Artigo)"
         name: "body"
         widget: "markdown"
-        modes: ["rich_text"]
-
+        hint: "Escreva aqui o texto da receita e a história."
+        
   - name: "solucoes"
     label: "🎯 Receitas - Soluções"
     folder: "receitas/solucoes"
@@ -393,31 +463,56 @@ collections:
       - { label: "Texto Opcional CTA", name: "cta_texto_opcional", widget: "string", required: false }
       # O "body" não existe nesta coleção, o texto principal é o "fragmento_texto"
 
-  # --- 5. CONFIGURAÇÕES GERAIS ---
+ # --- 5. CONFIGURAÇÕES GERAIS (CORRIGIDO) ---
   - name: "settings"
-    label: "⚙️ Configurações Gerais do Site"
+    label: "⚙️ Configurações Gerais"
+    delete: false # Protege contra exclusão acidental
     files:
-      - label: "Dados Gerais (meta.json)"
+      - label: "Dados da Empresa e SEO (meta.json)"
         name: "meta"
         file: "_data/meta.json"
         format: "json"
-        #
-        # DIAGNÓSTICO E CORREÇÃO (PROBLEMA 1: SEÇÃO VAZIA):
-        # A configuração anterior (v17.0) definia os campos (siteTitle, etc.) no nível superior.
-        # Isso falhou (mostrando uma UI "vazia") porque o ficheiro _data/meta.json real
-        # é ANINHADO (ex: { "site": { "title": "..." } }).
-        #
-        # A correção abaixo (v18.0) usa o `widget: "object"`  para
-        # mapear corretamente essa estrutura aninhada.
-        #
-        # *** AÇÃO: Ajuste o `name:` da linha 257 (ex: "site") para corresponder ao
-        # *** nome do objeto principal no seu ficheiro _data/meta.json.
-        #
         fields:
-          - label: "Dados do Site"
-            name: "site" # <-- Este é o nome do objeto JSON principal. AJUSTE SE NECESSÁRIO.
+          - { label: "Domínio Principal", name: "domain", widget: "string" }
+          - { label: "Domínio Receitas", name: "recipesDomain", widget: "string" }
+          
+          # Organização (Agrupamento dos dados da empresa)
+          - label: "Dados da Organização"
+            name: "organization"
             widget: "object"
             fields:
-              - { label: "Título Padrão do Site", name: "title", widget: "string", required: false }
-              - { label: "Descrição Padrão do Site", name: "description", widget: "string", required: false }
-              - { label: "URL Principal", name: "url", widget: "string", required: false }
+              - { label: "ID (Schema)", name: "id", widget: "string", default: "https://www.chefbrico.com/#organization" }
+              - { label: "Nome da Empresa", name: "name", widget: "string" }
+              - { label: "CNPJ", name: "cnpj", widget: "string" }
+              - { label: "URL Oficial", name: "url", widget: "string" }
+              - { label: "Logo URL", name: "logo", widget: "image" }
+              - { label: "Telefone", name: "telephone", widget: "string" }
+              - { label: "WhatsApp Link", name: "whatsapp", widget: "string" }
+              
+              # Endereço (Aninhado dentro de Organization)
+              - label: "Endereço Físico"
+                name: "address"
+                widget: "object"
+                fields:
+                  - { label: "Tipo", name: "@type", widget: "hidden", default: "PostalAddress" }
+                  - { label: "Rua/Logradouro", name: "streetAddress", widget: "string" }
+                  - { label: "Cidade/Bairro", name: "addressLocality", widget: "string" }
+                  - { label: "Estado (UF)", name: "addressRegion", widget: "string" }
+                  - { label: "CEP", name: "postalCode", widget: "string" }
+                  - { label: "País", name: "addressCountry", widget: "string", default: "BR" }
+
+              # Redes Sociais (Lista de Objetos)
+              - label: "Redes Sociais (SameAs)"
+                name: "sameAs"
+                widget: "list"
+                fields:
+                  - { label: "Nome da Rede", name: "name", widget: "string" }
+                  - { label: "Link/URL", name: "url", widget: "string" }
+
+              # Fundadora
+              - label: "Fundadora"
+                name: "founder"
+                widget: "object"
+                fields:
+                  - { label: "Tipo", name: "@type", widget: "hidden", default: "Person" }
+                  - { label: "ID da Fundadora", name: "@id", widget: "string" }
