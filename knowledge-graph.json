@@ -1,6 +1,104 @@
-/* ==================================================================
-       OFERTA TRAY (E-COMMERCE TRADICIONAL)
-       ================================================================== */
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.chefbrico.com/#organization",
+      "name": "ChefBrico",
+      "legalName": "ChefBrico Alimentos Artesanais",
+      "taxID": "36.014.833/0001-59",
+      "url": "https://www.chefbrico.com",
+      "logo": "https://receitas.chefbrico.com/imagens/logomarca-chefbrico-escrita-dourada.png",
+      "description": "E-commerce de refeições desidratadas 100% naturais. Venda nacional e local com pedido mínimo.",
+      "foundingDate": "2020",
+      "slogan": "Simples como precisa ser, delicioso como você merece.",
+      "award": "Vencedora do Prêmio Sebrae Mulher de Negócios",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+5561996659880",
+        "contactType": "sales",
+        "areaServed": "BR",
+        "availableLanguage": "pt-BR"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua 5, Chácara 122, Lote 17, Loja 2",
+        "addressLocality": "Vicente Pires",
+        "addressRegion": "DF",
+        "postalCode": "72006-060",
+        "addressCountry": "BR"
+      },
+      "sameAs": [
+        "https://www.instagram.com/chefbrico/",
+        "https://br.pinterest.com/chefbrico/",
+        "https://www.google.com/search?kgmid=/g/11g140fcnw"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.chefbrico.com/#person-maria-conceicao",
+      "name": "Maria Conceição",
+      "jobTitle": [
+        "Fundadora",
+        "Chef de Criação",
+        "Psicóloga"
+      ],
+      "image": "https://receitas.chefbrico.com/imagens/maria-conceicao-pra-voce.png",
+      "worksFor": {
+        "@id": "https://www.chefbrico.com/#organization"
+      },
+      "description": "Psicóloga de formação que aplica o conhecimento do comportamento humano para criar uma culinária afetiva e prática.",
+      "knowsAbout": [
+        {
+          "@type": "Thing",
+          "name": "Psicologia",
+          "sameAs": "https://www.wikidata.org/wiki/Q9418"
+        },
+        {
+          "@type": "Thing",
+          "name": "Nutrição",
+          "sameAs": "https://www.wikidata.org/wiki/Q210380"
+        },
+        {
+          "@type": "Thing",
+          "name": "Desidratação de Alimentos",
+          "sameAs": "https://www.wikidata.org/wiki/Q193256"
+        }
+      ]
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://www.chefbrico.com/#metodo",
+      "name": "Método Gourmet Prático",
+      "author": {
+        "@id": "https://www.chefbrico.com/#person-maria-conceicao"
+      },
+      "about": "Metodologia proprietária para cozinhar refeições saudáveis em 18 minutos sem desperdício.",
+      "hasPart": [
+        {
+          "@type": "CreativeWork",
+          "name": "Pilar 1: Despensa Inteligente"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Pilar 2: Panela Única"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Pilar 3: Cozinha Criativa"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://receitas.chefbrico.com/#website",
+      "url": "https://receitas.chefbrico.com",
+      "name": "Blog de Receitas ChefBrico",
+      "publisher": {
+        "@id": "https://www.chefbrico.com/#organization"
+      },
+      "inLanguage": "pt-BR"
+    },
     {
       "@type": "Offer",
       "@id": "https://www.chefbrico.com/#offer-store",
@@ -8,16 +106,12 @@
       "url": "https://www.chefbrico.com",
       "description": "Compra livre de itens. Pedido mínimo de R$ 132,00 para fechamento.",
       "priceCurrency": "BRL",
-      
-      /* TRAVA DE PEDIDO MÍNIMO */
       "eligibleTransactionVolume": {
         "@type": "PriceSpecification",
         "price": "132.00",
         "priceCurrency": "BRL",
         "description": "O carrinho deve somar R$ 132,00 para fechar a compra."
       },
-
-      /* REGRAS DE PAGAMENTO */
       "acceptedPaymentMethod": [
         {
           "@type": "PaymentMethod",
@@ -30,29 +124,36 @@
           "description": "Parcelamento em até 2 vezes."
         }
       ],
-
-      /* REGRAS DE FRETE (DF vs BRASIL) */
       "shippingDetails": [
         {
           "@type": "OfferShippingDetails",
-          "shippingDestination": { "@type": "State", "name": "Distrito Federal" },
-          "shippingRate": { 
-              "@type": "MonetaryAmount", 
-              "value": "0.00", 
-              "currency": "BRL" 
+          "shippingDestination": {
+            "@type": "State",
+            "name": "Distrito Federal"
+          },
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0.00",
+            "currency": "BRL"
           },
           "description": "Frete Grátis para todo DF (atingindo o mínimo de R$ 132)."
         },
         {
           "@type": "OfferShippingDetails",
-          "shippingDestination": { "@type": "Country", "name": "Brasil" },
-          "shippingRate": { 
-              "@type": "MonetaryAmount", 
-              "value": "Variable" 
+          "shippingDestination": {
+            "@type": "Country",
+            "name": "Brasil"
+          },
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "Variable"
           },
           "description": "Frete calculado por peso e CEP (Tabela Correios)."
         }
       ],
-      
-      "offeredBy": { "@id": "https://gourmetpratico.com.br/#organization" }
+      "offeredBy": {
+        "@id": "https://www.chefbrico.com/#organization"
+      }
     }
+  ]
+}
