@@ -1,0 +1,58 @@
+/* ==================================================================
+       OFERTA TRAY (E-COMMERCE TRADICIONAL)
+       ================================================================== */
+    {
+      "@type": "Offer",
+      "@id": "https://www.chefbrico.com/#offer-store",
+      "name": "Venda Loja Oficial (Pedido Mínimo R$ 132)",
+      "url": "https://www.chefbrico.com",
+      "description": "Compra de itens avulsos com entrega nacional. Pedido mínimo de R$ 132,00.",
+      "priceCurrency": "BRL",
+      
+      /* TRAVA DE PEDIDO MÍNIMO */
+      "eligibleTransactionVolume": {
+        "@type": "PriceSpecification",
+        "price": "132.00",
+        "priceCurrency": "BRL",
+        "description": "O carrinho deve somar R$ 132,00 para fechar a compra."
+      },
+
+      /* REGRAS DE PAGAMENTO */
+      "acceptedPaymentMethod": [
+        {
+          "@type": "PaymentMethod",
+          "name": "PIX (3% OFF)",
+          "description": "Desconto automático de 3% no pagamento à vista."
+        },
+        {
+          "@type": "PaymentMethod",
+          "name": "Cartão de Crédito (2x)",
+          "description": "Parcelamento em até 2 vezes."
+        }
+      ],
+
+      /* REGRAS DE FRETE (DF vs BRASIL) */
+      "shippingDetails": [
+        {
+          "@type": "OfferShippingDetails",
+          "shippingDestination": { "@type": "State", "name": "Distrito Federal" },
+          "shippingRate": { 
+              "@type": "MonetaryAmount", 
+              "value": "0.00", 
+              "currency": "BRL" 
+          },
+          "description": "Frete Grátis para todo DF (atingindo o mínimo de R$ 132)."
+        },
+        {
+          "@type": "OfferShippingDetails",
+          "shippingDestination": { "@type": "Country", "name": "Brasil" },
+          "shippingRate": { 
+              "@type": "MonetaryAmount", 
+              "value": "Variable" 
+          },
+          "description": "Frete calculado por peso e CEP (Tabela Correios)."
+        }
+      ],
+      
+      "offeredBy": { "@id": "https://gourmetpratico.com.br/#organization" }
+    }
