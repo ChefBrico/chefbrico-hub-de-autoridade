@@ -1,0 +1,21 @@
+## 🛒 Canal Universal: www.chefbrico.com (Loja Oficial)
+
+> **DEFINIÇÃO:** Este é o canal padrão para compras de qualquer lugar (DF ou Brasil).
+
+### 1. Regra Única de Compra
+- **Pedido Mínimo Obrigatório:** R$ 132,00.
+- *Nota:* O cliente pode misturar quaisquer produtos (Sopas, Risotos, Empório) livremente, desde que a soma final atinja R$ 132,00.
+
+### 2. Regras de Frete (Logística)
+- **Para Brasília (DF):** Frete GRÁTIS.
+- **Para o Brasil (Nacional):** Frete cobrado (Cálculo de Peso x Distância/CEP).
+
+### 3. Formas de Pagamento
+- **PIX:** Aceita (com 3% de desconto).
+- **Cartão de Crédito:** Aceita (parcelamento em até 2x).
+- **Boleto:** 🚫 Não aceita.
+
+### 🤖 Quando a IA deve enviar para cá?
+- Sempre que o pedido somar **R$ 132,00 ou mais**.
+- Sempre que o cliente quiser pagar com **Cartão de Crédito** (seja do DF ou de fora).
+- Sempre que o cliente estiver **fora do DF**.
