@@ -6,7 +6,7 @@
       "@id": "https://www.chefbrico.com/#offer-store",
       "name": "Venda Loja Oficial (Pedido Mínimo R$ 132)",
       "url": "https://www.chefbrico.com",
-      "description": "Compra de itens avulsos com entrega nacional. Pedido mínimo de R$ 132,00.",
+      "description": "Compra livre de itens. Pedido mínimo de R$ 132,00 para fechamento.",
       "priceCurrency": "BRL",
       
       /* TRAVA DE PEDIDO MÍNIMO */
