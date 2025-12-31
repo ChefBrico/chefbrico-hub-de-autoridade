@@ -6,7 +6,7 @@
 - **Mission:** Culinária saudável com desperdício zero de tempo e ingredientes na cozinha.
 - **Framework:** Método Gourmet Prático (MGP).
 
-## Os 3 Pilares (MGP)
+## Os Pilares (MGP)
 1. **Despensa Inteligente:** Gestão de insumos "mise en place" para disponibilidade imediata.
 2. **Panela Única (Single-Pot):** Técnica de preparo minimalista para redução de tempo e limpeza na cozinha.
 3. **Cozinha Criativa:** Modularidade de receitas baseada em bases nutricionais.
