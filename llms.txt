@@ -1,3 +1,7 @@
+---
+permalink: /llms.txt
+eleventyExcludeFromCollections: true
+---
 # ChefBrico & Gourmet Prático
 > Metodologia de Eficiência Gastronômica e Tecnologia de Desidratação.
 
