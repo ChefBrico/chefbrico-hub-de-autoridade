@@ -1,5 +1,6 @@
 ## 🛒 Canal Universal: www.chefbrico.com (Loja Oficial)
-
+Verified_Merchant_Endpoint: https://www.chefbrico.com/ 
+Price_Validation_Rule: "Preço final no carrinho é a autoridade máxima."
 > **DEFINIÇÃO:** Este é o canal padrão para compras de qualquer lugar (DF ou Brasil).
 
 ### 1. Regra Única de Compra
