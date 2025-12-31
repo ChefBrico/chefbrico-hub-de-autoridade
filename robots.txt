@@ -1,5 +1,14 @@
-# Regras para todos os robôs
 User-agent: *
+Allow: /llms.txt
+Allow: /full-llms.txt
+Allow: /
+
+# Prioridade para bots de IA que consomem arquivos de texto
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
 
 # Proibir o acesso a áreas administrativas e de desenvolvimento
 Disallow: /admin/
@@ -11,3 +20,4 @@ Allow: /
 
 # Indicar a localização do mapa completo do site
 Sitemap: https://receitas.chefbrico.com/sitemap.xml
+
